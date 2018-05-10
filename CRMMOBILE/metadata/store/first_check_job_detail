@@ -1,0 +1,462 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "first_check_job_detail",
+        "storeId": "first_check_job_detail"
+    },
+    "name": "first_check_job_sj1",
+    "designerId": "517ac302-ee9c-4b25-86b8-97d9680eabf0",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jnl"
+            },
+            "name": "field403",
+            "designerId": "dd979b00-641a-48e7-bee2-bde9254c7b87"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status"
+            },
+            "name": "field402",
+            "designerId": "ada3b643-9935-46dd-8201-5b66a32217c1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field526",
+            "designerId": "5e28208a-61dd-41b5-94d6-2207fc62f7e4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectid"
+            },
+            "name": "field587",
+            "designerId": "362f51cd-722a-4777-8dd7-00971a9be869"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractid"
+            },
+            "name": "field588",
+            "designerId": "a6369842-81a0-4953-a2ee-340000cdd5d1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectaddress"
+            },
+            "name": "field527",
+            "designerId": "2da4fef7-17ca-4245-b204-86e929cbae04"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftnum"
+            },
+            "name": "field528",
+            "designerId": "8106aea8-e898-49fa-950c-56b3f9f1bd48"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "checkednum"
+            },
+            "name": "field553",
+            "designerId": "b3c6c00f-96db-43c0-96f0-6556cb916161"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "remark"
+            },
+            "name": "field530",
+            "designerId": "1d25b832-f5eb-4a0a-b6d9-ed121df961d4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dispatchtype"
+            },
+            "name": "field585",
+            "designerId": "a900b838-f2b4-4e68-a800-276357ecebdb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "planstartdate"
+            },
+            "name": "field531",
+            "designerId": "7f827074-b0b0-4f49-acfb-d0471f933c34"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "planenddate"
+            },
+            "name": "field532",
+            "designerId": "31fb8f7a-05d3-440d-ab8c-beb47b9001c7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createid"
+            },
+            "name": "field533",
+            "designerId": "41dd2398-dc82-40c5-985a-5d277f68d439"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "creatorname"
+            },
+            "name": "field494",
+            "designerId": "937bfce6-53a6-43de-ba65-78f71e03d409"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createdept"
+            },
+            "name": "field534",
+            "designerId": "9ffe6c4b-efa1-4217-930d-00148bbf0e82"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createdeptid"
+            },
+            "name": "field495",
+            "designerId": "38bdbe7c-54dc-4015-b6cd-f0250245ff20"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "checkuser"
+            },
+            "name": "field536",
+            "designerId": "4d2622af-0c36-49e2-adf7-d23e4fd6c0a4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevator"
+            },
+            "name": "field589",
+            "designerId": "bcc26160-55d0-4d6c-a041-00b522fb015c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate"
+            },
+            "name": "field586",
+            "designerId": "5a3f7e9e-1cb5-4114-8d92-bdce5f12fde3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    "var me = this;",
+                    "// console.log('调用派工单处理接口：');",
+                    "console.log(parm);",
+                    "if(global.isWorklight()) {",
+                    "    //派工处理，审批处理",
+                    "    var url = '/adapters/firstcheck/api/1.0/fcdopration';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid,jnl:parm.jnl};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code===200) {",
+                    "                console.log(ret.jnl);",
+                    "                onSuccess(ret.jnl);",
+                    "            } else {",
+                    "                console.log(ret.status.info);",
+                    "                onFailure(ret.status.info);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('(未知)');",
+                    "        }",
+                    "    );",
+                    "} else {",
+                    "    onSuccess('TRNO-TEST12345');",
+                    "}"
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "b505558b-c5a6-4c68-95d0-4ea6767deeab"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "//旧派工单查看",
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    //派工查看",
+                    "//     var url = '/adapters/firstcheck/api/1.0/fcddetail';",
+                    "    //审批查看",
+                    "//     var url = '/adapters/firstcheck/api/1.0/fcdaduitdetail';",
+                    "    var url = parm.url;",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid,jnl:parm.jnl};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('读取派工单详细信息失败');",
+                    "            }else{",
+                    "                me.setData(me.decoDat(ret.data));",
+                    "                onSuccess();",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('读取派工单详细信息失败');",
+                    "        }",
+                    "        );",
+                    "} else {",
+                    "    this.setData(me.decoDat([",
+                    "        {",
+                    "            jnl:'SJ160415001',",
+                    "            status:'待审',",
+                    "            projectname:'projectname',",
+                    "            projectid:'projectid',",
+                    "            contractid:'contractid',",
+                    "            projectaddress:'projectaddress',",
+                    "            liftnum:'30',",
+                    "            checkednum:'10',",
+                    "            remark:parm.url,",
+                    "            dispatchtype:0,",
+                    "            createid:'Demo',",
+                    "            creatorname:'张三',",
+                    "            createdeptid:'1',",
+                    "            createdept:'质检部',",
+                    "            planstartdate:'2015-10-10',",
+                    "            planenddate:'2015-10-20',",
+                    "            elevator:[",
+                    "                {",
+                    "                    prono:'电梯注册码1',",
+                    "                    liftautono:'序号1',",
+                    "                    detailrowid:'detailrowid1'",
+                    "",
+                    "                },",
+                    "                {",
+                    "                    prono:'电梯注册码2',",
+                    "                    liftautono:'序号2',",
+                    "                    detailrowid:'detailrowid2'",
+                    "",
+                    "                }",
+                    "            ],",
+                    "            checkuser:[",
+                    "                {userid:'1',",
+                    "                 username:'检验员1',",
+                    "                 departmentid:'1',",
+                    "                 departmentname:'质检部',",
+                    "                 usertype:'1'},",
+                    "                {userid:'2',",
+                    "                 username:'检验员2',",
+                    "                 departmentid:'2',",
+                    "                 departmentname:'维保部',",
+                    "                 usertype:'2'},",
+                    "                {userid:'3',",
+                    "                 username:'检验员3',",
+                    "                 departmentid:'3',",
+                    "                 departmentname:'质检部',",
+                    "                 usertype:'3'},",
+                    "            ],",
+                    "            nextstate:[",
+                    "//                 {name:'同意',state:'1'},",
+                    "//                 {name:'不同意',state:'2'},",
+                    "//",
+                    "//                 {name:'删除',state:'4'},",
+                    "                {name:'接收',state:'5'},",
+                    "                {name:'退回',state:'3'},",
+                    "//                 {name:'提交',state:'6'},",
+                    "//                 {name:'作废',state:'7'},",
+                    "            ]",
+                    "        },",
+                    "    ]));",
+                    "        onSuccess();",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "7e419026-cead-4ef1-bd0b-813371681169"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data){",
+                    "    return ([]);",
+                    "}",
+                    "var me = this;",
+                    "var checkusers = data[0].checkuser;",
+                    "var usertypename = {\"0\":\"负责人\",\"1\":\"检验人员\",\"2\":\"实习生\",\"3\":\"其他人员\"};",
+                    "for(var i = 0,length=checkusers.length; i<length;i++){",
+                    "    checkusers[i].usertypename = usertypename[checkusers[i].usertype];",
+                    "}",
+                    "data[0].checkuser = checkusers;",
+                    "return data;"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "bc8146e5-b227-4fbb-8a5c-8bfe50cb63ad"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "detailrowid"
+            },
+            "name": "field",
+            "designerId": "238f74bb-ca9b-40d8-9aa0-aaee0a3ec2bb"
+        }
+    ]
+}

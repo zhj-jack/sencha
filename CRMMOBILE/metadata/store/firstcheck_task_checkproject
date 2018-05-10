@@ -1,0 +1,182 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "firstcheck_task_checkproject",
+        "storeId": "firstcheck_task_checkproject"
+    },
+    "name": "MyStore",
+    "designerId": "39844805-64fc-44bf-9ec9-de69c3a7d90f",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lifttype"
+            },
+            "name": "field830",
+            "designerId": "08a5a23c-9aae-441b-8a5b-16c5f32052f5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jnum"
+            },
+            "name": "field831",
+            "designerId": "abca35fe-6593-4e51-bc38-39643753b8f2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projecttype"
+            },
+            "name": "field832",
+            "designerId": "53c57197-9b8c-4537-971c-285dc73a487f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ctype"
+            },
+            "name": "field833",
+            "designerId": "f2ff9058-5e6e-48f6-94cb-274d121525aa"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectcontent"
+            },
+            "name": "field834",
+            "designerId": "eaf9a8b8-efba-4899-a3bb-9a8553111ccd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "checkresult"
+            },
+            "name": "field835",
+            "designerId": "4ed66746-d136-4a1a-89f5-7eafbafefd31"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "checkverdict"
+            },
+            "name": "field836",
+            "designerId": "fb2fd07a-b520-4847-bee2-80a328fac756"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "count",
+                "implHandler": [
+                    "var count = 0;",
+                    "var data = this.getData();",
+                    "for(var i=0,length = data.length; i<length;i++){",
+                    "    if(data.items[i].data.checkverdict===parm){",
+                    "        count++;",
+                    "    }",
+                    "}",
+                    "return count;"
+                ]
+            },
+            "name": "count",
+            "designerId": "a129000e-bfbc-42b1-8018-1f20f11a8998"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/sjjyxmlist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid,typeid:parm.typeid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    me.setData([",
+                    "        {",
+                    "                            lifttype:'D',",
+                    "                            jnum:'3',",
+                    "                            projecttype:'C',",
+                    "                            ctype:'机房(机器设备间)及相关设备',",
+                    "                            projectcontent:'2.10 紧急操作装置(1)b.松闸扳手与盘车手轮',",
+                    "                            checkresult:'checkresult2',",
+                    "                            checkverdict:'/'",
+                    "        }",
+                    "    ]);",
+                    "            onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "569abc40-87d2-44a7-b0a2-8f2a9b7213cd"
+        }
+    ]
+}

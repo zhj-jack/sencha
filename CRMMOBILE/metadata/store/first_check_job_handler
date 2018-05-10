@@ -1,0 +1,124 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "first_check_job_handler",
+        "storeId": "first_check_job_handler"
+    },
+    "name": "MyStore",
+    "designerId": "c25afe69-c48c-4d63-b7b3-b4b4a8dd3a05",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "name": "field537",
+            "designerId": "2ada5a6f-a941-477b-abaa-ff5e72a79302"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jnl"
+            },
+            "name": "field538",
+            "designerId": "ac7d58f0-e387-40d8-9c66-b90f7be5295b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "state"
+            },
+            "name": "field539",
+            "designerId": "30b82802-308d-48d7-a61a-af5ca1fe19a8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "remark"
+            },
+            "name": "field540",
+            "designerId": "6ca89268-6f92-403e-b89d-a4913edd85b7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "sj"
+            },
+            "name": "field541",
+            "designerId": "defebb0d-adfa-40de-950f-f14fbc959d52"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    "var me = this;",
+                    "console.log('调用派工单处理接口：');",
+                    "console.log(parm);",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/firstcheck/api/1.0/fcdopration';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code===200) {",
+                    "//                 console.log(ret.trno);",
+                    "//                 onSuccess(ret.trno);",
+                    "            } else {",
+                    "                console.log(ret.status.info);",
+                    "                onFailure(ret.status.info);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('(未知)');",
+                    "        }",
+                    "    );",
+                    "} else {",
+                    "    onSuccess('TRNO-TEST12345');",
+                    "}"
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "14f296e8-26e2-4a8e-8942-3c1483d3e448"
+        }
+    ]
+}

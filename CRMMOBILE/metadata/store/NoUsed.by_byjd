@@ -1,0 +1,405 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.by_byjd",
+        "storeId": "NoUsed.by_byjd"
+    },
+    "name": "sx_sxjd1",
+    "designerId": "43a2d692-b3d7-48ce-98fa-8c63008ff012",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitname",
+                "type": "string"
+            },
+            "name": "field41",
+            "designerId": "bab5b618-bd09-43d6-b972-559dbc446f74"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pordid",
+                "type": "string"
+            },
+            "name": "field257",
+            "designerId": "ff892a70-da8a-4804-aad5-6fe2f5363be9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "worktype",
+                "type": "string"
+            },
+            "name": "field40",
+            "designerId": "7f344623-72ac-4e6f-9e7e-9158fc5864ce"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "address",
+                "type": "string"
+            },
+            "name": "field35",
+            "designerId": "82165cb0-4c2d-4c06-a064-187f71bb484f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "gotime",
+                "type": "string"
+            },
+            "name": "field27",
+            "designerId": "37f7fefb-ffd4-4cc0-9228-5ca01c115fcf"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "arrivetime",
+                "type": "string"
+            },
+            "name": "field53",
+            "designerId": "f7b92e4e-95c7-4c23-b914-55bea7668def"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "finishtime",
+                "type": "string"
+            },
+            "name": "field55",
+            "designerId": "d21107dd-1a6c-43bb-a3f7-129d494c2e1c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_SetOutStatus",
+                "type": "string"
+            },
+            "name": "field262",
+            "designerId": "7eaf449e-4705-4aef-bf06-2b458421d1e3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_SetOutDate",
+                "type": "string"
+            },
+            "name": "field6",
+            "designerId": "ef69ff65-d56f-4529-a4a2-7d485be297f6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_SetOutTime",
+                "type": "string"
+            },
+            "name": "field58",
+            "designerId": "797b56d1-46f9-45d3-9e19-8bfc44925d0f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_SetOutAddress",
+                "type": "string"
+            },
+            "name": "field13",
+            "designerId": "ecea595e-61eb-4f98-93bd-627d99af07ea"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_ArriveStatus",
+                "type": "string"
+            },
+            "name": "field12",
+            "designerId": "1c084732-6260-4cb1-a7b6-043b6e33840f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_ArriveDate",
+                "type": "string"
+            },
+            "name": "field263",
+            "designerId": "206c696a-fa9c-45b7-8a0b-35e4fa9d7da6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_ArriveTime",
+                "type": "string"
+            },
+            "name": "field57",
+            "designerId": "17d41f4b-acce-4575-b04c-01cb117f2e79"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_ArriveAddress",
+                "type": "string"
+            },
+            "name": "field7",
+            "designerId": "81b5e492-9618-4c96-99c8-583031426c12"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_FinishStatus",
+                "type": "string"
+            },
+            "name": "field255",
+            "designerId": "78d1f67b-ef4e-4f34-99ae-09f6a77a14f4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_FinishDate",
+                "type": "string"
+            },
+            "name": "field9",
+            "designerId": "58efb48c-d649-488a-ae08-71eac8c81ec0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_FinishTime",
+                "type": "string"
+            },
+            "name": "field56",
+            "designerId": "29c1bd40-0580-417c-9b88-f63c44af66a7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "B_FinishAddress",
+                "type": "string"
+            },
+            "name": "field10",
+            "designerId": "32ec1ca1-db08-470e-9ff1-f9ae8cb23dee"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "qrcodeimg",
+                "type": "string"
+            },
+            "name": "field259",
+            "designerId": "892d1804-4632-44a1-ae96-f6501bfbcf65"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "missionimg",
+                "type": "string"
+            },
+            "name": "field11",
+            "designerId": "efb7115d-9664-4ead-878b-dbc0a4d6da75"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status",
+                "type": "string"
+            },
+            "name": "field265",
+            "designerId": "c6e84e76-0d5b-4aec-87bb-6d2b6057f6a9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/by/api/1.0/byjd/'+'任务号';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:'用户ID', planid:'保养计划明细行号'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 保养任务进度-演示数据",
+                    "    this.setData();",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "881e309c-ed34-4379-a2ec-a08b702742dd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "96a14f2b-29f2-4c75-9a0b-a2ddaa557a58"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "d2dd6a23-ff59-476a-b975-b8be41b95bf6"
+        }
+    ]
+}

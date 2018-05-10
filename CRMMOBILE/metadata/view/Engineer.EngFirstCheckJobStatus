@@ -1,0 +1,98 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userClassName": "Engineer.EngFirstCheckJobStatus",
+        "hidden": true,
+        "hideOnMaskTap": true,
+        "id": "EngFirstCheckJobStatus",
+        "itemId": "EngFirstCheckJobStatus",
+        "modal": true,
+        "padding": "5 10"
+    },
+    "name": "Engineer.EngMaintainContractStatus1",
+    "designerId": "ff424bf1-2d91-4adc-bf86-7573b025a4b4",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFirstCheckJobStatus_0",
+                "itemId": "EngFirstCheckJobStatus_0",
+                "text": "全部"
+            },
+            "name": "MyButton41",
+            "designerId": "4bcd20f2-b200-4b6c-98ae-bfc2c1eb59c7"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFirstCheckJobStatus_1",
+                "itemId": "EngFirstCheckJobStatus_1",
+                "text": "未接收"
+            },
+            "name": "MyButton22",
+            "designerId": "359e1de8-0802-43e9-bd58-54dab7464341"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFirstCheckJobStatus_2",
+                "itemId": "EngFirstCheckJobStatus_2",
+                "text": "已接收"
+            },
+            "name": "MyButton42",
+            "designerId": "66e39c8a-21a1-4734-b362-c8307bdf3ee3"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFirstCheckJobStatus_3",
+                "itemId": "EngFirstCheckJobStatus_3",
+                "text": "退回"
+            },
+            "name": "MyButton43",
+            "designerId": "0c880aa8-2daa-4904-8b2c-de238a4f7954"
+        }
+    ]
+}

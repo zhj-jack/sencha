@@ -1,0 +1,42 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sx_reportdetail_trplist",
+        "storeId": "sx_reportdetail_trplist"
+    },
+    "name": "sx_reportdetail_rp1",
+    "designerId": "45181034-5512-449b-8778-2adcc51eba69",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "materialsname"
+            },
+            "name": "field306",
+            "designerId": "db262f06-ded0-4673-83c5-ad4525ce581e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "materialsnum"
+            },
+            "name": "field307",
+            "designerId": "6f7dd883-2355-40a0-9824-6992f910f714"
+        }
+    ]
+}

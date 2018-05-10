@@ -1,0 +1,447 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngInsureContractDetail",
+        "id": "EngInsureContractDetail",
+        "layout": "vbox"
+    },
+    "name": "Engineer.EngContractDetail2",
+    "designerId": "412bf9b5-d565-4c0c-ac1f-d84e0b2b3ebe",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "保险合同信息"
+            },
+            "name": "MyToolbar11",
+            "designerId": "fef92bdf-f16e-4d34-b849-83eef3c3ca52",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngInsureContractDetail_BtnReturn",
+                        "text": ""
+                    },
+                    "name": "MyButton20",
+                    "designerId": "11311e11-e6ff-43a5-89b4-0129b11b8a49"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-tabbar-two"
+                ],
+                "id": "EngInsureContractDetail_Tab",
+                "layout|flex": 1
+            },
+            "name": "MyTabPanel",
+            "designerId": "d2c9653e-62d2-4d19-8410-bae6ff61e0b5",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox",
+                        "title": "保险合同"
+                    },
+                    "name": "MyContainer45",
+                    "designerId": "e92e1e15-2acd-4130-a859-4c17ca0f935e",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-form-info",
+                                    "liftnet-font-size14",
+                                    "liftnet-lineHeight34"
+                                ],
+                                "id": "EngInsureContractDetail_Contract",
+                                "layout|flex": 1
+                            },
+                            "name": "MyFormPanel23",
+                            "designerId": "4704c917-03a2-448a-85b7-beabfe96f0ae",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "保险合同号",
+                                        "labelWidth": "40%",
+                                        "name": "contractid",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField110",
+                                    "designerId": "b0ff59ce-49c9-4f86-a490-02b523b512c6"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "合同台数",
+                                        "labelWidth": "40%",
+                                        "name": "contractnum",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField115",
+                                    "designerId": "ffa32007-a2e0-44ef-874c-507877df8927"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "合同总额",
+                                        "labelWidth": "40%",
+                                        "name": "contractamt",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField116",
+                                    "designerId": "5768e5ad-80f2-4be9-b5c2-c276f7400e29"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "承保单位",
+                                        "name": "acceptanceunit",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField111",
+                                    "designerId": "5db55f4a-e7e4-44a8-bca8-fa0e624a67db"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "保险业务经理",
+                                        "labelWidth": "40%",
+                                        "name": "insurancemanager",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField117",
+                                    "designerId": "fc99abce-5116-4530-9039-c8673bb60828"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "联系电话",
+                                        "labelWidth": "40%",
+                                        "name": "linkphone",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField119",
+                                    "designerId": "1ee1e9be-eb1f-4d92-b396-7c27219b7576"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "开始日期",
+                                        "labelWidth": "40%",
+                                        "name": "insurancestartdate",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField112",
+                                    "designerId": "49950e7a-e31f-4589-9a07-673f2bbfb5b0"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "结束日期",
+                                        "labelWidth": "40%",
+                                        "name": "insuranceenddate",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField114",
+                                    "designerId": "1f6dd24d-d966-4a02-b7ca-92d158f3d65b"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "签订日期",
+                                        "name": "signdate",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField131",
+                                    "designerId": "578a169d-543a-4458-8014-fe83013383f0"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "理赔电话",
+                                        "labelWidth": "40%",
+                                        "name": "claimsphone",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField120",
+                                    "designerId": "61aea048-c8d8-4fbc-bfcc-cb4aa55f62b6"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "创建人",
+                                        "labelWidth": "40%",
+                                        "name": "createmess",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField121",
+                                    "designerId": "0db9e3aa-b4b7-4fda-b927-5614f5b84efe"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "创建日期",
+                                        "labelWidth": "40%",
+                                        "name": "createdate",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField126",
+                                    "designerId": "0a6d3b01-2f4f-4fc1-b705-ac9c7d0378e9"
+                                },
+                                {
+                                    "type": "Ext.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "备注",
+                                        "labelWidth": "40%",
+                                        "name": "remark",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextArea20",
+                                    "designerId": "972aa1a9-a1d1-44b8-bc21-a28db0668876"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox",
+                        "title": "关联合同"
+                    },
+                    "name": "MyContainer46",
+                    "designerId": "9827218c-bcf2-47eb-8eb3-e3bb7ef76288",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fault-listBox"
+                                ],
+                                "disableSelection": true,
+                                "id": "EngInsureContractDetail_Info",
+                                "layout|flex": 1,
+                                "store": "eng_insurecontracttabglht"
+                            },
+                            "name": "MyList19",
+                            "designerId": "d37d0ca2-5758-4b40-a190-67cb8cda218f",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class=\"liftnet-Maintenance-TaskRecList\" style=\"height:80px\">",
+                                            "    <div class=\"liftnet-Maintenance-TaskRecList-left\" style=\"left:14px\" >",
+                                            "        <div class=\"liftnet-font-size16 {titleColor}\">{contractid}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{projectname}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{projectaddress}&nbsp;</div>",
+                                            "    </div>",
+                                            "    <div class=\"liftnet-Maintenance-TaskRecList-right\" style=\"padding-top:0px;right:14px\">",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray liftnet-font-right\">{custname}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray liftnet-font-right\">&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{nums}&nbsp;台</div>",
+                                            "    </div>",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "2e680e06-8ec6-4393-bf85-19208aeeecaa"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox",
+                        "title": "电梯"
+                    },
+                    "name": "MyContainer47",
+                    "designerId": "d9424742-1b6d-426e-bed2-f7a19b425562",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fault-listBox"
+                                ],
+                                "disableSelection": true,
+                                "id": "EngInsureContractDetail_ElevatorList",
+                                "layout|flex": 1,
+                                "store": "eng_insurecontracttabelevator"
+                            },
+                            "name": "MyList16",
+                            "designerId": "0f68368a-8e76-41a8-889c-4bc567f98f60",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class=\"liftnet-Maintenance-TaskRecList\" style=\"height:{height}\">",
+                                            "<!--     140px -->",
+                                            "    <div class=\"liftnet-Maintenance-TaskRecList-left\" style=\"left:14px\" >",
+                                            "        <div class=\"liftnet-font-size14 {titleColor}\">{prodno}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{contracted}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{liftno}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{startdate} ~ {enddate}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{liftbrand}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{remark}&nbsp;</div>",
+                                            "    </div>",
+                                            "    <div class=\"liftnet-Maintenance-TaskRecList-right\" style=\"padding-top:0px;right:14px\">",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray liftnet-font-right\">{amt}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{fsd}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-{outdanColor}\">{outdan}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{dannum}次</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{liftstyle}&nbsp;</div>",
+                                            "    </div>",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "4f4dd936-6c7b-4d95-9d63-16a9623ee104"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

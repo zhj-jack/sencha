@@ -1,0 +1,107 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_liftcitylevelid",
+        "storeId": "eng_liftcitylevelid"
+    },
+    "name": "eng_liftprovinciallevelid1",
+    "designerId": "d7879b76-a215-4593-82f7-513a1a515170",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "areaid"
+            },
+            "name": "field820",
+            "designerId": "fa5b7c71-667d-4469-83cc-38b28766357f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "areaname"
+            },
+            "name": "field819",
+            "designerId": "37500a7f-db18-45c4-848d-a9ef7d481c5d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "// console.log('查所在市传去后台的参数:');",
+                    "// console.log(parm);",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/szqylist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取地区区域列表-演示数据",
+                    "",
+                    "     this.setData([",
+                    "         {",
+                    "            areaid :'441100',",
+                    "            areaname: '测试市区1',",
+                    "         },",
+                    "         {",
+                    "            areaid :'442200',",
+                    "            areaname: '测试市区2',",
+                    "         },",
+                    "         {",
+                    "            areaid :'443300',",
+                    "            areaname: '测试市区3',",
+                    "         },",
+                    "         {",
+                    "            areaid :'445500',",
+                    "            areaname: '测试市区5',",
+                    "         },",
+                    "         {",
+                    "            areaid :'446600',",
+                    "            areaname: '测试市区6',",
+                    "         },",
+                    "     ]);",
+                    "    // 演示数据",
+                    "    onSuccess(5);",
+                    "",
+                    "",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "5591b3b0-4e6d-443f-9410-4fee19bd7094"
+        }
+    ]
+}

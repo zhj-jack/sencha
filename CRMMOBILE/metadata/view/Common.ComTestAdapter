@@ -1,0 +1,243 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Common.ComTestAdapter",
+        "layout": "vbox",
+        "scrollable": false
+    },
+    "name": "MyContainer25",
+    "designerId": "746014f2-d8b0-48ab-b92f-8a57478a25e2",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Adapter"
+            },
+            "name": "MyToolbar7",
+            "designerId": "0547ee49-c840-4928-9959-f4dcc9686846",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "back",
+                        "text": null,
+                        "ui": "back"
+                    },
+                    "name": "MyButton25",
+                    "designerId": "b737b46b-6711-47c7-8b2e-b31e6b3dd70d",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "viewUtil.goLast();"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "95d7a65e-a2e1-4fca-bd4f-f4fcc22a76a3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer4",
+                    "designerId": "b2317be7-61fe-4a63-9909-264000f8b08a"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "ButtonTest",
+                        "margin": 10,
+                        "text": "Test!"
+                    },
+                    "name": "MyButton24",
+                    "designerId": "5946551e-f622-4606-b8d8-53189e459181",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var url = Ext.getCmp('testUrl').getValue();",
+                                    "var parm = JSON.parse(Ext.getCmp('testParm').getValue());",
+                                    "Ext.getCmp('testParm').setValue(JsonUtil.convertToString(parm));",
+                                    "",
+                                    "callPostAdapter(url, parm,",
+                                    "    function(ret) {",
+                                    "        console.log(ret);",
+                                    "        Ext.getCmp('testResult').setValue(JsonUtil.convertToString(ret));",
+                                    "    },",
+                                    "    function() {",
+                                    "        console.log('callPostAdapter FAILURE!');",
+                                    "    }",
+                                    ");"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "13aff871-a4c5-4111-90cc-41b807e36f40"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1,
+                "scrollable": "vertical"
+            },
+            "name": "MyFormPanel11",
+            "designerId": "b6cd8bfc-a3d5-4be0-b645-90008dead9f0",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "URL"
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "db7148fb-edbc-4d92-82db-19fdc3a7d772",
+                    "cn": [
+                        {
+                            "type": "Ext.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "clearIcon": false,
+                                "id": "testUrl",
+                                "label": null,
+                                "name": "url"
+                            },
+                            "name": "MyTextArea4",
+                            "designerId": "f22ad41e-be5b-4c46-bf22-531f6626894e"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "scrollable": null,
+                        "title": "PARM"
+                    },
+                    "name": "MyFieldSet2",
+                    "designerId": "7c3a6039-1068-481b-be15-9f8f9e9ba374",
+                    "cn": [
+                        {
+                            "type": "Ext.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "clearIcon": false,
+                                "id": "testParm",
+                                "label": null,
+                                "name": "parm"
+                            },
+                            "name": "MyTextArea5",
+                            "designerId": "faeb0bff-df6b-4c3a-a667-15e75ef7b2ae"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "scrollable": null,
+                        "title": "Result"
+                    },
+                    "name": "MyFieldSet4",
+                    "designerId": "c0c54b76-ac9c-468c-ab55-2627e543cbbf",
+                    "cn": [
+                        {
+                            "type": "Ext.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "clearIcon": false,
+                                "id": "testResult",
+                                "label": null,
+                                "maxRows": 200,
+                                "name": "result",
+                                "readOnly": true
+                            },
+                            "name": "MyTextArea5",
+                            "designerId": "4f150246-84a5-4e9f-b4f2-2710203cfb2d"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

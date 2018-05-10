@@ -1,0 +1,1029 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFaultAdd",
+        "id": "EngFaultAdd",
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "MyPanel7",
+    "designerId": "8967b770-cc2b-4b8a-be40-9b47286c482b",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "id": "EngFaultAdd_Tbar",
+                "title": "新增受信"
+            },
+            "name": "MyToolbar4",
+            "designerId": "d20ab05a-33b4-4733-b32e-caf89bf6cafb",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFaultAdd_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "70014601-9ed6-47c2-9c4b-6c09d47a2ac5"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "height": 1150,
+                "id": "EngFaultAdd_Form",
+                "layout|flex": 1,
+                "scrollable": true
+            },
+            "name": "MyFormPanel8",
+            "designerId": "cc36b561-2cb1-4488-aded-849ef22d01de",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-font-center",
+                            "liftnet-con-top"
+                        ],
+                        "docked": null
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "147d5c1f-32be-465d-be95-c056a9658b95",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-con-icon"
+                                ],
+                                "height": null,
+                                "src": "resources/images/con_icon01.png"
+                            },
+                            "name": "MyImg1",
+                            "designerId": "6afaa496-34a9-4b1f-95be-7d76491640a4"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fontColor-green",
+                                    "liftnet-font-size24"
+                                ],
+                                "html": "故障受信"
+                            },
+                            "name": "MyLabel",
+                            "designerId": "207a03ad-e78a-4fef-a2ea-1090d34721b4"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fontColor-gray",
+                                    "liftnet-font-size12"
+                                ],
+                                "html": "建立新的故障受信单",
+                                "id": "EngFaultAdd_LblTitle"
+                            },
+                            "name": "MyLabel1",
+                            "designerId": "c343b0e2-ff45-4202-a4d8-5bcca6e4b4a9"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-con-title"
+                        ],
+                        "docked": null
+                    },
+                    "name": "MyPanel8",
+                    "designerId": "3f98feed-a0d0-47c3-a168-21d210f9f7d2",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "详细资料"
+                            },
+                            "name": "MyLabel11",
+                            "designerId": "6c296f75-04b7-45e8-90d9-6a400f064eff"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "hidden": null,
+                        "inputCls": null,
+                        "itemId": null,
+                        "label": "故障单号",
+                        "labelWidth": "40%",
+                        "name": "trno",
+                        "placeHolder": "（系统生成）",
+                        "readOnly": true,
+                        "required": null,
+                        "value": null
+                    },
+                    "name": "MyTextField17",
+                    "designerId": "73ad134b-f035-4d7c-99f6-08260960f3c8"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "x-field-picker"
+                        ],
+                        "displayField": "storagename",
+                        "id": "EngFaultAdd_dept",
+                        "itemId": "EngFaultAdd_dept",
+                        "label": "所属部门",
+                        "labelWidth": "40%",
+                        "name": "dept",
+                        "store": "common_getdeptlist",
+                        "valueField": "storageid"
+                    },
+                    "name": "MySelectField8",
+                    "designerId": "e430bebf-c464-4fad-adaf-2dcb254dfcd9"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "x-field-picker"
+                        ],
+                        "designer|displayName": null,
+                        "displayField": "trresourcename",
+                        "height": null,
+                        "id": "EngFaultAdd_sxly",
+                        "itemId": "EngFaultAdd_sxly",
+                        "label": "受信来源",
+                        "labelWidth": "40%",
+                        "name": "sxly",
+                        "placeHolder": "请选择受信来源",
+                        "readOnly": false,
+                        "requiredCls": " x-field-required",
+                        "store": "common_sxsourcelist",
+                        "valueField": "trresourceid"
+                    },
+                    "name": "MySelectField1",
+                    "designerId": "e2618021-de5d-4c51-a7ba-3d291ad9b06f",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEngFaultAdd_sxlyInitialize",
+                                "implHandler": [
+                                    "//var me = this;",
+                                    "//me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onEngFaultAdd_sxlyInitialize",
+                            "designerId": "0ebd6707-cdd8-43a5-8a99-63e6661bb87f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "x-field-picker"
+                        ],
+                        "id": "EngFaultAdd_requesttype",
+                        "itemId": "EngFaultAdd_requesttype",
+                        "label": "类型",
+                        "name": "requesttype",
+                        "options": [
+                            "[{text: '即时',  value: '1'},",
+                            "{text: '补录', value: '2'}]",
+                            ""
+                        ],
+                        "placeHolder": "请选择类型"
+                    },
+                    "name": "MySelectField3",
+                    "designerId": "4a24219f-761d-4171-abc2-90b70089b16f"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "cls": [
+                            "x-field-datetime"
+                        ],
+                        "designer|displayName": null,
+                        "id": "EngFaultAdd_operdate",
+                        "itemId": "EngFaultAdd_operdate",
+                        "label": "受理时间",
+                        "labelWidth": "40%",
+                        "name": "operdate",
+                        "placeHolder": "请选择受理时间",
+                        "readOnly": true,
+                        "required": true,
+                        "requiredCls": null
+                    },
+                    "name": "MyTextField70",
+                    "designerId": "a8bbb198-4979-4a6d-8c74-024afec6311e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEngFaultAdd_createtimeInitialize",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onEngFaultAdd_createtimeInitialize",
+                            "designerId": "fc5aa9e3-81d2-46d5-a805-58b7d9238c25"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "id": "EngFaultAdd_reportor",
+                        "itemId": "EngFaultAdd_reportor",
+                        "label": "报修人",
+                        "labelWidth": "40%",
+                        "name": "reportor",
+                        "placeHolder": "请输入报修人姓名",
+                        "readOnly": null,
+                        "required": true,
+                        "value": null
+                    },
+                    "name": "MyTextField32",
+                    "designerId": "7a83b1e2-eed2-46bd-a416-60380d645865"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "id": "EngFaultAdd_reportortel",
+                        "itemId": "EngFaultAdd_reportortel",
+                        "label": "电话",
+                        "labelWidth": "40%",
+                        "name": "reportortel",
+                        "placeHolder": "请输入电话",
+                        "readOnly": null,
+                        "required": true,
+                        "value": null
+                    },
+                    "name": "MyTextField33",
+                    "designerId": "4051a8a5-1d26-4c40-bd6e-dc3631584d52"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "x-field-search"
+                        ],
+                        "id": "EngFaultAdd_projectname",
+                        "itemId": "EngFaultAdd_projectname",
+                        "label": "项目名称",
+                        "labelWidth": "40%",
+                        "name": "projectname",
+                        "placeHolder": "请选择或填写项目名称",
+                        "required": true
+                    },
+                    "name": "MyTextField",
+                    "designerId": "407e22f5-0c6b-441f-af46-c5130415bc37",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "OnEngFaultAdd_project",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "OnEngFaultAdd_project",
+                            "designerId": "38239902-0b4b-4c51-bd9a-0f673183a60f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_projectaddress",
+                        "itemId": "EngFaultAdd_projectaddress",
+                        "label": "项目地址",
+                        "name": "projectaddress",
+                        "placeHolder": "请输入项目地址",
+                        "required": true
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "31c4ef22-4a47-47b5-833d-199c3151bde3"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "x-field-search"
+                        ],
+                        "designer|displayName": null,
+                        "id": "EngFaultAdd_prodno",
+                        "itemId": "EngFaultAdd_prodno",
+                        "label": "设备注册码",
+                        "labelWidth": "40%",
+                        "name": "prodno",
+                        "placeHolder": "请选择或输入设备注册码",
+                        "readOnly": null,
+                        "value": null
+                    },
+                    "name": "MyTextField8",
+                    "designerId": "9165f88d-69ea-4e90-8427-7d870345ac2e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEngFaultAdd_prodnoFocus",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onEngFaultAdd_prodnoFocus",
+                            "designerId": "7fa5ba0d-0066-4865-9fc6-9052576ef989"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_facid",
+                        "itemId": "EngFaultAdd_facid",
+                        "name": "facid"
+                    },
+                    "name": "MyHiddenField2",
+                    "designerId": "1a5dccee-736e-4281-930c-4eaaab51122e"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_facname",
+                        "itemId": "EngFaultAdd_facname",
+                        "name": "facname"
+                    },
+                    "name": "MyHiddenField3",
+                    "designerId": "edd6da7a-f408-4401-9f7e-2a21589dff39"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_modelid",
+                        "itemId": "EngFaultAdd_modelid",
+                        "name": "modelid"
+                    },
+                    "name": "MyHiddenField4",
+                    "designerId": "3369b500-fca2-44b8-b178-6b3a301203fc"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_modelname",
+                        "itemId": "EngFaultAdd_modelname",
+                        "name": "modelname"
+                    },
+                    "name": "MyHiddenField5",
+                    "designerId": "59f6e5f7-474a-4703-b529-001e89851985"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_floor",
+                        "itemId": "EngFaultAdd_floor",
+                        "name": "floor"
+                    },
+                    "name": "MyHiddenField6",
+                    "designerId": "1910355c-900a-46bc-97f8-5f8664e2e104"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_station",
+                        "itemId": "EngFaultAdd_station",
+                        "name": "station"
+                    },
+                    "name": "MyHiddenField7",
+                    "designerId": "21d7f33b-b346-49e5-afed-53bd2c0183ac"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_door",
+                        "itemId": "EngFaultAdd_door",
+                        "name": "door"
+                    },
+                    "name": "MyHiddenField8",
+                    "designerId": "5948263e-5b56-4e9e-bea1-c1abfbea39ac"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_locationremark",
+                        "itemId": "EngFaultAdd_locationremark",
+                        "name": "locationremark"
+                    },
+                    "name": "MyHiddenField9",
+                    "designerId": "9094deee-9c5a-4bb6-8ec5-4d9838c1ac7f"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_contractid",
+                        "itemId": "EngFaultAdd_contractid",
+                        "name": "contractid"
+                    },
+                    "name": "MyHiddenField10",
+                    "designerId": "76fbd06e-d3e3-4062-a799-bdbd161b2f3a"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_elevatorno",
+                        "itemId": "EngFaultAdd_elevatorno",
+                        "name": "elevatorno"
+                    },
+                    "name": "MyHiddenField11",
+                    "designerId": "17647a02-9bf6-466a-95db-215a2d2c0e5b"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": null,
+                        "designer|displayName": null,
+                        "label": "困人",
+                        "labelWidth": "40%",
+                        "maxValueCls": "x-toggle-on-red",
+                        "minValueCls": "x-toggle-off-green",
+                        "name": "istrap",
+                        "readOnly": null,
+                        "required": true,
+                        "value": null
+                    },
+                    "name": "MyToggleField2",
+                    "designerId": "46da7ae8-b6a4-4fa5-8c00-7122f3177fb2"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_isrunning",
+                        "itemId": "EngFaultAdd_isrunning",
+                        "label": "电梯是否仍在运行",
+                        "labelWidth": "50%",
+                        "maxValueCls": "x-toggle-on-red",
+                        "minValueCls": "x-toggle-off-green",
+                        "name": "isrunning",
+                        "required": true
+                    },
+                    "name": "MyToggleField",
+                    "designerId": "267a685e-02c3-49c0-9e14-062d937ae221"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "x-field-datetime"
+                        ],
+                        "id": "EngFaultAdd_faulthappentime",
+                        "itemId": "EngFaultAdd_faulthappentime",
+                        "label": "故障发生时间",
+                        "labelWidth": "50%",
+                        "name": "faulthappentime",
+                        "placeHolder": "请选择故障发生时间",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "72ecc00f-13d6-40ec-80ad-1684f0335a84",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEngFaultAdd_faulthappentime",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onEngFaultAdd_faulthappentime",
+                            "designerId": "f7ad3407-9127-49d9-8c4d-e52e09d67e4a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "故障描述",
+                        "labelWidth": "40%",
+                        "name": "calloutcontent",
+                        "readOnly": null,
+                        "required": true
+                    },
+                    "name": "MyTextArea10",
+                    "designerId": "e8cc08f3-f879-4d25-891d-fb2e36708743"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": null,
+                        "cls": [
+                            "x-field-search"
+                        ],
+                        "designer|displayName": null,
+                        "id": "EngFaultAdd_assignuser",
+                        "itemId": "EngFaultAdd_assignuser",
+                        "label": "维修人员",
+                        "labelWidth": "40%",
+                        "name": "assignuserStr",
+                        "placeHolder": "请选择维修人员",
+                        "readOnly": null,
+                        "value": null
+                    },
+                    "name": "MyTextField71",
+                    "designerId": "d0f9fa8f-f0d3-4619-a41a-ac44fa4b5ec0",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEngFaultAdd_dutyusernameFocus",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onEngFaultAdd_dutyusernameFocus",
+                            "designerId": "263ab58f-6a5b-453c-b7f2-74f54f50d1cd"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "assignuser",
+                        "itemId": "assignuser",
+                        "name": "assignuser"
+                    },
+                    "name": "MyHiddenField18",
+                    "designerId": "8bfbad8e-29eb-43f2-a370-0de7ce00d79a"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "修复要求",
+                        "labelWidth": "50%",
+                        "name": "repairask",
+                        "placeHolder": "请输入报修人修复要求",
+                        "required": true
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "a6d000f6-82bb-466b-b9c4-f4f42fc943ef"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "cls": [
+                            "x-field-datetime"
+                        ],
+                        "designer|displayName": null,
+                        "itemId": "EngFaultAdd_expectarrivetime",
+                        "label": "要求到达时间",
+                        "labelWidth": "50%",
+                        "name": "expectarrivetime",
+                        "placeHolder": "请选择客户要求到达时间",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField78",
+                    "designerId": "11336c4c-8dec-4c2a-859a-0de7dec8d985",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEngFaultAdd_expectarrivetimeInitialize",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onEngFaultAdd_expectarrivetimeInitialize",
+                            "designerId": "b6604983-a8c2-44fe-936f-d1b8fc91111a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "注意事项",
+                        "name": "requestattention",
+                        "placeHolder": "请输入注意事项"
+                    },
+                    "name": "MyTextArea1",
+                    "designerId": "3b4c6ad5-59f8-45a6-a8a8-2663e60dcaa1"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "x-field-search"
+                        ],
+                        "designer|displayName": null,
+                        "displayField": "value",
+                        "id": "EngFaultAdd_reachtimeask",
+                        "itemId": "EngFaultAdd_reachtimeask",
+                        "label": "到达时间要求",
+                        "labelWidth": "50%",
+                        "name": "reachtimeask",
+                        "options": [
+                            "[",
+                            "    {text: '尽快',  value: '尽快'},",
+                            "    {text: '15分钟内到', value: '15分钟内到'},",
+                            "    {text: '30分钟内到',  value: '30分钟内到'},",
+                            "    {text: '其他', value:'其他'}",
+                            "]"
+                        ],
+                        "placeHolder": "请选择到场时间要求"
+                    },
+                    "name": "MySelectField5",
+                    "designerId": "d10d38ff-efdf-45ac-b755-50597a449b25"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_repairfinishtime",
+                        "itemId": "EngFaultAdd_repairfinishtime",
+                        "label": "修复时间要求",
+                        "labelWidth": "40%",
+                        "name": "repairfinishtime",
+                        "placeHolder": "请输入修复时间要求"
+                    },
+                    "name": "MyTextField5",
+                    "designerId": "cfdb59e4-910e-48fe-95ef-3b64c661a338"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultAdd_repairattention",
+                        "itemId": "EngFaultAdd_repairattention",
+                        "label": "修理注意事项",
+                        "labelWidth": "40%",
+                        "name": "repairattention",
+                        "placeHolder": "请输入修理注意事项"
+                    },
+                    "name": "MyTextArea2",
+                    "designerId": "21d6c92f-7805-46f3-8c90-673fce334133"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-button",
+                            "liftnet-button-three"
+                        ],
+                        "docked": null,
+                        "height": null,
+                        "layout": "hbox"
+                    },
+                    "name": "MyPanel7",
+                    "designerId": "196520f8-753f-4df9-a94b-7be48540990c",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-buttonColor-green"
+                                ],
+                                "docked": null,
+                                "hidden": false,
+                                "id": "EngFaultAdd_BtnSave",
+                                "itemId": "EngFaultAdd_BtnSave",
+                                "layout|flex": 1,
+                                "text": ""
+                            },
+                            "name": "MyButton5",
+                            "designerId": "39586edd-0164-4d82-b0f9-98f690e418be"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "id": "EngFaultAdd_BtnAssign",
+                                "itemId": "EngFaultAdd_BtnAssign",
+                                "layout|flex": 1,
+                                "text": ""
+                            },
+                            "name": "MyButton34",
+                            "designerId": "cb30599a-f057-4639-a48e-b15b0106a5e1"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-buttonColor-red"
+                                ],
+                                "docked": null,
+                                "hidden": false,
+                                "id": "EngFaultAdd_BtnClose",
+                                "itemId": "EngFaultAdd_BtnClose",
+                                "layout|flex": 1,
+                                "text": ""
+                            },
+                            "name": "MyButton35",
+                            "designerId": "8404e28b-5412-4850-991d-8f1ba9a8006b"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

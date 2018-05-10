@@ -1,0 +1,178 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_job_chooselift",
+        "storeId": "common_job_chooselift"
+    },
+    "name": "common_job_chooseproject1",
+    "designerId": "434e09f2-d6f2-4165-aa03-3cfa9d5e17ea",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftautono"
+            },
+            "name": "field542",
+            "designerId": "cbd2fc0d-7084-4029-868b-ad04bcfc7316"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftno"
+            },
+            "name": "field543",
+            "designerId": "7765335f-7525-4010-adb5-8ffce0569590"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prodno"
+            },
+            "name": "field544",
+            "designerId": "b688bb04-9a8a-4e60-934a-cbbea2e1d3d7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "facname"
+            },
+            "name": "field545",
+            "designerId": "c0f7ec81-f0f5-4b79-addb-5384e91deee6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatorid"
+            },
+            "name": "field546",
+            "designerId": "b57ecf99-9eca-4944-a1fb-6bac9834f143"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FSD"
+            },
+            "name": "field547",
+            "designerId": "0cfac6f4-5173-48d3-bac1-2045d07a452a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/liftnet/common/api/1.0/';",
+                    "//     var userid = global.getUserId();",
+                    "//     var contractid = parm.contractid;",
+                    "//     var adapterParm = {userid: userid,contractid:contractid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取电梯列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            liftautono: 'liftautono1',",
+                    "            liftno: 'liftno1',",
+                    "            prodno:'prodno1',",
+                    "            facname:'facname1',",
+                    "            elevatorid:'elevatorid1',",
+                    "            FSD:'FSD1',",
+                    "        },",
+                    "        {",
+                    "            liftautono: 'liftautono2',",
+                    "            liftno: 'liftno2',",
+                    "            prodno:'prodno2',",
+                    "            facname:'facname2',",
+                    "            elevatorid:'elevatorid2',",
+                    "            FSD:'FSD2',",
+                    "        },",
+                    "        {",
+                    "            liftautono: 'liftautono3',",
+                    "            liftno: 'liftno3',",
+                    "            prodno:'prodno3',",
+                    "            facname:'facname3',",
+                    "            elevatorid:'elevatorid3',",
+                    "            FSD:'FSD3',",
+                    "        },",
+                    "        {",
+                    "            liftautono: 'liftautono4',",
+                    "            liftno: 'liftno4',",
+                    "            prodno:'prodno4',",
+                    "            facname:'facname4',",
+                    "            elevatorid:'elevatorid4',",
+                    "            FSD:'FSD4',",
+                    "        },",
+                    "        {",
+                    "            liftautono: 'liftautono5',",
+                    "            liftno: 'liftno5',",
+                    "            prodno:'prodno5',",
+                    "            facname:'facname5',",
+                    "            elevatorid:'elevatorid5',",
+                    "            FSD:'FSD5',",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "429a0c07-e744-46a5-822f-ae18c55c4bf1"
+        }
+    ]
+}

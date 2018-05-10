@@ -1,0 +1,167 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.aud_ysshdetail_detailed",
+        "storeId": "NoUsed.aud_ysshdetail_detailed"
+    },
+    "name": "aud_byhtdetail_detailed1",
+    "designerId": "640e57c5-04f3-4b23-bb16-28b6fe02f99e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftorserviceno",
+                "type": "string"
+            },
+            "name": "field74",
+            "designerId": "b164d95e-d421-461b-a469-b4e6f9dd4d20"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "premoney",
+                "type": "string"
+            },
+            "name": "field75",
+            "designerId": "4346153f-06a4-4c61-8c62-0c8c7a9cd738"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "predate",
+                "type": "string"
+            },
+            "name": "field76",
+            "designerId": "ce6e23fe-0058-4dc3-8619-ad1189321b45"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "detailrem",
+                "type": "string"
+            },
+            "name": "field191",
+            "designerId": "7c58ddbe-753a-4843-8b8e-c3b094999ba9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/aud/api/1.0/ysshdetail/'+'流水号';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:'用户ID',billno:'合同流水号'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 应收款审核查看-明细信息-演示数据",
+                    "    this.setData([",
+                    "    {",
+                    "        pordid: '注册码',",
+                    "        elevatorid: '型号',",
+                    "        fsd: '层/站/门',",
+                    "        high: '提升高度',",
+                    "        mugstartdate: '保养开始日期',",
+                    "        mugenddate: '保养结束日期',",
+                    "        price: '单价',",
+                    "        r18: '保养月数',",
+                    "        yearcheckprice: '年检费',",
+                    "        sumcount: '金额',",
+                    "        detailrem: '备注'",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "356fbab0-0c86-41a2-b3a9-46a40fd2d4e0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "adf3e261-dc15-4be8-98dc-2c2572996b22"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "c6e8e375-803b-4652-94b9-002ac535c2d2"
+        }
+    ]
+}

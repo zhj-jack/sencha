@@ -1,0 +1,123 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_projectlist",
+        "requires": [
+            "Ext.data.Field"
+        ],
+        "storeId": "common_projectlist"
+    },
+    "name": "MyStore",
+    "designerId": "818acc9a-b618-4f54-9262-b4c11c1227ba",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectid"
+            },
+            "name": "field282",
+            "designerId": "7b7052ad-929c-4d87-8ec3-9f0853638201"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname",
+                "type": "string"
+            },
+            "name": "field7",
+            "designerId": "7580d1cc-ca1e-41e9-9477-7731d6e29b75"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectaddress",
+                "type": "string"
+            },
+            "name": "field8",
+            "designerId": "3b8a6838-ab0b-47ec-877f-c2b676dd70cd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatornum"
+            },
+            "name": "field284",
+            "designerId": "c80e3014-f336-4770-9c48-c3a6d0e97b65"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "console.log(parm);",
+                    "var me = this;",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/ckxm';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var d = ret.data;",
+                    "            var n = d.length;",
+                    "            for(var i=0; i<n; i++) {",
+                    "                me.add(d[i]);",
+                    "            }",
+                    "            onSuccess(n);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    var start = (parm.curpagenum-1)*parm.pagesize+1, end = start + parm.pagesize-1;",
+                    "",
+                    "    for(var i=start; i<=end; i++) {",
+                    "        this.add({",
+                    "            projectid:'',",
+                    "            projectname: '广州市中梯物联科技发展有限公司.' + i,",
+                    "            projectaddress: '广州市荔湾区黄沙大道144号大冶有色大厦903A室',",
+                    "            elevatornum:''",
+                    "        });",
+                    "    }",
+                    "    // 演示数据",
+                    "    onSuccess(end - start + 1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "2cb95dad-3ea3-4ca3-b9bd-abbc2d48592e"
+        }
+    ]
+}

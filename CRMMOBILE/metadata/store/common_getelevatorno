@@ -1,0 +1,118 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_getelevatorno",
+        "storeId": "common_getelevatorno"
+    },
+    "name": "common_getserviceno1",
+    "designerId": "445213de-578b-4c03-a14c-027fba1281e2",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatorno"
+            },
+            "name": "field368",
+            "designerId": "18d8f2ff-fee1-426b-acb7-15d783dee2c0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "floor"
+            },
+            "name": "field369",
+            "designerId": "0eec34af-da41-4788-a7e4-9f1b26a69503"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "station"
+            },
+            "name": "field370",
+            "designerId": "d1d461e5-9871-49c4-a956-474ac79d97c1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "specno"
+            },
+            "name": "field371",
+            "designerId": "f970b46a-efdd-4dab-a34d-011325ee9309"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/getelevatorno';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var d = ret.data;",
+                    "            var n = d.length;",
+                    "            for(var i=0; i<n; i++) {",
+                    "                me.add(d[i]);",
+                    "            }",
+                    "            onSuccess(n);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    var start = parm.pageno, end = parm.pageno + parm.pagelen - 1;",
+                    "    end = end>58? 58:end;",
+                    "",
+                    "    for(var i=start; i<=end; i++) {",
+                    "        this.add({",
+                    "            elevatorno: 'ELENO-5678-9012',",
+                    "            floor: '30',",
+                    "            station: '30',",
+                    "            specno: 'ELENO-5678',",
+                    "        });",
+                    "    }",
+                    "    // 演示数据",
+                    "    onSuccess(end - start + 1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "ad2d6eb8-ecb4-4f38-b0a5-1caef1a4aebd"
+        }
+    ]
+}

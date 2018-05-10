@@ -1,0 +1,114 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_userjurisdiction",
+        "storeId": "common_userjurisdiction"
+    },
+    "name": "common_userdl1",
+    "designerId": "33e5f9b7-dcf5-4743-b688-89621af9e01f",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/checkjurisdiction';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:global.getUserId()};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.trrequest);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 登录-演示数据",
+                    "    this.setData();",
+                    "",
+                    "        onSuccess(",
+                    "            {",
+                    "                addjurisdiction:'Y'",
+                    "            }",
+                    "        );",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "d1d63cf1-53fa-4ae7-b1d7-5cced0ab6c45"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "d11559b3-60a6-4596-94b9-98b985fd8aa3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "33eaac16-4d9c-40fd-9528-d4b42f77eaad"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addjurisdiction"
+            },
+            "name": "field",
+            "designerId": "9bc5bb1c-99bf-4ec1-8328-42c971e1d946"
+        }
+    ]
+}

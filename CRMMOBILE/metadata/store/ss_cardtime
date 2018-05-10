@@ -1,0 +1,125 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ss_cardtime",
+        "storeId": "ss_cardtime"
+    },
+    "name": "ss_gcardtime1",
+    "designerId": "23462d6d-20aa-45c3-8814-0b4012fe7aa9",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "code",
+                "type": "string"
+            },
+            "name": "field409",
+            "designerId": "fede1252-5724-4d63-abb5-f969689421ce"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "info",
+                "type": "string"
+            },
+            "name": "field31",
+            "designerId": "212af2b2-fdb1-4f65-9b67-b9b56f48f842"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '';",
+                    "    var userid = global.getUserId('/ss/api/1.0/cardtime');",
+                    "    var adapterParm = { userid:'用户ID', type:'类型 0.上班/1.下班', ontime:'打卡时间'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 上下班打卡-演示数据",
+                    "    this.setData();",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "d277f62e-238a-4ccf-a511-bba0c3e3fe09"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "05fe8aad-48b3-4ae2-88ab-50d24c779db2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "93a3e145-d788-444b-8bc4-2d17f4874098"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_syn3owxc",
+        "url": "ux/signaturefield.js",
+        "x-compile": true
+    },
+    "name": "js3",
+    "designerId": "c9529548-95e1-433d-b768-57ba1ede1d8c"
+}

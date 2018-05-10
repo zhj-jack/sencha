@@ -1,0 +1,111 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.ss_cardtime",
+        "storeId": "NoUsed.ss_cardtime"
+    },
+    "name": "mainpage_notisfy1",
+    "designerId": "0b80bfa1-9a04-46b2-aa02-250c8ecaa4c4",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ontime",
+                "type": "string"
+            },
+            "name": "field31",
+            "designerId": "92581017-7316-4918-945f-d3264f2a4cc5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '';",
+                    "    var userid = global.getUserId('/ss/api/1.0/gcardtime');",
+                    "    var adapterParm = {userid: '用户ID'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 获取服务器时间-演示数据",
+                    "    this.setData();",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "b8df5df9-cd83-402c-b604-71916290a30c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "86b36e47-9547-43a3-9b8f-00b1e34cacd1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "01c36b11-7257-4b45-b4c4-0a6e2bb426a9"
+        }
+    ]
+}

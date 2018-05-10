@@ -1,0 +1,576 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sx_sxlist",
+        "storeId": "sx_sxlist"
+    },
+    "name": "MyStore",
+    "designerId": "6f09d1c8-5fd4-4c25-8acb-213ec3418020",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "operdate",
+                "type": "string"
+            },
+            "name": "field11",
+            "designerId": "9caf19d8-ec6c-41ce-ab9d-3b12e64239c7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "istrap",
+                "type": "string"
+            },
+            "name": "field255",
+            "designerId": "5c7852fe-2e09-4df6-882c-7b5252df7703"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "trno",
+                "type": "string"
+            },
+            "name": "field257",
+            "designerId": "61677a1e-5b22-4381-9c18-377db530cfc6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname",
+                "type": "string"
+            },
+            "name": "field258",
+            "designerId": "4d008f23-2a63-45ea-8ccf-8295bbef4155"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr",
+                "type": "string"
+            },
+            "name": "field259",
+            "designerId": "b2afc585-8623-443d-93df-c9eb60f80283"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "checkuser",
+                "type": "string"
+            },
+            "name": "field",
+            "designerId": "d89e0122-09c2-4c91-9368-2635f9e16846"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "state",
+                "type": "string"
+            },
+            "name": "field256",
+            "designerId": "8316dc5e-3e71-442b-a328-3822efe19f41"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate",
+                "type": "auto"
+            },
+            "name": "field5",
+            "designerId": "ea5f2ed0-5ac1-447c-b34b-ff1279986a59"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleIcon",
+                "type": "string"
+            },
+            "name": "field350",
+            "designerId": "4d3bc566-c4df-4fcf-beb6-09193917b10a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleColor",
+                "type": "string"
+            },
+            "name": "field410",
+            "designerId": "68e1f890-6a2a-49bb-9f13-79e76da7443c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "urgent",
+                "type": "string"
+            },
+            "name": "field411",
+            "designerId": "c57a494f-5dbc-4aec-b044-721390affe72"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "statusColor",
+                "type": "string"
+            },
+            "name": "field1",
+            "designerId": "8e458302-3dba-457f-832c-5f817139f36a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm",
+                    "action"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "// this.setData([]);",
+                    "//console.log(JsonUtil.convertToString(parm));",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/shouxin/api/1.0/mobiletrrequest';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var info;",
+                    "            if(ret.status.code!=200){",
+                    "                if(parm.searchkey!==''){",
+                    "                    onFailure('搜索故障受信列表失败');",
+                    "                    return;",
+                    "                }",
+                    "                onFailure('读取故障受信列表失败');",
+                    "            }else{",
+                    "                if(ret.data.length===0){",
+                    "                    if(parm.curpagenum===1){",
+                    "                        switch(action){",
+                    "                            case 'refresh':",
+                    "                                info = '没有故障受信数据';",
+                    "                                break;",
+                    "                            case 'loadmore':",
+                    "                                break;",
+                    "                            case 'firstload':",
+                    "                                info = '没有故障受信数据';",
+                    "                                break;",
+                    "                            case 'search':",
+                    "                                info = '没有相关故障受信数据';",
+                    "                                break;",
+                    "                        }",
+                    "                        me.setData(ret.data);",
+                    "                        onFailure(info);",
+                    "                    }else{",
+                    "                        onFailure('没有更多数据！');",
+                    "                    }",
+                    "                    return;",
+                    "                }",
+                    "",
+                    "                var d = me.decoDat(ret.data);",
+                    "                //第一次加载直接设置数据",
+                    "                if(parm.curpagenum==1){",
+                    "                    me.setData(ret.data);",
+                    "                }else{",
+                    "                    //分页用法，在原有数据上继续添加",
+                    "                    var n = d.length;",
+                    "                    for(var i=0; i<n; i++) {",
+                    "                        me.add(d[i]);",
+                    "                    }",
+                    "                }",
+                    "",
+                    "                if(action==='loadmore'){",
+                    "                    onSuccess(d.length,ret.jurisdiction);",
+                    "                }else{",
+                    "                    onSuccess('resetCurPage',ret.jurisdiction);",
+                    "                }",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            var info;",
+                    "            switch(action){",
+                    "                case 'refresh':",
+                    "                    info = '刷新故障受信数据失败';",
+                    "                    break;",
+                    "                case 'loadmore':",
+                    "                    info = '加载更多故障受信数据失败';",
+                    "                    break;",
+                    "                case 'firstload':",
+                    "                    info = '获取故障受信数据失败';",
+                    "                    break;",
+                    "                case 'search':",
+                    "                    info = '搜索故障受信失败';",
+                    "                    break;",
+                    "            }",
+                    "            onFailure(info);",
+                    "//             if(parm.searchkey!==''){",
+                    "//                 onFailure('搜索故障受信列表失败');",
+                    "//                 return;",
+                    "//             }",
+                    "//             onFailure('读取故障受信列表失败');",
+                    "        }",
+                    "    );",
+                    "    //         function(ret) {",
+                    "    //             var d = me.decoDat(ret.data);",
+                    "    //             me.setData(d);",
+                    "    //             onSuccess(d.length);",
+                    "    //         },",
+                    "    //         onFailure);",
+                    "} else {",
+                    "    //分页模拟",
+                    "    var start = (parm.curpagenum-1)*20,",
+                    "        end = parm.curpagenum * parm.pagesize;",
+                    "    //         end = end>50?50:end;",
+                    "    if(end>60){",
+                    "        onFailure('没有更多数据！');",
+                    "        return;",
+                    "    }",
+                    "",
+                    "    for(var i=start; i<end; i++) {",
+                    "        if(i%2==1){",
+                    "            this.add({",
+                    "                trno: 'BX20150604043',",
+                    "                operdate:'projectid'+(i),",
+                    "                istrap:1,",
+                    "                projectname: '广州市华越友联科技发展有限公司.' + (i + 1),",
+                    "                addr: '广州市荔湾区黄沙大道144号大冶有色大厦1001室',",
+                    "                state: '未接收',",
+                    "                nextstate:[",
+                    "                    {name:'接收'},",
+                    "                    {name:'退回'},",
+                    "                    {name:'转派'},",
+                    "                ]",
+                    "            });",
+                    "        }else{",
+                    "            this.add({",
+                    "                trno: 'BX20150604043',",
+                    "                operdate:'projectid'+(i),",
+                    "                istrap:1,",
+                    "                projectname: '广州市华越友联科技发展有限公司.' + (i + 1),",
+                    "                addr: '广州市荔湾区黄沙大道144号大冶有色大厦1001室',",
+                    "                state: '维修中',",
+                    "                nextstate:[{",
+                    "                    name:'完工'",
+                    "                }]",
+                    "            });",
+                    "        }",
+                    "    }",
+                    "    if(action=='firstload'||action=='refresh'||action=='search'){",
+                    "        onSuccess('resetCurPage',{",
+                    "            addjurisdiction\t:\t'Y',\t//新建权限（Y/N）,",
+                    "            updatejurisdiction\t: 'Y'\t\t//修改权限（Y/N）",
+                    "",
+                    "        });",
+                    "        return;",
+                    "    }",
+                    "    // 演示数据",
+                    "//     onSuccess(end - start + 1);",
+                    "    onSuccess(end - start + 1);",
+                    "//     var d = this.decoDat([",
+                    "//         {",
+                    "//             operdate: '2015-12-01&nbsp;21:25',",
+                    "//             istrap: '1',",
+                    "//             state: '待分配',",
+                    "//             trno: 'BX20150604043',",
+                    "//             projectname: '粤商投资有限公司2',",
+                    "//             addr: '广州市白云区人和龙苑小区2',",
+                    "//             checkuser:'',",
+                    "//             nextstate: [",
+                    "//                         {name:\"删除\",url:\"http://127.0.0.1/删除\"}",
+                    "//                     ],",
+                    "//             urgent: '',",
+                    "//             statusColor: '',",
+                    "//             titleIcon: '',",
+                    "//             titleColor: '',",
+                    "//         },",
+                    "//         {",
+                    "//             operdate: '2015-12-01&nbsp;21:25',",
+                    "//             istrap: '1',",
+                    "//             state: '未接收',",
+                    "//             trno: 'BX20150604043',",
+                    "//             projectname: '粤商投资有限公司2',",
+                    "//             addr: '广州市白云区人和龙苑小区2',",
+                    "//             checkuser:'',",
+                    "//             nextstate: [",
+                    "//                 {name:\"接收\",url:\"http://127.0.0.1/接收\"},",
+                    "//                 {name:\"退回\",url:\"http://127.0.0.1/退回\"},",
+                    "//                 {name:\"转派\",url:\"http://127.0.0.1/转派\"}",
+                    "//             ],",
+                    "//             urgent: '',",
+                    "//             statusColor: '',",
+                    "//             titleIcon: '',",
+                    "//             titleColor: '',",
+                    "//         },",
+                    "//         {",
+                    "//             operdate: '2015-12-01&nbsp;11:55',",
+                    "//             istrap: '0',",
+                    "//             state: '已完工',",
+                    "//             trno: 'BX2015060405',",
+                    "//             projectname: '广州市粤商投资有限公司',",
+                    "//             addr: '广州市白云区人和龙苑小区',",
+                    "//             checkuser:'陈大福',",
+                    "//             nextstate: [],",
+                    "//             urgent: '',",
+                    "//             statusColor: '',",
+                    "//             titleIcon: '',",
+                    "//             titleColor: '',",
+                    "//         },",
+                    "//         {",
+                    "//             operdate: '2015-12-01&nbsp;11:55',",
+                    "//             istrap: '1',",
+                    "//             state: '已退回',",
+                    "//             trno: 'BX2015060406',",
+                    "//             projectname: '广州市粤商投资有限公司',",
+                    "//             addr: '广州市白云区人和龙苑小区',",
+                    "//             checkuser:'陈大福',",
+                    "//             nextstate: [",
+                    "//                 {name:\"转派\",url:\"http://127.0.0.1/转派\"},",
+                    "//                 {name:\"删除\",url:\"http://127.0.0.1/删除\"}",
+                    "//             ],",
+                    "//             taskid: 'TASK123456',",
+                    "//             url: '查询明细url',",
+                    "//             urgent: '',",
+                    "//             statusColor: '',",
+                    "//             titleIcon: '',",
+                    "//             titleColor: '',",
+                    "//         },",
+                    "//         {",
+                    "//             operdate: '2015-12-01&nbsp;21:25',",
+                    "//             istrap: '1',",
+                    "//             state: '未接收',",
+                    "//             trno: 'BX2015060404',",
+                    "//             projectname: '广州市粤商投资有限公司',",
+                    "//             addr: '广州市白云区人和龙苑小区',",
+                    "//             checkuser:'',",
+                    "//             nextstate: [",
+                    "//                 {name:\"接收\",url:\"http://127.0.0.1/接收\"},",
+                    "//                 {name:\"退回\",url:\"http://127.0.0.1/退回\"},",
+                    "//                 {name:\"转派\",url:\"http://127.0.0.1/转派\"}",
+                    "//             ],",
+                    "//             urgent: '',",
+                    "//             statusColor: '',",
+                    "//             titleIcon: '',",
+                    "//             titleColor: '',",
+                    "//         },",
+                    "//         {",
+                    "//             operdate: '2015-12-01&nbsp;11:55',",
+                    "//             istrap: '0',",
+                    "//             state: '已接收(进行中)',",
+                    "//             trno: 'BX2015060405',",
+                    "//             projectname: '广州市粤商投资有限公司',",
+                    "//             addr: '广州市白云区人和龙苑小区',",
+                    "//             checkuser:'李小明',",
+                    "//             nextstate: [",
+                    "//                 {name:\"完成\",url:\"http://127.0.0.1/完成\"}",
+                    "//             ],",
+                    "//             urgent: '',",
+                    "//             statusColor: '',",
+                    "//             titleIcon: '',",
+                    "//             titleColor: '',",
+                    "//         }",
+                    "//     ]);",
+                    "//         this.setData(d);",
+                    "//         onSuccess(d.length);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "f42ebade-928d-4c6c-a187-f303db98c94e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "98eed6de-b794-4cb7-bda3-5c0bc44bada3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "if(parm!=='') {",
+                    "    this.filterBy(function(item) {",
+                    "        var s = item.get('projectname') + ' ' + item.get('addr') + ' ' +",
+                    "            item.get('checkuser') ;",
+                    "        return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "7243332b-03ed-4e57-8b71-db1c64eb94a2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "",
+                    "var statusArr = [];",
+                    "/*",
+                    "statusArr['0'  ]= { text:'待分配', color:'green' };",
+                    "statusArr['103']= { text:'关闭',   color:'gray' };",
+                    "statusArr['104']= { text:'退单',   color:'red' };",
+                    "statusArr['201']= { text:'待接收', color:'orange' };",
+                    "statusArr['202']= { text:'未出发', color:'green' };",
+                    "statusArr['301']= { text:'路途中', color:'blue' };",
+                    "statusArr['302']= { text:'维修中', color:'purple' };",
+                    "statusArr['303']= { text:'救援中', color:'purple' };",
+                    "statusArr['401']= { text:'已完成', color:'black' };",
+                    "*/",
+                    "statusArr['待分配']= { code:'0',   color:'purple' };",
+                    "statusArr['关闭']= { code:'103', color:'gray' };",
+                    "statusArr['已退回']= { code:'104', color:'red' };",
+                    "statusArr['未接收']= { code:'201', color:'green' };",
+                    "statusArr['维修中']= { code:'202', color:'orange' };",
+                    "//statusArr['路途中']= { code:'301', color:'blue' };",
+                    "//statusArr['维修中']= { code:'302', color:'purple' };",
+                    "//statusArr['救援中']= { code:'303', color:'purple' };",
+                    "statusArr['已完工']= { code:'401', color:'black' };",
+                    "",
+                    "",
+                    "// urgent、statusColor、titleIcon、titleColor 根据istrap显示:",
+                    "// urgent \t\t: 紧急的角标",
+                    "// statusColor\t: 状态的颜色",
+                    "// titleIcon\t: 标题的图标",
+                    "// titleColor\t: 标题的颜色",
+                    "",
+                    "for(var i=0;i<data.length; i++) {",
+                    "    var state = data[i].state;",
+                    "    if(!statusArr[state]) {",
+                    "        Ext.toast('sx_sxlist 未知状态：' + state);",
+                    "        continue;",
+                    "    }",
+                    "",
+                    "    data[i].operdate = data[i].operdate.split(' ')[0];",
+                    "    data[i].titleColor  = 'liftnet-fontColor-' + statusArr[state].color;",
+                    "    data[i].statusColor = 'liftnet-fontColor-' + statusArr[state].color;",
+                    "    //data[i].state       = statusArr[state].text;",
+                    "",
+                    "    if(data[i].istrap==='1') {",
+                    "        if(state==='待分配'||",
+                    "           state==='已退回'||",
+                    "           state==='未接收'||",
+                    "           state==='维修中'//||",
+                    "           //state==='路途中'||",
+                    "           /*state==='救援中'*/) {",
+                    "            data[i].urgent = '<div class=\"liftnet-remindBg liftnet-remindBg-red\"></div><div class=\"liftnet-remind liftnet-font-size12\">急</div>';",
+                    "        }",
+                    "        data[i].titleIcon = '<i class=\"ln ln-stranded\"></i> ';",
+                    "        data[i].istrap = '<span class=\"liftnet-font-size14\">(困人)</span>';",
+                    "    } else {",
+                    "        data[i].titleIcon = '<i class=\"ln ln-repair\"></i> ';",
+                    "        data[i].istrap = '';",
+                    "    }",
+                    "}",
+                    "",
+                    "return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "6da2fb1e-2d70-4a0b-8b02-dca2900afb56"
+        }
+    ]
+}

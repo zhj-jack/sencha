@@ -1,0 +1,96 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "cu_levelist",
+        "storeId": "cu_levelist"
+    },
+    "name": "MyStore",
+    "designerId": "3a2afbc2-cfdd-44dd-b032-459f56332ca5",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "levelid"
+            },
+            "name": "field843",
+            "designerId": "d5fb52e5-c01b-4f02-b6e2-30e8bb208157"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "levelname"
+            },
+            "name": "field844",
+            "designerId": "9a246e5c-a6f4-437e-a70a-67d0684b9e63"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/mugcustomer/api/1.0/customerleve';",
+                    "",
+                    "    console.log('-----传到后台的参数-----');",
+                    "    console.log(parm);",
+                    "    console.log('-----传到后台的参数-----');",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            console.log(me.getData());",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    this.setData([",
+                    "        {",
+                    "            levelid\t\t: \t'A',",
+                    "            levelname\t:\t'重点客户'",
+                    "        },",
+                    "        {",
+                    "            levelid\t\t: \t'B',",
+                    "            levelname\t:\t'普通客户'",
+                    "        },",
+                    "        {",
+                    "            levelid\t\t: \t'C',",
+                    "            levelname\t:\t'非优先客户'",
+                    "        },",
+                    "    ]);",
+                    "    onSuccess(3);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "5e8f0938-637e-4cd5-b3a3-33f893fa405c"
+        }
+    ]
+}

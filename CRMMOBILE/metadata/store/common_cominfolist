@@ -1,0 +1,93 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_cominfolist",
+        "storeId": "common_cominfolist"
+    },
+    "name": "MyStore",
+    "designerId": "c041a2e6-aeb8-452e-a081-6499fec85b45",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitname",
+                "type": "string"
+            },
+            "name": "field56",
+            "designerId": "1df85c34-e1cf-4a3c-929b-50dc204be02c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr",
+                "type": "string"
+            },
+            "name": "field57",
+            "designerId": "f94d4cec-1b1e-41aa-9bda-ccf706792562"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "console.log(parm);",
+                    "var me = this;",
+                    "if(global.isWorklight()) {// adapter取数",
+                    "    // adapter取数",
+                    "    var url = '/adapters/sx/api/1.0/cominfolist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var d = ret.data;",
+                    "            var n = d.length;",
+                    "            for(var i=0; i<n; i++) {",
+                    "                me.add(d[i]);",
+                    "            }",
+                    "            onSuccess(n);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    var start = parm.pageno, end = parm.pageno + parm.pagelen - 1;",
+                    "    end = end>58? 58:end;",
+                    "",
+                    "    for(var i=start; i<=end; i++) {",
+                    "        this.add({",
+                    "            unitname: '广州市华越友联科技发展有限公司.' + (i + 1),",
+                    "            addr: '广州市荔湾区黄沙大道144号大冶有色大厦1001室',",
+                    "        });",
+                    "    }",
+                    "    // 演示数据",
+                    "    onSuccess(end - start + 1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "01c639c8-fc81-4557-860f-683823037cd7"
+        }
+    ]
+}

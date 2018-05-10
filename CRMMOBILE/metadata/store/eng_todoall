@@ -1,0 +1,685 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_todoall",
+        "storeId": "eng_todoall"
+    },
+    "name": "MyStore",
+    "designerId": "e9da4cfc-da5e-4702-8dfa-7888da4e9263",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "field607",
+            "designerId": "d1477467-76d3-48c2-ae4d-1da53b348f84"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "type"
+            },
+            "name": "field608",
+            "designerId": "aa29cf6f-51ea-4b26-aac5-2a2be22aa5b4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r1"
+            },
+            "name": "field609",
+            "designerId": "9b2e3f64-2b39-4de6-9e63-15e29876f430"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r2"
+            },
+            "name": "field610",
+            "designerId": "ff03ebfa-400c-4f96-a7ec-1ca477b41abe"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r3"
+            },
+            "name": "field611",
+            "designerId": "5e5f3656-91dc-469b-894b-aeca3225c92c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r4"
+            },
+            "name": "field612",
+            "designerId": "9bf9a23f-2eb7-4eaf-984f-7f533a853288"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r5"
+            },
+            "name": "field613",
+            "designerId": "28eb6b6a-b4ac-4268-8c78-aa70634873e0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r6"
+            },
+            "name": "field627",
+            "designerId": "68ff6fc1-94a6-4e60-8346-0bfc36a31654"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate"
+            },
+            "name": "field614",
+            "designerId": "e2d9f8eb-5d6e-4135-ab2d-3ef051879a66"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "color"
+            },
+            "name": "field615",
+            "designerId": "e233a46f-0276-4929-b41f-82912b92826b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleIcon"
+            },
+            "name": "field496",
+            "designerId": "6e821e28-52f8-4f3b-afef-747c07c13d55"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleColor"
+            },
+            "name": "field597",
+            "designerId": "f19f151d-b094-4c1c-9d48-04c30ef47ba6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "urgent"
+            },
+            "name": "field598",
+            "designerId": "b4319f3f-ee1b-4d79-acb5-71c3acbf41ee"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "statusColor"
+            },
+            "name": "field605",
+            "designerId": "2acbd1e3-1b90-45a9-80bf-7943538522f3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "todoTpl"
+            },
+            "name": "field618",
+            "designerId": "ee6409ac-f2ee-4bf9-a155-390fed78ef34"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "id:(受信单号，故障报告单号，保养流水号，首检单号)必须唯一",
+                    "type:(A故障受信/B故障报告/C保养实绩/D首检任务/E保养任务)",
+                    "r1:左上(故障编号，故障编号，保养计划日期)",
+                    "r2:左中(项目名称，项目名称，项目名称)",
+                    "r3:左下(项目地址，维修人员，注册码)",
+                    "r4:右上(状态，状态，保养类型)",
+                    "r5:右下(受理时间，完工时间，梯号)",
+                    "r6:type=A: 1表示困人,0表示没困人/type=C:2表示已完工,1表示保养中,0表示没开始"
+                ],
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "//console.log(JsonUtil.convertToString(parm));",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/dbrwlist';",
+                    "    var adapterparm = {",
+                    "        userid:global.getUserId()",
+                    "    };",
+                    "    callPostAdapter(",
+                    "        url, adapterparm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('读取待办任务列表失败');",
+                    "            }else{",
+                    "                var d = me.decoDat(ret.data);",
+                    "                me.setData(d);",
+                    "                onSuccess(d.length);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('读取待办任务列表失败');",
+                    "        }",
+                    "        );",
+                    "",
+                    "} else {",
+                    "    this.clearFilter();",
+                    "    // 全部待办-演示数据",
+                    "    var d = this.decoDat([",
+                    "        {",
+                    "            type:'C',//保养计划",
+                    "            id:'BY2015000001', //保养流水号",
+                    "            r1:'2016-01-01(三)',//保养计划日期",
+                    "            r2:'广州凯旋大酒店有限公司',",
+                    "            r3:'3110-440100-20030',//注册码",
+                    "            r4:'保养', //保养类型",
+                    "            r5:'A1',//梯号",
+                    "            r6:1,",
+                    "            stateUrl:'resources/images/maintenance_icon02.png',",
+                    "            nextstate: [",
+                    "                        {name:\"到场\",url:\"http://127.0.0.1/到场\"}",
+                    "                    ],",
+                    "        },",
+                    "        {",
+                    "            type:'C',//保养计划",
+                    "            id:'BY2015000002', //保养流水号",
+                    "            r1:'2015-12-01(四)',//保养计划日期",
+                    "            r2:'广州市荔湾区黄沙大道144号大冶有色大厦',",
+                    "            r3:'3110-440100-20030',//注册码",
+                    "            r4:'保养', //保养类型",
+                    "            r5:'A2',//梯号",
+                    "            r6:2,",
+                    "            stateUrl:'resources/images/maintenance_icon03.png',",
+                    "            nextstate: [",
+                    "                        {name:\"完工\",url:\"http://127.0.0.1/完工\"}",
+                    "                    ],",
+                    "",
+                    "        },",
+                    "",
+                    "        {",
+                    "            type:'A',//故障受信",
+                    "            id:'BX2015060404', //受信单号",
+                    "            r1:'BX2015060404',//故障编号",
+                    "            r2:'广州市粤商投资有限公司',//项目名称",
+                    "            r3:'广州市白云区人和龙苑小区',//项目地址",
+                    "            r4:'待分配', //状态",
+                    "            r5:'2016-04-01',//受理时间",
+                    "            r6:1,",
+                    "            nextstate: [",
+                    "                        {name:\"派工\",url:\"http://127.0.0.1/派工\"},",
+                    "                        {name:\"关闭\",url:\"http://127.0.0.1/关闭\"}",
+                    "                    ],",
+                    "        },",
+                    "        {",
+                    "            type:'C',//保养计划",
+                    "            id:'BY2015000003', //保养流水号",
+                    "            r1:'2015-10-01',//保养计划日期",
+                    "            r2:'广州凯旋大酒店有限公司',",
+                    "            r3:'3110-440100-20030',//注册码",
+                    "            r4:'保养', //保养类型",
+                    "            r5:'A1',//梯号",
+                    "            r6:0,",
+                    "            stateUrl:'resources/images/maintenance_icon02.png',",
+                    "            nextstate: [",
+                    "                        {name:\"到场\",url:\"http://127.0.0.1/到场\"}",
+                    "                    ],",
+                    "        },",
+                    "        {",
+                    "            type:'A',//故障受信",
+                    "            id:'BX2015060405', //受信单号",
+                    "            r1:'BX2015060405',//故障编号",
+                    "            r2:'广州市粤商投资有限公司',//项目名称",
+                    "            r3:'广州市白云区人和龙苑小区',//项目地址",
+                    "            r4:'已关闭', //状态",
+                    "            r5:'2015-11-01',//受理时间",
+                    "            r6:0,",
+                    "            nextstate: [],",
+                    "        },",
+                    "",
+                    "        {",
+                    "            type:'A',",
+                    "            id:'BX2015060407',",
+                    "            r1:'BX2015060406',",
+                    "            r2:'广州市粤商投资有限公司',",
+                    "            r3:'广州市白云区人和龙苑小区',",
+                    "            r4:'已退回',",
+                    "            r5:'2016-05-01',",
+                    "            r6:1,",
+                    "            nextstate: [",
+                    "                        {name:\"派工\",url:\"http://127.0.0.1/派工\"},",
+                    "                        {name:\"关闭\",url:\"http://127.0.0.1/关闭\"}",
+                    "                    ],",
+                    "        },",
+                    "        {",
+                    "            type:'B',//故障报告",
+                    "            id:'20151201001', //报告编号",
+                    "            r1:'1234-5678-9000',//故障编号",
+                    "            r2:'广州市华越友联科技发展有限公司',//项目名称",
+                    "            r3:'李小明',//维修人员",
+                    "            r4:'待提交', //状态",
+                    "            r5:'2016-01-30',//完工时间",
+                    "            r6:'',",
+                    "            nextstate:[{name:\"提交\",url:\"http://127.0.0.1/提交\"}],",
+                    "        },",
+                    "        {",
+                    "            type:'A',",
+                    "            id:'BX2015060406',",
+                    "            r1:'BX2015060406',",
+                    "            r2:'广州市粤商投资有限公司',",
+                    "            r3:'广州市白云区人和龙苑小区',",
+                    "            r4:'已退回',",
+                    "            r5:'2015-06-01',",
+                    "            r6:0,",
+                    "            nextstate: [",
+                    "                        {name:\"派工\",url:\"http://127.0.0.1/派工\"},",
+                    "                        {name:\"关闭\",url:\"http://127.0.0.1/关闭\"}",
+                    "                    ],",
+                    "        },",
+                    "        {",
+                    "            type:'B',//故障报告",
+                    "            id:'20151201003', //报告编号",
+                    "            r1:'1234-5678-9000',//故障编号",
+                    "            r2:'广州市华越友联科技发展有限公司',//项目名称",
+                    "            r3:'作业人员',//维修人员",
+                    "            r4:'已完成', //状态",
+                    "            r5:'2015-09-11',//完工时间",
+                    "            r6:'',",
+                    "            nextstate: [],",
+                    "        },",
+                    "        {",
+                    "            type:'D',//故障报告",
+                    "            id:'测试id1', //报告编号",
+                    "            r1:'测试首检任务',//故障编号",
+                    "            r2:'测试R2',//项目名称",
+                    "            r3:'广州市华越友联科技发展有限公司',//维修人员",
+                    "            r4:'测试R4', //状态",
+                    "            r5:'测试R5',//完工时间",
+                    "            r6:'',",
+                    "            nextstate: [],",
+                    "        },",
+                    "        {",
+                    "            type:'E',//故障报告",
+                    "            id:'测试id2', //报告编号",
+                    "            r1:'测试保养任务',//故障编号",
+                    "            r2:'测试R2',//项目名称",
+                    "            r3:'广州市华越友联科技发展有限公司',//维修人员",
+                    "            r4:'测试R4', //状态",
+                    "            r5:'测试R5',//完工时间",
+                    "            r6:'',",
+                    "            nextstate: [],",
+                    "        },",
+                    "    ]",
+                    "    );",
+                    "    this.setData(d);",
+                    "    onSuccess(d.length);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "f05c8ed9-1881-4730-ad7c-b7fb796ff524"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "",
+                    "for(var i = 0; i < data.length; i++){",
+                    "",
+                    "    switch(data[i].r4) {",
+                    "                case '待提交':",
+                    "                case '待分配':",
+                    "                    data[i].color = 'liftnet-fontColor-green';",
+                    "                    break;",
+                    "",
+                    "                case '已完成':",
+                    "                case '待接收':",
+                    "                    data[i].color = 'liftnet-fontColor-orange';",
+                    "                    break;",
+                    "",
+                    "                case '已审核':",
+                    "                    data[i].color = 'liftnet-fontColor-darkGray';",
+                    "                    break;",
+                    "",
+                    "                case '已退回':",
+                    "                    data[i].color = 'liftnet-fontColor-red';",
+                    "                    break;",
+                    "",
+                    "            }",
+                    "    switch(data[i].type){",
+                    "        case 'A':",
+                    "            switch(data[i].r6){",
+                    "                case 0:",
+                    "                case '0':",
+                    "                    data[i].urgent = '';",
+                    "                    data[i].titleIcon = '<i class=\"ln ln-repair\"></i> ';",
+                    "                    break;",
+                    "                case 1:",
+                    "                case '1':",
+                    "                    data[i].urgent = '<div style=\"margin-left:6px\" class=\"liftnet-remindBg liftnet-remindBg-red\"></div><div style=\"margin-left:6px\" class=\"liftnet-remind liftnet-font-size12\">急</div>';",
+                    "                    data[i].titleIcon = '<i class=\"ln ln-stranded\"></i> ';",
+                    "                    break;",
+                    "            }",
+                    "            data[i].todoTpl = '<div style=\"margin:-10px -8px\" class=\"liftnet-home-listConBox\">'+",
+                    "                data[i].urgent+'<div class=\"liftnet-home-listConBox-left\"><div class=\"liftnet-font-size16 '+",
+                    "                data[i].color+'\">'+",
+                    "                data[i].titleIcon+data[i].r1+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\">'+",
+                    "                data[i].r2+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\">'+",
+                    "                data[i].r3+'</div></div><div class=\"liftnet-home-listConBox-right\"><div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12 '+",
+                    "                data[i].color+'\">'+",
+                    "                data[i].r4+'<i class=\"fa fa-circle-o\"></i></div><div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-font-right\"><i class=\"fa fa-clock-o\"></i> '+",
+                    "                data[i].r5+'</div></div></div>';",
+                    "            break;",
+                    "        case 'B':",
+                    "            data[i].urgent = '';",
+                    "            data[i].titleIcon = '<i class=\"ln ln-message2\"></i> ';",
+                    "            data[i].todoTpl = '<div style=\"margin:-10px -8px\" class=\"liftnet-home-listConBox\">'+",
+                    "                data[i].urgent+'<div class=\"liftnet-home-listConBox-left\"><div class=\"liftnet-font-size16 '+",
+                    "                data[i].color+'\">'+",
+                    "                data[i].titleIcon+data[i].r1+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\">'+",
+                    "",
+                    "                data[i].r2+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\">'+",
+                    "                data[i].r3+'</div></div><div class=\"liftnet-home-listConBox-right\"><div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12 '+",
+                    "                data[i].color+'\">'+",
+                    "                data[i].r4+'<i class=\"fa fa-circle-o\"></i></div><div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-font-right\"><i class=\"fa fa-clock-o\"></i> '+",
+                    "                data[i].r5+'</div></div></div>';",
+                    "            break;",
+                    "        case 'C': //保养计划",
+                    "",
+                    "            switch(data[i].r6){",
+                    "                case 0:",
+                    "                case '0':",
+                    "                    data[i].color = 'liftnet-fontColor-red';",
+                    "                    data[i].stateUrl='resources/images/maintenance_icon01.png';",
+                    "                    break;",
+                    "                case 1:",
+                    "                case '1':",
+                    "                    data[i].color = 'liftnet-fontColor-blue';",
+                    "                    data[i].stateUrl='resources/images/maintenance_icon02.png';",
+                    "                    break;",
+                    "                case 2:",
+                    "                case '2':",
+                    "                    data[i].stateUrl='resources/images/maintenance_icon03.png';",
+                    "                    data[i].color = 'liftnet-fontColor-orange';",
+                    "                    break;",
+                    "            }",
+                    "            data[i].todoTpl = '<div style=\"margin:-4px 0px -8px -10px\" class=\"liftnet-Maintenance-handleList\"><div class=\"liftnet-Maintenance-handleList-left\"><img src=\"'+",
+                    "                data[i].stateUrl+'\" /></div><div class=\"liftnet-Maintenance-handleList-right\"><div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\" style=\"float:right\">'+",
+                    "                data[i].r4+'</div><div class=\"liftnet-font-size16 '+",
+                    "                data[i].color+'\" style=\"float:left\">'+",
+                    "                data[i].r1+'</div></div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\">'+",
+                    "                data[i].r2+'</div><div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\" style=\"float:right\">'+",
+                    "                data[i].r5+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\" style=\"float:left\">'+",
+                    "                data[i].r3+'</div></div></div></div>';",
+                    "            break;",
+                    "",
+                    "        case 'D':",
+                    "            data[i].color = 'liftnet-fontColor-orange';",
+                    "",
+                    "            data[i].urgent = '';",
+                    "            data[i].titleIcon = '<i class=\"ln ln-message2\"></i> ';",
+                    "            data[i].todoTpl = '<div style=\"margin:-10px -8px\" class=\"liftnet-home-listConBox\">'+",
+                    "                data[i].urgent+'<div class=\"liftnet-home-listConBox-left\"><div class=\"liftnet-font-size16 '+",
+                    "                data[i].color+'\">'+",
+                    "                data[i].r1+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\">'+",
+                    "",
+                    "                data[i].r4+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\">'+",
+                    "                data[i].r3+'</div></div><div class=\"liftnet-home-listConBox-right\"><div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12 '+",
+                    "                data[i].color+'\">'+",
+                    "                data[i].r2+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-font-right\"> '+",
+                    "                data[i].r5+'</div></div></div>';",
+                    "",
+                    "            break;",
+                    "",
+                    "        case 'E':",
+                    "",
+                    "            data[i].color = 'liftnet-fontColor-blue';",
+                    "",
+                    "            data[i].urgent = '';",
+                    "            data[i].titleIcon = '<i class=\"ln ln-message2\"></i> ';",
+                    "            data[i].todoTpl = '<div style=\"margin:-10px -8px\" class=\"liftnet-home-listConBox\">'+",
+                    "                data[i].urgent+'<div style=\"width:100%\" class=\"liftnet-home-listConBox-left\"><div class=\"liftnet-font-size16 '+",
+                    "                data[i].color+'\">'+",
+                    "                data[i].r1+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\">'+",
+                    "",
+                    "                data[i].r2+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray\">'+",
+                    "                data[i].r3+'</div></div><div class=\"liftnet-home-listConBox-right\"><div class=\"liftnet-font-right liftnet-font-size12 '+",
+                    "                data[i].color+'\">'+",
+                    "                data[i].r4+'</div><div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-font-right\"> '+",
+                    "                data[i].r5+'</div></div></div>';",
+                    "",
+                    "",
+                    "            break;",
+                    "    }",
+                    "",
+                    "}",
+                    "",
+                    "return data;"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "f547d212-6131-47e7-8366-f4260a83f4cc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "type",
+                    "keyword"
+                ],
+                "fn": "filteDatByType",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "if(type!=='') {//分类显示",
+                    "    this.filterBy(function(item) {",
+                    "        var s = item.get(\"r1\")+item.get(\"r2\")+item.get(\"r3\");",
+                    "        if(type=='All'){//全部",
+                    "            if(keyword!==''){//有关键字搜索",
+                    "                return (s.toUpperCase().indexOf(keyword.toUpperCase())>=0);",
+                    "            }else{//无关键字返回全部",
+                    "                return true;",
+                    "            }",
+                    "        }else{//分类",
+                    "            if(keyword!==''){//有关键字搜索该类相关数据",
+                    "                return item.get('type')==type&&",
+                    "                    (s.toUpperCase().indexOf(keyword.toUpperCase())>=0);",
+                    "            }else{//无关键字显示该类全部数据",
+                    "                return item.get('type')==type;",
+                    "            }",
+                    "        }",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "filteDatByType",
+            "designerId": "ac808491-8985-4759-bf19-e7e738c234f9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm,type"
+                ],
+                "fn": "filteDatByDate",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "if(parm!=='') {//根据日期筛选",
+                    "    this.filterBy(function(item) {",
+                    "",
+                    "            var s ;",
+                    "            if(item.get('type')=='C'){",
+                    "                s = item.get(\"r1\").substring(0,10);",
+                    "            }else{",
+                    "                s = item.get('r5').substring(0,10);",
+                    "            }",
+                    "            var date = Date.parse(s);",
+                    "            if(parm.type=='All'){//全部.",
+                    "                return (date >= parm.start && date <= parm.end);",
+                    "            }",
+                    "            //加类别判断",
+                    "            return item.get('type')==parm.type&&(date >= parm.start && date <= parm.end);",
+                    "        }",
+                    "    );",
+                    "}"
+                ]
+            },
+            "name": "filteDatByDate",
+            "designerId": "d8cad972-84cc-48ba-9154-100b86f83de8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm,type"
+                ],
+                "fn": "searchDat",
+                "implHandler": [
+                    "var me = this;",
+                    "this.clearFilter();",
+                    "",
+                    "if(parm!=='') {//搜索框有内容",
+                    "    this.filterBy(function(item) {",
+                    "        var s = item.get(\"r1\")+item.get(\"r2\")+item.get(\"r3\");",
+                    "        if(type=='All'){",
+                    "           return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "        }",
+                    "        return item.get('type')==type&&",
+                    "            (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "    });",
+                    "}else{//搜索框清除输入内容",
+                    "    this.filterBy(function(item) {",
+                    "        //根据右侧分类按钮显示相应类型的数据",
+                    "        if(type=='All'){",
+                    "            return true;",
+                    "        }else{",
+                    "            return item.get('type')==type;",
+                    "        }",
+                    "    });",
+                    "",
+                    "}"
+                ]
+            },
+            "name": "searchDat",
+            "designerId": "a19cb794-1e41-4750-8dca-54690faa3bb2"
+        }
+    ]
+}

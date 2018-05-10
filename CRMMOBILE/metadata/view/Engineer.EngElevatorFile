@@ -1,0 +1,161 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngElevatorFile",
+        "id": "EngElevatorFile",
+        "layout": "vbox"
+    },
+    "name": "MyPanel21",
+    "designerId": "39ed4407-76e8-4f32-8674-5e72199ad3ca",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "电梯档案"
+            },
+            "name": "MyToolbar11",
+            "designerId": "c94f805e-0e06-4950-848c-898345b73d7a",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngElevatorFile_BtnReturn",
+                        "text": ""
+                    },
+                    "name": "MyButton20",
+                    "designerId": "9292a2ce-40b2-4b2c-976e-2fc525fa3609"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer6",
+                    "designerId": "8c12ec4d-63b6-4bc7-be33-b41e46ec2b4a"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "iconCls": "ln ln-new",
+                        "id": "EngElevatorFile_NewBtn",
+                        "text": ""
+                    },
+                    "name": "MyButton57",
+                    "designerId": "2581ecf7-9fe9-4cdd-9570-d37360ca162a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-search-form"
+                ],
+                "height": 52
+            },
+            "name": "MyFormPanel22",
+            "designerId": "83c0c043-097b-44a8-9a9c-86937a822ee1",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-font-size12"
+                        ],
+                        "id": "EngElevatorFile_Search",
+                        "label": "",
+                        "placeHolder": "注册码、品牌、型号"
+                    },
+                    "name": "MySearchField6",
+                    "designerId": "ccb569b2-26f7-4e40-af19-a5a79d2c46f2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-fault-listBox"
+                ],
+                "disableSelection": true,
+                "id": "EngElevatorFile_List",
+                "layout|flex": 1,
+                "store": "eng_elevatorfilequerylist"
+            },
+            "name": "MyList15",
+            "designerId": "e57505d5-7f5a-4600-93d2-834165f1a3ef",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-Maintenance-TaskRecList\" style=\"height:80px\">",
+                            "    <div class=\"liftnet-Maintenance-TaskRecList-left\" style=\"left:14px\" >",
+                            "        <div class=\"liftnet-font-size14 {titleColor}\">{prono}&nbsp;</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{facname}&nbsp;</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{useraddress}&nbsp;</div>",
+                            "    </div>",
+                            "    <div class=\"liftnet-Maintenance-TaskRecList-right\" style=\"padding-top:0px;right:14px\">",
+                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{equno}&nbsp;</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{elevatorid}&nbsp;</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{fsd}&nbsp;</div>",
+                            "    </div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "38f7be2a-6907-4741-b579-492a889fe0f4"
+                }
+            ]
+        }
+    ]
+}

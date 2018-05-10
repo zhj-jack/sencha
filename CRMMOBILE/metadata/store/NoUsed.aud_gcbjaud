@@ -1,0 +1,125 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.aud_gcbjaud",
+        "storeId": "NoUsed.aud_gcbjaud"
+    },
+    "name": "aud_byhtaud1",
+    "designerId": "c766cd3d-cdee-4faf-af8b-bf796c1fe6f2",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "code",
+                "type": "string"
+            },
+            "name": "field224",
+            "designerId": "0ffcc457-ae56-4951-a236-a93db471fcf9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "info",
+                "type": "string"
+            },
+            "name": "field225",
+            "designerId": "ed9c44d0-31a7-4e0a-bef9-2828cb2ba4e6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/aud/api/1.0/gcbjaud/'+'任务号';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: '用户ID',taskid: '任务号',audflag: '审核标记',audrem: '审批意见'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.status);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    //工程报价联络书审核",
+                    "    this.setData([]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "b0fe4fbb-6dc1-4f30-9832-9d5a52ae86da"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "b77d9a42-0765-43f8-9222-7609ae071caf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "4de5c9e6-2fad-4678-a220-72e5a10e8a53"
+        }
+    ]
+}

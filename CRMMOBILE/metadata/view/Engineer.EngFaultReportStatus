@@ -1,0 +1,116 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userClassName": "Engineer.EngFaultReportStatus",
+        "hidden": true,
+        "hideOnMaskTap": true,
+        "id": "EngFaultReportState",
+        "itemId": "EngFaultReportState",
+        "modal": true,
+        "padding": "5 10"
+    },
+    "designerId": "a03d4f29-5f32-4aba-8ae7-d226344b5d1f",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultReportStatus_0",
+                "itemId": "EngFaultReportStatus_0",
+                "text": "全部"
+            },
+            "name": "MyButton41",
+            "designerId": "a11092b7-afc8-420c-bc06-24ff282d5107"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultReportStatus_4",
+                "itemId": "EngFaultReportStatus_4",
+                "text": "新建"
+            },
+            "name": "MyButton22",
+            "designerId": "e1a3084b-2a70-4657-a2ae-118f7ef028b5"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultReportStatus_1",
+                "itemId": "EngFaultReportStatus_1",
+                "text": "待审"
+            },
+            "name": "MyButton42",
+            "designerId": "e1cec981-cb20-455e-ab1e-86caad96ce45"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultReportStatus_2",
+                "itemId": "EngFaultReportStatus_2",
+                "text": "通过"
+            },
+            "name": "MyButton43",
+            "designerId": "e4e1ff9b-ebea-42cf-bca3-d39674a37502"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultReportStatus_3",
+                "itemId": "EngFaultReportStatus_3",
+                "text": "不通过"
+            },
+            "name": "MyButton44",
+            "designerId": "f19ce75f-2ed5-48a9-97be-6b868a575afa"
+        }
+    ]
+}

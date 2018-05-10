@@ -1,0 +1,16 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_npq5tzw5",
+        "url": "js/mqttCordovaClient.js",
+        "x-compile": true
+    },
+    "name": "js4",
+    "designerId": "e0d8e771-5c21-4076-8219-e34a7761ca79"
+}

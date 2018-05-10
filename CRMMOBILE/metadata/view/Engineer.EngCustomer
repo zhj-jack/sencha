@@ -1,0 +1,249 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngCustomer",
+        "layout": "vbox"
+    },
+    "designerId": "3dd0f85c-582e-4ab7-96aa-a24ca7c57e51",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "Customer",
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyContainer48",
+            "designerId": "0cb378e4-7459-43be-a2cd-7f1683e3a19f",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-toolbar-other"
+                        ],
+                        "docked": "top",
+                        "title": "客户维护"
+                    },
+                    "name": "MyToolbar13",
+                    "designerId": "0b137a47-c2f2-4935-bba2-aef4c4737eea",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "",
+                                "iconCls": "fa fa-chevron-left",
+                                "itemId": "Customer_ReturnButton",
+                                "text": null
+                            },
+                            "name": "MyButton57",
+                            "designerId": "0b4c29d5-6d0f-4048-932e-1d952f17629b"
+                        },
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MySpacer5",
+                            "designerId": "6bc42978-6f22-4c22-8dde-f5c6bf7929dd"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "iconCls": "ln ln-new",
+                                "id": "Customer_Add",
+                                "itemId": "Customer_Add",
+                                "text": null
+                            },
+                            "name": "MyButton58",
+                            "designerId": "8bf66715-c9aa-4398-a05b-b85647d4f618"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-tabbar-one"
+                        ],
+                        "id": "Customer_list",
+                        "layout": "vbox",
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel54",
+                    "designerId": "a72457d9-1154-4415-a387-35f9a0a97ef9",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "Customer_CtnList",
+                                "layout": "vbox",
+                                "layout|flex": 1
+                            },
+                            "name": "MyContainer49",
+                            "designerId": "9aedd1ba-6b9c-47d8-ab6d-e852dff8b291",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-search-form"
+                                        ],
+                                        "docked": null,
+                                        "height": 52,
+                                        "id": "Customer_SearchForm",
+                                        "layout|flex": null,
+                                        "scrollable": false
+                                    },
+                                    "name": "MyFormPanel15",
+                                    "designerId": "30907fbe-9f3b-4bd0-ab16-84ee6d99cf13",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Search",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-font-size12"
+                                                ],
+                                                "id": "Customer_searchkey",
+                                                "itemId": "Customer_searchkey",
+                                                "label": null,
+                                                "placeHolder": "客户名称、跟进人"
+                                            },
+                                            "name": "MySearchField4",
+                                            "designerId": "237af5af-723e-4206-b48c-12ce953bc606"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-font-size12",
+                                                    "liftnet-no-border",
+                                                    "liftnet-fontColor-darkGray"
+                                                ],
+                                                "docked": "right",
+                                                "iconAlign": "right",
+                                                "iconCls": "fa fa-angle-down",
+                                                "id": "Customer_Btn",
+                                                "itemId": "Customer_Btn",
+                                                "margin": "16 0",
+                                                "text": "全部",
+                                                "width": 110
+                                            },
+                                            "name": "MyButton60",
+                                            "designerId": "606288ed-3b37-4e4a-9a43-e82fc74b574d"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-home-listBox"
+                                        ],
+                                        "disableSelection": true,
+                                        "docked": null,
+                                        "id": "Customer_ListHotline",
+                                        "itemCls": null,
+                                        "itemId": "Customer_ListHotline",
+                                        "layout|flex": 1,
+                                        "store": "cu_culist"
+                                    },
+                                    "name": "MyList19",
+                                    "designerId": "537f67e9-eaa3-47a0-bcb5-c393199d857d",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"liftnet-Maintenance-TaskRecList\" style=\"height:100px\">",
+                                                    "\t<div class=\"liftnet-Maintenance-TaskRecList-left\" style=\"left:14px\" >",
+                                                    "    \t<div class=\"liftnet-font-size12\">{custname}</div>",
+                                                    "    \t<div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{r1name}</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{flowusername}</div>",
+                                                    "    \t<div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{address}</div>",
+                                                    "    </div>",
+                                                    "\t<div class=\"liftnet-Maintenance-TaskRecList-right\" style=\"padding-top:0px;right:14px\">",
+                                                    "    \t<div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12\">{r2} </div>",
+                                                    "    \t<div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12\">{r4}</div>",
+                                                    "    \t<div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12\">{r5}</div>",
+                                                    "    </div>",
+                                                    "</div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "605cb998-e1d0-400c-b6cb-7d75256e0d7f"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

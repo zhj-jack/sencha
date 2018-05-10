@@ -1,0 +1,287 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ComMultiSelectController"
+    },
+    "name": "MyController",
+    "designerId": "679751bd-5644-4dca-b0f0-95ec2021400f",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#ComMultiSelect",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onComMultiSelectShow",
+                "implHandler": [
+                    "view = component;",
+                    "",
+                    "// 初始化搜索栏",
+                    "var textfield = view.initialConfig.parm.textfield;",
+                    "var label = textfield.getLabel();",
+                    "if(view.initialConfig.parm.allowsearch) {",
+                    "    var field = Ext.getCmp('ComMultiSelect_FldKeyword');",
+                    "    field.setPlaceHolder(label + '...');",
+                    "    field.setValue(textfield.getValue());",
+                    "    Ext.getCmp('ComMultiSelect_Tbar').setTitle('');",
+                    "    Ext.getCmp('ComMultiSelect_FldKeyword').setHidden(false);",
+                    "    Ext.getCmp('ComMultiSelect_BtnSearch').setHidden(false);",
+                    "} else {",
+                    "    Ext.getCmp('ComMultiSelect_Tbar').setTitle(label);",
+                    "    Ext.getCmp('ComMultiSelect_FldKeyword').setHidden(true);",
+                    "    Ext.getCmp('ComMultiSelect_BtnSearch').setHidden(true);",
+                    "}",
+                    "if(view.initialConfig.parm.allowselectall){",
+                    "    Ext.getCmp('ComMultiSelect_BtnSelectAll').setHidden(false);",
+                    "    Ext.getCmp('ComMultiSelect_Space').setHidden(view.initialConfig.parm.allowsearch);",
+                    "}",
+                    "",
+                    "// 初始化操作按钮",
+                    "// Ext.getCmp('ComMultiSelect_BtnMore').setHidden(!view.initialConfig.parm.paging);",
+                    "// Ext.getCmp('ComMultiSelect_BtnMore').setDisabled(true);",
+                    "",
+                    "Ext.getCmp('ComMultiSelect_BtnMore').setHidden(!view.initialConfig.parm.paging);",
+                    "var more = view.initialConfig.parm.paging&&!view.initialConfig.parm.allowsearch;",
+                    "Ext.getCmp('ComMultiSelect_BtnMore').setDisabled(!more);",
+                    "",
+                    "// 初始化数据列表",
+                    "var list = Ext.getCmp('ComMultiSelect_List');",
+                    "list.setItemTpl(view.initialConfig.parm.itemtpl);",
+                    "",
+                    "// 创建或调出store",
+                    "var storeid = view.initialConfig.parm.storeid;",
+                    "var store = dataUtil.createStore(storeid);",
+                    "store.setData([]);",
+                    "list.setStore(store);",
+                    "",
+                    "// 无需搜索时马上载入数据",
+                    "if(!view.initialConfig.parm.allowsearch) {",
+                    "    loadMask.show();",
+                    "    store.loadDat(",
+                    "        function(n) {",
+                    "            var filter = view.initialConfig.parm.filterData;",
+                    "            if(filter){",
+                    "                store.filteDat(filter.field,filter.value);",
+                    "            }",
+                    "            loadMask.hide();",
+                    "        },",
+                    "        function() {",
+                    "            loadMask.hide();",
+                    "        },",
+                    "        view.initialConfig.parm.storeparm",
+                    "    );",
+                    "}"
+                ],
+                "name": "show"
+            },
+            "name": "onComMultiSelectShow",
+            "designerId": "33c97e44-e6bc-493c-90ee-152146a9ec80"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#ComMultiSelect_BtnSearch",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onComMultiSelect_BtnSearchTap",
+                "implHandler": [
+                    "// 开始搜索",
+                    "var view = Ext.getCmp('ComMultiSelect');",
+                    "var text = Ext.getCmp('ComMultiSelect_FldKeyword').getValue();",
+                    "",
+                    "view.initialConfig.parm.storeparm =",
+                    "    view.initialConfig.parm.fnSetFilter(view.initialConfig.parm.storeparm, text);",
+                    "view.initialConfig.parm.storeparm.pageno = 0;",
+                    "",
+                    "var store = Ext.getCmp('ComMultiSelect_List').getStore();",
+                    "store.setData([]);",
+                    "loadMask.show();",
+                    "store.loadDat(",
+                    "    function(n) {",
+                    "        if(view.initialConfig.parm.paging) {",
+                    "            view.initialConfig.parm.storeparm.pageno =",
+                    "                view.initialConfig.parm.storeparm.pageno + n;",
+                    "            //Ext.getCmp('ComMultiSelect_BtnMore').setDisabled(false);",
+                    "            if(view.initialConfig.parm.paging) {",
+                    "                        Ext.getCmp('ComSelect_BtnMore').setDisabled(n===0);",
+                    "                    }",
+                    "        }",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    function() {",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    view.initialConfig.parm.storeparm",
+                    ");"
+                ],
+                "name": "tap"
+            },
+            "name": "onComMultiSelect_BtnSearchTap",
+            "designerId": "7a2dad1f-5291-4de0-9734-4d2726681457"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#ComMultiSelect_BtnSelectAll",
+                "designer|targetType": "Ext.Button",
+                "fn": "onComMultiSelect_BtnSelectAllTap",
+                "implHandler": [
+                    "var list = Ext.getCmp('ComMultiSelect_List');",
+                    "if(list.getSelectionCount()<list.getStore().getAllCount())",
+                    "{",
+                    "    list.selectAll(true);//全选",
+                    "}else{",
+                    "    list.deselectAll(true);//全不选",
+                    "}",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onComMultiSelect_BtnSelectAllTap",
+            "designerId": "bbf202db-6020-48e4-b9ad-d0175075cbe3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#ComMultiSelect_BtnMore",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onComMultiSelect_BtnMoreTap",
+                "implHandler": [
+                    "var store = Ext.getCmp('ComMultiSelect_List').getStore();",
+                    "var record = store.getAt(store.getAllCount() - 1);",
+                    "loadMask.show();",
+                    "store.loadDat(",
+                    "    function(n) {",
+                    "        Ext.getCmp('ComMultiSelect_List').scrollToRecord(record);",
+                    "        view.initialConfig.parm.storeparm.curpagenum =",
+                    "            view.initialConfig.parm.storeparm.curpagenum + 1;",
+                    "        var filter = view.initialConfig.parm.filterData;",
+                    "            if(filter){",
+                    "                store.filteDat(filter.field,filter.value);",
+                    "            }",
+                    "        if(n===0){",
+                    "            Ext.toast('没有更多数据');",
+                    "        }",
+                    "",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    function() {",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    view.initialConfig.parm.storeparm",
+                    ");"
+                ],
+                "name": "tap"
+            },
+            "name": "onComMultiSelect_BtnMoreTap",
+            "designerId": "be9a9774-196d-476c-b7a9-cb847b69e301"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#ComMultiSelect_BtnOK",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onComMultiSelect_BtnOKTap",
+                "implHandler": [
+                    "// 返回数据",
+                    "var view = Ext.getCmp('ComMultiSelect');",
+                    "var fn = view.initialConfig.parm.fnSelected;",
+                    "var list = Ext.getCmp('ComMultiSelect_List');",
+                    "var text = Ext.getCmp('ComMultiSelect_FldKeyword').getValue().trim();",
+                    "var ret = list.getSelection();",
+                    "",
+                    "if(ret.length===0) {",
+                    "    if(!view.initialConfig.parm.allowedit || text==='') {",
+                    "        Ext.toast('请填写或选择资料！');",
+                    "        return;",
+                    "    }",
+                    "    ret = text;",
+                    "}",
+                    "",
+                    "// form-field不接受即时的值变化，因此需要延时回调赋值方法",
+                    "var task = Ext.create('Ext.util.DelayedTask', function() {",
+                    "    fn(ret);",
+                    "    task.cancel();",
+                    "});",
+                    "task.delay(100);",
+                    "",
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onComMultiSelect_BtnOKTap",
+            "designerId": "108dfd30-ffff-4113-a02f-07f25c1d893d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#ComMultiSelect_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onComMultiSelect_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onComMultiSelect_BtnReturnTap",
+            "designerId": "7d69561c-b38b-4351-a34d-c5ff87cb4da1"
+        }
+    ]
+}

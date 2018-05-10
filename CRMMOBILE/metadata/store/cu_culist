@@ -1,0 +1,261 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "cu_culist",
+        "storeId": "cu_culist"
+    },
+    "name": "MyStore",
+    "designerId": "1ad88a6f-679f-4ca2-916f-33a1696cd2f0",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custid"
+            },
+            "name": "field487",
+            "designerId": "e5fbf354-93b3-4591-a3f1-76fd083428e7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custname"
+            },
+            "name": "field735",
+            "designerId": "29afbc4f-dea5-4513-8e2c-c295f3507cf9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r4"
+            },
+            "name": "field736",
+            "designerId": "7725578c-3d06-4aaf-88e9-b202b79b9ba6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r1name"
+            },
+            "name": "field742",
+            "designerId": "fe5872ef-f4cc-4d2f-bf00-57cff181f90a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r2"
+            },
+            "name": "field743",
+            "designerId": "89b40d6e-4b8e-4312-880e-13cbe07c4d09"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowusername"
+            },
+            "name": "field739",
+            "designerId": "9d6b420e-1746-4cbe-9acd-18c878374e19"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r5"
+            },
+            "name": "field740",
+            "designerId": "20048f33-70e8-4245-8a99-ab31409556f6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "address"
+            },
+            "name": "field744",
+            "designerId": "7ae41ae9-5b97-4ca9-97d6-ed09b2885c9e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm",
+                    "action"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "console.log(parm);",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/mugcustomer/api/1.0/khlist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var info;",
+                    "            if(ret.status.code!=200){",
+                    "                if(parm.searchkey!==''){",
+                    "                    onFailure('搜索客户维护列表失败');",
+                    "                    return;",
+                    "                }",
+                    "                onFailure('读取客户维护列表失败');",
+                    "            }else{",
+                    "                if(ret.data.length===0){",
+                    "                    if(parm.curpagenum===1){",
+                    "                        switch(action){",
+                    "                            case 'refresh':",
+                    "                                info = '没有客户维护数据';",
+                    "                                break;",
+                    "                            case 'loadmore':",
+                    "                                break;",
+                    "                            case 'firstload':",
+                    "                                info = '没有客户维护数据';",
+                    "                                break;",
+                    "                            case 'search':",
+                    "                                info = '没有相关客户维护数据';",
+                    "                                break;",
+                    "                        }",
+                    "",
+                    "                        me.setData(ret.data);",
+                    "                        onFailure(info);",
+                    "                    }else{",
+                    "                        onFailure('没有更多数据！');",
+                    "                    }",
+                    "",
+                    "",
+                    "                    return;",
+                    "                }",
+                    "",
+                    "                //第一次加载直接设置数据",
+                    "                if(parm.curpagenum==1){",
+                    "                    console.log('________'+parm.curpagenum);",
+                    "                    me.setData(ret.data);",
+                    "                }else{",
+                    "                    //分页用法，在原有数据上继续添加",
+                    "                    var n = ret.data.length;",
+                    "                    for(var i=0; i<n; i++) {",
+                    "                        me.add(ret.data[i]);",
+                    "                    }",
+                    "                }",
+                    "",
+                    "                if(action==='loadmore'){",
+                    "                    onSuccess(ret.data.length,ret.jurisdiction);",
+                    "                }else{",
+                    "                    onSuccess('resetCurPage',ret.jurisdiction);",
+                    "                }",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            var info;",
+                    "            switch(action){",
+                    "                case 'refresh':",
+                    "                    info = '刷新客户维护数据失败';",
+                    "                    break;",
+                    "                case 'loadmore':",
+                    "                    info = '加载更多客户维护数据失败';",
+                    "                    break;",
+                    "                case 'firstload':",
+                    "                    info = '获取客户维护数据失败';",
+                    "                    break;",
+                    "                case 'search':",
+                    "                    info = '搜索客户维护失败';",
+                    "                    break;",
+                    "            }",
+                    "            onFailure(info);",
+                    "        }",
+                    "    );",
+                    "} else {",
+                    "    //分页模拟",
+                    "    var start = (parm.curpagenum-1)*20,",
+                    "        end = parm.curpagenum * parm.pagesize;",
+                    "",
+                    "    if(end>60){",
+                    "        onFailure('没有更多数据！');",
+                    "        return;",
+                    "    }",
+                    "",
+                    "    for(var i=start; i<end; i++) {",
+                    "        this.add({",
+                    "            custid: 'CB1600000023',",
+                    "            custname:'广州中梯物联'+(i),",
+                    "            address: '广东省广州市荔湾区蓬莱路3-5号.' + (i + 1),",
+                    "            r4: '普通客户',",
+                    "            r1name: '吴维',",
+                    "            r2: '2016-04-22',",
+                    "            flowusername:'吴维(维保事业部),李光(维保一组)',",
+                    "            r5: '维保公司'",
+                    "",
+                    "        });",
+                    "    }",
+                    "    if(action=='firstload'||action=='refresh'||action=='search'){",
+                    "        onSuccess('resetCurPage',{",
+                    "            addjurisdiction:\t'N',\t//新建权限（Y/N）,",
+                    "            updatejurisdiction:\t'Y',\t//修改权限（Y/N）",
+                    "            deletejueisdiction:\t'Y',\t//删除权限（Y/N）",
+                    "",
+                    "        });",
+                    "        return;",
+                    "    }",
+                    "",
+                    "    onSuccess(end - start + 1,{",
+                    "            addjurisdiction:\t'N',\t//新建权限（Y/N）,",
+                    "            updatejurisdiction:\t'Y',\t//修改权限（Y/N）",
+                    "            deletejueisdiction:\t'Y',\t//删除权限（Y/N）",
+                    "",
+                    "        });",
+                    "",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "9b9522ae-6b63-4fe4-8b9a-a36f5b899d26"
+        }
+    ]
+}

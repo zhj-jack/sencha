@@ -1,0 +1,244 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.NoUsed.EngMaintenanceDetail",
+        "id": "EngMaintenanceDetail",
+        "layout": "vbox"
+    },
+    "name": "FaultAdd1",
+    "designerId": "ab9be0f5-f049-49cb-b5f2-bbb3e485c347",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "维保一组"
+            },
+            "name": "MyToolbar4",
+            "designerId": "303fad6b-e51b-462c-a5b1-8fca4956a17d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngMaintenanceDetail_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "aab4e1c3-75c7-4513-a20b-ad5e16784d94"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-font-center",
+                    "liftnet-con-top"
+                ]
+            },
+            "name": "MyPanel6",
+            "designerId": "661e1d3a-a1d6-473e-b60e-132596babbf8",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-con-icon"
+                        ],
+                        "height": null,
+                        "src": "resources/images/con_icon02.png"
+                    },
+                    "name": "MyImg1",
+                    "designerId": "e4b8c40c-67ca-4add-a592-1df126d1a8ce"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-fontColor-green",
+                            "liftnet-font-size24"
+                        ],
+                        "html": "未接收"
+                    },
+                    "name": "MyLabel",
+                    "designerId": "8ff938d1-f0e4-4806-bde2-1abd6a58d0f5"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-fontColor-gray",
+                            "liftnet-font-size12"
+                        ],
+                        "html": "保养一组 2015-10-09"
+                    },
+                    "name": "MyLabel1",
+                    "designerId": "e2f02008-79ac-4f67-92cf-a0a95491c751"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-fontColor-gray",
+                            "liftnet-font-size12"
+                        ],
+                        "html": "陈建平 录 15626188022"
+                    },
+                    "name": "MyLabel10",
+                    "designerId": "2023bbad-de1a-454f-a9c3-54fb4ed6f11a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-con-title"
+                ]
+            },
+            "name": "MyPanel8",
+            "designerId": "0d682e16-da75-44e9-b5d5-ce79e8fe9334",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "保养明细"
+                    },
+                    "name": "MyLabel11",
+                    "designerId": "156b57b6-fe6b-44ce-945f-7121ea4833a6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disableSelection": true,
+                "id": "EngMaintenanceDetail_ListDetail",
+                "layout|flex": 1,
+                "pressedCls": " ",
+                "store": "NoUsed.by_byplandetail"
+            },
+            "name": "MyList9",
+            "designerId": "88bd2e3d-4777-4dd6-adf3-a533d1fb3a7d",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-Maintenance-detailList\">",
+                            "\t<div>",
+                            "    \t<div class=\"liftnet-Maintenance-detailList-left liftnet-font-size14 liftnet-fontColor-darkGray\">{WorkDate}({WorkWeekDay}){WorkSTime}-{WorkETime}</div>",
+                            "    \t<div class=\"liftnet-Maintenance-detailList-right liftnet-font-size14 liftnet-fontColor-gray liftnet-font-right\">{WorkType}</div>",
+                            "    </div>",
+                            "    <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{WorkAddress}</div>",
+                            "    <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{ProdID}</div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "70f85099-c591-4b62-996f-48a84a8a0154"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button",
+                    "liftnet-button-one"
+                ],
+                "docked": null,
+                "height": null
+            },
+            "name": "MyPanel7",
+            "designerId": "cb4cf69d-d102-45f7-a14e-5c74f45e4e3e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "itemId": "EngMaintenanceDetail_BtnConfirm",
+                        "text": "确认接收"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "43299d0b-d585-4d7e-8bdd-a8921fbb3d7a"
+                }
+            ]
+        }
+    ]
+}

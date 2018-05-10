@@ -1,0 +1,128 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.NoUsed.EngFaultUnitList",
+        "id": "EngFaultUnitList",
+        "itemId": null,
+        "layout": "vbox"
+    },
+    "name": "MaintenanceDetail1",
+    "designerId": "a5c10aa1-7337-4f14-838a-674e3db8e3d8",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "单位列表"
+            },
+            "name": "MyToolbar4",
+            "designerId": "323bd573-a64c-41ac-b87f-45bb95dae32d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFaultUnitList_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "3a8b0d32-112e-4885-bfb6-c4a4f219d5b2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disableSelection": true,
+                "id": "EngFaultUnitList_ListCompany",
+                "layout|flex": 1,
+                "pressedCls": " ",
+                "store": "NoUsed.sx_cominfolist"
+            },
+            "name": "MyList9",
+            "designerId": "f3f58f9b-5ab8-46ac-a75f-c71ebfd43cbe",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-Maintenance-detailList\">",
+                            "\t<div>",
+                            "    \t<div class=\"liftnet-Maintenance-detailList-left liftnet-font-size14 liftnet-fontColor-darkGray\">{unitname}</div>",
+                            "    \t<div class=\"liftnet-Maintenance-detailList-right liftnet-font-size14 liftnet-fontColor-gray liftnet-font-right\">{elevatorid}</div>",
+                            "    </div>",
+                            "    <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{addr}</div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "5e064a4d-ee43-48d4-9b27-76c97fb9d54b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button",
+                    "liftnet-button-one"
+                ],
+                "docked": null,
+                "height": null
+            },
+            "name": "MyPanel7",
+            "designerId": "6de5bcec-923a-4aa6-8077-4c009831681d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "itemId": "EngFaultUnitList_BtnConfirm",
+                        "text": "确认"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "0826ef68-1c03-4c5b-a66d-39d02ec1d98f"
+                }
+            ]
+        }
+    ]
+}

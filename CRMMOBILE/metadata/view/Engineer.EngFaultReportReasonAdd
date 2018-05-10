@@ -1,0 +1,127 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFaultReportReasonAdd",
+        "layout": "vbox"
+    },
+    "name": "MyPanel52",
+    "designerId": "e7f59172-0fb5-48a2-9cc6-58636d8849c5",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "故障原因"
+            },
+            "name": "MyToolbar12",
+            "designerId": "93b0ed38-8834-4a90-8d41-402e02ec741f",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "ReasonAdd_BtnReturn",
+                        "itemId": "ReasonAdd_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton51",
+                    "designerId": "86305b16-f7e3-4c36-9c41-56d0da7703bf"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14"
+                ],
+                "hideAnimation": null,
+                "id": "ReasonAdd_form",
+                "itemId": "ReasonAdd_form",
+                "layout|flex": 1
+            },
+            "name": "MyFormPanel14",
+            "designerId": "4fb6853d-c8a1-4291-9ccb-cbd1e5c19b1c",
+            "cn": [
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "ReasonAdd_str",
+                        "itemId": "ReasonAdd_str",
+                        "label": "故障原因",
+                        "name": "ReasonAdd_str",
+                        "placeHolder": "请输入故障原因"
+                    },
+                    "name": "MyTextArea14",
+                    "designerId": "cdbb7ed1-1479-488b-b794-4b902ebaf2d7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button",
+                    "liftnet-button-one"
+                ],
+                "docked": "bottom",
+                "id": "ReasonAdd_BtnPanel",
+                "itemId": "ReasonAdd_BtnPanel"
+            },
+            "name": "MyPanel53",
+            "designerId": "e12119d6-5750-4829-a9a2-86488bf76d81",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "id": "ReasonAdd_Sub",
+                        "itemId": "ReasonAdd_Sub",
+                        "text": "确定"
+                    },
+                    "name": "MyButton52",
+                    "designerId": "5a7fc343-0404-4e88-ab48-97f2e120dae1"
+                }
+            ]
+        }
+    ]
+}

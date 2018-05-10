@@ -1,0 +1,251 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.sx_cominfolist",
+        "storeId": "NoUsed.sx_cominfolist"
+    },
+    "name": "sx_reportlist1",
+    "designerId": "dc81d0b1-6bf9-4ccc-8c01-abee43226496",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "shortunitname",
+                "type": "string"
+            },
+            "name": "field51",
+            "designerId": "b115f76c-8602-4722-8b52-0e54a9e0c784"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitname",
+                "type": "string"
+            },
+            "name": "field373",
+            "designerId": "de6bb2bc-a853-4c86-bb45-09b3961aab51"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "serviceno",
+                "type": "string"
+            },
+            "name": "field54",
+            "designerId": "40e31653-0f0d-44a4-978b-cb51129cd174"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatorno",
+                "type": "string"
+            },
+            "name": "field374",
+            "designerId": "8712f163-a08a-4159-8899-1856e51d1346"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr",
+                "type": "string"
+            },
+            "name": "field375",
+            "designerId": "ee3a728f-0efa-4c1e-985a-27f96e279c4b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "floorstationdoor",
+                "type": "string"
+            },
+            "name": "field376",
+            "designerId": "0d5660aa-d2b9-4c78-888b-a2465b04d6e1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storageid",
+                "type": "string"
+            },
+            "name": "field377",
+            "designerId": "76386230-7efb-44f8-a684-472b786402e0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storagename",
+                "type": "string"
+            },
+            "name": "field378",
+            "designerId": "9dda7c92-9614-434e-9b46-46796492c3d7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "specno",
+                "type": "string"
+            },
+            "name": "field379",
+            "designerId": "c029556f-c0b5-4343-8cd2-eedb90684f12"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatorid",
+                "type": "string"
+            },
+            "name": "field380",
+            "designerId": "0e3ea655-a854-4f2b-bb5f-ed59c78cdecd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dtid",
+                "type": "string"
+            },
+            "name": "field381",
+            "designerId": "f7371368-6219-4c32-8bd8-74a3dadbbdc6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/sx/api/1.0/cominfolist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: '用户ID', shortunitname: '报修单位简称', serviceNo: '电梯服务号', addr: '故障地址', pageno: '从第几条开始, 第一条是0', pagelen: '取几条数据'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 24.点击“报价单位”，获取报价单位及设备码列表，选择后自动填写该设备相关信息到表单",
+                    "    this.setData();",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "f075bcd9-b6e5-4577-b6d9-ded07db25341"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "d843ebfe-514b-43f8-b198-9149b416860a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "e1b48ca8-cb19-4a82-b9b9-1bc82d8f84a9"
+        }
+    ]
+}

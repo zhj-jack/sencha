@@ -1,0 +1,97 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_liftfaclist",
+        "storeId": "eng_liftfaclist"
+    },
+    "name": "eng_lifttypelist1",
+    "designerId": "63bb014b-bf02-448d-a538-2b7481988048",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "facid"
+            },
+            "name": "field497",
+            "designerId": "0cd64f50-609b-4571-abd8-c98bf5f4d26b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "facname"
+            },
+            "name": "field498",
+            "designerId": "1c9cdb66-e088-49b1-ab94-0f15c82b96d7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "console.log(parm);",
+                    "// parm = {userid: global.getUserId(),searchname:parm.searchname};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/dtpplist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var d = ret.data;",
+                    "            var n = d.length;",
+                    "            for(var i=0; i<n; i++) {",
+                    "                me.add(d[i]);",
+                    "            }",
+                    "            onSuccess(n);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取电梯品牌列表-演示数据",
+                    "    var start = (parm.curpagenum-1)*parm.pagesize+1, end = start + parm.pagesize-1;",
+                    "",
+                    "    for(var i=start; i<=end; i++) {",
+                    "        this.add({",
+                    "            facid: i+1,",
+                    "            facname: '电梯品牌' + (i+1),",
+                    "        });",
+                    "    }",
+                    "   ",
+                    "    // 演示数据",
+                    "    onSuccess(end - start + 1);",
+                    "",
+                    "",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "6f42f3a0-d667-46b8-96ff-fa9caa6a8294"
+        }
+    ]
+}

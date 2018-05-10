@@ -1,0 +1,153 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userClassName": "Engineer.EngFaultStatus",
+        "hidden": true,
+        "hideOnMaskTap": true,
+        "id": "EngFaultState",
+        "modal": true,
+        "padding": "5 10"
+    },
+    "designerId": "886005a9-d03c-4de5-930b-f6d4055cc608",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultStatus_0",
+                "itemId": "EngFaultStatus_0",
+                "text": "全部"
+            },
+            "name": "MyButton",
+            "designerId": "16f7cd18-d4c1-4d74-b738-5f8d51a80ed8"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultStatus_1",
+                "itemId": "EngFaultStatus_1",
+                "text": "新建"
+            },
+            "name": "MyButton1",
+            "designerId": "edca6c18-6139-43bc-add1-e54f1c47b688"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultStatus_2",
+                "itemId": "EngFaultStatus_2",
+                "text": "未接收"
+            },
+            "name": "MyButton7",
+            "designerId": "7d594ccd-2f2b-4e4a-b0ef-3b086c35ef69"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultStatus_3",
+                "itemId": "EngFaultStatus_3",
+                "text": "维修中"
+            },
+            "name": "MyButton9",
+            "designerId": "04a219d5-fd36-4a53-995f-bd02c258ab16"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultStatus_4",
+                "itemId": "EngFaultStatus_4",
+                "text": "已退回"
+            },
+            "name": "MyButton15",
+            "designerId": "9c7f13c5-e113-4337-b386-cde3379760cf"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultStatus_5",
+                "itemId": "EngFaultStatus_5",
+                "text": "完工"
+            },
+            "name": "MyButton16",
+            "designerId": "8b81d775-0e59-420f-bda9-d9d5d999ac12"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngFaultStatus_6",
+                "itemId": "EngFaultStatus_6",
+                "text": "关闭"
+            },
+            "name": "MyButton40",
+            "designerId": "7730e364-51cc-4aac-aafe-595883a4be47"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_zx8gba4g",
+        "id": "BaiduMap",
+        "url": "http://api.map.baidu.com/api?v=2.0&ak=64048452fca8dd67eabb72ff5b4dd0ac",
+        "x-compile": true
+    },
+    "name": "js",
+    "designerId": "6961f739-023b-41d7-9c0e-2a85b01ce5bd"
+}

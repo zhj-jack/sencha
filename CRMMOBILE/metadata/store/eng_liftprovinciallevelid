@@ -1,0 +1,107 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_liftprovinciallevelid",
+        "storeId": "eng_liftprovinciallevelid"
+    },
+    "name": "MyStore",
+    "designerId": "77b0fd20-6a30-4386-9009-8d03bd447446",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "areaid"
+            },
+            "name": "field820",
+            "designerId": "1471ca10-feff-4a40-8a33-e503e1cbd162"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "areaname"
+            },
+            "name": "field819",
+            "designerId": "3501a0fa-e2dc-4efe-8a68-87dcba84c0e5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "// console.log('查省份传去后台的参数:');",
+                    "// console.log(parm);",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/szqylist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取地区区域列表-演示数据",
+                    "",
+                    "     this.setData([",
+                    "         {",
+                    "            areaid :'110000',",
+                    "            areaname: '北京市',",
+                    "         },",
+                    "         {",
+                    "            areaid :'550000',",
+                    "            areaname: '测试省份2',",
+                    "         },",
+                    "         {",
+                    "            areaid :'660000',",
+                    "            areaname: '测试省份3',",
+                    "         },",
+                    "         {",
+                    "            areaid :'770000',",
+                    "            areaname: '测试省份4',",
+                    "         },",
+                    "         {",
+                    "            areaid :'880000',",
+                    "            areaname: '测试省份5',",
+                    "         },",
+                    "     ]);",
+                    "    // 演示数据",
+                    "    onSuccess(4);",
+                    "",
+                    "",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "e15fd86d-db81-4ed8-a97d-bbc2c88bb6d8"
+        }
+    ]
+}

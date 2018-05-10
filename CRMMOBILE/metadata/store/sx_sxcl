@@ -1,0 +1,149 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sx_sxcl",
+        "storeId": "sx_sxcl"
+    },
+    "name": "MyStore",
+    "designerId": "68c6f472-cf29-4e25-bb82-36ae32320ae3",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "name": "field6",
+            "designerId": "8fef9150-204a-400a-a2e5-8ad0b3475158"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "trno"
+            },
+            "name": "field7",
+            "designerId": "6e52bafe-87be-41a7-be19-9a0d84abc4a7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flag"
+            },
+            "name": "field8",
+            "designerId": "9ad6b968-4d64-483e-987c-e3c32cae747e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lon"
+            },
+            "name": "field9",
+            "designerId": "16b1bac3-8f37-4a6b-83b0-8832f2ff10f6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lat"
+            },
+            "name": "field10",
+            "designerId": "d963c89d-c811-4809-82d3-2e3f1172b52d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr"
+            },
+            "name": "field12",
+            "designerId": "707bb7ae-8c76-45eb-b240-10c038d53877"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "redeployed"
+            },
+            "name": "field13",
+            "designerId": "9a82525f-613c-4c64-b73b-ee96eda2da9c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    "var me = this;",
+                    "console.log('调用故障处理接口：');",
+                    "console.log(parm);",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/shouxin/api/1.0/tropration';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code===200) {",
+                    "                onSuccess(ret.trno);",
+                    "            } else {",
+                    "                console.log(ret.status.info);",
+                    "                onFailure(ret.status.info);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('(未知)');",
+                    "        }",
+                    "    );",
+                    "} else {",
+                    "    onSuccess('TRNO-TEST12345');",
+                    "}"
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "37227239-9c30-4887-a9ba-e6c694c434a8"
+        }
+    ]
+}

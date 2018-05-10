@@ -1,0 +1,340 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_projecttracking_list",
+        "storeId": "eng_projecttracking_list"
+    },
+    "name": "MyStore",
+    "designerId": "b3c3b83f-4d2f-4747-8b39-1b85f63410ac",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectjnlno"
+            },
+            "name": "field741",
+            "designerId": "4cbf95da-8dc8-4397-a7f9-a10681c8e672"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custname"
+            },
+            "name": "field760",
+            "designerId": "9c3ac1dc-e503-4334-8ed5-24d1131ff290"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "creator"
+            },
+            "name": "field763",
+            "designerId": "d41607a6-0d03-4c3e-9d10-6edaf4a9d5ee"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field764",
+            "designerId": "cf713b93-6d03-4e6a-92c3-8d78aeec762c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatornum"
+            },
+            "name": "field765",
+            "designerId": "47fc106b-32ac-4c53-a54f-db07884f0b24"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowtype"
+            },
+            "name": "field768",
+            "designerId": "ef19c530-431f-4786-8a97-bee9d5eebdc5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createdate"
+            },
+            "name": "field769",
+            "designerId": "845b136a-98ac-4fc2-8882-1b16d4727481"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectstatusname"
+            },
+            "name": "field770",
+            "designerId": "23714fab-394e-4e31-a880-2375b26a8f42"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractstatusname"
+            },
+            "name": "field771",
+            "designerId": "2aa53a5b-c906-4412-8d85-7063726f73a3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm",
+                    "action"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/projecttrack/api/1.0/xmgzlist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var info;",
+                    "            if(ret.status.code!=200){",
+                    "                if(parm.searchkey!==''){",
+                    "                    onFailure('搜索项目跟踪列表失败');",
+                    "                    return;",
+                    "                }",
+                    "                onFailure('读取项目跟踪列表失败');",
+                    "            }else{",
+                    "                if(ret.data.length===0){",
+                    "                    if(parm.curpagenum===1){",
+                    "                        switch(action){",
+                    "                            case 'refresh':",
+                    "                                info = '没有项目跟踪数据';",
+                    "                                break;",
+                    "                            case 'loadmore':",
+                    "                                break;",
+                    "                            case 'firstload':",
+                    "                                info = '没有项目跟踪数据';",
+                    "                                break;",
+                    "                            case 'search':",
+                    "                                info = '没有相关项目跟踪数据';",
+                    "                                break;",
+                    "                        }",
+                    "",
+                    "                        me.setData(ret.data);",
+                    "                        onFailure(info);",
+                    "                    }else{",
+                    "                        onFailure('没有更多数据！');",
+                    "                    }",
+                    "",
+                    "                    return;",
+                    "                }",
+                    "",
+                    "                var d = me.decoDat(ret.data);",
+                    "                //第一次加载直接设置数据",
+                    "                if(parm.curpagenum==1){",
+                    "                    me.setData(d);",
+                    "                }else{",
+                    "                    //分页用法，在原有数据上继续添加",
+                    "                    var n = d.length;",
+                    "                    for(var i=0; i<n; i++) {",
+                    "                        me.add(d[i]);",
+                    "                    }",
+                    "                }",
+                    "",
+                    "                if(action==='loadmore'){",
+                    "                    onSuccess(d.length);",
+                    "                }else{",
+                    "                    onSuccess('resetCurPage');",
+                    "                }",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            var info;",
+                    "            switch(action){",
+                    "                case 'refresh':",
+                    "                    info = '刷新项目跟踪数据失败';",
+                    "                    break;",
+                    "                case 'loadmore':",
+                    "                    info = '加载更多项目跟踪数据失败';",
+                    "                    break;",
+                    "                case 'firstload':",
+                    "                    info = '获取项目跟踪数据失败';",
+                    "                    break;",
+                    "                case 'search':",
+                    "                    info = '搜索项目跟踪失败';",
+                    "                    break;",
+                    "            }",
+                    "            onFailure(info);",
+                    "",
+                    "        }",
+                    "    );",
+                    "",
+                    "",
+                    "} else {",
+                    "    //分页模拟",
+                    "    var start = (parm.curpagenum-1)*20,",
+                    "        end = parm.curpagenum * parm.pagesize;",
+                    "",
+                    "    if(end>60){",
+                    "        onFailure('没有更多数据！');",
+                    "        return;",
+                    "    }",
+                    "",
+                    "    for(var i=start; i<end; i++) {",
+                    "        this.add({",
+                    "            projectjnlno: \t\t'XM160422002',//项目编号",
+                    "            custname:\t\t\t'广州中梯物联测试.'+(i),//客户名称",
+                    "            creator:\t\t\t'吴维',//业务员",
+                    "            projectname: \t\t'广州中梯物联测试.' + (i + 1),//项目名称",
+                    "            elevatornum: \t\t2,//电梯台数",
+                    "            flowtype:\t\t\t'普通',//跟进形式",
+                    "            createdate:\t\t\t'2016-04-22',//创建日期",
+                    "            projectstatusname:\t'允许跟进',//项目状态名",
+                    "            contractstatusname:\t'通过' //合同状态名",
+                    "",
+                    "",
+                    "        });",
+                    "    }",
+                    "    if(action=='firstload'||action=='refresh'||action=='search'){",
+                    "        onSuccess('resetCurPage');",
+                    "        return;",
+                    "    }",
+                    "",
+                    "    onSuccess(end - start + 1);",
+                    "",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "650f9603-d66a-4f02-a53b-dd8757e7790b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "",
+                    "var statusArr = [];",
+                    "",
+                    "statusArr['新建']= { code:'1',   color:'green' };",
+                    "statusArr['待审']= { code:'2', color:'gray' };",
+                    "statusArr['退出跟进']= { code:'3', color:'red' };",
+                    "statusArr['暂停跟进']= { code:'4', color:'orange' };",
+                    "statusArr['允许跟进']= { code:'5', color:'blue' };",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "for(var i=0;i<data.length; i++) {",
+                    "    var state = data[i].projectstatusname;",
+                    "    if(!statusArr[state]) {",
+                    "        Ext.toast('sx_sxlist 未知状态：' + state);",
+                    "        continue;",
+                    "    }",
+                    "",
+                    "    data[i].statusColor = 'liftnet-fontColor-' + statusArr[state].color;",
+                    "",
+                    "    if(state==='新建') {",
+                    "        data[i].urgent = '<div class=\"liftnet-remindBg liftnet-remindBg-orange\"></div><div class=\"liftnet-remind liftnet-font-size12\">新</div>';",
+                    "    }",
+                    "}",
+                    "",
+                    "return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "5b24fbe4-4756-46e2-910c-e0ac25ead2da"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "statusColor"
+            },
+            "name": "field448",
+            "designerId": "b996ea0d-d6a0-4266-a636-22cba4e9f2b2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "urgent"
+            },
+            "name": "field449",
+            "designerId": "96939d87-fb1f-4c9d-8970-9ce07ad14cf8"
+        }
+    ]
+}

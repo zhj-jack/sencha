@@ -1,0 +1,111 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_arealist",
+        "storeId": "eng_arealist"
+    },
+    "name": "eng_placelist1",
+    "designerId": "c0413500-552b-420f-ac2d-b91bdd93fc13",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "areaid"
+            },
+            "name": "field497",
+            "designerId": "e1ec7bd3-0fc4-4066-b451-0239c23682ae"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "areaname"
+            },
+            "name": "field498",
+            "designerId": "9a947b1d-694e-4d8d-8796-c178503783a2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "parm = {userid: global.getUserId(),areatype:parm.areatype};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/szqylist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取受信来源列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            placeid: '1',",
+                    "            placename: '东北'",
+                    "        },",
+                    "        {",
+                    "            placeid: '2',",
+                    "            placename: '华北'",
+                    "        },",
+                    "        {",
+                    "            placeid: '3',",
+                    "            placename: '华东'",
+                    "        },",
+                    "        {",
+                    "            placeid: '4',",
+                    "            placename: '华南'",
+                    "        },",
+                    "        {",
+                    "            placeid: '5',",
+                    "            placename: '华中'",
+                    "        },",
+                    "        {",
+                    "            placeid: '6',",
+                    "            placename: '西北'",
+                    "        },",
+                    "        {",
+                    "            placeid: '7',",
+                    "            placename: '西南'",
+                    "        },",
+                    "",
+                    "    ]);",
+                    "        onSuccess(7);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "8692230a-40bd-4bad-8482-8f849256b6a4"
+        }
+    ]
+}

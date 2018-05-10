@@ -1,0 +1,118 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_sxsourcelist",
+        "storeId": "common_sxsourcelist"
+    },
+    "name": "common_storagelist2",
+    "designerId": "9f6d615c-2a0f-488c-8848-1774c75f0cc5",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "trresourceid"
+            },
+            "name": "field285",
+            "designerId": "429aeabf-8585-4d5b-8f5e-9e7479fab993"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "trresourcename"
+            },
+            "name": "field291",
+            "designerId": "65c9f632-42e8-411f-a906-0001b1322e6a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "parm = {userid: global.getUserId()};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/shouxin/api/1.0/trsxlylist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取受信来源列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            trresourceid: '1',",
+                    "            trresourcename: '临时项目'",
+                    "        },",
+                    "        {",
+                    "            trresourceid: '2',",
+                    "            trresourcename: '96333热线'",
+                    "        },",
+                    "        {",
+                    "            trresourceid: '3',",
+                    "            trresourcename: '物业'",
+                    "        },",
+                    "        {",
+                    "            trresourceid: '4',",
+                    "            trresourcename: '乘客'",
+                    "        },",
+                    "        {",
+                    "            trresourceid: '5',",
+                    "            trresourcename: '维保转'",
+                    "        },",
+                    "        {",
+                    "            trresourceid: '6',",
+                    "            trresourcename: '质检转'",
+                    "        },",
+                    "        {",
+                    "            trresourceid: '7',",
+                    "            trresourcename: '修理重复故障'",
+                    "        },",
+                    "        {",
+                    "            trresourceid: '8',",
+                    "            trresourcename: '合作转'",
+                    "        },",
+                    "        {",
+                    "            trresourceid: '9',",
+                    "            trresourcename: '监控设备'",
+                    "        }",
+                    "    ]);",
+                    "        onSuccess(9);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "59c8ed88-c8df-4003-9406-a9a897ec63cc"
+        }
+    ]
+}

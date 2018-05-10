@@ -1,0 +1,1315 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "EngHomeController",
+        "designer|userClassName": "Engineer.EngHomeController"
+    },
+    "name": "MyController",
+    "designerId": "83edeb1f-1cd9-427f-b236-c9ac694a5ad9",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "",
+                    "********** 首页 标签 **********",
+                    ""
+                ],
+                "designer|controlQuery": "container#EngHome",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onEngHomeInitialize",
+                "implHandler": [
+                    "var me = this;",
+                    "//获取权限",
+                    "var userJurisdictionStore = dataUtil.createStore('common_userjurisdiction');",
+                    "userJurisdictionStore.loadDat(",
+                    "    function(ret){",
+                    "        Ext.getCmp('EngHome_BtnAdd').setHidden(ret.addjurisdiction==='N');",
+                    "    },",
+                    "    function(){",
+                    "        Ext.toast(\"获取用户权限失败\");",
+                    "    }",
+                    ");",
+                    "",
+                    "// 初始化主菜单",
+                    "var onNavButtonTap = function(button, e, eOpts) {",
+                    "    var view = button.config.openView;",
+                    "    if(view!=='') {",
+                    "        viewUtil.goNext(view);",
+                    "    }else{",
+                    "        Ext.toast(button.config.text+'模块正在开发中'+'<br><br>'+'敬请期待！');",
+                    "    }",
+                    "};",
+                    "// 4*3",
+                    "var navBtnConfig = [",
+                    "    { icon:'trace', iconColor:'red', text:'项目跟踪', view:'Engineer.EngProjectTrackingList', style:'' },",
+                    "    { icon:'find', iconColor:'blue', text:'合同查询', view:'Engineer.EngContractType', style:'' },",
+                    "    { icon:'file', iconColor:'orange', text:'电梯档案', view:'Engineer.EngElevatorFile', style:'' },",
+                    "    { icon:'customer', iconColor:'green', text:'客户维护', view:'Engineer.EngCustomer', style:'' },",
+                    "",
+                    "    { icon:'checkmark', iconColor:'green', text:'日常任务', view:'', style:'' },",
+                    "    { icon:'maintain', iconColor:'orange', text:'保养任务', view:'Engineer.EngMaintainPlan', style:'' },",
+                    "    { icon:'repair', iconColor:'green', text:'维修任务', view:'Engineer.EngFault', style:'' },",
+                    "    { icon:'find-voucher', iconColor:'red', text:'质检任务', view:'Engineer.EngQualityCheck', style:'' },//Engineer.EngQualityCheck",
+                    "",
+                    "    { icon:'tools', iconColor:'red', text:'工具', view:'', style:'' },",
+                    "    { icon:'book', iconColor:'red', text:'知识库', view:'', style:'' },",
+                    "    { icon:'notice', iconColor:'blue', text:'公告', view:'Common.ComHomeNews', style:'' },",
+                    "    { icon:'report', iconColor:'orange', text:'报表', view:'', style:'' },//Engineer.EngReport",
+                    "];",
+                    "// 4*4",
+                    "// var navBtnConfig = [",
+                    "//     { icon:'trace', iconColor:'red', text:'项目跟踪', view:'', style:'' },",
+                    "//     { icon:'find', iconColor:'blue', text:'合同查询', view:'', style:'' },",
+                    "//     { icon:'file', iconColor:'orange', text:'电梯档案', view:'', style:'' },",
+                    "//     { icon:'customer', iconColor:'green', text:'客户维护', view:'', style:'' },",
+                    "",
+                    "//     { icon:'install', iconColor:'blue', text:'安装任务', view:'' },",
+                    "//     { icon:'maintain', iconColor:'orange', text:'保养任务', view:'Engineer.EngMaintain', style:'' },",
+                    "//     { icon:'repair', iconColor:'green', text:'维修任务', view:'Engineer.EngFault', style:'' },",
+                    "//     { icon:'find-voucher', iconColor:'red', text:'质检任务', view:'Engineer.EngQualityCheck', style:'' },",
+                    "",
+                    "//     { icon:'upgrade', iconColor:'orange', text:'改造任务', view:'', style:'' },",
+                    "//     { icon:'checkmark', iconColor:'green', text:'日常任务', view:'', style:'' },",
+                    "//     { icon:'tools', iconColor:'red', text:'工具', view:'', style:'' },",
+                    "//     { icon:'parts', iconColor:'blue', text:'配件', view:'', style:'' },",
+                    "",
+                    "//     { icon:'safe', iconColor:'green', text:'安全', view:'', style:'' },",
+                    "//     { icon:'book', iconColor:'red', text:'知识库', view:'', style:'' },",
+                    "//     { icon:'notice', iconColor:'blue', text:'公告', view:'Common.ComHomeNews', style:'' },",
+                    "//     { icon:'report', iconColor:'orange', text:'报表', view:'Engineer.EngReport', style:'' },",
+                    "// ];",
+                    "var navBtn = [];",
+                    "for(i=0; i<navBtnConfig.length; i++) {",
+                    "    navBtn[i] = {",
+                    "        xtype: 'button',",
+                    "        text: navBtnConfig[i].text,",
+                    "        iconCls: 'ln3 ln3-' + navBtnConfig[i].icon,",
+                    "        iconAlign: 'top',",
+                    "        cls: 'liftnet-home-nav-' + navBtnConfig[i].iconColor,",
+                    "        style: navBtnConfig[i].style,",
+                    "        listeners: [",
+                    "            {",
+                    "                fn: onNavButtonTap,",
+                    "                event: 'tap'",
+                    "            }",
+                    "        ],",
+                    "        openView: navBtnConfig[i].view",
+                    "    };",
+                    "}",
+                    "Ext.getCmp('EngHome_NavPanel').setItems(navBtn);",
+                    "",
+                    "// 初始化下拉刷新、滑动按钮插件",
+                    "var faultList = Ext.getCmp('EngHome_ListFault');",
+                    "faultList.setPlugins(",
+                    "    [",
+                    "        {",
+                    "            autoSnapBack: false,",
+                    "            lastUpdatedText: '上次刷新:&nbsp;',",
+                    "            loadedText: '已刷新',",
+                    "            loadingText: '正在刷新故障待办任务...',",
+                    "            pullText: '下拉刷新...',",
+                    "            releaseText: '放开开始刷新...',",
+                    "            type: 'pullrefresh',",
+                    "            listeners : {",
+                    "                latestfetched : function() {",
+                    "                    me.doEngHome_LoadTodoFault();",
+                    "                }",
+                    "            }",
+                    "        },",
+                    "        {",
+                    "            xclass: 'ux.SlideActions',",
+                    "            openPosition: 100,",
+                    "            buttons:",
+                    "            [",
+                    "                // 按钮1",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    baseCls: 'x-button liftnet-list-button liftnet-bgColor-blue',",
+                    "                    text: '1',",
+                    "                    initial: function(button) {",
+                    "                        liftnet.app.getController('Engineer.EngFaultController').",
+                    "                        doEngFault_InitialNextStateButton(button, 0);",
+                    "                    },",
+                    "                    listeners: {",
+                    "                        tap: function(button, e){",
+                    "                            e.stopPropagation();",
+                    "                            return false;",
+                    "                        },",
+                    "                        scope: this",
+                    "                    },",
+                    "                    handler: function(button, e) {",
+                    "                        faultList.fireEvent('hide'); // 隐藏列表的滑动按钮组",
+                    "                        liftnet.app.getController('Engineer.EngFaultController').",
+                    "                        doEngFault_Process({",
+                    "                            record: button.getRecord(),",
+                    "                            operationIndex: 0",
+                    "                        });",
+                    "                    }",
+                    "                },",
+                    "                // 按钮2",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    baseCls: 'x-button liftnet-list-button liftnet-bgColor-green',",
+                    "                    text: '2',",
+                    "                    initial: function(button) {",
+                    "                        liftnet.app.getController('Engineer.EngFaultController').",
+                    "                        doEngFault_InitialNextStateButton(button, 1);",
+                    "                    },",
+                    "                    listeners: {",
+                    "                        tap: function(button, e){",
+                    "                            e.stopPropagation();",
+                    "                            return false;",
+                    "                        },",
+                    "                        scope: this",
+                    "                    },",
+                    "                    handler: function(button, e) {",
+                    "                        faultList.fireEvent('hide'); // 隐藏列表的滑动按钮组",
+                    "                        liftnet.app.getController('Engineer.EngFaultController').",
+                    "                        doEngFault_Process({",
+                    "                            record: button.getRecord(),",
+                    "                            operationIndex: 1",
+                    "                        });",
+                    "                    }",
+                    "                },",
+                    "                // 按钮3",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    baseCls: 'x-button liftnet-list-button liftnet-bgColor-orange',",
+                    "                    text: '3',",
+                    "                    initial: function(button) {",
+                    "                        liftnet.app.getController('Engineer.EngFaultController').",
+                    "                        doEngFault_InitialNextStateButton(button, 2);",
+                    "                    },",
+                    "                    listeners: {",
+                    "                        tap: function(button, e){",
+                    "                            e.stopPropagation();",
+                    "                            return false;",
+                    "                        },",
+                    "                        scope: this",
+                    "                    },",
+                    "                    handler: function(button, e) {",
+                    "                        faultList.fireEvent('hide'); // 隐藏列表的滑动按钮组",
+                    "                        liftnet.app.getController('Engineer.EngFaultController').",
+                    "                        doEngFault_Process({",
+                    "                            record: button.getRecord(),",
+                    "                            operationIndex: 2",
+                    "                        });",
+                    "                    }",
+                    "                }",
+                    "            ]",
+                    "        }",
+                    "    ]",
+                    ");",
+                    "",
+                    "var maintainList = Ext.getCmp('EngHome_ListMaintain');",
+                    "maintainList.setPlugins(",
+                    "    [",
+                    "        {",
+                    "            autoSnapBack: false,",
+                    "            lastUpdatedText: '上次刷新:&nbsp;',",
+                    "            loadedText: '已刷新',",
+                    "            loadingText: '正在刷新保养待办...',",
+                    "            pullText: '下拉刷新...',",
+                    "            releaseText: '放开开始刷新...',",
+                    "            type: 'pullrefresh',",
+                    "            listeners : {",
+                    "                latestfetched : function() {",
+                    "                    me.doEngHome_LoadTodoMaintain();",
+                    "                }",
+                    "            }",
+                    "        },",
+                    "        {",
+                    "            xclass: 'ux.SlideActions',",
+                    "            openPosition: 75,",
+                    "            buttons:",
+                    "            [",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    baseCls: 'x-button liftnet-list-button liftnet-bgColor-blue',",
+                    "                    text: '1',",
+                    "                    initial: function(button) {",
+                    "                        liftnet.app.getController('Engineer.EngMaintainController').",
+                    "                        doEngMaintain_InitialNextStateButton(button, 0);",
+                    "                    },",
+                    "                    listeners: {",
+                    "                        tap: function(button, e){",
+                    "                            e.stopPropagation();",
+                    "                            return false;",
+                    "                        },",
+                    "                        scope: this",
+                    "                    },",
+                    "                    handler: function(button, e) {",
+                    "                        maintainList.fireEvent('hide');",
+                    "                        liftnet.app.getController('Engineer.EngMaintainController').",
+                    "                        doEngMaintain_Process({",
+                    "                            record: button.getRecord(),",
+                    "                            operationIndex: 0",
+                    "                        });",
+                    "                    }",
+                    "                }",
+                    "            ]",
+                    "        }",
+                    "    ]",
+                    ");",
+                    "",
+                    "var reportList = Ext.getCmp('EngHome_ListReport');",
+                    "reportList.setPlugins(",
+                    "    [",
+                    "        {",
+                    "            autoSnapBack: false,",
+                    "            lastUpdatedText: '上次刷新:&nbsp;',",
+                    "            loadedText: '已刷新',",
+                    "            loadingText: '正在刷新故障报告书待办...',",
+                    "            pullText: '下拉刷新...',",
+                    "            releaseText: '放开开始刷新...',",
+                    "            type: 'pullrefresh',",
+                    "            listeners : {",
+                    "                latestfetched : function() {",
+                    "                    me.doEngHome_LoadTodoFaultReport();",
+                    "                }",
+                    "            }",
+                    "        }",
+                    "    ]",
+                    ");",
+                    "",
+                    "//-------------New-----------------",
+                    "",
+                    "var allTodoList = Ext.getCmp('EngHome_TodoListAll');",
+                    "allTodoList.setPlugins(",
+                    "    [",
+                    "        {",
+                    "            autoSnapBack: false,",
+                    "            lastUpdatedText: '上次刷新:&nbsp;',",
+                    "            loadedText: '已刷新',",
+                    "            loadingText: '正在刷新待办任务...',",
+                    "            pullText: '下拉刷新...',",
+                    "            releaseText: '放开开始刷新...',",
+                    "            type: 'pullrefresh',",
+                    "            listeners : {",
+                    "                latestfetched : function() {",
+                    "                    me.doEngHome_LoadTodoAll();",
+                    "                }",
+                    "            }",
+                    "        }",
+                    "    ]",
+                    ");",
+                    "",
+                    "var f1 = Ext.getCmp('EngHomeTodo_date1');",
+                    "var f2 = Ext.getCmp('EngHomeTodo_date2');",
+                    "f1.suspendEvents();",
+                    "f2.suspendEvents();",
+                    "//当月",
+                    "//第一天",
+                    "var date1 = new Date();",
+                    "var year = date1.getFullYear();",
+                    "var month = date1.getMonth();",
+                    "var day = '01';",
+                    "date1 = new Date(year,month,day);",
+                    "",
+                    "//最后一天",
+                    "var date2 = new Date(year,month+1,0);",
+                    "",
+                    "// var date1 = new Date(new Date().getTime() - (1000 * 60 * 60 * 24 * 3));",
+                    "// var date2 = new Date();",
+                    "//f1.setValue(date1);",
+                    "//f2.setValue(date2);",
+                    "f1.resumeEvents(true);",
+                    "f2.resumeEvents(true);",
+                    "",
+                    "// 首次取待办",
+                    "this.doEngHome_LoadTodoAll();",
+                    "",
+                    "/* tab分别加载",
+                    "// this.doEngHome_LoadTodoFault();",
+                    "// this.doEngHome_LoadTodoMaintain();",
+                    "// this.doEngHome_LoadTodoFaultReport();",
+                    "*/",
+                    "",
+                    "// 初始化日期选择",
+                    "// var date1 = new Date(new Date().getTime() - (1000 * 60 * 60 * 24 * 30));",
+                    "// var date2 = new Date();",
+                    "// /*",
+                    "// Ext.getCmp('EngMaintain_date1').setValue(date1);",
+                    "// Ext.getCmp('EngMaintain_date2').setValue(date2);",
+                    "// Ext.getCmp('EngFault_date1').setValue(date1);",
+                    "// Ext.getCmp('EngFault_date2').setValue(date2);",
+                    "// Ext.getCmp('EngFaultReport_date1').setValue(date1);",
+                    "// Ext.getCmp('EngFaultReport_date2').setValue(date2);",
+                    "// */",
+                    "",
+                    "// var y = parseInt(Ext.Date.format(new Date(), 'Y'));",
+                    "// var p = {",
+                    "//     yearFrom: y - 1,",
+                    "//     yearTo: y + 1,",
+                    "//     doneButton: '确定',",
+                    "//     cancelButton: '取消',",
+                    "//     slotOrder: ['year','month','day'],",
+                    "// };",
+                    "// Ext.getCmp('EngMaintain_date1').setPicker(p);",
+                    "// Ext.getCmp('EngMaintain_date2').setPicker(p);",
+                    "// Ext.getCmp('EngFault_date1').setPicker(p);",
+                    "// Ext.getCmp('EngFault_date2').setPicker(p);",
+                    "// Ext.getCmp('EngFaultReport_date1').setPicker(p);",
+                    "// Ext.getCmp('EngFaultReport_date2').setPicker(p);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngHomeInitialize",
+            "designerId": "445777dc-5570-4523-ac27-3063850f4991"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "tabpanel#EngHome",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.tab.Panel",
+                "fn": "onEngHomeShow",
+                "implHandler": [
+                    "if(component.getActiveItem().getId()!=='EngHome_Nav') {",
+                    "    return;",
+                    "}",
+                    "",
+                    "// 用户名、头像",
+                    "Ext.getCmp('EngHome_LblUserName').setHtml('<i class=\"ln ln-settings\"></i> ' + global.getUserName());",
+                    "Ext.getCmp('EngHome_ImgAvator').setSrc(global.getUserAvatorSrc());",
+                    "",
+                    "// 总数、最新发布",
+                    "// liftnet.app.getController('ComController')",
+                    "//     .doHome_LoadStatic('mainpage_static', 'jixiucount', 'bymissioncount');",
+                    "liftnet.app.getController('ComController')",
+                    "    .doHome_LoadNotisfy('EngHome_PnlNotice');",
+                    "loadMask.hide(true);"
+                ],
+                "name": "show"
+            },
+            "name": "onEngHomeShow",
+            "designerId": "2a7f9c95-0915-4cd1-8c5f-019d85b2f1f5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngHome_FldSearchTodo",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngHome_FldSearchTodoKeyup",
+                "implHandler": [
+                    "// 过滤待办任务",
+                    "Ext.getCmp('EngHome_ListFault').getStore().filteDat(textfield.getValue());",
+                    "Ext.getCmp('EngHome_ListMaintain').getStore().filteDat(textfield.getValue());",
+                    "Ext.getCmp('EngHome_ListReport').getStore().filteDat(textfield.getValue());"
+                ],
+                "name": "keyup"
+            },
+            "name": "onEngHome_FldSearchTodoKeyup",
+            "designerId": "01f42ceb-5ee7-4589-a8bf-4d7516567083"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngHome_MixSearchTodo",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngHome_MixSearchTodoKeyup",
+                "implHandler": [
+                    "// 过滤待办任务",
+                    "var me = this;",
+                    "Ext.getCmp('EngHome_TodoListAll').getStore().searchDat(textfield.getValue(),me.doEngHome_GetTodoType());"
+                ],
+                "name": "change"
+            },
+            "name": "onEngHome_MixSearchTodoKeyup",
+            "designerId": "21624031-7128-471d-86e5-054e28f1ad5c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "datepickerfield#EngHomeTodo_date1",
+                "designer|targetType": "Ext.field.DatePicker",
+                "fn": "onEngHomeTodo_date1Change",
+                "implHandler": [
+                    "var me = this;",
+                    "var formatStartDate = Ext.Date.format(datepickerfield.getValue(),'Y-m-d');",
+                    "var start = Date.parse(formatStartDate);",
+                    "",
+                    "var formatEndDate2 = Ext.getCmp('EngHomeTodo_date2').getValue();",
+                    "if(!formatEndDate2){",
+                    "    formatEndDate2 = new Date();",
+                    "}",
+                    "console.log(formatEndDate2);",
+                    "var formatEndDate = Ext.Date.format(formatEndDate2,'Y-m-d');",
+                    "var end = Date.parse(formatEndDate);",
+                    "",
+                    "if(start>Date.parse(new Date())||end>Date.parse(new Date())||start>end){",
+                    "    datepickerfield.setValue(oldDate);",
+                    "    Ext.toast('请选择正确的日期区间');",
+                    "}else{",
+                    "    Ext.getCmp('EngHome_TodoListAll').getStore().filteDatByDate",
+                    "    ({start:start,end:end,type:me.doEngHome_GetTodoType()});",
+                    "}",
+                    ""
+                ],
+                "name": "change"
+            },
+            "name": "onEngHomeTodo_date1Change",
+            "designerId": "e1df2ace-eb24-427d-b9ee-f237155a96f5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "datepickerfield#EngHomeTodo_date2",
+                "designer|targetType": "Ext.field.DatePicker",
+                "fn": "onEngHomeTodo_date2Change",
+                "implHandler": [
+                    "//根据日期过滤(本地)",
+                    "var me = this;",
+                    "var formatStartDate2 = Ext.getCmp('EngHomeTodo_date1').getValue();",
+                    "if(!formatStartDate2){",
+                    "    formatStartDate2 = new Date();",
+                    "}",
+                    "var formatStartDate = Ext.Date.format(formatStartDate2,'Y-m-d');",
+                    "var start = Date.parse(formatStartDate);",
+                    "var formatEndDate = Ext.Date.format(datepickerfield.getValue(),'Y-m-d');",
+                    "var end = Date.parse(formatEndDate);",
+                    "if(start>Date.parse(new Date())||",
+                    "   end>Date.parse(new Date())||",
+                    "   start>end){",
+                    "    Ext.toast('请选择正确的日期区间');",
+                    "    datepickerfield.setValue(oldDate);",
+                    "}else{",
+                    "    Ext.getCmp('EngHome_TodoListAll').getStore().filteDatByDate(",
+                    "    {start:start,end:end,type:me.doEngHome_GetTodoType()});",
+                    "}",
+                    ""
+                ],
+                "name": "change"
+            },
+            "name": "onEngHomeTodo_date2Change",
+            "designerId": "710eb906-d80f-447f-9458-0f0f2fefc80f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "doEngHome_GetTodoType",
+                "implHandler": [
+                    "var type = Ext.getCmp('EngHomeTodo_BtnStatus')._text;",
+                    "switch(type){",
+                    "    case \"全部\":",
+                    "        type='All';",
+                    "        break;",
+                    "    case \"保养计划\":",
+                    "        type='C';",
+                    "        break;",
+                    "    case \"维修任务\":",
+                    "        type='A';",
+                    "        break;",
+                    "    case \"故障报告\":",
+                    "        type='B';",
+                    "        break;",
+                    "    case \"首检任务\":",
+                    "        type='D';",
+                    "        break;",
+                    "    case \"保养任务\":",
+                    "        type='E';",
+                    "        break;",
+                    "}",
+                    "return type;"
+                ]
+            },
+            "name": "doEngHome_GetTodoType",
+            "designerId": "5c046f1e-535a-462a-b21f-62e665adec55"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngHome_FldSearchTodo",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngHome_FldSearchTodoClearicontap",
+                "implHandler": [
+                    "// 清除过滤待办任务",
+                    "Ext.getCmp('EngHome_ListFault').getStore().filteDat('');",
+                    "Ext.getCmp('EngHome_ListMaintain').getStore().filteDat('');",
+                    "Ext.getCmp('EngHome_ListReport').getStore().filteDat('');"
+                ],
+                "name": "clearicontap"
+            },
+            "name": "onEngHome_FldSearchTodoClearicontap",
+            "designerId": "0477af3c-4042-4d5d-97ee-ba0917d8df2b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngHome_btnNav",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngHome_btnNavTap",
+                "implHandler": [
+                    "//首页-导航按钮",
+                    "popMenu.show('Common.ComHomeNav');"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngHome_btnNavTap",
+            "designerId": "bcbdf1cd-dd50-40b3-82a7-acb329cb04ba"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngHome_BtnAdd",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngHome_BtnAddTap",
+                "implHandler": [
+                    "//首页-新增受信按钮",
+                    "viewUtil.goNext('Engineer.EngFaultAdd', {action:'新增', record:null});"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngHome_BtnAddTap",
+            "designerId": "9e763fc3-22af-4b91-9e78-662a748da62a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngHome_ListFault",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngHome_ListFaultItemTap",
+                "implHandler": [
+                    "//首页待办任务-故障处理",
+                    "var nextstate = record.get('nextstate');",
+                    "var openAssign = false; // 是否打开派工窗口",
+                    "for(var i=0; i<nextstate.length; i++) {",
+                    "    if(nextstate[i].name==='派工') {",
+                    "        openAssign = true;",
+                    "        break;",
+                    "    }",
+                    "}",
+                    "if(openAssign) {",
+                    "    viewUtil.goNext('Engineer.EngFaultAdd', {action:'', record: record});",
+                    "} else {",
+                    "    viewUtil.goNext('Engineer.EngFaultAccept', {record: record});",
+                    "}",
+                    "/* 使用上面标准做法，废弃用状态决定操作的方式：",
+                    "var state = record.get('state');",
+                    "if(state==='已退回'||state==='待分配') {",
+                    "    viewUtil.goNext('Engineer.EngFaultAdd', {action:'', record: record});",
+                    "} else {",
+                    "    viewUtil.goNext('Engineer.EngFaultAccept', {record: record});",
+                    "}",
+                    "*/"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngHome_ListFaultItemTap",
+            "designerId": "5e5e9799-50c8-423c-9368-ac1dc770eeb4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngHome_ListMaintain",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngHome_ListMaintainItemTap",
+                "implHandler": [
+                    "//首页待办任务-保养计划明细",
+                    "viewUtil.goNext('Engineer.EngMaintainTask', {record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngHome_ListMaintainItemTap",
+            "designerId": "88bd8b80-1e54-4ded-94ec-e87deb3b6c1b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngHome_ListReport",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngHome_ListReportItemTap",
+                "implHandler": [
+                    "//首页待办任务-故障报告书",
+                    "viewUtil.goNext('Engineer.EngFaultReport', {record: record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngHome_ListReportItemTap",
+            "designerId": "e2b2ac7f-c365-4157-a82f-28c8ab356016"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "",
+                    "********** 首页取数方法（加载全部待办事项） **********",
+                    ""
+                ],
+                "fn": "doEngHome_LoadTodoAll",
+                "implHandler": [
+                    "",
+                    "var userid = global.getUserId();",
+                    "Ext.getCmp('EngHome_TodoListAll').getStore().loadDat(",
+                    "    function(n) {",
+                    "        var tbar = Ext.getCmp('EngHome');",
+                    "        if(!tbar) return;",
+                    "        //if(tbar.getActiveItem().id!==\"EngHome_Home\"){",
+                    "            tbar.getTabBar().items.getAt(1).setBadgeText(n);",
+                    "        //}",
+                    "    },",
+                    "    function(info) {",
+                    "        Ext.toast(info);",
+                    "    }",
+                    ");"
+                ]
+            },
+            "name": "doEngHome_LoadTodoAll",
+            "designerId": "635f0075-9bf5-4e7c-9d34-b6ee1752c8cb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "",
+                    "********** 首页取数方法 **********",
+                    ""
+                ],
+                "fn": "doEngHome_LoadTodoFault",
+                "implHandler": [
+                    "// 读取待办-故障处理",
+                    "var userid = global.getUserId();",
+                    "Ext.getCmp('EngHome_ListFault').getStore().loadDat(",
+                    "    function(n) {",
+                    "        var tbar = Ext.getCmp('EngHome');",
+                    "        if(!tbar) return;",
+                    "        tbar.getTabBar().items.getAt(1).setBadgeText(n);",
+                    "        //console.log('故障待办已刷新!');",
+                    "    },",
+                    "    function() {",
+                    "        Ext.toast('暂时未能刷新故障待办!');",
+                    "    },",
+                    "    {",
+                    "        userid: userid,",
+                    "        workstardate: '',",
+                    "        workenddate: ''",
+                    "    }",
+                    ");"
+                ]
+            },
+            "name": "doEngHome_LoadTodoFault",
+            "designerId": "1ac4e9bf-db1c-429a-b676-cd6dffb6702d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "doEngHome_LoadTodoMaintain",
+                "implHandler": [
+                    "// 读取待办-保养计划",
+                    "var userid = global.getUserId();",
+                    "Ext.getCmp('EngHome_ListMaintain').getStore().loadDat(",
+                    "    function(n) {",
+                    "        var tbar = Ext.getCmp('EngHome_TpnlTodo');",
+                    "        if(!tbar) return;",
+                    "        tbar.getTabBar().items.getAt(1).setBadgeText(n>0? n:'');",
+                    "        //console.log('保养计划待办已刷新!');",
+                    "    },",
+                    "    function() {",
+                    "        Ext.toast('暂时未能刷新保养计划待办!');",
+                    "    },",
+                    "    {",
+                    "        userid: userid,",
+                    "        state: '全部',",
+                    "        workstardate: '',",
+                    "        workenddate: ''",
+                    "    }",
+                    ");"
+                ]
+            },
+            "name": "doEngHome_LoadTodoMaintain",
+            "designerId": "c5c7a891-a513-4982-8426-1d55d65f06b7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "doEngHome_LoadTodoFaultReport",
+                "implHandler": [
+                    "// 读取待办-故障报告书",
+                    "var userid = global.getUserId();",
+                    "Ext.getCmp('EngHome_ListReport').getStore().loadDat(",
+                    "    function(n) {",
+                    "        var tbar = Ext.getCmp('EngHome_TpnlTodo');",
+                    "        if(!tbar) return;",
+                    "        tbar.getTabBar().items.getAt(2).setBadgeText(n>0? ' ':'');",
+                    "        //console.log('故障报告书待办已刷新!');",
+                    "    },",
+                    "    function() {",
+                    "        Ext.toast('暂时未能刷新故障报告书待办!');",
+                    "    },",
+                    "    {",
+                    "        userid: userid,",
+                    "        startrptime: '',",
+                    "        endrptime: ''",
+                    "    }",
+                    ");"
+                ]
+            },
+            "name": "doEngHome_LoadTodoFaultReport",
+            "designerId": "256916a9-f838-4b1a-b7aa-cff0bec24f7e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#EngHome_Home",
+                "designer|targetType": "Ext.Container",
+                "fn": "onEngHome_HomeTodoInitialize",
+                "implHandler": [
+                    "// 初始化日期选择",
+                    "var y = parseInt(Ext.Date.format(new Date(), 'Y'));",
+                    "var p = {",
+                    "    yearFrom: y - 1,",
+                    "    yearTo: y,",
+                    "    doneButton: '确定',",
+                    "    cancelButton: '取消',",
+                    "    slotOrder: ['year','month','day'],",
+                    "    value : new Date()",
+                    "};",
+                    "Ext.getCmp('EngHomeTodo_date1').setPicker(p);",
+                    "Ext.getCmp('EngHomeTodo_date2').setPicker(p);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngHome_HomeTodoInitialize",
+            "designerId": "3aa8f30a-cac7-4a60-8a9d-9360aaa9d1e6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#EngFault",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onEngFaultInitialize",
+                "implHandler": [
+                    "// 初始化日期选择",
+                    "/**var date1 = new Date(new Date().getTime() - (1000 * 60 * 60 * 24 * 30));",
+                    "var date2 = new Date();",
+                    "",
+                    "var y = parseInt(Ext.Date.format(new Date(), 'Y'));",
+                    "var p = {",
+                    "    yearFrom: y - 1,",
+                    "    yearTo: y + 1,",
+                    "    doneButton: '确定',",
+                    "    cancelButton: '取消',",
+                    "    slotOrder: ['year','month','day'],",
+                    "};",
+                    "Ext.getCmp('EngFault_date1').setPicker(p);",
+                    "Ext.getCmp('EngFault_date2').setPicker(p);",
+                    "Ext.getCmp('EngFaultReport_date1').setPicker(p);",
+                    "Ext.getCmp('EngFaultReport_date2').setPicker(p);*/"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngFaultInitialize",
+            "designerId": "e5540dff-ce49-4070-96af-65b2595a52b3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#EngMaintain",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onEngMaintainInitialize",
+                "implHandler": [
+                    "// 初始化日期选择",
+                    "// var date1 = new Date(new Date().getTime() - (1000 * 60 * 60 * 24 * 30));",
+                    "// var date2 = new Date();",
+                    "",
+                    "// var y = parseInt(Ext.Date.format(new Date(), 'Y'));",
+                    "// var p = {",
+                    "//     yearFrom: y - 1,",
+                    "//     yearTo: y + 1,",
+                    "//     doneButton: '确定',",
+                    "//     cancelButton: '取消',",
+                    "//     slotOrder: ['year','month','day'],",
+                    "// };",
+                    "// Ext.getCmp('EngMaintain_date1').setPicker(p);",
+                    "// Ext.getCmp('EngMaintain_date2').setPicker(p);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngMaintainInitialize",
+            "designerId": "a7d6c937-64d6-441f-bbeb-515f3e085451"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngFault_ReturnButton",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngFault_ReturnButtonTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngFault_ReturnButtonTap",
+            "designerId": "968f3df6-7de4-4b5c-bf1b-107b38bdb390"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMaintain_ReturnButton",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMaintain_ReturnButtonTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMaintain_ReturnButtonTap",
+            "designerId": "8b365533-64ec-458b-bbee-a69860872336"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngHomeTodo_BtnStatus",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngHomeTodo_BtnStatusTap",
+                "implHandler": [
+                    "//待办任务-类别筛选按钮",
+                    "popMenu.show('Engineer.EngHomeTodoStatus', button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngHomeTodo_BtnStatusTap",
+            "designerId": "1fda3bd5-56ac-4ed3-90a5-91a38edee28f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngHomeTodoStatus_0",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngHomeTodoStatus_0Tap",
+                "implHandler": [
+                    "// 全部",
+                    "this.doEngHomeTodo_LocalSearch(button,'All');"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngHomeTodoStatus_0Tap",
+            "designerId": "34674a0a-3936-4db7-b14f-6d979526964a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngHomeTodoStatus_1",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngHomeTodoStatus_1Tap",
+                "implHandler": [
+                    "// 保养计划",
+                    "this.doEngHomeTodo_LocalSearch(button,'C');"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngHomeTodoStatus_1Tap",
+            "designerId": "7eab5b17-5ce5-4c6c-b853-64fd372f3453"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngHomeTodoStatus_2",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngHomeTodoStatus_2Tap",
+                "implHandler": [
+                    "// 维修任务",
+                    "this.doEngHomeTodo_LocalSearch(button,'A');"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngHomeTodoStatus_2Tap",
+            "designerId": "164d9ece-678f-479e-94cd-7688f193d90d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngHomeTodoStatus_3",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngHomeTodoStatus_3Tap",
+                "implHandler": [
+                    "// 故障报告",
+                    "this.doEngHomeTodo_LocalSearch(button,'B');"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngHomeTodoStatus_3Tap",
+            "designerId": "bdd3a50a-62b8-48da-9f27-8c74d276e684"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngHomeTodoStatus_4",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngHomeTodoStatus_4Tap",
+                "implHandler": [
+                    "// 首检任务",
+                    "this.doEngHomeTodo_LocalSearch(button,'D');"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngHomeTodoStatus_4Tap",
+            "designerId": "f1bb077c-334a-4441-90dd-7d78d16c1765"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngHomeTodoStatus_5",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngHomeTodoStatus_5Tap",
+                "implHandler": [
+                    "// 保养任务",
+                    "this.doEngHomeTodo_LocalSearch(button,'E');"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngHomeTodoStatus_5Tap",
+            "designerId": "326d4a84-f94b-485f-b90d-cad36ca9d792"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "",
+                    "本地搜索，在已加载的数据中搜索",
+                    ""
+                ],
+                "designer|params": [
+                    "button,type"
+                ],
+                "fn": "doEngHomeTodo_LocalSearch",
+                "implHandler": [
+                    "",
+                    "popMenu.getShowBy().setText(button.getText());",
+                    "popMenu.hide();",
+                    "var keyword = Ext.getCmp('EngHome_MixSearchTodo').getValue();",
+                    "Ext.getCmp('EngHome_TodoListAll').getStore().filteDatByType(type,keyword);"
+                ]
+            },
+            "name": "doEngHomeTodo_LocalSearch",
+            "designerId": "e1912a30-1a78-4ec8-bb64-894033331b7d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngHome_TodoListAll",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngHome_TodoListAllItemTap",
+                "implHandler": [
+                    "switch(record.get('type')){",
+                    "    case 'A':",
+                    "    //首页待办任务-故障处理",
+                    "        var nextstate = record.get('nextstate');",
+                    "        var openAssign = false; // 是否打开派工窗口",
+                    "        for(var i=0; i<nextstate.length; i++) {",
+                    "            if(nextstate[i].name==='派工') {",
+                    "                openAssign = true;",
+                    "                break;",
+                    "            }",
+                    "        }",
+                    "        if(openAssign) {",
+                    "            record.set('trno',record.get('r1'));",
+                    "            viewUtil.goNext('Engineer.EngFaultAdd', {action:'', record: record});",
+                    "        } else {",
+                    "            record.set('trno',record.get('r1'));",
+                    "            record.set('state',record.get('r4'));",
+                    "            viewUtil.goNext('Engineer.EngFaultAccept', {record: record});",
+                    "        }",
+                    "        break;",
+                    "    case 'B':",
+                    "        record.set('rpno',record.get('r1'));",
+                    "        record.set('state',record.get('r4'));",
+                    "        viewUtil.goNext('Engineer.EngFaultReport', {record:record});",
+                    "        break;",
+                    "    case 'C':",
+                    "        record.set('pid',record.get('id'));",
+                    "        var flowstatus;",
+                    "        switch(record.get('r6')){",
+                    "            case '0':",
+                    "            case 0:",
+                    "                flowstatus = '未开始';",
+                    "                break;",
+                    "            case '1':",
+                    "            case 1:",
+                    "                flowstatus = '到场';",
+                    "                break;",
+                    "            case '2':",
+                    "            case 2:",
+                    "                flowstatus = '完工';",
+                    "                break;",
+                    "        }",
+                    "        record.set('flowstatus',flowstatus);",
+                    "        viewUtil.goNext('Engineer.EngMaintainPlanDetail', {record:record});",
+                    "        break;",
+                    "",
+                    "    case 'D':",
+                    "        //首检任务接收",
+                    "        record.set('jnl',record.get('id'));",
+                    "        record.set('status','未接收');",
+                    "        viewUtil.goNext('Engineer.EngFirstCheckJobAdd',",
+                    "                        {",
+                    "                            record:record,",
+                    "                            action:'查看',//只读",
+                    "                            url:'/adapters/firstcheck/api/1.0/fcdaduitdetail',//接收、退回 查看",
+                    "                            updatejurisdiction:false, //不可修改",
+                    "                            //从待办进入才有",
+                    "                            nextstate:record.get('nextstate')",
+                    "                        }",
+                    "                       );",
+                    "        break;",
+                    "    case 'E':",
+                    "        //保养任务",
+                    "        record.set('jnlno',record.get('id'));",
+                    "        viewUtil.goNext('Engineer.EngReception',{record:record});",
+                    "        break;",
+                    "}"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngHome_TodoListAllItemTap",
+            "designerId": "aa7a742a-d640-4700-9fc5-968be509cb3f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "tabpanel#EngHome",
+                "designer|targetType": "Ext.tab.Panel",
+                "fn": "onEngHomeActiveItemChange",
+                "implHandler": [
+                    "var tab2 = Ext.getCmp('EngHome').getTabBar().items.getAt(1);",
+                    "//if(value.id==\"EngHome_Home\"&&tab2.getBadgeText()){",
+                    "//   tab2.setBadgeText();//清除数字提示",
+                    "//}"
+                ],
+                "name": "activeitemchange"
+            },
+            "name": "onEngHomeActiveItemChange",
+            "designerId": "8c02be6a-7d5e-4b55-affb-be5848cb8104"
+        }
+    ]
+}

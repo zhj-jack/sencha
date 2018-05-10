@@ -1,0 +1,265 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.aud_byzydetail_detailed",
+        "storeId": "NoUsed.aud_byzydetail_detailed"
+    },
+    "name": "aud_byzydetail1",
+    "designerId": "c7195472-007c-49d3-90a6-9248ba819503",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pordid",
+                "type": "string"
+            },
+            "name": "field105",
+            "designerId": "af941776-13c6-47d3-b63c-d3a83c5b3a88"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatorid",
+                "type": "string"
+            },
+            "name": "field106",
+            "designerId": "0147b7b3-5710-4b80-aaf3-edea61e0a076"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fsd",
+                "type": "string"
+            },
+            "name": "field107",
+            "designerId": "916a5fab-ec89-4a27-bf57-9fabc5a0098b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "high",
+                "type": "string"
+            },
+            "name": "field108",
+            "designerId": "6a25c7bf-da22-4b87-b414-8357ccfbad43"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugstartdate",
+                "type": "string"
+            },
+            "name": "field109",
+            "designerId": "1e5921ff-db5a-4223-bac1-6108961a5d75"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugenddate",
+                "type": "string"
+            },
+            "name": "field110",
+            "designerId": "3ed807b1-d228-470a-981e-2bfd23f9ed3b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "price",
+                "type": "string"
+            },
+            "name": "field111",
+            "designerId": "060da8b0-86e2-451c-97a8-a6ab91b2d5ff"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r18",
+                "type": "string"
+            },
+            "name": "field112",
+            "designerId": "e1188965-3fd2-4e63-b446-a7d5e30757ae"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "yearcheckprice",
+                "type": "string"
+            },
+            "name": "field113",
+            "designerId": "0553578a-5a57-44f9-81a7-80c84214d080"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "sumcount",
+                "type": "string"
+            },
+            "name": "field114",
+            "designerId": "41a10630-c983-4023-91cd-b5189dbb2da3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "detailrem",
+                "type": "string"
+            },
+            "name": "field115",
+            "designerId": "0907f662-41b2-40ea-9111-c92c05c942b7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/aud/api/1.0/byzyaud/'+'任务号';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:'用户ID',billno:'流水号'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 保养作业查看-明细信息-演示数据",
+                    "    this.setData([",
+                    "    {",
+                    "        pordid: '注册码',",
+                    "        elevatorid: '型号',",
+                    "        fsd: '层/站/门',",
+                    "        high: '提升高度',",
+                    "        mugstartdate: '保养开始日期',",
+                    "        mugenddate: '保养结束日期',",
+                    "        price: '单价',",
+                    "        r18: '保养月数',",
+                    "        yearcheckprice: '年检费',",
+                    "        sumcount: '金额',",
+                    "        detailrem: '备注'",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "8c7c0854-20ea-4dac-adfe-a6b4b28aebbf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "8cf5303c-14e5-45d3-839d-ff144432079b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "2d704bfd-51bb-43a9-8b02-df71a07f885b"
+        }
+    ]
+}

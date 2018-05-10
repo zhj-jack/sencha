@@ -1,0 +1,155 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userClassName": "Engineer.EngInsureContractStatus",
+        "hidden": true,
+        "hideOnMaskTap": true,
+        "id": "EngInsureContractStatus",
+        "itemId": "EngInsureContractStatus",
+        "modal": true,
+        "padding": "5 10"
+    },
+    "name": "Engineer.EngMaintainContractStatus1",
+    "designerId": "69f44fe1-26a3-4b87-a877-f6d073eb2e03",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngInsureContractStatus_0",
+                "itemId": "EngInsureContractStatus_0",
+                "text": "全部"
+            },
+            "name": "MyButton41",
+            "designerId": "056eb396-0d3d-43c7-a78c-c22f6695bba1"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngInsureContractStatus_1",
+                "itemId": "EngInsureContractStatus_1",
+                "text": "新建"
+            },
+            "name": "MyButton22",
+            "designerId": "6c156d3e-a98e-4911-a5a7-77614fa6effc"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngInsureContractStatus_2",
+                "itemId": "EngInsureContractStatus_2",
+                "text": "待审"
+            },
+            "name": "MyButton42",
+            "designerId": "3709aa08-85e8-4210-b204-d69183c88809"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngInsureContractStatus_3",
+                "itemId": "EngInsureContractStatus_3",
+                "text": "审批中"
+            },
+            "name": "MyButton43",
+            "designerId": "cf827fa8-6a1d-48b7-9032-b0df20957fec"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngInsureContractStatus_4",
+                "itemId": "EngInsureContractStatus_4",
+                "text": "通过"
+            },
+            "name": "MyButton44",
+            "designerId": "9c6136c2-9a0c-48b0-ad19-d5a36c006826"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngInsureContractStatus_5",
+                "itemId": "EngInsureContractStatus_5",
+                "text": "不通过"
+            },
+            "name": "MyButton55",
+            "designerId": "e22b735a-4a26-44d7-9622-3201c9cc76f2"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngInsureContractStatus_6",
+                "itemId": "EngInsureContractStatus_6",
+                "text": "作废"
+            },
+            "name": "MyButton56",
+            "designerId": "730a6cfd-d86f-42ae-a0ab-e80ab015218d"
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "cu_checkcustname",
+        "storeId": "cu_checkcustname"
+    },
+    "name": "MyStore",
+    "designerId": "d93e2d3a-fbac-4c01-9306-961fba998a70",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "name": "field852",
+            "designerId": "8878a801-3367-4f78-b4b6-03eef7b28bb5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custname"
+            },
+            "name": "field853",
+            "designerId": "aaa356c5-e272-4824-880b-f19e739d9a97"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    "var me = this;",
+                    "console.log('调用检测客户名称接口：');",
+                    "console.log(parm);",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/mugcustomer/api/1.0/checkmugcustomer';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code===200) {",
+                    "                onSuccess(ret.data[0].state);",
+                    "            } else {",
+                    "                console.log(ret.status.info);",
+                    "                onFailure(ret.status.info);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('(未知)');",
+                    "        }",
+                    "    );",
+                    "} else {",
+                    "    onSuccess(0);",
+                    "//     onSuccess(1);",
+                    "}"
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "ed83af1d-7489-464a-ae5a-01f503d4a8f1"
+        }
+    ]
+}

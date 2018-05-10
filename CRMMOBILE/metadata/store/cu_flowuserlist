@@ -1,0 +1,132 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "cu_flowuserlist",
+        "storeId": "cu_flowuserlist"
+    },
+    "name": "MyStore",
+    "designerId": "0cdd7c89-ca9d-4f9a-8e33-24a08a340f70",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "name": "field847",
+            "designerId": "7e0cf148-d1bb-416f-bdda-4c54f6aea2af"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username"
+            },
+            "name": "field848",
+            "designerId": "39499f7a-2d64-4212-9060-3741f793c457"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "class1"
+            },
+            "name": "field849",
+            "designerId": "3be0b878-9e5c-4eec-bf5e-0bccae5efd94"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storageid"
+            },
+            "name": "field850",
+            "designerId": "809f66bd-55fb-4935-9267-11f5e1c57044"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storagename"
+            },
+            "name": "field851",
+            "designerId": "9cffdd85-f04c-4616-a4e2-9aa46de7e8ee"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "console.log(parm);",
+                    "var me = this;",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/mugcustomer/api/1.0/mugcustomerflowuser';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var d = ret.data;",
+                    "            var n = d.length;",
+                    "            for(var i=0; i<n; i++) {",
+                    "                me.add(d[i]);",
+                    "            }",
+                    "            onSuccess(n);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    var start = (parm.curpagenum-1)*parm.pagesize+1, end = start + parm.pagesize-1;",
+                    "",
+                    "    for(var i=start; i<=end; i++) {",
+                    "        this.add({",
+                    "            userid\t\t:\t\t'001-000'+i,",
+                    "            username\t: \t\t'测试用户.' + i,",
+                    "            class1\t\t: \t\t'职务.'+i,",
+                    "            storageid\t:\t\t'130010'+i,",
+                    "            storagename\t:\t\t'测试部门.'+i",
+                    "        });",
+                    "    }",
+                    "    // 演示数据",
+                    "    onSuccess(end - start + 1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "892fa000-8972-48bb-8f70-7b36193de400"
+        }
+    ]
+}

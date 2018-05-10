@@ -1,0 +1,214 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmAudLkshdetailCon",
+        "id": "AdmAudLkshdetailCon",
+        "layout": "vbox",
+        "scrollable": false
+    },
+    "name": "AdmFormMaintenancePlanAuditCon1",
+    "designerId": "48396f43-a7f3-4909-9d81-7640ea5cdea6",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "明细信息"
+            },
+            "name": "MyToolbar4",
+            "designerId": "8db50784-6164-47f0-8534-f8f3cd7e5f9a",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "AdmAudLkshdetailCon_ButReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "712bf30c-62c1-4327-948b-ec2c40172683"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "height": null,
+                "id": "form_aud_lkshdetail_detailed",
+                "layout|flex": 1,
+                "scrollable": false
+            },
+            "name": "MyFormPanel8",
+            "designerId": "40126292-6f76-42bc-b39f-f52c538b027f",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "注册码",
+                        "labelWidth": null,
+                        "name": "liftorserviceno",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "923908e4-1ae4-483c-84a1-25159ba92baa"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "收费期数",
+                        "labelWidth": "50%",
+                        "name": "feeamt",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField19",
+                    "designerId": "b7d71ae1-4ee8-418a-8447-58779b44512e"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "费用项目",
+                        "labelWidth": "50%",
+                        "name": "feetype",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField9",
+                    "designerId": "ea031467-eca1-43ad-8ab6-655ae90c08d0"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "服务区间",
+                        "labelWidth": "40%",
+                        "name": "serverdate",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField5",
+                    "designerId": "0e8cccd0-5756-47dc-a578-d226a10c93c4"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "应收金额",
+                        "labelWidth": "50%",
+                        "name": "atm",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField",
+                    "designerId": "3cf7a0fa-b4fa-44cc-bb64-25514b569b07"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "实收金额",
+                        "labelWidth": "50%",
+                        "name": "realfee",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField45",
+                    "designerId": "f59539bd-8fbe-4356-ab12-9f397743abab"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "备忘",
+                        "labelWidth": "50%",
+                        "name": "detailrem",
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextArea3",
+                    "designerId": "ce113ad5-1fe0-4dd0-bc32-f529e49d2971"
+                }
+            ]
+        }
+    ]
+}

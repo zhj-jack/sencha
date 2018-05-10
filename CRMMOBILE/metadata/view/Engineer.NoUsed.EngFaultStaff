@@ -1,0 +1,124 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.NoUsed.EngFaultStaff",
+        "id": "EngFaultStaff",
+        "layout": "vbox"
+    },
+    "name": "FaultCredit1",
+    "designerId": "f6dbfb2f-a64f-4123-bff1-506c88e42f55",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "派工"
+            },
+            "name": "MyToolbar4",
+            "designerId": "c08c5331-1dbf-451f-a9a9-e907345f20ff",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFaultStaff_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "c883c355-a8a7-46fb-8166-c9cd798fea1e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowDeselect": true,
+                "id": "EngFaultStaff_ListDispatching",
+                "layout|flex": 1,
+                "pressedCls": " ",
+                "store": "common_sxpglist"
+            },
+            "name": "MyList7",
+            "designerId": "08e95945-9d3a-47c7-a34e-275c2fc4a4f9",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-fault-staffList\">",
+                            "\t<div class=\"liftnet-fault-staffList-left liftnet-fontColor-darkGray\">{dutyusername}</div>",
+                            "\t<div class=\"liftnet-fault-staffList-right liftnet-fontColor-gray\">{linkphone}</div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "e3684357-b9b5-425e-a9f8-95c993b30003"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button",
+                    "liftnet-button-one"
+                ],
+                "docked": "bottom",
+                "height": null
+            },
+            "name": "MyPanel18",
+            "designerId": "1dbb3b55-f23e-47e5-bed9-8ab386550ee8",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "itemId": "EngFaultStaff_BtnDispatching",
+                        "text": "派工"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "a683b0ca-0952-4902-8f10-1579c7df3757"
+                }
+            ]
+        }
+    ]
+}

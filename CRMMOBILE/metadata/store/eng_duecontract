@@ -1,0 +1,252 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_duecontract",
+        "storeId": "eng_duecontract"
+    },
+    "name": "eng_duemoney1",
+    "designerId": "19bbe92b-3631-4b4b-ba55-c581b432e7d6",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/liftnet/common/api/1.0/';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    this.setData([",
+                    "        {",
+                    "            jnl:'SJ160415001',",
+                    "            projectname:'万科四季花园',",
+                    "            money:'3000',",
+                    "            handleUser:'handleUser1',",
+                    "            num:'第一期',",
+                    "            date1:'2015-02-12',",
+                    "            date2:'2015-05-15',",
+                    "            auditcolor:'green',",
+                    "            jobcolor:'red',",
+                    "        },",
+                    "        {",
+                    "            jnl:'SJ160415001',",
+                    "            projectname:'万科四季花园',",
+                    "            money:'4000',",
+                    "            handleUser:'handleUser2',",
+                    "            num:'第二期',",
+                    "            date1:'2015-02-12',",
+                    "            date2:'2015-05-15',",
+                    "            auditcolor:'green',",
+                    "            jobcolor:'red',",
+                    "        },",
+                    "        {",
+                    "            jnl:'SJ160415001',",
+                    "            projectname:'万科四季花园',",
+                    "            money:'5000',",
+                    "            handleUser:'handleUser3',",
+                    "            num:'第三期',",
+                    "            date1:'2015-02-12',",
+                    "            date2:'2015-05-15',",
+                    "            auditcolor:'green',",
+                    "            jobcolor:'green',",
+                    "        },",
+                    "        {",
+                    "            jnl:'SJ160415001',",
+                    "            projectname:'万科四季花园',",
+                    "            money:'6000',",
+                    "            handleUser:'handleUser4',",
+                    "            num:'第四期',",
+                    "            date1:'2015-02-12',",
+                    "            date2:'2015-05-15',",
+                    "            auditcolor:'green',",
+                    "            jobcolor:'green',",
+                    "        },",
+                    "    ]);",
+                    "",
+                    "        onSuccess();",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "992dbb9f-f27b-4ab6-850f-4c9919e09f2e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "d9fa6bf5-2834-429e-9635-d82366b7e728"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "        if(parm!=='') {",
+                    "            this.filterBy(function(item) {",
+                    "                var s = item.get(\"jnl\") + ' ' + item.get(\"projectname\");",
+                    "                return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "            });",
+                    "        }"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "d4878038-472a-4187-9700-0247359a9e70"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jnl"
+            },
+            "name": "field308",
+            "designerId": "c40b42d9-938d-4c08-b603-1fe19f72bb6f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field309",
+            "designerId": "9f6f9d07-4d80-4ecf-b1b7-5af8025a3d5e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "money"
+            },
+            "name": "field310",
+            "designerId": "cd9d1dca-3105-4231-b9da-78552eb1f7f5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "handleUser"
+            },
+            "name": "field311",
+            "designerId": "44fe3b42-7683-4218-91b1-6acd672195bf"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "date1"
+            },
+            "name": "field313",
+            "designerId": "566b9e2b-65bf-4e6e-972d-6c6e85a292ea"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "date2"
+            },
+            "name": "field606",
+            "designerId": "b6ef0eb3-7919-4942-854b-b98b2e1ad34f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "auditcolor"
+            },
+            "name": "field315",
+            "designerId": "5e8bd413-71db-4746-9ffc-43867204f61b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jobcolor"
+            },
+            "name": "field316",
+            "designerId": "54966e53-4cd4-4b85-a666-c4e1302b2436"
+        }
+    ]
+}

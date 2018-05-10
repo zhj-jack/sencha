@@ -1,0 +1,402 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngProjectTrackingList",
+        "id": "EngProjectTrackingList",
+        "itemId": "EngProjectTrackingList",
+        "layout": "vbox"
+    },
+    "name": "MyPanel18",
+    "designerId": "0919b6fa-b043-4c19-a838-0e8608d1a56f",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "项目跟踪"
+            },
+            "name": "MyToolbar7",
+            "designerId": "ab5da2b7-48b0-4a56-8404-d3167853500e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "itemId": "EngProjectTracking_ReturnBt",
+                        "text": null
+                    },
+                    "name": "MyButton16",
+                    "designerId": "f1418172-5100-4aac-b0d6-3b7f7143c3a3"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer12",
+                    "designerId": "c00458f0-c875-4403-a99f-0cd0f2e704a5"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "iconCls": "ln ln-new",
+                        "id": "EngProjectTracking_BtnAdd",
+                        "text": null
+                    },
+                    "name": "MyButton87",
+                    "designerId": "0c945aa8-67a3-4d8d-968d-db5a2fecc13b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyPanel19",
+            "designerId": "7da79ea3-288b-41a4-94ba-95dbe00a150f",
+            "cn": [
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-search-form"
+                        ],
+                        "height": 105,
+                        "id": "ProjectTracking_SearchForm",
+                        "itemId": "ProjectTracking_SearchForm",
+                        "layout": "vbox",
+                        "scrollable": false
+                    },
+                    "name": "MyFormPanel2",
+                    "designerId": "dbaa31b8-063b-4dc9-9cc6-4deb6e19ed04",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "",
+                                "layout|flex": 1,
+                                "scrollable": false
+                            },
+                            "name": "MyPanel67",
+                            "designerId": "747b9985-2e5a-4620-81c1-5f4fa9420da9",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Search",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-size12"
+                                        ],
+                                        "id": "ProjectTracking_SearchKey",
+                                        "itemId": "ProjectTracking_SearchKey",
+                                        "label": null,
+                                        "placeHolder": "项目名称、客户名称、业务员"
+                                    },
+                                    "name": "MySearchField1",
+                                    "designerId": "47358222-ceca-4a9d-9511-b3adfeb9443f"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-size12",
+                                            "liftnet-no-border",
+                                            "liftnet-fontColor-darkGray"
+                                        ],
+                                        "docked": "right",
+                                        "iconAlign": "right",
+                                        "iconCls": "fa fa-angle-down",
+                                        "id": "ProjectTracking_PStatus",
+                                        "itemId": "ProjectTracking_PStatus",
+                                        "margin": "16 0",
+                                        "text": "全部",
+                                        "width": 88
+                                    },
+                                    "name": "MyButton64",
+                                    "designerId": "8f41cfda-eca2-43aa-8403-db1deb083b00"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "hbox",
+                                "layout|flex": 1,
+                                "scrollable": false
+                            },
+                            "name": "MyFormPanel26",
+                            "designerId": "b13fb157-8a57-417b-adfa-18602723e405",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fontColor-gray"
+                                        ],
+                                        "docked": "left",
+                                        "html": "<i class='fa fa-calendar'></i>",
+                                        "margin": "18 -4 0 8",
+                                        "width": 20
+                                    },
+                                    "name": "MyLabel32",
+                                    "designerId": "d2da8449-531c-4767-ab79-4e9f06750436"
+                                },
+                                {
+                                    "type": "Ext.field.DatePicker",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFormat": "Y-m-d",
+                                        "id": "ProjectTracking_Data1",
+                                        "inputCls": "liftnet-font-center",
+                                        "itemId": "ProjectTracking_Data1",
+                                        "label": null,
+                                        "layout|flex": 1,
+                                        "placeHolder": "创建开始日期"
+                                    },
+                                    "name": "MyDatePicker16",
+                                    "designerId": "8863621c-66b8-4cba-98f5-fdcfe4598a7a",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.picker.Date",
+                                            "reference": {
+                                                "name": "picker",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "slotOrder": [
+                                                    "year",
+                                                    "month",
+                                                    "day"
+                                                ],
+                                                "yearFrom": 2000,
+                                                "yearTo": 2200
+                                            },
+                                            "name": "MyDatePicker17",
+                                            "designerId": "2686b252-6a2e-4cf7-87a6-2450335b7ffa",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Button",
+                                                    "reference": {
+                                                        "name": "doneButton",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "text": "确定"
+                                                    },
+                                                    "name": "MyButton57",
+                                                    "designerId": "5b4d7386-848d-49a1-9287-871714dea2b7"
+                                                },
+                                                {
+                                                    "type": "Ext.Button",
+                                                    "reference": {
+                                                        "name": "cancelButton",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "text": "取消"
+                                                    },
+                                                    "name": "MyButton58",
+                                                    "designerId": "85ff6126-f0cf-49d3-9522-409f3a7b18d4"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.DatePicker",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFormat": "Y-m-d",
+                                        "id": "ProjectTracking_Data2",
+                                        "inputCls": "liftnet-font-center",
+                                        "itemId": "ProjectTracking_Data2",
+                                        "label": null,
+                                        "layout|flex": 1,
+                                        "placeHolder": "创建结束日期"
+                                    },
+                                    "name": "MyDatePicker18",
+                                    "designerId": "9bac6eaa-be31-4f4c-8e11-f78d51766e8a",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.picker.Date",
+                                            "reference": {
+                                                "name": "picker",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "slotOrder": [
+                                                    "year",
+                                                    "month",
+                                                    "day"
+                                                ],
+                                                "yearFrom": 2000,
+                                                "yearTo": 2200
+                                            },
+                                            "name": "MyDatePicker19",
+                                            "designerId": "8d54cc08-8625-4bec-aa9e-20174efa73e0",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Button",
+                                                    "reference": {
+                                                        "name": "doneButton",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "text": "确定"
+                                                    },
+                                                    "name": "MyButton60",
+                                                    "designerId": "b5fbdbf5-7244-4c9c-accb-248f862a60c4"
+                                                },
+                                                {
+                                                    "type": "Ext.Button",
+                                                    "reference": {
+                                                        "name": "cancelButton",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "text": "取消"
+                                                    },
+                                                    "name": "MyButton65",
+                                                    "designerId": "2e51859b-275a-4c5d-ab0d-06811918284e"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-monitor-elevatorDetail-listBox"
+                        ],
+                        "disableSelection": true,
+                        "id": "EngProjectTracking_SearchList",
+                        "itemId": "EngProjectTracking_SearchList",
+                        "layout|flex": 1,
+                        "pressedCls": " ",
+                        "store": "eng_projecttracking_list"
+                    },
+                    "name": "MyList1",
+                    "designerId": "c30e7d60-9c99-4f3c-a682-251a4a21f509",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"liftnet-Maintenance-TaskRecList\" style=\"height:100px\">",
+                                    "    {urgent}",
+                                    "\t<div class=\"liftnet-Maintenance-TaskRecList-left\" style=\"left:18px\" >",
+                                    "    \t<div class=\"liftnet-font-size14 liftnet-fontColor-blue\">{projectjnlno}</div>",
+                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{projectname}</div>",
+                                    "    \t<div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{custname}</div>",
+                                    "    \t<div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{createdate}</div>",
+                                    "    </div>",
+                                    "\t<div class=\"liftnet-Maintenance-TaskRecList-right\" style=\"padding-top:0px;right:14px\">",
+                                    "    \t<div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12\">{elevatornum} 台 </div>",
+                                    "    \t<div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12\">{creator} </div>",
+                                    "    \t<div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12\">{flowtype}</div>",
+                                    "    \t<div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12 {statusColor}\">{projectstatusname} <i class=\"fa fa-circle-o\"></i></div>",
+                                    "    </div>",
+                                    "</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "5d638c03-9424-4d41-8d7d-57d3d19f1887"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

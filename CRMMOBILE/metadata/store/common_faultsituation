@@ -1,0 +1,142 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_faultsituation",
+        "storeId": "common_faultsituation"
+    },
+    "name": "common_faulttypelist1",
+    "designerId": "fd8f97e3-b602-4cee-9d9e-aa258be8a501",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "faultTypeID",
+                "type": "string"
+            },
+            "name": "field42",
+            "designerId": "3c65431e-80d6-4669-94a5-0a9325cdf62a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "faultTypeName",
+                "type": "string"
+            },
+            "name": "field49",
+            "designerId": "edcb69dc-b140-46f4-ad16-bb6088e6cc7e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/faultsituation';",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 获取故障类型列表-演示数据",
+                    "    this.setData([",
+                    "        {faultTypeID:'101',\tfaultTypeName:'生活垃圾导致开关门受阻，电梯停止运行'},",
+                    "        {faultTypeID:'102',\tfaultTypeName:'野蛮搬运导致门变形，电梯无法运行'},",
+                    "        {faultTypeID:'103',\tfaultTypeName:'装修垃圾导致开关门受阻，电梯停止运行'},",
+                    "        {faultTypeID:'104',\tfaultTypeName:'超载'},",
+                    "        {faultTypeID:'105',\tfaultTypeName:'阻挡关门时间过长，电梯无法运行'},",
+                    "        {faultTypeID:'106',\tfaultTypeName:'其他人为原因'},",
+                    "        {faultTypeID:'201',\tfaultTypeName:'电梯在运行过程中出现的停电'},",
+                    "        {faultTypeID:'202',\tfaultTypeName:'电气部件进水导致的短路故障'},",
+                    "        {faultTypeID:'203',\tfaultTypeName:'机房温度过高，电气控制系统自动保护'},",
+                    "        {faultTypeID:'204',\tfaultTypeName:'故障后自动恢复运行'},",
+                    "        {faultTypeID:'205',\tfaultTypeName:'其他外部原因'},",
+                    "        {faultTypeID:'301',\tfaultTypeName:'轿门锁失效'},",
+                    "        {faultTypeID:'302',\tfaultTypeName:'厅门锁失效'},",
+                    "        {faultTypeID:'303',\tfaultTypeName:'门机故障'},",
+                    "        {faultTypeID:'304',\tfaultTypeName:'门刀与滚轮（球）间距调整不良'},",
+                    "        {faultTypeID:'305',\tfaultTypeName:'安全触板、光幕等防夹人保护装置无效'},",
+                    "        {faultTypeID:'306',\tfaultTypeName:'主动门与从动门之间的联动失效'},",
+                    "        {faultTypeID:'307',\tfaultTypeName:'门触点失效'},",
+                    "        {faultTypeID:'308',\tfaultTypeName:'门挂轮破损'},",
+                    "        {faultTypeID:'309',\tfaultTypeName:'门导向系统失效'},",
+                    "        {faultTypeID:'310',\tfaultTypeName:'其他门系统故障'},",
+                    "        {faultTypeID:'401',\tfaultTypeName:'平衡系数不在标准范围内'},",
+                    "        {faultTypeID:'402',\tfaultTypeName:'曳引轮（轴）磨损'},",
+                    "        {faultTypeID:'403',\tfaultTypeName:'曳引机缺油或油量过多'},",
+                    "        {faultTypeID:'404',\tfaultTypeName:'传动皮带过松'},",
+                    "        {faultTypeID:'405',\tfaultTypeName:'钢丝绳卡阻或跳槽'},",
+                    "        {faultTypeID:'406',\tfaultTypeName:'钢丝绳磨损'},",
+                    "        {faultTypeID:'407',\tfaultTypeName:'变速箱故障'},",
+                    "        {faultTypeID:'408',\tfaultTypeName:'其他曳引系统故障'},",
+                    "        {faultTypeID:'501',\tfaultTypeName:'导靴磨损'},",
+                    "        {faultTypeID:'502',\tfaultTypeName:'导轨润滑欠缺'},",
+                    "        {faultTypeID:'503',\tfaultTypeName:'其他导向系统故障'},",
+                    "        {faultTypeID:'601',\tfaultTypeName:'轿厢壁变形'},",
+                    "        {faultTypeID:'602',\tfaultTypeName:'照明失效'},",
+                    "        {faultTypeID:'603',\tfaultTypeName:'紧急报警失效'},",
+                    "        {faultTypeID:'604',\tfaultTypeName:'其他轿厢故障'},",
+                    "        {faultTypeID:'701',\tfaultTypeName:'控制主板失效'},",
+                    "        {faultTypeID:'702',\tfaultTypeName:'电气元器件（接触器、继电器、驱动器件等）失效'},",
+                    "        {faultTypeID:'703',\tfaultTypeName:'平层感应器失效'},",
+                    "        {faultTypeID:'704',\tfaultTypeName:'极限开关、急停开关、维修开关等传感器失效'},",
+                    "        {faultTypeID:'705',\tfaultTypeName:'电气连接不可靠'},",
+                    "        {faultTypeID:'706',\tfaultTypeName:'编码器失效'},",
+                    "        {faultTypeID:'707',\tfaultTypeName:'主电源开关失效'},",
+                    "        {faultTypeID:'708',\tfaultTypeName:'召唤失效'},",
+                    "        {faultTypeID:'709',\tfaultTypeName:'电梯重启故障'},",
+                    "        {faultTypeID:'710',\tfaultTypeName:'其他控制系统故障'},",
+                    "        {faultTypeID:'801',\tfaultTypeName:'变频器失效'},",
+                    "        {faultTypeID:'802',\tfaultTypeName:'电动机失效'},",
+                    "        {faultTypeID:'803',\tfaultTypeName:'制动器故障'},",
+                    "        {faultTypeID:'804',\tfaultTypeName:'主电源断开'},",
+                    "        {faultTypeID:'805',\tfaultTypeName:'其他电器系统故障'},",
+                    "        {faultTypeID:'901',\tfaultTypeName:'安全回路断开'},",
+                    "        {faultTypeID:'902',\tfaultTypeName:'消防开关失效'},",
+                    "        {faultTypeID:'903',\tfaultTypeName:'限速器开关动作'},",
+                    "        {faultTypeID:'904',\tfaultTypeName:'安全钳开关动作'},",
+                    "        {faultTypeID:'905',\tfaultTypeName:'缓冲器开关动作'},",
+                    "        {faultTypeID:'906',\tfaultTypeName:'张紧轮开关动作'},",
+                    "        {faultTypeID:'907',\tfaultTypeName:'上行超速保护开关动作'},",
+                    "        {faultTypeID:'908',\tfaultTypeName:'其他安全保护装置故障'},",
+                    "    ]);",
+                    "    onSuccess(59);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "e28282cb-9d5d-4e4e-b45e-bdcb01a9565e"
+        }
+    ]
+}

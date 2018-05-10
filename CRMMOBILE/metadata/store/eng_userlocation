@@ -1,0 +1,204 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_userlocation",
+        "storeId": "eng_userlocation"
+    },
+    "name": "eng_projectlocation1",
+    "designerId": "97d1f9b3-3a97-49d0-845f-0fa224a6beef",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username"
+            },
+            "name": "field576",
+            "designerId": "e7806f16-d259-4e74-bdf2-6e62cb9c30cc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "class1name"
+            },
+            "name": "field577",
+            "designerId": "1c19d74d-24ee-4232-a85e-08a611bdc4fd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "phone"
+            },
+            "name": "field583",
+            "designerId": "32ad210f-8f63-4caa-ace8-c28828672cd5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stuts"
+            },
+            "name": "field602",
+            "designerId": "60d6ee2f-80a8-425e-a0cc-e67879319c87"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lon"
+            },
+            "name": "field578",
+            "designerId": "bd930ffa-d542-48de-94a3-c75d56bbee93"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lat"
+            },
+            "name": "field595",
+            "designerId": "7516372b-3b34-4ae1-8f8b-f81b7bee10af"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "var adapterparm = {",
+                    "    userid: global.getUserId(),",
+                    "    searchker:parm.searchker,",
+                    "    lon:parm.lon,",
+                    "    lat:parm.lat,",
+                    "    rangradius:parm.rangradius",
+                    "};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/rydlwzcx';",
+                    "    callPostAdapter(",
+                    "        url, adapterparm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                if(parm.searchker!==''){",
+                    "                    onFailure('读取人员位置信息失败');",
+                    "                }else{",
+                    "                    onFailure('搜索人员位置信息失败');",
+                    "                }",
+                    "",
+                    "            }else{",
+                    "                me.setData(ret.data);",
+                    "                onSuccess(me.getData());",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            if(parm.searchker!==''){",
+                    "                    onFailure('读取人员位置信息失败');",
+                    "                }else{",
+                    "                    onFailure('搜索人员位置信息失败');",
+                    "                }",
+                    "        }",
+                    "        );",
+                    "//         function(ret) {",
+                    "//             me.setData(ret.data);",
+                    "//             onSuccess(me.getData());",
+                    "//         },",
+                    "//         onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取人员位置列表-演示数据",
+                    "//     this.setData([",
+                    "//         {",
+                    "//             username: '张小三',",
+                    "//             class1name: '技术部',",
+                    "//             lon:'113.2951420000',",
+                    "//             lat:'23.1113440000',",
+                    "//             stuts:'在路上...'",
+                    "//         },",
+                    "//         {",
+                    "//             username: '李小四',",
+                    "//             class1name: '市场部',",
+                    "//             stuts:'休息中...',",
+                    "//             lon:'113.3185990000',",
+                    "//             lat:'23.1144410000',",
+                    "//         }",
+                    "",
+                    "//     ]);",
+                    "    this.setData([]);",
+                    "        onSuccess(this.getData());",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "35d80151-be9e-45f2-914c-f2a08b12890b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "        if(parm!=='') {",
+                    "            this.filterBy(function(item) {",
+                    "                var s = item.get(\"username\") + ' ' + ",
+                    "                    item.get(\"class1name\")+ ' ' + ",
+                    "                    item.get(\"stuts\");",
+                    "                return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "            });",
+                    "        }"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "dd1a5c03-bc80-495f-b324-e9185aa8636e"
+        }
+    ]
+}

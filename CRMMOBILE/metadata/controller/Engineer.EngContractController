@@ -1,0 +1,2151 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngContractController"
+    },
+    "name": "MyController",
+    "designerId": "eda16c33-7e11-4c8d-9835-8649a5bb71a3",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngContractType",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngContractTypeInitialize",
+                "implHandler": [
+                    "//加载合同分类列表",
+                    "Ext.getCmp('EngContractType_List').getStore().loadDat(",
+                    "    function(){",
+                    "",
+                    "    },",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "    }",
+                    ");"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngContractTypeInitialize",
+            "designerId": "47791191-d3db-4bde-8aa7-da8da5779493"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngContractType_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngContractType_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngContractType_BtnReturnTap",
+            "designerId": "8d6c2063-012d-4ebb-8ce3-8e4ec8b7c223"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngContractType_List",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngContractType_ListItemTap",
+                "implHandler": [
+                    "var views = {",
+                    "    '0':'Engineer.EngContractQuery',",
+                    "    '1':'Engineer.EngInsureContractQuery',",
+                    "    '2':'Engineer.EngRepairContractQuery'",
+                    "};",
+                    "// if(index!=2){",
+                    "    viewUtil.goNext(views[index]);",
+                    "// }",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngContractType_ListItemTap",
+            "designerId": "d0bab852-61ee-426a-a53a-6e76533249ad"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngContractQuery",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngContractQueryInitialize",
+                "implHandler": [
+                    "var me = this;",
+                    "var contractQueryList = Ext.getCmp('EngContractQuery_List');",
+                    "//清空store数据",
+                    "contractQueryList.getStore().removeAll();",
+                    "",
+                    "curPage = 0;//全局变量",
+                    "pagesize = 20;",
+                    "//获取流程状态",
+                    "getFlowstatus = {",
+                    "    '全部':'%',",
+                    "    '新建':'0',",
+                    "    '待审':'1',",
+                    "    '通过':'2',",
+                    "    '不通过':'3',",
+                    "    '审批中':'4',",
+                    "    '已取消':'5'",
+                    "};",
+                    "//下拉刷新",
+                    "contractQueryList.setPlugins(",
+                    "    [",
+                    "        {",
+                    "            autoSnapBack: false,",
+                    "            lastUpdatedText: '上次刷新:&nbsp;',",
+                    "            loadedText: '已刷新',",
+                    "            loadingText: '正在刷新保养合同...',",
+                    "            pullText: '下拉刷新...',",
+                    "            releaseText: '放开开始刷新...',",
+                    "            type: 'pullrefresh',",
+                    "            listeners : {",
+                    "                latestfetched : function() {",
+                    "                    me.doEngContractQuery_Search(",
+                    "                    Ext.getCmp('EngContractQuery_Staus'));",
+                    "                }",
+                    "            }",
+                    "        }",
+                    "    ]",
+                    ");",
+                    "",
+                    "",
+                    "//监听滑动结束事件",
+                    "var scroller = contractQueryList.getScrollable().getScroller();",
+                    "scroller.on('scrollend',function(scroll, x, y, eOpts){",
+                    "    if(curPage===0){",
+                    "        return;",
+                    "    }",
+                    "    //滑动到底部加载更多",
+                    "    if(y+scroller.getContainerSize().y==scroller.getSize().y){",
+                    "//         loadMask.show();",
+                    "        var scrollparm = {",
+                    "            scroller:scroller,",
+                    "            x:x,",
+                    "            y:y+100//Item的高度",
+                    "        };",
+                    "        if(!Ext.getCmp('EngContractQuery_Search')){",
+                    "            loadMask.hide();",
+                    "            return;",
+                    "        }",
+                    "        var searchkeyParm = {",
+                    "            //关键字",
+                    "            searchkey:Ext.getCmp('EngContractQuery_Search').getValue(),",
+                    "            //保养开始日期",
+                    "            startdate:",
+                    "                Ext.getCmp('EngContractQuery_date1').getValue()===null?'1980-01-01':",
+                    "                Ext.Date.format(Ext.getCmp('EngContractQuery_date1').getValue(),'Y-m-d'),",
+                    "            //保养结束日期",
+                    "            enddate:",
+                    "                Ext.getCmp('EngContractQuery_date2').getValue()===null?'2200-01-01':",
+                    "                Ext.Date.format(Ext.getCmp('EngContractQuery_date2').getValue(),'Y-m-d'),",
+                    "            //流程状态",
+                    "            flowstatus:",
+                    "                getFlowstatus[Ext.getCmp('EngContractQuery_Staus').getText()]",
+                    "        };",
+                    "//         me.doEngContractQuery_LoadContract(",
+                    "        me.doEngContract_LoadData(",
+                    "            'EngContractQuery_List',",
+                    "            ++curPage,",
+                    "            pagesize,",
+                    "            searchkeyParm,",
+                    "            'loadmore',",
+                    "            scrollparm",
+                    "        );",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngContractQueryInitialize",
+            "designerId": "a7b06799-81f4-4999-9ce8-c3f11b647b48"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngContractQuery_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngContractQuery_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngContractQuery_BtnReturnTap",
+            "designerId": "d4687f79-b5b4-428a-bda6-0e70fad4d587"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngContractQuery_Search",
+                "designer|params": [
+                    "textfield",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngContractQuery_SearchChange",
+                "implHandler": [
+                    "// if(!newValue||newValue===''){",
+                    "//     return;",
+                    "// }",
+                    "this.doEngContractQuery_Search(Ext.getCmp('EngContractQuery_Staus'));"
+                ],
+                "name": "change"
+            },
+            "name": "onEngContractQuery_SearchChange",
+            "designerId": "ed5c83f1-e1ea-4c4c-8a41-02b82db70364"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngContractQuery_List",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngContractQuery_ListItemTap",
+                "implHandler": [
+                    "//保养合同",
+                    "viewUtil.goNext('Engineer.EngMaintainContractDetail',{record:record});",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngContractQuery_ListItemTap",
+            "designerId": "484accef-60fb-48bb-b6ff-3e8d0fc6487d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "doEngContractQuery_Search",
+                "implHandler": [
+                    "//搜索数据",
+                    "if(button != Ext.getCmp('EngContractQuery_Staus')){",
+                    "    popMenu.getShowBy().setText(button.getText());",
+                    "    popMenu.hide();",
+                    "}",
+                    "var searchkeyParm = {",
+                    "    //关键字",
+                    "    searchkey : Ext.getCmp('EngContractQuery_Search').getValue(),",
+                    "    //保养开始日期",
+                    "    startdate:",
+                    "            Ext.getCmp('EngContractQuery_date1').getValue()===null?'1980-01-01':",
+                    "            Ext.Date.format(Ext.getCmp('EngContractQuery_date1').getValue(),'Y-m-d'),",
+                    "    //保养结束日期",
+                    "    enddate:",
+                    "            Ext.getCmp('EngContractQuery_date2').getValue()===null?'2200-01-01':",
+                    "            Ext.Date.format(Ext.getCmp('EngContractQuery_date2').getValue(),'Y-m-d'),",
+                    "    //流程状态",
+                    "    flowstatus:",
+                    "        getFlowstatus[Ext.getCmp('EngContractQuery_Staus').getText()]",
+                    "};",
+                    "console.log(searchkeyParm);",
+                    "this.doEngContract_LoadData('EngContractQuery_List',",
+                    "                           1,pagesize,searchkeyParm,'search');",
+                    "// this.doEngContractQuery_LoadContract(1,pagesize,searchkeyParm,'search');"
+                ]
+            },
+            "name": "doEngContractQuery_Search",
+            "designerId": "d54ff410-572d-4fc0-a263-e090cb0ff6c4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "page",
+                    "pagesize",
+                    "searchkeyParm",
+                    "action",
+                    "scrollparm"
+                ],
+                "fn": "doEngContractQuery_LoadContract",
+                "implHandler": [
+                    "loadMask.show();",
+                    "var me = this;",
+                    "Ext.getCmp('EngContractQuery_List').getStore().loadDat(",
+                    "    function(ret,resetCurPage){",
+                    "        if(scrollparm){",
+                    "            scrollparm.scroller.scrollTo(scrollparm.x,scrollparm.y);",
+                    "        }",
+                    "        if(resetCurPage){",
+                    "            curPage = 1;//获取新数据成功，页数重置为1",
+                    "        }",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    function(info,cutOne){",
+                    "        Ext.toast(info);",
+                    "        if(cutOne){",
+                    "            curPage--;//加载更多数据失败，页数减一",
+                    "        }",
+                    "        if(info==='没有更多数据！'){",
+                    "            curPage = 0;//没有更多数据的时候重置页数为0，不触发上拉事件",
+                    "        }",
+                    "        loadMask.hide();",
+                    "",
+                    "    },",
+                    "    {",
+                    "        curpagenum:page,",
+                    "        pagesize:pagesize,",
+                    "        searchkey:searchkeyParm.searchkey || '',",
+                    "        flowstatus:searchkeyParm.flowstatus || '%',",
+                    "        startdate:searchkeyParm.startdate,",
+                    "        enddate:searchkeyParm.enddate",
+                    "    },",
+                    "    action",
+                    ");"
+                ]
+            },
+            "name": "doEngContractQuery_LoadContract",
+            "designerId": "d3790c80-4c0f-4d70-9e34-6d6bfe0b4c64"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngMaintainContractDetail",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngMaintainContractDetailInitialize",
+                "implHandler": [
+                    "var me = this;",
+                    "var record = component.initialConfig.parm.record;",
+                    "var billno = record.get('billno');",
+                    "var parm = {billno:billno};",
+                    "loadMask.show();",
+                    "//获取所有明细信息",
+                    "var detailStore = dataUtil.createStore('eng_contractdetail');",
+                    "//客户信息",
+                    "var clientStore = dataUtil.createStore('eng_contractclient');",
+                    "detailStore.loadDat(",
+                    "    function(ret){",
+                    "        //显示客户信息",
+                    "        clientStore.setData(detailStore.getAt(0).get('client')[0]);",
+                    "        Ext.getCmp('EngMaintainContractDetail_Client')",
+                    "            .setRecord(clientStore.getAt(0));",
+                    "        //显示合同信息",
+                    "        Ext.getCmp('EngMaintainContractDetail_MainInfo')",
+                    "            .setRecord(detailStore.getAt(0));",
+                    "        //显示电梯信息",
+                    "        Ext.getCmp('EngMaintainContractDetail_ElevatorList').getStore()",
+                    "            .setData(ret[0].liftinfo);",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    parm",
+                    ");",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngMaintainContractDetailInitialize",
+            "designerId": "fa8cd0c6-23a7-48de-9f42-317d64a22aac"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMaintainContractDetail_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMaintainContractDetail_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMaintainContractDetail_BtnReturnTap",
+            "designerId": "7d2a935a-8e29-43cb-873d-988becee48b4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngMaintainContractDetail_ElevatorList",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngMaintainContractDetail_ElevatorListItemTap",
+                "implHandler": [
+                    "if(!record.get('pordid')){",
+                    "    Ext.toast('电梯注册码为空</br></br>无法查看相关电梯档案');",
+                    "    return;",
+                    "}",
+                    "viewUtil.goNext('Engineer.EngMonitorElevatorInfo',{prono:record.get('pordid')});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngMaintainContractDetail_ElevatorListItemTap",
+            "designerId": "72a97e87-1c2b-4e44-b149-f9c7c3b96e35"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngContractQuery_Staus",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngContractQuery_StausTap",
+                "implHandler": [
+                    "//保养合同-类别筛选按钮",
+                    "",
+                    "popMenu.show('Engineer.EngMaintainContractStatus', button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngContractQuery_StausTap",
+            "designerId": "ebfc4a75-96a7-4b53-8d57-36f77f7faf22"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "datepickerfield#EngContractQuery_date1",
+                "designer|params": [
+                    "datepickerfield",
+                    "newDate",
+                    "oldDate",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.DatePicker",
+                "fn": "onEngContractQuery_date1Change",
+                "implHandler": [
+                    "// var me = this;",
+                    "// var start = Date.parse(newDate);",
+                    "// var end = Date.parse(Ext.getCmp('EngContractQuery_date2').getValue());",
+                    "// if(start>end){",
+                    "//     datepickerfield.setValue(oldDate);",
+                    "//     Ext.toast('请选择正确的日期区间');",
+                    "//     return;",
+                    "// }",
+                    "if(this.doEngContract_JudgeDate(datepickerfield,oldDate,newDate,Ext.getCmp('EngContractQuery_date2').getValue())){",
+                    "    this.doEngContractQuery_Search(Ext.getCmp('EngContractQuery_Staus'));",
+                    "}",
+                    "// this.doEngContractQuery_Search(Ext.getCmp('EngContractQuery_Staus'));"
+                ],
+                "name": "change"
+            },
+            "name": "onEngContractQuery_date1Change",
+            "designerId": "30f73d64-556a-4dd6-8aa4-71e476a83ab1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "datepickerfield#EngContractQuery_date2",
+                "designer|params": [
+                    "datepickerfield",
+                    "newDate",
+                    "oldDate",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.DatePicker",
+                "fn": "onEngContractQuery_date2Change",
+                "implHandler": [
+                    "// var me = this;",
+                    "// var start = Date.parse(Ext.getCmp('EngContractQuery_date1').getValue());",
+                    "// var end = Date.parse(newDate);",
+                    "// if(start>end){",
+                    "//     datepickerfield.setValue(oldDate);",
+                    "//     Ext.toast('请选择正确的日期区间');",
+                    "//     return;",
+                    "// }",
+                    "if(this.doEngContract_JudgeDate(datepickerfield,oldDate,Ext.getCmp('EngContractQuery_date1').getValue(),newDate)){",
+                    "    this.doEngContractQuery_Search(Ext.getCmp('EngContractQuery_Staus'));",
+                    "}",
+                    "// this.doEngContractQuery_Search(Ext.getCmp('EngContractQuery_Staus'));"
+                ],
+                "name": "change"
+            },
+            "name": "onEngContractQuery_date2Change",
+            "designerId": "0f7da070-12b8-4cd2-a5de-b2b1eac91cc5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMaintainContractStatus_0",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMaintainContractStatus_0Tap",
+                "implHandler": [
+                    "",
+                    "this.doEngContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMaintainContractStatus_0Tap",
+            "designerId": "6db3ee77-6e08-4408-844e-2133d117591a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMaintainContractStatus_1",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMaintainContractStatus_1Tap",
+                "implHandler": [
+                    "this.doEngContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMaintainContractStatus_1Tap",
+            "designerId": "8ffcb7d1-e7c0-4cc8-96eb-3b43e104c733"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMaintainContractStatus_2",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMaintainContractStatus_2Tap",
+                "implHandler": [
+                    "this.doEngContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMaintainContractStatus_2Tap",
+            "designerId": "10176eee-9e76-4cd2-ad90-43c2e4ba9119"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMaintainContractStatus_3",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMaintainContractStatus_3Tap",
+                "implHandler": [
+                    "this.doEngContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMaintainContractStatus_3Tap",
+            "designerId": "5f19a333-4fd6-4128-8146-c2230fab1e30"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMaintainContractStatus_4",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMaintainContractStatus_4Tap",
+                "implHandler": [
+                    "this.doEngContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMaintainContractStatus_4Tap",
+            "designerId": "6dabd266-e631-4b16-9cb1-7701c60dc2f6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMaintainContractStatus_5",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMaintainContractStatus_5Tap",
+                "implHandler": [
+                    "this.doEngContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMaintainContractStatus_5Tap",
+            "designerId": "69ff29bb-6023-4261-8487-9a4a9b25eb3c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMaintainContractStatus_6",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMaintainContractStatus_6Tap",
+                "implHandler": [
+                    "this.doEngContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMaintainContractStatus_6Tap",
+            "designerId": "9840c896-d4a5-4f74-8109-2ef57dc2550c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngInsureContractQuery_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngInsureContractQuery_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngInsureContractQuery_BtnReturnTap",
+            "designerId": "e9f85827-091e-46b2-a11f-862778cd7a4d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngInsureContractQuery",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngInsureContractQueryInitialize",
+                "implHandler": [
+                    "var me = this;",
+                    "var insureContractQueryList = Ext.getCmp('EngInsureContractQuery_List');",
+                    "insureContractQueryList.getStore().removeAll();",
+                    "",
+                    "curPage = 0;//全局变量",
+                    "pagesize = 20;",
+                    "//获取流程状态",
+                    "getStatus = {",
+                    "    '全部':'%',",
+                    "    '新建':'0',",
+                    "    '待审':'1',",
+                    "    '审批中':'2',",
+                    "    '通过':'3',",
+                    "    '不通过':'4',",
+                    "    '作废':'5'",
+                    "};",
+                    "",
+                    "insureContractQueryList.setPlugins(",
+                    "    [",
+                    "        {",
+                    "            autoSnapBack: false,",
+                    "            lastUpdatedText: '上次刷新:&nbsp;',",
+                    "            loadedText: '已刷新',",
+                    "            loadingText: '正在刷新保险合同...',",
+                    "            pullText: '下拉刷新...',",
+                    "            releaseText: '放开开始刷新...',",
+                    "            type: 'pullrefresh',",
+                    "            listeners : {",
+                    "                latestfetched : function() {",
+                    "                    me.doEngInsureContractQuery_Search(",
+                    "                    Ext.getCmp('EngInsureContractQuery_Staus'));",
+                    "                }",
+                    "            }",
+                    "        }",
+                    "    ]",
+                    ");",
+                    "",
+                    "//监听滑动结束事件",
+                    "var scroller = insureContractQueryList.getScrollable().getScroller();",
+                    "scroller.on('scrollend',function(scroll, x, y, eOpts){",
+                    "    if(curPage===0){",
+                    "        return;",
+                    "    }",
+                    "    //滑动到底部加载更多",
+                    "    if(y+scroller.getContainerSize().y==scroller.getSize().y){",
+                    "//         loadMask.show();",
+                    "        var scrollparm = {",
+                    "            scroller:scroller,",
+                    "            x:x,",
+                    "            y:y+100//Item的高度",
+                    "        };",
+                    "        if(!Ext.getCmp('EngInsureContractQuery_Search')){",
+                    "            loadMask.hide();",
+                    "            return;",
+                    "        }",
+                    "        var searchkeyParm = {",
+                    "            //关键字",
+                    "            searchkey:Ext.getCmp('EngInsureContractQuery_Search').getValue(),",
+                    "            //保养开始日期",
+                    "            startdate:",
+                    "                Ext.getCmp('EngInsureContractQuery_date1').getValue()===null?'1980-01-01':",
+                    "                Ext.Date.format(Ext.getCmp('EngInsureContractQuery_date1').getValue(),'Y-m-d'),",
+                    "            //保养结束日期",
+                    "            enddate:",
+                    "                Ext.getCmp('EngInsureContractQuery_date2').getValue()===null?'2200-01-01':",
+                    "                Ext.Date.format(Ext.getCmp('EngInsureContractQuery_date2').getValue(),'Y-m-d'),",
+                    "            //流程状态",
+                    "            flowstatus:",
+                    "                getStatus[Ext.getCmp('EngInsureContractQuery_Staus').getText()]",
+                    "        };",
+                    "        console.log(searchkeyParm);",
+                    "//         me.doEngInsureContractQuery_LoadInsureContract(",
+                    "        me.doEngContract_LoadData(",
+                    "            'EngInsureContractQuery_List',",
+                    "            ++curPage,",
+                    "            pagesize,",
+                    "            searchkeyParm,",
+                    "            'loadmore',",
+                    "            scrollparm",
+                    "        );",
+                    "    }",
+                    "});"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngInsureContractQueryInitialize",
+            "designerId": "d29485d5-c8fa-451d-9ce7-d3e615f6db7d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngInsureContractQuery_Search",
+                "designer|params": [
+                    "textfield",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngInsureContractQuery_SearchChange",
+                "implHandler": [
+                    "this.doEngInsureContractQuery_Search(Ext.getCmp('EngInsureContractQuery_Staus'));"
+                ],
+                "name": "change"
+            },
+            "name": "onEngInsureContractQuery_SearchChange",
+            "designerId": "f76d0f06-91ed-47d2-9f0d-dea785142891"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngInsureContractQuery_Staus",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngInsureContractQuery_StausTap",
+                "implHandler": [
+                    "//保险合同-状态筛选按钮",
+                    "",
+                    "popMenu.show('Engineer.EngInsureContractStatus', button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngInsureContractQuery_StausTap",
+            "designerId": "c5d5dfb8-659c-4f90-9a14-7006901ea454"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "datepickerfield#EngInsureContractQuery_date1",
+                "designer|params": [
+                    "datepickerfield",
+                    "newDate",
+                    "oldDate",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.DatePicker",
+                "fn": "onEngInsureContractQuery_date1Change",
+                "implHandler": [
+                    "// var me = this;",
+                    "// var start = Date.parse(newDate);",
+                    "// var end = Date.parse(Ext.getCmp('EngInsureContractQuery_date2').getValue());",
+                    "// if(start>end){",
+                    "//     datepickerfield.setValue(oldDate);",
+                    "//     Ext.toast('请选择正确的日期区间');",
+                    "//     return;",
+                    "// }",
+                    "if(this.doEngContract_JudgeDate(datepickerfield,oldDate,newDate,Ext.getCmp('EngInsureContractQuery_date2').getValue())){",
+                    "    this.doEngInsureContractQuery_Search(Ext.getCmp('EngInsureContractQuery_Staus'));",
+                    "}",
+                    "",
+                    "// this.doEngInsureContractQuery_Search(Ext.getCmp('EngInsureContractQuery_Staus'));"
+                ],
+                "name": "change"
+            },
+            "name": "onEngInsureContractQuery_date1Change",
+            "designerId": "78d5e465-25b5-440d-9bf0-7e3a6d323330"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "datepickerfield#EngInsureContractQuery_date2",
+                "designer|params": [
+                    "datepickerfield",
+                    "newDate",
+                    "oldDate",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.DatePicker",
+                "fn": "onEngInsureContractQuery_date2Change",
+                "implHandler": [
+                    "// var me = this;",
+                    "// var start = Date.parse(Ext.getCmp('EngInsureContractQuery_date1').getValue());",
+                    "// var end = Date.parse(newDate);",
+                    "// if(start>end){",
+                    "//     datepickerfield.setValue(oldDate);",
+                    "//     Ext.toast('请选择正确的日期区间');",
+                    "//     return;",
+                    "// }",
+                    "if(this.doEngContract_JudgeDate(datepickerfield,oldDate,Ext.getCmp('EngInsureContractQuery_date1').getValue(),newDate)){",
+                    "    this.doEngInsureContractQuery_Search(Ext.getCmp('EngInsureContractQuery_Staus'));",
+                    "}",
+                    "// this.doEngInsureContractQuery_Search(Ext.getCmp('EngInsureContractQuery_Staus'));"
+                ],
+                "name": "change"
+            },
+            "name": "onEngInsureContractQuery_date2Change",
+            "designerId": "039dc3c8-35c8-43f0-8d0e-7144b0d65eec"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngInsureContractQuery_List",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngInsureContractQuery_ListItemTap",
+                "implHandler": [
+                    "//保险合同",
+                    "viewUtil.goNext('Engineer.EngInsureContractDetail',{record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngInsureContractQuery_ListItemTap",
+            "designerId": "6e80fb5f-dda1-471a-b0ce-d5d98252bb36"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngInsureContractStatus_0",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngInsureContractStatus_0Tap",
+                "implHandler": [
+                    "",
+                    "this.doEngInsureContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngInsureContractStatus_0Tap",
+            "designerId": "805cf147-2c11-4e94-b48f-5c8957f4e80d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngInsureContractStatus_1",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngInsureContractStatus_1Tap",
+                "implHandler": [
+                    "this.doEngInsureContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngInsureContractStatus_1Tap",
+            "designerId": "b4f5a252-b4e8-41b1-958b-91068762f374"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngInsureContractStatus_2",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngInsureContractStatus_2Tap",
+                "implHandler": [
+                    "this.doEngInsureContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngInsureContractStatus_2Tap",
+            "designerId": "8929cca9-c2bc-405f-ac19-1b5271f822c0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngInsureContractStatus_3",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngInsureContractStatus_3Tap",
+                "implHandler": [
+                    "this.doEngInsureContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngInsureContractStatus_3Tap",
+            "designerId": "5a709fba-bbf7-4536-9200-41069274ef5c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngInsureContractStatus_4",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngInsureContractStatus_4Tap",
+                "implHandler": [
+                    "this.doEngInsureContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngInsureContractStatus_4Tap",
+            "designerId": "0a0b83bb-5568-4b6b-b445-c6f81e2a174a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngInsureContractStatus_5",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngInsureContractStatus_5Tap",
+                "implHandler": [
+                    "this.doEngInsureContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngInsureContractStatus_5Tap",
+            "designerId": "32c683c5-9195-4d34-bb2d-b935f102685d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngInsureContractStatus_6",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngInsureContractStatus_6Tap",
+                "implHandler": [
+                    "this.doEngInsureContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngInsureContractStatus_6Tap",
+            "designerId": "5dc89e9c-1a87-4d13-a602-144eb5855147"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "doEngInsureContractQuery_Search",
+                "implHandler": [
+                    "//搜索数据",
+                    "if(button != Ext.getCmp('EngInsureContractQuery_Staus')){",
+                    "    popMenu.getShowBy().setText(button.getText());",
+                    "    popMenu.hide();",
+                    "}",
+                    "var searchkeyParm = {",
+                    "    //关键字",
+                    "    searchkey : Ext.getCmp('EngInsureContractQuery_Search').getValue(),",
+                    "    //保养开始日期",
+                    "    startdate:",
+                    "            Ext.getCmp('EngInsureContractQuery_date1').getValue()===null?'1980-01-01':",
+                    "            Ext.Date.format(Ext.getCmp('EngInsureContractQuery_date1').getValue(),'Y-m-d'),",
+                    "    //保养结束日期",
+                    "    enddate:",
+                    "            Ext.getCmp('EngInsureContractQuery_date2').getValue()===null?'2200-01-01':",
+                    "            Ext.Date.format(Ext.getCmp('EngInsureContractQuery_date2').getValue(),'Y-m-d'),",
+                    "    //流程状态",
+                    "    flowstatus:",
+                    "        getStatus[Ext.getCmp('EngInsureContractQuery_Staus').getText()]",
+                    "};",
+                    "console.log(searchkeyParm);",
+                    "this.doEngContract_LoadData('EngInsureContractQuery_List',",
+                    "                           1,pagesize,searchkeyParm,'search');",
+                    "// this.doEngInsureContractQuery_LoadInsureContract(1,pagesize,searchkeyParm,'search');"
+                ]
+            },
+            "name": "doEngInsureContractQuery_Search",
+            "designerId": "297df350-8b35-49c7-837e-04841848bdb9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "page",
+                    "pagesize",
+                    "searchkeyParm",
+                    "action",
+                    "scrollparm"
+                ],
+                "fn": "doEngInsureContractQuery_LoadInsureContract",
+                "implHandler": [
+                    "loadMask.show();",
+                    "var me = this;",
+                    "Ext.getCmp('EngInsureContractQuery_List').getStore().loadDat(",
+                    "    function(ret,resetCurPage){",
+                    "        if(scrollparm){",
+                    "            scrollparm.scroller.scrollTo(scrollparm.x,scrollparm.y);",
+                    "        }",
+                    "        if(resetCurPage){",
+                    "            curPage = 1;//获取新数据成功，页数重置为1",
+                    "        }",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    function(info,cutOne){",
+                    "        Ext.toast(info);",
+                    "        if(cutOne){",
+                    "            curPage--;//加载更多数据失败，页数减一",
+                    "        }",
+                    "        if(info==='没有更多数据！'){",
+                    "            curPage = 0;//没有更多数据的时候重置页数为0，不触发上拉事件",
+                    "        }",
+                    "        loadMask.hide();",
+                    "",
+                    "    },",
+                    "    {",
+                    "        curpagenum:page,",
+                    "        pagesize:pagesize,",
+                    "        searchkey:searchkeyParm.searchkey || '',",
+                    "        flowstatus:searchkeyParm.flowstatus || '%',",
+                    "        startdate:searchkeyParm.startdate,",
+                    "        enddate:searchkeyParm.enddate",
+                    "    },",
+                    "    action",
+                    ");"
+                ]
+            },
+            "name": "doEngInsureContractQuery_LoadInsureContract",
+            "designerId": "24f63830-faa6-4315-8ae4-cfb827a58d87"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngInsureContractDetail",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngInsureContractDetailInitialize",
+                "implHandler": [
+                    "var me = this;",
+                    "var record = component.initialConfig.parm.record;",
+                    "var insurancejnlno = record.get('insurancejnlno');",
+                    "var parm = {insurancejnlno:insurancejnlno};",
+                    "loadMask.show();",
+                    "// 获取保险合同详细信息（合同，关联合同，电梯）",
+                    "var insureStore = dataUtil.createStore('eng_insurecontract');",
+                    "insureStore.loadDat(",
+                    "    function(ret){",
+                    "        //保险合同",
+                    "        Ext.getCmp('EngInsureContractDetail_Contract')",
+                    "            .setRecord(insureStore.getAt(0));",
+                    "        //合同信息",
+                    "        Ext.getCmp('EngInsureContractDetail_Info').getStore()",
+                    "            .setData(ret[0].htdetaillist);",
+                    "        //电梯信息",
+                    "        Ext.getCmp('EngInsureContractDetail_ElevatorList').getStore()",
+                    "            .setData(ret[0].liftinfo);",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    parm",
+                    ");"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngInsureContractDetailInitialize",
+            "designerId": "a241082d-5aad-4b35-a3e4-3b3b2b1e5363"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngInsureContractDetail_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngInsureContractDetail_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngInsureContractDetail_BtnReturnTap",
+            "designerId": "63cec7b1-ad1e-49ff-a273-1a38146bace8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngInsureContractDetail_ElevatorList",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngInsureContractDetail_ElevatorListItemTap",
+                "implHandler": [
+                    "if(!record.get('prodno')){",
+                    "    Ext.toast('电梯注册码为空</br></br>无法查看相关电梯档案');",
+                    "    return;",
+                    "}",
+                    "viewUtil.goNext('Engineer.EngMonitorElevatorInfo',{prono:record.get('prodno')});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngInsureContractDetail_ElevatorListItemTap",
+            "designerId": "eeaa6005-09ee-43fe-b20a-aa9ba03e4095"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngRepairContractQuery",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngRepairContractQueryInitialize",
+                "implHandler": [
+                    "var me = this;",
+                    "var repairContractQueryList = Ext.getCmp('EngRepairContractQuery_List');",
+                    "repairContractQueryList.getStore().removeAll();",
+                    "",
+                    "curPage = 0;//全局变量",
+                    "pagesize = 20;",
+                    "//获取流程状态",
+                    "getStatus = {",
+                    "    '全部':'%',",
+                    "    '新建':'0',",
+                    "    '待审':'1',",
+                    "    '审批中':'2',",
+                    "    '通过':'3',",
+                    "    '不通过':'4',",
+                    "    '作废':'5'",
+                    "};",
+                    "",
+                    "repairContractQueryList.setPlugins(",
+                    "    [",
+                    "        {",
+                    "            autoSnapBack: false,",
+                    "            lastUpdatedText: '上次刷新:&nbsp;',",
+                    "            loadedText: '已刷新',",
+                    "            loadingText: '正在刷新维修合同...',",
+                    "            pullText: '下拉刷新...',",
+                    "            releaseText: '放开开始刷新...',",
+                    "            type: 'pullrefresh',",
+                    "            listeners : {",
+                    "                latestfetched : function() {",
+                    "                    me.doEngRepairContractQuery_Search(",
+                    "                    Ext.getCmp('EngRepairContractQuery_Staus'));",
+                    "                }",
+                    "            }",
+                    "        }",
+                    "    ]",
+                    ");",
+                    "",
+                    "//监听滑动结束事件",
+                    "var scroller = repairContractQueryList.getScrollable().getScroller();",
+                    "scroller.on('scrollend',function(scroll, x, y, eOpts){",
+                    "    if(curPage===0){",
+                    "        return;",
+                    "    }",
+                    "    //滑动到底部加载更多",
+                    "    if(y+scroller.getContainerSize().y==scroller.getSize().y){",
+                    "//         loadMask.show();",
+                    "        var scrollparm = {",
+                    "            scroller:scroller,",
+                    "            x:x,",
+                    "            y:y+100//Item的高度",
+                    "        };",
+                    "        if(!Ext.getCmp('EngRepairContractQuery_Search')){",
+                    "            loadMask.hide();",
+                    "            return;",
+                    "        }",
+                    "        var searchkeyParm = {",
+                    "            //关键字",
+                    "            searchkey:Ext.getCmp('EngRepairContractQuery_Search').getValue(),",
+                    "            //保养开始日期",
+                    "            startdate:",
+                    "                Ext.getCmp('EngRepairContractQuery_date1').getValue()===null?'1980-01-01':",
+                    "                Ext.Date.format(Ext.getCmp('EngRepairContractQuery_date1').getValue(),'Y-m-d'),",
+                    "            //保养结束日期",
+                    "            enddate:",
+                    "                Ext.getCmp('EngRepairContractQuery_date2').getValue()===null?'2200-01-01':",
+                    "                Ext.Date.format(Ext.getCmp('EngRepairContractQuery_date2').getValue(),'Y-m-d'),",
+                    "            //流程状态",
+                    "            flowstatus:",
+                    "                getStatus[Ext.getCmp('EngRepairContractQuery_Staus').getText()]",
+                    "        };",
+                    "        console.log(searchkeyParm);",
+                    "//         me.doEngRepairContractQuery_LoadRepairContract(",
+                    "        me.doEngContract_LoadData(",
+                    "            'EngRepairContractQuery_List',",
+                    "            ++curPage,",
+                    "            pagesize,",
+                    "            searchkeyParm,",
+                    "            'loadmore',",
+                    "            scrollparm",
+                    "        );",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngRepairContractQueryInitialize",
+            "designerId": "887d0fb7-9414-434d-b150-83f2e07db446"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "doEngRepairContractQuery_Search",
+                "implHandler": [
+                    "//搜索数据",
+                    "if(button != Ext.getCmp('EngRepairContractQuery_Staus')){",
+                    "    popMenu.getShowBy().setText(button.getText());",
+                    "    popMenu.hide();",
+                    "}",
+                    "var searchkeyParm = {",
+                    "    //关键字",
+                    "    searchkey : Ext.getCmp('EngRepairContractQuery_Search').getValue(),",
+                    "    //保养开始日期",
+                    "    startdate:",
+                    "            Ext.getCmp('EngRepairContractQuery_date1').getValue()===null?'1980-01-01':",
+                    "            Ext.Date.format(Ext.getCmp('EngRepairContractQuery_date1').getValue(),'Y-m-d'),",
+                    "    //保养结束日期",
+                    "    enddate:",
+                    "            Ext.getCmp('EngRepairContractQuery_date2').getValue()===null?'2200-01-01':",
+                    "            Ext.Date.format(Ext.getCmp('EngRepairContractQuery_date2').getValue(),'Y-m-d'),",
+                    "    //流程状态",
+                    "    flowstatus:",
+                    "        getStatus[Ext.getCmp('EngRepairContractQuery_Staus').getText()]",
+                    "};",
+                    "console.log(searchkeyParm);",
+                    "// this.doEngRepairContractQuery_LoadRepairContract(1,pagesize,searchkeyParm,'search');",
+                    "",
+                    "this.doEngContract_LoadData('EngRepairContractQuery_List',1,pagesize,searchkeyParm,'search');"
+                ]
+            },
+            "name": "doEngRepairContractQuery_Search",
+            "designerId": "892c7592-d03c-41f4-86f6-55956a5b1424"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "page",
+                    "pagesize",
+                    "searchkeyParm",
+                    "action",
+                    "scrollparm"
+                ],
+                "fn": "doEngRepairContractQuery_LoadRepairContract",
+                "implHandler": [
+                    "loadMask.show();",
+                    "var me = this;",
+                    "Ext.getCmp('EngRepairContractQuery_List').getStore().loadDat(",
+                    "    function(ret,resetCurPage){",
+                    "        if(scrollparm){",
+                    "            scrollparm.scroller.scrollTo(scrollparm.x,scrollparm.y);",
+                    "        }",
+                    "        if(resetCurPage){",
+                    "            curPage = 1;//获取新数据成功，页数重置为1",
+                    "        }",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    function(info,cutOne){",
+                    "        Ext.toast(info);",
+                    "        if(cutOne){",
+                    "            curPage--;//加载更多数据失败，页数减一",
+                    "        }",
+                    "        if(info==='没有更多数据！'){",
+                    "            curPage = 0;//没有更多数据的时候重置页数为0，不触发上拉事件",
+                    "        }",
+                    "        loadMask.hide();",
+                    "",
+                    "    },",
+                    "    {",
+                    "        curpagenum:page,",
+                    "        pagesize:pagesize,",
+                    "        searchkey:searchkeyParm.searchkey || '',",
+                    "        flowstatus:searchkeyParm.flowstatus || '%',",
+                    "        startdate:searchkeyParm.startdate,",
+                    "        enddate:searchkeyParm.enddate",
+                    "    },",
+                    "    action",
+                    ");"
+                ]
+            },
+            "name": "doEngRepairContractQuery_LoadRepairContract",
+            "designerId": "c56c878c-5c49-4ad2-9c00-a087278f73af"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngRepairContractQuery_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngRepairContractQuery_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngRepairContractQuery_BtnReturnTap",
+            "designerId": "bc85b88f-2fc7-46b7-894d-17322542a77f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngRepairContractQuery_Search",
+                "designer|params": [
+                    "textfield",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngRepairContractQuery_SearchChange",
+                "implHandler": [
+                    "this.doEngRepairContractQuery_Search(Ext.getCmp('EngRepairContractQuery_Staus'));"
+                ],
+                "name": "change"
+            },
+            "name": "onEngRepairContractQuery_SearchChange",
+            "designerId": "a3e0a2ac-43b9-47d1-a83a-234df381e95f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngRepairContractQuery_Staus",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngRepairContractQuery_StausTap",
+                "implHandler": [
+                    "//维修合同-状态筛选按钮",
+                    "popMenu.show('Engineer.EngRepairContractStatus', button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngRepairContractQuery_StausTap",
+            "designerId": "5ac7c8c7-5305-493e-af86-3a455a614aa4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "datepickerfield#EngRepairContractQuery_date1",
+                "designer|params": [
+                    "datepickerfield",
+                    "newDate",
+                    "oldDate",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.DatePicker",
+                "fn": "onEngRepairContractQuery_date1Change",
+                "implHandler": [
+                    "// var me = this;",
+                    "// var start = Date.parse(newDate);",
+                    "// var end = Date.parse(Ext.getCmp('EngRepairContractQuery_date2').getValue());",
+                    "// if(start>end){",
+                    "//     datepickerfield.setValue(oldDate);",
+                    "//     Ext.toast('请选择正确的日期区间');",
+                    "//     return;",
+                    "// }",
+                    "if(this.doEngContract_JudgeDate(datepickerfield,oldDate,newDate,Ext.getCmp('EngRepairContractQuery_date2').getValue())){",
+                    "    this.doEngRepairContractQuery_Search(Ext.getCmp('EngRepairContractQuery_Staus'));",
+                    "}",
+                    ""
+                ],
+                "name": "change"
+            },
+            "name": "onEngRepairContractQuery_date1Change",
+            "designerId": "99d71845-b5f6-4044-bbfe-695184f869d6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "datepickerfield#EngRepairContractQuery_date2",
+                "designer|params": [
+                    "datepickerfield",
+                    "newDate",
+                    "oldDate",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.DatePicker",
+                "fn": "onEngRepairContractQuery_date2Change",
+                "implHandler": [
+                    "// var me = this;",
+                    "// var start = Date.parse(Ext.getCmp('EngRepairContractQuery_date1').getValue());",
+                    "// var end = Date.parse(newDate);",
+                    "// if(start>end){",
+                    "//     datepickerfield.setValue(oldDate);",
+                    "//     Ext.toast('请选择正确的日期区间');",
+                    "//     return;",
+                    "// }",
+                    "if(this.doEngContract_JudgeDate(datepickerfield,oldDate,Ext.getCmp('EngRepairContractQuery_date1').getValue(),newDate)){",
+                    "    this.doEngRepairContractQuery_Search(Ext.getCmp('EngRepairContractQuery_Staus'));",
+                    "}",
+                    "// this.doEngRepairContractQuery_Search(Ext.getCmp('EngRepairContractQuery_Staus'));"
+                ],
+                "name": "change"
+            },
+            "name": "onEngRepairContractQuery_date2Change",
+            "designerId": "7b41bb00-4658-49fb-80b9-841743441d12"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngRepairContractStatus_0",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngRepairContractStatus_0Tap",
+                "implHandler": [
+                    "",
+                    "this.doEngRepairContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngRepairContractStatus_0Tap",
+            "designerId": "cf6694d1-ce5b-4baa-8d8b-a1ac690cf29a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngRepairContractStatus_1",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngRepairContractStatus_1Tap",
+                "implHandler": [
+                    "this.doEngRepairContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngRepairContractStatus_1Tap",
+            "designerId": "768a8b2c-1040-4ebc-9c07-d5920167c696"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngRepairContractStatus_2",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngRepairContractStatus_2Tap",
+                "implHandler": [
+                    "this.doEngRepairContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngRepairContractStatus_2Tap",
+            "designerId": "7992709f-b489-46c6-935d-33e2b4f07022"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngRepairContractStatus_3",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngRepairContractStatus_3Tap",
+                "implHandler": [
+                    "this.doEngRepairContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngRepairContractStatus_3Tap",
+            "designerId": "f4180132-f522-4d1a-ba12-bbf00eb4732c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngRepairContractStatus_4",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngRepairContractStatus_4Tap",
+                "implHandler": [
+                    "this.doEngRepairContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngRepairContractStatus_4Tap",
+            "designerId": "27184144-1432-4782-a008-788eb5a239a6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngRepairContractStatus_5",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngRepairContractStatus_5Tap",
+                "implHandler": [
+                    "this.doEngRepairContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngRepairContractStatus_5Tap",
+            "designerId": "286f550a-e423-4085-a739-d02c51c09277"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngRepairContractStatus_6",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngRepairContractStatus_6Tap",
+                "implHandler": [
+                    "this.doEngRepairContractQuery_Search(button);"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngRepairContractStatus_6Tap",
+            "designerId": "f736dbb8-e838-4f7b-9dda-b232d6cb1244"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngRepairContractQuery_List",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngRepairContractQuery_ListItemTap",
+                "implHandler": [
+                    "viewUtil.goNext('Engineer.EngRepairContractDetail',{record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngRepairContractQuery_ListItemTap",
+            "designerId": "eb66e820-24e5-46b9-a105-3d49f83a4133"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngRepairContractDetail",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngRepairContractDetailInitialize",
+                "implHandler": [
+                    "var me = this;",
+                    "var record = component.initialConfig.parm.record;",
+                    "var wxhtbh = record.get('wxhtbh');",
+                    "var parm = {billno:wxhtbh};",
+                    "loadMask.show();",
+                    "// 获取维修合同详细信息（合同，关联合同，电梯）",
+                    "var repairStore = dataUtil.createStore('eng_repaircontract');",
+                    "repairStore.loadDat(",
+                    "    function(ret){",
+                    "        //合同",
+                    "        Ext.getCmp('EngRepairContractDetail_Contract')",
+                    "            .setRecord(repairStore.getAt(0));",
+                    "        //电梯",
+                    "        Ext.getCmp('EngRepairContractDetail_ElevatorList').getStore()",
+                    "            .setData(ret[0].liftinfo);",
+                    "        //人工费用",
+                    "        Ext.getCmp('EngRepairContractDetail_Money').getStore()",
+                    "            .setData(ret[0].rgfy);",
+                    "        //付款方式",
+                    "        Ext.getCmp('EngRepairContractDetail_Pay').getStore()",
+                    "            .setData(ret[0].fkfs);",
+                    "        //更换材料",
+                    "        Ext.getCmp('EngRepairContractDetail_Material').getStore()",
+                    "            .setData(ret[0].ghcl);",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    parm",
+                    ");"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngRepairContractDetailInitialize",
+            "designerId": "2edba51c-fabc-4f07-8016-178166d2bbce"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngRepairContractDetail_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngRepairContractDetail_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngRepairContractDetail_BtnReturnTap",
+            "designerId": "034f1b69-33ce-45fd-bba4-ed68d9d3d510"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngRepairContractDetail_ElevatorList",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngRepairContractDetail_ElevatorListItemTap",
+                "implHandler": [
+                    "if(!record.get('dtzcm')){",
+                    "    Ext.toast('电梯注册码为空</br></br>无法查看相关电梯档案');",
+                    "    return;",
+                    "}",
+                    "viewUtil.goNext('Engineer.EngMonitorElevatorInfo',{prono:record.get('dtzcm')});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngRepairContractDetail_ElevatorListItemTap",
+            "designerId": "6e599fb8-7d3c-419b-a3e4-c987af9a8589"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "datepickerfield",
+                    "oldDate",
+                    "date1",
+                    "date2"
+                ],
+                "fn": "doEngContract_JudgeDate",
+                "implHandler": [
+                    "var me = this;",
+                    "var start = Date.parse(date1);",
+                    "var end = Date.parse(date2);",
+                    "if(start>end){",
+                    "    datepickerfield.setValue(oldDate);",
+                    "    Ext.toast('请选择正确的日期区间');",
+                    "    return false;",
+                    "}",
+                    "return true;"
+                ]
+            },
+            "name": "doEngContract_JudgeDate",
+            "designerId": "95ce7152-2781-4995-9d16-b4a25bef54e1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "listId",
+                    "page",
+                    "pagesize",
+                    "searchkeyParm",
+                    "action",
+                    "scrollparm"
+                ],
+                "fn": "doEngContract_LoadData",
+                "implHandler": [
+                    "loadMask.show();",
+                    "var me = this;",
+                    "Ext.getCmp(listId).getStore().loadDat(",
+                    "    function(ret,resetCurPage){",
+                    "        if(scrollparm){",
+                    "            scrollparm.scroller.scrollTo(scrollparm.x,scrollparm.y);",
+                    "        }",
+                    "        if(resetCurPage){",
+                    "            curPage = 1;//获取新数据(首次加载、刷新、搜索)成功，页数重置为1",
+                    "        }",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    function(info,cutOne){",
+                    "        if(cutOne){",
+                    "            curPage--;//加载更多数据失败，页数减一",
+                    "        }",
+                    "        if(info==='没有更多数据！'){",
+                    "            curPage = 0;//没有更多数据的时候重置页数为0，不再触发上拉事件",
+                    "        }",
+                    "        loadMask.hide();",
+                    "        Ext.toast(info);",
+                    "",
+                    "    },",
+                    "    {",
+                    "        curpagenum:page,",
+                    "        pagesize:pagesize,",
+                    "        searchkey:searchkeyParm.searchkey || '',",
+                    "        flowstatus:searchkeyParm.flowstatus || '%',",
+                    "        startdate:searchkeyParm.startdate,",
+                    "        enddate:searchkeyParm.enddate",
+                    "    },",
+                    "    action",
+                    ");"
+                ]
+            },
+            "name": "doEngContract_LoadData",
+            "designerId": "d15b0d7a-d94c-40a7-ae20-0c035f62623d"
+        }
+    ]
+}

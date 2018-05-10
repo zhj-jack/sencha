@@ -1,0 +1,84 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_elevatorfile_cl",
+        "storeId": "eng_elevatorfile_cl"
+    },
+    "name": "MyStore",
+    "designerId": "3e89d137-ecca-4b75-8526-94a6cec44d1f",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "name": "field629",
+            "designerId": "32bed836-a099-484d-880d-ce84727da8b3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prono"
+            },
+            "name": "field630",
+            "designerId": "3590074b-e2ef-4a9f-99d9-41563c952de7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    "var me = this;",
+                    "console.log('调用电梯删除接口：');",
+                    "console.log(parm);",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/common/api/1.0/deleteliftinfo';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code===200) {",
+                    "                onSuccess(ret.data[0].info);",
+                    "            } else {",
+                    "                console.log(ret.status.info);",
+                    "                onFailure(ret.status.info);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('(未知)');",
+                    "        }",
+                    "    );",
+                    "} else {",
+                    "    onSuccess('删除电梯('+parm.prono+')成功!');",
+                    "}"
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "2ca17f42-5aa8-4924-9723-797702c99b6b"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_xw4kvdx2",
+        "url": "resources/css/liftnet.css"
+    },
+    "name": "css",
+    "designerId": "985217af-36a8-4763-b6fe-b0705d85f996"
+}

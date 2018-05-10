@@ -1,0 +1,81 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "cu_linkerlist",
+        "storeId": "cu_linkerlist"
+    },
+    "name": "MyStore",
+    "designerId": "28e6b556-a503-423a-bfed-62769587b88c",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractman"
+            },
+            "name": "field854",
+            "designerId": "0668c125-8581-47d4-a264-b4f133cd5298"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mbphone"
+            },
+            "name": "field855",
+            "designerId": "97dde58f-6556-493b-8c9a-a7f0e532735f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ob1"
+            },
+            "name": "field856",
+            "designerId": "a2ed352b-5071-40c3-a60b-fbe9f7ad38f3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "othercontact"
+            },
+            "name": "field857",
+            "designerId": "f4e6061b-aa59-4ca6-a152-7cddfe533d86"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "remail"
+            },
+            "name": "field858",
+            "designerId": "8b90c3fa-c021-4db9-a78d-8ffcbf38de5a"
+        }
+    ]
+}

@@ -1,0 +1,363 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmHomeController"
+    },
+    "name": "MyController",
+    "designerId": "c33a6f3a-df85-4483-ae44-963ba0118185",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "********** 管理首页 **********",
+                    "",
+                    "初始化"
+                ],
+                "designer|controlQuery": "tabpanel#AdmHome",
+                "designer|targetType": "Ext.tab.Panel",
+                "fn": "onAdmHomeInitialize",
+                "implHandler": [
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onAdmHomeInitialize",
+            "designerId": "8d1179b4-7e86-42f4-9ea4-054291f01734"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "tabpanel#AdmHome",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.tab.Panel",
+                "fn": "onAdmHomeShow",
+                "implHandler": [
+                    "if(component.getActiveItem().getId()!=='AdmHome_Home') {",
+                    "    return;",
+                    "}",
+                    "this.doAdmHome_RefreshInformation();",
+                    "this.doAdmHome_RefreshCharts();",
+                    "this.doAdmHome_RefreshToDo();",
+                    ""
+                ],
+                "name": "show"
+            },
+            "name": "onAdmHomeShow",
+            "designerId": "478778b0-3f8a-496c-a7fb-eb20bcfd1a73"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "侧滑菜单"
+                ],
+                "designer|controlQuery": "button#AdmHome_btnNav",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmHome_btnNavTap",
+                "implHandler": [
+                    "popMenu.show('Common.ComHomeNav');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmHome_btnNavTap",
+            "designerId": "b2c212b9-e6ba-494d-93c7-84459f185e8b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "刷新首页"
+                ],
+                "designer|controlQuery": "button#AdmHome_btnRefresh",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmHome_btnRefreshTap",
+                "implHandler": [
+                    "// 滚动回页头",
+                    "Ext.getCmp('AdmHome_Home').getScrollable().getScroller().scrollToTop(new Ext.Anim({",
+                    "        duration: 1000,",
+                    "        after:function(){}",
+                    "    }));",
+                    "",
+                    "// 刷新数据",
+                    "this.doAdmHome_RefreshInformation();",
+                    "this.doAdmHome_RefreshCharts();",
+                    "this.doAdmHome_RefreshToDo();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmHome_btnRefreshTap",
+            "designerId": "b413ce7a-0980-4839-a58a-39ff17626e67"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "过滤待办任务"
+                ],
+                "designer|controlQuery": "searchfield#AdmHome_FldSearch",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onAdmHome_FldSearchKeyup",
+                "implHandler": [
+                    "Ext.getCmp('AdmHome_DvList').getStore().filteDat(textfield.getValue());"
+                ],
+                "name": "keyup"
+            },
+            "name": "onAdmHome_FldSearchKeyup",
+            "designerId": "428d57ce-cc3d-4730-a1cc-e969e296d267"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#AdmHome_FldSearch",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onAdmHome_FldSearchClearicontap",
+                "implHandler": [
+                    "Ext.getCmp('AdmHome_DvList').getStore().filteDat('');"
+                ],
+                "name": "clearicontap"
+            },
+            "name": "onAdmHome_FldSearchClearicontap",
+            "designerId": "f8d262b1-ca43-4326-899f-773d0903b48e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "待办任务列表"
+                ],
+                "designer|controlQuery": "dataview#AdmHome_DvList",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.DataView",
+                "fn": "onAdmHome_DvListItemTap",
+                "implHandler": [
+                    "var\taud = [",
+                    "    {type:'0',\tcode:'gcbj',\tview:'AdmAudGcbjdetail',\tname:'工程报价联络书'},",
+                    "    {type:'1',\tcode:'swsp',\tview:'AdmAudSwspdetail',\tname:'商务审批'},",
+                    "    {type:'3',\tcode:'lksh',\tview:'AdmAudLkshdetail',\tname:'来款'},",
+                    "    {type:'5',\tcode:'kpsh',\tview:'AdmAudKpshdetail',\tname:'开票'},",
+                    "    {type:'6',\tcode:'byht',\tview:'AdmAudByhtdetail',\tname:'保养合同'},",
+                    "    {type:'7',\tcode:'wxht',\tview:'AdmAudWxhtdetail',\tname:'维修合同'},",
+                    "    {type:'8',\tcode:'byzy',\tview:'AdmAudByzydetail',\tname:'保养作业管理'},",
+                    "    {type:'9',\tcode:'byjh',\tview:'AdmAudByjhdetail',\tname:'保养计划'},",
+                    "];",
+                    "var type = record.get('type');",
+                    "/* android不支持find()",
+                    "var found = aud.find(function (o) {",
+                    "\treturn o.type === type;",
+                    "});",
+                    "*/",
+                    "var found = null;",
+                    "for(var i=0; i<aud.length; i++) {",
+                    "    if(aud[i].type===type) {",
+                    "        found = aud[i];",
+                    "        break;",
+                    "    }",
+                    "}",
+                    "if(found) {",
+                    "    var code = found.code;",
+                    "    var taskid = record.get('taskid');",
+                    "    var status = record.get('status');",
+                    "    var id = record.get('id');",
+                    "    viewUtil.goNext('Admin.' + found.view, ",
+                    "                    {",
+                    "                        code: code, ",
+                    "                        taskid: taskid, ",
+                    "                        status: status, ",
+                    "                        id: id",
+                    "                    });",
+                    "} else {",
+                    "    Ext.toast('未知的审核类型：' + type);",
+                    "}"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmHome_DvListItemTap",
+            "designerId": "bba26273-7aa8-4b63-a2d9-cfb822e001fb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "doAdmHome_RefreshInformation",
+                "implHandler": [
+                    "// 用户名、头像",
+                    "Ext.getCmp('AdmHome_LblUserName').setHtml('<i class=\"ln ln-settings\"></i> ' + global.getUserName());",
+                    "Ext.getCmp('AdmHome_ImgAvator').setSrc(global.getUserAvatorSrc());",
+                    "",
+                    "// 总数、最新发布",
+                    "liftnet.app.getController('ComController').",
+                    "    doHome_LoadStatic('mainpage_shandqs', 'approvecount', 'checkcount');",
+                    "liftnet.app.getController('ComController').",
+                    "    doHome_LoadNotisfy('AdmHome_PnlNotice');"
+                ]
+            },
+            "name": "doAdmHome_RefreshInformation",
+            "designerId": "f7a3a4b7-0cc2-42d1-8eb1-ae0716f626a0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "doAdmHome_RefreshCharts",
+                "implHandler": [
+                    "//首页-彩色框统计列表",
+                    "loadMask.show();",
+                    "Ext.getCmp('AdmHome_DvData').getStore().loadDat(",
+                    "    function(n) {",
+                    "        loadMask.hide();",
+                    "        Ext.getCmp('AdmHome_DvData').setHidden(n===0);",
+                    "    },",
+                    "    function() {",
+                    "        console.log('load AdmHome_DvData fail');",
+                    "        loadMask.hide();",
+                    "        Ext.getCmp('AdmHome_DvData').hide();",
+                    "    }",
+                    ");",
+                    "",
+                    "//首页-饼状图列表",
+                    "loadMask.show();",
+                    "Ext.getCmp('AdmHome_DvPie').getStore().loadDat(",
+                    "    function(n) {",
+                    "        loadMask.hide();",
+                    "        Ext.getCmp('AdmHome_DvPie').setHeight(n*60);",
+                    "        Ext.getCmp('AdmHome_DvPie').setHidden(n===0);",
+                    "    },",
+                    "    function() {",
+                    "        console.log('load AdmHome_DvPie fail');",
+                    "        loadMask.hide();",
+                    "        Ext.getCmp('AdmHome_DvPie').hide();",
+                    "    }",
+                    ");",
+                    "",
+                    "//首页-条形图列表",
+                    "loadMask.show();",
+                    "Ext.getCmp('AdmHome_DvCross').getStore().loadDat(",
+                    "    function(n) {",
+                    "        loadMask.hide();",
+                    "        Ext.getCmp('AdmHome_DvCross').setHeight(n*66 + 10); // 调整列表显示高度",
+                    "        Ext.getCmp('AdmHome_DvCross').setHidden(n===0);",
+                    "    },",
+                    "    function() {",
+                    "        console.log('load AdmHome_DvCross fail');",
+                    "        loadMask.hide();",
+                    "        Ext.getCmp('AdmHome_DvCross').hide();",
+                    "    }",
+                    ");"
+                ]
+            },
+            "name": "doAdmHome_RefreshCharts",
+            "designerId": "de762a74-8c75-46d5-9561-6369434105cc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "doAdmHome_RefreshToDo",
+                "implHandler": [
+                    "//首页-待办列表",
+                    "loadMask.show();",
+                    "Ext.getCmp('AdmHome_DvList').getStore().loadDat(",
+                    "    function(n) {",
+                    "        loadMask.hide();",
+                    "        Ext.getCmp('AdmHome_DvList').setHeight(n*64); // 调整列表显示高度",
+                    "        if(n>0) {",
+                    "            Ext.getCmp('AdmHome_DvList').show();",
+                    "            Ext.getCmp('AdmHome_PnlSearch').show();",
+                    "            Ext.toast('您有' + n + '项待办任务！');",
+                    "        } else {",
+                    "            Ext.getCmp('AdmHome_DvList').hide();",
+                    "            Ext.getCmp('AdmHome_PnlSearch').hide();",
+                    "        }",
+                    "    },",
+                    "    loadMask.hide",
+                    ");"
+                ]
+            },
+            "name": "doAdmHome_RefreshToDo",
+            "designerId": "4417ba4a-a9a2-4454-9858-bb5e1c9d49ec"
+        }
+    ]
+}

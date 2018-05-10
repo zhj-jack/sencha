@@ -1,0 +1,97 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ComMapController"
+    },
+    "name": "MyController",
+    "designerId": "00635ada-5fa5-457c-ad92-a6d90bd88e10",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#ComMap",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onComMapShow",
+                "implHandler": [
+                    "view = component;",
+                    "",
+                    "var lng = view.initialConfig.parm.lng;",
+                    "var lat = view.initialConfig.parm.lat;",
+                    "var fn = view.initialConfig.parm.fnClick;",
+                    "",
+                    "if(!lng || lng===''){",
+                    "    lng = map.getLocation().lng;",
+                    "}",
+                    "if(!lat|| lat===''){",
+                    "    lat = map.getLocation().lat;",
+                    "}",
+                    "",
+                    "//初始化地图",
+                    "var getlnglat = function(e){",
+                    "    var map = new BMap.Map(\"ComMap_MapPanel\");",
+                    "",
+                    "    console.log(e.point.lng+'____+__'+e.point.lat);",
+                    "",
+                    "    var r2 = e.point.lng+','+e.point.lat;",
+                    "    fn(r2);",
+                    "",
+                    "    viewUtil.goLast();",
+                    "};",
+                    "",
+                    "map.create2('ComMap_MapPanel',{lng:lng,lat:lat,zoom:19,fc:getlnglat});"
+                ],
+                "name": "show"
+            },
+            "name": "onComMapShow",
+            "designerId": "e1079348-879c-4ff9-b829-04083d3ae2fe"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#ComMap",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onComMapDestroy",
+                "implHandler": [
+                    "map.destroyById('ComMap_MapPanel');"
+                ],
+                "name": "destroy"
+            },
+            "name": "onComMapDestroy",
+            "designerId": "c63124f2-54b8-4563-b696-ab68c674a8b1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#ComMap_BtnReturn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onComMap_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onComMap_BtnReturnTap",
+            "designerId": "9b6a0bd8-9be7-458b-9e8f-d13d6fd4a49d"
+        }
+    ]
+}

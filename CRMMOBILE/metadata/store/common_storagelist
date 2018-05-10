@@ -1,0 +1,107 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_storagelist",
+        "storeId": "common_storagelist"
+    },
+    "name": "sx_sxlist1",
+    "designerId": "629c418e-6d72-4f54-a1df-b8d0ff7d6370",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storageId",
+                "type": "string"
+            },
+            "name": "field42",
+            "designerId": "54492f62-ded9-403e-b338-f9c2d005fa5a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storageName",
+                "type": "string"
+            },
+            "name": "field49",
+            "designerId": "b2fa52bf-7d2d-410e-9cf8-201fcdbff620"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/storagelist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取司/站别列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            storageId: '001',",
+                    "            storageName: '广州司/天河站'",
+                    "        },",
+                    "        {",
+                    "            storageId: '002',",
+                    "            storageName: '广州司/越秀站'",
+                    "        },",
+                    "        {",
+                    "            storageId: '003',",
+                    "            storageName: '广州司/海珠站'",
+                    "        },",
+                    "        {",
+                    "            storageId: '004',",
+                    "            storageName: '广州司/荔湾站'",
+                    "        },",
+                    "        {",
+                    "            storageId: '005',",
+                    "            storageName: '广州司/白云站'",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "0c03a338-3e83-423d-9d97-f465bdb1ad9f"
+        }
+    ]
+}

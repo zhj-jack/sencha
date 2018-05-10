@@ -1,0 +1,1501 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoDestroy": null,
+        "centered": null,
+        "container|animation": false,
+        "designer|userClassName": "Admin.AdmHome",
+        "disabled": null,
+        "fullscreen": null,
+        "hidden": null,
+        "hideOnMaskTap": null,
+        "id": "AdmHome",
+        "modal": null,
+        "singleton": null,
+        "styleHtmlContent": null
+    },
+    "name": "MyTabPanel",
+    "designerId": "5f8ab830-a9af-476a-add9-52932494b131",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-aHome"
+                ],
+                "designer|displayName": null,
+                "iconCls": "ln ln-home",
+                "id": "AdmHome_Home",
+                "itemId": null,
+                "layout": "vbox",
+                "scrollable": true,
+                "title": "首页"
+            },
+            "name": "MyContainer",
+            "designerId": "56e29afb-dc15-4f84-b0a7-3013eaf4a4f2",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-toolbar-home"
+                        ],
+                        "docked": "top",
+                        "title": "首页"
+                    },
+                    "name": "MyToolbar",
+                    "designerId": "660c2ae5-c355-4c90-ab1e-e249f24724b7",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "ln ln-menu",
+                                "id": "AdmHome_btnNav",
+                                "itemId": null,
+                                "text": null
+                            },
+                            "name": "MyButton",
+                            "designerId": "69b55b88-5927-46ff-9b21-c1a6addf3132"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": null,
+                                "iconCls": "ln ln-user",
+                                "id": "AdmHome_btnSwitch",
+                                "itemId": "AdmHome_btnSwitch",
+                                "text": null
+                            },
+                            "name": "MyButton30",
+                            "designerId": "37577aa3-3566-4cde-8666-da85603f252a",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onAdmHome_btnSwitchTap",
+                                        "implHandler": [
+                                            "liftnet.app.getController('ComController').doHome_Switch();"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "name": "onAdmHome_btnSwitchTap",
+                                    "designerId": "a56aad7d-143a-4e7a-9caf-8aab328651e2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MySpacer",
+                            "designerId": "0f07bc3b-04ad-4e2a-beb3-a76251e5a7a4"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "ln ln-refresh",
+                                "id": "AdmHome_btnRefresh",
+                                "itemId": null,
+                                "text": null
+                            },
+                            "name": "MyButton13",
+                            "designerId": "0c691bc5-b37b-4a6a-87c8-bf533d0b1a80"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-aHome-topbox"
+                        ],
+                        "height": 120
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "aa1bd541-f100-426b-a7a7-0cfff4d3dc25",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-font-center"
+                                ],
+                                "docked": "left",
+                                "width": 100
+                            },
+                            "name": "MyPanel",
+                            "designerId": "cd8c8183-22a2-4adf-9498-b39eda729eb5",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fontColor-green",
+                                            "liftnet-font-size24",
+                                            "liftnet-aHome-topbox-number"
+                                        ],
+                                        "hidden": true,
+                                        "html": "23",
+                                        "id": "approvecount"
+                                    },
+                                    "name": "MyLabel3",
+                                    "designerId": "5f8a5746-a3c2-4334-9f77-44c014795cd4"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fontColor-gray",
+                                            "liftnet-font-size14"
+                                        ],
+                                        "hidden": true,
+                                        "html": "待办"
+                                    },
+                                    "name": "MyLabel4",
+                                    "designerId": "39b02b7e-753f-4891-9d93-548407592e84"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-font-center"
+                                ]
+                            },
+                            "name": "MyPanel4",
+                            "designerId": "3c6d64d8-82fe-4652-8aca-0009638c8a15",
+                            "cn": [
+                                {
+                                    "type": "Ext.Img",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-border-radius50",
+                                            "liftnet-aHome-topbox-icon"
+                                        ],
+                                        "height": null,
+                                        "id": "AdmHome_ImgAvator",
+                                        "src": "resources/images/home_icon02.png",
+                                        "width": null
+                                    },
+                                    "name": "MyImg",
+                                    "designerId": "2ac7d1a3-42fa-4e14-940c-678c2b08123e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-font-center"
+                                ],
+                                "docked": "right",
+                                "hideOnMaskTap": null,
+                                "width": 100
+                            },
+                            "name": "MyPanel3",
+                            "designerId": "22fd3dfd-29c4-42b7-bd92-9cc60a7a2c84",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fontColor-green",
+                                            "liftnet-font-size24",
+                                            "liftnet-aHome-topbox-number"
+                                        ],
+                                        "hidden": true,
+                                        "html": "52",
+                                        "id": "checkcount"
+                                    },
+                                    "name": "MyLabel5",
+                                    "designerId": "ca72c9aa-c2e4-48c1-8904-8ffaff2a66b7"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fontColor-gray",
+                                            "liftnet-font-size14"
+                                        ],
+                                        "hidden": true,
+                                        "html": "审批"
+                                    },
+                                    "name": "MyLabel6",
+                                    "designerId": "696b8b7c-d98d-4b97-a62a-51c2c0239b3a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-font-center"
+                                ],
+                                "docked": "bottom"
+                            },
+                            "name": "MyPanel5",
+                            "designerId": "961df6a1-7def-4f63-9bda-945270cdf3f6",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-aHome-topbox-user",
+                                            "liftnet-fontColor-darkGray"
+                                        ],
+                                        "html": "<i class=\"ln ln-settings\"></i> Admin",
+                                        "id": "AdmHome_LblUserName"
+                                    },
+                                    "name": "MyLabel7",
+                                    "designerId": "1171fd5d-def2-4350-83dd-5b56878df88b"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-home-fontScroll",
+                            "liftnet-fontColor-green",
+                            "liftnet-font-size14",
+                            "liftnet-home-rolling"
+                        ],
+                        "docked": "bottom",
+                        "height": 28,
+                        "id": null,
+                        "itemId": "mypanel1",
+                        "padding": null
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "ee581897-6a61-4286-a2a8-72e2c6714064",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "left",
+                                "margin": "0 0 0 3%",
+                                "width": "27%"
+                            },
+                            "name": "MyPanel41",
+                            "designerId": "0e65e964-4dec-414f-a1c8-2860ec616b9f",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "html": "<i class=\"fa fa-volume-up\"></i> 最新发布:"
+                                    },
+                                    "name": "MyLabel20",
+                                    "designerId": "eb65bb4f-7c7a-4115-9dec-67f8aea437d5"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "left",
+                                "html": "<marquee style=\"WIDTH: 100%;\" scrollamount=\"2\"  direction=\"left\"><font></font ></marquee >",
+                                "id": "AdmHome_PnlNotice",
+                                "margin": "0 3% 0 0",
+                                "width": "67%"
+                            },
+                            "name": "MyPanel42",
+                            "designerId": "55739367-bfb9-4324-bc7d-5fb259f76a10"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMypanel1Initialize",
+                                "implHandler": [
+                                    "this.element.on({",
+                                    "    tap: function() {",
+                                    "        viewUtil.goNext('Common.ComHomeNews');",
+                                    "    }",
+                                    "});"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onMypanel1Initialize",
+                            "designerId": "1c9826de-a989-42e2-bf6b-d4ef52d3d8ff"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.DataView",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-aHome-data"
+                        ],
+                        "height": 290,
+                        "id": "AdmHome_DvData",
+                        "scrollable": false,
+                        "store": "mainpage_htdatasta"
+                    },
+                    "name": "MyDataView1",
+                    "designerId": "a010dc20-3eaa-4494-9c98-da55dd38cee4",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "\t<div class=\"liftnet-aHome-dataBox liftnet-aHome-dataBox-{color}\">",
+                                    "        <div class=\"liftnet-aHome-dataBox-numberBox liftnet-fontColor-white\">",
+                                    "            <div class=\"liftnet-aHome-dataBox-icon\"><i class=\"fa fa-{titleIcon}\"></i></div>",
+                                    "            <div class=\"liftnet-aHome-dataBox-number\">{count}</div>",
+                                    "        </div>",
+                                    "        <div class=\"liftnet-aHome-dataBox-titleBox\">{title}({unitname})</div>",
+                                    "     </div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "732c9ae1-22eb-4bdb-a15d-a8f1cd9ff2ca"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-aHome-map"
+                        ],
+                        "height": 280,
+                        "hidden": true,
+                        "html": "<div class=\"liftnet-shade\"></div><div id=\"admHomeMap\"  style=\"height:100%;width:100%;\"></div>",
+                        "id": "AdmHome_Map",
+                        "itemId": "mycontainer3"
+                    },
+                    "name": "MyContainer3",
+                    "designerId": "ba25a5ae-8741-46dd-94b3-67c44d3b6358",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onAdmHome_MapPainted",
+                                "implHandler": [
+                                    "this.fireEvent('painted', this);"
+                                ],
+                                "name": "painted"
+                            },
+                            "name": "onAdmHome_MapPainted",
+                            "designerId": "545fd037-c28e-4b81-9450-7dc5c1652e9c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.DataView",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-aHome-pie"
+                        ],
+                        "data": null,
+                        "height": 270,
+                        "id": "AdmHome_DvPie",
+                        "itemId": null,
+                        "padding": "0 10",
+                        "scrollable": false,
+                        "store": "mainpage_shdatasta"
+                    },
+                    "name": "MyDataView2",
+                    "configAlternates": {
+                        "handler": "binding"
+                    },
+                    "designerId": "ad6e09a2-6f51-4b5c-b580-d7955f051ba3",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "    <div class=\"liftnet-aHome-pieBox\">",
+                                    "        <div class=\"liftnet-aHome-pieLeft\" style='width:100% !important'>",
+                                    "            <div style='float:left' class=\"liftnet-aHome-pieLeft-title liftnet-font-size14\">{title}</div>",
+                                    "            <div style='float:right; right:0' class=\"liftnet-aHome-pieLeft-con liftnet-font-size12 liftnet-fontColor-gray\">",
+                                    "                <div><span class=\"liftnet-bgColor-green\"></span>通过{acceptcount}</div>",
+                                    "                <div><span class=\"liftnet-bgColor-blue\"></span>待审{approvecount}</div>",
+                                    "                <div><span class=\"liftnet-bgColor-red\"></span>新建{waitsubcount}</div>",
+                                    "            </div>",
+                                    "        </div>",
+                                    "        <!--div class=\"liftnet-aHome-pieRight\"-->",
+                                    "            <!--canvas id=\"{pieid}\" width=\"50\" height=\"50\"/-->",
+                                    "            <!--img src='resources/images/pie.jpg' width=\"50\" height=\"50\" /-->",
+                                    "        <!--/div-->",
+                                    "    </div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "0d3736bf-5f4f-45db-b8bc-2b6e8b9f919d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.DataView",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-aHome-cross"
+                        ],
+                        "height": 282,
+                        "id": "AdmHome_DvCross",
+                        "itemId": null,
+                        "padding": "0 10",
+                        "scrollable": false,
+                        "store": "mainpage_dqdatasta"
+                    },
+                    "name": "MyDataView3",
+                    "designerId": "6e324d23-158c-47d9-98f5-0f877dbe98f6",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "    <div class=\"liftnet-aHome-crossBox\">",
+                                    "        <div class=\"liftnet-home-crossBox-titleBox\">",
+                                    "            <div class=\" liftnet-aHome-crossBox-title liftnet-font-size14 liftnet-fontColor-darkGray liftnet-font-left\"><i class=\"{titleIcon}\"></i>{title}</div>",
+                                    "            <div class=\"liftnet-aHome-crossBox-numbe liftnet-font-size14 liftnet-font-right liftnet-fontColor-red\">{deadlinecount}{unitname}</div>",
+                                    "        </div>",
+                                    "        <div class=\"liftnet-aHome-crossBox-percentBox liftnet-bgColor-gray\">",
+                                    "            <div class=\"liftnet-aHome-crossBox-word liftnet-fontColor-gray liftnet-font-center liftnet-font-size12\">{cross}%</div>",
+                                    "            <div class=\"liftnet-aHome-crossBox-percent liftnet-bgColor-green\" style=\"width:{cross}%\"></div>",
+                                    "        </div>",
+                                    "    </div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "a4a916aa-6dd3-4960-b8c7-2b4e03db585a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-search-form"
+                        ],
+                        "height": null,
+                        "id": "AdmHome_PnlSearch",
+                        "scrollable": false
+                    },
+                    "name": "MyFormPanel",
+                    "designerId": "d26e94fa-6741-4e5a-8f1a-4d330579de9e",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-font-size12"
+                                ],
+                                "itemId": "AdmHome_FldSearch",
+                                "label": null,
+                                "labelWidth": null,
+                                "placeHolder": "输入关键词",
+                                "width": null
+                            },
+                            "name": "MySearchField",
+                            "designerId": "ccc01ae5-e090-4084-982b-15fb5dc608c7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.DataView",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-aHome-list"
+                        ],
+                        "height": 76,
+                        "id": "AdmHome_DvList",
+                        "itemId": "mydataview4",
+                        "scrollable": false,
+                        "store": "mainpage_shdatalist"
+                    },
+                    "name": "MyDataView4",
+                    "designerId": "10dd4ac9-4cd6-4062-b857-55979f04ed71",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"liftnet-aHome-listBox\">",
+                                    "    \t<div class=\"liftnet-aHome-listBox-titleBox\">",
+                                    "        \t<div class=\"liftnet-aHome-listBox-title liftnet-font-size14 liftnet-fontColor-darkGray\">{titleIcon}{title}</div>",
+                                    "        \t<div class=\"liftnet-aHome-listBox-state liftnet-font-size12 liftnet-font-right {statusColor}\">{status} <i class=\"fa fa-circle-o\"></i></div>",
+                                    "        </div>",
+                                    "        <div class=\"liftnet-aHome-listBox-conBox\">",
+                                    "        <div class=\"liftnet-aHome-listBox-con liftnet-font-size12 liftnet-fontColor-gray\">{key1}</div>",
+                                    "        <div class=\"liftnet-aHome-listBox-time liftnet-font-size12 liftnet-fontColor-gray liftnet-font-right\"><i class=\"fa fa-clock-o\"></i> {datetime}</div>",
+                                    "   </div>",
+                                    "</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "4b7602a3-b34b-446d-8eba-abdb3c544c70"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-bgColor-gray"
+                ],
+                "iconCls": "fa fa-calendar-o",
+                "id": "AdmReport",
+                "layout": null,
+                "scrollable": true,
+                "title": "报表"
+            },
+            "name": "MyContainer1",
+            "designerId": "31ec89a7-1a68-423a-b47e-e7eb7fdd2df0",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-toolbar-other"
+                        ],
+                        "docked": "top",
+                        "title": "报表"
+                    },
+                    "name": "MyToolbar1",
+                    "designerId": "44c7e902-fcb4-4f98-9e55-8c9b5e194ceb"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyPanel10",
+                    "designerId": "ace0ddf9-c54a-4206-965c-67abc5ce8630",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-report-table"
+                                ]
+                            },
+                            "name": "MyPanel11",
+                            "designerId": "a5a8f43c-ff5e-4a03-8658-4f7540955056",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-report-table-top",
+                                            "liftnet-fontColor-red",
+                                            "liftnet-bgColor-white"
+                                        ]
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "7f519172-114b-4a3f-8f6e-8f2f0ebd20a8",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<i class=\"ln ln-contract\"></i>热线受信报表"
+                                            },
+                                            "name": "MyLabel9",
+                                            "designerId": "b19b5cbc-38de-4a99-ad51-8efe162c15a6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": null,
+                                        "cls": [
+                                            "liftnet-report-table-lsitBox"
+                                        ],
+                                        "data": null,
+                                        "disableSelection": true,
+                                        "grouped": null,
+                                        "hideOnMaskTap": null,
+                                        "id": "AdmReport_DvHotline",
+                                        "infinite": null,
+                                        "itemId": null,
+                                        "modal": null,
+                                        "onItemDisclosure": true,
+                                        "scrollable": "false",
+                                        "store": "reportsta_sxreportsta",
+                                        "striped": null,
+                                        "styleHtmlContent": null
+                                    },
+                                    "name": "MyList1",
+                                    "designerId": "24bcf8a8-5a7f-4c24-ac5d-8e772e7dcafb",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "scrollable",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"liftnet-report-table-lsit\">",
+                                                    "        <div class=\"liftnet-font-size14 liftnet-fontColor-darkGray\">{title} {count}</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-report-table-lsitCon\">",
+                                                    "            <div class=\"liftnet-float-left liftnet-margin-right12\">困人宗数:{istrapcount}</div>",
+                                                    "            <div class=\"liftnet-float-left\">统计时间:{stattime}</div>",
+                                                    "        </div>",
+                                                    "    </div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "d0de6f8f-5c89-4669-93af-e992a71f5ea9"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-report-table"
+                                ]
+                            },
+                            "name": "MyPanel13",
+                            "designerId": "a837e369-7eb7-4413-ba9c-5dd40de65e94",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-report-table-top",
+                                            "liftnet-fontColor-blue",
+                                            "liftnet-bgColor-white"
+                                        ]
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "f96fa19f-c647-4001-a8b5-65ec71bf6b1d",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<i class=\"ln ln-report-maintain\"></i>保养计划报表"
+                                            },
+                                            "name": "MyLabel9",
+                                            "designerId": "a1c298c6-f4ef-43f0-8adb-77e78fc7b943"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": null,
+                                        "cls": [
+                                            "liftnet-report-table-lsitBox"
+                                        ],
+                                        "data": null,
+                                        "disableSelection": true,
+                                        "grouped": null,
+                                        "hideOnMaskTap": null,
+                                        "id": "AdmReport_DvMaintain",
+                                        "infinite": null,
+                                        "itemId": null,
+                                        "modal": null,
+                                        "onItemDisclosure": true,
+                                        "scrollable": "false",
+                                        "store": "reportsta_byreportsta",
+                                        "striped": null,
+                                        "styleHtmlContent": null
+                                    },
+                                    "name": "MyList1",
+                                    "designerId": "9b430a82-7489-4a3d-bd6f-fc53a3bb6403",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "scrollable",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"liftnet-report-table-lsit\">",
+                                                    "        <div class=\"liftnet-font-size14 liftnet-fontColor-darkGray\">{title} {count}</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-report-table-lsitCon\">",
+                                                    "            <div class=\"liftnet-float-left liftnet-margin-right12\">已录入实绩数:{sjcount}</div>",
+                                                    "            <div class=\"liftnet-float-left\">统计时间:{stattime}</div>",
+                                                    "        </div>",
+                                                    "    </div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "e3760d73-d113-4f28-b160-ab98a3a78a7e"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-report-table"
+                                ]
+                            },
+                            "name": "MyPanel14",
+                            "designerId": "e6a7021e-bc3b-4487-8175-a88e214855b9",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-report-table-top",
+                                            "liftnet-fontColor-green",
+                                            "liftnet-bgColor-white"
+                                        ]
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "a296545c-e2bf-4e9b-9f56-2edf81cd9a80",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<i class=\"fn ln-report-repair\"></i>故障报告书报表"
+                                            },
+                                            "name": "MyLabel9",
+                                            "designerId": "aa49cae2-57aa-457c-946a-8f1cba312fc8"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": null,
+                                        "cls": [
+                                            "liftnet-report-table-lsitBox"
+                                        ],
+                                        "data": null,
+                                        "disableSelection": true,
+                                        "grouped": null,
+                                        "hideOnMaskTap": null,
+                                        "id": "AdmReport_DvFault",
+                                        "infinite": null,
+                                        "itemId": null,
+                                        "modal": null,
+                                        "onItemDisclosure": true,
+                                        "scrollable": "false",
+                                        "store": "reportsta_gzreportsta",
+                                        "striped": null,
+                                        "styleHtmlContent": null
+                                    },
+                                    "name": "MyList1",
+                                    "designerId": "c14ba424-130d-4ccf-9c0c-3f2533bdc1fc",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "scrollable",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"liftnet-report-table-lsit\">",
+                                                    "        <div class=\"liftnet-font-size14 liftnet-fontColor-darkGray\">{title} {count}</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-report-table-lsitCon\">",
+                                                    "            <div class=\"liftnet-float-left  liftnet-margin-right12\">统计时间:{stattime}</div>",
+                                                    "        </div>",
+                                                    "    </div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "f84b9931-a24a-47bd-a146-43d94a4549cc"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-report-table"
+                                ]
+                            },
+                            "name": "MyPanel15",
+                            "designerId": "72c557d6-5fc8-4bfd-b1f9-5b39179a4994",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-report-table-top",
+                                            "liftnet-fontColor-orange",
+                                            "liftnet-bgColor-white"
+                                        ]
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "c44c22e5-f0ec-4ead-90b7-c1055d981052",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<i class=\"ln ln-report-service\"></i>维保业绩报表"
+                                            },
+                                            "name": "MyLabel9",
+                                            "designerId": "6aaa552c-7bca-4884-919e-97d540fe308b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": null,
+                                        "cls": [
+                                            "liftnet-report-table-lsitBox"
+                                        ],
+                                        "data": null,
+                                        "disableSelection": true,
+                                        "grouped": null,
+                                        "hideOnMaskTap": null,
+                                        "id": "AdmReport_DvPerformance",
+                                        "infinite": null,
+                                        "itemId": null,
+                                        "modal": null,
+                                        "onItemDisclosure": true,
+                                        "scrollable": "false",
+                                        "store": "reportsta_wbyjreportsta",
+                                        "striped": null,
+                                        "styleHtmlContent": null
+                                    },
+                                    "name": "MyList1",
+                                    "designerId": "410af63b-82aa-4234-9d98-d94529a2ee2e",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "scrollable",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"liftnet-report-table-lsit\">",
+                                                    "        <div class=\"liftnet-font-size14 liftnet-fontColor-darkGray\">{title} {count}</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-report-table-lsitCon\">",
+                                                    "            <div class=\"liftnet-float-left liftnet-margin-right12\">直梯台量:{zcount}</div>",
+                                                    "            <div class=\"liftnet-float-left\">扶梯台量:{fcount}</div>",
+                                                    "        </div>",
+                                                    "    </div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "18539643-d554-4c86-861a-5d6c1f6a4152"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": null,
+                "cls": [
+                    "liftnet-monitor"
+                ],
+                "hidden": null,
+                "iconCls": "ln ln-monitor",
+                "id": "AdmMonitor",
+                "itemId": "mycontainer4",
+                "layout": "vbox",
+                "title": "实时监控"
+            },
+            "name": "MyContainer4",
+            "designerId": "fe6dfc6a-2501-4a1a-b51b-e89dcba445b0",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-toolbar-other"
+                        ],
+                        "docked": "top",
+                        "title": "实时监控"
+                    },
+                    "name": "MyToolbar3",
+                    "designerId": "7f756b15-87de-4f7d-8314-2fa930e94116"
+                },
+                {
+                    "type": "Ext.tab.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-tabbar-one"
+                        ],
+                        "id": "AdmHome_TPnlMonitor",
+                        "layout|flex": 1
+                    },
+                    "name": "MyTabPanel4",
+                    "designerId": "6a8ac039-a0a9-4844-87cb-3b359856731c",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": null,
+                                "id": "AdmHome_MapPeople",
+                                "itemId": null,
+                                "layout": "vbox",
+                                "title": "人员位置"
+                            },
+                            "name": "MyContainer13",
+                            "designerId": "842bb8d1-b065-46e7-a8f7-33de53e1127f",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-monitor-map"
+                                        ],
+                                        "html": "<div class=\"liftnet-shade\"></div><div id=\"peopleMap\"  style=\"height:100%;width:100%;\"></div>",
+                                        "id": "Container_peopleMap",
+                                        "layout": "vbox",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyContainer9",
+                                    "designerId": "5ba186f9-022e-41a8-9daf-e209c15ceec3"
+                                },
+                                {
+                                    "type": "Ext.form.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-search-form",
+                                            "liftnet-button-blue"
+                                        ],
+                                        "docked": "bottom",
+                                        "height": 54,
+                                        "scrollable": false
+                                    },
+                                    "name": "MyFormPanel4",
+                                    "designerId": "a908d379-5921-4f4b-9dc1-218bc0e16f43",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Search",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-font-size12"
+                                                ],
+                                                "label": null,
+                                                "labelWidth": null,
+                                                "placeHolder": "员工姓名"
+                                            },
+                                            "name": "MySearchField",
+                                            "designerId": "27bdcb1b-8c23-4ea5-9477-be5b7203d046"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "docked": "right",
+                                                "id": "AdmMonitor_BtnPeople",
+                                                "text": "查看所有人员",
+                                                "width": 110
+                                            },
+                                            "name": "MyButton3",
+                                            "designerId": "9f27762f-b688-4e2f-a003-08c4d48d968e"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onAdmHome_MapPeoplePainted",
+                                        "implHandler": [
+                                            "this.fireEvent('painted', this);"
+                                        ],
+                                        "name": "painted"
+                                    },
+                                    "name": "onAdmHome_MapPeoplePainted",
+                                    "designerId": "def75afd-f9a5-4738-a0cd-a248c48b12ad"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "AdmHome_MapElevator",
+                                "itemId": null,
+                                "layout": "vbox",
+                                "title": "电梯位置"
+                            },
+                            "name": "MyContainer2",
+                            "designerId": "95f32a87-2bc1-4bd7-994a-d03f1388e244",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-monitor-map"
+                                        ],
+                                        "html": "<div class=\"liftnet-shade\"></div><div id=\"elevatorMap\"  style=\"height:100%;width:100%;\"></div>",
+                                        "id": "Container_elevatorMap",
+                                        "layout": "vbox",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyContainer9",
+                                    "designerId": "582c23c9-3a52-4e2b-81a5-9720f21ee4f3"
+                                },
+                                {
+                                    "type": "Ext.form.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-search-form",
+                                            "liftnet-button-blue"
+                                        ],
+                                        "docked": "bottom",
+                                        "height": 54,
+                                        "scrollable": false
+                                    },
+                                    "name": "MyFormPanel4",
+                                    "designerId": "51913634-53c3-4688-932d-1d31ffb4877e",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Search",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-font-size12"
+                                                ],
+                                                "label": null,
+                                                "labelWidth": null,
+                                                "placeHolder": "电梯注册码"
+                                            },
+                                            "name": "MySearchField",
+                                            "designerId": "0cbe7520-813e-4879-85c3-b2304f543344"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "docked": "right",
+                                                "id": "AdmMonitor_BtnLift",
+                                                "text": "查看所有电梯",
+                                                "width": 110
+                                            },
+                                            "name": "MyButton3",
+                                            "designerId": "cb0f11c2-6134-48a1-8dfa-aedc491b43ae"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onAdmHome_MapElevatorPainted",
+                                        "implHandler": [
+                                            "this.fireEvent('painted', this);"
+                                        ],
+                                        "name": "painted"
+                                    },
+                                    "name": "onAdmHome_MapElevatorPainted",
+                                    "designerId": "aad31b29-cfc0-4d01-bf67-6a6fb46f27c1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-tab",
+                    "liftnet-tab-33"
+                ],
+                "docked": "bottom"
+            },
+            "name": "MyTabBar",
+            "designerId": "37cbae8e-af7d-4f07-af19-da41e5737840"
+        }
+    ]
+}

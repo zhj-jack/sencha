@@ -1,0 +1,298 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_repaircontract",
+        "storeId": "eng_repaircontract"
+    },
+    "name": "eng_insurecontract1",
+    "designerId": "6dd88223-b492-4a96-aee6-61e3e7b45b7b",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "a"
+            },
+            "name": "field291",
+            "designerId": "4466c116-20a8-4f81-a9eb-bba2a762d696"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "b"
+            },
+            "name": "field296",
+            "designerId": "8c883388-1678-4869-bd9f-99048c4f91aa"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "c"
+            },
+            "name": "field616",
+            "designerId": "9919b93e-2390-409b-a54d-8dc2a168c1a5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "d"
+            },
+            "name": "field617",
+            "designerId": "b5ec26ca-d05f-4b9a-a7c0-988b963aa4ca"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "e"
+            },
+            "name": "field597",
+            "designerId": "79c1b2e2-6f0b-42e2-94bf-4e8f1e3d4f65"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ghcl"
+            },
+            "name": "field446",
+            "designerId": "59dc3973-08c9-4cf2-b23a-609ed8d168ca"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rgfy"
+            },
+            "name": "field743",
+            "designerId": "12239366-122a-4d38-8724-847259173d9e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fkfs"
+            },
+            "name": "field744",
+            "designerId": "cb8a7540-c834-4552-b813-9fcfae0eaadb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftinfo"
+            },
+            "name": "field447",
+            "designerId": "62c8d2ec-b897-4e49-94c0-bec8dbb0ad87"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/wxcontract/api/1.0/wxcontractdetail';",
+                    "    var adapterparm = {",
+                    "        userid:global.getUserId(),",
+                    "",
+                    "    };",
+                    "    callPostAdapter(",
+                    "        url, adapterparm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('获取合同信息失败');",
+                    "            }else{",
+                    "                var d = me.decoDat(ret.data);",
+                    "                me.setData(d);",
+                    "                onSuccess(d);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('获取合同信息失败');",
+                    "        }",
+                    "        );",
+                    "} else {",
+                    "",
+                    "    var d = [",
+                    "        {",
+                    "            a:'BX160427007',",
+                    "            b:'中国平安',",
+                    "            c:'2016-04-04',",
+                    "            d:'2016-04-05',",
+                    "            e:'2017-04-05',",
+                    "            rgfy:[",
+                    "                {",
+                    "                    gclx:'gclx1',",
+                    "                    dj:'dj1',",
+                    "                    gcxm:'gcxm1',",
+                    "                    dw:'dw1',",
+                    "                    sl:'sl1',",
+                    "                    je:'je1'",
+                    "                },",
+                    "                {",
+                    "                    gclx:'gclx2',",
+                    "                    dj:'dj2',",
+                    "                    gcxm:'gcxm2',",
+                    "                    dw:'dw2',",
+                    "                    sl:'sl2',",
+                    "                    je:'je2'",
+                    "                }",
+                    "            ],",
+                    "            fkfs:[",
+                    "                {",
+                    "                    pc:'pc1',",
+                    "                    clfbl:'clfbl1',",
+                    "                    rgfbl:'rgfbl1',",
+                    "                    sd:'sd1',",
+                    "                    clfje:'clfje1',",
+                    "                    rgfje:'rgfje1',",
+                    "                    hjje:'hjje1'",
+                    "                },",
+                    "                {",
+                    "                    pc:'pc2',",
+                    "                    clfbl:'clfbl2',",
+                    "                    rgfbl:'rgfbl2',",
+                    "                    sd:'sd2',",
+                    "                    clfje:'clfje2',",
+                    "                    rgfje:'rgfje2',",
+                    "                    hjje:'hjje2'",
+                    "                }",
+                    "            ],",
+                    "            ghcl:[",
+                    "                {",
+                    "                    xh:'xh1',",
+                    "                    dj:'dj1',",
+                    "                    pjmc:'pjmc1',",
+                    "                    dw:'dw1',",
+                    "                    sl:'sl1',",
+                    "                    je:'je1'",
+                    "                },",
+                    "                {",
+                    "                    xh:'xh2',",
+                    "                    dj:'dj2',",
+                    "                    pjmc:'pjmc2',",
+                    "                    dw:'dw2',",
+                    "                    sl:'sl2',",
+                    "                    je:'je2'",
+                    "                },",
+                    "                {",
+                    "                    xh:'xh3',",
+                    "                    dj:'dj3',",
+                    "                    pjmc:'pjmc3',",
+                    "                    dw:'dw3',",
+                    "                    sl:'sl3',",
+                    "                    je:'je3'",
+                    "                },",
+                    "            ],",
+                    "            liftinfo:[",
+                    "                {",
+                    "                    dtpp:'dtpp1',",
+                    "                    dtzcm:'3110-440103-201512-0001',",
+                    "                    dtxh:'dtxh1',",
+                    "                    th:'th1',",
+                    "                    jtdtwzms:'2016-10-10',",
+                    "                    fsd:'15/15/15',",
+                    "",
+                    "                },",
+                    "                {",
+                    "                    dtpp:'dtpp2',",
+                    "                    dtzcm:'3110-440103-201512-0002',",
+                    "                    dtxh:'dtxh2',",
+                    "                    th:'th2',",
+                    "                    jtdtwzms:'2016-10-10',",
+                    "                    fsd:'15/15/15',",
+                    "",
+                    "                },",
+                    "            ]",
+                    "        }",
+                    "    ];",
+                    "    var data = this.decoDat(d);",
+                    "    this.setData(data);",
+                    "    onSuccess(data);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "0eb9fbd5-72fb-4bf2-a647-d12f180f0938"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data){",
+                    "    return ([]);",
+                    "}",
+                    "",
+                    "return data;"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "54e76bd3-f848-4058-9fda-2c4f832429ce"
+        }
+    ]
+}

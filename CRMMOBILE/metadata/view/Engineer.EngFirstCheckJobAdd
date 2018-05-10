@@ -1,0 +1,600 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFirstCheckJobAdd",
+        "id": "EngFirstCheckJobAdd",
+        "layout": "vbox"
+    },
+    "name": "MyPanel",
+    "designerId": "f1ab58f6-e030-4fab-98c5-0f99300ebef3",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "id": "EngFirstCheckJobAdd_Tbar",
+                "itemId": "EngFirstCheckJobAdd_Tbar",
+                "title": "首检派工"
+            },
+            "name": "MyToolbar",
+            "designerId": "e1adb6a3-0e12-4a25-9619-a316bb89854d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFirstCheckJobAdd_ReturnButton",
+                        "text": ""
+                    },
+                    "name": "MyButton",
+                    "designerId": "caebbb13-2a26-4a74-b545-94fda3b4a682"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "id": "EngFirstCheckJobAdd_Form",
+                "itemId": "EngFirstCheckJobAdd_Form",
+                "layout|flex": 1,
+                "scrollable": true
+            },
+            "name": "MyFormPanel",
+            "designerId": "653c3344-670d-4d1d-a574-738b617fe4fc",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "分派单号",
+                        "name": "jnl",
+                        "placeHolder": "自动生成",
+                        "readOnly": true,
+                        "required": true
+                    },
+                    "name": "MyTextField",
+                    "designerId": "aaa65acc-700b-4abf-9541-7aaffd0dcb3f"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckJobAdd_projectname",
+                        "itemId": "EngFirstCheckJobAdd_projectname",
+                        "label": "项目名称",
+                        "name": "projectname",
+                        "placeHolder": "选择",
+                        "readOnly": true,
+                        "required": true
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "4e77756b-6181-44c6-868f-c6e4e6449d99",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "OnEngFirstCheckJob_projectnameInitialize",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "OnEngFirstCheckJob_projectnameInitialize",
+                            "designerId": "b655dc8d-3f17-4bfb-96a1-d36ce318ca33"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "项目地址",
+                        "name": "projectaddress",
+                        "placeHolder": "项目地址根据项目带出",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "d4ca0b44-32bb-45a0-b8d0-cebc2b084719"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "项目台数",
+                        "name": "liftnum",
+                        "placeHolder": "项目台数根据项目带出",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField34",
+                    "designerId": "33e85ea2-e796-44ac-bd98-342c95759221"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckJobAdd_checkednum",
+                        "itemId": "EngFirstCheckJobAdd_checkednum",
+                        "label": "已选择台数",
+                        "labelWidth": "40%",
+                        "name": "checkednum",
+                        "placeHolder": "选择",
+                        "readOnly": true,
+                        "required": true
+                    },
+                    "name": "MyTextField6",
+                    "designerId": "6229a28f-ad99-4302-9d26-88f0baac7b1c",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEngFirstCheckJob_checkednumInitialize",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onEngFirstCheckJob_checkednumInitialize",
+                            "designerId": "b6fedd2c-c90c-414f-a541-685bfcf500f1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.DatePicker",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dateFormat": "Y-m-d",
+                        "label": "计划开始日期",
+                        "labelWidth": "40%",
+                        "name": "planstartdate",
+                        "placeHolder": null,
+                        "required": true
+                    },
+                    "name": "MyDatePicker20",
+                    "designerId": "af7344f8-7f86-4170-9844-5a97271db109",
+                    "cn": [
+                        {
+                            "type": "Ext.picker.Date",
+                            "reference": {
+                                "name": "picker",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "slotOrder": [
+                                    "year",
+                                    "month",
+                                    "day"
+                                ],
+                                "yearTo": 2200
+                            },
+                            "name": "MyDatePicker21",
+                            "designerId": "304eea8f-4535-43c0-a6ae-31a6f9d8d330",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "doneButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "确定"
+                                    },
+                                    "name": "MyButton72",
+                                    "designerId": "3ea52335-df85-47df-b967-6d8041608efd"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "cancelButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "取消"
+                                    },
+                                    "name": "MyButton74",
+                                    "designerId": "fffac23f-31cc-4515-a18c-633ad7fd46db"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.DatePicker",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dateFormat": "Y-m-d",
+                        "label": "计划结束日期",
+                        "labelWidth": "40%",
+                        "name": "planenddate",
+                        "placeHolder": null,
+                        "required": true
+                    },
+                    "name": "MyDatePicker22",
+                    "designerId": "5182232d-d369-4860-a291-433c7c0608e3",
+                    "cn": [
+                        {
+                            "type": "Ext.picker.Date",
+                            "reference": {
+                                "name": "picker",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "slotOrder": [
+                                    "year",
+                                    "month",
+                                    "day"
+                                ],
+                                "yearTo": 2200
+                            },
+                            "name": "MyDatePicker21",
+                            "designerId": "1dfb3a84-37c4-4424-8494-27fa8c5d2dcd",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "doneButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "确定"
+                                    },
+                                    "name": "MyButton72",
+                                    "designerId": "fd827f28-5680-43d8-b075-23e87ed3d7d8"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "cancelButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "取消"
+                                    },
+                                    "name": "MyButton74",
+                                    "designerId": "3d32f0a4-fd45-4005-a469-daa57a535331"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "id": "EngFirstCheckJobAdd_checkuserName",
+                        "itemId": "EngFirstCheckJobAdd_checkuserName",
+                        "label": "检验人员",
+                        "labelWidth": "40%",
+                        "name": "checkeduserName",
+                        "required": true
+                    },
+                    "name": "MyTextArea26",
+                    "designerId": "b5d7f332-9b61-4ae4-8cd0-7c9548b061ec",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEngFirstCheckJob_checkeduserNameInitialize",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onEngFirstCheckJob_checkeduserNameInitialize",
+                            "designerId": "7afa270d-f5bc-4850-a91c-262d4fa3fb7d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "storagename",
+                        "id": "EngFirstCheckJobAdd_createdeptid",
+                        "label": "创建人部门",
+                        "labelWidth": "40%",
+                        "name": "createdeptid",
+                        "store": "first_check_job_add_deptid",
+                        "valueField": "storageid"
+                    },
+                    "name": "MySelectField22",
+                    "designerId": "29b4f574-e654-44ca-90c5-25b36da85c72"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckJobAdd_creatorname",
+                        "label": "创建人",
+                        "labelWidth": "40%",
+                        "name": "creatorname",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField166",
+                    "designerId": "166f609a-4125-4c37-b4a5-5cda84e59e2f"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "注意事项",
+                        "name": "remark",
+                        "placeHolder": "输入注意事项"
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "3fcb671b-3afb-49af-b75d-5691241c67d7"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckJobAdd_status",
+                        "name": "status"
+                    },
+                    "name": "MyHiddenField1",
+                    "designerId": "3a400156-58f1-46b9-8f39-38e814dd51c2"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckJobAdd_dispatchtype",
+                        "name": "dispatchtype"
+                    },
+                    "name": "MyHiddenField6",
+                    "designerId": "ea077785-5406-41c8-8cc1-ab87d7257f95"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckJobAdd_projectid",
+                        "name": "projectid"
+                    },
+                    "name": "MyHiddenField2",
+                    "designerId": "bf386167-1cae-49a7-a85e-f70813e9b56c"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckJobAdd_contractid",
+                        "name": "contractid"
+                    },
+                    "name": "MyHiddenField",
+                    "designerId": "18734f23-45e2-41dd-9f29-4750ba7acd14"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckJobAdd_createid",
+                        "name": "createid"
+                    },
+                    "name": "MyHiddenField3",
+                    "designerId": "378f1955-b36a-4ad2-bf67-dbe76c20a538"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckJobAdd_elevator",
+                        "name": "elevator"
+                    },
+                    "name": "MyHiddenField5",
+                    "designerId": "a401758f-41c8-4d29-80a0-298bf71e8a34"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckJobAdd_checkuser",
+                        "name": "checkuser"
+                    },
+                    "name": "MyHiddenField7",
+                    "designerId": "95bbd01b-4436-428e-99d2-a20d62acd53b"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-button",
+                            "liftnet-button-three"
+                        ],
+                        "docked": "bottom",
+                        "id": "EngFirstCheckJobAdd_BtnPanel",
+                        "itemId": "EngFirstCheckJobAdd_BtnPanel",
+                        "layout": "hbox"
+                    },
+                    "name": "MyPanel",
+                    "designerId": "919b4c26-8fd0-48c8-9100-55653b2a41f9",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-buttonColor-green"
+                                ],
+                                "docked": null,
+                                "id": "EngFirstCheckJobAdd_BtnUpdate",
+                                "itemId": "EngFirstCheckJobAdd_BtnUpdate",
+                                "layout|flex": 1,
+                                "text": ""
+                            },
+                            "name": "MyButton36",
+                            "designerId": "1c88f6fe-2de3-4382-b029-06c192008a64"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "id": "EngFirstCheckJobAdd_BtnSave",
+                                "itemId": "EngFirstCheckJobAdd_BtnSave",
+                                "layout|flex": 1,
+                                "text": ""
+                            },
+                            "name": "MyButton32",
+                            "designerId": "7feddd96-ee8b-4685-a719-b80207683bbc"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "id": "EngFirstCheckJobAdd_BtnCommit",
+                                "itemId": "EngFirstCheckJobAdd_BtnCommit",
+                                "layout|flex": 1,
+                                "text": ""
+                            },
+                            "name": "MyButton1",
+                            "designerId": "5bd42047-5c2b-4725-a2a8-df0f55d4cbd9"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,288 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ss_guserlist",
+        "storeId": "ss_guserlist"
+    },
+    "name": "reportsta_wbyjreportdetail_tdate1",
+    "designerId": "ee9d9608-e6aa-44b0-af9e-b2abb3c0261e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid",
+                "type": "string"
+            },
+            "name": "field78",
+            "designerId": "8637b451-ef40-48af-a690-7fd2b25d93f9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username",
+                "type": "string"
+            },
+            "name": "field184",
+            "designerId": "1795e726-f674-45ed-b932-869ffd4b67ae"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "phone",
+                "type": "string"
+            },
+            "name": "field79",
+            "designerId": "b19e89bd-de96-43de-b5f2-aac1d2de9b7b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lat",
+                "type": "string"
+            },
+            "name": "field202",
+            "designerId": "bed6c655-bf85-4f49-91fd-78e104c7a0a0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lon",
+                "type": "string"
+            },
+            "name": "field203",
+            "designerId": "d856709f-dc1d-4430-8566-a6778315d7ad"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr",
+                "type": "string"
+            },
+            "name": "field186",
+            "designerId": "fba923e0-6e1a-407e-abc0-88c08565ec10"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status",
+                "type": "string"
+            },
+            "name": "field185",
+            "designerId": "9a4af453-ff34-4835-8966-a475698e46fa"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "time",
+                "type": "string"
+            },
+            "name": "field364",
+            "designerId": "f3303d6d-952e-4a3e-869f-54c872a480f7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "statuscolor",
+                "type": "string"
+            },
+            "name": "field3",
+            "designerId": "b6fd5d16-ec15-4064-8ff4-fabbc962b3ac"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "statusicon",
+                "type": "string"
+            },
+            "name": "field363",
+            "designerId": "163984cb-c9e5-4d10-a2d7-171d3185138d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/ss/api/1.0/guserlist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid, searchuser:''};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            //me.setData(ret.data);",
+                    "            //onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 人员信息-演示数据",
+                    "    // statuscolor ：状态的颜色",
+                    "    // 字段 statuscolor 根据status设置；",
+                    "    this.setData([",
+                    "        {",
+                    "            userid:'czl',",
+                    "            username: '陈梓路',",
+                    "            phone: '13659934422',",
+                    "            lat: '23.123709',",
+                    "            lon: '113.246256',",
+                    "            addr: '荔湾区 新城市逢源轩',",
+                    "            status: '维修中',",
+                    "            time: '2015-11-28 17:20',",
+                    "            statuscolor: 'liftnet-fontColor-red',",
+                    "            statusicon: 'resources/images/trackListBox-icon02.png',",
+                    "        },",
+                    "        {",
+                    "            userid:'ldb',",
+                    "            username: '李大白',",
+                    "            phone: '13659999999',",
+                    "            lat: '23.119762',",
+                    "            lon: '113.245991',",
+                    "            addr: '荔湾区 恩宁路9号',",
+                    "            status: '路途中',",
+                    "            time: '2015-11-30 10:10',",
+                    "            statuscolor: 'liftnet-fontColor-green',",
+                    "            statusicon: 'resources/images/trackListBox-icon01.png',",
+                    "        },",
+                    "        {",
+                    "            userid:'djm',",
+                    "            username: '杜荆门',",
+                    "            phone: '13674858458',",
+                    "            lat: '23.131204',",
+                    "            lon: '113.240938',",
+                    "            addr: '荔湾区 中山八路86号',",
+                    "            status: '路途中',",
+                    "            time: '2015-12-01 08:01',",
+                    "            statuscolor: 'liftnet-fontColor-green',",
+                    "            statusicon: 'resources/images/trackListBox-icon01.png',",
+                    "        },",
+                    "        {",
+                    "            userid:'yyz',",
+                    "            username: '严远征',",
+                    "            phone: '13832762387',",
+                    "            lat: '23.123801',",
+                    "            lon: '113.230068',",
+                    "            addr: '万科柏悦湾',",
+                    "            status: '维修中',",
+                    "            time: '2015-12-02 12:31',",
+                    "            statuscolor: 'liftnet-fontColor-red',",
+                    "            statusicon: 'resources/images/trackListBox-icon02.png',",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess(4);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "fb8ead36-21b6-4c24-ae23-a61a7a7a7962"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "d9d2d246-3523-4310-b83e-c9e03d4c6424"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "d7ff7c10-caf2-4cb4-92c4-090d8486d6c5"
+        }
+    ]
+}

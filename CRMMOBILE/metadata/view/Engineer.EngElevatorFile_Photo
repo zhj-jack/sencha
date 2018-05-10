@@ -1,0 +1,197 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngElevatorFile_Photo",
+        "id": "EngElevatorFile_Photo",
+        "itemId": "EngElevatorFile_Photo",
+        "layout": "vbox"
+    },
+    "designerId": "230c06ef-00fa-44cf-9fcb-193347097249",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top"
+            },
+            "name": "MyToolbar18",
+            "designerId": "4f899dac-819d-41f9-8627-38c3473c0619",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "itemId": "ElevatorFile_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton76",
+                    "designerId": "9216d1f8-f8ef-4438-b76a-70f6b52668e3"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer9",
+                    "designerId": "28dbafca-46bc-417f-a15c-26f190eb9ace"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-fontColor-white"
+                        ],
+                        "iconCls": null,
+                        "id": "ElevatorFile_PhotoSave",
+                        "itemId": "ElevatorFile_PhotoSave",
+                        "text": "确定"
+                    },
+                    "name": "MyButton75",
+                    "designerId": "552f2f95-06c0-4f86-99bd-288259a13502"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyContainer68",
+            "designerId": "7e2d9828-862d-4370-b536-e117ebd7b748",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel57",
+                    "designerId": "3fa96c39-3cd1-47ca-8da5-88272f88788f",
+                    "cn": [
+                        {
+                            "type": "Ext.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-font-size14",
+                                    "liftnet-lineHeight34"
+                                ],
+                                "id": "ElevatorFile_Remark",
+                                "itemId": "ElevatorFile_Remark",
+                                "label": null,
+                                "placeHolder": "描述。。。"
+                            },
+                            "name": "MyTextArea24",
+                            "designerId": "e01f66f9-8d1a-4ec0-986c-9f3c78da92e7"
+                        },
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 280,
+                                "id": "ElevatorFile_Photo",
+                                "margin": "10 10 0 10",
+                                "maxHeight": 350,
+                                "maxWidth": 350
+                            },
+                            "name": "MyImg19",
+                            "designerId": "81861a06-018d-4603-9a0b-6015d4489993"
+                        },
+                        {
+                            "type": "Ext.field.Hidden",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "ElevatorFile_Img"
+                            },
+                            "name": "MyHiddenField31",
+                            "designerId": "8529ad24-4f2e-4af7-889a-9c661d830759"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-button",
+                            "liftnet-button-one"
+                        ],
+                        "docked": "bottom",
+                        "hidden": true,
+                        "id": "ElevatorFile_DelBtn",
+                        "itemId": "ElevatorFile_DelBtn"
+                    },
+                    "name": "MyPanel58",
+                    "designerId": "66a249e6-6d8f-457b-b73a-36958a8175ee",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": null,
+                                "itemId": "ElevatorFile_DelBtn",
+                                "text": "删除"
+                            },
+                            "name": "MyButton77",
+                            "designerId": "dffcbed1-a162-4176-a7b0-15080aa1366d"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

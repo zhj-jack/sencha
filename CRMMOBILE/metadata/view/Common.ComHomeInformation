@@ -1,0 +1,463 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "liftnet-myInformation"
+        ],
+        "designer|userClassName": "Common.ComHomeInformation",
+        "id": "ComHomeInformation",
+        "layout": "vbox"
+    },
+    "name": "MyPanel16",
+    "designerId": "bc97345a-7801-4185-a7b6-980f16c03374",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "我的资料"
+            },
+            "name": "MyToolbar5",
+            "designerId": "9010d876-ad39-49c9-ac28-9d2664fc5604",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "ComHomeInformation_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton8",
+                    "designerId": "f566cd3b-9118-4139-bd16-885a9cd353d7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1,
+                "scrollable": true
+            },
+            "name": "MyPanel16",
+            "designerId": "38a9ab79-d8d5-4c3f-ad79-36e470f9b585",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-myInformation-head",
+                            "liftnet-border-radius50"
+                        ],
+                        "docked": null,
+                        "height": 90,
+                        "id": null,
+                        "margin": null,
+                        "width": 90,
+                        "zIndex": 10
+                    },
+                    "name": "MyPanel38",
+                    "designerId": "285794bc-db1d-4308-a2d5-2781ce774529",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-no-border",
+                                    "liftnet-border-radius50",
+                                    "liftnet-bgColor-red",
+                                    "liftnet-fontColor-white",
+                                    "liftnet-myInformation-photograph"
+                                ],
+                                "hidden": false,
+                                "html": "<i class=\"fa fa-camera-retro\"></i>",
+                                "id": "ComHomeInformation_BtnPrint",
+                                "itemId": "mybutton20",
+                                "text": null
+                            },
+                            "name": "MyButton20",
+                            "designerId": "710e7b7c-8ecb-4f8e-a4d4-89b299bc620a"
+                        },
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-border-radius50"
+                                ],
+                                "height": 80,
+                                "id": "ComHomeInformation_ImgAvatar",
+                                "margin": 5,
+                                "src": "resources/images/home_icon.png",
+                                "width": 80
+                            },
+                            "name": "MyImg4",
+                            "designerId": "b36af98f-df66-457a-a918-26fefcbd614d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-myInformation-top"
+                        ],
+                        "docked": null,
+                        "height": 100,
+                        "id": "MyAvatarBg",
+                        "margin": "",
+                        "zIndex": null
+                    },
+                    "name": "MyPanel17",
+                    "designerId": "ac51e940-925a-462d-8222-32daf580bcba"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-bgColor-white"
+                        ],
+                        "height": 60
+                    },
+                    "name": "MyPanel40",
+                    "designerId": "1122a716-d0cc-4646-9a1d-c59af851f7af"
+                },
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 240,
+                        "id": "form_setting_userinfo",
+                        "layout|flex": null,
+                        "margin": "0 10",
+                        "scrollable": false
+                    },
+                    "name": "MyFormPanel2",
+                    "designerId": "dfd95755-2359-4b1f-839f-eca3bdc39d2e",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-bgColor-white",
+                                    "liftnet-myInformation-inputBox"
+                                ]
+                            },
+                            "name": "MyPanel19",
+                            "designerId": "975d8393-d48e-400e-8c95-59eed8d9e824",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-center"
+                                        ],
+                                        "html": "输入旧密码"
+                                    },
+                                    "name": "MyLabel10",
+                                    "designerId": "31de45d1-7972-4fb9-b4f7-dd89a6fffeea"
+                                },
+                                {
+                                    "type": "Ext.field.Password",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "cls": [
+                                            "liftnet-fontColor-green"
+                                        ],
+                                        "id": "ComHomeInformation_FldOldPassword",
+                                        "label": "<i class=\"fa fa-unlock-alt liftnet-fontColor-gray\"></i>",
+                                        "labelAlign": "right",
+                                        "labelWidth": 44,
+                                        "name": "oldpasswd",
+                                        "placeHolder": "输入旧密码"
+                                    },
+                                    "name": "MyPasswordField1",
+                                    "designerId": "ac498652-eb33-4830-b761-f35167707797"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-bgColor-white",
+                                    "liftnet-myInformation-inputBox"
+                                ]
+                            },
+                            "name": "MyPanel21",
+                            "designerId": "65ab5a6a-bf7f-4dee-93cf-68d87289c58a",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-center"
+                                        ],
+                                        "html": "输入新密码"
+                                    },
+                                    "name": "MyLabel10",
+                                    "designerId": "a590b074-76ab-4d69-b649-8c4b5524cd90"
+                                },
+                                {
+                                    "type": "Ext.field.Password",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "cls": [
+                                            "liftnet-fontColor-green"
+                                        ],
+                                        "id": "ComHomeInformation_FldNewPassword1",
+                                        "label": "<i class=\"fa fa-unlock-alt liftnet-fontColor-gray\"></i>",
+                                        "labelAlign": "right",
+                                        "labelWidth": 44,
+                                        "name": "passwd",
+                                        "placeHolder": "输入新密码"
+                                    },
+                                    "name": "MyPasswordField2",
+                                    "designerId": "520a2c8a-7a6e-41de-a34f-625d600e4c55"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-bgColor-white",
+                                    "liftnet-myInformation-inputBox"
+                                ]
+                            },
+                            "name": "MyPanel22",
+                            "designerId": "10ea4020-111a-4efd-aec1-69ad7fc3b260",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-center"
+                                        ],
+                                        "html": "确认新密码"
+                                    },
+                                    "name": "MyLabel10",
+                                    "designerId": "a1595e82-6746-444d-ad7b-509011ea27fd"
+                                },
+                                {
+                                    "type": "Ext.field.Password",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "cls": [
+                                            "liftnet-fontColor-green"
+                                        ],
+                                        "id": "ComHomeInformation_FldNewPassword2",
+                                        "label": "<i class=\"fa fa-lock liftnet-fontColor-green\"></i>",
+                                        "labelAlign": "right",
+                                        "labelWidth": 44,
+                                        "name": "checkpasswd",
+                                        "placeHolder": "确认新密码"
+                                    },
+                                    "name": "MyPasswordField1",
+                                    "designerId": "34ff8eaf-76fa-4f39-a802-1b3a83684de4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-button",
+                            "liftnet-button-one"
+                        ],
+                        "docked": null,
+                        "height": null
+                    },
+                    "name": "MyPanel18",
+                    "designerId": "894ed65e-a7f1-4cb5-84d6-448579521c36",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "id": "ComHomeInformation_BtnChangePassword",
+                                "text": "确定"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "cd6008e8-dc4c-4e9d-9f0e-9b42126316a0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.ActionSheet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 65,
+                        "hidden": true,
+                        "hideOnMaskTap": true,
+                        "id": "ComHomeInformation_BtnShow",
+                        "layout": "hbox"
+                    },
+                    "name": "MyActionSheet3",
+                    "designerId": "7efcb347-11fa-4a07-a401-9b73b3d84eb8",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "ComHomeInformation_camear",
+                                "itemId": "ComHomeInformation_camear",
+                                "layout|flex": null,
+                                "text": "相机",
+                                "width": 110
+                            },
+                            "name": "MyButton86",
+                            "designerId": "8424b8ed-61a9-404e-ad0f-f373e14a999d"
+                        },
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 70
+                            },
+                            "name": "MySpacer11",
+                            "designerId": "edf28ded-d784-474f-b7a8-0a12f41e3284"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "ComHomeInformation_album",
+                                "itemId": "ComHomeInformation_album",
+                                "layout|flex": null,
+                                "text": "相册",
+                                "width": 110
+                            },
+                            "name": "MyButton93",
+                            "designerId": "718e6b1d-5222-4513-972d-d86f48ea8c6a"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.aud_wxhtaud",
+        "storeId": "NoUsed.aud_wxhtaud"
+    },
+    "name": "aud_swspaud1",
+    "designerId": "656f26e1-19a1-4e57-9adb-d244fe97c7dc",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "code",
+                "type": "string"
+            },
+            "name": "field224",
+            "designerId": "3c94e1da-8ddc-4e7c-9a51-6392c22ddf23"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "info",
+                "type": "string"
+            },
+            "name": "field225",
+            "designerId": "4ad971c2-3ad2-4425-800b-f85f36ceaa64"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/aud/api/1.0/wxhtaud/'+'任务号';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:'用户ID',taskid:'任务号',r13:'审批意见',audflag:'审核标记'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.status);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 商务审批审核-演示数据",
+                    "    this.setData([]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "af74e024-3df8-4d95-837c-8427e1e54096"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "333f723e-c0f7-4fcb-a792-0df88710f392"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "feca5265-30a2-42bb-99ec-9dd10802e992"
+        }
+    ]
+}

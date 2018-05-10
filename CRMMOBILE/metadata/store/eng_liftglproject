@@ -1,0 +1,166 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_liftglproject",
+        "storeId": "eng_liftglproject"
+    },
+    "name": "MyStore",
+    "designerId": "3b31de76-35b7-4aa5-a2a5-5a7ec95754db",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "detailrowid"
+            },
+            "name": "field812",
+            "designerId": "52495067-c68d-4005-8480-b5821e8b382f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r12"
+            },
+            "name": "field813",
+            "designerId": "9e745d17-8ad6-45ea-b849-9027b2d750c2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r13"
+            },
+            "name": "field814",
+            "designerId": "d68f8b41-3431-4583-af59-f3dd86ee2994"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field815",
+            "designerId": "79e7e00d-9325-4429-9d1e-6cf4ef3d6777"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "eleuseaddress"
+            },
+            "name": "field816",
+            "designerId": "419fbcb3-06ce-45d9-ab26-ee00cec6dcb9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ladderno"
+            },
+            "name": "field840",
+            "designerId": "ff93cb1d-024b-4c57-90ef-431d581661a7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pordid"
+            },
+            "name": "field841",
+            "designerId": "816bf914-94f9-4484-be9a-d9d94aa30186"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "console.log(parm);",
+                    "// parm = {userid: global.getUserId()};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/bycontractpro';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var d = ret.data;",
+                    "            var n = d.length;",
+                    "            for(var i=0; i<n; i++) {",
+                    "                me.add(d[i]);",
+                    "            }",
+                    "            onSuccess(n);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取电梯关联项目列表-演示数据",
+                    "    var start = (parm.curpagenum-1)*parm.pagesize+1, end = start + parm.pagesize-1;",
+                    "",
+                    "    for(var i=start; i<=end; i++) {",
+                    "        this.add({",
+                    "",
+                    "            detailrowid: 'detail_'+i,//合同明细流水号",
+                    "            r12: 'project_'+i,//项目编号",
+                    "            r13:'contract_'+i,//合同编号",
+                    "            projectname:'测试项目'+i,//项目名称",
+                    "            eleuseaddress:'测试项目地址1111111111111111111111_'+i,//项目地址",
+                    "            ladderno : 'TH_'+i,//梯号",
+                    "            pordid : '1234-123456-123456-12'+i,//设备注册码",
+                    "        });",
+                    "    }",
+                    "    // 演示数据",
+                    "    onSuccess(end - start + 1);",
+                    "",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "c783d9b3-53b6-43a5-8532-36ba9cf838ed"
+        }
+    ]
+}

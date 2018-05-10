@@ -1,0 +1,125 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.redpoint_faultreportstatus",
+        "storeId": "NoUsed.redpoint_faultreportstatus"
+    },
+    "name": "redpoint_faultstatus2",
+    "designerId": "441f2949-1c38-44e7-8a17-97b918f47aeb",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "count",
+                "type": "string"
+            },
+            "name": "field224",
+            "designerId": "27c5451c-72d6-4ba1-a3e6-557063d8f965"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "hasstatus",
+                "type": "string"
+            },
+            "name": "field225",
+            "designerId": "1cbf6b0c-1f6a-486b-abc3-eaa3af00e18e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/redpoint/api/1.0/faultreportstatus';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:'用户ID'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.status);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 查询保养任务条数及是否有未读记录-演示数据",
+                    "    this.setData([]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "483fd6e4-0aa7-4b53-9aa5-90c4d10b17d2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "9e818377-36ad-47d0-9f27-e87d40e801bb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "8d0f4b24-01ed-4a80-bd98-67ebaf5aaeb4"
+        }
+    ]
+}

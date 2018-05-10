@@ -1,0 +1,112 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_lifttypelist",
+        "storeId": "eng_lifttypelist"
+    },
+    "name": "eng_partstypelist1",
+    "designerId": "7c252f11-4cf4-45ea-99d6-2ce519a58080",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "typeid"
+            },
+            "name": "field497",
+            "designerId": "3e53a84f-9362-4bc4-a509-bdd28912f756"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "typename"
+            },
+            "name": "field498",
+            "designerId": "1d8627b2-73df-47a9-94dd-08e1096865e2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r1"
+            },
+            "name": "field499",
+            "designerId": "54dbabcd-af02-44a3-94ae-1604e7233478"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "parm = {userid: global.getUserId()};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/dtfllist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取电梯类型类型列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            typeid: '1',",
+                    "            typename: '电梯类型1',",
+                    "            r1:'3310'",
+                    "        },",
+                    "        {",
+                    "            typeid: '2',",
+                    "            typename: '电梯类型2',",
+                    "            r1:'3320'",
+                    "        },",
+                    "        {",
+                    "            typeid: '3',",
+                    "            typename: '电梯类型3',",
+                    "            r1:'3330'",
+                    "        }",
+                    "",
+                    "",
+                    "    ]);",
+                    "        onSuccess(3);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "3ca8bb98-bb25-4805-9cdd-dd793c4a25e5"
+        }
+    ]
+}

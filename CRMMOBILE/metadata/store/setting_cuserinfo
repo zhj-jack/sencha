@@ -1,0 +1,72 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "setting_cuserinfo",
+        "storeId": "setting_cuserinfo"
+    },
+    "name": "setting_userinfo1",
+    "designerId": "13922ad0-1808-45f7-92e3-0f54ff9dec4a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "message",
+                "type": "string"
+            },
+            "name": "field7",
+            "designerId": "291324ea-b3c6-4674-bcf2-0cdcd1065dff"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "console.log(parm);",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/changepassword';",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var msg;",
+                    "            if(ret.data.length>0) {",
+                    "                msg = ret.data[0].message;",
+                    "            } else {",
+                    "//                 msg = ret.status.info;",
+                    "                msg = '修改用户信息失败';",
+                    "            }",
+                    "            onSuccess(msg);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    onSuccess('密码修改成功！');",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "b1d4b97f-9bd8-44d6-bdd7-d798fc21c9a5"
+        }
+    ]
+}

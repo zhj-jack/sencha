@@ -1,0 +1,150 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "reportsta_gzreportsta",
+        "storeId": "reportsta_gzreportsta"
+    },
+    "name": "reportsta_sxreportdetail2",
+    "designerId": "e2d1500f-2224-4d89-bd89-d904021de36c",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "type": "string"
+            },
+            "name": "field77",
+            "designerId": "22b9932f-ff80-464c-b1e3-070f7801e089"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "count",
+                "type": "string"
+            },
+            "name": "field78",
+            "designerId": "69b60b17-f2ef-44af-9bc3-617a808f468c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stattime",
+                "type": "string"
+            },
+            "name": "field81",
+            "designerId": "12039ce2-7fd1-4e17-92d7-1dc7435bc8f6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/reportsta/api/1.0/gzreportsta';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 故障报告书报表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            title: '当月合计故障报告总数',",
+                    "            count: '200',",
+                    "            stattime: '2015-11-11',",
+                    "        },",
+                    "        {",
+                    "            title: '上月合计故障报告总数',",
+                    "            count: '200',",
+                    "            stattime: '2015-11-11',",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "2977556c-4153-448c-af26-f724dbd71bcb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "cec02325-fd48-4c04-9ff9-b87ba55ae3dd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "bd870440-c2a1-4abf-b316-bf7f4a5886ee"
+        }
+    ]
+}

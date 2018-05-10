@@ -1,0 +1,96 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userClassName": "Engineer.EngCustomerStatus",
+        "hidden": true,
+        "hideOnMaskTap": true,
+        "id": "CustomerStatus",
+        "modal": true,
+        "padding": "5 10"
+    },
+    "designerId": "5609853d-5e54-4c32-b4c9-012eee7bea1b",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "CustomerStatus_0",
+                "itemId": "CustomerStatus_0",
+                "text": "全部"
+            },
+            "name": "MyButton26",
+            "designerId": "a94c8417-4123-4a6d-89ed-7cf548236726"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "CustomerStatus_1",
+                "itemId": "CustomerStatus_1",
+                "text": "重点客户"
+            },
+            "name": "MyButton61",
+            "designerId": "5d7fec41-0ff4-405e-a72f-88479fb3a66a"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "CustomerStatus_2",
+                "itemId": "CustomerStatus_2",
+                "text": "普通客户"
+            },
+            "name": "MyButton62",
+            "designerId": "dfd3ad8f-baf4-4f70-9416-4d758cf47e09"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "CustomerStatus_3",
+                "itemId": "CustomerStatus_3",
+                "text": "非优先客户"
+            },
+            "name": "MyButton63",
+            "designerId": "897f069e-aab8-41a6-82bd-78c80e42457a"
+        }
+    ]
+}

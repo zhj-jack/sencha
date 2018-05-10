@@ -1,0 +1,81 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "by_byrwscenscf",
+        "storeId": "by_byrwscenscf"
+    },
+    "name": "aud_byhtaud7",
+    "designerId": "3147ae56-4635-47b4-b688-c51cce32150a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "code",
+                "type": "string"
+            },
+            "name": "field224",
+            "designerId": "f87f33e3-b243-4882-8584-e18112312516"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "info",
+                "type": "string"
+            },
+            "name": "field225",
+            "designerId": "acdcdaeb-7959-476e-b970-ff4779055f96"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "console.log(parm);",
+                    "",
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/by/api/1.0/byrwscenscf';",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.status);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "6d4c7d59-4fa6-48f2-a3ee-d58875a1da38"
+        }
+    ]
+}

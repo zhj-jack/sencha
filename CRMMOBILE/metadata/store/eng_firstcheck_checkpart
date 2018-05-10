@@ -1,0 +1,77 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_firstcheck_checkpart",
+        "storeId": "eng_firstcheck_checkpart"
+    },
+    "name": "MyStore",
+    "designerId": "f23e7331-1399-4498-88e1-687b7ae214ee",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "state"
+            },
+            "name": "field840",
+            "designerId": "bd9271b4-fc38-45a6-885c-08c6e62b88e9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "isExist",
+                "implHandler": [
+                    "var me = this;",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/fccheckparts';",
+                    "    var adapterparm = {",
+                    "        userid:global.getUserId(),",
+                    "        partsid:parm",
+                    "    };",
+                    "    callPostAdapter(",
+                    "        url, adapterparm,",
+                    "        function(ret){",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('校验失败');",
+                    "            }else{",
+                    "                me.setData(ret.data);",
+                    "                onSuccess(ret.data[0].state===0);",
+                    "//                 return ret.data[0].state===0;",
+                    "            }",
+                    "        },",
+                    "        function(){",
+                    "            onFailure('校验失败');",
+                    "//             return false;",
+                    "        },",
+                    "        adapterparm",
+                    "    );",
+                    "}else{",
+                    "    onSuccess(parm==='123');",
+                    "}"
+                ]
+            },
+            "name": "isExist",
+            "designerId": "e99757b9-722f-4486-be59-d2ac37eb18a0"
+        }
+    ]
+}

@@ -1,0 +1,258 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_elevatorlocation",
+        "storeId": "eng_elevatorlocation"
+    },
+    "name": "eng_userlocation2",
+    "designerId": "f3ff0999-f265-404b-bea0-b9b36313835b",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prono"
+            },
+            "name": "field576",
+            "designerId": "87aec6a6-231c-44bc-a9da-544d7369e855"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftno"
+            },
+            "name": "field596",
+            "designerId": "50abb428-8d42-427b-a950-e6b03486ea6d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elename"
+            },
+            "name": "field581",
+            "designerId": "2be53bee-1c8e-4651-89c4-cec524b4d830"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field582",
+            "designerId": "9926a0c2-6e2a-4cd8-8442-d329289a345a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectaddress"
+            },
+            "name": "field577",
+            "designerId": "a2174d7e-ab93-4a78-9cf2-c15e9afcbd16"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "facname"
+            },
+            "name": "field599",
+            "designerId": "e53748dc-243a-4eb6-b260-80c4b698faf6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatorid"
+            },
+            "name": "field600",
+            "designerId": "260df2b0-b19d-47f5-8bfd-c7105d690ea4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fsd"
+            },
+            "name": "field601",
+            "designerId": "8a4b0336-174f-4c9b-b2e5-590ed34d8912"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lon"
+            },
+            "name": "field578",
+            "designerId": "c94177cc-b5e8-407a-af77-d66349a607f1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lat"
+            },
+            "name": "field594",
+            "designerId": "da6889ab-474d-4dd1-ba8d-6a6db7d392e1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "var adapterparm = {",
+                    "    userid: global.getUserId(),",
+                    "    searchker:parm.searchker,",
+                    "    lon:parm.lon,",
+                    "    lat:parm.lat,",
+                    "    rangradius:parm.rangradius",
+                    "};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/dtdlwzcx';",
+                    "    callPostAdapter(",
+                    "        url, adapterparm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                if(parm.searchker!==''){",
+                    "                    onFailure('读取电梯位置信息失败');",
+                    "                }else{",
+                    "                    onFailure('搜索电梯位置信息失败');",
+                    "                }",
+                    "",
+                    "            }else{",
+                    "                me.setData(ret.data);",
+                    "                onSuccess(me.getData());",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            if(parm.searchker!==''){",
+                    "                 onFailure('读取电梯位置信息失败');",
+                    "            }else{",
+                    "                 onFailure('搜索电梯位置信息失败');",
+                    "            }",
+                    "        });",
+                    "//         function(ret) {",
+                    "//             me.setData(ret.data);",
+                    "//             onSuccess(me.getData());",
+                    "//         },",
+                    "//         onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取电梯位置列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            prono:'JST00123',",
+                    "            projectname:'projectname1',",
+                    "            projectaddress: 'address1',",
+                    "            lon:'113.2982940000',",
+                    "            lat:'23.1077250000',",
+                    "        },",
+                    "        {",
+                    "            prono:'JST00456',",
+                    "",
+                    "            projectname:'projectname2',",
+                    "            projectaddress: 'address2',",
+                    "            lon:'113.3231550000',",
+                    "            lat:'23.1286300000',",
+                    "        }",
+                    "",
+                    "",
+                    "",
+                    "    ]);",
+                    "        onSuccess(this.getData());",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "69e8d243-7dae-41b8-b6a7-5b4ac5ba985e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "//搜索注册码，项目名称，项目地址",
+                    "this.clearFilter();",
+                    "        if(parm!=='') {",
+                    "            this.filterBy(function(item) {",
+                    "                var s = item.get(\"prono\") + ' ' +",
+                    "                    item.get(\"projectname\")+' ' + ",
+                    "                    item.get(\"projectaddress\");",
+                    "                return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "            });",
+                    "        }"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "05e492a0-f5e7-4aed-95e7-fc3f6dfad60b"
+        }
+    ]
+}

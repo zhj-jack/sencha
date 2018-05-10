@@ -1,0 +1,558 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmMonitorController"
+    },
+    "name": "MyController",
+    "designerId": "a47a0fcd-69d5-437a-981a-dda0176e4179",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmMonitorPersonnelList",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmMonitorPersonnelListShow",
+                "implHandler": [
+                    "// 人员列表",
+                    "Ext.getCmp('AdmMonitorPersonnelList_ListDetailed').getStore().loadDat(",
+                    "    function() {},",
+                    "    function() {},",
+                    "    null",
+                    ");"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmMonitorPersonnelListShow",
+            "designerId": "b8b3a231-9736-4068-9284-440207ff47c5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmMonitorPersonnelInformation",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmMonitorPersonnelInformationShow",
+                "implHandler": [
+                    "// 人员详细",
+                    "Ext.getCmp('AdmMonitorPersonnelInformation_ListDetailed').getStore().loadDat(",
+                    "    function() {},",
+                    "    function() {},",
+                    "    null",
+                    ");",
+                    "",
+                    "var record = component.initialConfig.parm.record;",
+                    "var namephone = record.get('username') + '&nbsp;&nbsp;' + record.get('phone');",
+                    "var status = record.get('status') + '&nbsp;' + '<i class=\"fa fa-circle-o\"></i>';",
+                    "var color = record.get('statuscolor');",
+                    "var addr = record.get('addr');",
+                    "var time = record.get('time');",
+                    "var icon = record.get('statusicon');",
+                    "",
+                    "Ext.getCmp('AdmMonitorPersonalInfo_LblNamePhone').setHtml(namephone);",
+                    "Ext.getCmp('AdmMonitorPersonalInfo_LblAddr').setHtml(addr);",
+                    "Ext.getCmp('AdmMonitorPersonalInfo_LblTime').setHtml(time);",
+                    "",
+                    "var cls = color + ' liftnet-font-size12 liftnet-font-right';",
+                    "Ext.getCmp('AdmMonitorPersonalInfo_LblStatus').setHtml(status);",
+                    "Ext.getCmp('AdmMonitorPersonalInfo_LblStatus').setCls(cls);"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmMonitorPersonnelInformationShow",
+            "designerId": "e4a34fb6-5ffd-43cf-8847-2c4c2b4fda02"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmMonitorElevatorList",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmMonitorElevatorListShow",
+                "implHandler": [
+                    "// 电梯列表",
+                    "Ext.getCmp('AdmMonitorElevatorList_ListDetailed').getStore().loadDat(",
+                    "    function() {},",
+                    "    function() {},",
+                    "    null",
+                    ");"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmMonitorElevatorListShow",
+            "designerId": "3fd1995b-cd43-42f2-afb5-b302d0f05080"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "********** 实时监控 **********"
+                ],
+                "designer|controlQuery": "button#AdmMonitor_BtnPeople",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmMonitor_BtnPeopleTap",
+                "implHandler": [
+                    "//查看所有人员",
+                    "viewUtil.goNext('Admin.AdmMonitorPersonnelList');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmMonitor_BtnPeopleTap",
+            "designerId": "02e0a70f-b87e-4244-b8bd-d823f24720b0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmMonitor_BtnLift",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmMonitor_BtnLiftTap",
+                "implHandler": [
+                    "//查看所有电梯",
+                    "viewUtil.goNext('Admin.AdmMonitorElevatorList');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmMonitor_BtnLiftTap",
+            "designerId": "4b1a7eea-8213-48e6-b795-08d5718e2243"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#AdmMonitorPersonnelList_ListDetailed",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmMonitorPersonnelList_ListDetailedItemTap",
+                "implHandler": [
+                    "//人员列表-跳转-人员详细",
+                    "viewUtil.goNext('Admin.AdmMonitorPersonnelInformation', {record: record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmMonitorPersonnelList_ListDetailedItemTap",
+            "designerId": "a9de948d-92eb-44d2-9691-491f8ee1a9f8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#AdmMonitorElevatorList_ListDetailed",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmMonitorElevatorList_ListDetailedItemTap",
+                "implHandler": [
+                    "//电梯列表-跳转-电梯详细",
+                    "var id = record.get('prodid');",
+                    "viewUtil.goNext('Admin.AdmMonitorElevatorDetail', {id: id});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmMonitorElevatorList_ListDetailedItemTap",
+            "designerId": "3f528d5e-ec04-4c7a-a034-dac707eeb43c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmMonitorElevatorDetail",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmMonitorElevatorDetailShow",
+                "implHandler": [
+                    "//电梯详细资料",
+                    "var id = component.initialConfig.parm.id;",
+                    "var store = dataUtil.createStore('common_eleinfo');",
+                    "store.loadDat(",
+                    "    function() {",
+                    "        store.filteDat(id);",
+                    "        if(store.getData().length===1) {",
+                    "            Ext.getCmp('form_common_eleinfo').setRecord(store.getAt(0));",
+                    "            Ext.getCmp('AdmMonitorElevatorDetail_LblName').setHtml(store.getAt(0).get('UserUnitId'));",
+                    "            Ext.getCmp('AdmMonitorElevatorDetail_LblId').setHtml(store.getAt(0).get('UserAddress'));",
+                    "        } else {",
+                    "            Ext.toast('没有找到电梯资料');",
+                    "        }",
+                    "    },",
+                    "    function() {",
+                    "        Ext.toast('没有找到电梯资料');",
+                    "        viewUtil.goLast();",
+                    "    },",
+                    "    id",
+                    ");"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmMonitorElevatorDetailShow",
+            "designerId": "fd4066b4-c83b-4fef-92e5-284ea33a5529"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmMonitorElevatorDetail_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmMonitorElevatorDetail_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmMonitorElevatorDetail_BtnReturnTap",
+            "designerId": "bdbdea0d-1591-418f-9c4b-c15f2d29158e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmMonitorElevatorList_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmMonitorElevatorList_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmMonitorElevatorList_BtnReturnTap",
+            "designerId": "50188ec6-6d29-496e-97a5-d74e3504745f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmMonitorPersonnelInformation_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmMonitorPersonnelInformation_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmMonitorPersonnelInformation_BtnReturnTap",
+            "designerId": "9da1300d-2d45-4a35-9e03-616b192a1248"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmMonitorPersonnelList_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmMonitorPersonnelList_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmMonitorPersonnelList_BtnReturnTap",
+            "designerId": "c048ff93-1108-4eca-a8a2-d03d86701c8a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "首页地图"
+                ],
+                "designer|controlQuery": "container#AdmHome_Map",
+                "designer|params": [
+                    "element",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onAdmHome_MapPainted",
+                "implHandler": [
+                    "map.create('admHomeMap');",
+                    "this.doAdm_MarkPerson('admHomeMap');"
+                ],
+                "name": "painted"
+            },
+            "name": "onAdmHome_MapPainted",
+            "designerId": "c671609e-387f-46bb-bdc1-0942445f1131"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "人员地图"
+                ],
+                "designer|controlQuery": "container#AdmHome_MapPeople",
+                "designer|params": [
+                    "element",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onAdmHome_MapPeoplePainted",
+                "implHandler": [
+                    "map.create('peopleMap');",
+                    "this.doAdm_MarkPerson('peopleMap');"
+                ],
+                "name": "painted"
+            },
+            "name": "onAdmHome_MapPeoplePainted",
+            "designerId": "e6b864a3-f1af-457a-b5df-ec8c5e508ed2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "电梯地图"
+                ],
+                "designer|controlQuery": "container#AdmHome_MapElevator",
+                "designer|params": [
+                    "element",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onAdmHome_MapElevatorPainted",
+                "implHandler": [
+                    "map.create('elevatorMap');",
+                    "this.doAdm_MarkLift('elevatorMap');"
+                ],
+                "name": "painted"
+            },
+            "name": "onAdmHome_MapElevatorPainted",
+            "designerId": "3a43e3d5-004e-4826-b169-0e1c54997c9e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "标注人员"
+                ],
+                "designer|params": [
+                    "mapid"
+                ],
+                "fn": "doAdm_MarkPerson",
+                "implHandler": [
+                    "var amap = map.lookup(mapid);",
+                    "if(!amap) return;",
+                    "",
+                    "var p = map.getLocation();",
+                    "var content = '<div style=\"color:#888;font-size:0.9em\"><br />' + p.addr + '</div>';",
+                    "map.addMarker(amap, {",
+                    "    lng:p.lng, lat: p.lat,",
+                    "    img: 'resources/images/marker_me.png',",
+                    "    sizeX: 65, sizeY: 65,",
+                    "    offsetX: 13, offsetY: 31,",
+                    "    title: '我的位置', content: content",
+                    "});",
+                    "",
+                    "// 标注其他人位置",
+                    "var store = dataUtil.createStore('ss_guserlist');",
+                    "store.loadDat(",
+                    "    function() {",
+                    "        store.getData().each(function(r) {",
+                    "            var lng = r.get('lon');",
+                    "            var lat = r.get('lat');",
+                    "            var name = r.get('username');",
+                    "            var addr = r.get('addr');",
+                    "            var status = r.get('status');",
+                    "            var phone = r.get('phone');",
+                    "            var title = name + '&nbsp;' + phone;",
+                    "            var content = '<div style=\"color:#888;font-size:0.9em\">' + addr +",
+                    "                          '<br>' + status + '</div>';",
+                    "            map.addMarker(amap, {",
+                    "                lng: lng, lat: lat,",
+                    "                img: 'resources/images/marker_staff.png',",
+                    "                sizeX: 65, sizeY: 65,",
+                    "                offsetX: 13, offsetY: 31,",
+                    "                title: title, content: content,",
+                    "                infoW: 220, infoH:60",
+                    "            });",
+                    "        });",
+                    "    },",
+                    "    Ext.emptyFn",
+                    ");"
+                ]
+            },
+            "name": "doAdm_MarkPerson",
+            "designerId": "8817fd66-b509-4e7e-aac7-6bbcddc3b697"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "标注电梯"
+                ],
+                "designer|params": [
+                    "mapid"
+                ],
+                "fn": "doAdm_MarkLift",
+                "implHandler": [
+                    "var amap = map.lookup(mapid);",
+                    "if(!amap) return;",
+                    "",
+                    "var store = dataUtil.createStore('ss_elesitulation');",
+                    "store.loadDat(",
+                    "    function() {",
+                    "        store.getData().each(function(r) {",
+                    "            var lng = r.get('lon');",
+                    "            var lat = r.get('lat');",
+                    "            var name = r.get('unitname');",
+                    "            var addr = r.get('addr');",
+                    "            var prodid = r.get('prodid');",
+                    "            var elevatorid = r.get('elevatorid');",
+                    "            var FSD = r.get('FSD');",
+                    "            var lastfinishtime = r.get('lastfinishtime');",
+                    "",
+                    "            var title = '<div style=\"font-size:0.9em;\">注册码：' + prodid + '</div>';",
+                    "            var content = '<hr noshade style=\"border:none;background-color:#eee;height:1px;width:100%;\" />' +",
+                    "                          '<div style=\"font-size:0.9em;\">' +",
+                    "                          '电梯型号：' + elevatorid + '<br>' +",
+                    "                          '层／站　：' + FSD + '<br>' +",
+                    "                          '保养日期：' + lastfinishtime + '<br>' +",
+                    "                          '<div style=\"color:#888;\">' +",
+                    "                          name + '<br>' +",
+                    "                          addr + '<br></div></div>';",
+                    "            map.addMarker(amap, {",
+                    "                lng: lng, lat: lat,",
+                    "                img: 'resources/images/marker_lift.png',",
+                    "                sizeX: 65, sizeY: 65,",
+                    "                offsetX: 13, offsetY: 31,",
+                    "                title: title, content: content,",
+                    "                infoW: 250, infoH:140",
+                    "            });",
+                    "        });",
+                    "    },",
+                    "    Ext.emptyFn",
+                    ");"
+                ]
+            },
+            "name": "doAdm_MarkLift",
+            "designerId": "10032ef4-d892-48b4-90f6-002cf49a4c38"
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.common_ssxdetail",
+        "storeId": "NoUsed.common_ssxdetail"
+    },
+    "name": "aud_byjhaud2",
+    "designerId": "9df8489a-e28b-46d7-b99d-06564aa6fc50",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "code",
+                "type": "string"
+            },
+            "name": "field224",
+            "designerId": "9cbac9eb-afc5-409c-a7b6-81ea948e722d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "info",
+                "type": "string"
+            },
+            "name": "field225",
+            "designerId": "a352f323-341c-47e2-a5c1-cc7b7a2273a5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/common/api/1.0/ssxdetail/'+'受信号';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {  trno:'受信-编号（新建为空）',  title : '受信-标题',  operid : '受信-起草人',  reportor : '受信-来电人姓名',  reportortel : '受信-来电人电话',  reportordate : '受信-来电时间',  operdate : '受信-受理时间',  shortunitname : '受信-报修单位简称',  unitname : '受信-报修单位名称',  istrap : '受信-是否困人',  serviceno : '受信-电梯服务号',  elevatorno : '受信-电梯工号',  addr : '受信-地址',  floorstationdoor : '受信-层/站/门',  storageid : '受信-司/站别',  specno : '受信-电梯型号',  elevatorid : '受信-电梯梯号',  dtid : '受信-电梯标识',  calloutfaulttypeid : '受信-故障分类',  calloutcontent : '受信-报修内容',  expectarrivetime : '受信-客户要求到场时间',  remark : '受信-备注',  createby : '受信-创建人',  createtime : '受信-创建时间',  updateby : '受信-更新人',  updatetime : '受信-更新时间',  processname : '流程-名称',  verno : '流程-版本号',  pid : '流程实例-Id',  tokenid : '流程实例-令牌',  nodeinfo : '流程实例-当前环节',  taskuser : '流程实例-当前处理人',  status : '状态',  cuser : '关闭-人',  ctime : '关闭-时间',  cremark : '关闭-原因',  tassignto : '派工-处理人',  tassigntime : '派工-时间',  tflag : '任务-接收/退回标记',  tacceptby : '任务-接收/退回人',  taccepttime : '任务-接收/退回时间',  tremark : '任务-接收/退回备注',  suser : '现场-出发-作业员',  stime : '现场-出发-时间',  sreamrk : '现场-出发-备注',  slon : '现场-出发-经度',  slat : '现场-出发-纬度',  supdateby : '现场-出发-操作人',  supdatetime : '现场-出发-操作时间',  auser : '现场-到场-作业员',  atime : '现场-到场-时间',  areamrk : '现场-到场-备注',  alon : '现场-到场-经度',  alat : '现场-到场-纬度',  aupdateby : '现场-到场-操作人',  aupdatetime : '现场-到场-操作时间',  huser : '现场-解困-作业员',  htime : '现场-解困-时间',  hreamrk : '现场-解困-备注',  hlon : '现场-解困-经度',  hlat : '现场-解困-纬度',  hupdateby : '现场-解困-操作人',  hupdatetime : '现场-解困-操作时间',  fcfdtid : '现场-完工-确认电梯标识',  fuser : '现场-完工-作业员',  ftime : '现场-完工-时间',  fremark : '现场-完工-备注',  flon : '现场-完工-经度',  flat : '现场-完工-纬度',  fupdateby : '现场-完工-操作人',  fupdatetime : '现场-完工-操作时间',  r1 : 'r1',  r2 : 'r2',  r3 : 'r3'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.status);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 保存新建/修改受信单(含派工)-演示数据",
+                    "    this.setData([]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "b8fce3fb-3a64-412c-9548-8260ce8c1197"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "bf17198e-958d-421d-8121-eb22147c4c86"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "3b1e0656-7218-4286-8309-d45a521e1bff"
+        }
+    ]
+}

@@ -1,0 +1,480 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "cu_cudetail",
+        "storeId": "cu_cudetail"
+    },
+    "name": "MyStore",
+    "designerId": "5f74422b-ff06-48e5-acef-4a06637d0ee6",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custid"
+            },
+            "name": "field745",
+            "designerId": "d7976ac7-75c0-44cb-af3f-94700b449ee7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cstname"
+            },
+            "name": "field746",
+            "designerId": "a59c7416-f319-4e69-9d03-f3f1f626d014"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "principal"
+            },
+            "name": "field747",
+            "designerId": "c841f5ec-a36d-43c9-88f3-f5f96b0ffc19"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "purveyor"
+            },
+            "name": "field6",
+            "designerId": "2b920963-2d2d-4dea-b432-cade509c2cb9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "address"
+            },
+            "name": "field748",
+            "designerId": "780b827f-f997-48be-bc46-bfcf5baf7b10"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugaddress"
+            },
+            "name": "field7",
+            "designerId": "efc2f616-62bf-4750-980e-95bc79b5402d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "phone"
+            },
+            "name": "field749",
+            "designerId": "368b157e-481e-485b-968b-4ca75d25a7cf"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fax"
+            },
+            "name": "field750",
+            "designerId": "6b9ef982-8f22-4293-b567-f5978de1365f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "postno"
+            },
+            "name": "field751",
+            "designerId": "e10334ea-fc57-4c4d-bf45-7a63b2756d1e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "bank"
+            },
+            "name": "field752",
+            "designerId": "93618aa6-5b79-4bd5-bfbb-25bcf090cdd9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "accounts"
+            },
+            "name": "field753",
+            "designerId": "3ee7572e-3860-4db5-b795-82b7838d1842"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "identificationnumber"
+            },
+            "name": "field767",
+            "designerId": "579c1570-0ff6-488e-899a-8b7f98409e02"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "licensenumber"
+            },
+            "name": "field766",
+            "designerId": "46de9075-2d15-4b2b-ae91-c87c838845ec"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "sort"
+            },
+            "name": "field8",
+            "designerId": "1fae86bf-939a-483f-a5f3-71de0a847943"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r13"
+            },
+            "name": "field762",
+            "designerId": "a9039667-0906-4142-bb8d-379b10f43a04"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rem1"
+            },
+            "name": "field754",
+            "designerId": "cad7bf77-a8f1-455c-8aad-186f812b6055"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "levelid"
+            },
+            "name": "field758",
+            "designerId": "4cc914a6-06ab-4053-8bc2-3941c539bdd9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "levelename"
+            },
+            "name": "field9",
+            "designerId": "ad93a04b-f78f-43d2-b70a-f7348e2dbaa8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "typeid"
+            },
+            "name": "field759",
+            "designerId": "5ef7eec6-2ad2-43a3-98ed-6605200847d3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "typename"
+            },
+            "name": "field10",
+            "designerId": "b59e3cd4-6a7e-4864-957e-b05e0b568b41"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r7"
+            },
+            "name": "field761",
+            "designerId": "13fad2e7-59f3-4d05-b251-5bf2df0ea1b2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createname"
+            },
+            "name": "field755",
+            "designerId": "fdd076d3-7ebb-494c-9c0d-3a306dbab55e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r2"
+            },
+            "name": "field756",
+            "designerId": "d280e68e-328d-4d67-9844-a1750e2d5f31"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createdept"
+            },
+            "name": "field757",
+            "designerId": "8e2016a5-404e-452f-ba80-c6baa479173e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "linkerbean"
+            },
+            "name": "field12",
+            "designerId": "440a6a8f-9492-4531-9e4b-bfb40ad8d28a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowuserlist"
+            },
+            "name": "field13",
+            "designerId": "8e136f5c-3a89-4f5e-b663-527af9c91d90"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "custid"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/mugcustomer/api/1.0/khdetail';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {custid:custid, userid:userid};",
+                    "",
+                    "    console.log('-----传到后台的参数-----');",
+                    "    console.log(adapterParm);",
+                    "    console.log('-----传到后台的参数-----');",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            console.log(me.getData());",
+                    "            onSuccess(1);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 查看客户明细-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            // 页面显示的字段",
+                    "            custid: \t\t\t'CB1600000023',",
+                    "            cstname:\t\t\t'广州中梯物联',//客户名称",
+                    "            principal:\t\t\t'测试法定代理人',//法定代理人",
+                    "            purveyor:\t\t\t'',//承办人",
+                    "            address:\t\t\t'广东省广州市荔湾区蓬莱路3-5号',//客户地址",
+                    "            mugaddress:\t\t\t'',//保养电梯地址",
+                    "            phone:\t\t\t\t'13002007123',//客户联络电话",
+                    "            fax:\t\t\t\t'1236547',//传真",
+                    "            postno:\t\t\t\t'510000',//邮政编码",
+                    "            bank:\t\t\t\t'广州银行',//银行",
+                    "            accounts: \t\t\t'cszh123654',//账号",
+                    "            identificationnumber:\t\t\t'SDTGWXFAFASF',//纳税识别号",
+                    "            licensenumber:\t\t'GZ46976635',//营业执照号码",
+                    "            sort:\t\t\t\t'',//类型",
+                    "            r13:\t\t\t\t'测试财务联系人',//财务联系人",
+                    "            rem1:\t\t\t\t'测试备注',//备注",
+                    "            levelid:\t\t\t'B',//客户级别ID",
+                    "            levelename:\t\t\t'普通客户',//客户级别",
+                    "            typeid:\t\t\t\t'02',//客户分类ID",
+                    "            typename:\t\t\t'维保公司',//客户分类",
+                    "            r7:\t\t\t\t\t'广东省教育厅政务服务中心',//上级客户名称",
+                    "            r8: \t\t\t\t'Y',",
+                    "            r9:\t\t\t\t\t'123456',",
+                    "            createname:\t\t\t'吴维',//创建人名称",
+                    "            r2:\t\t\t\t\t'2016-04-22',//创建时间",
+                    "            createdept:\t\t\t'维保事业部',//创建人所属部门",
+                    "            linkerbean:[{\t\t//客户联系人",
+                    "                contractman:\t'张三',//联系人",
+                    "                mbphone:\t\t'12341352',//电话",
+                    "                ob1:\t\t\t'经理',//职务",
+                    "                othercontact:\t'QQ10924712',//其他联系方式",
+                    "                remail:\t\t\t'测试备注'//备注",
+                    "            },{",
+                    "                contractman:\t'李四',//联系人",
+                    "                mbphone:\t\t'18520',//电话",
+                    "                ob1:\t\t\t'老总',//职务",
+                    "                othercontact:\t'email——asdgag@ad.ca',//其他联系方式",
+                    "                remail:\t\t\t'测试备注'",
+                    "            }],",
+                    "            flowuserlist:[{\t\t//客户跟进人",
+                    "                flowuserid: \t'wuwei',//跟进人ID,",
+                    "                storageid:\t\t'1300010',//部门ID",
+                    "                flowuser:\t\t'吴维',//跟进人名",
+                    "                storagename:\t'维保事业部',//跟进人所属部门",
+                    "                remark:\t\t\t''//备注",
+                    "            },{",
+                    "                flowuserid: \t'liguang',//跟进人ID,",
+                    "                storageid:\t\t'1300020',//部门ID",
+                    "                flowuser:\t\t'李光',//跟进人名",
+                    "                storagename:\t'维保一组',//跟进人所属部门",
+                    "                remark:\t\t\t''//备注",
+                    "            }]",
+                    "        }",
+                    "    ]);",
+                    "    onSuccess(1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "6768751b-8f4b-4dc2-b587-690ac266a22f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r8"
+            },
+            "name": "field889",
+            "designerId": "d73cb1db-7817-4c8f-bd1a-2bf5dd9f94cb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r9"
+            },
+            "name": "field890",
+            "designerId": "eac453a3-8c1b-4afb-a35f-8863c253098d"
+        }
+    ]
+}

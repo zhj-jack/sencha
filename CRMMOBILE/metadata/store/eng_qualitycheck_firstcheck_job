@@ -1,0 +1,478 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_qualitycheck_firstcheck_job",
+        "storeId": "eng_qualitycheck_firstcheck_job"
+    },
+    "name": "eng_qualitycheck_todolist1",
+    "designerId": "1ab431b0-b145-4436-bef9-ba74ffbe932a",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm",
+                    "action"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/fcdlist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {",
+                    "        userid:global.getUserId(),",
+                    "        curpagenum:parm.curpagenum,",
+                    "        pagesize:parm.pagesize,",
+                    "        searchkey:parm.searchkey,",
+                    "        flowstatus:parm.flowstatus",
+                    "    };",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            var info;",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('读取派工单列表失败');",
+                    "            }else{",
+                    "                var resetCurPage = false;",
+                    "                if(ret.data.length===0){",
+                    "                    if(parm.curpagenum===1){",
+                    "                        switch(action){",
+                    "",
+                    "                            case 'loadmore':",
+                    "                                break;",
+                    "                            case 'refresh':",
+                    "                            case 'search':",
+                    "                            case 'firstload':",
+                    "//                                 me.setData([]);",
+                    "                                info = '没有相关派工单';",
+                    "                                break;",
+                    "                        }",
+                    "                        //onFailure(info);",
+                    "                        Ext.toast(info);",
+                    "                        onSuccess(ret.data.length,!resetCurPage,ret.jurisdiction);",
+                    "                    }else{",
+                    "                        onFailure('没有更多数据！');",
+                    "                    }",
+                    "                    return;",
+                    "                }",
+                    "                var d = me.decoDat(ret.data);",
+                    "                //第一次加载直接设置数据",
+                    "                console.log('parm.curpagenum:'+parm.curpagenum);",
+                    "                if(parm.curpagenum==1){",
+                    "",
+                    "                    me.setData(d);",
+                    "                }else{",
+                    "                    //分页用法，在原有数据上继续添加",
+                    "                    var n = d.length;",
+                    "                    for(var i=0; i<n; i++) {",
+                    "                        me.add(d[i]);",
+                    "                    }",
+                    "                }",
+                    "                if(action==='loadmore'){",
+                    "                    //加载更多的时候不需要重置页数",
+                    "                     onSuccess(ret.data.length,resetCurPage);",
+                    "//                               ret.jurisdiction);",
+                    "                }else{",
+                    "                    //其他情况需要将页数重置为1",
+                    "                     onSuccess(ret.data.length,!resetCurPage,ret.jurisdiction);",
+                    "                }",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            var info;",
+                    "            var cutOne = false;",
+                    "            switch(action){",
+                    "",
+                    "                case 'loadmore':",
+                    "                    info = '加载更多派工单失败';",
+                    "                    cutOne = true;",
+                    "                    break;",
+                    "                case 'refresh':",
+                    "                    info = '刷新派工单列表失败';",
+                    "                    break;",
+                    "                case 'search':",
+                    "                    info = '搜索派工单失败';",
+                    "                    break;",
+                    "            }",
+                    "",
+                    "            onFailure(info,cutOne);",
+                    "        }",
+                    "    );",
+                    "//     // adapter取数",
+                    "//     var url = '/adapters/firstcheck/api/1.0/fcdlist';",
+                    "//     var userid = global.getUserId();",
+                    "//     var adapterParm = {userid:userid};",
+                    "",
+                    "//     callPostAdapter(",
+                    "//         url, adapterParm,",
+                    "//         function(ret) {",
+                    "//             if(ret.status.code!=200){",
+                    "//                 onFailure('读取派工单列表失败');",
+                    "//             }else{",
+                    "//                 var d = me.decoDat(ret.data);",
+                    "//                 me.setData(d);",
+                    "//                 onSuccess();",
+                    "//             }",
+                    "//         },",
+                    "//         function() {",
+                    "//             onFailure('读取派工单列表失败');",
+                    "//         }",
+                    "//         );",
+                    "} else {",
+                    "",
+                    "    var me = this;",
+                    "    //分页模拟",
+                    "    var start = (parm.curpagenum-1) * parm.pagesize,",
+                    "        end = parm.curpagenum * parm.pagesize;",
+                    "    //         end = end>50?50:end;",
+                    "    if(end>60){",
+                    "        onFailure('没有更多数据！',false);",
+                    "        return;",
+                    "    }",
+                    "    if(action=='firstload'||action=='refresh'||action=='search'){",
+                    "        //模拟刷新，搜索，第一次加载",
+                    "        //清空数据",
+                    "        this.setData([]);",
+                    "    }",
+                    "    for(var i=start; i<end; i++) {",
+                    "        var d =me.decoDat([",
+                    "            {",
+                    "                jnl:'SJ160415001',",
+                    "                projectname:'万科四季花园',",
+                    "                liftnum:'50',",
+                    "                checkednum:i+1,",
+                    "                checkuser:'张逸风 黎正盛',",
+                    "                status:i%2===0?'新建':'审批中',",
+                    "                restates:'未接收',",
+                    "                nextstate:[",
+                    "                    {name:'接收',state:1},",
+                    "                    {name:'修改',state:2},",
+                    "                    {name:'删除',state:3}",
+                    "                    ],",
+                    "                auditcolor:'green',",
+                    "                jobcolor:'red',",
+                    "            }",
+                    "        ]);",
+                    "        this.add(d);",
+                    "    }",
+                    "    // 演示数据",
+                    "    if(action=='refresh'||action=='search'||action=='firstload'){",
+                    "        onSuccess(end - start + 1,true,",
+                    "                  {",
+                    "                     addjurisdiction:'Y',",
+                    "                     updatejurisdiction:'Y'",
+                    "                  }",
+                    "        );",
+                    "    }else{",
+                    "        onSuccess(end - start + 1,false);",
+                    "    }",
+                    "}",
+                    "//     var d = this.decoDat([",
+                    "//         {",
+                    "//             jnl:'SJ160415001',",
+                    "//             projectname:'万科四季花园',",
+                    "//             liftnum:'50',",
+                    "//             checkednum:'30',",
+                    "//             checkuser:'张逸风 黎正盛',",
+                    "//             status:'通过',",
+                    "//             restates:'未接收',",
+                    "//             nextstate:[{name:'接收',state:1},{name:'退回',state:2},{name:'删除',state:3}],",
+                    "//             auditcolor:'green',",
+                    "//             jobcolor:'red',",
+                    "//         },",
+                    "//         {",
+                    "//             jnl:'SJ160415002',",
+                    "//             projectname:'逸翠湾',",
+                    "//             liftnum:'80',",
+                    "//             checkednum:'45',",
+                    "//             checkuser:'张逸风 黎正盛',",
+                    "//             status:'通过',",
+                    "//             restates:'待审',",
+                    "//             nextstate:[{name:'审核',state:4}],",
+                    "//             auditcolor:'green',",
+                    "//             jobcolor:'red',",
+                    "//         },",
+                    "//         {",
+                    "//             jnl:'SJ160415001',",
+                    "//             projectname:'广州恒大御景半岛酒店',",
+                    "//             liftnum:'10',",
+                    "//             checkednum:'8',",
+                    "//             checkuser:'张逸风 黎正盛',",
+                    "//             status:'通过',",
+                    "//             restates:'已接收',",
+                    "//             auditcolor:'green',",
+                    "//             nextstate:[{name:'删除',state:3}],",
+                    "//             jobcolor:'red',",
+                    "//         },",
+                    "//         {",
+                    "//             jnl:'SJ160415001',",
+                    "//             projectname:'广州恒大御景半岛酒店',",
+                    "//             liftnum:'10',",
+                    "//             checkednum:'8',",
+                    "//             checkuser:'张逸风 黎正盛',",
+                    "//             status:'通过',",
+                    "//             restates:'已退回',",
+                    "//             auditcolor:'green',",
+                    "//             nextstate:[],",
+                    "//             jobcolor:'red',",
+                    "//         },",
+                    "//     ]);",
+                    "//     this.setData(d);",
+                    "",
+                    "//         onSuccess();",
+                    "//         }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "4fd36e80-79cb-4088-a1ca-3c8a97ffc710"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "8e3c6d2c-1f70-4990-b017-741522db1084"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "        if(parm!=='') {",
+                    "            this.filterBy(function(item) {",
+                    "                var s = item.get(\"jnl\") + ' ' + item.get(\"projectname\");",
+                    "                return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "            });",
+                    "        }"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "e2904dc8-8419-49bd-81e6-9d69a642c171"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "",
+                    "for(var i=0;i<data.length; i++) {",
+                    "    switch(data[i].status) {",
+                    "        case '新建':",
+                    "            data[i].jobcolor = 'red';",
+                    "            break;",
+                    "        case '待审':",
+                    "            data[i].jobcolor = 'red';",
+                    "            break;",
+                    "        case '审批中':",
+                    "            data[i].jobcolor = 'blue';",
+                    "            break;",
+                    "        case '通过':",
+                    "            data[i].jobcolor = 'green';",
+                    "            break;",
+                    "",
+                    "        case '不通过':",
+                    "            data[i].jobcolor = 'orange';",
+                    "            break;",
+                    "    }",
+                    "    ",
+                    "    switch(data[i].restates) {",
+                    "        case '已接收':",
+                    "            data[i].auditcolor = 'green';",
+                    "            break;",
+                    "        case '未接收':",
+                    "            data[i].auditcolor = 'red';",
+                    "            break;",
+                    "//         case '不通过':",
+                    "        case '已退回':",
+                    "            data[i].auditcolor = 'orange';",
+                    "            break;",
+                    "    }",
+                    "    ",
+                    "}",
+                    "",
+                    "return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "7389269a-7244-4ef9-b2ce-1c14baebe422"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jnl"
+            },
+            "name": "field308",
+            "designerId": "807e3e6d-69d0-4ccd-87e5-f03b22d9a80b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field309",
+            "designerId": "0ccdf106-43f7-4073-b7ca-97e6d6f43359"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftnum"
+            },
+            "name": "field310",
+            "designerId": "b94b7d0a-82fc-4680-afa9-38e5c50f33c8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "checkednum"
+            },
+            "name": "field311",
+            "designerId": "7adec5c0-7cc5-4235-8a0e-9db7ea2cb82a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "checkuser"
+            },
+            "name": "field312",
+            "designerId": "6d9eb6d3-c5af-44dc-a5df-60f73862dc29"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "restates"
+            },
+            "name": "field313",
+            "designerId": "250167e2-fdc0-46ba-9afd-892cf7596270"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status"
+            },
+            "name": "field314",
+            "designerId": "d2f77ed7-d00c-4c1b-a01e-d61325dc59b0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "auditcolor"
+            },
+            "name": "field315",
+            "designerId": "58db3c86-b70f-4522-b4ea-3932500154a9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jobcolor"
+            },
+            "name": "field316",
+            "designerId": "5da55056-9efe-42be-9e3c-a277c5ea3df7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate"
+            },
+            "name": "field399",
+            "designerId": "8dbba73e-83a5-40e5-8392-8c807ca6a43d"
+        }
+    ]
+}

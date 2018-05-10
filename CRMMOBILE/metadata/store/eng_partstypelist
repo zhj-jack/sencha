@@ -1,0 +1,107 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_partstypelist",
+        "storeId": "eng_partstypelist"
+    },
+    "name": "eng_placelist2",
+    "designerId": "fd65f601-423c-4474-bff4-35bd3f32f6bb",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partstypeid"
+            },
+            "name": "field497",
+            "designerId": "911ff96b-d216-4eff-a0db-2049f55f59e1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partstypename"
+            },
+            "name": "field498",
+            "designerId": "47885781-790a-4c9c-9615-b69fea423d7f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "parm = {userid: global.getUserId()};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/ljlxlist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取零件类型列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            partstypeid: '1',",
+                    "            partstypename: '按钮'",
+                    "        },",
+                    "        {",
+                    "            partstypeid: '2',",
+                    "            partstypename: '保险管'",
+                    "        },",
+                    "        {",
+                    "            partstypeid: '3',",
+                    "            partstypename: '变频器'",
+                    "        },",
+                    "        {",
+                    "            partstypeid: '4',",
+                    "            partstypename: '变压器'",
+                    "        },",
+                    "        {",
+                    "            partstypeid: '5',",
+                    "            partstypename: '电池'",
+                    "        },",
+                    "        {",
+                    "            placeid: '6',",
+                    "            partstypename: '电磁管'",
+                    "        }",
+                    "",
+                    "    ]);",
+                    "        onSuccess(6);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "fcabb5a5-30b2-49f3-8038-e2e77408d5d9"
+        }
+    ]
+}

@@ -1,0 +1,166 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "reportsta_sxreportsta",
+        "storeId": "reportsta_sxreportsta"
+    },
+    "name": "aud_byhtaud1",
+    "designerId": "d52de250-2f9e-4dc6-9254-3bdbeca7340e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "type": "string"
+            },
+            "name": "field77",
+            "designerId": "592b54a6-0763-40a7-8855-9d79431d2ccc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "count",
+                "type": "string"
+            },
+            "name": "field78",
+            "designerId": "4d8f70e7-8623-4c59-a300-13537421677c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "istrapcount",
+                "type": "string"
+            },
+            "name": "field79",
+            "designerId": "7fa4b318-2aee-47f4-9e02-0a7f4d206865"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stattime",
+                "type": "string"
+            },
+            "name": "field81",
+            "designerId": "899897b3-9b1e-464f-995c-443334772710"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/reportsta/api/1.0/sxreportsta';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 热线受信报表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            title: '当月受信宗数',",
+                    "            count: '200',",
+                    "            istrapcount: '30',",
+                    "            stattime: '2015-11-11',",
+                    "        },",
+                    "        {",
+                    "            title: '上月受信宗数',",
+                    "            count: '200',",
+                    "            istrapcount: '30',",
+                    "            stattime: '2015-11-11',",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "1f59f645-dbfd-446e-b5cb-bfaefde4771e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "23ae9729-f7da-4728-acd5-6fed8b867cf9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "ae454f3b-a651-42f8-9a2f-547e64b7ea27"
+        }
+    ]
+}

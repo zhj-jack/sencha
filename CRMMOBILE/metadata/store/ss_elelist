@@ -1,0 +1,222 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ss_elelist",
+        "storeId": "ss_elelist"
+    },
+    "name": "MyStore",
+    "designerId": "02662685-5573-4471-9c62-a06c8c6ab5f6",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prodid",
+                "type": "string"
+            },
+            "name": "field60",
+            "designerId": "a8e40277-24f4-47f9-9bbf-3a9f24dad42f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr",
+                "type": "string"
+            },
+            "name": "field62",
+            "designerId": "329f3792-dbe9-4b75-8592-0b2753606956"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitname",
+                "type": "string"
+            },
+            "name": "field61",
+            "designerId": "3f88c1d7-73e7-4cdc-92e5-04069f7f1e76"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lastfinishtime",
+                "type": "string"
+            },
+            "name": "field64",
+            "designerId": "7e678608-4d8d-4d52-89b0-adaf19c1cf3d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status",
+                "type": "string"
+            },
+            "name": "field63",
+            "designerId": "c2dd1bc1-ef19-4141-b990-47e605b3f265"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "url",
+                "type": "string"
+            },
+            "name": "field209",
+            "designerId": "ff303ff6-9f89-41b5-9e7e-147bfa112c15"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "statusColor",
+                "type": "string"
+            },
+            "name": "field",
+            "designerId": "9ee43eef-a743-4bf5-ba45-cf4bc2a4c082"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/ckdt';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: '用户ID'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 电梯列表-演示数据",
+                    "    // statuscolor ：状态的颜色",
+                    "    // 字段：statusColor 根据status设置；",
+                    "    this.setData([",
+                    "    {",
+                    "        prodid: 'TRT201507195001',",
+                    "        unitname: '广州市华越友联有限公司',",
+                    "        addr: '广州市白云区人和龙苑小区',",
+                    "        status: '停运中',",
+                    "        lastfinishtime: '2015-11-03 22:59',",
+                    "        statusColor: 'liftnet-fontColor-red'",
+                    "    },",
+                    "    {",
+                    "        prodid: 'TRT201507195001',",
+                    "        unitname: '广州市华越友联有限公司',",
+                    "        addr: '广州市白云区人和龙苑小区',",
+                    "        status: '维修中',",
+                    "        lastfinishtime: '2015-11-03 22:58',",
+                    "        statusColor: 'liftnet-fontColor-orange'",
+                    "    },",
+                    "    {",
+                    "        prodid: 'TRT201507195001',",
+                    "        unitname: '广州市华越友联有限公司',",
+                    "        addr: '广州市白云区人和龙苑小区',",
+                    "        status: '运行中',",
+                    "        lastfinishtime: '2015-11-03 22:31',",
+                    "        statusColor: 'liftnet-fontColor-green'",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "da0f9151-0194-40ef-b73f-442156abf6da"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "2f442c56-8256-4aa3-8bae-f42f35b497ea"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "8a66615e-b742-4e7c-95f4-8d9e444ec6d6"
+        }
+    ]
+}

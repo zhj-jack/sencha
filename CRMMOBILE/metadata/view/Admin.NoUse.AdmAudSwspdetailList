@@ -1,0 +1,96 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.NoUse.AdmAudSwspdetailList",
+        "id": "AdmAudSwspdetailList",
+        "layout": "vbox",
+        "scrollable": false
+    },
+    "name": "AdmFormBusinessApproval1",
+    "designerId": "d07ce30e-2c0e-49f7-ad92-c8132df63d76",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "商务审批列表"
+            },
+            "name": "MyToolbar4",
+            "designerId": "21560b9b-e56a-4c27-a3a1-d7823d96c80e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "AdmAudSwspdetailList_ButReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "beeb0572-5bfe-43a7-8e11-a288b518ca50"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowDeselect": null,
+                "cls": [
+                    "liftnet-aApprove-listBox"
+                ],
+                "data": null,
+                "disableSelection": true,
+                "id": "AdmAudSwspdetailList_ListDetailed",
+                "layout|flex": 1,
+                "pressedCls": " ",
+                "store": "NoUsed.aud_swspdetail_detailed"
+            },
+            "name": "MyList11",
+            "designerId": "843bf3dc-87f7-4fc1-8de7-22e0fc147ffe",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-aApprove-listConBox\">",
+                            "\t<div class=\"liftnet-aApprove-listConBox-top liftnet-font-size16 liftnet-fontColor-darkGray\">申请项目:{citemid}</div>",
+                            "    <div class=\"liftnet-fontColor-gray liftnet-font-size12\">原因说明：{causerec}</div>",
+                            "    <div class=\"liftnet-fontColor-gray liftnet-font-size12\">原因分析：{causeanalyse}</div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "bd29a57a-ad90-445d-a550-c3c3c21593b7"
+                }
+            ]
+        }
+    ]
+}

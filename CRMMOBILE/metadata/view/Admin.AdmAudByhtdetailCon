@@ -1,0 +1,294 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmAudByhtdetailCon",
+        "id": "AdmAudByhtdetailCon",
+        "layout": "vbox",
+        "scrollable": false
+    },
+    "name": "AdmFormRepairContractApprovalCon1",
+    "designerId": "36e14300-7c91-4a4d-8614-504e7526f5c5",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "明细信息"
+            },
+            "name": "MyToolbar4",
+            "designerId": "c7eabd9d-3254-4021-b0e0-3bbc097edf1a",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "AdmAudByhtaudCon_ButReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "0a47b7ce-4eff-4920-87f8-f06a33bb7925"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "height": null,
+                "id": "form_aud_byhtdetail_detailed",
+                "layout|flex": 1,
+                "scrollable": false
+            },
+            "name": "MyFormPanel8",
+            "designerId": "fbb6d45b-4a8a-457f-9dea-6263616e4f81",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "注册码",
+                        "labelWidth": null,
+                        "name": "pordid",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "3b5dc042-54e5-4369-954e-43f47707698c"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "型号",
+                        "labelWidth": "50%",
+                        "name": "elevatorid",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField19",
+                    "designerId": "f5b0930f-4f64-4dd7-b757-31de9b12d213"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "层/站/门",
+                        "labelWidth": "50%",
+                        "name": "fsd",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField9",
+                    "designerId": "d1510b11-acc3-4064-a0fd-7467daae5157"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "提升高度",
+                        "labelWidth": "40%",
+                        "name": "high",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField5",
+                    "designerId": "1b3cec9f-5e4f-454b-bbd6-645b7852c139"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "开始日期",
+                        "labelWidth": "50%",
+                        "name": "mugstartdate",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField",
+                    "designerId": "1d0e22c4-209f-4df0-86ad-a35c561e40fb"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "结束日期",
+                        "labelWidth": "50%",
+                        "name": "mugenddate",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField48",
+                    "designerId": "3e69555b-6b79-48c8-bf96-f24a71dfd52b"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "单价",
+                        "labelWidth": "50%",
+                        "name": "price",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField49",
+                    "designerId": "0c1917f0-78c6-4f4c-863b-87883f3cdc7c"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "保养月数",
+                        "labelWidth": "50%",
+                        "name": "r18",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField50",
+                    "designerId": "9ae055f7-1f9b-4bce-be69-7bb0072a541e"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "年检费",
+                        "labelWidth": "50%",
+                        "name": "yearcheckprice",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField51",
+                    "designerId": "6073e91a-eff4-4ded-975b-de53d0df554c"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "金额",
+                        "labelWidth": "50%",
+                        "name": "sumcount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField45",
+                    "designerId": "2c79691f-1bf0-4a7b-83dd-21ca8d06f73e"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "备注",
+                        "labelWidth": "50%",
+                        "name": "detailrem",
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextArea1",
+                    "designerId": "900f22df-dfff-41b2-bfdf-1934926134f4"
+                }
+            ]
+        }
+    ]
+}

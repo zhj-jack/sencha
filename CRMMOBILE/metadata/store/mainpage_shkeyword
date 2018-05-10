@@ -1,0 +1,195 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mainpage_shkeyword",
+        "storeId": "mainpage_shkeyword"
+    },
+    "name": "by_byplanlist1",
+    "designerId": "8b508bcf-168b-4460-b8be-50dff9666cf1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "type": "string"
+            },
+            "name": "field31",
+            "designerId": "4018e1aa-0c6f-4c14-b398-2ec7db1d5af0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "key1",
+                "type": "string"
+            },
+            "name": "field32",
+            "designerId": "7c9cf1f7-e854-4395-9645-28fb43ed8861"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "datetime",
+                "type": "string"
+            },
+            "name": "field33",
+            "designerId": "5a5b11a4-164a-48f7-ae5d-c10bcb5309c3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status",
+                "type": "string"
+            },
+            "name": "field34",
+            "designerId": "68dd30b5-d8cf-45fc-8cf1-715f175c774d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '';",
+                    "    var userid = global.getUserId('/mainpage/api/1.0/shkeyword');",
+                    "    var adapterParm = {userid: '用户ID', keyword: '查询关键词(为空查所有)'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 保养任务-演示数据",
+                    "    // 接口无提供字段：icon、color；",
+                    "    this.setData([",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '未接收',",
+                    "        percent: '80',",
+                    "        color: 'liftnet-bgColor-red'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '未接收',",
+                    "        percent: '30',",
+                    "        color: 'liftnet-bgColor-red'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '未接收',",
+                    "        percent: '65',",
+                    "        color: 'liftnet-bgColor-red'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "         icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '已接收',",
+                    "        percent: '100',",
+                    "        color: 'liftnet-bgColor-green'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '已接收',",
+                    "        percent: '100',",
+                    "        color: 'liftnet-bgColor-green'",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "e1ba7929-b62c-472a-a87f-4a40e31d31af"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "0ce37ec6-b346-46c6-9401-418bd3ac3519"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "cd226f69-d8fd-4593-a95a-a220276a4995"
+        }
+    ]
+}

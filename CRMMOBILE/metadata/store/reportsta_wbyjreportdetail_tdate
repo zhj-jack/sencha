@@ -1,0 +1,326 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "reportsta_wbyjreportdetail_tdate",
+        "storeId": "reportsta_wbyjreportdetail_tdate"
+    },
+    "name": "reportsta_gzreportdetail_tdate1",
+    "designerId": "7d2ffe30-b783-497e-9dd6-8d4f7fec4e34",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "zhilift",
+                "type": "string"
+            },
+            "name": "field415",
+            "designerId": "ed4c3e94-b452-46a4-b056-b6ccb17d690d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fulift",
+                "type": "string"
+            },
+            "name": "field416",
+            "designerId": "cd80edd0-4eae-4173-bbe1-ad9ff05a28ea"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "allcount",
+                "type": "string"
+            },
+            "name": "field417",
+            "designerId": "c4ce4b70-34f2-43d8-970e-b5aca4b48045"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pricesum",
+                "type": "string"
+            },
+            "name": "field418",
+            "designerId": "df98acc7-7b74-4ee9-87cd-2dc4ae89bcb7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "price",
+                "type": "string"
+            },
+            "name": "field419",
+            "designerId": "6cd3b048-8dc8-42e3-a79a-e0c97696304c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "withdraw",
+                "type": "string"
+            },
+            "name": "field420",
+            "designerId": "5e77c93a-21a2-48ac-ab4a-af55bc5b60af"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "xubaonum",
+                "type": "string"
+            },
+            "name": "field421",
+            "designerId": "18b22615-7d30-40bd-b53a-b50daef83f17"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "xubaoprice",
+                "type": "string"
+            },
+            "name": "field422",
+            "designerId": "7e7f77ef-2f93-40d4-a95a-3e49f8648974"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "xubaocount",
+                "type": "string"
+            },
+            "name": "field423",
+            "designerId": "d062a2a5-51c8-4c91-98a8-c954fa6add26"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timeoutnum",
+                "type": "string"
+            },
+            "name": "field424",
+            "designerId": "11e33eae-0ed1-4dc6-aa2f-c649719ad3a7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timeprice",
+                "type": "string"
+            },
+            "name": "field425",
+            "designerId": "9e62562c-1ad2-4837-84aa-b106fc049840"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timeoutcount",
+                "type": "string"
+            },
+            "name": "field426",
+            "designerId": "ba1ace1c-e187-4df0-89ee-f5f3230f45f1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "newnum",
+                "type": "string"
+            },
+            "name": "field427",
+            "designerId": "43d76ae8-7a03-47ec-a078-da8f58e27e98"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "newprice",
+                "type": "string"
+            },
+            "name": "field428",
+            "designerId": "8d4f1b92-4965-473b-aa6a-2d62de2ffd99"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "newcount",
+                "type": "string"
+            },
+            "name": "field429",
+            "designerId": "8d37ea1b-035e-480e-a1cc-de5078e1c735"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "//console.log(parm);",
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/reportsta/api/1.0/wbyjreportdetail';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid, date: parm};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(1);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 维保业绩报表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            zhilift: '300',//直梯数量,",
+                    "            fulift: '10',//扶梯数量,",
+                    "            allcount: '310',//电梯总量,",
+                    "            pricesum: '37200.00',//总金额,",
+                    "            price: '1200.00',//维保电梯平均单价,",
+                    "            withdraw: '0',//退保数量,",
+                    "            xubaonum: '310',//续保数量,",
+                    "            xubaoprice: '1200.00',//续保电梯平均单价,",
+                    "            xubaocount: '37200.00',//续保总金额,",
+                    "            timeoutnum: '18',//到期电梯数量,",
+                    "            timeprice: '1200.00',//到期电梯平均单价,",
+                    "            timeoutcount: '21600.00',//到期电梯总金额,",
+                    "            newnum: '20',//新签电梯数量,",
+                    "            newprice: '1200.00',//新签电梯平均单价,",
+                    "            newcount: '24000.00',//新签电梯总金额",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess(1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "99af195c-41d1-4cbc-8ef5-573e099f82c9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "518195c0-b84e-4803-bdf2-5c4c751918ff"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "a2d121f5-ad85-4844-8790-0b4bbca0ba1f"
+        }
+    ]
+}

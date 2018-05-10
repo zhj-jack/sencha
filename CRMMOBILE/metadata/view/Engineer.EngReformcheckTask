@@ -1,0 +1,2668 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngReformcheckTask",
+        "itemId": "EngReformcheckTask",
+        "layout": "vbox"
+    },
+    "name": "Engineer.EngFirstCheckTask1",
+    "designerId": "2d4d0105-69ba-49c3-a226-b8f8fc8f679c",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": null,
+                "id": "EngReformcheckTask",
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyContainer2",
+            "designerId": "ead62504-fb73-4ec2-8303-8085a9346a77",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-toolbar-other"
+                        ],
+                        "docked": "top",
+                        "title": "整改任务"
+                    },
+                    "name": "MyToolbar2",
+                    "designerId": "5c3a1844-d509-4e45-85e8-d1d95038c84c",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "fa fa-chevron-left",
+                                "itemId": "EngReformcheckTask_ReturnButton",
+                                "text": null
+                            },
+                            "name": "MyButton31",
+                            "designerId": "fca474c9-500c-473a-83ff-d9e6d7f0ed1b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tab.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-tabbar-two"
+                        ],
+                        "id": "EngReformcheckTask_TplList",
+                        "layout|flex": 1
+                    },
+                    "name": "MyTabPanel3",
+                    "designerId": "79957c84-d89c-4a24-8c79-5ec890b472c7",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "badgeText": null,
+                                "cls": [
+                                    "liftnet-fault-listBox"
+                                ],
+                                "itemId": "EngReformcheckTask_CtnLiftInfo",
+                                "layout": "vbox",
+                                "scrollable": null,
+                                "title": "电梯信息"
+                            },
+                            "name": "MyContainer7",
+                            "designerId": "bb1e6e1f-fb21-47f8-a3c3-885b4210cbc7",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-form-info",
+                                            "liftnet-font-size14",
+                                            "liftnet-lineHeight34"
+                                        ],
+                                        "id": "EngReformcheckTask_Form",
+                                        "itemId": "EngReformcheckTask_Form",
+                                        "layout|flex": 1,
+                                        "scrollable": "vertical"
+                                    },
+                                    "name": "MyFormPanel1",
+                                    "designerId": "e90f3a23-0e78-4d34-ac45-4b4d461036ce",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "客户名称",
+                                                "name": "custname",
+                                                "readOnly": true
+                                            },
+                                            "name": "MyTextField3",
+                                            "designerId": "0ef3425f-ff63-4d6b-80f4-a52ac1812920"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "项目名称",
+                                                "name": "projectname",
+                                                "readOnly": true
+                                            },
+                                            "name": "MyTextField7",
+                                            "designerId": "6c4777bb-a518-496d-9de3-2dff89ee1363"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "项目地址",
+                                                "name": "projectaddress",
+                                                "readOnly": true
+                                            },
+                                            "name": "MyTextField11",
+                                            "designerId": "2a7134c2-4a05-4916-813a-e0127f8493bf"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "设备注册码",
+                                                "labelWidth": "40%",
+                                                "name": "prono",
+                                                "required": true
+                                            },
+                                            "name": "MyTextField12",
+                                            "designerId": "d9dfb09f-bc8d-4386-a4e8-951b62408df1"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "使用登记证号",
+                                                "labelWidth": "40%",
+                                                "name": "equno"
+                                            },
+                                            "name": "MyTextField14",
+                                            "designerId": "8df3e288-b4f5-46cd-9286-805ab6192d97"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "出厂编号",
+                                                "labelWidth": "40%",
+                                                "name": "elevatorno"
+                                            },
+                                            "name": "MyTextField15",
+                                            "designerId": "326b2a36-4a2f-4703-805a-fcfb1335742f"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "施工许可证",
+                                                "labelWidth": "40%",
+                                                "name": "allowno"
+                                            },
+                                            "name": "MyTextField16",
+                                            "designerId": "b2190d99-de19-4964-9419-17ca5c7b1f4a"
+                                        },
+                                        {
+                                            "type": "Ext.field.DatePicker",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dateFormat": "Y-m-d",
+                                                "id": "EngReformcheckTask_leafacdate",
+                                                "itemId": "EngReformcheckTask_leafacdate",
+                                                "label": "制造日期",
+                                                "name": "leafacdate",
+                                                "placeHolder": null,
+                                                "valueField": null
+                                            },
+                                            "name": "MyDatePicker6",
+                                            "designerId": "cfad3346-9c4e-4d6b-b5ca-09a358c447d3",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.picker.Date",
+                                                    "reference": {
+                                                        "name": "picker",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "slotOrder": [
+                                                            "year",
+                                                            "month",
+                                                            "day"
+                                                        ],
+                                                        "yearTo": 2200
+                                                    },
+                                                    "name": "MyDatePicker7",
+                                                    "designerId": "50c525cd-bf43-4ef8-a956-505cf3afc7d0",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "doneButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "确认"
+                                                            },
+                                                            "name": "MyButton8",
+                                                            "designerId": "94496719-8608-4186-a16c-23b062b5b01c"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "cancelButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "取消"
+                                                            },
+                                                            "name": "MyButton13",
+                                                            "designerId": "ace65258-1204-4ff5-8bf0-736ec2ce9322"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.DatePicker",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dateFormat": "Y-m-d",
+                                                "label": "竣工日期",
+                                                "name": "finishdate",
+                                                "placeHolder": null
+                                            },
+                                            "name": "MyDatePicker8",
+                                            "designerId": "61def5ab-bc3e-43ed-8015-fc8cfd91d006",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.picker.Date",
+                                                    "reference": {
+                                                        "name": "picker",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "slotOrder": [
+                                                            "year",
+                                                            "month",
+                                                            "day"
+                                                        ],
+                                                        "yearTo": 2200
+                                                    },
+                                                    "name": "MyDatePicker7",
+                                                    "designerId": "7a4226fb-c61e-44c2-b127-25745855b30f",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "doneButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "确认"
+                                                            },
+                                                            "name": "MyButton8",
+                                                            "designerId": "75bf6511-75c2-4841-90bd-2d3a846b6a59"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "cancelButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "取消"
+                                                            },
+                                                            "name": "MyButton13",
+                                                            "designerId": "14d685ee-cb21-4929-b0e0-2cb8db4f41b7"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.DatePicker",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dateFormat": "Y-m-d",
+                                                "label": "首次使用电梯日期",
+                                                "labelWidth": "50%",
+                                                "name": "firstuseliftdate",
+                                                "placeHolder": null
+                                            },
+                                            "name": "MyDatePicker9",
+                                            "designerId": "a6d4ad96-3d71-4359-b43d-fefdaef80c5c",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.picker.Date",
+                                                    "reference": {
+                                                        "name": "picker",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "slotOrder": [
+                                                            "year",
+                                                            "month",
+                                                            "day"
+                                                        ],
+                                                        "yearTo": 2200
+                                                    },
+                                                    "name": "MyDatePicker7",
+                                                    "designerId": "5e59889e-2fe2-4b7e-a5f2-045b420e0373",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "doneButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "确认"
+                                                            },
+                                                            "name": "MyButton8",
+                                                            "designerId": "1255c3d2-1bdd-4070-b0ad-79dec44cdfc9"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "cancelButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "取消"
+                                                            },
+                                                            "name": "MyButton13",
+                                                            "designerId": "cd255e76-7281-48a7-8a76-d0235888a96f"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "梯号",
+                                                "labelWidth": "40%",
+                                                "name": "r3"
+                                            },
+                                            "name": "MyTextField30",
+                                            "designerId": "051783c9-1e7c-4742-99b2-e3bf213b6473"
+                                        },
+                                        {
+                                            "type": "Ext.field.DatePicker",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dateFormat": "Y-m-d",
+                                                "label": "电梯年检日期",
+                                                "labelWidth": "50%",
+                                                "name": "r7",
+                                                "placeHolder": null
+                                            },
+                                            "name": "MyDatePicker10",
+                                            "designerId": "797b7804-3461-4642-a09d-97a8ec354df4",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.picker.Date",
+                                                    "reference": {
+                                                        "name": "picker",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "slotOrder": [
+                                                            "year",
+                                                            "month",
+                                                            "day"
+                                                        ],
+                                                        "yearTo": 2200
+                                                    },
+                                                    "name": "MyDatePicker7",
+                                                    "designerId": "acd8a4ba-44e0-4ae4-afbd-2e93ffbd75d3",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "doneButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "确认"
+                                                            },
+                                                            "name": "MyButton8",
+                                                            "designerId": "619b4652-86f0-4363-88b8-19fa1eb5b14c"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "cancelButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "取消"
+                                                            },
+                                                            "name": "MyButton13",
+                                                            "designerId": "8786dbc2-8d9c-4aec-8be0-cc08c1cecb09"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.DatePicker",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dateFormat": "Y-m-d",
+                                                "label": "下一次年检日期",
+                                                "labelWidth": "50%",
+                                                "name": "r8",
+                                                "placeHolder": null
+                                            },
+                                            "name": "MyDatePicker11",
+                                            "designerId": "df7056e3-3278-4b16-89bf-821fb7471893",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.picker.Date",
+                                                    "reference": {
+                                                        "name": "picker",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "slotOrder": [
+                                                            "year",
+                                                            "month",
+                                                            "day"
+                                                        ],
+                                                        "yearTo": 2200
+                                                    },
+                                                    "name": "MyDatePicker7",
+                                                    "designerId": "c92684b4-b772-4e55-844b-da762c915702",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "doneButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "确认"
+                                                            },
+                                                            "name": "MyButton8",
+                                                            "designerId": "08e15b6e-6350-4ccd-a672-80a5bee2d517"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "cancelButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "取消"
+                                                            },
+                                                            "name": "MyButton13",
+                                                            "designerId": "54d43729-4362-41bf-87d0-93528dd37ac1"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.DatePicker",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dateFormat": "Y-m-d",
+                                                "label": "限速器年检日期",
+                                                "labelWidth": "50%",
+                                                "name": "speedcheckdate",
+                                                "placeHolder": null
+                                            },
+                                            "name": "MyDatePicker12",
+                                            "designerId": "f4eb034c-c84b-4263-ba20-50e79475631e",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.picker.Date",
+                                                    "reference": {
+                                                        "name": "picker",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "slotOrder": [
+                                                            "year",
+                                                            "month",
+                                                            "day"
+                                                        ],
+                                                        "yearTo": 2200
+                                                    },
+                                                    "name": "MyDatePicker7",
+                                                    "designerId": "2a94cdc5-2ae3-4e95-a5c2-a30b63539916",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "doneButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "确认"
+                                                            },
+                                                            "name": "MyButton8",
+                                                            "designerId": "ad48276a-6213-4b8a-9a9a-3fe437b1adf4"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "cancelButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "取消"
+                                                            },
+                                                            "name": "MyButton13",
+                                                            "designerId": "7d7cd29a-03b5-4c57-90a0-3eec57bcfb32"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.DatePicker",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dateFormat": "Y-m-d",
+                                                "label": "限速器下一次年检日期",
+                                                "labelWidth": "58%",
+                                                "name": "speednextcheckdate",
+                                                "placeHolder": null,
+                                                "valueField": null
+                                            },
+                                            "name": "MyDatePicker13",
+                                            "designerId": "a7ea12d7-e5e4-485d-9486-555e8095052b",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.picker.Date",
+                                                    "reference": {
+                                                        "name": "picker",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "slotOrder": [
+                                                            "year",
+                                                            "month",
+                                                            "day"
+                                                        ],
+                                                        "yearTo": 2200
+                                                    },
+                                                    "name": "MyDatePicker7",
+                                                    "designerId": "24fd5a28-123b-4919-9ea9-466764f373d1",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "doneButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "确认"
+                                                            },
+                                                            "name": "MyButton8",
+                                                            "designerId": "368d108a-a029-49b5-a8fd-04cee2e6dfca"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "cancelButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "取消"
+                                                            },
+                                                            "name": "MyButton13",
+                                                            "designerId": "532f781e-85ec-42f4-8f5e-9e874a158904"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.TextArea",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "电梯位置描述",
+                                                "labelWidth": "40%",
+                                                "name": "liftloaction"
+                                            },
+                                            "name": "MyTextArea9",
+                                            "designerId": "c946def6-69b3-4902-b1b7-8add3fea5d7a"
+                                        },
+                                        {
+                                            "type": "Ext.field.Select",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "x-field-picker"
+                                                ],
+                                                "displayField": "typename",
+                                                "id": "EngReformcheckTask_typeid",
+                                                "itemId": "EngReformcheckTask_typeid",
+                                                "label": "电梯分类",
+                                                "labelWidth": "40%",
+                                                "name": "typeid",
+                                                "required": true,
+                                                "store": "eng_lifttypelist",
+                                                "valueField": "typeid"
+                                            },
+                                            "name": "MySelectField20",
+                                            "designerId": "2936578e-c664-4f83-8688-30968bd81fc2"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "EngReformcheckTask_elevatorname",
+                                                "itemId": "EngReformcheckTask_elevatorname",
+                                                "label": "电梯型号",
+                                                "labelWidth": "40%",
+                                                "name": "elevatorname",
+                                                "required": true
+                                            },
+                                            "name": "MyTextField33",
+                                            "designerId": "bbfdd014-4a77-4a52-a9ed-c631bea0373c",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onEngReformcheckTask_elevatoridInitialize",
+                                                        "implHandler": [
+                                                            "var me = this;",
+                                                            "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                        ],
+                                                        "name": "initialize"
+                                                    },
+                                                    "name": "onEngReformcheckTask_elevatoridInitialize",
+                                                    "designerId": "220fde8c-a8f4-45e1-9c23-b3f0b2e5e305"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "EngReformcheckTask_facname",
+                                                "itemId": "EngReformcheckTask_facname",
+                                                "label": "电梯品牌",
+                                                "labelWidth": "40%",
+                                                "name": "facname",
+                                                "required": true
+                                            },
+                                            "name": "MyTextField34",
+                                            "designerId": "d4f7b229-613d-4c44-a2ba-b636a6bd4d90",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onEngReformcheckTask_facnameInitialize",
+                                                        "implHandler": [
+                                                            "var me = this;",
+                                                            "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                        ],
+                                                        "name": "initialize"
+                                                    },
+                                                    "name": "onEngReformcheckTask_facnameInitialize",
+                                                    "designerId": "50970207-192b-44dc-a2f7-0e0ec51bfc30"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "电梯制造商",
+                                                "labelWidth": "40%",
+                                                "name": "makeunit"
+                                            },
+                                            "name": "MyTextField35",
+                                            "designerId": "3f82fa48-68ef-4017-a8b8-62e91019608d"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "载重(kg)",
+                                                "labelWidth": "40%",
+                                                "name": "zzl"
+                                            },
+                                            "name": "MyTextField96",
+                                            "designerId": "3a3807bc-aa6a-42bf-a04e-43041a54e20d"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "速度(m/s)",
+                                                "labelWidth": "40%",
+                                                "name": "speed"
+                                            },
+                                            "name": "MyTextField167",
+                                            "designerId": "78c12cdb-8648-4ff6-b3c0-e2e222a68911"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "扶梯倾斜角",
+                                                "labelWidth": "40%",
+                                                "name": "fwlc"
+                                            },
+                                            "name": "MyTextField172",
+                                            "designerId": "1bf8e8f7-f2bc-44df-befb-2f079611e00c"
+                                        },
+                                        {
+                                            "type": "Ext.field.Select",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "x-field-picker"
+                                                ],
+                                                "displayField": "dswingname",
+                                                "label": "开门方式",
+                                                "labelWidth": "40%",
+                                                "name": "kmfs",
+                                                "options": null,
+                                                "store": "eng_kmfslist",
+                                                "valueField": "dswingid"
+                                            },
+                                            "name": "MySelectField",
+                                            "designerId": "1f975618-7dcc-49f9-abdf-41c63f908493"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "开门形式备注",
+                                                "labelWidth": "40%",
+                                                "name": "openremark"
+                                            },
+                                            "name": "MyTextField39",
+                                            "designerId": "a9eea1f2-691e-49b6-9ecf-59a28aead2c3"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "年检到期预警天数",
+                                                "labelWidth": "50%",
+                                                "name": "r9"
+                                            },
+                                            "name": "MyTextField173",
+                                            "designerId": "5353e0d6-b1c6-4dac-8ebf-2facaf8a8fb7"
+                                        },
+                                        {
+                                            "type": "Ext.field.Select",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "x-field-picker"
+                                                ],
+                                                "displayField": "controlname",
+                                                "id": "EngReformcheckTask_contype",
+                                                "itemId": "EngReformcheckTask_contype",
+                                                "label": "控制方式",
+                                                "labelWidth": "40%",
+                                                "name": "contype",
+                                                "required": true,
+                                                "store": "eng_kzfslist",
+                                                "valueField": "controlid"
+                                            },
+                                            "name": "MySelectField13",
+                                            "designerId": "9197e927-d022-430e-b020-f5b304248b4f"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "hidden": true,
+                                                "id": "EngReformcheckTask_controlnum",
+                                                "label": "群控台数",
+                                                "labelWidth": "50%",
+                                                "name": "controlnum"
+                                            },
+                                            "name": "MyTextField174",
+                                            "designerId": "73a7bb53-2e60-4043-842f-5a38a953bea5"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "层",
+                                                "labelWidth": "40%",
+                                                "name": "floor"
+                                            },
+                                            "name": "MyTextField175",
+                                            "designerId": "912c78b3-cdae-4b9a-a9ad-6df56c288ad7"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "站",
+                                                "labelWidth": "40%",
+                                                "name": "stage"
+                                            },
+                                            "name": "MyTextField176",
+                                            "designerId": "1b115953-fc06-4b61-b9d3-8ab6462f37f8"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "门",
+                                                "labelWidth": "40%",
+                                                "name": "door"
+                                            },
+                                            "name": "MyTextField177",
+                                            "designerId": "9f005818-cd9d-4ede-8e62-29d9cf4f77e7"
+                                        },
+                                        {
+                                            "type": "Ext.field.Select",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "x-field-picker"
+                                                ],
+                                                "displayField": "placename",
+                                                "label": "电梯使用场所",
+                                                "labelWidth": "50%",
+                                                "name": "useplace",
+                                                "options": null,
+                                                "required": true,
+                                                "store": "eng_placelist",
+                                                "valueField": "placeid"
+                                            },
+                                            "name": "MySelectField2",
+                                            "designerId": "9aead579-1530-4982-8c39-474f3e5a0417"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "EngReformcheckTask_domainname",
+                                                "itemId": "EngReformcheckTask_domainname",
+                                                "label": "区域",
+                                                "labelWidth": "40%",
+                                                "name": "domainname"
+                                            },
+                                            "name": "MyTextField168",
+                                            "designerId": "30df1941-c5d0-4740-8ea1-99ab9d5113bf",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onEngReformcheckTask_domainnameInitialize",
+                                                        "implHandler": [
+                                                            "var me = this;",
+                                                            "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                        ],
+                                                        "name": "initialize"
+                                                    },
+                                                    "name": "onEngReformcheckTask_domainnameInitialize",
+                                                    "designerId": "1e14ca76-6c1e-4c4d-8b4c-156ec5186611"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "x-field-picker"
+                                                ],
+                                                "id": "EngReformcheckTask_domainid",
+                                                "itemId": "EngReformcheckTask_domainid",
+                                                "name": "domainid"
+                                            },
+                                            "name": "MyHiddenField37",
+                                            "designerId": "9968828d-b1e3-4290-ade9-18e1ff5ec138"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": null,
+                                                "id": "EngReformcheckTask_provinciallevelname",
+                                                "itemId": "EngReformcheckTask_provinciallevelname",
+                                                "label": "省份",
+                                                "labelWidth": "40%",
+                                                "name": "provinciallevelname"
+                                            },
+                                            "name": "MyTextField169",
+                                            "designerId": "a8dad724-be0f-47c8-9a62-1545a3914bfe",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onEngReformcheckTask_provinciallevelnameInitialize",
+                                                        "implHandler": [
+                                                            "var me = this;",
+                                                            "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                        ],
+                                                        "name": "initialize"
+                                                    },
+                                                    "name": "onEngReformcheckTask_provinciallevelnameInitialize",
+                                                    "designerId": "c42d8c46-8e5e-437e-a6e9-eafae92ce121"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "x-field-picker"
+                                                ],
+                                                "id": "EngReformcheckTask_provinciallevelid",
+                                                "itemId": "EngFirstCheckTask_provinciallevelid",
+                                                "name": "provinciallevelid"
+                                            },
+                                            "name": "MyHiddenField38",
+                                            "designerId": "7201bf5c-3d7f-4d17-b1cc-15c1b101517f"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "EngReformcheckTask_citylevelname",
+                                                "itemId": "EngReformcheckTask_citylevelname",
+                                                "label": "市",
+                                                "labelWidth": "40%",
+                                                "name": "citylevelname"
+                                            },
+                                            "name": "MyTextField170",
+                                            "designerId": "97e909a9-9e1a-4d76-b6ad-bb9c529bc5e3",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onEngReformcheckTask_citylevelnameInitialize",
+                                                        "implHandler": [
+                                                            "var me = this;",
+                                                            "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                        ],
+                                                        "name": "initialize"
+                                                    },
+                                                    "name": "onEngReformcheckTask_citylevelnameInitialize",
+                                                    "designerId": "0eee336b-3874-45fe-bbeb-c4f30a5183f8"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "x-field-picker"
+                                                ],
+                                                "id": "EngReformcheckTask_citylevelid",
+                                                "itemId": "EngReformcheckTask_citylevelid",
+                                                "name": "citylevelid"
+                                            },
+                                            "name": "MyHiddenField39",
+                                            "designerId": "cc2cd8ea-f515-4e97-9e1a-9c6ab4687950"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "EngReformcheckTask_countylevelname",
+                                                "itemId": "EngFirstCheckTask_countylevelname",
+                                                "label": "区",
+                                                "labelWidth": "40%",
+                                                "name": "countylevelname"
+                                            },
+                                            "name": "MyTextField171",
+                                            "designerId": "0bb3c785-b346-44c5-92eb-5d4c068b7fc3",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onEngReformcheckTask_countylevelnameInitialize",
+                                                        "implHandler": [
+                                                            "var me = this;",
+                                                            "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                        ],
+                                                        "name": "initialize"
+                                                    },
+                                                    "name": "onEngReformcheckTask_countylevelnameInitialize",
+                                                    "designerId": "ed6da715-0373-4139-8d9c-57322b09a42f"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "x-field-picker"
+                                                ],
+                                                "id": "EngReformcheckTask_countylevelid",
+                                                "itemId": "EngReformcheckTask_countylevelid",
+                                                "name": "countylevelid"
+                                            },
+                                            "name": "MyHiddenField40",
+                                            "designerId": "b4aaadf4-68ac-4dc6-a054-c669811feb45"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "x-field-search"
+                                                ],
+                                                "id": "EngReformcheckTask_r2",
+                                                "itemId": "EngReformcheckTask_r2",
+                                                "label": "坐标",
+                                                "labelWidth": "40%",
+                                                "name": "r2"
+                                            },
+                                            "name": "MyTextField45",
+                                            "designerId": "4b02f1d1-51ad-480b-93fe-787b4310c06f",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onEngReformcheckTask_r2Initialize",
+                                                        "implHandler": [
+                                                            "var me = this;",
+                                                            "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                        ],
+                                                        "name": "initialize"
+                                                    },
+                                                    "name": "onEngReformcheckTask_r2Initialize",
+                                                    "designerId": "f53450bd-6012-45b4-b537-941338764bd8"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "计划检验日期",
+                                                "labelWidth": "40%",
+                                                "name": "plandate",
+                                                "readOnly": true
+                                            },
+                                            "name": "MyTextField47",
+                                            "designerId": "ea61228f-f496-4052-a6b0-76da0aee37fd"
+                                        },
+                                        {
+                                            "type": "Ext.field.DatePicker",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dateFormat": "Y-m-d",
+                                                "label": "检验日期",
+                                                "labelWidth": "50%",
+                                                "name": "checkdate",
+                                                "placeHolder": null
+                                            },
+                                            "name": "MyDatePicker14",
+                                            "designerId": "938b4637-e9f3-4887-bf82-8c536a80b7fe",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.picker.Date",
+                                                    "reference": {
+                                                        "name": "picker",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "slotOrder": [
+                                                            "year",
+                                                            "month",
+                                                            "day"
+                                                        ],
+                                                        "yearTo": 2200
+                                                    },
+                                                    "name": "MyDatePicker7",
+                                                    "designerId": "1ff52b06-0073-4f17-af46-5ba4683e92d5",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "doneButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "确认"
+                                                            },
+                                                            "name": "MyButton8",
+                                                            "designerId": "dabe7e11-bb33-4d93-b165-28e95ba4a499"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Button",
+                                                            "reference": {
+                                                                "name": "cancelButton",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "text": "取消"
+                                                            },
+                                                            "name": "MyButton13",
+                                                            "designerId": "bc80855c-d7c4-45e1-bb09-2e2ca044b29c"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.TextArea",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "EngReformcheckTask_checkuserName",
+                                                "itemId": "EngReformcheckTask_checkuserName",
+                                                "label": "检验人员",
+                                                "labelWidth": "40%",
+                                                "name": "checkuserName",
+                                                "required": true
+                                            },
+                                            "name": "MyTextArea30",
+                                            "designerId": "6b328c72-4e68-4cc0-99d0-bd0784abc0f2",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onEngReformcheckTask_checkuserNameInitialize",
+                                                        "implHandler": [
+                                                            "var me = this;",
+                                                            "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                        ],
+                                                        "name": "initialize"
+                                                    },
+                                                    "name": "onEngReformcheckTask_checkuserNameInitialize",
+                                                    "designerId": "dfa5406c-59a2-4114-a797-6816f101b820"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "报告编号",
+                                                "labelWidth": "40%",
+                                                "name": "reportid",
+                                                "readOnly": true,
+                                                "required": true
+                                            },
+                                            "name": "MyTextField46",
+                                            "designerId": "a027ed90-f61b-48e8-bba0-64985580c556"
+                                        },
+                                        {
+                                            "type": "Ext.field.Toggle",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "EngReformcheckTask_isreformflag",
+                                                "label": "是否需要整改",
+                                                "labelWidth": "40%",
+                                                "maxValueCls": "x-toggle-on-red",
+                                                "minValueCls": "x-toggle-off-green",
+                                                "name": "isreformflag"
+                                            },
+                                            "name": "MyToggleField",
+                                            "designerId": "f30d9bb2-2bcd-4dc5-80d7-db667adcc548"
+                                        },
+                                        {
+                                            "type": "Ext.field.TextArea",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "hidden": true,
+                                                "label": "备注"
+                                            },
+                                            "name": "MyTextArea1",
+                                            "designerId": "12c39d7a-3b97-4629-bdfe-e1af8c4ab5c6"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "name": "creator"
+                                            },
+                                            "name": "MyHiddenField7",
+                                            "designerId": "80f7f31f-5dde-431b-be2a-bfb328de73c2"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "name": "projectid"
+                                            },
+                                            "name": "MyHiddenField41",
+                                            "designerId": "6ea7d1ea-01f1-4e24-b04e-9b8cb088e8a5"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "name": "custid"
+                                            },
+                                            "name": "MyHiddenField42",
+                                            "designerId": "4f54dbe2-48ce-4a6a-9cb6-d16faba7e905"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "name": "createname"
+                                            },
+                                            "name": "MyHiddenField43",
+                                            "designerId": "af8cdb69-c88c-45e3-8ad5-a862c5d4ca23"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "name": "createdeptname"
+                                            },
+                                            "name": "MyHiddenField44",
+                                            "designerId": "c31f8a32-12c8-4bca-9774-dff4117f50bc"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "name": "liftautono"
+                                            },
+                                            "name": "MyHiddenField45",
+                                            "designerId": "43f3cc48-7ce0-4c80-8061-e8e26a1d29cd"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "name": "kjkd"
+                                            },
+                                            "name": "MyHiddenField46",
+                                            "designerId": "8aa68e12-ee13-4a10-acce-f3817b0b3beb"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "EngReformcheckTask_checkuser",
+                                                "itemId": "EngReformcheckTask_checkuser",
+                                                "name": "checkuser"
+                                            },
+                                            "name": "MyHiddenField12",
+                                            "designerId": "3560bb82-033c-4557-a5fa-885b8dc5752b"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "name": "createdeptid"
+                                            },
+                                            "name": "MyHiddenField8",
+                                            "designerId": "1b349ba2-9ac8-47b5-90ac-be4e85e3c969"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "name": "elevatorid"
+                                            },
+                                            "name": "MyHiddenField9",
+                                            "designerId": "6c307d57-d6e6-4b6b-bc9f-9784850f0740"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "EngReformcheckTask_jnlno",
+                                                "itemId": "EngReformcheckTask_jnlno",
+                                                "name": "jnlno"
+                                            },
+                                            "name": "MyHiddenField13",
+                                            "designerId": "74f9b641-d8ca-4075-9bbf-b6e3beeae3f2"
+                                        },
+                                        {
+                                            "type": "Ext.field.Hidden",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "EngReformcheckTask_r1",
+                                                "itemId": "EngFirstCheckTask_r1",
+                                                "name": "r1"
+                                            },
+                                            "name": "MyHiddenField24",
+                                            "designerId": "170f4ebd-5804-454b-a305-85847094630b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-button-three",
+                                            "liftnet-button"
+                                        ],
+                                        "id": "EngReformcheck_Panel1",
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel7",
+                                    "designerId": "91b781ad-2613-4bd9-b706-5a62a308c90b",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "docked": null,
+                                                "id": "EngReformcheckTask_BtnSave",
+                                                "itemId": "EngReformcheckTask_BtnSave",
+                                                "layout|flex": 1,
+                                                "text": "保存"
+                                            },
+                                            "name": "MyButton14",
+                                            "designerId": "e548edff-7507-49fc-b9d2-4edfa5ed73c9"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-buttonColor-red"
+                                                ],
+                                                "docked": null,
+                                                "id": "EngReformcheckTask_BtnCommit",
+                                                "itemId": "EngReformcheckTask_BtnCommit",
+                                                "layout|flex": 1,
+                                                "text": "提交"
+                                            },
+                                            "name": "MyButton16",
+                                            "designerId": "db88a517-69bc-4d82-a7c7-cb4205fa8124"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-buttonColor-green"
+                                                ],
+                                                "docked": null,
+                                                "id": "EngReformcheckTask_BtnCancel",
+                                                "itemId": "EngReformcheckTask_BtnCancel",
+                                                "layout|flex": 1,
+                                                "text": null
+                                            },
+                                            "name": "MyButton85",
+                                            "designerId": "1490c6c4-5d4d-4607-94d1-29af525346b1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-button-two",
+                                            "liftnet-button"
+                                        ],
+                                        "hidden": true,
+                                        "id": "EngReformcheck_Panel2",
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel52",
+                                    "designerId": "f2d78bbc-d9ba-4410-bafa-1c43bc550062",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-buttonColor-green"
+                                                ],
+                                                "docked": "left",
+                                                "id": "EngReformcheckTask_BtnAgree",
+                                                "itemId": "EngReformcheckTask_BtnAgree",
+                                                "text": "同意"
+                                            },
+                                            "name": "MyButton14",
+                                            "designerId": "f4b6e50f-317a-4181-99b2-7a00cec4532f"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-buttonColor-red"
+                                                ],
+                                                "docked": "right",
+                                                "id": "EngReformcheckkTask_BtnDisagree",
+                                                "itemId": "EngReformcheckTask_BtnDisagree",
+                                                "text": "不同意"
+                                            },
+                                            "name": "MyButton16",
+                                            "designerId": "54c3ebea-512b-4909-93c1-55c9d4ad551f"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "badgeText": null,
+                                "itemId": "EngReformcheckTask_CtnCheckProject",
+                                "layout": "vbox",
+                                "title": "检验项目"
+                            },
+                            "name": "MyContainer11",
+                            "designerId": "05701c68-e38c-4bf9-9f8a-7c889f8903a5",
+                            "cn": [
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-home-listBox"
+                                        ],
+                                        "disableSelection": true,
+                                        "id": "EngReformcheckTask_CheckProList",
+                                        "itemId": "EngReformcheckTask_CheckProList",
+                                        "layout|flex": 1,
+                                        "store": "firstcheck_task_checkproject"
+                                    },
+                                    "name": "MyList22",
+                                    "designerId": "3723d095-2f26-438f-a9ee-9ad0c2b2fdb2",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div style=\"width:100%;height:72px;\" class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">",
+                                                    "    <div style=\"float:left;width:85%\">",
+                                                    "        <div style=\"width:100%;\" >",
+                                                    "            <div style=\"width:20%;float:left;text-align:center;line-height:24px;\">{jnum}&nbsp;</div>",
+                                                    "            <div style=\"width:20%;float:left;text-align:center;line-height:24px;\">{projecttype}&nbsp;</div>",
+                                                    "            <div style=\"width:60%;float:left;text-align:center;line-height:24px;overflow:hidden; text-overflow:ellipsis;white-space: nowrap;\">{ctype}&nbsp;</div>",
+                                                    "        </div>",
+                                                    "        <div style=\"overflow:hidden; text-overflow:ellipsis;white-space: nowrap;width:100%;padding-left:22px;line-height:24px;\">{projectcontent}&nbsp;</div>",
+                                                    "        <div style=\"overflow:hidden; text-overflow:ellipsis;white-space: nowrap;width:100%;padding-left:22px;line-height:24px;\">{checkresult}&nbsp;</div>",
+                                                    "    </div>",
+                                                    "    ",
+                                                    "    <div style=\"float:right;width:15%;\">",
+                                                    "        <div id = 'clickArea' style=\"width:100%;float:right;text-align:center;line-height:72px;\">",
+                                                    "            <tpl if='checkverdict == \"√\"'>",
+                                                    "            <!--定义一个id(statusArea)用于识别点击位置",
+                                                    "                在list的itemtap事件中，用e.target.id可获得被点击对象的id-->",
+                                                    "                <i id='statusArea' class='fa fa-lg fa-check-circle' style='color:green'></i>",
+                                                    "            <tpl else>",
+                                                    "            <!--如果状态为N，显示“红色叉” -->",
+                                                    "            <tpl if='checkverdict == \"×\"'>",
+                                                    "                <i id='statusArea' class='fa fa-lg fa-times-circle' style='color:red'></i>",
+                                                    "            <tpl else>",
+                                                    "                <!--默认状态为空，显示“灰色横” -->",
+                                                    "                <i id='statusArea' class='fa fa-lg fa-minus-circle' style='color:#ccc'></i>",
+                                                    "            </tpl>",
+                                                    "        </tpl>",
+                                                    "       </div>",
+                                                    "   </div>",
+                                                    "</div>\t"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "a0d27711-2092-4da6-9864-dfcebf9ddbea"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": null,
+                                        "cls": [
+                                            "liftnet-button"
+                                        ],
+                                        "height": 30,
+                                        "id": "EngReformcheck_Panel3",
+                                        "layout": "hbox",
+                                        "maxHeight": null
+                                    },
+                                    "name": "MyPanel45",
+                                    "designerId": "78a999ca-9006-47ae-8ce0-68e7dfdceed6",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "centered": true,
+                                                "cls": [
+                                                    "liftnet-fontColor-black",
+                                                    "liftnet-font-size16"
+                                                ],
+                                                "html": "",
+                                                "id": "EngReformcheck_LblCount",
+                                                "itemId": "EngReformcheck_LblCount"
+                                            },
+                                            "name": "MyLabel28",
+                                            "designerId": "2f0d3d3a-3bbd-4f24-afd6-a9f4aa17d95a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-button-two",
+                                            "liftnet-button"
+                                        ],
+                                        "hidden": true,
+                                        "id": "EngReformcheck_Panel4",
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel51",
+                                    "designerId": "9a611a55-3b8b-45ad-bcf5-e689e5641281",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "docked": "left",
+                                                "id": "EngFirstCheckTask_BtnSave3",
+                                                "itemId": "EngReformcheckTask_BtnSave",
+                                                "text": "保存"
+                                            },
+                                            "name": "MyButton14",
+                                            "designerId": "627ddcc1-a261-4593-a82b-2135419eab02"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-buttonColor-green"
+                                                ],
+                                                "docked": "right",
+                                                "id": "EngFirstCheckTask_BtnCommit3",
+                                                "itemId": "EngReformcheckTask_BtnCommit",
+                                                "text": "提交"
+                                            },
+                                            "name": "MyButton16",
+                                            "designerId": "122f70ed-d15e-483e-ad2f-ae2c43738db0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "badgeText": null,
+                                "itemId": "EngFirstCheckTask_CtnSceneInfo",
+                                "layout": "vbox",
+                                "title": "现场信息"
+                            },
+                            "name": "MyContainer",
+                            "designerId": "2492124e-5559-44d6-ab4c-d89033c57648",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 333,
+                                        "id": "EngFirstCheckTask_ImgCtn1",
+                                        "itemId": "EngFirstCheckTask_ImgCtn",
+                                        "layout": "vbox",
+                                        "layout|flex": null,
+                                        "margin": null,
+                                        "padding": "20 0"
+                                    },
+                                    "name": "MyContainer54",
+                                    "designerId": "091199a5-f6b8-4544-bd47-ca9febbd4922",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Panel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout": "hbox",
+                                                "layout|flex": 1,
+                                                "margin": "",
+                                                "padding": null,
+                                                "style": "margin-top:5px;"
+                                            },
+                                            "name": "MyPanel55",
+                                            "designerId": "505f7452-b48c-4759-8347-40770c2b3d98",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "height": null,
+                                                        "layout": "vbox",
+                                                        "layout|flex": 1,
+                                                        "width": null
+                                                    },
+                                                    "name": "MyContainer58",
+                                                    "designerId": "f4e1ac86-a2ad-4d0a-bf6c-1c42a9ca65c9",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "60%",
+                                                                "id": "EngFirstCheckTask_photo_7",
+                                                                "itemId": "EngFirstCheckTask_camera",
+                                                                "src": "resources/images/camera.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg16",
+                                                            "designerId": "9f7800bf-fd93-454f-bd5a-aeb3fa276420"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": "",
+                                                                "id": "EngFirstCheckTask_photo_1_label_11",
+                                                                "margin": "0 15 0 0",
+                                                                "maxWidth": null,
+                                                                "padding": "0 0 0 15",
+                                                                "style": "white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                                                            },
+                                                            "name": "MyLabel30",
+                                                            "designerId": "488fec92-8e46-408a-a0cc-15a691d840da"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "height": null,
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_1_label_21",
+                                                                "padding": "0 0 0 15"
+                                                            },
+                                                            "name": "MyLabel31",
+                                                            "designerId": "604a7f72-1fd8-4759-b93b-8bfc7251f00d"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer56",
+                                                    "designerId": "6cc4e1de-e327-43de-bbee-fe6a5cbe4166",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "60%",
+                                                                "id": "EngFirstCheckTask_photo_8",
+                                                                "itemId": null,
+                                                                "src": "resources/images/notPhoto.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg16",
+                                                            "designerId": "9bd6730d-0876-4d9b-b03c-ec42c3eb73a5"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_2_label_11",
+                                                                "margin": "0 15 0 0",
+                                                                "maxWidth": null,
+                                                                "padding": "0 0 0 15",
+                                                                "style": "white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                                                            },
+                                                            "name": "MyLabel33",
+                                                            "designerId": "a477032b-7e30-4476-b500-86cde8823d06"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_2_label_21",
+                                                                "padding": "0 0 0 15"
+                                                            },
+                                                            "name": "MyLabel34",
+                                                            "designerId": "04bc88dc-a1cb-4bc3-8b74-d0448409e54b"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer57",
+                                                    "designerId": "7b5e9b47-f0a7-4bd6-917b-cd335fd58901",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "60%",
+                                                                "id": "EngFirstCheckTask_photo_9",
+                                                                "itemId": null,
+                                                                "src": "resources/images/notPhoto.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg16",
+                                                            "designerId": "e3cf96ad-afa8-4439-b5c5-0f80bc71c66a"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_3_label_11",
+                                                                "margin": "0 15 0 0",
+                                                                "padding": "0 0 0 15",
+                                                                "style": "white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                                                            },
+                                                            "name": "MyLabel35",
+                                                            "designerId": "82a0fedd-277c-4b6d-a209-111913a0845f"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_3_label_21",
+                                                                "padding": "0 0 0 15"
+                                                            },
+                                                            "name": "MyLabel36",
+                                                            "designerId": "39df04c3-98fc-431f-88af-8ba23673e7f0"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Panel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout": "hbox",
+                                                "layout|flex": 1,
+                                                "margin": "20 0",
+                                                "style": "margin-top:5px;"
+                                            },
+                                            "name": "MyPanel56",
+                                            "designerId": "373d3b0d-06bd-473d-97b5-893f1db46482",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer55",
+                                                    "designerId": "8cc03419-ff0d-4c67-a1f3-2c73e85af08e",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "60%",
+                                                                "id": "EngFirstCheckTask_photo_10",
+                                                                "itemId": null,
+                                                                "src": "resources/images/notPhoto.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg16",
+                                                            "designerId": "213bc314-25b5-40bb-a260-29ee2383d412"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_4_label_11",
+                                                                "margin": "0 15 0 0",
+                                                                "padding": "0 0 0 15",
+                                                                "style": "white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                                                            },
+                                                            "name": "MyLabel37",
+                                                            "designerId": "2c2d4294-1849-4da5-877a-bc22e524207f"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_4_label_21",
+                                                                "padding": "0 0 0 15"
+                                                            },
+                                                            "name": "MyLabel38",
+                                                            "designerId": "1bba4978-0ce3-4feb-a070-cc476c070b32"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer56",
+                                                    "designerId": "3efac167-64be-4af9-b575-10920746d3d0",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "60%",
+                                                                "id": "EngFirstCheckTask_photo_11",
+                                                                "itemId": null,
+                                                                "src": "resources/images/notPhoto.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg16",
+                                                            "designerId": "a8d4cddc-264e-4317-91a7-547403446d7c"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_5_label_11",
+                                                                "margin": "0 15 0 0",
+                                                                "padding": "0 0 0 15",
+                                                                "style": "white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                                                            },
+                                                            "name": "MyLabel39",
+                                                            "designerId": "d9f610c5-9c03-4866-969f-052cd94e8399"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_5_label_21",
+                                                                "padding": "0 0 0 15"
+                                                            },
+                                                            "name": "MyLabel40",
+                                                            "designerId": "2f28336a-766d-4c1b-924a-e4d3edcaceeb"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer57",
+                                                    "designerId": "9caeab4d-8623-441c-a7c5-a657ee0ae93c",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "60%",
+                                                                "id": "EngFirstCheckTask_photo_12",
+                                                                "itemId": null,
+                                                                "src": "resources/images/notPhoto.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg16",
+                                                            "designerId": "70e864e2-b5be-4ed4-806b-079e07c6e8de"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_6_label_11",
+                                                                "margin": "0 15 0 0",
+                                                                "padding": "0 0 0 15",
+                                                                "style": "white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                                                            },
+                                                            "name": "MyLabel41",
+                                                            "designerId": "c064f2a8-d87d-4d75-84de-57ac11516151"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "hidden": false,
+                                                                "html": null,
+                                                                "id": "EngFirstCheckTask_photo_6_label_21",
+                                                                "padding": "0 0 0 15"
+                                                            },
+                                                            "name": "MyLabel42",
+                                                            "designerId": "0a2e80ee-dec0-4c55-8146-4598fc11dd70"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": true,
+                                        "docked": "top",
+                                        "hidden": true,
+                                        "html": "<div style=\"text-align:center;margin:20px\">没有相关现场信息</div>",
+                                        "id": "EngFirstCheckTask_NoSceneInfo1",
+                                        "itemId": "EngFirstCheckTask_NoSceneInfo",
+                                        "width": "100%"
+                                    },
+                                    "name": "MyLabel43",
+                                    "designerId": "4d809ea7-d766-44fb-8615-0911c947c9a7"
+                                },
+                                {
+                                    "type": "Ext.ActionSheet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 65,
+                                        "hidden": true,
+                                        "hideOnMaskTap": true,
+                                        "id": "task_camera_show1",
+                                        "itemId": "Task_camera_show",
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyActionSheet2",
+                                    "designerId": "81341999-ea60-4dad-a0e0-83693f7d3484",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "docked": null,
+                                                "id": "task_source_camear1",
+                                                "itemId": "task_source_camear",
+                                                "text": "相机",
+                                                "width": 110
+                                            },
+                                            "name": "MyButton73",
+                                            "designerId": "9d5f5553-fd13-4b44-b84a-fb6eb9f1c413"
+                                        },
+                                        {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer8",
+                                            "designerId": "81812122-f0ec-45f6-8707-91863f01fbc7"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "docked": null,
+                                                "id": "task_source_album1",
+                                                "itemId": "task_source_album",
+                                                "text": "相册",
+                                                "width": 110
+                                            },
+                                            "name": "MyButton75",
+                                            "designerId": "1a553e20-72ca-4598-82ca-f47113d20360"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "badgeText": null,
+                                "itemId": "EngFirstCheckTask_CtnPartInfo",
+                                "layout": "vbox",
+                                "title": "零部件信息"
+                            },
+                            "name": "MyContainer1",
+                            "designerId": "43e7cf4a-e64b-4d97-ac4a-6464b68ed4a3",
+                            "cn": [
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fault-listBox"
+                                        ],
+                                        "disableSelection": true,
+                                        "id": "EngFirstCheckTask_PartList1",
+                                        "layout|flex": 1,
+                                        "store": "eng_firstcheckparts"
+                                    },
+                                    "name": "MyList",
+                                    "designerId": "640b66d5-f03a-437a-aa2f-52128e9c9797",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<!-- <div class = \"liftnet-font-size14 liftnet-fontColor-gray\">",
+                                                    "    <div>编码:</div>",
+                                                    "    <div>零件名称:</div>",
+                                                    "    <div>型号:</div>",
+                                                    "    <div>序列号:</div>",
+                                                    "    <div>零件类型:</div>",
+                                                    "</div> -->",
+                                                    "",
+                                                    "<div class=\"liftnet-Maintenance-TaskRecList\" style=\"height:100px\">",
+                                                    "    <div class=\"liftnet-Maintenance-TaskRecList-left\" style=\"left:14px\" >",
+                                                    "        <div class=\"liftnet-font-size16 {titleColor}\">{partsid}&nbsp;</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{partsname}&nbsp;</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{partsmodel}&nbsp;</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{partsno}&nbsp;</div>",
+                                                    "    </div>",
+                                                    "    <div class=\"liftnet-Maintenance-TaskRecList-right\" style=\"padding-top:0px;right:14px\">",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray liftnet-font-right\">{partstypeid}&nbsp;</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-font-right {textcolor}\">{iscoreShow}&nbsp;</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{partsremark}&nbsp;</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">数量:{num}&nbsp;</div>",
+                                                    "    </div>",
+                                                    "</div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "90ca869f-b847-4069-ac17-64848fb3cc13"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-button",
+                                            "liftnet-button-one"
+                                        ],
+                                        "id": "EngFirstCheckTask_PanelAdd1",
+                                        "itemId": "EngFirstCheckTask_PanelAdd"
+                                    },
+                                    "name": "MyPanel9",
+                                    "designerId": "fa17ce10-c707-43b7-a66d-6219dd19b304",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-no-border",
+                                                    "x-buttonColor-white"
+                                                ],
+                                                "id": "EngFirstCheckTask_BtnAddParts1",
+                                                "text": "<i class='fa fa-plus'></i>&nbsp;&nbsp;增加"
+                                            },
+                                            "name": "MyButton17",
+                                            "designerId": "ebce5b06-07d9-4fc0-a4c2-5efbe802d7d6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": true,
+                                        "docked": "top",
+                                        "hidden": true,
+                                        "html": "<div style=\"text-align:center;margin:20px\">没有相关零部件信息</div>",
+                                        "id": "EngFirstCheckTask_NoPartInfo1",
+                                        "itemId": "EngFirstCheckTask_NoPartInfo",
+                                        "width": "100%"
+                                    },
+                                    "name": "MyLabel44",
+                                    "designerId": "f5620cf4-6e27-49a5-bd90-e0096790ccfb"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

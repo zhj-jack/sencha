@@ -1,0 +1,177 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userClassName": "Engineer.EngHomeTodoStatus",
+        "hidden": true,
+        "hideOnMaskTap": true,
+        "id": "EngNavMenuProcessingState2",
+        "itemId": null,
+        "layout": "vbox",
+        "modal": true,
+        "padding": "5 10"
+    },
+    "name": "Engineer.EngNavMaintainStatus1",
+    "designerId": "7a819cd0-dead-49aa-8270-c6da77a3e3b2",
+    "cn": [
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "EngHomeTodoTypeList",
+                "itemId": "EngHomeTodoTypeList",
+                "layout|flex": 1,
+                "store": "eng_todotype"
+            },
+            "name": "MyList18",
+            "designerId": "5013b1f8-a33f-4f50-86b0-96f6d49d8b72",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div>{type}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "af0e734e-3557-481a-87f9-92dc25127d1d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "hidden": false,
+                "id": "EngHomeTodoStatus_0",
+                "itemId": "EngHomeTodoStatus_0",
+                "text": "全部"
+            },
+            "name": "MyButton6",
+            "designerId": "a5bcaaf1-862b-490d-ab09-030599dc2d2b"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "hidden": false,
+                "id": "EngHomeTodoStatus_1",
+                "itemId": "EngHomeTodoStatus_1",
+                "text": "保养计划"
+            },
+            "name": "MyButton13",
+            "designerId": "04ab31b2-12f6-42e0-a53d-cf00c009766e"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "hidden": false,
+                "id": "EngHomeTodoStatus_2",
+                "itemId": "EngHomeTodoStatus_2",
+                "text": "维修任务"
+            },
+            "name": "MyButton14",
+            "designerId": "641421f3-6ee6-4299-bb9c-d46157f88e1d"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "hidden": false,
+                "id": "EngHomeTodoStatus_3",
+                "itemId": "EngHomeTodoStatus_3",
+                "text": "故障报告"
+            },
+            "name": "MyButton19",
+            "designerId": "8762a756-78ef-410c-b48c-43efd0029e9a"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "hidden": false,
+                "id": "EngHomeTodoStatus_4",
+                "itemId": "EngHomeTodoStatus_4",
+                "text": "首检任务"
+            },
+            "name": "MyButton50",
+            "designerId": "7f443254-1952-455a-b743-92512dad7a85"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "hidden": false,
+                "id": "EngHomeTodoStatus_5",
+                "itemId": "EngHomeTodoStatus_5",
+                "text": "保养任务"
+            },
+            "name": "MyButton87",
+            "designerId": "646376b9-2be4-4a70-8d8b-1b19aa0e5e1d"
+        }
+    ]
+}

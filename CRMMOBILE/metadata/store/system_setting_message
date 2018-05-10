@@ -1,0 +1,269 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "system_setting_message",
+        "storeId": "system_setting_message"
+    },
+    "name": "setting_message1",
+    "designerId": "db301e3f-e7c7-4206-9f50-502afaa67de7",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "type": "string"
+            },
+            "name": "field23",
+            "designerId": "627becee-3b0d-44f6-97af-63e73de3dabb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Topic",
+                "type": "string"
+            },
+            "name": "field893",
+            "designerId": "0b2faaa6-9f5e-4cca-b489-224913e68d5b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "content",
+                "type": "string"
+            },
+            "name": "field24",
+            "designerId": "ec124975-8d78-442f-ad87-bb2c5dec9f86"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "date",
+                "type": "string"
+            },
+            "name": "field25",
+            "designerId": "1c4bdf83-ea3f-42a0-aa20-35de99e840b7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "opername",
+                "type": "string"
+            },
+            "name": "field26",
+            "designerId": "a75a768c-d05c-4469-9725-f02fa4dc1d13"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "msgtype",
+                "type": "string"
+            },
+            "name": "field199",
+            "designerId": "6b442057-c238-45d7-870e-eb0c88cf551a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "",
+                    "加载公告",
+                    ""
+                ],
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "this.setData([]);",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/appmessagge';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('读取公告列表失败');",
+                    "            }else{",
+                    "                me.setData(ret.data);",
+                    "                onSuccess(ret.data.length);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('读取公告列表失败');",
+                    "        }",
+                    "        );",
+                    "//         function(ret) {",
+                    "//             me.setData(ret.data);",
+                    "//             onSuccess(ret.data.length);",
+                    "//         },",
+                    "//     onFailure);",
+                    "} else {",
+                    "    // 消息列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            title: '停机通知',",
+                    "            content: '系统今晚24点停机维护,请大家做好数据备份。',",
+                    "            opername: '管理员',",
+                    "            date: '2015-06-17',",
+                    "            msgtype:'1'",
+                    "        },",
+                    "        {",
+                    "            title: '停机通知',",
+                    "            content: '系统今晚24点停机维护,请大家做好数据备份。',",
+                    "            opername: '管理员',",
+                    "            date: '2015-06-13',",
+                    "            msgtype:'0'",
+                    "        },",
+                    "        {",
+                    "            title: '停机通知',",
+                    "            content: '系统今晚24点停机维护,请大家做好数据备份。',",
+                    "            opername: '管理员',",
+                    "            date: '2015-06-11',",
+                    "            msgtype:'1'",
+                    "        },",
+                    "        {",
+                    "            title: '停机通知',",
+                    "            content: '系统今晚24点停机维护,请大家做好数据备份。',",
+                    "            opername: '管理员',",
+                    "            date: '2015-06-17',",
+                    "            msgtype:'0'",
+                    "        },",
+                    "        {",
+                    "            title: '停机通知',",
+                    "            content: '系统今晚24点停机维护,请大家做好数据备份。',",
+                    "            opername: '管理员',",
+                    "            date: '2015-06-13',",
+                    "            msgtype:'1'",
+                    "        },",
+                    "        {",
+                    "            title: '停机通知',",
+                    "            content: '系统今晚24点停机维护,请大家做好数据备份。',",
+                    "            opername: '管理员',",
+                    "            date: '2015-06-11',",
+                    "            msgtype:'0'",
+                    "        },",
+                    "        {",
+                    "            title: '停机通知',",
+                    "            content: '系统今晚24点停机维护,请大家做好数据备份。',",
+                    "            opername: '管理员',",
+                    "            date: '2015-06-17',",
+                    "            msgtype:'1'",
+                    "        },",
+                    "        {",
+                    "            title: '停机通知',",
+                    "            content: '系统今晚24点停机维护,请大家做好数据备份。',",
+                    "            opername: '管理员',",
+                    "            date: '2015-06-13',",
+                    "            msgtype:'0'",
+                    "        },",
+                    "        {",
+                    "            title: '停机通知',",
+                    "            content: '系统今晚24点停机维护,请大家做好数据备份。',",
+                    "            opername: '管理员',",
+                    "            date: '2015-06-11',",
+                    "            msgtype:'1'",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess(3);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "87d5fe63-349f-405d-86c8-8091e7ec6d5d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "8ea38152-66e2-4436-9d24-97769b2c8c98"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "if(parm!=='') {//分类显示",
+                    "    this.filterBy(function(item) {",
+                    "        var s = item.get('msgtype');",
+                    "        return parm==s;",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "f8986370-1d01-4715-9676-6cd958a23d01"
+        }
+    ]
+}

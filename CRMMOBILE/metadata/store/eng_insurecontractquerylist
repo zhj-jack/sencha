@@ -1,0 +1,375 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_insurecontractquerylist",
+        "storeId": "eng_insurecontractquerylist"
+    },
+    "name": "eng_contractquerylist1",
+    "designerId": "0078f086-7a9b-431b-ad9a-3ec0b8bf3f55",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm",
+                    "action"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/bxcontract/api/1.0/bxlist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {",
+                    "        userid:global.getUserId(),",
+                    "        curpagenum:parm.curpagenum,",
+                    "        pagesize:parm.pagesize,",
+                    "        searchkey:parm.searchkey,",
+                    "        startdate:parm.startdate,",
+                    "        enddate:parm.enddate,",
+                    "        flowstatus:parm.flowstatus",
+                    "    };",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            var info;",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('搜索合同失败');",
+                    "            }else{",
+                    "                if(ret.data.length===0){",
+                    "                    if(parm.curpagenum===1){",
+                    "                        switch(action){",
+                    "",
+                    "                            case 'loadmore':",
+                    "                                break;",
+                    "                            case 'refresh':",
+                    "                            case 'search':",
+                    "                                info = '没有相关合同数据';",
+                    "                                break;",
+                    "                        }",
+                    "                        onFailure(info);",
+                    "                    }else{",
+                    "                        onFailure('没有更多数据！');",
+                    "                    }",
+                    "                    return;",
+                    "                }",
+                    "                var d = me.decoDat(ret.data);",
+                    "                //第一次加载直接设置数据",
+                    "                if(parm.curpagenum==1){",
+                    "                    me.setData(d);",
+                    "                }else{",
+                    "                    //分页用法，在原有数据上继续添加",
+                    "                    var n = d.length;",
+                    "                    for(var i=0; i<n; i++) {",
+                    "                        me.add(d[i]);",
+                    "                    }",
+                    "                }",
+                    "                var resetCurPage = false;",
+                    "                if(action==='loadmore'){",
+                    "                    //加载更多的时候不需要重置页数",
+                    "                     onSuccess(ret.data.length,resetCurPage);",
+                    "                }else{",
+                    "                    //其他情况需要将页数重置为1",
+                    "                     onSuccess(ret.data.length,!resetCurPage);",
+                    "                }",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            var info;",
+                    "            var cutOne = false;",
+                    "            switch(action){",
+                    "",
+                    "                case 'loadmore':",
+                    "                    info = '加载更多合同数据失败';",
+                    "                    cutOne = true;",
+                    "                    break;",
+                    "                case 'refresh':",
+                    "                    info = '刷新合同列表失败';",
+                    "                    break;",
+                    "                case 'search':",
+                    "                    info = '搜索合同失败';",
+                    "                    break;",
+                    "            }",
+                    "",
+                    "            onFailure(info,cutOne);",
+                    "        }",
+                    "    );",
+                    "} else {",
+                    "    var me = this;",
+                    "    //分页模拟",
+                    "    var start = (parm.curpagenum-1) * parm.pagesize,",
+                    "        end = parm.curpagenum * parm.pagesize;",
+                    "    //         end = end>50?50:end;",
+                    "    if(end>40){",
+                    "        onFailure('没有更多数据！',false);",
+                    "        return;",
+                    "    }",
+                    "    if(action=='firstload'||action=='refresh'||action=='search'){",
+                    "        //模拟刷新，搜索，第一次加载",
+                    "        //清空数据",
+                    "        this.setData([]);",
+                    "    }",
+                    "    for(var i=start; i<end; i++) {",
+                    "        var d = me.decoDat([",
+                    "            {",
+                    "                contractid:'WB1600073'+(i+1)+'---'+parm.flowstatus,",
+                    "                contractamt:'18,000',",
+                    "                acceptanceunit: '中国平安',",
+                    "                contractnum: i+1,",
+                    "                insurancemanager:'黄林--'+action,",
+                    "                linkphone:'10086',",
+                    "                insurancestartdate:'2015-10-20',",
+                    "                insuranceenddate:'2016-10-20',",
+                    "                signdate:'2015-10-19',",
+                    "//                 titleColor:'liftnet-fontColor-blue'",
+                    "            }",
+                    "        ]);",
+                    "        this.add(d);",
+                    "    }",
+                    "    // 演示数据",
+                    "    if(action=='refresh'||action=='search'||action=='firstload'){",
+                    "        onSuccess(end - start + 1,true);",
+                    "    }else{",
+                    "        onSuccess(end - start + 1,false);",
+                    "    }",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "d3a4f2a7-1289-489a-b773-091ba0dc9702"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "for(var i=0;i<data.length; i++) {",
+                    "    data[i].titleColor = 'liftnet-fontColor-blue';",
+                    "}",
+                    "return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "c1db0a13-e3d1-4c52-8d4c-9ab31fed628d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "insurancejnlno"
+            },
+            "name": "field308",
+            "designerId": "95fab6f3-cc66-4df7-8c7f-c6411789e680"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractid"
+            },
+            "name": "field309",
+            "designerId": "50a1abbd-275f-4590-b47d-d5696d75085e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custname"
+            },
+            "name": "field310",
+            "designerId": "004ccee8-4925-43f6-95f4-724ef30ff35b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field311",
+            "designerId": "9b9f7278-676d-4d49-a2ca-359cb01ff18f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "insurancemanager"
+            },
+            "name": "field312",
+            "designerId": "ce451ec1-5701-415a-b918-09b7d7b11680"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractamt"
+            },
+            "name": "field772",
+            "designerId": "528a1d9d-ee60-4c9b-96a3-8b6951d0d6dd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "acceptanceunit"
+            },
+            "name": "field788",
+            "designerId": "3b9b7ad6-84a2-4d94-85f6-7004711b26fd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "linkphone"
+            },
+            "name": "field789",
+            "designerId": "1eea5636-9f4c-483c-9801-17c9c5609157"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "signdate"
+            },
+            "name": "field313",
+            "designerId": "71af33d0-d85c-4e29-866e-6ae89942d772"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "insurancestartdate"
+            },
+            "name": "field315",
+            "designerId": "03503094-d10c-447e-9dde-fca77d7fa8a2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleColor"
+            },
+            "name": "field316",
+            "designerId": "858fe91a-88bd-42ff-a83b-9eb2b2b0d628"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "insuranceenddate"
+            },
+            "name": "field580",
+            "designerId": "ce5e960d-890e-4d24-b187-848274966743"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractnum"
+            },
+            "name": "field671",
+            "designerId": "91618df5-2219-4d90-9d84-79450f4ef26c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status"
+            },
+            "name": "field770",
+            "designerId": "6de3b4d3-639d-4f32-af27-c936cbbac2d0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "outdan"
+            },
+            "name": "field771",
+            "designerId": "746f0cca-bb54-4bcb-bb7c-cf271fc39e5e"
+        }
+    ]
+}

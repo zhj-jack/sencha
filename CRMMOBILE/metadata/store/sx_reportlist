@@ -1,0 +1,354 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sx_reportlist",
+        "storeId": "sx_reportlist"
+    },
+    "name": "MyStore",
+    "designerId": "fedcc79e-ff99-45f5-be30-2ade162d37a5",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm",
+                    "action"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "//console.log(JsonUtil.convertToString(parm));",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/rpt/api/1.0/rptlist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var info;",
+                    "            if(ret.status.code!=200){",
+                    "                if(parm.searchkey!==''){",
+                    "                    onFailure('搜索故障报告失败');",
+                    "                    return;",
+                    "                }",
+                    "                onFailure('读取故障报告列表失败');",
+                    "            }else{",
+                    "                if(ret.data.length===0){",
+                    "                    if(parm.curpagenum===1){",
+                    "                        switch(action){",
+                    "                            case 'refresh':",
+                    "                                info = '没有故障报告数据';",
+                    "                                break;",
+                    "                            case 'loadmore':",
+                    "                                break;",
+                    "                            case 'firstload':",
+                    "                                info = '没有故障报告数据';",
+                    "                                break;",
+                    "                            case 'search':",
+                    "                                info = '没有相关故障报告数据';",
+                    "                                break;",
+                    "                        }",
+                    "",
+                    "                        me.setData(ret.data);",
+                    "                        onFailure(info);",
+                    "//                         onFailure('没有故障报告数据！');",
+                    "                    }else{",
+                    "                        onFailure('没有更多数据！');",
+                    "                    }",
+                    "                    return;",
+                    "                }",
+                    "                var d = me.decoDat(ret.data);",
+                    "                //第一次加载直接设置数据",
+                    "                if(parm.curpagenum==1){",
+                    "                    me.setData(d);",
+                    "                }else{",
+                    "                    //分页用法，在原有数据上继续添加",
+                    "                    var n = d.length;",
+                    "                    for(var i=0; i<n; i++) {",
+                    "                        me.add(d[i]);",
+                    "                    }",
+                    "                }",
+                    "                if(action==='loadmore'){",
+                    "                    onSuccess(d.length);",
+                    "                }else{",
+                    "                    onSuccess('resetCurPage');",
+                    "                }",
+                    "//                 onSuccess(d.data);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            var info;",
+                    "            switch(action){",
+                    "                case 'refresh':",
+                    "                    info = '刷新故障报告数据失败';",
+                    "                    break;",
+                    "                case 'loadmore':",
+                    "                    info = '加载更多故障报告数据失败';",
+                    "                    break;",
+                    "                case 'firstload':",
+                    "                    info = '获取故障报告数据失败';",
+                    "                    break;",
+                    "                case 'search':",
+                    "                    info = '搜索故障报告失败';",
+                    "                    break;",
+                    "            }",
+                    "            onFailure(info);",
+                    "//             onFailure('读取故障报告列表失败');",
+                    "        }",
+                    "    );",
+                    "//         function(ret) {",
+                    "//             var d = me.decoDat(ret.data);",
+                    "//             me.setData(d);",
+                    "//             onSuccess(d.length);",
+                    "//         },",
+                    "//         onFailure);",
+                    "} else {",
+                    "",
+                    "    //分页模拟",
+                    "    var start = (parm.curpagenum-1)*20,",
+                    "        end = parm.curpagenum * parm.pagesize;",
+                    "    //         end = end>50?50:end;",
+                    "    if(end>60){",
+                    "        onFailure('没有更多数据！');",
+                    "        return;",
+                    "    }",
+                    "",
+                    "    for(var i=start; i<end; i++) {",
+                    "        this.add({",
+                    "            trno:'trno'+(i),",
+                    "            rpno:'rpno'+(i),",
+                    "            rptime:'2015-12-01 10:0'+i,",
+                    "            state:'待审',",
+                    "            projectname: '广州市华越友联科技发展有限公司.' + (i + 1),",
+                    "            addr: '广州市荔湾区黄沙大道144号大冶有色大厦1001室',",
+                    "            nextstate: [",
+                    "                {name:\"同意\",state:'同意'},",
+                    "                {name:\"不同意\",state:'不同意'},",
+                    "            ],",
+                    "        });",
+                    "    }",
+                    "    // 演示数据",
+                    "    onSuccess(end - start + 1);",
+                    "",
+                    "    // 故障业务-故障报告书列表-演示数据",
+                    "//     var d = this.decoDat([",
+                    "//         {",
+                    "//             rpno:\t\t\t'20151201001', //报告编号",
+                    "//             projectname:\t\t'广州市华越友联科技发展有限公司',",
+                    "//             addr:\t\t\t'故障地址',",
+                    "//             rptime:\t\t\t'2015-12-01 10:00:00', //报告时间",
+                    "//             state:\t\t\t'新建', //处理状态(当前状态)",
+                    "//             nextstate: [",
+                    "//                 {name:\"提交\",state:''}",
+                    "//             ],",
+                    "//         },",
+                    "//         {",
+                    "//             rpno:\t\t\t'20151201002', //报告编号",
+                    "//             projectname:\t\t'广州市荔湾区黄沙大道4号逸翠湾',",
+                    "//             addr:\t\t\t'故障地址',",
+                    "//             rptime:\t\t\t'2015-12-01 10:00:00', //报告时间",
+                    "//             state:\t\t\t'待审', //处理状态(当前状态)",
+                    "//             nextstate: [",
+                    "//                 {name:\"提交\",state:''}",
+                    "//             ],",
+                    "//         },",
+                    "//         {",
+                    "//             rpno:\t\t\t'20151201003', //报告编号",
+                    "//             projectname:\t\t'广州市华越友联科技发展有限公司',",
+                    "//             addr:\t\t\t'故障地址',",
+                    "//             rptime:\t\t\t'2015-12-01 10:00:00', //报告时间",
+                    "//             state:\t\t\t'通过', //处理状态(当前状态)",
+                    "//             nextstate: [",
+                    "//             ],",
+                    "//         },",
+                    "//         {",
+                    "//             rpno:\t\t\t'20151201003', //报告编号",
+                    "//             projectname:\t\t'广州市华越友联科技发展有限公司',",
+                    "//             addr:\t\t\t'故障地址',",
+                    "//             rptime:\t\t\t'2015-12-01 10:00:00', //报告时间",
+                    "//             state:\t\t\t'不通过', //处理状态(当前状态)",
+                    "//             nextstate: [",
+                    "//             ],",
+                    "//         },",
+                    "//     ]",
+                    "//         );",
+                    "//         this.setData(d);",
+                    "//         onSuccess(d.length);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "ae6f7b6e-b6de-426f-a38b-9e425f3a43df"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "if(parm!=='') {",
+                    "    this.filterBy(function(item) {",
+                    "        var s = item.get(\"unitname\") + ' ' + item.get(\"addr\");",
+                    "        return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "5fdb3b3b-ac5a-4ba5-acd2-c7b4dd7c8313"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "",
+                    "for(var i=0;i<data.length; i++) {",
+                    "    switch(data[i].state) {",
+                    "        case '新建':",
+                    "            data[i].color = 'liftnet-fontColor-gray';",
+                    "            break;",
+                    "",
+                    "        case '待审':",
+                    "            data[i].color = 'liftnet-fontColor-green';",
+                    "            break;",
+                    "",
+                    "        case '通过':",
+                    "            data[i].color = 'liftnet-fontColor-orange';",
+                    "            break;",
+                    "",
+                    "        case '不通过':",
+                    "            data[i].color = 'liftnet-fontColor-red';",
+                    "            break;",
+                    "    }",
+                    "}",
+                    "",
+                    "return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "5620ba16-823a-43d0-8f64-2e089d1b780c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rpno"
+            },
+            "name": "field45",
+            "designerId": "bdd29ea0-1ad7-40b8-a830-a7e60c185557"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field47",
+            "designerId": "5513222e-4930-4146-928f-cfd256b2f347"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr"
+            },
+            "name": "field48",
+            "designerId": "20bbac05-f49a-4af0-ac23-a9332e69e5bb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rptime"
+            },
+            "name": "field277",
+            "designerId": "da80d4bd-d080-45bd-b828-9a68f254ab85"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "state"
+            },
+            "name": "field280",
+            "designerId": "7deea1b2-04f3-4f18-a72b-888d3c34ee38"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate"
+            },
+            "name": "field281",
+            "designerId": "f2da4129-24ed-432d-994f-d00daffa1f27"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "color",
+                "type": null
+            },
+            "name": "field52",
+            "designerId": "4058c178-5f2b-44f8-96dd-7b47b6ca759e"
+        }
+    ]
+}

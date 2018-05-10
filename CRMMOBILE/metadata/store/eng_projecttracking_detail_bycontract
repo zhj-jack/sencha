@@ -1,0 +1,253 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_projecttracking_detail_bycontract",
+        "storeId": "eng_projecttracking_detail_bycontract"
+    },
+    "name": "MyStore",
+    "designerId": "3ce765b0-75a5-42d8-8a2e-8a9904f38c98",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "billno"
+            },
+            "name": "field794",
+            "designerId": "b934b8f1-3cac-4984-8d27-958110987d55"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r9"
+            },
+            "name": "field795",
+            "designerId": "291d78d7-25f0-4da9-990c-ddeebf24a3ac"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractstatus"
+            },
+            "name": "field796",
+            "designerId": "9ad427ea-f2a6-48fa-bcfc-fb2ffd4846b8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "maid"
+            },
+            "name": "field797",
+            "designerId": "446c44e3-fa99-40e7-a4c2-849087f618eb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugstartdate"
+            },
+            "name": "field798",
+            "designerId": "03484361-ac0b-45e7-a978-c6fedc9dadc1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugenddate"
+            },
+            "name": "field799",
+            "designerId": "d0e0a2f6-154b-48b0-bf60-cb591a5f921e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custid"
+            },
+            "name": "field800",
+            "designerId": "2c365f29-6312-45f1-be78-fabecb566391"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mprojectname"
+            },
+            "name": "field801",
+            "designerId": "a07e458f-a354-4d31-b90a-4909f60a3fbb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r15"
+            },
+            "name": "field802",
+            "designerId": "05f2c17a-35ce-47ce-98f9-b619e7975791"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowusername"
+            },
+            "name": "field803",
+            "designerId": "8db8d6f7-2b39-479a-a7e2-4e0d8a390963"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowstatus"
+            },
+            "name": "field804",
+            "designerId": "bbb050be-7c2b-46b3-b12a-967a4939d5ce"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractypename"
+            },
+            "name": "field805",
+            "designerId": "0b271ddf-5c34-4d28-b1b8-6ebf8ddea000"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "countnum"
+            },
+            "name": "field806",
+            "designerId": "05f76d6f-8aff-4353-9780-3431fefea821"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lotdate"
+            },
+            "name": "field807",
+            "designerId": "3ec9cf8b-9ff0-4321-82de-1c8429222d98"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "todoTpl"
+            },
+            "name": "field810",
+            "designerId": "8269dc2f-8ae0-49fd-a213-cbf71788db2e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(data.length>0){",
+                    "    for(var i=0;i<data.length;i++){",
+                    "        data[i].todoTpl = '<div class=\"liftnet-Maintenance-TaskRecList\" style=\"height:100px\">'+",
+                    "          '<div class=\"liftnet-Maintenance-TaskRecList-left\" style=\"left:14px\" >'+",
+                    "          '<div class=\"liftnet-font-size16 liftnet-fontColor-blue\">'+data[i].r9+'&nbsp;</div>'+",
+                    "          '<div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">'+data[i].mprojectname+'&nbsp;</div>'+",
+                    "          '<div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">'+data[i].mugstartdate+' ~ '+data[i].mugenddate+'&nbsp;</div>'+",
+                    "          '<div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">'+data[i].custid+'&nbsp;</div>'+",
+                    "          '</div>'+",
+                    "          '<div class=\"liftnet-Maintenance-TaskRecList-right\" style=\"padding-top:0px;right:14px\">'+",
+                    "          '<div class=\"liftnet-font-size12 liftnet-fontColor-darkGray liftnet-font-right\">'+data[i].countnum+'台&nbsp;</div>'+",
+                    "          '<div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">¥'+data[i].r15+'&nbsp;</div>'+",
+                    "          '<div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">'+data[i].flowstatus+'&nbsp;</div>'+",
+                    "          '<div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">'+data[i].contractypename+'&nbsp;</div>'+",
+                    "          '</div></div>';",
+                    "",
+                    "    }",
+                    "    return data;",
+                    "}else{",
+                    "    var ds = [{",
+                    "        todoTpl : '<div style=\"height:100px;text-align:center;padding-top:40px;\" class=\"liftnet-font-size12 \">暂无数据!</div>'",
+                    "    }];",
+                    "    return ds;",
+                    "}"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "b9afeeb6-615d-4bb6-b586-ba5a24352bd3"
+        }
+    ]
+}

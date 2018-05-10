@@ -1,0 +1,459 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmReportPerformance",
+        "id": "AdmReportPerformance",
+        "layout": "vbox",
+        "scrollable": true
+    },
+    "name": "a_Report_Performance",
+    "designerId": "d9d586c9-9cda-4a8f-a26c-7dca65660612",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "维保业绩报表"
+            },
+            "name": "MyToolbar4",
+            "designerId": "01e30f66-1d1a-4a6e-be80-d73d58b529fa",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "AdmReportPerformance_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "e51b49bc-e155-4499-9260-21d85af08d5e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-font-center",
+                    "liftnet-con-top"
+                ]
+            },
+            "name": "MyPanel6",
+            "designerId": "094b37b3-356a-4c63-98bc-1de0cb02cf36",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-con-icon"
+                        ],
+                        "height": null,
+                        "src": "resources/images/con_icon04.png",
+                        "width": null
+                    },
+                    "name": "MyImg1",
+                    "designerId": "1b242426-99a4-45c1-a4b9-e6bca8395bd6"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-fontColor-green",
+                            "liftnet-font-size20"
+                        ],
+                        "html": "正在载入...",
+                        "id": "AdmReportPerformance_lblAllCount"
+                    },
+                    "name": "MyLabel",
+                    "designerId": "ddd8c44a-387e-4e5b-882e-c6e7281fe078"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-con-title"
+                ]
+            },
+            "name": "MyPanel8",
+            "designerId": "639679fc-c17b-43a8-9dd9-be8734f0d080",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "内容"
+                    },
+                    "name": "MyLabel11",
+                    "designerId": "b0cc11cb-5d7f-4418-8df1-c00d273498a7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "height": 800,
+                "id": "form_reportsta_wbyjreportdetail_tdate",
+                "layout|flex": null,
+                "scrollable": false
+            },
+            "name": "MyFormPanel8",
+            "designerId": "3a3c00d6-2d89-4d48-94bd-b8250436cff6",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "直梯数量",
+                        "labelWidth": "70%",
+                        "name": "zhilift",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "cf897cd7-ca8f-4261-93af-eecbb5bda7d0"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "扶梯数量",
+                        "labelWidth": "70%",
+                        "name": "fulift",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "a9b67fa0-b3d4-4938-ad15-0a3f5cdcf990"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "电梯总量",
+                        "labelWidth": "70%",
+                        "name": "allcount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "9acdeded-b065-436a-bcf8-04846aadfa54"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "总金额",
+                        "labelWidth": "70%",
+                        "name": "pricesum",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField58",
+                    "designerId": "18681d14-f21e-44aa-966d-ff014764c60b"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "维保电梯平均单价",
+                        "labelWidth": "70%",
+                        "name": "price",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField59",
+                    "designerId": "6e8cf1d9-41dc-4489-aab7-21a2a35520d5"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "退保数量",
+                        "labelWidth": "70%",
+                        "name": "withdraw",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField60",
+                    "designerId": "580b7036-064c-4418-ab3d-7433ef6907ee"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "续保数量",
+                        "labelWidth": "70%",
+                        "name": "xubaonum",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField69",
+                    "designerId": "3ad361ad-cb0d-4193-a48e-fd6809198797"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "续保电梯平均单价",
+                        "labelWidth": "70%",
+                        "name": "xubaoprice",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField68",
+                    "designerId": "dbdb7c17-8485-47d8-b41c-62e6e7950aca"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "续保总金额",
+                        "labelWidth": "70%",
+                        "name": "xubaocount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField67",
+                    "designerId": "17f505ae-f9c9-464f-a284-942c6d23502f"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "到期电梯数量",
+                        "labelWidth": "70%",
+                        "name": "timeoutnum",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField66",
+                    "designerId": "8bb1843d-93a4-4966-a211-dc7b02096776"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "到期电梯平均单价",
+                        "labelWidth": "70%",
+                        "name": "timeprice",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField65",
+                    "designerId": "16240bd2-0626-4ce0-bee1-aba346a9c6b7"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "到期电梯总金额",
+                        "labelWidth": "70%",
+                        "name": "timeoutcount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField64",
+                    "designerId": "7dc89d21-afb5-464c-80ae-c6d25981c2d1"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "新签电梯数量",
+                        "labelWidth": "70%",
+                        "name": "newnum",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField63",
+                    "designerId": "769b0bcd-8731-410d-b42e-8a6170fb563e"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "新签电梯平均单价",
+                        "labelWidth": "70%",
+                        "name": "newprice",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField61",
+                    "designerId": "0b25949a-c7f5-479c-b3a7-91964c1fc56e"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "新签电梯总金额",
+                        "labelWidth": "70%",
+                        "name": "newcount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField62",
+                    "designerId": "c6ee4114-d078-4a44-ba94-9e72da18f7bf"
+                }
+            ]
+        }
+    ]
+}

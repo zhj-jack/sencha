@@ -1,0 +1,16 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_s0pozs8z",
+        "url": "js/messages.js",
+        "x-compile": true
+    },
+    "name": "js2",
+    "designerId": "cebc4904-e0c5-4077-89c8-16b89e1d0916"
+}

@@ -1,0 +1,1364 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngMonitorController"
+    },
+    "name": "MyController",
+    "designerId": "d2f6e1a1-b2ec-4d4e-82a6-07b795240d1c",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "",
+                    "********** 实时监控 **********",
+                    ""
+                ],
+                "designer|controlQuery": "container#Container_EnyElevatorMap",
+                "designer|params": [
+                    "element",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onContainer_EnyElevatorMapPainted",
+                "implHandler": [
+                    "// 实时监控-地图",
+                    "// var me = this;",
+                    "// var location = map.getLocation();",
+                    "// map.create('EngElevator_map',",
+                    "//            {lng:113.30764968, lat:23.1200491, zoom:15});",
+                    ""
+                ],
+                "name": "painted"
+            },
+            "name": "onContainer_EnyElevatorMapPainted",
+            "designerId": "02799514-2929-42ab-94cc-7fb33854fc3f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#Container_EnyProjectMap",
+                "designer|targetType": "Ext.Container",
+                "fn": "onContainer_Container_EnyProjectMapPainted",
+                "implHandler": [
+                    "// 实时监控-项目地图",
+                    "var me = this;",
+                    "if(!map.lookup('EngProject_map')){",
+                    "   me.initMap('EngProject_map');",
+                    "}"
+                ],
+                "name": "painted"
+            },
+            "name": "onContainer_Container_EnyProjectMapPainted",
+            "designerId": "371d68b2-8837-4fc4-8049-fd3cb2784565"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#Container_EnyLiftMap",
+                "designer|targetType": "Ext.Container",
+                "fn": "onContainer_Container_EnyLiftMapPainted",
+                "implHandler": [
+                    "// 实时监控-电梯地图",
+                    "var me = this;",
+                    "if(!map.lookup('EngLift_map')){",
+                    "   me.initMap('EngLift_map');",
+                    "}"
+                ],
+                "name": "painted"
+            },
+            "name": "onContainer_Container_EnyLiftMapPainted",
+            "designerId": "fb3c501a-04bc-44a0-a119-11732e3ec558"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#Container_EnyUserMap",
+                "designer|targetType": "Ext.Container",
+                "fn": "onContainer_Container_EnyUserMapPainted",
+                "implHandler": [
+                    "// 实时监控-人员地图",
+                    "var me = this;",
+                    "if(!map.lookup('EngUser_map')){",
+                    "    me.initMap('EngUser_map');",
+                    "}"
+                ],
+                "name": "painted"
+            },
+            "name": "onContainer_Container_EnyUserMapPainted",
+            "designerId": "306d232e-44ae-4c8d-b903-ee91d8d1776d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#Container_EnyPointMap",
+                "designer|targetType": "Ext.Container",
+                "fn": "onContainer_Container_EnyPointMapPainted",
+                "implHandler": [
+                    "// 实时监控-驻点地图",
+                    "var me = this;",
+                    "if(!map.lookup('EngPoint_map')){",
+                    "    me.initMap('EngPoint_map');",
+                    "}"
+                ],
+                "name": "painted"
+            },
+            "name": "onContainer_Container_EnyPointMapPainted",
+            "designerId": "ad25cd39-a02b-4140-8ed9-b5d7b7f42326"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#EngMonitor_TabMap",
+                "designer|targetType": "Ext.tab.Panel",
+                "fn": "onEngMonitor_TabMapDestory",
+                "implHandler": [
+                    "//删除四个地图",
+                    "map.destroyById('EngProject_map');",
+                    "map.destroyById('EngLift_map');",
+                    "map.destroyById('EngUser_map');",
+                    "map.destroyById('EngPoint_map');"
+                ],
+                "name": "destroy"
+            },
+            "name": "onEngMonitor_TabMapDestory",
+            "designerId": "25e46681-e303-42c1-b64b-9db9642ce6a1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "divId"
+                ],
+                "fn": "initMap",
+                "implHandler": [
+                    "// 初始化地图",
+                    "var me = this;",
+                    "var lng = 113.237604,",
+                    "    lat = 23.12382;",
+                    "//当前位置",
+                    "var location = map.getLocation();",
+                    "if(location){",
+                    "    lng = location.lng;",
+                    "    lat = location.lat;",
+                    "}",
+                    "//创建地图",
+                    "map.create(divId,",
+                    "           {",
+                    "               lng:lng,",
+                    "               lat:lat,",
+                    "               zoom:15",
+                    "           }",
+                    "          );",
+                    "",
+                    "var amap = map.lookup(divId);",
+                    "var rangradius = 2000;",
+                    "//鼠标滚动放大缩小",
+                    "amap.enableScrollWheelZoom();",
+                    "",
+                    "//加载当前位置附近两公里以内的项目，电梯，人员，驻点",
+                    "switch(divId){",
+                    "    case 'EngProject_map':",
+                    "        me.doEngMointor_LoadProject(amap,'',rangradius);",
+                    "        break;",
+                    "    case 'EngLift_map':",
+                    "        //标记我当前的位置",
+                    "        map.addMarker(amap,",
+                    "              {",
+                    "                   img:'resources/images/marker_me.png',",
+                    "                   sizeX:50,sizeY:50,",
+                    "                   offsetX:5,offsetY:5,",
+                    "                   lng:location.lng, lat:location.lat,",
+                    "                   title:'我在这里',",
+                    "                   content: location.addr,",
+                    "              });",
+                    "//电梯暂不显示",
+                    "//         me.doEngMointor_LoadElevator(amap,'',rangradius);",
+                    "        break;",
+                    "    case 'EngUser_map':",
+                    "        me.doEngMointor_LoadUser(amap,'',rangradius);",
+                    "        break;",
+                    "    case 'EngPoint_map':",
+                    "        me.doEngMointor_LoadPoint(amap,'',rangradius);",
+                    "        break;",
+                    "}"
+                ]
+            },
+            "name": "initMap",
+            "designerId": "9c24d7bb-cb3a-4e51-a887-8e1d031f8939"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMonitor_BtnSwitch",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMonitor_BtnSwitchTap",
+                "implHandler": [
+                    "// “显示轨迹” 切换按钮",
+                    "var displayText = '<div class=\"liftnet-button-threeBut-round liftnet-button-threeBut-left\"></div>显示轨迹';",
+                    "var hideText = '<div class=\"liftnet-button-threeBut-round liftnet-button-threeBut-right\"></div>隐藏轨迹';",
+                    "",
+                    "if(button.getText() === displayText) {",
+                    "  button.setText(hideText);",
+                    "}else{",
+                    "  button.setText(displayText);",
+                    "}"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMonitor_BtnSwitchTap",
+            "designerId": "f41ee210-4e0d-4c58-a863-6be478039f60"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMonitor_BtnTrack",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMonitor_BtnTrackTap",
+                "implHandler": [
+                    "// 实时监控 - “查看轨迹详情”按钮",
+                    "viewUtil.goNext('Engineer.EngMonitorTrack');"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMonitor_BtnTrackTap",
+            "designerId": "280e0d87-f614-4574-96cd-6c69b15c5891"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMonitor_BtnLift",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMonitor_BtnLiftTap",
+                "implHandler": [
+                    "// 实时监控 - “查看所有项目”按钮",
+                    "// viewUtil.goNext('Engineer.EngMonitorElevatorList');",
+                    "viewUtil.goNext('Engineer.EngMonitorProjectInfoList');"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMonitor_BtnLiftTap",
+            "designerId": "6b482ed1-acbd-4780-8d33-c4f7f4cee80c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngMonitorTrack",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngMonitorTrackShow",
+                "implHandler": [
+                    "// 获取顶部显示信息",
+                    "var store = dataUtil.createStore('eng_tracktopinfo');",
+                    "store.loadDat(",
+                    "    function(ret){",
+                    "        //拿不到数据显示当前位置，状态为空闲",
+                    "        Ext.getCmp('EngMonitorTrack_Addr').setHtml(",
+                    "            (ret.length===0||!ret)?",
+                    "            map.getLocation().addr:ret[0].userlocation);",
+                    "        Ext.getCmp('EngMonitorTrack_Status').setHtml(",
+                    "            (ret.length===0||!ret)?",
+                    "            '空闲 <i class=\"fa fa-circle-o\"></i>':ret[0].stuts+' <i class=\"fa fa-circle-o\"></i>');",
+                    "        Ext.getCmp('EngMonitorTrack_Time').setHtml(",
+                    "            (ret.length===0||!ret)?",
+                    "            Ext.Date.format(new Date(), 'Y-m-d H:i'):ret[0].ltime);",
+                    "        Ext.getCmp('EngMonitorTrack_Phone').setHtml(",
+                    "            (ret.length===0||!ret)?",
+                    "            '10086':ret[0].phone);",
+                    "    },",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "    }",
+                    ");",
+                    "// 读取“我的轨迹”列表数据",
+                    "Ext.getCmp('EngMonitorTrack_ListTrack').getStore().loadDat(",
+                    "    function(ret) {},",
+                    "    function(info) {Ext.toast(info);},",
+                    "    {",
+                    "        searchuser:'',//需被查询轨迹的人员",
+                    "        date:''//查询日期yyyy-MM-dd(为空时查找当天)",
+                    "    }",
+                    ");"
+                ],
+                "name": "show"
+            },
+            "name": "onEngMonitorTrackShow",
+            "designerId": "395b4663-2929-49db-b7b7-bbc4bfd795e6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMonitorTrack_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMonitorTrack_BtnReturnTap",
+                "implHandler": [
+                    "// “我的轨迹”页面- 返回上页",
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMonitorTrack_BtnReturnTap",
+            "designerId": "a55b1fe6-f81f-4016-8ea4-150f1f449f81"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngMonitorElevatorList",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngMonitorElevatorListShow",
+                "implHandler": [
+                    "// 读取“电梯位置”列表列表",
+                    "Ext.getCmp('EngMonitorElevatorList_ListElevator').getStore().loadDat(",
+                    "    function() {},",
+                    "    function() {}",
+                    ");"
+                ],
+                "name": "show"
+            },
+            "name": "onEngMonitorElevatorListShow",
+            "designerId": "de3a6273-0ede-4989-97a8-2b7f3261cacb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngMonitorProjectInfoList",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngMonitorProjectInfoListInitialize",
+                "implHandler": [
+                    "Ext.getCmp('EngMonitorProjectInfoList_ListProject').getStore().removeAll();",
+                    "var me = this;",
+                    "curPage = 0;//全局变量",
+                    "pagesize = 20;",
+                    "// 初始化项目信息列表下拉刷新、上拉加载更多",
+                    "var projectInfoList = Ext.getCmp('EngMonitorProjectInfoList_ListProject');",
+                    "    projectInfoList.setPlugins(",
+                    "            [",
+                    "                //下拉刷新",
+                    "                {",
+                    "                    autoSnapBack: false,",
+                    "                    lastUpdatedText: '上次刷新:&nbsp;',",
+                    "                    loadedText: '已刷新',",
+                    "                    loadingText: '正在刷新项目信息...',",
+                    "                    pullText: '下拉刷新...',",
+                    "                    releaseText: '放开开始刷新...',",
+                    "                    type: 'pullrefresh',",
+                    "                    listeners : {",
+                    "                        latestfetched : function() {",
+                    "                            me.doEngMonitor_LoadProjectInfo(1,pagesize,'','refresh');",
+                    "                    \t}",
+                    "                    }",
+                    "                },",
+                    "            ]);",
+                    "//监听滑动结束事件",
+                    "var scroller = projectInfoList.getScrollable().getScroller();",
+                    "scroller.on('scrollend',function(scroll, x, y, eOpts){",
+                    "    if(curPage===0){",
+                    "        return;",
+                    "    }",
+                    "    //滑动到底部加载更多",
+                    "    if(y+scroller.getContainerSize().y==scroller.getSize().y){",
+                    "        console.log('loadmore');",
+                    "        loadMask.show();",
+                    "        var scrollparm = {",
+                    "            scroller:scroller,",
+                    "            x:x,",
+                    "            y:y+projectInfoList.getItemHeight()+20+16//Item的高度+Tpl样式中各种边距",
+                    "        };",
+                    "        if(!Ext.getCmp('EngMonitorProjectInfoList_Search')){",
+                    "            loadMask.hide();",
+                    "            return;",
+                    "        }",
+                    "        var keyword = Ext.getCmp('EngMonitorProjectInfoList_Search').getValue();",
+                    "        if(!keyword){",
+                    "            keyword='';",
+                    "        }",
+                    "        me.doEngMonitor_LoadProjectInfo(",
+                    "            ++curPage,",
+                    "            pagesize,",
+                    "            keyword,",
+                    "            'loadmore',",
+                    "            scrollparm",
+                    "        );",
+                    "    }",
+                    "});",
+                    "me.doEngMonitor_LoadProjectInfo(1,pagesize,'','firstload');"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngMonitorProjectInfoListInitialize",
+            "designerId": "cee588d1-5f71-4a33-a2a8-53d4c39de3ad"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngMonitorProjectElevatorList",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngMonitorProjectElevatorListInitialize",
+                "implHandler": [
+                    "var me = this;",
+                    "var record = component.initialConfig.parm.record;",
+                    "projectid = record.get('projectid');//全局变量，搜索方法中用到",
+                    "var title = record.get('projectname');",
+                    "if(title.length>12){",
+                    "    title = title.substring(0,12)+'...';",
+                    "}",
+                    "Ext.getCmp('EngMonitorProjectElevatorList_Toolbar').setTitle(title);",
+                    "// var curPage = 1;",
+                    "var pagesize = 2000;",
+                    "// 初始化电梯列表下拉刷新、上拉加载更多",
+                    "var elevatorList = Ext.getCmp('EngMonitorProjectElevatorList_ListElevator');",
+                    "    elevatorList.setPlugins(",
+                    "            [",
+                    "                //下拉刷新",
+                    "                {",
+                    "                    autoSnapBack: false,",
+                    "                    lastUpdatedText: '上次刷新:&nbsp;',",
+                    "                    loadedText: '已刷新',",
+                    "                    loadingText: '正在刷新电梯列表...',",
+                    "                    pullText: '下拉刷新...',",
+                    "                    releaseText: '放开开始刷新...',",
+                    "                    type: 'pullrefresh',",
+                    "                    listeners : {",
+                    "                        latestfetched : function() {",
+                    "                            me.doEngMonitor_LoadElevatorInfo(projectid,1,pagesize,'');",
+                    "                    \t}",
+                    "                    }",
+                    "                },",
+                    "            ]);",
+                    "",
+                    "this.doEngMonitor_LoadElevatorInfo(projectid,1,pagesize,'');"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngMonitorProjectElevatorListInitialize",
+            "designerId": "1cbbc8db-d5d7-4fe4-bf16-955fd8913c71"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMonitorElevatorList_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMonitorElevatorList_BtnReturnTap",
+                "implHandler": [
+                    "// “电梯位置”列表 - 返回上页",
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMonitorElevatorList_BtnReturnTap",
+            "designerId": "bb343c7a-b56b-4694-91c8-daa38d10705a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMonitorProjectInfoList_BtnReturn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMonitorProjectInfoList_BtnReturnTap",
+                "implHandler": [
+                    "// “项目信息”列表 - 返回上页",
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMonitorProjectInfoList_BtnReturnTap",
+            "designerId": "b6df2034-4a28-4b30-ab37-187d39805e07"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMonitorProjectElevatorList_BtnReturn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMonitorProjectElevatorList_BtnReturnTap",
+                "implHandler": [
+                    "// “电梯”列表 - 返回上页",
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMonitorProjectElevatorList_BtnReturnTap",
+            "designerId": "92ec3306-7d16-4657-a9ea-771b8f216cd4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngMonitorElevatorList_ListElevator",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngMonitorElevatorList_ListElevatorItemTap",
+                "implHandler": [
+                    "// 查看电梯详细数据",
+                    "viewUtil.goNext('Engineer.EngMonitorElevatorInfo');"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngMonitorElevatorList_ListElevatorItemTap",
+            "designerId": "9c3f8a04-e100-4a93-9ebf-5e330153b25b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngMonitorProjectInfoList_ListProject",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngMonitorProjectInfoList_ListProjectItemTap",
+                "implHandler": [
+                    "// 查看该项目电梯列表(新)",
+                    "viewUtil.goNext('Engineer.EngMonitorProjectElevatorList',{record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngMonitorProjectInfoList_ListProjectItemTap",
+            "designerId": "c572e798-c3da-439a-a870-37d262fa3a6b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngMonitorProjectElevatorList_ListElevator",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngMonitorProjectElevatorList_ListElevatorItemTap",
+                "implHandler": [
+                    "// 查看该项目电梯详细信息(新)",
+                    "viewUtil.goNext('Engineer.EngMonitorElevatorInfo',{prono:record.get('prono')});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngMonitorProjectElevatorList_ListElevatorItemTap",
+            "designerId": "6d36599e-7ac2-4d7a-8e0d-4cd46cdcd301"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngMonitorElevatorInfo_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngMonitorElevatorInfo_BtnReturnTap",
+                "implHandler": [
+                    "// 电梯详细数据页面- 返回上页",
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngMonitorElevatorInfo_BtnReturnTap",
+            "designerId": "8ee21384-f1b7-4477-b6fb-cb203be536bd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "amap,keyword,rangradius"
+                ],
+                "fn": "doEngMointor_LoadProject",
+                "implHandler": [
+                    "var me = this;",
+                    "//当前位置经纬度",
+                    "var location = map.getLocation();",
+                    "//当前位置及搜索距离",
+                    "var adapterParm = {",
+                    "    lon:location.lng,",
+                    "    lat:location.lat,",
+                    "    searchker:keyword,",
+                    "    rangradius:rangradius",
+                    "};",
+                    "//创建store加载项目数据，在地图上添加标记",
+                    "dataUtil.createStore('eng_projectlocation').loadDat(",
+                    "    function(ret){",
+                    "        ",
+                    "        me.addMarker(amap,ret.items,'project');",
+                    "    },",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "    },",
+                    "    adapterParm",
+                    ");"
+                ]
+            },
+            "name": "doEngMointor_LoadProject",
+            "designerId": "9aaa9c1f-b609-4373-bf1d-f94cd3625687"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "amap,keyword,rangradius"
+                ],
+                "fn": "doEngMointor_LoadElevator",
+                "implHandler": [
+                    "var me = this;",
+                    "//当前位置经纬度",
+                    "var location = map.getLocation();",
+                    "var adapterParm = {",
+                    "    lon:location.lng,",
+                    "    lat:location.lat,",
+                    "    searchker:keyword,",
+                    "    rangradius:rangradius",
+                    "};",
+                    "//创建store加载电梯数据，在地图上添加标记",
+                    "dataUtil.createStore('eng_elevatorlocation').loadDat(",
+                    "    function(ret){",
+                    "        me.addMarker(amap,ret.items,'elevator');",
+                    "    },",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "    },",
+                    "    adapterParm",
+                    ");"
+                ]
+            },
+            "name": "doEngMointor_LoadElevator",
+            "designerId": "2311cd47-0deb-4a31-9db6-8966a86a04db"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "amap,keyword,rangradius"
+                ],
+                "fn": "doEngMointor_LoadUser",
+                "implHandler": [
+                    "var me = this;",
+                    "//当前位置经纬度",
+                    "var location = map.getLocation();",
+                    "var adapterParm = {",
+                    "    lon:location.lng,",
+                    "    lat:location.lat,",
+                    "    searchker:keyword,",
+                    "    rangradius:rangradius",
+                    "};",
+                    "//创建store加载人员数据，在地图上添加标记",
+                    "dataUtil.createStore('eng_userlocation').loadDat(",
+                    "    function(ret){",
+                    "        me.addMarker(amap,ret.items,'user');",
+                    "    },",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "    },",
+                    "    adapterParm",
+                    ");"
+                ]
+            },
+            "name": "doEngMointor_LoadUser",
+            "designerId": "dbff4565-17be-4aa1-8a40-1bfc9f6e730c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "amap,keyword,rangradius"
+                ],
+                "fn": "doEngMointor_LoadPoint",
+                "implHandler": [
+                    "var me = this;",
+                    "//当前位置经纬度",
+                    "var location = map.getLocation();",
+                    "var adapterParm = {",
+                    "    lon:location.lng,",
+                    "    lat:location.lat,",
+                    "    searchker:keyword,",
+                    "    rangradius:rangradius",
+                    "};",
+                    "//创建store加载驻点数据，在地图上添加标记",
+                    "dataUtil.createStore('eng_pointlocation').loadDat(",
+                    "    function(ret){",
+                    "        me.addMarker(amap,ret.items,'point');",
+                    "    },",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "    },",
+                    "    adapterParm",
+                    ");"
+                ]
+            },
+            "name": "doEngMointor_LoadPoint",
+            "designerId": "01cd421c-fd1f-4b2f-a7a9-75d6c4a969ab"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "amap,items,type"
+                ],
+                "fn": "addMarker",
+                "implHandler": [
+                    "//清除地图上的所有标记",
+                    "amap.clearOverlays();",
+                    "var location = map.getLocation();",
+                    "//标记我当前的位置",
+                    "map.addMarker(amap,",
+                    "              {",
+                    "                   img:'resources/images/marker_me.png',",
+                    "                   sizeX:50,sizeY:50,",
+                    "                   offsetX:5,offsetY:5,",
+                    "                   lng:location.lng, lat:location.lat,",
+                    "                   title:'我在这里',",
+                    "                   content: location.addr,",
+                    "              });",
+                    "if(items.length===0){",
+                    "   Ext.toast('未找到相关数据');",
+                    "   return;",
+                    "}",
+                    "var points=[];",
+                    "var point;",
+                    "var fn;",
+                    "switch(type){",
+                    "    case 'project':",
+                    "        fn = function(item){",
+                    "            map.addMarker(amap,",
+                    "              {",
+                    "                   img:'resources/images/marker_project.png',",
+                    "                   sizeX:50,sizeY:50,",
+                    "                   offsetX:5,offsetY:5,",
+                    "                   lng:item.data.lon, lat:item.data.lat,",
+                    "                   content:",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">项目名称</h1>'+item.data.projectname+\"<br><br>\"+",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">项目地址</h1>'+item.data.projectaddress+\"<br><br>\"+",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">电梯台数</h1>'+item.data.elevatornum+'台',",
+                    "              });",
+                    "        };",
+                    "        break;",
+                    "    case 'elevator':",
+                    "        fn = function(item){",
+                    "            map.addMarker(amap,",
+                    "              {",
+                    "                   img:'resources/images/marker_lift.png',",
+                    "                   sizeX:50,sizeY:50,",
+                    "                   offsetX:5,offsetY:5,",
+                    "                   lng:item.data.lon, lat:item.data.lat,",
+                    "                   content:",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">注册码</h1>'+item.data.prono+'<br><br>'+",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">项目名称</h1>'+item.data.projectname+'<br><br>'+",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">项目地址</h1>'+item.data.projectaddress,",
+                    "              });",
+                    "        };",
+                    "        break;",
+                    "    case 'user':",
+                    "        fn = function(item){",
+                    "            map.addMarker(amap,",
+                    "              {",
+                    "                   img:'resources/images/marker_staff.png',",
+                    "                   sizeX:50,sizeY:50,",
+                    "                   offsetX:5,offsetY:5,",
+                    "                   lng:item.data.lon, lat:item.data.lat,",
+                    "                   content:",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">姓名</h1>'+item.data.username+'<br><br>'+",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">职务</h1>'+item.data.class1name+'<br><br>'+",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">状态</h1>'+item.data.stuts,",
+                    "              });",
+                    "        };",
+                    "        break;",
+                    "    case 'point':",
+                    "        fn = function(item){",
+                    "            map.addMarker(amap,",
+                    "              {",
+                    "                   img:'resources/images/marker_point.png',",
+                    "                   sizeX:50,sizeY:50,",
+                    "                   offsetX:5,offsetY:5,",
+                    "                   lng:item.data.lon, lat:item.data.lat,",
+                    "                   content:",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">保养站/班组名称</h1>'+item.data.storagename+'<br><br>'+",
+                    "                  '<h1 style=\"font-size:12px;color:#9e9e9e;\">班组长</h1>'+item.data.maintainhead+'<br><br>',",
+                    "              });",
+                    "        };",
+                    "        break;",
+                    "}",
+                    "//画标记",
+                    "for(var i = 0; i<items.length; i++){",
+                    "    point = new BMap.Point(items[i].data.lon,",
+                    "                           items[i].data.lat);",
+                    "    points[i]=point;",
+                    "    fn(items[i]);",
+                    "}",
+                    "//调整到最佳视野",
+                    "var viewport = amap.getViewport(points);",
+                    "amap.setZoom(viewport.zoom);",
+                    "amap.panTo(viewport.center);",
+                    ""
+                ]
+            },
+            "name": "addMarker",
+            "designerId": "885d3bf1-41b3-4c7a-a336-fc6adb745672"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngMonitor_Search",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngMonitor_SearchChange",
+                "implHandler": [
+                    "//搜索项目，电梯，人员，驻点"
+                ],
+                "name": "change"
+            },
+            "name": "onEngMonitor_SearchChange",
+            "designerId": "62f5ed92-5f69-4b2c-b923-570d8640db7e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngMonitor_SearchProject",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngMonitor_SearchProjectChange",
+                "implHandler": [
+                    "//地图上搜索项目",
+                    "// this.doEngMonitor_LocalSearch(textfield,",
+                    "//                             {storeid:'eng_projectlocation',",
+                    "//                              mapid:'EngProject_map',",
+                    "//                              type:'project'}",
+                    "//                             );",
+                    "this.doEngMonitor_NetworkSearch(textfield,",
+                    "                                {mapid:'EngProject_map',",
+                    "                                 type:'project',",
+                    "\t\t\t\t\t\t\t\trangradius:5000000});"
+                ],
+                "name": "change"
+            },
+            "name": "onEngMonitor_SearchProjectChange",
+            "designerId": "378bc6ee-8c4e-458e-aecc-93f6ccee0233"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngMonitor_SearchLift",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngMonitor_SearchLiftChange",
+                "implHandler": [
+                    "//地图上搜索电梯",
+                    "var me = this;",
+                    "// me.doEngMonitor_LocalSearch(textfield,",
+                    "//                             {storeid:'eng_elevatorlocation',",
+                    "//                              mapid:'EngLift_map',",
+                    "//                              type:'elevator'}",
+                    "//                             );",
+                    "this.doEngMonitor_NetworkSearch(textfield,",
+                    "                                {mapid:'EngLift_map',",
+                    "                                 type:'elevator',",
+                    "\t\t\t\t\t\t\t\trangradius:5000000});"
+                ],
+                "name": "change"
+            },
+            "name": "onEngMonitor_SearchLiftChange",
+            "designerId": "7e729996-e139-4ff3-8ba6-15de5b8bf483"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngMonitor_SearchUser",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngMonitor_SearchUserChange",
+                "implHandler": [
+                    "//地图上搜索人员",
+                    "var me = this;",
+                    "// me.doEngMointor_LoadUser(map.lookup('EngUser_map'));",
+                    "// me.doEngMonitor_LocalSearch(textfield,",
+                    "//                             {storeid:'eng_userlocation',",
+                    "//                              mapid:'EngUser_map',",
+                    "//                              type:'user'}",
+                    "//                             );",
+                    "this.doEngMonitor_NetworkSearch(textfield,",
+                    "                                {mapid:'EngUser_map',",
+                    "                                 type:'user',",
+                    "\t\t\t\t\t\t\t\t\trangradius:5000000});"
+                ],
+                "name": "change"
+            },
+            "name": "onEngMonitor_SearchUserChange",
+            "designerId": "6ab11633-e2ae-40c8-b546-51985f033556"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngMonitor_SearchPoint",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngMonitor_SearchPointChange",
+                "implHandler": [
+                    "//地图上搜索驻点",
+                    "var me = this;",
+                    "// me.doEngMointor_LoadPoint(map.lookup('EngPoint_map'));",
+                    "// me.doEngMonitor_LocalSearch(textfield,",
+                    "//                             {storeid:'eng_pointlocation',",
+                    "//                              mapid:'EngPoint_map',",
+                    "//                              type:'point'}",
+                    "//                             );",
+                    "this.doEngMonitor_NetworkSearch(textfield,",
+                    "                                {mapid:'EngPoint_map',",
+                    "                                 type:'point',",
+                    "\t\t\t\t\t\t\t\t rangradius:5000000});"
+                ],
+                "name": "change"
+            },
+            "name": "onEngMonitor_SearchPointChange",
+            "designerId": "f203e88c-99b4-4820-9d84-dff661e6465d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "",
+                    "本地搜索，在已经加载的数据中搜索",
+                    ""
+                ],
+                "designer|params": [
+                    "textfield,parm"
+                ],
+                "fn": "doEngMonitor_LocalSearch",
+                "implHandler": [
+                    "//地图上搜索项目",
+                    "var me = this;",
+                    "var data = Ext.getStore(parm.storeid).filteDat(textfield.getValue());",
+                    "var items = Ext.getStore(parm.storeid).data.items;",
+                    "if(!items||items.length===0){",
+                    "    Ext.toast('未找到\"'+textfield.getValue()+'\"相关的数据');",
+                    "    return;",
+                    "}",
+                    "var amap = map.lookup(parm.mapid);",
+                    "me.addMarker(amap,items,parm.type);"
+                ]
+            },
+            "name": "doEngMonitor_LocalSearch",
+            "designerId": "194e54da-9b7e-48b4-bfb6-0ad99619283d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "",
+                    "联网搜索，在服务器上搜索，获取新数据",
+                    ""
+                ],
+                "designer|params": [
+                    "textfield,parm"
+                ],
+                "fn": "doEngMonitor_NetworkSearch",
+                "implHandler": [
+                    "//搜索框为空时不进行搜索",
+                    "if(!textfield.getValue()||textfield.getValue()===''){",
+                    "   return;",
+                    "}",
+                    "//地图上联网搜索项目",
+                    "var me = this;",
+                    "var amap = map.lookup(parm.mapid);",
+                    "switch(parm.type){",
+                    "    case 'project':",
+                    "        me.doEngMointor_LoadProject(amap,textfield.getValue(),parm.rangradius);",
+                    "        break;",
+                    "    case 'elevator':",
+                    "        me.doEngMointor_LoadElevator(amap,textfield.getValue(),parm.rangradius);",
+                    "        break;",
+                    "    case 'user':",
+                    "        me.doEngMointor_LoadUser(amap,textfield.getValue(),parm.rangradius);",
+                    "        break;",
+                    "    case 'point':",
+                    "        me.doEngMointor_LoadPoint(amap,textfield.getValue(),parm.rangradius);",
+                    "        break;",
+                    "}",
+                    ""
+                ]
+            },
+            "name": "doEngMonitor_NetworkSearch",
+            "designerId": "29bda56c-d50a-4261-b429-8d2ebd3efa34"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngMonitorProjectInfoList_Search",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngMonitorProjectInfoList_SearchChange",
+                "implHandler": [
+                    "//本地搜索项目信息",
+                    "// Ext.getCmp('EngMonitorProjectInfoList_ListProject').getStore().filteDat(textfield.getValue());",
+                    "//联网搜索项目信息",
+                    "var keyword = textfield.getValue();",
+                    "if(!keyword||keyword===''){",
+                    "    keyword = '';",
+                    "//     return;",
+                    "}",
+                    "// curPage = 1;",
+                    "this.doEngMonitor_LoadProjectInfo(1,pagesize,keyword,'search');"
+                ],
+                "name": "change"
+            },
+            "name": "onEngMonitorProjectInfoList_SearchChange",
+            "designerId": "0ac2de03-b5a6-4bcf-b093-b6fbbcab485a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngMonitorProjectElevatorList_Search",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngMonitorProjectElevatorList_SearchChange",
+                "implHandler": [
+                    "//本地搜索电梯信息",
+                    "// Ext.getCmp('EngMonitorProjectElevatorList_ListElevator').getStore().filteDat(textfield.getValue());",
+                    "//联网搜索电梯信息",
+                    "if(!textfield.getValue()||textfield.getValue()===''){",
+                    "    return;",
+                    "}",
+                    "this.doEngMonitor_LoadElevatorInfo(projectid,1,pagesize,textfield.getValue());"
+                ],
+                "name": "change"
+            },
+            "name": "onEngMonitorProjectElevatorList_SearchChange",
+            "designerId": "2a4a1a64-8b78-4ddb-be05-4326c4eb81cc"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngMonitorElevatorInfo",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngMonitorElevatorInfoInitialize",
+                "implHandler": [
+                    "",
+                    "var prono = component.initialConfig.parm.prono;",
+                    "if(!prono){",
+                    "    return;",
+                    "}",
+                    "//获取电梯详细信息",
+                    "var store = dataUtil.createStore('eng_elevatorinfo');",
+                    "store.loadDat(",
+                    "",
+                    "    function(){",
+                    "        //填充显示",
+                    "        Ext.getCmp('EngMonitorElevator_Form').setRecord(store.getAt(0));",
+                    "        var typeName = store.getAt(0).get('typename') || '无';",
+                    "        Ext.getCmp('EngMonitorElevatorInfo_TypeName').setHtml(typeName);",
+                    "    },",
+                    "    //读取失败返回提示信息",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "    },",
+                    "    {prono:prono}",
+                    ");",
+                    "Ext.getCmp('EngMonitorElevatorInfo_Prono').setHtml(prono);",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngMonitorElevatorInfoInitialize",
+            "designerId": "8a587089-ae23-46be-9588-f26907bed0c5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "page",
+                    "pagesize",
+                    "searchkey",
+                    "action",
+                    "scrollparm"
+                ],
+                "fn": "doEngMonitor_LoadProjectInfo",
+                "implHandler": [
+                    "var me = this;",
+                    "// 读取“项目信息”列表",
+                    "Ext.getCmp('EngMonitorProjectInfoList_ListProject').getStore().loadDat(",
+                    "    function(ret,resetCurPage) {",
+                    "        if(scrollparm){",
+                    "            scrollparm.scroller.scrollTo(scrollparm.x,scrollparm.y);",
+                    "            loadMask.hide();",
+                    "        }",
+                    "        if(resetCurPage){",
+                    "            curPage = 1;//获取新数据成功，页数重置为1",
+                    "        }",
+                    "",
+                    "    },",
+                    "",
+                    "    function(info,cutOne) {",
+                    "        Ext.toast(info);",
+                    "        if(cutOne){",
+                    "            curPage--;//加载更多数据失败，页数减一",
+                    "        }",
+                    "        if(info==='没有更多数据！'){",
+                    "            curPage = 0;//没有更多数据的时候重置页数为0，不触发上拉事件",
+                    "        }",
+                    "        loadMask.hide();",
+                    "",
+                    "    },",
+                    "    {",
+                    "        curpagenum:page,",
+                    "        pagesize:pagesize,",
+                    "        searchkey:searchkey",
+                    "    },",
+                    "    action",
+                    ");"
+                ]
+            },
+            "name": "doEngMonitor_LoadProjectInfo",
+            "designerId": "db3eaf50-41e5-4e9e-8e21-d4b579d2be2e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "projectid",
+                    "page",
+                    "pagesize",
+                    "searchkey"
+                ],
+                "fn": "doEngMonitor_LoadElevatorInfo",
+                "implHandler": [
+                    "",
+                    "// 读取“电梯”列表",
+                    "Ext.getCmp('EngMonitorProjectElevatorList_ListElevator').getStore().loadDat(",
+                    "    function(ret) {",
+                    "        if(!ret||ret.length===0){",
+                    "            Ext.toast('没有相关数据');",
+                    "        }",
+                    "    },",
+                    "    function(info) {",
+                    "        Ext.toast(info);",
+                    "    },",
+                    "    {",
+                    "        projectid:projectid,",
+                    "        curpagenum:page,",
+                    "        pagesize:pagesize,",
+                    "        searchkey:searchkey",
+                    "    }",
+                    ");"
+                ]
+            },
+            "name": "doEngMonitor_LoadElevatorInfo",
+            "designerId": "7ec155aa-df75-4b3e-a78c-4758a6ed01cc"
+        }
+    ]
+}

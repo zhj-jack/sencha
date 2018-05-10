@@ -1,0 +1,127 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmReason",
+        "id": "a_Form_Statement_Reason",
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "a_Form_Statement_Reason",
+    "designerId": "781347ec-ad0e-4342-bf47-9cf3c6810a74",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "陈述原因"
+            },
+            "name": "MyToolbar4",
+            "designerId": "7d20356d-5178-4035-a7b6-b88e021bb55a",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "AdmFormStatementReason_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "66e92bb5-7149-462f-86ad-6f16bd6d8727"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34",
+                    "liftnet-bgColor-white"
+                ],
+                "height": null,
+                "layout|flex": 1,
+                "scrollable": null
+            },
+            "name": "MyFormPanel8",
+            "designerId": "59caa7bc-3578-4913-8574-82ca306d4cf1",
+            "cn": [
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "备注",
+                        "labelWidth": "20%",
+                        "placeHolder": "输入300字以内原因陈述",
+                        "readOnly": null
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "98a13686-39db-4ad2-935e-7ff1dfd50512"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-button",
+                            "liftnet-button-one"
+                        ],
+                        "docked": "bottom"
+                    },
+                    "name": "MyPanel20",
+                    "designerId": "5adbfb6a-d6c8-477b-9a6c-534a5ae4a01b",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "id": "AdmFormStatementReason_BtnYes",
+                                "text": "确定"
+                            },
+                            "name": "MyButton7",
+                            "designerId": "d32bb3af-47e6-4374-9128-a3e72023f6ef"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

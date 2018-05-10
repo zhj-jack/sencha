@@ -1,0 +1,226 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoDestroy": false,
+        "designer|userClassName": "Engineer.EngTaskPhoto",
+        "hideOnMaskTap": false,
+        "id": "EngTaskPhoto",
+        "layout": "vbox",
+        "modal": false
+    },
+    "name": "Engineer.EngFaultPhoto1",
+    "designerId": "8b0474a8-2320-4ddf-865c-3e6517e513e2",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": null
+            },
+            "name": "MyToolbar",
+            "designerId": "52bd88af-2adc-4da5-957a-7245d853b3de",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngTaskPhoto_BtnReturn",
+                        "margin": null,
+                        "padding": null,
+                        "text": null
+                    },
+                    "name": "MyButton3",
+                    "designerId": "c58c1b97-d4ef-4d32-9002-9bbe46eb4636"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer8",
+                    "designerId": "7ac234cf-f553-4f85-b95d-0d91e5ef0d2a"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "iconAlign": "right",
+                        "iconCls": "delete",
+                        "id": "EngTaskPhoto_BtnDel",
+                        "itemId": "EngTaskPhoto_BtnDel",
+                        "padding": null,
+                        "text": null
+                    },
+                    "name": "MyButton4",
+                    "designerId": "8e0fedb6-fdeb-48f6-8195-0903580b2bc9"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyContainer19",
+            "designerId": "488b6652-42cc-46be-910c-8502b7d26ab5",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngTaskPhoto_Panel",
+                        "itemId": "EngTaskPhoto_Panel",
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel",
+                    "designerId": "ef524024-0bef-4cb1-91f2-057b6f8f0d47",
+                    "cn": [
+                        {
+                            "type": "Ext.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "top",
+                                "html": null,
+                                "id": "EngTaskPhoto_remark",
+                                "label": null,
+                                "margin": "10 20",
+                                "placeHolder": "描述..."
+                            },
+                            "name": "MyTextArea25",
+                            "designerId": "45cf2cc9-1da6-4606-8bd4-9a067ef3ccef"
+                        },
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "top",
+                                "height": 280,
+                                "id": "EngTaskPhoto_show",
+                                "margin": "10 10 0 10",
+                                "maxHeight": 350,
+                                "maxWidth": 350
+                            },
+                            "name": "MyImg10",
+                            "designerId": "49865ca1-9a84-4c0c-bed6-4b7320bd1d32"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngTaskPhoto_ImgID"
+                    },
+                    "name": "MyHiddenField6",
+                    "designerId": "ed290028-2907-49c8-aed6-5c42ed766f81"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngTaskPhotoNextImgId"
+                    },
+                    "name": "MyHiddenField7",
+                    "designerId": "af3eb5bc-e968-4c14-8bc1-83e9b06d670c"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngTaskPhotofcname"
+                    },
+                    "name": "MyHiddenField8",
+                    "designerId": "be814aa7-0286-4a3b-8e62-5681fbaf33ab"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-button"
+                        ],
+                        "id": "EngTaskPhoto_PanelBtnSave"
+                    },
+                    "name": "MyPanel59",
+                    "designerId": "2f74a922-78ba-49e1-bfcd-2a819814d79b",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "EngTaskPhoto_BtnSave",
+                                "text": "保存"
+                            },
+                            "name": "MyButton80",
+                            "designerId": "a467b477-4801-41c1-88e0-ea7f06f6eb11"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngElevatorFile_Map",
+        "id": "EngElevatorFile_Map",
+        "layout": "vbox"
+    },
+    "designerId": "cd8b38b3-a040-460f-be10-23ec3b843c65",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "选择坐标"
+            },
+            "name": "MyToolbar17",
+            "designerId": "65287785-d4bb-4e04-880d-ccadd75d0c6d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "itemId": "ElevatorFile_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton74",
+                    "designerId": "51d107a8-7b8e-4aae-a94b-3b443f89bcb2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-monitor-map"
+                ],
+                "id": "ElevatorFile_MapPanel",
+                "itemId": "ElevatorFile_MapPanel",
+                "layout|flex": 1
+            },
+            "name": "MyPanel21",
+            "designerId": "87c43456-9f63-4821-97c6-321fb6a2df3b"
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFirstCheckTask_Map",
+        "id": "EngFirstCheckTask_Map",
+        "layout": "vbox"
+    },
+    "name": "Engineer.EngElevatorFile_Map1",
+    "designerId": "1986c4f5-9a1f-4d17-aff2-4f9ed39754d6",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "选择坐标"
+            },
+            "name": "MyToolbar17",
+            "designerId": "dec07f92-ea97-40a6-88b0-65251b32e35e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFirstCheckTask_BtnReturn",
+                        "itemId": "EngFirstCheckTask_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton74",
+                    "designerId": "fc692e6b-cac2-48ac-830b-df0aa793c178"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-monitor-map"
+                ],
+                "id": "EngFirstCheckTask_MapPanel",
+                "itemId": "EngFirstCheckTask_MapPanel",
+                "layout|flex": 1
+            },
+            "name": "MyPanel21",
+            "designerId": "09cc8de0-11f7-4eaa-b5ae-3fa012b12e5a"
+        }
+    ]
+}

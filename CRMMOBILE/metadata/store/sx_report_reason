@@ -1,0 +1,29 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sx_report_reason",
+        "storeId": "sx_report_reason"
+    },
+    "name": "MyStore",
+    "designerId": "a37954a3-d72e-4ec5-8f60-b4a57eb28750",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "reasonname"
+            },
+            "name": "field476",
+            "designerId": "d1f7f565-5af5-45fa-aaba-4a8e7b5d599b"
+        }
+    ]
+}

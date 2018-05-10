@@ -1,0 +1,155 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userClassName": "Engineer.EngMaintainContractStatus",
+        "hidden": true,
+        "hideOnMaskTap": true,
+        "id": "EngMaintainContractStatus",
+        "itemId": "EngMaintainContractStatus",
+        "modal": true,
+        "padding": "5 10"
+    },
+    "name": "Engineer.EngFaultReportStatus1",
+    "designerId": "5fb89566-4b78-48a5-9e47-633f9e02080e",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngMaintainContractStatus_0",
+                "itemId": "EngMaintainContractStatus_0",
+                "text": "全部"
+            },
+            "name": "MyButton41",
+            "designerId": "cb869ea3-95e8-48e2-bbec-a616aab4db92"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngMaintainContractStatus_1",
+                "itemId": "EngMaintainContractStatus_1",
+                "text": "新建"
+            },
+            "name": "MyButton22",
+            "designerId": "f0c3d005-a5e1-469b-8cea-77e26997e86f"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngMaintainContractStatus_2",
+                "itemId": "EngMaintainContractStatus_2",
+                "text": "待审"
+            },
+            "name": "MyButton42",
+            "designerId": "bf02872e-e601-4497-8a31-84792f7dea51"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngMaintainContractStatus_3",
+                "itemId": "EngMaintainContractStatus_3",
+                "text": "通过"
+            },
+            "name": "MyButton43",
+            "designerId": "b178f0e7-e27c-476a-bd19-be18d6bec4f3"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngMaintainContractStatus_4",
+                "itemId": "EngMaintainContractStatus_4",
+                "text": "不通过"
+            },
+            "name": "MyButton44",
+            "designerId": "261c71cb-d355-498b-b92f-b83f72a3c81c"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngMaintainContractStatus_5",
+                "itemId": "EngMaintainContractStatus_5",
+                "text": "审批中"
+            },
+            "name": "MyButton55",
+            "designerId": "7aa3ff04-1afe-4ea8-b77b-3709a06d9ada"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngMaintainContractStatus_6",
+                "itemId": "EngMaintainContractStatus_6",
+                "text": "已取消"
+            },
+            "name": "MyButton56",
+            "designerId": "ee5694c9-8dbd-47cd-be2e-71bd43aaa2d8"
+        }
+    ]
+}

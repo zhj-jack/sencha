@@ -1,0 +1,227 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_firstcheckparts",
+        "storeId": "eng_firstcheckparts"
+    },
+    "name": "MyStore",
+    "designerId": "90ce6eb8-e196-447c-8963-393a20e91a26",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "filesjnl"
+            },
+            "name": "field500",
+            "designerId": "fa8a1e29-9c76-46db-aa78-e83eb2d51cce"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partsid"
+            },
+            "name": "field827",
+            "designerId": "c4f24c29-e44f-4b6f-a2d5-d5b3458ef75b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partsname"
+            },
+            "name": "field501",
+            "designerId": "acde36d0-b95d-4db3-ae4a-d17524d09868"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partsmodel"
+            },
+            "name": "field502",
+            "designerId": "e6d4c467-6b33-4e7e-a951-2df334d3ffb3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partsno"
+            },
+            "name": "field503",
+            "designerId": "db203661-2711-43c6-aff4-10c4d4873fd7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partstypeid"
+            },
+            "name": "field504",
+            "designerId": "826ffdda-865c-4c15-8b25-77b6067343b1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partstypename"
+            },
+            "name": "field909",
+            "designerId": "bcd96588-0892-43f7-9bb1-9655ada37b96"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "iscore"
+            },
+            "name": "field514",
+            "designerId": "bea87a80-2687-43f6-9265-f8347161e0fa"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partsremark"
+            },
+            "name": "field515",
+            "designerId": "0abd71c4-c5e2-4d19-9414-f99edf7997a7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "num"
+            },
+            "name": "field516",
+            "designerId": "3df73cca-a47b-4df9-9ed9-38e96cad434e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "iscoreShow"
+            },
+            "name": "field841",
+            "designerId": "3fa6bded-43d0-439c-a687-cfdb9cdc4da6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "textcolor"
+            },
+            "name": "field842",
+            "designerId": "654b562a-24e2-46cc-90cb-fe73e7531bc3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partsfilename"
+            },
+            "name": "field828",
+            "designerId": "7b19398f-9c33-4928-bafb-d29c17ddef54"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partsfile"
+            },
+            "name": "field852",
+            "designerId": "56bc3289-cb5f-4113-a1eb-d570ba509636"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "isExist",
+                "implHandler": [
+                    "if(!parm){",
+                    "    return false;",
+                    "}",
+                    "var count = 0;",
+                    "var data = this.getData();",
+                    "for(var i =0,length = data.length; i<length;i++){",
+                    "    if(data.items[i].data.partsid===parm){",
+                    "        count++;",
+                    "    }",
+                    "}",
+                    "return count!==0;//不存在"
+                ]
+            },
+            "name": "isExist",
+            "designerId": "d689b43c-42b0-42e8-a88b-33096c735df2"
+        }
+    ]
+}

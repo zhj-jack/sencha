@@ -1,0 +1,339 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngInsureContractQuery",
+        "id": "EngInsureContractQuery",
+        "layout": "vbox"
+    },
+    "name": "Engineer.EngContractQuery1",
+    "designerId": "3a9cc453-3d66-457f-bcb7-a3c7cea5749c",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "id": "EngInsureContractQuery_Title",
+                "title": "保险合同查询"
+            },
+            "name": "MyToolbar11",
+            "designerId": "6727837b-c96c-4b4f-8a5f-aa141595dc8e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngInsureContractQuery_BtnReturn",
+                        "text": ""
+                    },
+                    "name": "MyButton20",
+                    "designerId": "96ac6064-0612-448f-949b-91112a261b90"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-search-form"
+                ],
+                "height": 52,
+                "layout": "hbox"
+            },
+            "name": "MyFormPanel22",
+            "designerId": "c9a76971-5fd8-4513-ae09-000b1ff598e3",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-font-size12"
+                        ],
+                        "id": "EngInsureContractQuery_Search",
+                        "label": null,
+                        "layout|flex": 2,
+                        "placeHolder": "合同编号、客户名称、项目名称"
+                    },
+                    "name": "MySearchField6",
+                    "designerId": "b2af3dbe-e37e-4a47-a58e-e72409ab4ba3"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-font-size12",
+                            "liftnet-no-border",
+                            "liftnet-fontColor-darkGray"
+                        ],
+                        "docked": "right",
+                        "iconAlign": "right",
+                        "iconCls": "fa fa-angle-down",
+                        "id": "EngInsureContractQuery_Staus",
+                        "margin": "16 0",
+                        "text": "全部",
+                        "width": 70
+                    },
+                    "name": "MyButton54",
+                    "designerId": "76d810f5-b1bf-4926-afc6-b1aa0dc565fb"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-search-form"
+                ],
+                "height": 52,
+                "layout": "hbox"
+            },
+            "name": "MyFormPanel6",
+            "designerId": "0c380d94-c2a6-483a-8075-4c0c96162054",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-fontColor-gray"
+                        ],
+                        "docked": "left",
+                        "html": "<i class='fa fa-calendar'></i>",
+                        "margin": "18 -4 0 8",
+                        "width": 20
+                    },
+                    "name": "MyLabel29",
+                    "designerId": "e07cfb1b-2541-4090-9400-33e4cce75926"
+                },
+                {
+                    "type": "Ext.field.DatePicker",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dateFormat": "Y-m-d",
+                        "id": "EngInsureContractQuery_date1",
+                        "inputCls": "liftnet-font-center",
+                        "itemId": "EngInsureContractQuery_date1",
+                        "label": "",
+                        "layout|flex": 1,
+                        "placeHolder": "保险开始日期"
+                    },
+                    "name": "MyDatePicker",
+                    "designerId": "6fb08244-0f1f-4d1f-ac25-1abc10a50f90",
+                    "cn": [
+                        {
+                            "type": "Ext.picker.Date",
+                            "reference": {
+                                "name": "picker",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "slotOrder": [
+                                    "year",
+                                    "month",
+                                    "day"
+                                ],
+                                "yearFrom": 2000,
+                                "yearTo": 2200
+                            },
+                            "name": "MyDatePicker1",
+                            "designerId": "18ed8caa-d321-407f-94c2-04a02119a016",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "doneButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "确定"
+                                    },
+                                    "name": "MyButton11",
+                                    "designerId": "ee2f2251-ea1e-4a54-93f7-0bd065714dfe"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "cancelButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "取消"
+                                    },
+                                    "name": "MyButton12",
+                                    "designerId": "2a18f809-2ad8-474d-9812-53421c7ef4b9"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.DatePicker",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dateFormat": "Y-m-d",
+                        "id": "EngInsureContractQuery_date2",
+                        "inputCls": "liftnet-font-center",
+                        "itemId": "EngInsureContractQuery_date2",
+                        "label": "",
+                        "layout|flex": 1,
+                        "placeHolder": "保险结束日期"
+                    },
+                    "name": "MyDatePicker2",
+                    "designerId": "5f57954e-2efa-44d1-9a5f-4f2140ded05e",
+                    "cn": [
+                        {
+                            "type": "Ext.picker.Date",
+                            "reference": {
+                                "name": "picker",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "slotOrder": [
+                                    "year",
+                                    "month",
+                                    "day"
+                                ],
+                                "yearFrom": 2000,
+                                "yearTo": 2200
+                            },
+                            "name": "MyDatePicker5",
+                            "designerId": "34d969f3-e888-4d59-9991-b03efd8ff425",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "doneButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "确定"
+                                    },
+                                    "name": "MyButton27",
+                                    "designerId": "ebd9c85b-9751-4861-bf48-7f1317fab261"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "cancelButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "取消"
+                                    },
+                                    "name": "MyButton28",
+                                    "designerId": "55d1c652-4aaa-4ba2-a9ed-feda2ec27fe5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-fault-listBox"
+                ],
+                "disableSelection": true,
+                "id": "EngInsureContractQuery_List",
+                "layout|flex": 1,
+                "store": "eng_insurecontractquerylist"
+            },
+            "name": "MyList15",
+            "designerId": "51fa8c30-0d15-48ea-ad67-1f8f55f79635",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-Maintenance-TaskRecList\" style=\"height:100px\">",
+                            "    <div class=\"liftnet-Maintenance-TaskRecList-left\" style=\"left:14px\" >",
+                            "        <div class=\"liftnet-font-size16 {titleColor}\">{contractid}&nbsp;</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{acceptanceunit}&nbsp;</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{insurancemanager}&nbsp;</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{insurancestartdate} ~ {insuranceenddate}&nbsp;</div>",
+                            "       ",
+                            "    </div>",
+                            "    <div class=\"liftnet-Maintenance-TaskRecList-right\" style=\"padding-top:0px;right:14px\">",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray liftnet-font-right\">¥{contractamt}&nbsp;</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{contractnum}&nbsp;台</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{linkphone}&nbsp;</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{signdate}&nbsp;</div>",
+                            "    </div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "f35d0273-d4db-47bf-a5cc-41d542fc0ee0"
+                }
+            ]
+        }
+    ]
+}

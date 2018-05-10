@@ -1,0 +1,254 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngNoticeController"
+    },
+    "name": "MyController",
+    "designerId": "212f67b2-405b-4e0b-a9db-a59213d36c66",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#EngHome_Notice",
+                "designer|targetType": "Ext.Container",
+                "fn": "onEngHome_NoticeInitialize",
+                "implHandler": [
+                    "// EngHome_NoticeList",
+                    "Ext.getCmp('EngHome_NoticeList').getStore().loadDat(",
+                    "    function(){",
+                    "",
+                    "    },",
+                    "    function(info){",
+                    "        Ext.toast(info);",
+                    "    }",
+                    ");"
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngHome_NoticeInitialize",
+            "designerId": "be5c9ff7-43ce-4af8-8256-42f49818f670"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngHome_NoticeList",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngHome_NoticeListItemTap",
+                "implHandler": [
+                    "// switch(index){",
+                    "//     case 0:",
+                    "//         viewUtil.goNext('Engineer.EngYearCheckElevator');",
+                    "//         break;",
+                    "//     case 1:",
+                    "//         viewUtil.goNext('Engineer.EngDueMoney');",
+                    "//         break;",
+                    "//     case 2:",
+                    "//         viewUtil.goNext('Engineer.EngHaveInvoiceNoMoney');",
+                    "//         break;",
+                    "//     case 3:",
+                    "//         viewUtil.goNext('Engineer.EngDueContract');",
+                    "//         break;",
+                    "// }"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngHome_NoticeListItemTap",
+            "designerId": "0a7aeded-75c8-4856-8914-22cce95b21a6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngYearCheckElevator_BtnReturn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngYearCheckElevator_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngYearCheckElevator_BtnReturnTap",
+            "designerId": "a18345e3-07c5-4065-8e77-d7510cc602a6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngDueMoney_BtnReturn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngDueMoney_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngDueMoney_BtnReturnTap",
+            "designerId": "a09ca651-1f0b-4ea2-9453-538957ceb84b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngHaveInvoiceNoMoney_BtnReturn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngHaveInvoiceNoMoney_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngHaveInvoiceNoMoney_BtnReturnTap",
+            "designerId": "9bde5775-c8e7-4bcf-a1b4-6562a2364c74"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngDueContract_BtnReturn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngDueContract_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngDueContract_BtnReturnTap",
+            "designerId": "ed597541-f86a-49c1-ade9-1bf411de1970"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngYearCheckElevator",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngYearCheckElevatorShow",
+                "implHandler": [
+                    "Ext.getCmp('EngYearCheckElevator_ListElevator').getStore().loadDat(",
+                    "    function(){",
+                    "",
+                    "    },",
+                    "    function(){",
+                    "        Ext.toast('加载即将到期年检电梯数据失败，请稍后重试！');",
+                    "    }",
+                    ");"
+                ],
+                "name": "show"
+            },
+            "name": "onEngYearCheckElevatorShow",
+            "designerId": "ec160957-b188-4c1f-b38e-09379c124851"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngDueMoney",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngDueMoneyShow",
+                "implHandler": [
+                    "Ext.getCmp('EngDueMoney_ListMoney').getStore().loadDat(",
+                    "    function(){",
+                    "",
+                    "    },",
+                    "    function(){",
+                    "        Ext.toast('加载即将到期应收款项数据失败，请稍后重试！');",
+                    "    }",
+                    ");"
+                ],
+                "name": "show"
+            },
+            "name": "onEngDueMoneyShow",
+            "designerId": "336c51d4-3c36-439b-8a27-a15237b6e654"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngHaveInvoiceNoMoney",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngHaveInvoiceNoMoneyShow",
+                "implHandler": [
+                    "Ext.getCmp('EngHaveInvoiceNoMoney_ListMoney').getStore().loadDat(",
+                    "    function(){",
+                    "",
+                    "    },",
+                    "    function(){",
+                    "        Ext.toast('加载已开票未收款数据失败，请稍后重试！');",
+                    "    }",
+                    ");"
+                ],
+                "name": "show"
+            },
+            "name": "onEngHaveInvoiceNoMoneyShow",
+            "designerId": "5e01b558-0054-4346-bc16-7e73f0e2e657"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngDueContract",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngDueContractShow",
+                "implHandler": [
+                    "Ext.getCmp('EngDueContract_ListContract').getStore().loadDat(",
+                    "    function(){",
+                    "",
+                    "    },",
+                    "    function(){",
+                    "        Ext.toast('加载即将到期合同失败，请稍后重试！');",
+                    "    }",
+                    ");"
+                ],
+                "name": "show"
+            },
+            "name": "onEngDueContractShow",
+            "designerId": "9d06398e-617d-49c6-af1e-bf623eead467"
+        }
+    ]
+}

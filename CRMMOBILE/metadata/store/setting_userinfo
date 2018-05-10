@@ -1,0 +1,170 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "setting_userinfo",
+        "storeId": "setting_userinfo"
+    },
+    "name": "sx_sxtasklist1",
+    "designerId": "7a2a367b-95bb-4bfc-b74f-6a53359d4fc9",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid",
+                "type": "string"
+            },
+            "name": "field7",
+            "designerId": "723c7a19-9a3a-40f6-8ed8-436293c60b5a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username",
+                "type": "string"
+            },
+            "name": "field200",
+            "designerId": "fb9ab4ec-21c0-4798-831f-82d06c6bebd4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rolename",
+                "type": "string"
+            },
+            "name": "field8",
+            "designerId": "315ecb79-1666-41b6-a00e-7c5270be3f94"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storagename",
+                "type": "string"
+            },
+            "name": "field9",
+            "designerId": "3c6bfd0f-6ae8-4301-81cb-9abd2a2c8b19"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "img",
+                "type": "string"
+            },
+            "name": "field10",
+            "designerId": "d2de6138-cd90-4813-9e9b-740304e81a67"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/setting/api/1.0/userinfo';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: '用户ID'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 个人信息查询-演示数据",
+                    "    this.setData([",
+                    "    {",
+                    "        img: ''",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "571cfbb5-b484-4e47-a002-a0ff05c35a3a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "7bfb5fdf-9252-44fc-b3b8-cde328b91907"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "106dc5c0-b1dd-4f7c-91e9-314da50d6a2a"
+        }
+    ]
+}

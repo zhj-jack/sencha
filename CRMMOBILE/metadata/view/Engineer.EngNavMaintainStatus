@@ -1,0 +1,98 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userClassName": "Engineer.EngNavMaintainStatus",
+        "hidden": true,
+        "hideOnMaskTap": true,
+        "id": "EngNavMenuProcessingState",
+        "itemId": null,
+        "modal": true,
+        "padding": "5 10"
+    },
+    "name": "NavMenu1",
+    "designerId": "91d85203-2800-4f19-b683-dcbda27fbbdf",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngNavMaintainStatus_0",
+                "itemId": "EngNavMaintainStatus_0",
+                "text": "全部"
+            },
+            "name": "MyButton6",
+            "designerId": "58373720-90b1-4ba2-be0e-59776c3d03a5"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngNavMaintainStatus_1",
+                "itemId": "EngNavMaintainStatus_1",
+                "text": "未开始"
+            },
+            "name": "MyButton13",
+            "designerId": "ce33ade1-a17d-4880-8753-351353b303ac"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngNavMaintainStatus_2",
+                "itemId": "EngNavMaintainStatus_2",
+                "text": "到场"
+            },
+            "name": "MyButton14",
+            "designerId": "06e22196-8862-41d4-9298-a4a4a1713fe0"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "EngNavMaintainStatus_3",
+                "itemId": "EngNavMaintainStatus_3",
+                "text": "完工"
+            },
+            "name": "MyButton19",
+            "designerId": "007ddef9-1338-4af4-9e93-9ffe8b6f06a7"
+        }
+    ]
+}

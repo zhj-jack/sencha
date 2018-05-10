@@ -1,0 +1,134 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userClassName": "Engineer.EngProjectTrackingStatus",
+        "hidden": true,
+        "hideOnMaskTap": true,
+        "id": "ProjectTrackingStatus",
+        "modal": true,
+        "padding": "5 10"
+    },
+    "designerId": "71be4d49-3f69-4db2-b78b-ec261ff7cd8e",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "ProjectTrackingStatus_0",
+                "itemId": "ProjectTrackingStatus_0",
+                "text": "全部"
+            },
+            "name": "MyButton66",
+            "designerId": "f307ba2e-f2b7-4582-b5e0-7710d0c459cb"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "ProjectTrackingStatus_1",
+                "itemId": "ProjectTrackingStatus_1",
+                "text": "新建"
+            },
+            "name": "MyButton67",
+            "designerId": "add9d09d-1ac5-40b6-b504-6d33cedd9fec"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "ProjectTrackingStatus_2",
+                "itemId": "ProjectTrackingStatus_2",
+                "text": "待审"
+            },
+            "name": "MyButton68",
+            "designerId": "e15074d9-eca4-49b9-bff5-4c4b370ed3e8"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "ProjectTrackingStatus_3",
+                "itemId": "ProjectTrackingStatus_3",
+                "text": "退出跟进"
+            },
+            "name": "MyButton69",
+            "designerId": "91e70e85-d2c1-4a40-aa9f-97b78596f575"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "ProjectTrackingStatus_4",
+                "itemId": "ProjectTrackingStatus_4",
+                "text": "暂停跟进"
+            },
+            "name": "MyButton70",
+            "designerId": "7944c00d-356a-4b8d-9778-5a9f40dec210"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border",
+                    "liftnet-font-size14"
+                ],
+                "id": "ProjectTrackingStatus_5",
+                "itemId": "ProjectTrackingStatus_5",
+                "text": "允许跟进"
+            },
+            "name": "MyButton71",
+            "designerId": "033a2c13-2544-4f48-a76f-320ac879ff33"
+        }
+    ]
+}

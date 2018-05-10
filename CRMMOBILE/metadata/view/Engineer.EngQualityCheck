@@ -1,0 +1,96 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngQualityCheck",
+        "id": "EngQualityCheckList",
+        "layout": "vbox",
+        "scrollable": true
+    },
+    "name": "Admin.NoUse.AdmAudSwspdetailList1",
+    "designerId": "94fbb908-e402-4d5f-a16a-4c44add614b8",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "质检任务"
+            },
+            "name": "MyToolbar4",
+            "designerId": "071bc3c0-2e32-463a-9fee-24f26c71fb03",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngQualityCheckList_ButReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "f520497a-c2a3-4381-81fc-bd45ea88eaa1"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowDeselect": null,
+                "cls": [
+                    "liftnet-home-listBox"
+                ],
+                "data": null,
+                "disableSelection": true,
+                "id": "EngQualityCheck_TodoList",
+                "layout|flex": 1,
+                "onItemDisclosure": true,
+                "pressedCls": null,
+                "store": "eng_qualitycheck_todolist"
+            },
+            "name": "MyList6",
+            "designerId": "f5c059e7-2665-43eb-a9ad-cf26ebec2ecb",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div style='padding-left:20px;padding-top:12px;padding-bottom:12px;color:rgb(116,116,116)'>",
+                            "    <i class='{icon}' style='font-size:20px;float:left'></i>",
+                            "    <div style='font-size:1em;margin-left:20px;float:left'>{qualityname}</div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "b2adac53-76b7-4e5a-99e3-13c24af9b8c7"
+                }
+            ]
+        }
+    ]
+}

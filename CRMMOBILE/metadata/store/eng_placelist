@@ -1,0 +1,118 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_placelist",
+        "storeId": "eng_placelist"
+    },
+    "name": "eng_kzfslist1",
+    "designerId": "9a982ea7-0688-4afb-b482-b8b2e3f6ff0e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "placeid"
+            },
+            "name": "field497",
+            "designerId": "bd41a192-359c-4b7e-bcbd-f4769ece51c6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "placename"
+            },
+            "name": "field498",
+            "designerId": "0b5b7531-2ef5-415a-9cfa-562ed54bd1d7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "parm = {userid: global.getUserId()};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/dtsycslist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取受信来源列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            placeid: '1',",
+                    "            placename: '住宅'",
+                    "        },",
+                    "        {",
+                    "            placeid: '2',",
+                    "            placename: '办公楼宇'",
+                    "        },",
+                    "        {",
+                    "            placeid: '3',",
+                    "            placename: '商场超市'",
+                    "        },",
+                    "        {",
+                    "            placeid: '4',",
+                    "            placename: '宾馆饭店'",
+                    "        },",
+                    "        {",
+                    "            placeid: '5',",
+                    "            placename: '交通场所'",
+                    "        },",
+                    "        {",
+                    "            placeid: '6',",
+                    "            placename: '医院'",
+                    "        },",
+                    "        {",
+                    "            placeid: '7',",
+                    "            placename: '学校'",
+                    "        },",
+                    "        {",
+                    "            placeid: '8',",
+                    "            placename: '文体娱场馆'",
+                    "        },",
+                    "        {",
+                    "            placeid: '9',",
+                    "            placename: '其他场所'",
+                    "        }",
+                    "    ]);",
+                    "        onSuccess(9);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "7445cc32-d7ef-458f-ba0e-95fce76c6d6c"
+        }
+    ]
+}

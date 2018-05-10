@@ -1,0 +1,150 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoDestroy": false,
+        "designer|userClassName": "Engineer.EngFirstCheckTask_AddPartPhoto",
+        "hideOnMaskTap": false,
+        "id": "EngFirstCheckTask_AddPartPhoto",
+        "layout": "vbox",
+        "modal": false
+    },
+    "name": "Engineer.EngFaultPhoto1",
+    "designerId": "34ea59b8-c056-42ed-8530-d1400828288a",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": null
+            },
+            "name": "MyToolbar",
+            "designerId": "d421297f-dac9-47e3-b9ea-476709210084",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFirstCheckTask_AddPartPhoto_BtnReturn",
+                        "margin": null,
+                        "padding": null,
+                        "text": null
+                    },
+                    "name": "MyButton3",
+                    "designerId": "fa2a4117-797e-42e8-af91-36525ed8bb3b"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer8",
+                    "designerId": "88c9eab9-38a1-4b2b-bf83-1df2e2bb687a"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "iconAlign": "right",
+                        "iconCls": "delete",
+                        "id": "EngFirstCheckTask_AddPartPhoto_BtnDel",
+                        "itemId": "EngFirstCheckTask_AddPartPhoto_BtnDel",
+                        "padding": null,
+                        "text": null
+                    },
+                    "name": "MyButton4",
+                    "designerId": "4565a69d-b503-4ab0-ab51-b008130ca791"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyContainer19",
+            "designerId": "12ef0fde-93dc-40ef-8af5-7ba18bf0048a",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckTask_AddPartPhoto_Panel",
+                        "itemId": "EngFirstCheckTask_AddPartPhoto_Panel",
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel",
+                    "designerId": "b2aff3ae-bcdc-4561-a043-0f4044b98414",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "top",
+                                "height": 280,
+                                "id": "EngFirstCheckTask_AddPartPhoto_show",
+                                "margin": "100 10 0 10",
+                                "maxHeight": 350,
+                                "maxWidth": 350
+                            },
+                            "name": "MyImg10",
+                            "designerId": "477f1896-3685-4e5f-aa25-f80aefea24d4"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckTask_AddPartPhoto_ImgID"
+                    },
+                    "name": "MyHiddenField6",
+                    "designerId": "8a64cb62-5c10-4cf2-ad55-835499d8f700"
+                }
+            ]
+        }
+    ]
+}

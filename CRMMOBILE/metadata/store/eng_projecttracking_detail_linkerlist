@@ -1,0 +1,144 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_projecttracking_detail_linkerlist",
+        "storeId": "eng_projecttracking_detail_linkerlist"
+    },
+    "name": "MyStore",
+    "designerId": "2dcf58be-fd16-4e1c-9935-bb2d8e7bd28a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "linker"
+            },
+            "name": "field5",
+            "designerId": "444b29cd-c5f0-4c67-a101-80b0e072e984"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "linkphone"
+            },
+            "name": "field6",
+            "designerId": "698ac5d1-fedf-4e9b-81d8-fca13cadb1b5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "job"
+            },
+            "name": "field7",
+            "designerId": "db00c4b4-b0a9-41de-ba34-30e8318c0190"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "otherlink"
+            },
+            "name": "field8",
+            "designerId": "4cd98e05-ad13-42eb-bb6d-1eb7c0ab7153"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "remark"
+            },
+            "name": "field9",
+            "designerId": "533e49a0-f5ea-4f04-9a04-428ea9898054"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cardnumber"
+            },
+            "name": "field10",
+            "designerId": "f1877607-b59e-4e28-a45d-e3110c34853b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "todoTpl"
+            },
+            "name": "field808",
+            "designerId": "2684d3ac-9bb0-401d-bbfb-02a08e95654b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(data.length>0){",
+                    "    for(var i=0;i<data.length;i++){",
+                    "        data[i].todoTpl = '<div style=\"float:left;\">'+",
+                    "            '<div style=\"line-height:18px\" class=\"liftnet-font-size12 \">'+",
+                    "            data[i].linker+'('+data[i].linkphone+')</div>'+",
+                    "            '<div style=\"line-height:18px\" class=\"liftnet-font-size12 \"></div>'+",
+                    "        '</div>'+",
+                    "        '<div style=\"float:right;\">'+",
+                    "        '<div style=\"line-height:18px\" class=\"liftnet-font-size12 \">'+",
+                    "        data[i].job+'</div>'+",
+                    "        '</div>';",
+                    "    }",
+                    "    return data;",
+                    "}else{",
+                    "    var ds = [{",
+                    "        todoTpl : '<div style=\"height:70px;text-align:center;padding-top:30px;\" class=\"liftnet-font-size12 \">暂无数据!</div>'",
+                    "    }];",
+                    "    return ds;",
+                    "}"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "54a91973-4af0-4b4b-a961-53ae82d3a2d8"
+        }
+    ]
+}

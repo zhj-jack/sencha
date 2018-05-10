@@ -1,0 +1,157 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngMonitorProjectInfoList",
+        "id": "EngMonitorProjectInfoList",
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "Engineer.EngMonitorElevatorList1",
+    "designerId": "c95aac45-b776-492b-8560-151f7d4eebaa",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "项目信息"
+            },
+            "name": "MyToolbar5",
+            "designerId": "cefa30b9-9b3c-4103-af3f-6c332d2917aa",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngMonitorProjectInfoList_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton5",
+                    "designerId": "2cd21e8f-5845-4762-9c82-02e9f362c0bc"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1,
+                "scrollable": null
+            },
+            "name": "MyPanel7",
+            "designerId": "228d4a00-13a9-4861-b298-d0d1534ba2ff",
+            "cn": [
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-search-form"
+                        ],
+                        "height": null,
+                        "scrollable": null
+                    },
+                    "name": "MyFormPanel1",
+                    "designerId": "5fbafbcb-762b-4008-bde2-6916939daf6a",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-font-size12"
+                                ],
+                                "id": "EngMonitorProjectInfoList_Search",
+                                "itemId": "EngMonitorProjectInfoList_Search",
+                                "label": null,
+                                "labelWidth": null,
+                                "placeHolder": "项目名称、项目地址"
+                            },
+                            "name": "MySearchField",
+                            "designerId": "7185b2cf-31ba-4cde-80e9-427e938e6f27"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowDeselect": null,
+                        "cls": [
+                            "liftnet-monitor-elevatorDetail-listBox"
+                        ],
+                        "data": null,
+                        "disableSelection": true,
+                        "id": "EngMonitorProjectInfoList_ListProject",
+                        "itemId": null,
+                        "layout|flex": 1,
+                        "pressedCls": " ",
+                        "store": "ss_projectinfolist"
+                    },
+                    "name": "MyList",
+                    "designerId": "0877c482-61ba-46ca-9472-c97c58dc655b",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"liftnet-monitor-elevatorDetail-listConBox\">",
+                                    "\t<div class=\"liftnet-monitor-listConBox-top\">",
+                                    "    \t<div class=\"liftnet-font-size16 liftnet-fontColor-darkGray liftnet-monitor-listConBox-top-left\">{projectname}</div>",
+                                    "    \t<div class=\"liftnet-monitor-listConBox-state liftnet-font-right liftnet-font-size12 {statusColor}\">{elevatornum}台</div>",
+                                    "    </div>",
+                                    "    <div class=\"liftnet-fontColor-gray liftnet-font-size12\">{projectaddress}</div>",
+                                    "<!--     <div class=\"liftnet-fontColor-gray liftnet-font-size12\">{addr}</div>",
+                                    "    <div class=\"liftnet-fontColor-gray liftnet-font-size12\">最近维保时间：{lastfinishtime}</div> -->",
+                                    "</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "9f04e3a6-81a3-48e6-b392-36dda8f6d8bb"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

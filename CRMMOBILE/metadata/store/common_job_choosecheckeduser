@@ -1,0 +1,160 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_job_choosecheckeduser",
+        "storeId": "common_job_choosecheckeduser"
+    },
+    "name": "common_job_chooselift1",
+    "designerId": "2b3ce81b-737b-4372-9d14-2685a06fc757",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "name": "field542",
+            "designerId": "18fc12cf-c6e8-41bb-b9ce-7a67ff258bdb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username"
+            },
+            "name": "field543",
+            "designerId": "c235725d-cb2a-4c30-bdc9-edf2891d65c8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "departmentid"
+            },
+            "name": "field544",
+            "designerId": "f05e4401-6723-4895-af41-cb0567edf54e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "department"
+            },
+            "name": "field545",
+            "designerId": "cc55fb45-ab5f-4faf-8865-6c21f366ec82"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usertype"
+            },
+            "name": "field546",
+            "designerId": "d3ce4128-a171-4987-9f8e-212d03c5ed02"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/liftnet/common/api/1.0/';",
+                    "    var userid = global.getUserId();",
+                    "",
+                    "//     var adapterParm = {userid: userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取检验人员列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            userid: 'userid1',",
+                    "            username: 'username1',",
+                    "            departmentid:'departmentid1',",
+                    "            department:'department1',",
+                    "            usertype:'usertype1',",
+                    "        },",
+                    "        {",
+                    "            userid: 'userid2',",
+                    "            username: 'username2',",
+                    "            departmentid:'departmentid2',",
+                    "            department:'department2',",
+                    "            usertype:'usertype2',",
+                    "        },",
+                    "        {",
+                    "            userid: 'userid3',",
+                    "            username: 'username3',",
+                    "            departmentid:'departmentid3',",
+                    "            department:'department3',",
+                    "            usertype:'usertype3',",
+                    "        },",
+                    "        {",
+                    "            userid: 'userid4',",
+                    "            username: 'username4',",
+                    "            departmentid:'departmentid4',",
+                    "            department:'department4',",
+                    "            usertype:'usertype4',",
+                    "        },",
+                    "        {",
+                    "            userid: 'userid5',",
+                    "            username: 'username5',",
+                    "            departmentid:'departmentid5',",
+                    "            department:'department5',",
+                    "            usertype:'usertype5',",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "b0419810-bf6e-49f3-be50-abe970afcd42"
+        }
+    ]
+}

@@ -1,0 +1,717 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_contractdetail",
+        "storeId": "eng_contractdetail"
+    },
+    "name": "eng_tracktopinfo1",
+    "designerId": "f157bc73-e6a4-470a-b18c-b599caa06a10",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/bycontract/api/1.0/bycontractdetail';",
+                    "    var adapterparm = {",
+                    "        userid:global.getUserId(),",
+                    "        billno:parm.billno",
+                    "    };",
+                    "    callPostAdapter(",
+                    "        url, adapterparm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('获取合同明细失败');",
+                    "            }else{",
+                    "                var d = me.decoDat(ret.data);",
+                    "                me.setData(d);",
+                    "                onSuccess(d);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('获取合同明细失败');",
+                    "        }",
+                    "        );",
+                    "} else {",
+                    "",
+                    "    var d = [",
+                    "        {",
+                    "            billno:'billno123 ',",
+                    "            clientunit:'clientunit',",
+                    "            projectname:'projectname',",
+                    "            projectaddress:'projectaddress',",
+                    "            vulnerableamount:'500.0',",
+                    "            needingattention:'needingattention',",
+                    "            contractnumber:'20',",
+                    "            allprice:'18000',",
+                    "            maid:'maid',",
+                    "            maname:'maname',",
+                    "            r9:'r9',",
+                    "            contractid:'contractid',",
+                    "            lotdate:'2015-06-12',",
+                    "            mugstartdate:'2015-06-15',",
+                    "            mugenddate:'2016-06-15',",
+                    "            r18:'12',",
+                    "            createdept:'createdept',",
+                    "            createdeptname:'createdeptname',",
+                    "            contracttypeid:'contracttypeid',",
+                    "            contracttypename:'contracttypename',",
+                    "            createid:'createid',",
+                    "            createname:'createname',",
+                    "            operdate:'operdate',",
+                    "            paytypeid:'paytypeid',",
+                    "            paytypename:'paytypename',",
+                    "            paystyleid:'paystyleid',",
+                    "            paystylename:'paystylename',",
+                    "            masterrem:'masterrem',",
+                    "            operationid:'operationid',",
+                    "            operationname:'operationname',",
+                    "            r1:'r1',",
+                    "            r1name:'r1name',",
+                    "            client:[{",
+                    "                cstname:'cstname',",
+                    "                principal:'principal',",
+                    "                purveyor:'purveyor',",
+                    "                address:'address',",
+                    "                mugaddress:'mugaddress',",
+                    "                phone:'10086',",
+                    "                fax:'fax',",
+                    "                postno:'postno',",
+                    "                bank:'bank',",
+                    "                accounts:'accounts',",
+                    "                identificationnumber:'identificationnumber',",
+                    "                licensenumber:'licensenumber',",
+                    "                sort:'sort',",
+                    "                levelid:'levelid',",
+                    "                levelename:'levelename',",
+                    "                typeid:'typeid',",
+                    "                typename:'typename',",
+                    "                r7:'r7',",
+                    "                r2:'',",
+                    "                r13:'r13',",
+                    "                rem1:'rem1',",
+                    "                createname:'createname',",
+                    "                createdept:'createdept',",
+                    "                linkerbean:[",
+                    "                    {",
+                    "                        contractman:'contractman1',mbphone:'mbphone1',",
+                    "                        ob1:'ob11',othercontact:'othercontact',remail:'remail'",
+                    "                    },",
+                    "                    {",
+                    "                        contractman:'contractman2',mbphone:'mbphone2',",
+                    "                        ob1:'ob12',othercontact:'othercontact2',remail:'remail2'",
+                    "                    }",
+                    "                ],",
+                    "                flowuserlist:[",
+                    "                    {flowuser:'flowuser1',storagename:'storagename1',remark:'remark1'},",
+                    "                    {flowuser:'flowuser2',storagename:'storagename2',remark:'remark2'}",
+                    "                ]",
+                    "            }],",
+                    "            liftinfo:[",
+                    "                {",
+                    "                    liftautono:'3110-123456-123456-0001',",
+                    "                    pordid:'',",
+                    "                    ladderno:'A1',",
+                    "                    regularno:'101202303',",
+                    "                    r15:'6,000',",
+                    "                    yearcheckprice:'0',",
+                    "                    r18:'12',",
+                    "                    price:'500',fsd:'10/10/10',",
+                    "                    elevatorid:'elevatorid11',",
+                    "                    elevatorname:'MCA-CO105',",
+                    "                    facid:'facid11',",
+                    "                    facname:'日立',",
+                    "                    surrenderflag:'surrenderflag11',",
+                    "                    detailstatus:'新签'",
+                    "                },",
+                    "                {",
+                    "                    liftautono:'3110-123456-123456-0002',",
+                    "                    pordid:'3110-123456-123456-0002',",
+                    "                    ladderno:'A2',",
+                    "                    regularno:'101202303',",
+                    "                    r15:'6,000',",
+                    "                    yearcheckprice:'0',",
+                    "                    r18:'12',",
+                    "                    price:'500',fsd:'10/10/10',",
+                    "                    elevatorid:'elevatorid11',",
+                    "                    elevatorname:'MCA-CO105',",
+                    "                    facid:'facid11',",
+                    "                    facname:'日立',",
+                    "                    surrenderflag:'surrenderflag11',",
+                    "                    detailstatus:'新签'",
+                    "                },",
+                    "                {",
+                    "                    liftautono:'3110-123456-123456-0003',",
+                    "                    pordid:'3110-123456-123456-0003',",
+                    "                    ladderno:'A3',",
+                    "                    regularno:'101202303',",
+                    "                    r15:'6,000',",
+                    "                    yearcheckprice:'0',",
+                    "                    r18:'12',",
+                    "                    price:'500',fsd:'10/10/10',",
+                    "                    elevatorid:'elevatorid11',",
+                    "                    elevatorname:'MCA-CO105',",
+                    "                    facid:'facid11',",
+                    "                    facname:'日立',",
+                    "                    surrenderflag:'surrenderflag11',",
+                    "                    detailstatus:'续签'",
+                    "                },",
+                    "            ]",
+                    "        }",
+                    "    ];",
+                    "    var data = this.decoDat(d);",
+                    "    this.setData(data);",
+                    "    onSuccess(data);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "151c8dac-0f5c-4659-bacd-363a188817ae"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "billno"
+            },
+            "name": "field291",
+            "designerId": "910cdb8c-ee39-44dc-b98b-6621689942b6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "clientunit"
+            },
+            "name": "field296",
+            "designerId": "cef86784-e13d-4fec-b0f3-c9c6f11a781d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field616",
+            "designerId": "10aca8c2-feaf-445b-998f-6709b4bab016"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectaddress"
+            },
+            "name": "field617",
+            "designerId": "d8d83bb3-1d4f-4a0f-84a1-65f6ea72acd8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "vulnerableamount"
+            },
+            "name": "field597",
+            "designerId": "840b8af8-b692-4e71-b976-34d75828756a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "needingattention"
+            },
+            "name": "field476",
+            "designerId": "9bb17341-5b8d-466c-9423-01b7f52056e5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractnumber"
+            },
+            "name": "field477",
+            "designerId": "e977deb1-0de0-42fb-a3f7-99c0f108ea15"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "allprice"
+            },
+            "name": "field733",
+            "designerId": "8dbb285a-c751-4b26-9033-669261e57400"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "maid"
+            },
+            "name": "field478",
+            "designerId": "da7803d9-5bd1-4a9e-b830-47e9536942c8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "maname"
+            },
+            "name": "field479",
+            "designerId": "c290ce9f-336f-42ec-ae10-51fa38159066"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r9"
+            },
+            "name": "field480",
+            "designerId": "6de5b613-67ec-454a-b0b0-58205587a4e6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractid"
+            },
+            "name": "field481",
+            "designerId": "24ab36f3-df74-4175-800a-ce1ea88d9aed"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lotdate"
+            },
+            "name": "field678",
+            "designerId": "f6055e46-f398-4d9d-882e-27e45f05b189"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugstartdate"
+            },
+            "name": "field679",
+            "designerId": "dd1dda6c-8a56-44b7-bc24-6215ffcd79b1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugenddate"
+            },
+            "name": "field680",
+            "designerId": "a59548a4-0be0-47d4-ab68-efef1429eba1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r18"
+            },
+            "name": "field681",
+            "designerId": "2abad774-0e3f-4f96-ab25-90962fb660c6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createdept"
+            },
+            "name": "field682",
+            "designerId": "ca1b3dae-3e88-41e2-8ce1-20de350e5185"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createdeptname"
+            },
+            "name": "field683",
+            "designerId": "eb97014c-cb80-49ce-933d-ea37e70829f7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createnameShow"
+            },
+            "name": "field737",
+            "designerId": "b949a46a-7420-4344-8c5c-632cb731cc04"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contracttypeid"
+            },
+            "name": "field684",
+            "designerId": "1350d25c-20e3-47a0-b06e-5b6c555892f5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contracttypename"
+            },
+            "name": "field685",
+            "designerId": "9604b57c-833b-4342-a353-155ea4ff10cc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createid"
+            },
+            "name": "field686",
+            "designerId": "4a5a0658-65e6-4ef1-ae4e-cf16c02670f5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createname"
+            },
+            "name": "field687",
+            "designerId": "7f50ed3c-c0f2-41dd-81d3-57a0ce814f45"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "operdate"
+            },
+            "name": "field688",
+            "designerId": "07f4ffc8-2ff7-4e97-a37e-113c3b60cc70"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "paytypeid"
+            },
+            "name": "field689",
+            "designerId": "52b4fc11-2e77-41d9-9f30-7454eb9d5ac1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "paytypename"
+            },
+            "name": "field690",
+            "designerId": "069ba9e1-be89-49a2-ba94-22f05f929aa5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "paystyleid"
+            },
+            "name": "field691",
+            "designerId": "cc8905e7-3033-4f5c-8fd0-2dee7153d465"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "paystylename"
+            },
+            "name": "field692",
+            "designerId": "96912b02-5f0d-4e0f-a662-44686c25bc2a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "masterrem"
+            },
+            "name": "field693",
+            "designerId": "993b124c-215e-4348-818f-fa861f026649"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "operationid"
+            },
+            "name": "field694",
+            "designerId": "d18de2fa-f721-4c08-b444-ff580350846e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "operationname"
+            },
+            "name": "field695",
+            "designerId": "faecc90e-b0d9-420e-bf22-57349fd0f293"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r1"
+            },
+            "name": "field696",
+            "designerId": "b7498142-9273-448d-96d9-baacc7757796"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r1name"
+            },
+            "name": "field697",
+            "designerId": "023657f1-6468-47d0-8a53-6a78e9971d51"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftinfo"
+            },
+            "name": "field698",
+            "designerId": "0ba2d3d1-5029-4ea8-bd1e-e30bc32b0443"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "client"
+            },
+            "name": "field699",
+            "designerId": "048a5195-9e3a-4961-9fb6-11ab0a37cf90"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data){",
+                    "    return ([]);",
+                    "}",
+                    "//修改合同创建人显示",
+                    "data[0].createnameShow = data[0].createname + '(' + ",
+                    "    data[0].createdeptname +')';",
+                    "if(data[0].operdate!==''){",
+                    "    data[0].operdate = data[0].operdate.substring(0,10);",
+                    "}",
+                    "//修改客户创建人显示",
+                    "var client = data[0].client[0];",
+                    "if(client.r2!==''){",
+                    "    client.r2 = client.r2.substring(0,10);",
+                    "}",
+                    "client.createnameShow = client.createname +'('+",
+                    "    client.createdept+')';",
+                    "",
+                    "//修改联系人、跟进人显示",
+                    "//组拼联系人",
+                    "var linkerbeanShow = '';",
+                    "var linkerbeanList = client.linkerbean;",
+                    "var length = linkerbeanList.length;",
+                    "var i;",
+                    "for(i = 0; i < length; i++){",
+                    "    linkerbeanShow += linkerbeanList[i].contractman+',';",
+                    "}",
+                    "linkerbeanShow = linkerbeanShow.substring(0,linkerbeanShow.length-1);",
+                    "client.linkerbeanShow = linkerbeanShow;",
+                    "",
+                    "//组拼跟进人",
+                    "var flowuserlistShow = '';",
+                    "var flowuserList = client.flowuserlist;",
+                    "length = flowuserList.length;",
+                    "for(i = 0; i < length; i++){",
+                    "    flowuserlistShow += flowuserList[i].flowuser+',';",
+                    "}",
+                    "flowuserlistShow = flowuserlistShow.substring(0,flowuserlistShow.length-1);",
+                    "client.flowuserlistShow = flowuserlistShow;",
+                    "",
+                    "data[0].client[0] = client;",
+                    "",
+                    "//电梯增加保养开始日期-保养结束日期",
+                    "var liftinfo = data[0].liftinfo;",
+                    "length = liftinfo.length;",
+                    "for(i = 0; i < length; i++){",
+                    "    liftinfo[i].mugstartdate = data[0].mugstartdate;",
+                    "    liftinfo[i].mugenddate = data[0].mugenddate;",
+                    "    liftinfo[i].r15 = '¥'+liftinfo[i].r15;",
+                    "    liftinfo[i].price = '¥'+liftinfo[i].price;",
+                    "    liftinfo[i].yearcheckprice = '¥'+liftinfo[i].yearcheckprice;",
+                    "}",
+                    "data[0].liftinfo = liftinfo;",
+                    "",
+                    "return data;"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "54870598-fe7e-441a-85e5-5180d7b23bad"
+        }
+    ]
+}

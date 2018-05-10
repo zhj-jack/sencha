@@ -1,0 +1,329 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFirstCheckTaskAddParts",
+        "id": "EngFirstCheckTaskAddParts",
+        "itemId": "EngFirstCheckTaskAddParts",
+        "layout": "vbox"
+    },
+    "name": "MyPanel16",
+    "designerId": "3c86d46d-c285-4ad8-aae3-6a40b4ef6c4f",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "itemId": "mytoolbar6",
+                "title": "添加零部件"
+            },
+            "name": "MyToolbar6",
+            "designerId": "d45940ea-fe5d-4320-943b-e5fc1fe26ed8",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFirstCheckTaskAddParts_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton18",
+                    "designerId": "51a9b0f6-0156-4886-81dd-afdc0c290a62"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "id": "EngFirstCheckTaskAddParts_Form",
+                "itemId": "EngFirstCheckTaskAddParts_Form",
+                "layout|flex": 1
+            },
+            "name": "MyFormPanel2",
+            "designerId": "e3e431e4-fec5-460e-a3d0-194883d79e49",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckTaskAddPart_Code",
+                        "itemId": "EngFirstCheckTaskAddPart_Code",
+                        "label": "编码",
+                        "name": "partsid",
+                        "required": true
+                    },
+                    "name": "MyTextField49",
+                    "designerId": "735e1a18-7181-4f12-b809-17c8b5282bd5"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": null,
+                        "name": "filesjnl"
+                    },
+                    "name": "MyHiddenField47",
+                    "designerId": "f4596234-44d6-4386-b2d2-632d5f3c4e13"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "零件名称",
+                        "name": "partsname"
+                    },
+                    "name": "MyTextField50",
+                    "designerId": "b7c4d68c-970d-4748-b6ff-079ae598e869"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "型号",
+                        "name": "partsmodel"
+                    },
+                    "name": "MyTextField51",
+                    "designerId": "3caca47f-7cef-4317-abe2-1c3be309ee0d"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "序列号",
+                        "name": "partsno"
+                    },
+                    "name": "MyTextField52",
+                    "designerId": "36a3e623-d521-407b-8b69-0e07f591acb3"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "partstypename",
+                        "label": "零件类型",
+                        "name": "partstypeid",
+                        "required": true,
+                        "store": "eng_partstypelist",
+                        "valueField": "partstypeid"
+                    },
+                    "name": "MySelectField3",
+                    "designerId": "cc64d0cb-2523-4803-9ef9-6aea1a76a88d"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckTaskAddParts_IsCore",
+                        "itemId": "EngFirstCheckTaskAddParts_IsCore",
+                        "label": "核心零件",
+                        "maxValueCls": "x-toggle-on-red",
+                        "minValueCls": "x-toggle-off-green",
+                        "name": "iscore"
+                    },
+                    "name": "MyToggleField1",
+                    "designerId": "8c997742-24e4-4a7c-9ab1-28fe0b75ea97"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "零件描述",
+                        "name": "partsremark"
+                    },
+                    "name": "MyTextField53",
+                    "designerId": "612c573f-33ea-4964-9f1e-8e64b6586f14"
+                },
+                {
+                    "type": "Ext.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "数量",
+                        "name": "num"
+                    },
+                    "name": "MyNumberField5",
+                    "designerId": "2c1818cd-430d-4f4a-932d-b4314f6e9e4b"
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "height": 100,
+                        "id": "EngFirstCheckTaskAddParts_File",
+                        "itemId": "EngFirstCheckTaskAddParts_File",
+                        "margin": 20,
+                        "padding": null,
+                        "right": null,
+                        "src": "resources/images/camera.png",
+                        "width": 100
+                    },
+                    "name": "MyImg20",
+                    "designerId": "1dc810c0-2062-48d7-82cf-9c2369f977f2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.ActionSheet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 65,
+                "hidden": true,
+                "hideOnMaskTap": true,
+                "id": "addpart_camera_show",
+                "itemId": "Addpart_camera_show",
+                "layout": "hbox"
+            },
+            "name": "MyActionSheet3",
+            "designerId": "dbb65efc-6c8b-4c36-87f1-2a0317f9277f",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "addpart_source_camear",
+                        "itemId": "addpart_source_camear",
+                        "text": "相机",
+                        "width": 110
+                    },
+                    "name": "MyButton80",
+                    "designerId": "0a456fe3-5b7d-4ee6-a7f9-28e1beec8c52"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer11",
+                    "designerId": "e772c89f-9e5b-4fc8-9f9a-3fa03a73cb15"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "addpart_source_album",
+                        "itemId": "addpart_source_album",
+                        "text": "相册",
+                        "width": 110
+                    },
+                    "name": "MyButton86",
+                    "designerId": "d6db6a8a-fa97-48e5-9aa0-34f0e6bb53ab"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button",
+                    "liftnet-button-one"
+                ]
+            },
+            "name": "MyPanel16",
+            "designerId": "71b14134-7611-42c9-a251-97a8c28a7e68",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFirstCheckTaskAddParts_Commit",
+                        "itemId": "EngFirstCheckTaskAddParts_Commit",
+                        "text": "确认"
+                    },
+                    "name": "MyButton19",
+                    "designerId": "063a1516-52e2-4b53-b73a-77bfe9dbdc41"
+                }
+            ]
+        }
+    ]
+}

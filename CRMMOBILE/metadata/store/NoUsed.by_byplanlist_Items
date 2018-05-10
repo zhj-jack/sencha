@@ -1,0 +1,377 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.by_byplanlist_Items",
+        "storeId": "NoUsed.by_byplanlist_Items"
+    },
+    "name": "by_byplanlist1",
+    "designerId": "0f4b9af6-a811-446c-8582-8c5b7b1e6625",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BillNo",
+                "type": "string"
+            },
+            "name": "field31",
+            "designerId": "b7e7e45b-90f0-4aea-83d2-daa09c04cf04"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "YearMonth",
+                "type": "string"
+            },
+            "name": "field33",
+            "designerId": "b660e56b-9054-4a85-99f1-6f4e5bc54e92"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "StorageName",
+                "type": "string"
+            },
+            "name": "field351",
+            "designerId": "e57107d9-e6bd-47f5-9527-404f51effbed"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MainNum",
+                "type": "string"
+            },
+            "name": "field352",
+            "designerId": "08cf3d77-2d2a-4226-ae57-1f69c3227bec"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ByState",
+                "type": "string"
+            },
+            "name": "field34",
+            "designerId": "fa05f755-b32c-41f6-a164-e027cd2f4111"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MainMan",
+                "type": "string"
+            },
+            "name": "field353",
+            "designerId": "8e0f3445-d4e5-4f37-91ef-cf36e43fdc91"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MainPhone",
+                "type": "string"
+            },
+            "name": "field354",
+            "designerId": "cf25f168-3c04-4660-a1a5-735ec0b5356e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Items",
+                "type": "auto"
+            },
+            "name": "field355",
+            "designerId": "d5af6934-b066-4cab-bb17-1690dbedd51d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkWeekDay",
+                "type": "string"
+            },
+            "name": "field356",
+            "designerId": "3e75cd00-1dbd-4973-ae78-7fcc79a78165"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkSTime",
+                "type": "string"
+            },
+            "name": "field357",
+            "designerId": "840cfce1-795d-4a2b-b912-2bca41f176a8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkAddress",
+                "type": "string"
+            },
+            "name": "field358",
+            "designerId": "16a44496-8640-451b-bb24-6d7b124a14cf"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ProdID",
+                "type": "string"
+            },
+            "name": "field35",
+            "designerId": "5754a50d-1c8c-417d-b1f8-fb74f774f302"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ServiceNo",
+                "type": "string"
+            },
+            "name": "field359",
+            "designerId": "76a257dd-a191-468b-b4ac-5dea91098f44"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkType",
+                "type": "string"
+            },
+            "name": "field360",
+            "designerId": "65212444-a3a8-4a2b-8587-8b2d68d05c13"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CustName",
+                "type": "string"
+            },
+            "name": "field361",
+            "designerId": "aa300ce2-52c1-445f-bde6-2e3ec3162942"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "icon",
+                "type": "string"
+            },
+            "name": "field32",
+            "designerId": "5af12746-62e5-4d8e-b482-dec08155fde5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "color",
+                "type": "string"
+            },
+            "name": "field36",
+            "designerId": "d295371b-6afb-4aeb-ac6d-1500e9d5582f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/by/api/1.0/byplanlist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:'用户ID', byPlanDate:'保养年月(YYYY-MM)', byPlanState:'接收状态', billNo:'保养计划流水号（由后台从URI中获取）'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 查询/查看保养计划列表-演示数据",
+                    "    // 接口无提供字段：icon、color；",
+                    "    this.setData([",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '未接收',",
+                    "        percent: '80',",
+                    "        color: 'liftnet-bgColor-red'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '未接收',",
+                    "        percent: '30',",
+                    "        color: 'liftnet-bgColor-red'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '未接收',",
+                    "        percent: '65',",
+                    "        color: 'liftnet-bgColor-red'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "         icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '已接收',",
+                    "        percent: '100',",
+                    "        color: 'liftnet-bgColor-green'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '已接收',",
+                    "        percent: '100',",
+                    "        color: 'liftnet-bgColor-green'",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "b15e2247-13e3-4bd0-9d77-78cf27f3e7f3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "9fd36de3-2f75-4f93-9360-794fef9a0bad"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "667f0fa1-87f6-4b88-9e61-58d949cc8b27"
+        }
+    ]
+}

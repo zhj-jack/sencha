@@ -1,0 +1,81 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "first_check_job_add_jnl",
+        "storeId": "first_check_job_add_jnl"
+    },
+    "name": "MyStore",
+    "designerId": "ac22328f-7850-43ea-be71-be8f4eb3dcfa",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jnl"
+            },
+            "name": "field549",
+            "designerId": "bb7cc86f-06b7-4129-b932-d4bd7fc8149e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/fcdaddinfo';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('自动生成派工单流水号失败');",
+                    "            }else{",
+                    "                me.setData(ret.data);",
+                    "                onSuccess(ret.data);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('自动生成派工单流水号失败');",
+                    "        }",
+                    "        );",
+                    "//         function(ret) {",
+                    "//             me.setData(ret.data);",
+                    "//             onSuccess();",
+                    "//         },",
+                    "//         onFailure);",
+                    "} else {",
+                    "    var d = [{jnl:'SJ160415001'}];",
+                    "    this.setData(d);",
+                    "        onSuccess(d);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "d3ea1884-4f66-40f6-ac90-b74d74261d15"
+        }
+    ]
+}

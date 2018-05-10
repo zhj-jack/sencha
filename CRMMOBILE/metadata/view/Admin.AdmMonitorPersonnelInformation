@@ -1,0 +1,285 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmMonitorPersonnelInformation",
+        "id": "AdmMonitorPersonnelInformation",
+        "layout": "vbox"
+    },
+    "name": "a_Monitor_PersonnelInformation",
+    "designerId": "cd0c8463-15e8-4a3b-82e9-d5b437d805ee",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "人员信息"
+            },
+            "name": "MyToolbar6",
+            "designerId": "2755b880-a78f-4d3d-a626-18dce1121964",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "AdmMonitorPersonnelInformation_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton6",
+                    "designerId": "6213dfa3-625f-4772-aab8-2f98a264a37a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyPanel9",
+            "designerId": "2ef41ccd-9790-48f6-9fa9-ba1e71e0cf57",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 80,
+                        "margin": "15 12"
+                    },
+                    "name": "MyPanel16",
+                    "designerId": "3077a7b4-562e-4e03-ae60-23daf2d9647e",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "top",
+                                "height": 32
+                            },
+                            "name": "MyPanel23",
+                            "designerId": "6954636b-7801-4831-974c-a5bd670310f3",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": "left",
+                                        "width": "78%"
+                                    },
+                                    "name": "MyPanel25",
+                                    "designerId": "6690f6a6-5ca5-4981-80a5-3a423830a1ab",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "陆志炫 15023215532",
+                                                "id": "AdmMonitorPersonalInfo_LblNamePhone"
+                                            },
+                                            "name": "MyLabel12",
+                                            "designerId": "a7459dbb-88b3-4c8f-ad72-8a5cc77191c0"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": "right",
+                                        "width": "22%"
+                                    },
+                                    "name": "MyPanel26",
+                                    "designerId": "5f3bd92e-6d08-4ed4-9fd7-a3efc3bc2672",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-font-right",
+                                                    "liftnet-font-size12"
+                                                ],
+                                                "html": "路途中 <i class=\"fa fa-circle-o\"></i>",
+                                                "id": "AdmMonitorPersonalInfo_LblStatus",
+                                                "margin": "3 0 0 0"
+                                            },
+                                            "name": "MyLabel12",
+                                            "designerId": "67313bf1-cc1d-4288-ac17-f20142a0effa"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-font-size12",
+                                    "liftnet-fontColor-gray"
+                                ],
+                                "docked": "bottom"
+                            },
+                            "name": "MyPanel24",
+                            "designerId": "e545a835-e958-4845-9578-20ba98fba0fe",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "html": "广州市凯旋大酒店有限公司凯旋华美达大酒店",
+                                        "id": "AdmMonitorPersonalInfo_LblAddr"
+                                    },
+                                    "name": "MyLabel12",
+                                    "designerId": "81570714-5e11-4f02-9cde-c359ba0e85c1"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "html": "2015-07-29 17:20",
+                                        "id": "AdmMonitorPersonalInfo_LblTime"
+                                    },
+                                    "name": "MyLabel13",
+                                    "designerId": "4ba9b104-6f25-4e09-9846-fb4d5eaf95ce"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-con-title"
+                        ]
+                    },
+                    "name": "MyPanel17",
+                    "designerId": "df0c4b94-58a2-4d9f-8d17-3b1f84ae789f",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "详细"
+                            },
+                            "name": "MyLabel2",
+                            "designerId": "eafb88a0-8f3a-4b05-b083-f8a65d16822e"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-monitor-track"
+                        ],
+                        "disableSelection": true,
+                        "id": "AdmMonitorPersonnelInformation_ListDetailed",
+                        "layout|flex": 1,
+                        "margin": null,
+                        "padding": 10,
+                        "pressedCls": " ",
+                        "store": "ss_guserlist"
+                    },
+                    "name": "MyList4",
+                    "designerId": "83a444f3-1c26-4d95-9614-d1b368d1d2a3",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "    <div class=\"liftnet-monitor-trackListBox\">",
+                                    "        <h1><img src=\"{statusicon}\" />{status}</h1>",
+                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray\"><span></span>{addr}</div>",
+                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray\"><span></span>{time}</div>",
+                                    "    </div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "397320af-b58b-48aa-8192-35ba6891bdf3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

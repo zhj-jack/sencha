@@ -1,0 +1,105 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngDueContract",
+        "id": "EngDueContract",
+        "layout": "vbox"
+    },
+    "name": "Engineer.EngDueMoney1",
+    "designerId": "b10005b2-8720-4f92-b8bc-924f43dfa5e2",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "即将到期合同"
+            },
+            "name": "MyToolbar5",
+            "designerId": "ea5ea68c-2ff8-4ade-b692-5958bfb10d3f",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngDueContract_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton5",
+                    "designerId": "93d45e2e-241f-4a79-8d4c-afc28f12f638"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowDeselect": null,
+                "data": null,
+                "disableSelection": true,
+                "id": "EngDueContract_ListContract",
+                "itemId": null,
+                "layout|flex": 1,
+                "pressedCls": " ",
+                "store": "eng_duecontract"
+            },
+            "name": "MyList",
+            "designerId": "dfcfaecb-56ae-468f-a058-e79b8bc14b3c",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-home-listConBox\">",
+                            "    <div class=\"liftnet-home-listConBox-left\" style='left:10px'>",
+                            "        <div class=\"liftnet-font-size16 liftnet-fontColor-{jobcolor}\">{jnl}</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{projectname}</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{money}</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{date1}至{date2}</div>",
+                            "    </div>",
+                            "    <div class=\"liftnet-home-listConBox-right\">",
+                            "<!--         <div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12 liftnet-fontColor-{jobcolor}\"> -->",
+                            "            <!--div class=\"liftnet-fontColor-white liftnet-bgColor-{auditcolor}\" style=\"float:left;border-radius:4px\">&nbsp;{auditstatus}&nbsp;</div-->",
+                            "<!--             {num}  -->",
+                            "<!--             <i class=\"fa fa-circle-o\"></i> -->",
+                            "<!--         </div> -->",
+                            "        ",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-font-right\">{handleUser}</div>",
+                            "    </div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "48afd587-12b1-4d8b-998a-959a6923325d"
+                }
+            ]
+        }
+    ]
+}

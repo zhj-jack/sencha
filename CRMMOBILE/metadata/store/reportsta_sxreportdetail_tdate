@@ -1,0 +1,176 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "reportsta_sxreportdetail_tdate",
+        "storeId": "reportsta_sxreportdetail_tdate"
+    },
+    "name": "reportsta_byreportdetail1",
+    "designerId": "1e5c570a-9476-4f4f-b0ad-255629c43347",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "setarrivecount",
+                "type": "string"
+            },
+            "name": "field77",
+            "designerId": "d7d55fbf-be39-459c-8691-044fe028cb92"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "setarriveper",
+                "type": "string"
+            },
+            "name": "field78",
+            "designerId": "e6df533e-3f4e-429e-b1a6-dae455ce49b1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "setfinishcount",
+                "type": "string"
+            },
+            "name": "field79",
+            "designerId": "2aae5b56-fe84-45c0-8c3e-90f7bd9a3400"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "sethelpcount",
+                "type": "string"
+            },
+            "name": "field81",
+            "designerId": "0135b080-fb88-454f-820b-cd709213c597"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "istrapcount",
+                "type": "string"
+            },
+            "name": "field183",
+            "designerId": "1dee21f1-2c28-4c4f-8897-4a0bb804a457"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "//console.log(parm);",
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/reportsta/api/1.0/sxreportdetail';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid, date: parm};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 当月/上月热线受信报表明细-演示数据",
+                    "    this.setData([",
+                    "    {",
+                    "        setarrivecount: '4000',",
+                    "        setarriveper: '3000',",
+                    "        setfinishcount: '95',",
+                    "        sethelpcount: '30%',",
+                    "        istrapcount: '3000',",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "c77faea7-3772-419a-b857-4341e01e2eb9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "797467c3-b7d1-4b91-9dac-bf0cb5f72215"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "a4a882c0-e0e7-4532-b725-f5ad21fcb3c6"
+        }
+    ]
+}

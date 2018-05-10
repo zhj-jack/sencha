@@ -1,0 +1,538 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngCustomerDisPlay",
+        "id": "EngCustomerDisplay",
+        "layout": "vbox"
+    },
+    "designerId": "d683ffba-1dca-48f1-8c8e-eb4daebc5e11",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "客户维护"
+            },
+            "name": "MyToolbar14",
+            "designerId": "b15ffbe4-aeac-4d2b-99ef-edc73cf99b61",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "itemId": "Customer_ReturnButton",
+                        "text": null
+                    },
+                    "name": "MyButton59",
+                    "designerId": "20597340-ee4f-4d9c-b441-9f75fae19aaa"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "id": "EngCustomerForm",
+                "itemId": "EngCustomerForm",
+                "layout|flex": 1
+            },
+            "name": "MyFormPanel16",
+            "designerId": "f55820d9-543e-4ad6-9368-6c6b25e048c7",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-font-center",
+                            "liftnet-con-top"
+                        ]
+                    },
+                    "name": "MyPanel54",
+                    "designerId": "ecd2bd02-4889-412d-9f1d-268225064661",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-con-icon"
+                                ],
+                                "height": null,
+                                "src": "resources/images/con_icon03.png"
+                            },
+                            "name": "MyImg5",
+                            "designerId": "c5c02aca-87ae-44e9-a5d4-f226fa44b892"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fontColor-green",
+                                    "liftnet-font-size24"
+                                ],
+                                "html": "客户级别",
+                                "id": "Customer_Levele"
+                            },
+                            "name": "MyLabel22",
+                            "designerId": "7efa905a-9215-4cc5-8928-b2117a2b1bcd"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-con-title"
+                        ]
+                    },
+                    "name": "MyPanel62",
+                    "designerId": "37378a24-e65a-45cb-a039-21427df876cf",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "详细资料"
+                            },
+                            "name": "MyLabel21",
+                            "designerId": "fec7daad-d0be-406d-bd7d-eaecb6bc9659"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_custname",
+                        "itemId": "Customer_custname",
+                        "label": "客户名称",
+                        "name": "custname",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField92",
+                    "designerId": "ed1a5d30-7617-4ce7-ac42-5be615ef761f"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_address",
+                        "itemId": "Customer_address",
+                        "label": "营业地址",
+                        "name": "address",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField93",
+                    "designerId": "d5e5bee9-fe4d-4039-bed8-ee13a10b1d8c"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_r7",
+                        "itemId": "Customer_r7",
+                        "label": "上级单位",
+                        "name": "r7",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField94",
+                    "designerId": "eaca7986-5cd9-41f9-a483-ff53129dd5da"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_r8",
+                        "itemId": "Customer_r8",
+                        "label": "监控设备",
+                        "labelWidth": null,
+                        "name": "r8",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField",
+                    "designerId": "f399976e-3a73-44c8-a259-f6847149671b"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_LicenseNumber",
+                        "itemId": "Customer_LicenseNumber",
+                        "label": "营业执照号码",
+                        "labelWidth": "40%",
+                        "name": "licensenumber",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "bbb2cefe-237a-4fd1-9e83-e4daaf10122c"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_r9",
+                        "itemId": "Customer_r9",
+                        "label": "客户密码",
+                        "labelWidth": null,
+                        "name": "r9",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "96f0da1a-856f-4013-964d-2a5e0d88a1d6"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_Principal",
+                        "itemId": "Customer_Principal",
+                        "label": "法定代理人",
+                        "labelWidth": "40%",
+                        "name": "principal",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField97",
+                    "designerId": "a08a307e-662e-4010-8c60-710efd5c3b30"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_Bank",
+                        "itemId": "Customer_Bank",
+                        "label": "开户银行",
+                        "name": "bank",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField98",
+                    "designerId": "dbcd1ffb-c857-44c6-abde-a7952c60c5d9"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_Accounts",
+                        "itemId": "Customer_Accounts",
+                        "label": "银行账户",
+                        "name": "accounts",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField99",
+                    "designerId": "f4ca0adb-8785-4b5e-b930-0a00eff661d1"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_R13",
+                        "itemId": "Customer_R13",
+                        "label": "财务联系人",
+                        "labelWidth": "40%",
+                        "name": "r13",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField126",
+                    "designerId": "3076450f-327d-41ed-914a-c6571511a941"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_PostNo",
+                        "itemId": "Customer_PostNo",
+                        "label": "邮政编码",
+                        "name": "postno",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField127",
+                    "designerId": "a019bdd8-a28d-4215-9740-982e1253d28b"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_levelename",
+                        "itemId": "Customer_levelename",
+                        "label": "客户级别",
+                        "name": "levelename",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "b8e6b157-3268-4fb0-bacd-1934d2fe2344"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_typename",
+                        "itemId": "Customer_typename",
+                        "label": "客户类型",
+                        "name": "typename",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField12",
+                    "designerId": "f0688aa4-904b-42d9-8f79-a495e7b16ec4"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_createname",
+                        "itemId": "Customer_createname",
+                        "label": "创建人",
+                        "name": "createname",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField128",
+                    "designerId": "ec6f4c02-d50d-411e-9895-8a0d72ae3aa2"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_R2",
+                        "itemId": "Customer_R2",
+                        "label": "创建日期",
+                        "name": "r2",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField129",
+                    "designerId": "0f19b725-404b-4ebf-b428-8d1c2bd8c1fa"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_identificationnumber",
+                        "itemId": "Customer_identificationnumber",
+                        "label": "纳税识别号",
+                        "labelWidth": "40%",
+                        "name": "identificationnumber",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField130",
+                    "designerId": "37d68133-c9bf-4824-a3ee-42dd39a3641d"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_phone",
+                        "itemId": "Customer_phone",
+                        "label": "公司联络电话",
+                        "labelWidth": "40%",
+                        "name": "phone",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField132",
+                    "designerId": "66a36925-2743-41cf-a809-5bcb41d6c88d"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_fax",
+                        "itemId": "Customer_fax",
+                        "label": "传真",
+                        "name": "fax",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField136",
+                    "designerId": "7c00a6c9-5c30-4c32-aa0f-5dc4a29c2907"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_rem1",
+                        "itemId": "Customer_rem1",
+                        "label": "备注",
+                        "name": "rem1",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextField137",
+                    "designerId": "18ebb91d-6bba-4a97-b3ec-1fb4ef6a97cc"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_linkerStr",
+                        "itemId": "Customer_linkerStr",
+                        "label": "客户联系人",
+                        "labelWidth": "40%",
+                        "name": "linkerStr",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextArea20",
+                    "designerId": "775d8810-0e94-4314-a44a-40ad723c4d62"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Customer_flowuserStr",
+                        "itemId": "Customer_flowuserStr",
+                        "label": "客户跟进人",
+                        "labelWidth": "40%",
+                        "name": "flowuserStr",
+                        "placeHolder": null,
+                        "readOnly": true
+                    },
+                    "name": "MyTextArea21",
+                    "designerId": "f76df546-410c-459d-ba52-36a67b696189"
+                }
+            ]
+        }
+    ]
+}

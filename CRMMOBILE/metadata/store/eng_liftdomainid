@@ -1,0 +1,109 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_liftdomainid",
+        "storeId": "eng_liftdomainid"
+    },
+    "name": "MyStore",
+    "designerId": "b9b24236-c8b1-4db5-b75e-e1a88c775ba4",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "areaid"
+            },
+            "name": "field817",
+            "designerId": "364d5b52-1b39-4492-a057-fd0bd9765ef1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "areaname"
+            },
+            "name": "field818",
+            "designerId": "9b5d17a9-fc3c-4c38-97b1-5c2cd6582ee4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "// console.log('查区域传去后台的参数:');",
+                    "// console.log(parm);",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/szqylist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取地区区域列表-演示数据",
+                    "",
+                    "     this.setData([",
+                    "         {",
+                    "            areaid :'DB',",
+                    "            areaname: '东北',",
+                    "         },{",
+                    "            areaid :'HB',",
+                    "            areaname: '华北',",
+                    "         },{",
+                    "            areaid :'HD',",
+                    "            areaname: '华东',",
+                    "         },{",
+                    "            areaid :'HN',",
+                    "            areaname: '华南',",
+                    "         },{",
+                    "            areaid :'HZ',",
+                    "            areaname: '华中',",
+                    "         },{",
+                    "            areaid :'XB',",
+                    "            areaname: '西北',",
+                    "         },{",
+                    "            areaid :'XN',",
+                    "            areaname: '西南',",
+                    "         }",
+                    "     ]);",
+                    "    // 演示数据",
+                    "    onSuccess(4);",
+                    "",
+                    "",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "63f12880-8678-42f8-a5fc-a02a54f3d941"
+        }
+    ]
+}

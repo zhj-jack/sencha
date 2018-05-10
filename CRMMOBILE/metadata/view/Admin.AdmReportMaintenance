@@ -1,0 +1,258 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmReportMaintenance",
+        "id": "AdmReportMaintenance",
+        "layout": "vbox",
+        "scrollable": true
+    },
+    "name": "a_Report_Maintenance",
+    "designerId": "76daf736-0f2b-46a9-8a1a-27d729d437c4",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "保养计划报表"
+            },
+            "name": "MyToolbar4",
+            "designerId": "1cabc83a-1e1e-41bd-9ea6-b28acc6b51d0",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "AdmReportMaintenance_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "9c4f03db-481c-4a08-badf-665c1bfe3675"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-font-center",
+                    "liftnet-con-top"
+                ]
+            },
+            "name": "MyPanel6",
+            "designerId": "f3d1a41e-884e-4fea-a7a7-d9ba98cc90e8",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-con-icon"
+                        ],
+                        "height": null,
+                        "src": "resources/images/con_icon01.png"
+                    },
+                    "name": "MyImg1",
+                    "designerId": "5d7d3396-b771-4f3c-9bf3-765c6574964f"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-fontColor-green",
+                            "liftnet-font-size20"
+                        ],
+                        "html": "正在载入...",
+                        "id": "AdmReportMaintenance_lblAllCount"
+                    },
+                    "name": "MyLabel",
+                    "designerId": "9947df66-4e23-4b3c-881a-05374293eb82"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-con-title"
+                ]
+            },
+            "name": "MyPanel8",
+            "designerId": "f055a16a-653a-4572-b9a3-cd312c6a59e5",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "内容"
+                    },
+                    "name": "MyLabel11",
+                    "designerId": "53c60b99-fc68-4031-9d16-369d56636ca6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "height": 255,
+                "id": "form_reportsta_byreportdetail_tdate",
+                "layout|flex": null,
+                "scrollable": false
+            },
+            "name": "MyFormPanel8",
+            "designerId": "414fcd28-6f12-4b68-8386-3a3b42e417ca",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "应编制计划数",
+                        "labelWidth": "60%",
+                        "name": "needcount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "fae760fc-e78f-42d7-ae03-e71686472e87"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "已编制计划数",
+                        "labelWidth": "40%",
+                        "name": "hascount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "469064d8-672b-4205-8990-1f30cf505de4"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "已编制保养计划率",
+                        "labelWidth": "50%",
+                        "name": "hasplanper",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "1551f214-54d8-455b-a8e1-4f1ac35b58f1"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "已录入实绩",
+                        "labelWidth": "40%",
+                        "name": "writecount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField5",
+                    "designerId": "b460b0d9-7daa-4754-b8c6-fde3cf4ffcec"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "录入实绩比例",
+                        "labelWidth": "40%",
+                        "name": "writecountper",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField6",
+                    "designerId": "9d02668a-908a-4652-96e3-144fafa8cfe0"
+                }
+            ]
+        }
+    ]
+}

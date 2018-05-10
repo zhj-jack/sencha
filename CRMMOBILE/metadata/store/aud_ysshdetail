@@ -1,0 +1,139 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "aud_ysshdetail",
+        "storeId": "aud_ysshdetail"
+    },
+    "name": "aud_byhtdetail1",
+    "designerId": "750f8c0b-46dc-42ea-bc3f-05bc280cc948",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "taskid",
+                "type": "string"
+            },
+            "name": "field74",
+            "designerId": "8b0ad167-c802-4757-8fc1-d179bb8e7a3e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "billno",
+                "type": "string"
+            },
+            "name": "field513",
+            "designerId": "b95831d5-e899-47e6-b780-4daf8ba9576d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contracttype",
+                "type": "string"
+            },
+            "name": "field198",
+            "designerId": "3e77d474-be66-4c2d-b8c4-7bddd7fa4467"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/aud/api/1.0/ysshdetail';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid, billno:parm};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 应收款审核查看-演示数据",
+                    "    this.setData();",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "12c88729-845d-4b75-b0b3-6314dcc2099d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "e5e5ffe5-e264-4772-84a2-ec8851eccf7e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "464633bf-37e4-4259-85ab-0dcdcc1b93a7"
+        }
+    ]
+}

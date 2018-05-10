@@ -1,0 +1,87 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "by_maintainRecDetail",
+        "storeId": "by_maintainRecDetail"
+    },
+    "name": "MyStore",
+    "designerId": "563ac1fd-cbc1-4445-9681-6ae333a4daed",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftno"
+            },
+            "name": "field901",
+            "designerId": "0c627c20-4f0f-4d8d-ba5f-a81197d83329"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prodno"
+            },
+            "name": "field902",
+            "designerId": "4e643a83-535d-4d6a-817c-df5717d11e12"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "modelname"
+            },
+            "name": "field903",
+            "designerId": "946a0d3b-ce57-44cf-9d57-87e5536582a8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fsd"
+            },
+            "name": "field904",
+            "designerId": "769069d4-4caa-4fbd-9fed-47de4721c998"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "    this.setData(data);"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "9b7b2f3e-ffa9-44ff-aa99-8f63f26a7f53"
+        }
+    ]
+}

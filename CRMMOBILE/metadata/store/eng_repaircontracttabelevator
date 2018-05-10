@@ -1,0 +1,94 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_repaircontracttabelevator",
+        "storeId": "eng_repaircontracttabelevator"
+    },
+    "name": "MyStore",
+    "designerId": "e90681ce-e856-4928-9668-01379ad5dbae",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dtpp"
+            },
+            "name": "field745",
+            "designerId": "ddc94c8f-bff6-4330-871d-a833d28f28ed"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dtzcm"
+            },
+            "name": "field746",
+            "designerId": "e40321d5-9416-4327-a598-852962dc31e5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dtxh"
+            },
+            "name": "field747",
+            "designerId": "305d9445-2069-4d53-b6f0-a28abb00f0b5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fsd"
+            },
+            "name": "field748",
+            "designerId": "c3cbcef4-d117-482f-b0fc-99e010cb10d4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "th"
+            },
+            "name": "field749",
+            "designerId": "1a0b6174-89a6-41cf-b2cb-dc04623569b5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jtdtwzms"
+            },
+            "name": "field750",
+            "designerId": "413030dc-74d3-4b45-b96f-fabcbf46229d"
+        }
+    ]
+}

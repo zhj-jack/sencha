@@ -1,0 +1,100 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Common_repairmanlist",
+        "storeId": "Common_repairmanlist"
+    },
+    "name": "MyStore",
+    "designerId": "f60a36ea-610f-4724-81e6-89e154b88fc1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "repairman"
+            },
+            "name": "field42",
+            "designerId": "d2fdbb17-8f1d-4bd0-88bd-de99193fcb55"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "department"
+            },
+            "name": "field45",
+            "designerId": "1ca09735-a360-4703-9d10-9b596f637c9b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/rpt/api/1.0/rptmanlist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    this.setData([",
+                    "        {",
+                    "            repairman: '黄林',",
+                    "            department: '维保一组'",
+                    "        },",
+                    "        {",
+                    "            repairman: '黄林',",
+                    "            department: '维保五组'",
+                    "        },",
+                    "        {",
+                    "            repairman: '高诚修',",
+                    "            department: '维保业务科'",
+                    "        },",
+                    "        {",
+                    "            repairman: '郭守波',",
+                    "            department: '维保业务科'",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "dd1da61c-50c0-4077-9d58-84d797091d3c"
+        }
+    ]
+}

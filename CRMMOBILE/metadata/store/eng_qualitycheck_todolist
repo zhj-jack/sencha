@@ -1,0 +1,230 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_qualitycheck_todolist",
+        "storeId": "eng_qualitycheck_todolist"
+    },
+    "name": "aud_byhtdetail1",
+    "designerId": "fc1c0f9a-f57d-4a8f-a540-e295e813e49a",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/quality/api/1.0/qualitylist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid};",
+                    "",
+                    "    this.setData([",
+                    "        { qualityid:'A',icon:'ln3 ln3-first', qualityname:'首检', count:'12' },",
+                    "        { qualityid:'B',icon:'ln3 ln3-spanner', qualityname:'自检', count:'5' },",
+                    "        { qualityid:'C',icon:'ln3 ln3-find-checkmark', qualityname:'专检', count:'3' },",
+                    "        { qualityid:'D',icon:'ln3 ln3-year', qualityname:'年检', count:'20' },",
+                    "        { qualityid:'E',icon:'ln3 ln3-check', qualityname:'抽检', count:'2' },",
+                    "        { qualityid:'F',icon:'ln3 ln3-reload', qualityname:'整改', count:'1' },",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "",
+                    "//     callPostAdapter(",
+                    "//         url, adapterParm,",
+                    "//         function(ret) {",
+                    "//             if(ret.status.code!=200){",
+                    "//                 onFailure('读取质检任务列表失败');",
+                    "//             }else{",
+                    "//                 var d = me.decoDat(ret.data);",
+                    "//                 me.setData(d);",
+                    "//                 onSuccess();",
+                    "//             }",
+                    "//         },",
+                    "//         function() {",
+                    "//             onFailure('读取质检任务列表失败');",
+                    "//         }",
+                    "//         );",
+                    "",
+                    "} else {",
+                    "    this.setData([",
+                    "        { qualityid:'A',icon:'ln3 ln3-first', qualityname:'首检', count:'12' },",
+                    "        { qualityid:'B',icon:'ln3 ln3-spanner', qualityname:'自检', count:'5' },",
+                    "        { qualityid:'C',icon:'ln3 ln3-find-checkmark', qualityname:'专检', count:'3' },",
+                    "        { qualityid:'D',icon:'ln3 ln3-year', qualityname:'年检', count:'20' },",
+                    "        { qualityid:'E',icon:'ln3 ln3-check', qualityname:'抽检', count:'2' },",
+                    "        { qualityid:'F',icon:'ln3 ln3-reload', qualityname:'整改', count:'1' },",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "14a0a245-08d1-4af3-a321-d6ba25118d58"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "var icons = {",
+                    "    'A':'ln3 ln3-first',",
+                    "    'B':'ln3 ln3-find-checkmark',",
+                    "    'C':'ln3 ln3-year',",
+                    "    'D':'ln3 ln3-check',",
+                    "    'E':'ln3 ln3-spanner',",
+                    "    'F':'ln3 ln3-reload'",
+                    "",
+                    "};",
+                    "        for(var i=0;i<data.length; i++) {",
+                    "            data[i].icon = icons[data[i].qualityid];",
+                    "//             switch(data[i].qualityname) {",
+                    "//                 case '首检':",
+                    "//                     data[i].icon = 'ln3 ln3-first';",
+                    "//                     break;",
+                    "",
+                    "//                 case '自检':",
+                    "//                     data[i].icon = 'ln3 ln3-spanner';",
+                    "//                     break;",
+                    "",
+                    "//                 case '专检':",
+                    "//                     data[i].icon = 'ln3 ln3-find-checkmark';",
+                    "//                     break;",
+                    "//                 case '年检':",
+                    "//                     data[i].icon = 'ln3 ln3-year';",
+                    "//                     break;",
+                    "//                 case '抽检':",
+                    "//                     data[i].icon = 'ln3 ln3-check';",
+                    "//                     break;",
+                    "//                 case '整改':",
+                    "//                     data[i].icon = 'ln3 ln3-reload';",
+                    "//                     break;",
+                    "//             }",
+                    "        }",
+                    "",
+                    "        return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "a133940b-5f8f-46b9-932b-a61227a70bc9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "aef3ed2c-32c5-4fe8-ad15-3a978b47c9b2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "c786a30d-1622-4c7e-a7bb-65553e83a0df"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "icon"
+            },
+            "name": "field387",
+            "designerId": "1e572ca3-d496-4311-a504-ea92977794ac"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "qualityname"
+            },
+            "name": "field388",
+            "designerId": "46166db1-c2a4-418c-aaae-00fac5ae4f71"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "qualityid"
+            },
+            "name": "field398",
+            "designerId": "90ec1526-0569-4cb9-9541-c911acda4100"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "count"
+            },
+            "name": "field390",
+            "designerId": "d8986b05-c3da-435b-befc-a7d7b59b3b1a"
+        }
+    ]
+}

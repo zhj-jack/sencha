@@ -1,0 +1,481 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmReportController"
+    },
+    "name": "MyController",
+    "designerId": "3cf4bb26-f72a-4804-aec1-45ce26d5a1b0",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "********** 管理报表 **********"
+                ],
+                "designer|controlQuery": "container#AdmReport",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onAdmReportShow",
+                "implHandler": [
+                    "// 首页-热线受信报表",
+                    "loadMask.show();",
+                    "Ext.getCmp('AdmReport_DvHotline').getStore().loadDat(loadMask.hide);",
+                    "",
+                    "// 首页-保养计划报表",
+                    "loadMask.show();",
+                    "Ext.getCmp('AdmReport_DvMaintain').getStore().loadDat(loadMask.hide);",
+                    "",
+                    "// 首页-故障报告书报表",
+                    "loadMask.show();",
+                    "Ext.getCmp('AdmReport_DvFault').getStore().loadDat(loadMask.hide);",
+                    "",
+                    "// 首页-维保业绩报表",
+                    "loadMask.show();",
+                    "Ext.getCmp('AdmReport_DvPerformance').getStore().loadDat(loadMask.hide);"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmReportShow",
+            "designerId": "511ac1ab-c8c6-4124-9989-83bd4414e08c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "报表-热线受信报表"
+                ],
+                "designer|controlQuery": "list#AdmReport_DvHotline",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmReport_DvHotlineItemTap",
+                "implHandler": [
+                    "this.doAdmReport('AdmReportByLetter', record);"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmReport_DvHotlineItemTap",
+            "designerId": "112c767c-df62-4e75-a81c-52851b54dd08"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmReportByLetter",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmReportByLetterShow",
+                "implHandler": [
+                    "this.doAdmReportShow({",
+                    "    title : component.initialConfig.parm.title,",
+                    "    count : component.initialConfig.parm.count,",
+                    "    yearMonth : component.initialConfig.parm.yearMonth,",
+                    "    storeId : 'reportsta_sxreportdetail_tdate',",
+                    "    formId : 'form_reportsta_sxreportdetail_tdate',",
+                    "    titleId : 'AdmReportByLetter_lblAllCount'",
+                    "});"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmReportByLetterShow",
+            "designerId": "8c299288-5dd7-43b9-8bc5-bbcac814f6ec"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmReportByLetter_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmReportByLetter_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmReportByLetter_BtnReturnTap",
+            "designerId": "ec0cc5cd-4c9a-47ba-bb96-19fe053ea4fa"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "报表-保养计划报表"
+                ],
+                "designer|controlQuery": "list#AdmReport_DvMaintain",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmReport_DvMaintainItemTap",
+                "implHandler": [
+                    "this.doAdmReport('AdmReportMaintenance', record);"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmReport_DvMaintainItemTap",
+            "designerId": "46a516e6-4e0e-46bf-bc74-44eeb0191415"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmReportMaintenance",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmReportMaintenanceShow",
+                "implHandler": [
+                    "this.doAdmReportShow({",
+                    "    title : component.initialConfig.parm.title,",
+                    "    count : component.initialConfig.parm.count,",
+                    "    yearMonth : component.initialConfig.parm.yearMonth,",
+                    "    storeId : 'reportsta_byreportdetail_tdate',",
+                    "    formId : 'form_reportsta_byreportdetail_tdate',",
+                    "    titleId : 'AdmReportMaintenance_lblAllCount'",
+                    "});"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmReportMaintenanceShow",
+            "designerId": "5d7f667b-b0d2-45aa-b8af-6e093c5844b7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmReportMaintenance_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmReportMaintenance_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmReportMaintenance_BtnReturnTap",
+            "designerId": "17aeb8be-bac4-48e7-8425-5525e2cc1d83"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "报表-故障报告书报表"
+                ],
+                "designer|controlQuery": "list#AdmReport_DvFault",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmReport_DvFaultItemTap",
+                "implHandler": [
+                    "this.doAdmReport('AdmReportFault', record);"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmReport_DvFaultItemTap",
+            "designerId": "d58b3fd4-4078-4336-9b0d-0ee123ceed36"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmReportFault",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmReportFaultShow",
+                "implHandler": [
+                    "this.doAdmReportShow({",
+                    "    title : component.initialConfig.parm.title,",
+                    "    count : component.initialConfig.parm.count,",
+                    "    yearMonth : component.initialConfig.parm.yearMonth,",
+                    "    storeId : 'reportsta_gzreportdetail_tdate',",
+                    "    formId : 'form_reportsta_gzreportdetail_tdate',",
+                    "    titleId : 'AdmReportFault_lblAllCount'",
+                    "});"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmReportFaultShow",
+            "designerId": "302daf2d-b09f-44e9-9824-9b213aa54188"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmReportFault_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmReportFault_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmReportFault_BtnReturnTap",
+            "designerId": "061233b2-cd23-45ca-acc5-9219aeac0d19"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "报表-维保业绩报表"
+                ],
+                "designer|controlQuery": "list#AdmReport_DvPerformance",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmReport_DvPerformanceItemTap",
+                "implHandler": [
+                    "this.doAdmReport('AdmReportPerformance', record);"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmReport_DvPerformanceItemTap",
+            "designerId": "4e845b61-e20c-4d2e-ae1d-fb2440039521"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmReportPerformance",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmReportPerformanceShow",
+                "implHandler": [
+                    "this.doAdmReportShow({",
+                    "    title : component.initialConfig.parm.title,",
+                    "    count : component.initialConfig.parm.count,",
+                    "    yearMonth : component.initialConfig.parm.yearMonth,",
+                    "    storeId : 'reportsta_wbyjreportdetail_tdate',",
+                    "    formId : 'form_reportsta_wbyjreportdetail_tdate',",
+                    "    titleId : 'AdmReportPerformance_lblAllCount'",
+                    "});"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmReportPerformanceShow",
+            "designerId": "e1e80235-89a0-4b47-a79f-9ff111a0f94f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmReportPerformance_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmReportPerformance_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmReportPerformance_BtnReturnTap",
+            "designerId": "1514b0af-993e-452e-8cd5-a9f01b403d55"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "管理报表入口"
+                ],
+                "designer|params": [
+                    "viewId",
+                    "record"
+                ],
+                "fn": "doAdmReport",
+                "implHandler": [
+                    "var title = record.get('title');",
+                    "var count = record.get('count');",
+                    "",
+                    "// 确定月份yyyymm",
+                    "var yr, mon, yearMonth;",
+                    "var today = Ext.Date.format(new Date(), 'Y-m-d');",
+                    "yr  = parseInt(today.split('-')[0]);",
+                    "mon = parseInt(today.split('-')[1]);",
+                    "if(title.indexOf('当月')>=0) {",
+                    "",
+                    "} else if(title.indexOf('上月')>=0) {",
+                    "    mon = mon - 1;",
+                    "    if(mon===0) {",
+                    "        mon = 12;",
+                    "        yr = yr - 1;",
+                    "    }",
+                    "} else {",
+                    "    Ext.toast('未找到' + title + '报表');",
+                    "    return;",
+                    "}",
+                    "yearMonth = yr.toString() + '-' + global.pad2(mon);",
+                    "",
+                    "// 进入报表页面",
+                    "viewUtil.goNext('Admin.' + viewId, {",
+                    "    title: title,",
+                    "    count: count,",
+                    "    yearMonth: yearMonth",
+                    "});"
+                ]
+            },
+            "name": "doAdmReport",
+            "designerId": "aebe17dd-c957-48a1-a947-7fdfc8f79c50"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "进入报表页面时取数"
+                ],
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "doAdmReportShow",
+                "implHandler": [
+                    "var title = parm.title;",
+                    "var count = parm.count;",
+                    "var yearMonth = parm.yearMonth;",
+                    "var storeId = parm.storeId;",
+                    "var formId = parm.formId;",
+                    "var titleId = parm.titleId;",
+                    "",
+                    "console.log(parm);",
+                    "loadMask.show();",
+                    "var store = dataUtil.createStore(storeId);",
+                    "store.loadDat(",
+                    "    function() {",
+                    "        loadMask.hide();",
+                    "        Ext.getCmp(formId).setRecord(store.getData().get(0));",
+                    "        Ext.getCmp(titleId).setHtml(title + ' ' + count);",
+                    "    },",
+                    "    loadMask.hide,",
+                    "    yearMonth",
+                    ");"
+                ]
+            },
+            "name": "doAdmReportShow",
+            "designerId": "ccc2413c-ba1f-40c3-8acb-52b83255f0e0"
+        }
+    ]
+}

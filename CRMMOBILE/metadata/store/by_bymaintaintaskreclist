@@ -1,0 +1,420 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "by_bymaintaintaskreclist",
+        "storeId": "by_bymaintaintaskreclist"
+    },
+    "name": "MyStore",
+    "designerId": "52862557-88f3-4999-8e74-9c8be2fc478c",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess, onFailure, parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "        this.setData([]);",
+                    "        console.log(JsonUtil.convertToString(parm));",
+                    "        if(global.isWorklight()) {// adapter取数",
+                    "            var url = '/adapters/by/api/1.0/bymaintaintaskreclist';",
+                    "            callPostAdapter(",
+                    "                url, parm,",
+                    "                function(ret) {",
+                    "                    var d = me.decoDat(ret.data);",
+                    "                    me.setData(d);",
+                    "                    onSuccess(d.length);",
+                    "                },",
+                    "                onFailure);",
+                    "        } else {",
+                    "            // 演示数据",
+                    "            var d = this.decoDat([",
+                    "                {",
+                    "                    Jnlno:'FB001',",
+                    "                    ContractID:'16保大',",
+                    "                    ProjectJnl:'10000',",
+                    "                    ProjectName:'万科四季花园',",
+                    "                    ProjectAddress:'某个巷子',",
+                    "                    CustID:'',",
+                    "                    CustName:'',",
+                    "                    ReveStatus:'未接受',",
+                    "                    FlowStatus:'待审',",
+                    "                    TokenID:'',",
+                    "                    TaskName:'',",
+                    "                    ContractNum:'10',",
+                    "                    TaskNum:'5',",
+                    "                    ReadFlag:'',",
+                    "                    bybz:'张三(维保一组)',",
+                    "                    nextstate: [",
+                    "                        {name:\"审核\",url:\"http://127.0.0.1/审核\"}",
+                    "                    ]",
+                    "                },",
+                    "                {",
+                    "                    Jnlno:'FB001',",
+                    "                    ContractID:'16保小',",
+                    "                    ProjectJnl:'10000',",
+                    "                    ProjectName:'万达广场',",
+                    "                    ProjectAddress:'某个巷子',",
+                    "                    CustID:'',",
+                    "                    CustName:'',",
+                    "                    ReveStatus:'未接受',",
+                    "                    FlowStatus:'通过',",
+                    "                    TokenID:'',",
+                    "                    TaskName:'',",
+                    "                    ContractNum:'10',",
+                    "                    TaskNum:'3',",
+                    "                    ReadFlag:'',",
+                    "                    bybz:'张三(维保一组)',",
+                    "                    nextstate: [",
+                    "                        {name:\"接收\",url:\"http://127.0.0.1/接收\"},",
+                    "                        {name:\"退回\",url:\"http://127.0.0.1/退回\"},",
+                    "                        {name:\"删除\",url:\"http://127.0.0.1/删除\"}",
+                    "                    ]",
+                    "                },",
+                    "                {",
+                    "                    Jnlno:'FB001',",
+                    "                    ContractID:'16保002',",
+                    "                    ProjectJnl:'10000',",
+                    "                    ProjectName:'广州荔湾区滘口西湾荟广场',",
+                    "                    ProjectAddress:'某个巷子',",
+                    "                    CustID:'',",
+                    "                    CustName:'',",
+                    "                    ReveStatus:'已接收',",
+                    "                    FlowStatus:'通过',",
+                    "                    TokenID:'',",
+                    "                    TaskName:'',",
+                    "                    ContractNum:'20',",
+                    "                    TaskNum:'5',",
+                    "                    ReadFlag:'',",
+                    "                    bybz:'张三(维保一组)',",
+                    "                    nextstate: [",
+                    "                        {name:\"退回\",url:\"http://127.0.0.1/退回\"}",
+                    "                    ]",
+                    "                },",
+                    "                {",
+                    "                    Jnlno:'FB001',",
+                    "                    ContractID:'16保366',",
+                    "                    ProjectJnl:'10000',",
+                    "                    ProjectName:'广州市荔湾区华越友联科技有限公司',",
+                    "                    ProjectAddress:'某个巷子',",
+                    "                    CustID:'',",
+                    "                    CustName:'',",
+                    "                    ReveStatus:'已退回',",
+                    "                    FlowStatus:'通过',",
+                    "                    TokenID:'',",
+                    "                    TaskName:'',",
+                    "                    ContractNum:'15',",
+                    "                    TaskNum:'5',",
+                    "                    ReadFlag:'',",
+                    "                    bybz:'张三(维保一组)',",
+                    "                    nextstate: [",
+                    "                        {name:\"删除\",url:\"http://127.0.0.1/删除\"}",
+                    "                    ]",
+                    "                }",
+                    "            ]);",
+                    "            this.setData(d);",
+                    "            onSuccess(d.length);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "a133bcd4-88ab-4155-ab9a-310abc2953e5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "// stateUrl:\t状态的图片地址",
+                    "        // stateColor:\t状态的颜色",
+                    "        // titleIcon:\t标题的图标",
+                    "        // titleColor:\t标题的颜色",
+                    "",
+                    "//         if(!data) return([]);",
+                    "",
+                    "//         for(var i=0;i<data.length; i++) {",
+                    "//             switch(data[i].taskstate) {",
+                    "//                 case '未分派':",
+                    "//                     data[i].stateColor = 'liftnet-fontColor-red';",
+                    "//                     data[i].stateUrl   = 'resources/images/maintenance_icon01.png';",
+                    "//                     data[i].titleIcon  = '<i class=\"ln ln-message1\"></i>';",
+                    "//                     data[i].titleColor = 'liftnet-fontColor-red';",
+                    "//                     break;",
+                    "",
+                    "//                 case '全部已分派':",
+                    "//                     data[i].stateColor = 'liftnet-fontColor-blue';",
+                    "//                     data[i].stateUrl   = 'resources/images/maintenance_icon02.png';",
+                    "//                     data[i].titleIcon  = '<i class=\"ln ln-message1\"></i>';",
+                    "//                     data[i].titleColor = 'liftnet-fontColor-blue';",
+                    "//                     break;",
+                    "",
+                    "//                 case '部分未分派':",
+                    "//                     data[i].stateColor = 'liftnet-fontColor-orange';",
+                    "//                     data[i].stateUrl   = 'resources/images/maintenance_icon03.png';",
+                    "//                     data[i].titleIcon  = '<i class=\"ln ln-message1\"></i>';",
+                    "//                     data[i].titleColor = 'liftnet-fontColor-orange';",
+                    "//                     break;",
+                    "//             }",
+                    "//         }",
+                    "",
+                    "        return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "d24fcc5e-6105-4b2d-bde5-b007e37c9482"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "        if(parm!=='') {",
+                    "            this.filterBy(function(item) {",
+                    "                var s = item.get(\"ProjectName\") + ' ' + item.get(\"FlowStatus\") + ' ' + item.get(\"bybz\");",
+                    "                return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "            });",
+                    "        }"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "4c44469b-e3ef-43b9-8edc-5919f38f7e8b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Jnlno"
+            },
+            "name": "field494",
+            "designerId": "eeb16311-8c82-444c-a421-bdbfbd4e3368"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ContractID"
+            },
+            "name": "field495",
+            "designerId": "790cda52-3ef4-45fb-bb17-d0102d58931d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ProjectJnl"
+            },
+            "name": "field496",
+            "designerId": "fb028497-a371-4a06-b896-468e81aba848"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ProjectName"
+            },
+            "name": "field497",
+            "designerId": "07ffb2b6-c55f-484f-8f93-ed4cca3904bb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ProjectAddress"
+            },
+            "name": "field498",
+            "designerId": "d0a37ba1-24d6-4df8-bdfc-729d5c91e183"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CustID"
+            },
+            "name": "field499",
+            "designerId": "e78c61e4-25ef-4f06-b937-322500375f1b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CustName"
+            },
+            "name": "field500",
+            "designerId": "71200e24-b87d-45dd-afeb-1443793ddde9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ReveStatus"
+            },
+            "name": "field501",
+            "designerId": "725f5018-fcb7-4f59-b64c-4563fc8032b4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FlowStatus"
+            },
+            "name": "field502",
+            "designerId": "017c2b32-dbbe-4418-8d6a-e8e0e1e917bb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TokenID"
+            },
+            "name": "field503",
+            "designerId": "574e610e-e118-4c07-ab8a-7360c43264ae"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TaskName"
+            },
+            "name": "field504",
+            "designerId": "08a124f5-282a-447f-a977-109e61784945"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ContractNum"
+            },
+            "name": "field514",
+            "designerId": "a9b2ab4d-441e-4387-87e3-d83a912a1497"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TaskNum"
+            },
+            "name": "field515",
+            "designerId": "ba4d4474-ac3c-4388-86af-7b6c6fc57566"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ReadFlag"
+            },
+            "name": "field516",
+            "designerId": "9d2ccb92-ac84-4643-bd4c-ae8c74aff1d0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate"
+            },
+            "name": "field517",
+            "designerId": "ed315901-b25c-4ebd-8299-5859ece254b4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "bybz"
+            },
+            "name": "field518",
+            "designerId": "e72b4464-8df3-4b17-87ef-4092757ded16"
+        }
+    ]
+}

@@ -1,0 +1,213 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ss_elevatorlist",
+        "storeId": "ss_elevatorlist"
+    },
+    "name": "ss_projectinfolist1",
+    "designerId": "3a2c0288-5f8d-4b3e-a6ac-bceba101f26a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prono"
+            },
+            "name": "field500",
+            "designerId": "cc9aba40-4409-4643-b14c-27d642504c6a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftloaction"
+            },
+            "name": "field501",
+            "designerId": "58350257-79b1-46d5-bfb4-08257489d63a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "eleuseaddress"
+            },
+            "name": "field502",
+            "designerId": "7dd41273-6ef5-4dbc-9025-270ad8834484"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r3"
+            },
+            "name": "field628",
+            "designerId": "9e4b5928-66d6-48a9-a9b0-fcdaf9113924"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/ckdt';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {",
+                    "        userid: userid,",
+                    "        projectid:parm.projectid,",
+                    "        curpagenum:parm.curpagenum,",
+                    "        pagesize:parm.pagesize,",
+                    "        searchkey:parm.searchkey",
+                    "    };",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('读取电梯列表失败');",
+                    "            }else{",
+                    "                //第一次加载直接设置数据",
+                    "                if(parm.curpagenum==1){",
+                    "                    me.setData(ret.data);",
+                    "                }else{",
+                    "                    //分页用法，在原有数据上继续添加",
+                    "                    var d = ret.data;",
+                    "                    var n = d.length;",
+                    "                    for(var i=0; i<n; i++) {",
+                    "                        me.add(d[i]);",
+                    "                    }",
+                    "                }",
+                    "                onSuccess(ret.data.length);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('读取电梯列表失败');",
+                    "        }",
+                    "        );",
+                    "//         function(ret) {",
+                    "//             //第一次加载直接设置数据",
+                    "//             if(parm.curpagenum==1){",
+                    "//                 me.setData(ret.data);",
+                    "//             }else{",
+                    "//                 //分页用法，在原有数据上继续添加",
+                    "//                 var d = ret.data;",
+                    "//                 var n = d.length;",
+                    "//                 for(var i=0; i<n; i++) {",
+                    "//                     me.add(d[i]);",
+                    "//                 }",
+                    "//             }",
+                    "//             onSuccess(ret.data.length);",
+                    "//         },",
+                    "//         onFailure);",
+                    "} else {",
+                    "",
+                    "    //分页模拟",
+                    "    var start = parm.curpagenum,",
+                    "        end = parm.curpagenum + 20 - 1;",
+                    "        end = end>58? 58:end;",
+                    "",
+                    "            for(var i=start; i<=end; i++) {",
+                    "                this.add({",
+                    "                    prono:'prono'+(i),",
+                    "                    r3:'A'+i,",
+                    "                    liftloaction: '广州市华越友联科技发展有限公司.' + (i + 1),",
+                    "                    eleuseaddress: '广州市荔湾区黄沙大道144号大冶有色大厦1001室',",
+                    "                });",
+                    "            }",
+                    "            // 演示数据",
+                    "            onSuccess(end - start + 1);",
+                    "",
+                    "    // 电梯列表-演示数据",
+                    "//     this.setData([",
+                    "//         {",
+                    "//             prono:'ZSR123456789',",
+                    "//             r3: 'A1',",
+                    "//             eleuseaddress: '荔湾区 新城市逢源轩',",
+                    "//         },",
+                    "//         {",
+                    "//             prono:'ZSR554651564',",
+                    "//             r3: 'A2',",
+                    "//             eleuseaddress: '荔湾区 恩宁路9号',",
+                    "",
+                    "//         },",
+                    "//         {",
+                    "//             prono:'ZSR5489654794',",
+                    "//             r3: 'A3',",
+                    "//             eleuseaddress: '荔湾区 中山八路86号',",
+                    "",
+                    "//         },",
+                    "//         {",
+                    "//             prono:'ZSR8465132465',",
+                    "//             r3: 'A4',",
+                    "//             eleuseaddress: '万科柏悦湾',",
+                    "//         }",
+                    "//     ]);",
+                    "",
+                    "//     onSuccess(4);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "1f6047a5-6242-4d99-9813-195e49577dfb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "if(parm!=='') {",
+                    "    this.filterBy(function(item) {",
+                    "        var s = item.get(\"prodid\");",
+                    "        return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "fb7fe75a-8af4-4fe1-9b7e-6e935d5a3b19"
+        }
+    ]
+}

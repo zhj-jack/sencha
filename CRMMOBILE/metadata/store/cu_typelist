@@ -1,0 +1,112 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "cu_typelist",
+        "storeId": "cu_typelist"
+    },
+    "name": "MyStore",
+    "designerId": "137f91c4-82c3-4316-988a-c2e3488f7be1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "typeid"
+            },
+            "name": "field845",
+            "designerId": "00043241-56eb-4b1d-91e2-5853fca04692"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "typename"
+            },
+            "name": "field846",
+            "designerId": "33176aa4-4100-498d-b87c-c57e4f013a22"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/mugcustomer/api/1.0/customertypel';",
+                    "",
+                    "    console.log('-----传到后台的参数-----');",
+                    "    console.log(parm);",
+                    "    console.log('-----传到后台的参数-----');",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            console.log(me.getData());",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    this.setData([",
+                    "        {",
+                    "            typeid\t\t: \t'01',",
+                    "            typename\t:\t'物业公司'",
+                    "        },",
+                    "        {",
+                    "            typeid\t\t: \t'02',",
+                    "            typename\t:\t'维保公司'",
+                    "        },",
+                    "        {",
+                    "            typeid\t\t: \t'03',",
+                    "            typename\t:\t'生产厂商'",
+                    "        },",
+                    "        {",
+                    "            typeid\t\t: \t'04',",
+                    "            typename\t:\t'合作伙伴'",
+                    "        },",
+                    "        {",
+                    "            typeid\t\t: \t'05',",
+                    "            typename\t:\t'竞争对手'",
+                    "        },",
+                    "        {",
+                    "            typeid\t\t: \t'06',",
+                    "            typename\t:\t'使用单位'",
+                    "        },",
+                    "        {",
+                    "            typeid\t\t: \t'07',",
+                    "            typename\t:\t'电梯检验机构'",
+                    "        },",
+                    "    ]);",
+                    "    onSuccess(7);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "22d87871-5898-44e5-8abf-4c8b01be2ef1"
+        }
+    ]
+}

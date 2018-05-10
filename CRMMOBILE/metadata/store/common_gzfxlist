@@ -1,0 +1,162 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_gzfxlist",
+        "storeId": "common_gzfxlist"
+    },
+    "name": "MyStore",
+    "designerId": "c17bc7a8-e44a-467a-bc57-2e9320448d44",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "faulttype"
+            },
+            "name": "field576",
+            "designerId": "2720c42c-df66-434b-9607-edc835e5e425"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "faultcode"
+            },
+            "name": "field577",
+            "designerId": "cc01dba4-5d5a-4804-9493-44b2ce071b56"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "faultanalysis"
+            },
+            "name": "field578",
+            "designerId": "7dbd5648-3fa6-4bdd-95fe-dd43bc13732d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ladder"
+            },
+            "name": "field579",
+            "designerId": "b9fad554-a912-48a7-9f9c-925ff264572a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/rpt/api/1.0/gzyyfxlist';",
+                    "",
+                    "    /*",
+                    "        dutytime: '值班时间(预留)',",
+                    "        userid: '用户ID'",
+                    "    */",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            faulttype: '人为原因',",
+                    "            faultcode: '101',",
+                    "            faultanalysis: '生活垃圾导致开关门受阻,电梯停止运行',",
+                    "            ladder:\t''",
+                    "        },",
+                    "        {",
+                    "            faulttype: '人为原因',",
+                    "            faultcode: '102',",
+                    "            faultanalysis: '野蛮搬运导致门变形,电梯无法运行',",
+                    "            ladder:\t''",
+                    "        },",
+                    "        {",
+                    "            faulttype: '人为原因',",
+                    "            faultcode: '103',",
+                    "            faultanalysis: '装载垃圾导致开关门受阻,电梯停止运行',",
+                    "            ladder:\t''",
+                    "        },",
+                    "        {",
+                    "            faulttype: '外部原因',",
+                    "            faultcode: '201',",
+                    "            faultanalysis: '电梯运行过程中出现的停电',",
+                    "            ladder:\t''",
+                    "        },",
+                    "        {",
+                    "            faulttype: '外部原因',",
+                    "            faultcode: '202',",
+                    "            faultanalysis: '电气部件进水导致的短路故障',",
+                    "            ladder:\t''",
+                    "        },",
+                    "        {",
+                    "            faulttype: '外部原因',",
+                    "            faultcode: '203',",
+                    "            faultanalysis: '机房温度过高,电气控制系统自动保护',",
+                    "            ladder:\t''",
+                    "        },",
+                    "        {",
+                    "            faulttype: '门系统',",
+                    "            faultcode: '301',",
+                    "            faultanalysis: '轿门锁失效',",
+                    "            ladder:\t''",
+                    "        },",
+                    "        {",
+                    "            faulttype: '门系统',",
+                    "            faultcode: '302',",
+                    "            faultanalysis: '厅门锁失效',",
+                    "            ladder:\t''",
+                    "        },",
+                    "",
+                    "    ]);",
+                    "",
+                    "        onSuccess(2);",
+                    "     }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "f41bbc10-7565-43ed-a927-73d3a3cb89ff"
+        }
+    ]
+}

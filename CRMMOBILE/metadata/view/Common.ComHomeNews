@@ -1,0 +1,506 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "liftnet-myInformation"
+        ],
+        "data": null,
+        "designer|userClassName": "Common.ComHomeNews",
+        "id": "ComHomeNews",
+        "layout": "vbox"
+    },
+    "name": "HomeInformation1",
+    "designerId": "4d0e471b-7d85-4ca4-90dc-abf761983677",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "公告"
+            },
+            "name": "MyToolbar5",
+            "designerId": "7ce837fe-59a9-4ac1-848e-3434d9386dc7",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "ComHomeNews_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton8",
+                    "designerId": "d71630d4-8312-42ae-a5a1-d2312cfa1fd4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-tabbar-two"
+                ],
+                "layout|flex": 1
+            },
+            "name": "MyTabPanel9",
+            "designerId": "8f1178d3-d8ae-4a96-977b-fe6b72ca1717",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "ComCompanyNews",
+                        "itemId": "ComCompanyNews",
+                        "layout": "vbox",
+                        "title": "公司公告"
+                    },
+                    "name": "MyContainer59",
+                    "designerId": "565d10ac-5d04-4a89-92cd-7cf13d5c6fb1",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-news"
+                                ],
+                                "itemId": "mypanel27",
+                                "layout": "vbox",
+                                "layout|flex": 1,
+                                "scrollable": false
+                            },
+                            "name": "MyPanel27",
+                            "designerId": "b1faae60-f4a6-4d51-86f8-68b81150dcd9",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-bgColor-white"
+                                        ],
+                                        "hidden": true,
+                                        "margin": "20 20 10 20"
+                                    },
+                                    "name": "MyPanel28",
+                                    "designerId": "d7616e4d-52aa-488b-91d3-3cbeae003a3c",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Panel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-bgColor-red",
+                                                    "liftnet-fontColor-white"
+                                                ],
+                                                "height": "",
+                                                "padding": null
+                                            },
+                                            "name": "MyPanel29",
+                                            "designerId": "4ab82fc2-08c8-4e62-a92d-9563fe0b40fe",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Label",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "cls": [
+                                                            "liftnet-font-size14"
+                                                        ],
+                                                        "docked": "left",
+                                                        "html": "请稍候...",
+                                                        "id": "ComHomeNews_LblTitle",
+                                                        "margin": "10 0 10 10"
+                                                    },
+                                                    "name": "MyLabel14",
+                                                    "designerId": "8453435d-98b0-49df-a5cf-a253cbe03e7f"
+                                                },
+                                                {
+                                                    "type": "Ext.Label",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "cls": [
+                                                            "liftnet-font-size14"
+                                                        ],
+                                                        "docked": "right",
+                                                        "html": null,
+                                                        "id": "ComHomeNews_LblDate",
+                                                        "margin": "10 10 10 0 "
+                                                    },
+                                                    "name": "MyLabel16",
+                                                    "designerId": "11a3ed93-c072-43f0-8060-7976c7c0ccc9"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Panel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "margin": 20
+                                            },
+                                            "name": "MyPanel30",
+                                            "designerId": "3bd00802-1ed3-4fab-bf17-0fa32b5ccbdf",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Label",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "cls": [
+                                                            "liftnet-font-size14"
+                                                        ],
+                                                        "html": "正在载入消息...",
+                                                        "id": "ComHomeNews_LblContent"
+                                                    },
+                                                    "name": "MyLabel15",
+                                                    "designerId": "ffba0d88-1ea9-471c-a3cf-5722a7c1e25c"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.DataView",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-news"
+                                        ],
+                                        "disableSelection": true,
+                                        "height": 530,
+                                        "id": "ComHomeNews_DvNews",
+                                        "itemId": null,
+                                        "layout|flex": 1,
+                                        "pressedCls": " ",
+                                        "scrollable": "vertical",
+                                        "store": "setting_message"
+                                    },
+                                    "name": "MyDataView",
+                                    "designerId": "fffc3362-d856-4caa-9858-09b8e20aa2d6",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "",
+                                                    "<div class=\"liftnet-news-list\">",
+                                                    "\t<img class=\"liftnet-news-listIcon liftnet-border-radius50\" src=\"resources/images/home_icon02.png\" />",
+                                                    "\t<div class=\"liftnet-font-size16\" style=\"text-align:center;overflow:hidden; text-overflow:ellipsis;padding:0px 20px 10px 20px;margin-top:-28px\" >{title}</div>",
+                                                    "    <div class=\"liftnet-news-listCon liftnet-font-size14\">{content}</div>",
+                                                    "    <div class=\"liftnet-font-right liftnet-font-size12 liftnet-fontColor-gray\">{opername} {date}</div>",
+                                                    "</div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "b7abbe35-ee06-433e-9cad-1bddb2a96628"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "centered": true,
+                                "cls": [
+                                    "liftnet-font-size14"
+                                ],
+                                "height": null,
+                                "hidden": true,
+                                "html": "<div style=\"text-align:center;margin:20px\">暂无公司公告</div>",
+                                "id": "ComHomeNews_LblNoCompanyNews",
+                                "layout|flex": null,
+                                "width": "100%"
+                            },
+                            "name": "MyLabel45",
+                            "designerId": "e6f2be08-dfad-4b77-ad33-b0b4f90fae9f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "ComSystemNews",
+                        "itemId": "ComSystemNews",
+                        "layout": "hbox",
+                        "title": "系统公告"
+                    },
+                    "name": "MyContainer60",
+                    "designerId": "dfbc9896-ebb9-44ef-9102-8e62bfdfa7ce",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-news"
+                                ],
+                                "itemId": "mypanel28",
+                                "layout": "vbox",
+                                "layout|flex": 1,
+                                "scrollable": false
+                            },
+                            "name": "MyPanel63",
+                            "designerId": "8ed783bc-535c-410d-9e5f-3ca56dac11d7",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-bgColor-white"
+                                        ],
+                                        "hidden": true,
+                                        "margin": "20 20 10 20"
+                                    },
+                                    "name": "MyPanel28",
+                                    "designerId": "806647cb-d182-4cec-9af9-2c4b3ebcd94b",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Panel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-bgColor-red",
+                                                    "liftnet-fontColor-white"
+                                                ],
+                                                "height": "",
+                                                "padding": null
+                                            },
+                                            "name": "MyPanel29",
+                                            "designerId": "8dcf8074-bca7-4e25-b511-625f4701be41",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Label",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "cls": [
+                                                            "liftnet-font-size14"
+                                                        ],
+                                                        "docked": "left",
+                                                        "html": "请稍候...",
+                                                        "id": "ComHomeNews_LblTitle1",
+                                                        "margin": "10 0 10 10"
+                                                    },
+                                                    "name": "MyLabel14",
+                                                    "designerId": "7613c17c-696d-4ca5-ac9f-ae5eca5f1b90"
+                                                },
+                                                {
+                                                    "type": "Ext.Label",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "cls": [
+                                                            "liftnet-font-size14"
+                                                        ],
+                                                        "docked": "right",
+                                                        "html": null,
+                                                        "id": "ComHomeNews_LblDate1",
+                                                        "margin": "10 10 10 0 "
+                                                    },
+                                                    "name": "MyLabel16",
+                                                    "designerId": "2710ed61-c313-4e44-92ee-3f38b3ac76ac"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Panel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "margin": 20
+                                            },
+                                            "name": "MyPanel30",
+                                            "designerId": "5e2aebcc-0910-46ba-a7dd-342c43df8578",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Label",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "cls": [
+                                                            "liftnet-font-size14"
+                                                        ],
+                                                        "html": "正在载入消息...",
+                                                        "id": "ComHomeNews_LblContent1"
+                                                    },
+                                                    "name": "MyLabel15",
+                                                    "designerId": "b50bbae8-8e2e-45c1-b89c-f0809d1fa2b1"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.DataView",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-news"
+                                        ],
+                                        "disableSelection": true,
+                                        "height": 530,
+                                        "id": "ComHomeNews_SystemNews",
+                                        "itemId": null,
+                                        "layout|flex": 1,
+                                        "pressedCls": " ",
+                                        "scrollable": "vertical",
+                                        "store": "system_setting_message"
+                                    },
+                                    "name": "MyDataView",
+                                    "designerId": "f2e0b768-d1ce-4bdc-9e9f-a22937a9dd27",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"liftnet-news-list\">",
+                                                    "    <img class=\"liftnet-news-listIcon liftnet-border-radius50\" src=\"resources/images/home_icon02.png\" />",
+                                                    "    <div class=\"liftnet-font-size16\" style=\"text-align:center;overflow:hidden; text-overflow:ellipsis;padding:0px 20px 10px 20px;margin-top:-14px\" >{Topic}</div>",
+                                                    "    <div class=\"liftnet-font-size14\">{content}</div>",
+                                                    "    <div class=\"liftnet-font-right liftnet-font-size12 liftnet-fontColor-gray\">{opername} {date}</div>",
+                                                    "</div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "eaa5ee44-b2c1-4f4b-95ba-33bab3174cfc"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "centered": true,
+                                "cls": [
+                                    "liftnet-font-size14"
+                                ],
+                                "height": null,
+                                "hidden": true,
+                                "html": "<div style=\"text-align:center;margin:20px\">暂无系统公告</div>",
+                                "id": "ComHomeNews_LblNoSystemNews",
+                                "layout|flex": null,
+                                "width": "100%"
+                            },
+                            "name": "MyLabel46",
+                            "designerId": "cce6f629-eecd-40a0-9aec-afccded25580"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

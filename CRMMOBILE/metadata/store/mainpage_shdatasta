@@ -1,0 +1,186 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mainpage_shdatasta",
+        "storeId": "mainpage_shdatasta"
+    },
+    "name": "mainpage_shdatalist2",
+    "designerId": "0daf60bb-ea5b-4df4-8983-211b318d1977",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "type": "string"
+            },
+            "name": "field79",
+            "designerId": "d1996d01-efec-48b3-a7cd-3cf3b5a6ae1c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "acceptcount",
+                "type": "string"
+            },
+            "name": "field78",
+            "designerId": "a9981a50-ba4a-43d7-9b13-8c90a3d31218"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "approvecount",
+                "type": "string"
+            },
+            "name": "field92",
+            "designerId": "7cf4946a-2839-4eae-9d12-612418daef07"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "waitsubcount",
+                "type": "string"
+            },
+            "name": "field192",
+            "designerId": "6f46dc5b-344f-4824-bb49-2d2b00ec69ec"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "allcount",
+                "type": "string"
+            },
+            "name": "field223",
+            "designerId": "1efaa478-c06c-4ef1-b787-d9855e49f554"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/mainpage/api/1.0/shdatasta';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid };",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 首页-审核数据统计-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            title: '工程报价联络书审批',",
+                    "            acceptcount: '1568',",
+                    "            approvecount: '28',",
+                    "            waitsubcount: '5',",
+                    "        },",
+                    "        {",
+                    "            title: '工程合同商务审批',",
+                    "            acceptcount: '1538',",
+                    "            approvecount: '56',",
+                    "            waitsubcount: '7',",
+                    "        },",
+                    "        {",
+                    "            title: '维修合同审批',",
+                    "            acceptcount: '4146',",
+                    "            approvecount: '64',",
+                    "            waitsubcount: '8',",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess(3);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "c5316672-198f-4995-bb44-5ff6bc66ed42"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "045d02ac-ea3d-4377-bbf9-f69c9dcc6173"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "661873dd-6c65-41ca-bebf-750670d6c3bc"
+        }
+    ]
+}

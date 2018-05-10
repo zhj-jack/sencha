@@ -1,0 +1,239 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmReportFault",
+        "id": "AdmReportFault",
+        "layout": "vbox",
+        "scrollable": true
+    },
+    "name": "a_Report_Fault",
+    "designerId": "f1233b47-0688-441e-bcfc-a3092b51034d",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "故障报告书报表"
+            },
+            "name": "MyToolbar4",
+            "designerId": "e2011256-5174-4df9-bfd1-bd1ca2dbac9f",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "AdmReportFault_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "d01e3786-f6a1-4263-822e-840eb98a6e8d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-font-center",
+                    "liftnet-con-top"
+                ]
+            },
+            "name": "MyPanel6",
+            "designerId": "073843a0-0d30-4563-943e-832190573040",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-con-icon"
+                        ],
+                        "height": null,
+                        "src": "resources/images/con_icon03.png"
+                    },
+                    "name": "MyImg1",
+                    "designerId": "1735131a-841e-4025-af15-9e2d02e296af"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-fontColor-green",
+                            "liftnet-font-size20"
+                        ],
+                        "html": "正在载入...",
+                        "id": "AdmReportFault_lblAllCount"
+                    },
+                    "name": "MyLabel",
+                    "designerId": "c7d5c168-83cf-4b9e-a0ee-a7260594324e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-con-title"
+                ]
+            },
+            "name": "MyPanel8",
+            "designerId": "9c7f0405-7908-40d3-9538-4d5ffc38faa6",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "内容"
+                    },
+                    "name": "MyLabel11",
+                    "designerId": "a9052383-fe6a-4788-b6f1-ad93974e6d58"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "height": 163,
+                "id": "form_reportsta_gzreportdetail_tdate",
+                "layout|flex": null,
+                "scrollable": false
+            },
+            "name": "MyFormPanel8",
+            "designerId": "bc9bfc70-392d-4e5d-b557-21d4ac3e1c39",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "hidden": true,
+                        "label": null,
+                        "labelWidth": "70%",
+                        "name": "allcount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField54",
+                    "designerId": "cccb43c6-b650-4ef3-bc6b-ca529fcd23e4"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "应录入故障报告书",
+                        "labelWidth": "70%",
+                        "name": "needcount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "759f520e-afdc-4dea-aece-60be6a61f9df"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "已录入故障报告书宗数",
+                        "labelWidth": "70%",
+                        "name": "hascount",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "b520a483-3369-4f6c-8971-482c591b4caa"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "已录入故障报告书率",
+                        "labelWidth": "70%",
+                        "name": "haswriteper",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "3d05c19f-9af6-4bbc-a2eb-b20952f96884"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,190 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.aud_kpshdetail_detailed",
+        "storeId": "NoUsed.aud_kpshdetail_detailed"
+    },
+    "name": "aud_kpshdetail1",
+    "designerId": "16bb9299-6fd7-41c8-b2a0-a8818a877151",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftorserviceno",
+                "type": "string"
+            },
+            "name": "field238",
+            "designerId": "898ff5d6-e8de-44f6-af5b-3e20327c2cb8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nowfee",
+                "type": "string"
+            },
+            "name": "field145",
+            "designerId": "14140356-41a1-45a8-8868-593d28d150c6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "feeamt",
+                "type": "string"
+            },
+            "name": "field147",
+            "designerId": "668799cb-0a52-4d78-a469-4614cbc06b5c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "feetype",
+                "type": "string"
+            },
+            "name": "field148",
+            "designerId": "230b9b9f-a99f-480b-89c2-baefdeed839c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "serverdate",
+                "type": "string"
+            },
+            "name": "field146",
+            "designerId": "ef364890-5f5e-427a-877e-023ed8c2b272"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "detailrem",
+                "type": "string"
+            },
+            "name": "field149",
+            "designerId": "02cca93c-4410-4ab2-8dcd-176875a5f417"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/aud/api/1.0/kpshdetail/'+'流水号';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:'用户ID',billno:'开票流水号'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 开票审核查看-详细信息-演示数据",
+                    "    this.setData([",
+                    "    {",
+                    "        liftorserviceno: '注册码',",
+                    "        nowfee: '本次开票金额',",
+                    "        serverdate: '服务区间',",
+                    "        feeamt: '收费期数',",
+                    "        feetype: '费用项目',",
+                    "        detailrem: '备忘',",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "146908e9-29f9-4c4d-9cc7-1641916cf931"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "e5e5fc7a-f739-4c1d-8eca-5ca1e141157b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "12910ce8-4fd9-4f60-b807-88dc7def4250"
+        }
+    ]
+}

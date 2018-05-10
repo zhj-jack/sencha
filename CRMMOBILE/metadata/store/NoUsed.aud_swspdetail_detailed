@@ -1,0 +1,292 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.aud_swspdetail_detailed",
+        "storeId": "NoUsed.aud_swspdetail_detailed"
+    },
+    "name": "aud_swspdetail1",
+    "designerId": "00acc2e4-1ef6-421a-9614-cd34869b9cd8",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "eletype",
+                "type": "string"
+            },
+            "name": "field130",
+            "designerId": "dcf5afed-ea22-4270-82eb-1df81674813d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "facinfo",
+                "type": "string"
+            },
+            "name": "field246",
+            "designerId": "2057dce0-6ac7-4265-9669-b808f901174e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "floor",
+                "type": "string"
+            },
+            "name": "field131",
+            "designerId": "b989131e-07b0-4049-9e09-e50e095a06a8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stage",
+                "type": "string"
+            },
+            "name": "field132",
+            "designerId": "f13c8c71-4379-4227-9f1e-9e88d6b1f35c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "door",
+                "type": "string"
+            },
+            "name": "field133",
+            "designerId": "b09e7390-4921-47c3-81dc-8afbd309df96"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "high",
+                "type": "string"
+            },
+            "name": "field134",
+            "designerId": "79d97089-24d4-4444-a258-8dd29c3baaa3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "sprice",
+                "type": "string"
+            },
+            "name": "field135",
+            "designerId": "758ab327-5b46-4807-a02c-c0d71a2c4587"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r1",
+                "type": "string"
+            },
+            "name": "field136",
+            "designerId": "db57eaa9-72ca-4660-9f0e-75e8ba4ca642"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "num",
+                "type": "string"
+            },
+            "name": "field180",
+            "designerId": "edfe9482-73c7-4e18-a1b8-206f19a05ce6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "causerec",
+                "type": "string"
+            },
+            "name": "field181",
+            "designerId": "ef499626-ba83-423a-92d5-811dbb8aa6d2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugstartdate",
+                "type": "string"
+            },
+            "name": "field182",
+            "designerId": "e8a0734b-5705-4618-aeeb-dc61ffe712a8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugenddate",
+                "type": "string"
+            },
+            "name": "field247",
+            "designerId": "da3ffd44-0b4e-49bb-84f2-790763ed6308"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "countprice",
+                "type": "string"
+            },
+            "name": "field248",
+            "designerId": "1f3fb71c-c10a-48ca-ae0c-1dedf550f224"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/aud/api/1.0/swspdetail/'+'流水号';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:'用户ID',billno:'流水号'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 商务审批查看-详细信息-演示数据",
+                    "    this.setData([",
+                    "    {",
+                    "        eletype: '电梯类型',",
+                    "        sprice: '单价',",
+                    "        num: '台数',",
+                    "        mugstartdate: '开始日期',",
+                    "        mugenddate: '结束日期',",
+                    "        countmonth: '总月数',",
+                    "        countprice: '合计',",
+                    "        citemid: '项目名称',",
+                    "        causerec: '说明内容',",
+                    "        causeanalyse: '分析内容',",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "d31041f0-cc70-4e25-a41e-824f9a537163"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "6c891bc0-963e-472e-b9b8-49fcb443a474"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "f4fc33a2-d317-42ed-9b8c-6fe88a282a5b"
+        }
+    ]
+}

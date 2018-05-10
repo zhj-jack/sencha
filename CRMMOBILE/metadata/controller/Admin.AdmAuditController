@@ -1,0 +1,1549 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmAuditController"
+    },
+    "name": "MyController",
+    "designerId": "ff552e3b-86e3-420e-940f-62af0f2c2d24",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "********** 审核页面数据初始化 **********"
+                ],
+                "designer|controlQuery": "panel#AdmAudGcbjdetail",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudGcbjdetailInitialize",
+                "implHandler": [
+                    "// 工程报价联络书审核",
+                    "this.doAdmAud_FormInitialize(component.initialConfig.parm);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onAdmAudGcbjdetailInitialize",
+            "designerId": "632a3a62-c0d5-4205-a443-8575534480ae"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudByhtaud",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudByhtaudInitialize",
+                "implHandler": [
+                    "// 保养合同审批",
+                    "this.doAdmAud_FormInitialize(component.initialConfig.parm);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onAdmAudByhtaudInitialize",
+            "designerId": "83b1c08a-7cc6-44d3-9a36-0736942af847"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudKpshdetail",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudKpshdetailInitialize",
+                "implHandler": [
+                    "//开票审核",
+                    "this.doAdmAud_FormInitialize(component.initialConfig.parm);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onAdmAudKpshdetailInitialize",
+            "designerId": "38793222-6844-4b7e-a057-af4d0b61e2b1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudLkshdetail",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudLkshdetailInitialize",
+                "implHandler": [
+                    "//来款审核",
+                    "this.doAdmAud_FormInitialize(component.initialConfig.parm);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onAdmAudLkshdetailInitialize",
+            "designerId": "47ffc2c8-5055-4a6f-be0c-b783d50f9a89"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudByzydetail",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudByzydetailInitialize",
+                "implHandler": [
+                    "// 保养合同审批",
+                    "this.doAdmAud_FormInitialize(component.initialConfig.parm);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onAdmAudByzydetailInitialize",
+            "designerId": "7a8b94b6-a7bd-4a8a-b70c-6cb9e14446e0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudWxhtdetail",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudWxhtdetailInitialize",
+                "implHandler": [
+                    "// 维修合同审批",
+                    "this.doAdmAud_FormInitialize(component.initialConfig.parm);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onAdmAudWxhtdetailInitialize",
+            "designerId": "42c2096c-b115-42d6-bdbc-bace5cd0e75f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudByjhdetail",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudByjhdetailInitialize",
+                "implHandler": [
+                    "// 保养计划审核",
+                    "this.doAdmAud_FormInitialize(component.initialConfig.parm);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onAdmAudByjhdetailInitialize",
+            "designerId": "3c546a5c-7802-4a52-9809-59e9aa53dea9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudSwspdetail",
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudSwspdetailInitialize",
+                "implHandler": [
+                    "// 商务审批",
+                    "this.doAdmAud_FormInitialize(component.initialConfig.parm);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onAdmAudSwspdetailInitialize",
+            "designerId": "fc155f03-8097-4d13-8e43-2ab8e027c1d2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "审核页面-查看明细"
+                ],
+                "designer|controlQuery": "list#AdmAudgcbjdetail_ListDetailed",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmAudgcbjdetail_ListDetailedItemTap",
+                "implHandler": [
+                    "//工程报价联络书审核-跳转-明细内容",
+                    "viewUtil.goNext('Admin.AdmAudGcbjdetailCon', {record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmAudgcbjdetail_ListDetailedItemTap",
+            "designerId": "a6426394-038f-44d8-a9ce-90eea4c2c045"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#AdmAudbyhtdetail_ListDetailed",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmAudbyhtdetail_ListDetailedItemTap",
+                "implHandler": [
+                    "//保养合同审批-跳转-明细内容",
+                    "viewUtil.goNext('Admin.AdmAudByhtdetailCon', {record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmAudbyhtdetail_ListDetailedItemTap",
+            "designerId": "a16a310f-9fdc-4e3c-b31d-0d60a6ba44ff"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#AdmAudbyjhdetail_ListDetailed",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmAudbyjhdetail_ListDetailedItemTap",
+                "implHandler": [
+                    "//保养计划审核-跳转-明细内容",
+                    "viewUtil.goNext('Admin.AdmAudByjhdetailCon', {record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmAudbyjhdetail_ListDetailedItemTap",
+            "designerId": "a06d546d-f547-4550-8aeb-ae83f51ed791"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#AdmAudbyzydetail_ListDetailed",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmAudbyzydetail_ListDetailedItemTap",
+                "implHandler": [
+                    "//保养计划审核-跳转-明细内容",
+                    "viewUtil.goNext('Admin.AdmAudByzydetailCon', {record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmAudbyzydetail_ListDetailedItemTap",
+            "designerId": "04e9a693-6746-4af6-90f5-97b24c40282e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#AdmAudkpshdetail_ListDetailed",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmAudkpshdetail_ListDetailedItemTap",
+                "implHandler": [
+                    "//开票审核-跳转-明细内容",
+                    "viewUtil.goNext('Admin.AdmAudKpshdetailCon', {record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmAudkpshdetail_ListDetailedItemTap",
+            "designerId": "fe9fb2ae-74bc-40e0-82d9-eff12c799628"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#AdmAudlkshdetail_ListDetailed",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmAudlkshdetail_ListDetailedItemTap",
+                "implHandler": [
+                    "//来款审核-跳转-明细内容",
+                    "viewUtil.goNext('Admin.AdmAudLkshdetailCon', {record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmAudlkshdetail_ListDetailedItemTap",
+            "designerId": "0d3ee082-8a1f-4105-b790-e9cb8a1b5c24"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#AdmAudswspdetail_ListDetailed",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmAudswspdetail_ListDetailedItemTap",
+                "implHandler": [
+                    "//商务审批-跳转-明细内容",
+                    "viewUtil.goNext('Admin.AdmAudSwspdetailCon', {record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmAudswspdetail_ListDetailedItemTap",
+            "designerId": "af8cf204-f68f-4df1-9d13-8d7cfab4a806"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#AdmAudwxhtdetail_ListDetailed",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onAdmAudwxhtdetail_ListDetailedItemTap",
+                "implHandler": [
+                    "//维修合同审批-跳转-明细内容",
+                    "viewUtil.goNext('Admin.AdmAudWxhtdetailCon', {record:record});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onAdmAudwxhtdetail_ListDetailedItemTap",
+            "designerId": "86a30696-48f4-47d7-9e6e-9d5d56227d4d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "********** 各页面\"返回\"按钮 **********"
+                ],
+                "designer|controlQuery": "button#AdmAudByhtaud_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByhtaud_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByhtaud_ButReturnTap",
+            "designerId": "aceb8725-5ef7-4dfc-8dad-fa65ef7723f7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudByhtaudCon_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByhtaudCon_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByhtaudCon_ButReturnTap",
+            "designerId": "64e03366-22a8-404e-9126-028f8c27fd05"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudByjhdetail_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByjhdetail_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByjhdetail_ButReturnTap",
+            "designerId": "b16c76ab-6194-41bc-b2e5-d99c9ffb5e58"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudByjhdetailCon_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByjhdetailCon_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByjhdetailCon_ButReturnTap",
+            "designerId": "f850e4d0-8901-429e-ad9a-da18b04f814f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudByzydetail_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByzydetail_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByzydetail_ButReturnTap",
+            "designerId": "0132de04-14d3-40be-b2b3-2d2661bb9cd5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudByzydetailCon_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByzydetailCon_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByzydetailCon_ButReturnTap",
+            "designerId": "3bca3f5b-810a-46f0-bb6c-a166ab336e60"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudGcbjdetail_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudGcbjdetail_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudGcbjdetail_ButReturnTap",
+            "designerId": "9f14b946-78ee-44b8-b8fa-09fae4833684"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudGcbjdetailCom_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudGcbjdetailCom_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudGcbjdetailCom_ButReturnTap",
+            "designerId": "898ea0e2-3531-4289-a2ce-7e2bc98aa98e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudKpshdetail_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudKpshdetail_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudKpshdetail_ButReturnTap",
+            "designerId": "126a9105-5c84-403a-bf27-0ddb17058d8d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudKpshdetailCon_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudKpshdetailCon_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudKpshdetailCon_ButReturnTap",
+            "designerId": "37017411-8a7f-4d43-be84-c6e76fd9a8cc"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudLkshdetail_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudLkshdetail_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudLkshdetail_ButReturnTap",
+            "designerId": "f833f77c-00ab-4ee9-a38f-151a840332c4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudLkshdetailCon_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudLkshdetailCon_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudLkshdetailCon_ButReturnTap",
+            "designerId": "02239752-331e-4a25-8c14-90d98f4288b2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudSwspdetail_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudSwspdetail_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudSwspdetail_ButReturnTap",
+            "designerId": "e9d206e2-9614-47af-9982-c166e401f7f0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudSwspdetailCon_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudSwspdetailCon_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudSwspdetailCon_ButReturnTap",
+            "designerId": "8a4c87da-f084-413c-b2c6-5bf1ce203b0b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudWxhtdetail_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudWxhtdetail_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudWxhtdetail_ButReturnTap",
+            "designerId": "c7fc236a-3678-445f-9a71-77abec7b4be9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmAudWxhtdetailCon_ButReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudWxhtdetailCon_ButReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudWxhtdetailCon_ButReturnTap",
+            "designerId": "e7c756b4-493c-4d37-a962-ca37d72d8ccb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#AdmFormStatementReason_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmFormStatementReason_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmFormStatementReason_BtnReturnTap",
+            "designerId": "8825d1c4-6bd8-40df-80ec-dcf07ab0a253"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "审核明细的详细资料"
+                ],
+                "designer|controlQuery": "panel#AdmAudGcbjdetailCon",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudGcbjdetailConShow",
+                "implHandler": [
+                    "Ext.getCmp('form_aud_gcbjdetail_detailed').setRecord(component.initialConfig.parm.record);"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmAudGcbjdetailConShow",
+            "designerId": "15fb8fe7-e9e7-45bf-9ea3-0004df65cc7a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudWxhtdetailCon",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudWxhtdetailConShow",
+                "implHandler": [
+                    "Ext.getCmp('form_aud_wxhtdetail_detailed').setRecord(component.initialConfig.parm.record);"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmAudWxhtdetailConShow",
+            "designerId": "1e94d55e-190d-4200-9d8e-e8b3244699a4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudSwspdetailCon",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudSwspdetailConShow",
+                "implHandler": [
+                    "Ext.getCmp('form_aud_swspdetail_detailed').setRecord(component.initialConfig.parm.record);"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmAudSwspdetailConShow",
+            "designerId": "72a7dec7-9f29-4778-a47a-13cf80dc50ad"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudLkshdetailCon",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudLkshdetailConShow",
+                "implHandler": [
+                    "Ext.getCmp('form_aud_lkshdetail_detailed').setRecord(component.initialConfig.parm.record);"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmAudLkshdetailConShow",
+            "designerId": "dd7b6f1c-fab5-4166-8f30-e6ff1281aab1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudKpshdetailCon",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudKpshdetailConShow",
+                "implHandler": [
+                    "Ext.getCmp('form_aud_kpshdetail_detailed').setRecord(component.initialConfig.parm.record);"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmAudKpshdetailConShow",
+            "designerId": "8470172b-ca38-40bb-9ae3-8b92060a418f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudByzydetailCon",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudByzydetailConShow",
+                "implHandler": [
+                    "Ext.getCmp('form_aud_byzydetail_detailed').setRecord(component.initialConfig.parm.record);"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmAudByzydetailConShow",
+            "designerId": "617bb3a3-9160-447e-9a2b-f1928f603094"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudByjhdetailCon",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudByjhdetailConShow",
+                "implHandler": [
+                    "Ext.getCmp('form_aud_byjhdetail_detailed').setRecord(component.initialConfig.parm.record);"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmAudByjhdetailConShow",
+            "designerId": "2f5de6a1-df51-4444-80f8-316769bb70a1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdmAudByhtdetailCon",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdmAudByhtdetailConShow",
+                "implHandler": [
+                    "Ext.getCmp('form_aud_byhtdetail_detailed').setRecord(component.initialConfig.parm.record);"
+                ],
+                "name": "show"
+            },
+            "name": "onAdmAudByhtdetailConShow",
+            "designerId": "82c29dd5-658f-4a91-af31-aa625afe2c16"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "保养合同审核-同意"
+                ],
+                "designer|controlQuery": "button#AdmAudByhtdetail_BtnYes",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByhtdetail_BtnYesTap",
+                "implHandler": [
+                    "this.doAdmAud('同意', button.up().up().initialConfig.parm, 'r13');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByhtdetail_BtnYesTap",
+            "designerId": "99e541e2-e41f-47bc-b3dc-e440ec51fc40"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "保养合同审核-不同意"
+                ],
+                "designer|controlQuery": "button#AdmAudByhtdetail_BtnNo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByhtdetail_BtnNoTap",
+                "implHandler": [
+                    "this.doAdmAud('不同意', button.up().up().initialConfig.parm, 'r13');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByhtdetail_BtnNoTap",
+            "designerId": "eb7fa430-fd2e-4540-adf8-c2d232f4216d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "保养计划审核-同意"
+                ],
+                "designer|controlQuery": "button#AdmAudByjhdetail_BtnYes",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByjhdetail_BtnYesTap",
+                "implHandler": [
+                    "this.doAdmAud('同意', button.up().up().initialConfig.parm, 'r11');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByjhdetail_BtnYesTap",
+            "designerId": "984262ab-968d-4d71-8a15-4f05eb27eab9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "保养计划审核-不同意"
+                ],
+                "designer|controlQuery": "button#AdmAudByjhdetail_BtnNo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByjhdetail_BtnNoTap",
+                "implHandler": [
+                    "this.doAdmAud('不同意', button.up().up().initialConfig.parm, 'r11');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByjhdetail_BtnNoTap",
+            "designerId": "1d4f6c50-6c74-4639-9c34-150eff35acb0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "保养作业管理-同意"
+                ],
+                "designer|controlQuery": "button#AdmAudByzydetail_BtnYes",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByzydetail_BtnYesTap",
+                "implHandler": [
+                    "this.doAdmAud('同意', button.up().up().initialConfig.parm, 'r13');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByzydetail_BtnYesTap",
+            "designerId": "24a41c19-03a2-4431-bcbe-3294595c8069"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "保养作业管理-不同意"
+                ],
+                "designer|controlQuery": "button#AdmAudByzydetail_BtnNo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudByzydetail_BtnNoTap",
+                "implHandler": [
+                    "this.doAdmAud('不同意', button.up().up().initialConfig.parm, 'r13');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudByzydetail_BtnNoTap",
+            "designerId": "40edf5ef-3fb9-4e54-8a26-1b73c0f08921"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "工程报价联络书审核-同意"
+                ],
+                "designer|controlQuery": "button#AdmAudGcbjdetail_BtnYes",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudGcbjdetail_BtnYesTap",
+                "implHandler": [
+                    "this.doAdmAud('同意', button.up().up().initialConfig.parm, 'audrem');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudGcbjdetail_BtnYesTap",
+            "designerId": "f00deb6f-50c2-4219-9413-db4a7aa663ca"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "工程报价联络书审核-不同意"
+                ],
+                "designer|controlQuery": "button#AdmAudGcbjdetail_BtnNo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudGcbjdetail_BtnNoTap",
+                "implHandler": [
+                    "this.doAdmAud('不同意', button.up().up().initialConfig.parm, 'audrem');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudGcbjdetail_BtnNoTap",
+            "designerId": "739fe35e-4e5d-44a9-a4bd-52a368d0c65d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "开票审核-同意"
+                ],
+                "designer|controlQuery": "button#AdmAudKpshdetail_BtnYes",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudKpshdetail_BtnYesTap",
+                "implHandler": [
+                    "this.doAdmAud('同意', button.up().up().initialConfig.parm, 'rem2');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudKpshdetail_BtnYesTap",
+            "designerId": "cc69ab4e-957c-4c4b-9de0-6017e65cef69"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "开票审核-不同意"
+                ],
+                "designer|controlQuery": "button#AdmAudKpshdetail_BtnNo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudKpshdetail_BtnNoTap",
+                "implHandler": [
+                    "this.doAdmAud('不同意', button.up().up().initialConfig.parm, 'rem2');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudKpshdetail_BtnNoTap",
+            "designerId": "e350cf3f-499a-480e-87f2-0722c7916eae"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "来款审核-同意"
+                ],
+                "designer|controlQuery": "button#AdmAudLkshdetail_BtnYes",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudLkshdetail_BtnYesTap",
+                "implHandler": [
+                    "this.doAdmAud('同意', button.up().up().initialConfig.parm, 'auditingidea');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudLkshdetail_BtnYesTap",
+            "designerId": "b53a5abd-5477-4806-a367-9e3f8b09189a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "来款审核-不同意"
+                ],
+                "designer|controlQuery": "button#AdmAudLkshdetail_BtnNo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudLkshdetail_BtnNoTap",
+                "implHandler": [
+                    "this.doAdmAud('不同意', button.up().up().initialConfig.parm, 'auditingidea');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudLkshdetail_BtnNoTap",
+            "designerId": "ae9f7c12-bdf0-471b-9774-3224200b0a42"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "商务审批审核-同意"
+                ],
+                "designer|controlQuery": "button#AdmAudSwspdetail_BtnYes",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudSwspdetail_BtnYesTap",
+                "implHandler": [
+                    "this.doAdmAud('同意', button.up().up().initialConfig.parm, 'audrem');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudSwspdetail_BtnYesTap",
+            "designerId": "f49ae54d-21ea-4fa2-a6ac-7dd6da74fac3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "商务审批审核-不同意"
+                ],
+                "designer|controlQuery": "button#AdmAudSwspdetail_BtnNo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudSwspdetail_BtnNoTap",
+                "implHandler": [
+                    "this.doAdmAud('不同意', button.up().up().initialConfig.parm, 'audrem');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudSwspdetail_BtnNoTap",
+            "designerId": "6b3adf29-de77-492b-9fad-726c854eee2a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "维修合同审核-同意"
+                ],
+                "designer|controlQuery": "button#AdmAudWxhtdetail_BtnYes",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudWxhtdetail_BtnYesTap",
+                "implHandler": [
+                    "this.doAdmAud('同意', button.up().up().initialConfig.parm, 'r13');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudWxhtdetail_BtnYesTap",
+            "designerId": "8deea442-2981-4568-95d0-fff7167cc001"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "维修合同审核-不同意"
+                ],
+                "designer|controlQuery": "button#AdmAudWxhtdetail_BtnNo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdmAudWxhtdetail_BtnNoTap",
+                "implHandler": [
+                    "this.doAdmAud('不同意', button.up().up().initialConfig.parm, 'r13');"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdmAudWxhtdetail_BtnNoTap",
+            "designerId": "b6648853-4463-4dd3-aba5-5256ec9a50ee"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "审核表单取数"
+                ],
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "doAdmAud_FormInitialize",
+                "implHandler": [
+                    "var code = parm.code;",
+                    "var taskid = parm.taskid;",
+                    "var status = parm.status;",
+                    "var storeid = 'aud_' + code + 'detail';",
+                    "var formid = 'form_aud_' + code + 'detail';",
+                    "var listid = 'AdmAud' + code + 'detail_ListDetailed';",
+                    "",
+                    "var store = dataUtil.createStore(storeid);",
+                    "store.loadDat(",
+                    "    function() {",
+                    "        var data = store.getAt(0);",
+                    "        Ext.getCmp(formid).setRecord(data);",
+                    "",
+                    "        //console.log(data.get('detaillist'));",
+                    "        Ext.getCmp(listid).setData(data.get('detaillist'));",
+                    "",
+                    "        var pnl = Ext.getCmp('AdmAud' + code + '_PnlYesNo');",
+                    "        if(pnl) {",
+                    "            pnl.setHidden(status==='已完成');",
+                    "        }",
+                    "    },",
+                    "    function() {",
+                    "        Ext.toast('读取审核数据出现错误！');",
+                    "    },",
+                    "    taskid",
+                    ");"
+                ]
+            },
+            "name": "doAdmAud_FormInitialize",
+            "designerId": "0af4d1ac-daa2-41f8-8a90-41545f6b634e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "审批 - 同意"
+                ],
+                "designer|params": [
+                    "action",
+                    "parm",
+                    "remarkFieldName"
+                ],
+                "fn": "doAdmAud",
+                "implHandler": [
+                    "var taskid = parm.taskid;",
+                    "var code = parm.code;",
+                    "var formid = 'form_aud_' + code + 'detail';",
+                    "",
+                    "var remark = Ext.getCmp(formid).getValues()[remarkFieldName];",
+                    "if(!remark || remark.trim()==='') {",
+                    "    if(action==='同意') {",
+                    "        remark = '同意';",
+                    "    } else {",
+                    "        Ext.Msg.alert('注意', '请填写审批意见！', Ext.emptyFn);",
+                    "        return;",
+                    "    }",
+                    "}",
+                    "",
+                    "var adapterParm = {",
+                    "    userid: global.getUserId(),",
+                    "    taskid: taskid,",
+                    "    audflag: action,",
+                    "};",
+                    "adapterParm[remarkFieldName] = remark;",
+                    "",
+                    "console.log(adapterParm);",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/aud/api/1.0/' + code + 'aud';",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            Ext.toast('审批操作已完成！');",
+                    "            viewUtil.goLast();",
+                    "            liftnet.app.getController('Admin.AdmHomeController').doAdmHome_RefreshToDo();",
+                    "        },",
+                    "        function() {",
+                    "            Ext.Msg.alert('注意', '暂时未能完成审批操作，请稍后再试！', Ext.emptyFn);",
+                    "        });",
+                    "} else {",
+                    "    Ext.toast('审批操作已完成！');    ",
+                    "    viewUtil.goLast();",
+                    "    liftnet.app.getController('Admin.AdmHomeController').doAdmHome_RefreshToDo();",
+                    "}",
+                    "",
+                    "/* 附: 删除首页待办的方法",
+                    "var r = Ext.getCmp('AdmHome_DvList').getStore().getById(parm.id);",
+                    "Ext.getCmp('AdmHome_DvList').getStore().remove(r);",
+                    "*/"
+                ]
+            },
+            "name": "doAdmAud",
+            "designerId": "f8dfc44d-663f-4411-8c51-dd95b68e6920"
+        }
+    ]
+}

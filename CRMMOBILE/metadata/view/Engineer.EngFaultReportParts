@@ -1,0 +1,198 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFaultReportParts",
+        "id": "EngFaultReportParts",
+        "layout": "vbox"
+    },
+    "name": "FaultAdd1",
+    "designerId": "c4ecdcdd-4f85-4bb4-8be3-a7ae69a1c614",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "更换件"
+            },
+            "name": "MyToolbar4",
+            "designerId": "73ec369c-2cb3-49bf-b990-923c52b65a19",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFaultReportParts_BtnReturn",
+                        "itemId": "EngFaultReportParts_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "7007c119-9876-423b-b616-2c61e9c1840e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "id": "form_sx_reportdetail_trplist",
+                "layout|flex": 1
+            },
+            "name": "MyFormPanel8",
+            "designerId": "fa958f17-3ffe-4c95-a94d-6b3ae0a592ef",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "材料名称",
+                        "labelWidth": "40%",
+                        "name": "materialsname",
+                        "placeHolder": "请输入物料名称",
+                        "readOnly": null,
+                        "required": true,
+                        "value": null
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "a027075f-f9c7-4bc8-a19d-7b9f4e954b5c"
+                },
+                {
+                    "type": "Ext.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "数量",
+                        "labelWidth": "40%",
+                        "name": "materialsnum",
+                        "placeHolder": "请输入数量",
+                        "readOnly": null,
+                        "required": true,
+                        "stepValue": 1
+                    },
+                    "name": "MyNumberField3",
+                    "designerId": "cfce3147-fbdd-47f6-bd52-5cf0d7d66635"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "规格",
+                        "name": "model",
+                        "placeHolder": "请输入规格"
+                    },
+                    "name": "MyTextField80",
+                    "designerId": "003cf49d-a869-40ed-9a5a-af30d3d0c25b"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "hidden": false,
+                        "label": "备注",
+                        "labelWidth": "40%",
+                        "name": "remark",
+                        "readOnly": null
+                    },
+                    "name": "MyTextArea11",
+                    "designerId": "6bad55e3-0c5e-4f0f-ad3c-5a80e6e5ce52"
+                }
+            ]
+        },
+        {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "reportpart_index"
+            },
+            "name": "MyHiddenField18",
+            "designerId": "92004c26-a874-4093-bd7a-41682fc3a085"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button",
+                    "liftnet-button-one"
+                ],
+                "docked": "bottom",
+                "height": null
+            },
+            "name": "MyPanel7",
+            "designerId": "6830588e-78b7-4d92-b56f-5ba04b6e756b",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "id": "EngFaultReportParts_BtnConfirm",
+                        "itemId": "EngFaultReportParts_BtnConfirm",
+                        "text": "确定"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "0c620656-7e10-49ff-a126-217a28af4f8e"
+                }
+            ]
+        }
+    ]
+}

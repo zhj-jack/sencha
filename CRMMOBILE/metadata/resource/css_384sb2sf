@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_384sb2sf",
+        "url": "resources/css/font-awesome.css"
+    },
+    "name": "css",
+    "designerId": "00bf5617-81d9-4666-b038-bf0a7a9666da"
+}

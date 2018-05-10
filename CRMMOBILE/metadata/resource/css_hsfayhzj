@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_hsfayhzj",
+        "url": "resources/css/font-liftnet3.css"
+    },
+    "name": "css2",
+    "designerId": "b8915ef7-a83f-4ab8-ab0c-de9f132e23ad"
+}

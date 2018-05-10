@@ -1,0 +1,134 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_elevatorlist",
+        "storeId": "eng_elevatorlist"
+    },
+    "name": "eng_lifttypelist1",
+    "designerId": "3095dc0c-4c62-41ce-8edd-ff270a71f552",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatorid"
+            },
+            "name": "field497",
+            "designerId": "8e2a97b9-3246-4dbd-9263-a3eca98b96b5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatorname"
+            },
+            "name": "field498",
+            "designerId": "27315559-fc06-4fc4-9530-0ea102af008b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "facid"
+            },
+            "name": "field499",
+            "designerId": "a7c1c636-649d-45ad-8340-12353ef6cb3c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "facname"
+            },
+            "name": "field579",
+            "designerId": "56b90dc4-db35-4a82-a8f2-2c860ab204e9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "// parm = {userid: global.getUserId(),searchname:parm.searchname};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/dtxhlist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('读取项目电梯列表失败');",
+                    "            }else{",
+                    "                me.setData(ret.data);",
+                    "                onSuccess(ret.data.length);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('读取项目电梯失败');",
+                    "        });",
+                    "} else {",
+                    "",
+                    "    // 获取电梯型号列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            elevatorid: 'elevatorid1',",
+                    "            elevatorname: 'elevatorname1',",
+                    "            facid:'facid1',",
+                    "            facname:'facname1'",
+                    "        },",
+                    "        {",
+                    "            elevatorid: 'elevatorid2',",
+                    "            elevatorname: 'elevatorname2',",
+                    "            facid:'facid2',",
+                    "            facname:'facname2'",
+                    "        },",
+                    "        {",
+                    "            elevatorid: 'elevatorid3',",
+                    "            elevatorname: 'elevatorname3',",
+                    "            facid:'facid3',",
+                    "            facname:'facname3'",
+                    "        }",
+                    "",
+                    "",
+                    "    ]);",
+                    "        onSuccess(3);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "3f00f268-10a7-442d-8fff-948d9364eaef"
+        }
+    ]
+}

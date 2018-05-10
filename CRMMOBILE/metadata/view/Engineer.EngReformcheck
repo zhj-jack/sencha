@@ -1,0 +1,434 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngReformcheck",
+        "id": "EngReformcheck",
+        "itemId": "EngReformcheck",
+        "layout": "vbox"
+    },
+    "name": "Engineer.EngFirstCheck1",
+    "designerId": "7f35e666-008d-4945-8df4-6609c19d0b30",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "整改任务"
+            },
+            "name": "MyToolbar2",
+            "designerId": "70a5bd3a-1b2c-4f38-b5cb-158704b77fa9",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "itemId": "EngReformcheck_ReturnButton",
+                        "text": null
+                    },
+                    "name": "MyButton31",
+                    "designerId": "0dddc019-5f49-4f69-a212-c70072e32fb7"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer1",
+                    "designerId": "723b219a-a88e-4eee-ae14-3d11dabda378"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "ln ln-new",
+                        "id": "EngReformcheck_BtnAdd",
+                        "text": null
+                    },
+                    "name": "MyButton3",
+                    "designerId": "54442e69-824b-4625-b68d-b81f8e69fb03"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-tabbar-two"
+                ],
+                "id": "EngReformcheck_TplList",
+                "layout|flex": 1
+            },
+            "name": "MyTabPanel3",
+            "designerId": "fd26f0a2-0c88-4650-93d1-ae312ce5c074",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "badgeText": null,
+                        "cls": [
+                            "liftnet-fault-listBox"
+                        ],
+                        "itemId": "EngReformcheck_CtnJobList",
+                        "layout": "vbox",
+                        "title": "派工单"
+                    },
+                    "name": "MyContainer7",
+                    "designerId": "871f5d11-0da9-4d6a-9cc4-dbd409f9f80c",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-search-form"
+                                ],
+                                "height": 52,
+                                "id": "EngReformcheckJob_SearchForm",
+                                "layout": "hbox",
+                                "scrollable": false
+                            },
+                            "name": "MyFormPanel5",
+                            "designerId": "bac2bbb6-5c47-421d-8160-db714b38aaf1",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Search",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-size12"
+                                        ],
+                                        "height": null,
+                                        "id": "EngReformcheckJob_Search",
+                                        "label": null,
+                                        "layout|flex": 1,
+                                        "placeHolder": "项目名称"
+                                    },
+                                    "name": "MySearchField3",
+                                    "designerId": "ed0dbbd5-e8a9-4e45-b96c-1856c8927854"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-size12",
+                                            "liftnet-no-border",
+                                            "liftnet-fontColor-darkGray"
+                                        ],
+                                        "iconAlign": "right",
+                                        "iconCls": "fa fa-angle-down",
+                                        "id": "EngReformcheck_JobStatus",
+                                        "itemId": "EngReformcheck_JobStatus",
+                                        "margin": "16 0",
+                                        "text": "全部",
+                                        "width": 70
+                                    },
+                                    "name": "MyButton72",
+                                    "designerId": "2b38c36e-3b4d-42f6-827a-4984cd693a23"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-size12",
+                                            "liftnet-no-border",
+                                            "liftnet-fontColor-darkGray"
+                                        ],
+                                        "iconAlign": null,
+                                        "iconCls": null,
+                                        "id": "EngReformcheck_LoadMoreJob",
+                                        "itemId": null,
+                                        "margin": "16 0",
+                                        "text": "更多",
+                                        "width": 50
+                                    },
+                                    "name": "MyButton73",
+                                    "designerId": "9fbdd4b1-4dd1-417d-a1b6-aafc761b7095"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-home-listBox"
+                                ],
+                                "disableSelection": true,
+                                "id": "EngReformcheck_ListJob",
+                                "itemId": "EngReformcheck_ListJob",
+                                "layout|flex": 1,
+                                "pressedCls": " ",
+                                "store": "eng_qualitycheck_reformcheck_job"
+                            },
+                            "name": "MyList1",
+                            "designerId": "b3746296-6007-498f-ad40-a5d43cc3d591",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "",
+                                            "",
+                                            "<div class=\"liftnet-Maintenance-TaskRecList\" style=\"height:80px\">",
+                                            "    <div class=\"liftnet-Maintenance-TaskRecList-left\" style=\"left:14px\" >",
+                                            "        <div class=\"liftnet-font-size16 liftnet-fontColor-{jobcolor}\">{jnl}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{projectname}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{checkuser}&nbsp;</div>",
+                                            "        ",
+                                            "    </div>",
+                                            "    <div class=\"liftnet-Maintenance-TaskRecList-right\" style=\"padding-top:0px;right:14px\">",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-{jobcolor}\">{status}<i class=\"fa fa-circle-o\"></i>&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-{auditcolor} \">{restates}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">已选{checkednum}台/共{liftnum}台</div>",
+                                            "    </div>",
+                                            "</div>",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "79f63fca-612b-4f00-9840-fc9c66d15866"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "badgeText": null,
+                        "itemId": "EngReformcheck_CtnTaskList",
+                        "layout": "vbox",
+                        "title": "整改任务"
+                    },
+                    "name": "MyContainer11",
+                    "designerId": "d9152473-bf03-467a-97f4-37a0c74c19bd",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-search-form"
+                                ],
+                                "height": 52,
+                                "id": "EngReformcheckTask_SearchForm",
+                                "layout": "hbox",
+                                "scrollable": false
+                            },
+                            "name": "MyFormPanel12",
+                            "designerId": "47bdf494-19e4-4948-932b-c97211789990",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Search",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-size12"
+                                        ],
+                                        "id": "EngReformcheckTask_Search",
+                                        "label": null,
+                                        "layout|flex": 1,
+                                        "placeHolder": "项目名称、项目地址"
+                                    },
+                                    "name": "MySearchField3",
+                                    "designerId": "06b99052-12fe-458a-b5a1-e0981cf1865f"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-size12",
+                                            "liftnet-no-border",
+                                            "liftnet-fontColor-darkGray"
+                                        ],
+                                        "iconAlign": "right",
+                                        "iconCls": "fa fa-angle-down",
+                                        "id": "EngReformcheck_TaskStatus",
+                                        "itemId": "EngReformcheck_TaskStatus",
+                                        "margin": "16 0",
+                                        "text": "全部",
+                                        "width": 70
+                                    },
+                                    "name": "MyButton75",
+                                    "designerId": "4b93d1f6-e912-4456-9b19-1cf25d930274"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-font-size12",
+                                            "liftnet-no-border",
+                                            "liftnet-fontColor-darkGray"
+                                        ],
+                                        "docked": null,
+                                        "id": "EngReformcheck_LoadMoreTask",
+                                        "itemId": "EngReformcheck_LoadMoreTask",
+                                        "margin": "16 0",
+                                        "text": "更多"
+                                    },
+                                    "name": "MyButton74",
+                                    "designerId": "25a378a1-a491-4999-87fd-c03594b87a23"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowDeselect": null,
+                                "cls": [
+                                    "liftnet-fault-listBox"
+                                ],
+                                "disableSelection": true,
+                                "id": "EngReformcheck_ListTask",
+                                "itemId": "EngReformcheck_ListTask",
+                                "layout|flex": 1,
+                                "pressedCls": " ",
+                                "store": "eng_qualitycheck_firstcheck_task"
+                            },
+                            "name": "MyList2",
+                            "designerId": "448661e2-8d0f-49fd-89ee-c5ee0dd8c471",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": null,
+                                        "implHandler": [
+                                            "<div class=\"liftnet-home-listConBox\">",
+                                            "    <div class=\"liftnet-home-listConBox-left liftnet-font-size12\" style=\"left:12px\">",
+                                            "        <div class=\"liftnet-fontColor-white liftnet-bgColor-dark liftnet-font-center\" style=\"margin-right:8px; width:20px;float:left;border-radius:10px\">{liftautono}</div>",
+                                            "        <div class=\"liftnet-font-size14 liftnet-fontColor-{titlecolor}\">{projectname}</div>",
+                                            "        <div class=\"liftnet-fontColor-gray\" style=\"margin-left:28px\">{prono}</div>",
+                                            "        <div class=\"liftnet-fontColor-gray\" style=\"margin-left:28px\">{plandate}</div>",
+                                            "    </div>",
+                                            "    <div class=\"liftnet-home-listConBox-right\">",
+                                            "        <div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12 liftnet-fontColor-{auditcolor}\">",
+                                            "            {status} <i class=\"fa fa-circle-o\"></i>",
+                                            "        </div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-font-right\">{r3}</div>",
+                                            "    </div>",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "ee5a35c8-383e-4c8f-8f89-9953ee8f4e2f"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "badgeText": null,
+                        "hidden": false,
+                        "itemId": "EngReformcheck_CtnCommitReportList",
+                        "layout": "vbox",
+                        "title": "移交报告"
+                    },
+                    "name": "MyContainer29",
+                    "designerId": "e4f55ca8-b6eb-4684-823d-e6f23b9fa189"
+                }
+            ]
+        }
+    ]
+}

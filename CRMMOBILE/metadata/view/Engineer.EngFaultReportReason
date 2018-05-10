@@ -1,0 +1,170 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFaultReportReason",
+        "id": "EngFaultReportReason",
+        "itemId": "EngFaultReportReason",
+        "layout": "vbox"
+    },
+    "designerId": "9a1beef3-f365-4b46-a8eb-47918d8e88fc",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "故障原因"
+            },
+            "name": "MyToolbar11",
+            "designerId": "671b7e18-ad99-422a-9417-a5ea342a459e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "Reason_BtnReturn",
+                        "itemId": "Reason_BtnReturn",
+                        "layout|flex": null,
+                        "margin": "10 0 0 0",
+                        "text": null
+                    },
+                    "name": "MyButton45",
+                    "designerId": "4f731bc0-acc4-4caa-87b6-db7a3166fcb1"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-fontColor-white",
+                            "liftnet-font-size16"
+                        ],
+                        "docked": "right",
+                        "id": "Reason_BtnSub",
+                        "itemId": "Reason_BtnSub",
+                        "layout|flex": null,
+                        "margin": "10 0 0 0",
+                        "text": "确定"
+                    },
+                    "name": "MyButton53",
+                    "designerId": "c1c357a6-7493-4ace-b6eb-1cb89eab3e41"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyContainer45",
+            "designerId": "1fd13c1b-4724-40d9-a359-70293c4fce93",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-button"
+                        ],
+                        "docked": "bottom",
+                        "id": "Reason_BtnPanel",
+                        "itemId": "Reason_BtnPanel",
+                        "layout": "hbox"
+                    },
+                    "name": "MyPanel49",
+                    "designerId": "51488070-6198-4288-b9a4-321e0dda640b",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "x-buttonColor-white"
+                                ],
+                                "id": "Reason_BtnAdd",
+                                "itemId": "Reason_BtnAdd",
+                                "layout|flex": 1,
+                                "text": "<i class='fa fa-plus'></i>&nbsp;&nbsp;增加"
+                            },
+                            "name": "MyButton46",
+                            "designerId": "e7f81742-fda5-4af7-b675-33f4fc57ad71"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disableSelection": true,
+                        "id": "Reason_List",
+                        "itemId": "Reason_List",
+                        "layout|flex": 1,
+                        "store": "sx_report_reason"
+                    },
+                    "name": "MyList14",
+                    "designerId": "101534a6-7878-46a5-81fc-1e5f3ffc0174",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"liftnet-fault-staffList\">",
+                                    "\t<div class=\"liftnet-fault-staffList-left liftnet-fontColor-darkGray\">{reasonname}</div>",
+                                    "</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "1035717e-aaee-4e75-a77f-067dbd5b3844"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

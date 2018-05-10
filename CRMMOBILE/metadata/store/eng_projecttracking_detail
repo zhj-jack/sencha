@@ -1,0 +1,380 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_projecttracking_detail",
+        "storeId": "eng_projecttracking_detail"
+    },
+    "name": "MyStore",
+    "designerId": "476102de-3483-4440-8986-2aed9417b4cb",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectjnlno"
+            },
+            "name": "field772",
+            "designerId": "a541121c-6d66-4770-9de9-846799a19eea"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custid"
+            },
+            "name": "field773",
+            "designerId": "55769030-5711-4002-842a-49eac51aede5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custname"
+            },
+            "name": "field774",
+            "designerId": "127a8e5d-40e1-470f-9933-1b8069ea0035"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custaddress"
+            },
+            "name": "field775",
+            "designerId": "e1d59fff-47ec-43b5-9439-0aa5054466b7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field776",
+            "designerId": "6b4e8b12-b1e0-479f-b512-abc7cbab8372"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectaddress"
+            },
+            "name": "field777",
+            "designerId": "c3ae8740-9b33-4851-8271-c9394c635e11"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "remark"
+            },
+            "name": "field778",
+            "designerId": "8b97fc21-cb67-4197-b515-02a581b9b80d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowtype"
+            },
+            "name": "field779",
+            "designerId": "588997ac-3bdd-4b32-92e2-383fd50b0f5d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "upcustname"
+            },
+            "name": "field780",
+            "designerId": "3b7931e0-4613-4643-97c7-87757d907476"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatormaker"
+            },
+            "name": "field781",
+            "designerId": "7afa0f1d-3a03-4c80-8df3-be4335dde7f9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatornum"
+            },
+            "name": "field782",
+            "designerId": "2e546c0c-3792-4aae-a943-10c02b34240e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatorfloordoor"
+            },
+            "name": "field783",
+            "designerId": "dfeebe24-57f0-43b5-ba08-1b9c5abd8913"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projecttype"
+            },
+            "name": "field784",
+            "designerId": "e0d2d70c-21d8-41af-89e1-fcc7d754b2b7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "renewcontract"
+            },
+            "name": "field785",
+            "designerId": "8919ae30-a133-419c-87e8-d043ba462ec2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "coordinates"
+            },
+            "name": "field786",
+            "designerId": "57f0914c-0726-4269-a261-3b145c1b03bb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectstatusname"
+            },
+            "name": "field787",
+            "designerId": "2068b612-9147-4643-8270-be2070dd9466"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "linkerlist"
+            },
+            "name": "field788",
+            "designerId": "18728f9b-9c55-46ca-aac0-9bee7b7ba9b8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowinfolist"
+            },
+            "name": "field789",
+            "designerId": "ff06a785-f220-411f-ad85-0a2e57e8eaa1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "bycontract"
+            },
+            "name": "field790",
+            "designerId": "9495c50d-70ee-43cb-bc3d-2ad34419e8f1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/projecttrack/api/1.0/xmgzdetail';",
+                    "    var userid = global.getUserId();",
+                    "",
+                    "    console.log('------传到后台的参数------');",
+                    "    console.log(parm);",
+                    "    console.log('------传到后台的参数------');",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(1);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 查看项目跟踪明细-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            // 页面显示的字段",
+                    "            projectjnlno: \t\t'XM160422002',//项目编号",
+                    "            custid:\t\t\t\t'16BM00000230',//客户编号",
+                    "            custname:\t\t\t'广州中梯物联测试',//客户名称",
+                    "            custaddress:\t\t'大冶有色金属大厦903A',//客户地址",
+                    "            projectname:\t\t'广州中梯物联测试',//项目名称",
+                    "            projectaddress:\t\t'广东省广州市荔湾区黄沙大道144号',//项目地址",
+                    "            remark:\t\t\t\t'测试备注',//备注",
+                    "            flowtype:\t\t\t'普通',//跟进形式",
+                    "            upcustname: \t\t'广州万典商务服务有限公司',//上级单位",
+                    "            elevatormaker:\t\t'测试电梯制造商',//电梯制造商",
+                    "            elevatornum:\t\t2,//电梯台数",
+                    "            elevatorfloordoor:\t'3/3',//电梯层站",
+                    "            projecttype:\t\t'续约',//项目类型",
+                    "            renewcontract:\t\t'16保5263',//续约合同",
+                    "            coordinates:\t\t'113.242588,23.11853',//坐标",
+                    "            projectstatusname:\t'新建',//项目状态",
+                    "            linkerlist:[/*{\t\t\t//联系人信息",
+                    "                linker:\t\t\t'李生',//联系人",
+                    "                linkphone:\t\t'02081378771',//联系电话",
+                    "                job:\t\t\t'学校负责人xxxx',//职务",
+                    "                otherlink:\t\t'QQ154121',//其他联系方式",
+                    "                remark:\t\t\t'测试备注',//备注",
+                    "                cardnumber:\t\t'ZH2641024',//证号",
+                    "            },{",
+                    "                linker:\t\t\t'王大福',//联系人",
+                    "                linkphone:\t\t'13300000003',//联系电话",
+                    "                job:\t\t\t'财务负责人xxxxx',//职务",
+                    "                otherlink:\t\t'QQ154121',//其他联系方式",
+                    "                remark:\t\t\t'测试备注',//备注",
+                    "                cardnumber:\t\t'ZH2641024',//证号",
+                    "            }*/],",
+                    "            flowinfolist:[/*{\t\t\t//跟进信息",
+                    "                flowInfo:\t\t'跟进情况1',//跟进情况",
+                    "                flowuser:\t\t'吴维(维保事业部)',//跟进人+部门",
+                    "                flowdate:\t\t'2016-06-20',//日期",
+                    "            },{",
+                    "                flowInfo:\t\t'跟进情况2',//跟进情况",
+                    "                flowuser:\t\t'钟永琼(维保事业部)',//跟进人+部门",
+                    "                flowdate:\t\t'2016-06-20',//日期",
+                    "            }*/],",
+                    "            bycontract:[/*{\t\t\t//关联合同信息",
+                    "                billno:\t\t\t'16M44121',//合同流水号",
+                    "                r9:\t\t\t\t'WB16000731',//保养合同编号",
+                    "                contractstatus:\t'',//合同状态",
+                    "                maid:\t\t\t'',//服务方式",
+                    "                mugstartdate:\t'2015-05-01',//保养开始日期",
+                    "                mugenddate:\t\t'2016-05-20',//保养结束日期",
+                    "                custid:\t\t\t'公诚管理咨询有限公司第六分公司',//客户名称",
+                    "                mprojectname:\t'佛山御景花园一期',//项目名称",
+                    "                r15:\t\t\t'18,000',//合同金额",
+                    "                flowusername:\t'',//跟进人",
+                    "                flowstatus:\t\t'不通过',//流程状态",
+                    "                contractypename:\t'有偿',//合同类型",
+                    "                countnum:\t\t3,//台数",
+                    "                lotdate:\t\t'2015-05-01',//签订日期",
+                    "            },{",
+                    "                billno:\t\t\t'16M44121',//合同流水号",
+                    "                r9:\t\t\t\t'WB16000731',//保养合同编号",
+                    "                contractstatus:\t'',//合同状态",
+                    "                maid:\t\t\t'',//服务方式",
+                    "                mugstartdate:\t'2015-05-01',//保养开始日期",
+                    "                mugenddate:\t\t'2016-05-20',//保养结束日期",
+                    "                custid:\t\t\t'公诚管理咨询有限公司第六分公司',//客户名称",
+                    "                mprojectname:\t'佛山御景花园一期',//项目名称",
+                    "                r15:\t\t\t'18,000',//合同金额",
+                    "                flowusername:\t'',//跟进人",
+                    "                flowstatus:\t\t'不通过',//流程状态",
+                    "                contractypename:\t'有偿',//合同类型",
+                    "                countnum:\t\t3,//台数",
+                    "                lotdate:\t\t'2015-05-01',//签订日期",
+                    "            }*/]",
+                    "        }",
+                    "    ]);",
+                    "    onSuccess(1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "e05674b1-e8ce-4a9b-a075-cd7754b11f1b"
+        }
+    ]
+}

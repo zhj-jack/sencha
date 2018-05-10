@@ -1,0 +1,68 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sx_gettrno",
+        "storeId": "sx_gettrno"
+    },
+    "name": "MyStore",
+    "designerId": "7c2deb28-5bc6-41a6-b854-0716b5f120b6",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "trno"
+            },
+            "name": "field6",
+            "designerId": "84f8a0e1-cd53-43b8-86f5-82e6d7ff954f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "console.log(parm);",
+                    "var me = this;",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/shouxin/api/1.0/mobiletraddinfo';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data[0].trno);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "        this.setData({",
+                    "            trno:'TR2015233',",
+                    "        });",
+                    "    // 演示数据",
+                    "    onSuccess('TR2015233');",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "225bb70d-e047-4245-9b6a-246656fcb127"
+        }
+    ]
+}

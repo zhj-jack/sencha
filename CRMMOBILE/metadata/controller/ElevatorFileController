@@ -1,0 +1,233 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ElevatorFileController"
+    },
+    "name": "MyController",
+    "designerId": "f617e50a-1aec-4857-bd9c-d3dc669d5eb0",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EngElevatorFile",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEngElevatorFileInitialize",
+                "implHandler": [
+                    "var me = this;",
+                    "var elevatorList = Ext.getCmp('EngElevatorFile_List');",
+                    "elevatorList.getStore().removeAll();",
+                    "curPage = 0;//全局变量",
+                    "pagesize = 20;",
+                    "",
+                    "//监听滑动结束事件",
+                    "var scroller = elevatorList.getScrollable().getScroller();",
+                    "scroller.on('scrollend',function(scroll, x, y, eOpts){",
+                    "    if(curPage===0){",
+                    "        return;",
+                    "    }",
+                    "    //滑动到底部加载更多",
+                    "    if(y+scroller.getContainerSize().y==scroller.getSize().y){",
+                    "//         loadMask.show();",
+                    "        var scrollparm = {",
+                    "            scroller:scroller,",
+                    "            x:x,",
+                    "            y:y+80//Item的高度",
+                    "        };",
+                    "        if(!Ext.getCmp('EngElevatorFile_Search')){",
+                    "            loadMask.hide();",
+                    "            return;",
+                    "        }",
+                    "        var searchkeyParm = {",
+                    "            //关键字",
+                    "            searchkey:Ext.getCmp('EngElevatorFile_Search').getValue(),",
+                    "        };",
+                    "        me.doEngElevatorFile_Search(",
+                    "            ++curPage,",
+                    "            pagesize,",
+                    "            searchkeyParm,",
+                    "            'loadmore',",
+                    "            scrollparm",
+                    "        );",
+                    "    }",
+                    "});",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onEngElevatorFileInitialize",
+            "designerId": "bbdb0965-5538-42d8-8f11-33ae16c392cb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngElevatorFile_BtnReturn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngElevatorFile_BtnReturnTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngElevatorFile_BtnReturnTap",
+            "designerId": "4df2af7d-b5e8-4454-93ce-708768613129"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#EngElevatorFile_Search",
+                "designer|params": [
+                    "textfield",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onEngElevatorFile_SearchChange",
+                "implHandler": [
+                    "",
+                    "this.doEngElevatorFile_Search(1,pagesize,{searchkey:newValue},'search');"
+                ],
+                "name": "change"
+            },
+            "name": "onEngElevatorFile_SearchChange",
+            "designerId": "efa50c4c-e4aa-41f2-b0b2-55293f7a96b7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#EngElevatorFile_List",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onEngElevatorFile_ListItemTap",
+                "implHandler": [
+                    "if(!record.get('prono')){",
+                    "    Ext.toast('电梯注册码为空</br></br>无法查看相关电梯档案');",
+                    "    return;",
+                    "}",
+                    "viewUtil.goNext('Engineer.EngMonitorElevatorInfo',{prono:record.get('prono')});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onEngElevatorFile_ListItemTap",
+            "designerId": "cc5ebd10-1060-4a91-a336-7b8e40d4d5cc"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngElevatorFile_NewBtn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngElevatorFile_NewBtnTap",
+                "implHandler": [
+                    "Ext.toast('电梯档案录入功能正在开发中</br></br>敬请期待！');"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngElevatorFile_NewBtnTap",
+            "designerId": "974b77ae-81df-4ef5-9bb3-2567ccb380a3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "page",
+                    "pagesize",
+                    "searchkeyParm",
+                    "action",
+                    "scrollparm"
+                ],
+                "fn": "doEngElevatorFile_Search",
+                "implHandler": [
+                    "loadMask.show();",
+                    "var me = this;",
+                    "Ext.getCmp('EngElevatorFile_List').getStore().loadDat(",
+                    "    function(ret,resetCurPage){",
+                    "        if(scrollparm){",
+                    "            scrollparm.scroller.scrollTo(scrollparm.x,scrollparm.y);",
+                    "        }",
+                    "        if(resetCurPage){",
+                    "            curPage = 1;//获取新数据成功，页数重置为1",
+                    "        }",
+                    "        loadMask.hide();",
+                    "    },",
+                    "    function(info,cutOne){",
+                    "        Ext.toast(info);",
+                    "        if(cutOne){",
+                    "            curPage--;//加载更多数据失败，页数减一",
+                    "        }",
+                    "        if(info==='没有更多数据！'){",
+                    "            curPage = 0;//没有更多数据的时候重置页数为0，不触发上拉事件",
+                    "        }",
+                    "        loadMask.hide();",
+                    "",
+                    "    },",
+                    "    {",
+                    "        curpagenum:page,",
+                    "        pagesize:pagesize,",
+                    "        searchkey:searchkeyParm.searchkey,",
+                    "    },",
+                    "    action",
+                    ");"
+                ]
+            },
+            "name": "doEngElevatorFile_Search",
+            "designerId": "2425fa30-4741-45cf-b7b7-7bdb41370d41"
+        }
+    ]
+}

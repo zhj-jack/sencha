@@ -1,0 +1,194 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "liftnet"
+        ],
+        "designer|userClassName": "Common.ComSelect",
+        "id": "ComSelect",
+        "layout": "vbox"
+    },
+    "name": "Engineer.EngFaultStaff1",
+    "designerId": "dd1ff9d1-f05e-4948-bcac-a7058cf35f2a",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "id": "ComSelect_Tbar",
+                "title": null
+            },
+            "name": "MyToolbar4",
+            "designerId": "582a51cd-b7be-4c0f-97be-c8dedc264736",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "ComSelect_BtnReturn",
+                        "itemId": "ComSelect_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "c13559ca-8722-4a1a-ab8a-13a758f0347e"
+                },
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-font-size16"
+                        ],
+                        "height": null,
+                        "id": "ComSelect_FldKeyword",
+                        "itemId": "ComSelect_FldKeyword",
+                        "label": null,
+                        "labelWidth": null,
+                        "layout|flex": 1,
+                        "name": "keyword",
+                        "placeHolder": "请输入..."
+                    },
+                    "name": "MySearchField",
+                    "designerId": "44d5c0ec-44ee-4dc8-b8cc-01d428aea6d8"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-search",
+                        "id": "ComSelect_BtnSearch",
+                        "itemId": "ComSelect_BtnSearch",
+                        "text": null
+                    },
+                    "name": "MyButton33",
+                    "designerId": "f36760e4-a8ed-4209-aaff-32aa6e908363"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowDeselect": true,
+                "data": null,
+                "id": "ComSelect_List",
+                "layout|flex": 1,
+                "pressedCls": " ",
+                "store": null
+            },
+            "name": "MyList7",
+            "designerId": "9f3f880b-afdc-4e02-847e-3fdd0069a210",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-fault-staffList\">",
+                            "\t<div class=\"liftnet-fault-staffList-left liftnet-fontColor-darkGray\">{str1}</div>",
+                            "\t<div class=\"liftnet-fault-staffList-right liftnet-fontColor-gray\">{str2}</div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "a0d9969f-9ab8-4abb-92a9-f630e366214d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button",
+                    "liftnet-button-three"
+                ],
+                "docked": "bottom",
+                "height": null,
+                "layout": "hbox"
+            },
+            "name": "MyPanel18",
+            "designerId": "553502d2-363d-4142-a850-a87637e53d4d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-buttonColor-green"
+                        ],
+                        "disabled": true,
+                        "disabledCls": "x-item-disabled liftnet-buttonColor-gray",
+                        "docked": null,
+                        "iconCls": null,
+                        "id": "ComSelect_BtnMore",
+                        "itemId": "ComSelect_BtnMore",
+                        "layout|flex": 1,
+                        "text": "更多..."
+                    },
+                    "name": "MyButton29",
+                    "designerId": "e87744bd-94ed-423b-a3c9-622f94b1a001"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "itemId": "ComSelect_BtnOK",
+                        "layout|flex": 2,
+                        "text": "确定"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "09076294-dce6-447b-a9e2-e081741e091a"
+                }
+            ]
+        }
+    ]
+}

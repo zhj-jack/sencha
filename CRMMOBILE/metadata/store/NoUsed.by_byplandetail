@@ -1,0 +1,223 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.by_byplandetail",
+        "storeId": "NoUsed.by_byplandetail"
+    },
+    "name": "MyStore",
+    "designerId": "4daffa58-3d57-4400-ae9e-54d50cf4e01e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkDate",
+                "type": "string"
+            },
+            "name": "field71",
+            "designerId": "865535f0-91c5-49b4-8bd1-e8cafb899d5a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkWeekDay",
+                "type": "string"
+            },
+            "name": "field74",
+            "designerId": "a80171f8-4dba-497b-9760-d072691745b9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkSTime",
+                "type": "string"
+            },
+            "name": "field72",
+            "designerId": "5f032543-d5af-4344-8243-8c684485116a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkETime",
+                "type": "string"
+            },
+            "name": "field73",
+            "designerId": "56f03f10-65d0-48b1-8dac-f4ec25117110"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkAddress",
+                "type": "string"
+            },
+            "name": "field14",
+            "designerId": "bb8eccb2-8791-4e52-a87d-9e95ead6c3d5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ProdID",
+                "type": "string"
+            },
+            "name": "field16",
+            "designerId": "b5014196-468a-448a-b47d-067b9ea1cb7a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ServiceNo",
+                "type": "string"
+            },
+            "name": "field75",
+            "designerId": "94dd2295-6a97-4878-8b1c-52b264c1f19d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkType",
+                "type": "string"
+            },
+            "name": "field15",
+            "designerId": "405debbd-d167-486a-a927-1d03d9df6018"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CustName",
+                "type": "string"
+            },
+            "name": "field362",
+            "designerId": "8bfef5b2-b2f0-4c50-99cb-5fa577eb513d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/by/api/1.0/byplandetail/'+'流水号';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:'用户ID', billNo: '保养计划流水号（由后台从URI中获取'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 查看保养计划明细-演示数据",
+                    "    this.setData();",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "13c010d1-ea68-47d9-9597-415b2a7e4bb5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "ecbca824-67da-47bf-8299-a113c254282c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "991ba90a-1648-40a8-9c30-18c67cce7bfe"
+        }
+    ]
+}

@@ -1,0 +1,264 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ss_projectinfolist",
+        "storeId": "ss_projectinfolist"
+    },
+    "name": "eng_projectlocation1",
+    "designerId": "e2ee5243-a064-48fd-9691-32019695cac5",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectid"
+            },
+            "name": "field576",
+            "designerId": "bdd6969c-9195-44ef-814b-b9c7c09b4b67"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field590",
+            "designerId": "beedae19-f2eb-4484-a27d-70a5aee90abf"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectaddress"
+            },
+            "name": "field577",
+            "designerId": "3599043a-c2e9-44f2-94b9-7ea48fc9332b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatornum"
+            },
+            "name": "field592",
+            "designerId": "3e8781a3-e923-4165-ae4e-54f9791c94ea"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm",
+                    "action"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "var parm = {",
+                    "    userid: global.getUserId(),",
+                    "    curpagenum:parm.curpagenum,",
+                    "    pagesize:parm.pagesize,",
+                    "    searchkey:parm.searchkey,",
+                    "    type:'Y'//加权限限制",
+                    "};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/ckxm';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var info;",
+                    "            if(ret.status.code!=200){",
+                    "                if(parm.searchkey!==''){",
+                    "                    onFailure('搜索项目失败');",
+                    "                    return;",
+                    "                }",
+                    "                onFailure('读取项目列表失败');",
+                    "            }else{",
+                    "                if(ret.data.length===0){",
+                    "                    if(parm.curpagenum===1){",
+                    "                        switch(action){",
+                    "                            case 'refresh':",
+                    "                                info = '没有项目数据';",
+                    "                                break;",
+                    "                            case 'loadmore':",
+                    "                                break;",
+                    "                            case 'firstload':",
+                    "                                info = '没有项目数据';",
+                    "                                break;",
+                    "                            case 'search':",
+                    "                                info = '没有相关项目数据';",
+                    "                                break;",
+                    "                        }",
+                    "                        onFailure(info);",
+                    "                    }else{",
+                    "                        onFailure('没有更多数据！');",
+                    "                    }",
+                    "                    return;",
+                    "                }",
+                    "                //第一次加载直接设置数据",
+                    "                if(parm.curpagenum==1){",
+                    "                    me.setData(ret.data);",
+                    "                }else{",
+                    "                    //分页用法，在原有数据上继续添加",
+                    "                    var d = ret.data;",
+                    "                    var n = d.length;",
+                    "                    for(var i=0; i<n; i++) {",
+                    "                        me.add(d[i]);",
+                    "                    }",
+                    "                }",
+                    "                var resetCurPage = false;",
+                    "                if(action==='loadmore'){",
+                    "                    //加载更多的时候不需要重置页数",
+                    "                     onSuccess(ret.data.length,resetCurPage);",
+                    "                }else{",
+                    "                    //其他情况需要将页数重置为1",
+                    "                     onSuccess(ret.data.length,!resetCurPage);",
+                    "                }",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            var info;",
+                    "            var cutOne = false;",
+                    "            switch(action){",
+                    "                case 'refresh':",
+                    "                    info = '刷新项目失败';",
+                    "                    break;",
+                    "                case 'loadmore':",
+                    "                    info = '加载更多项目数据失败';",
+                    "                    cutOne = true;",
+                    "                    break;",
+                    "                case 'firstload':",
+                    "                    info = '获取项目数据失败';",
+                    "                    break;",
+                    "                case 'search':",
+                    "                    info = '搜索项目失败';",
+                    "                    break;",
+                    "            }",
+                    "",
+                    "            onFailure(info,cutOne);",
+                    "        }",
+                    "    );",
+                    "} else {",
+                    "",
+                    "    //分页模拟",
+                    "    var start = (parm.curpagenum-1)*20,",
+                    "        end = parm.curpagenum * parm.pagesize;",
+                    "    //         end = end>50?50:end;",
+                    "    if(end>40){",
+                    "        onFailure('没有更多数据！',false);",
+                    "        return;",
+                    "    }",
+                    "    if(action=='firstload'||action=='refresh'||action=='search'){",
+                    "        //模拟刷新，搜索，第一次加载",
+                    "        //清空数据",
+                    "        this.setData([]);",
+                    "    }",
+                    "    for(var i=start; i<end; i++) {",
+                    "        this.add({",
+                    "            projectid:'projectid'+(i)+action,",
+                    "            elevatornum:i+1,",
+                    "            projectname: '广州市华越友联科技发展有限公司.' + (i + 1),",
+                    "            projectaddress: '广州市荔湾区大冶有色大厦903A室--'+action,",
+                    "        });",
+                    "    }",
+                    "    // 演示数据",
+                    "    if(action=='refresh'||action=='search'||action=='firstload'){",
+                    "        onSuccess(end - start + 1,true);",
+                    "    }else{",
+                    "        onSuccess(end - start + 1,false);",
+                    "    }",
+                    "",
+                    "",
+                    "    // 获取项目地址列表-演示数据",
+                    "    //     this.setData([",
+                    "    //         {",
+                    "    //             projectid:'001',",
+                    "    //             projectname: '万科四季花园',",
+                    "    //             projectaddress: '东山湖公园',",
+                    "    //             elevatornum:10",
+                    "    //         },",
+                    "    //         {",
+                    "    //             projectid:'002',",
+                    "    //             projectname: '万科四季花园',",
+                    "    //             projectaddress: '东山口',",
+                    "    //             elevatornum:12",
+                    "    //         },",
+                    "    //         {",
+                    "    //             projectid:'003',",
+                    "    //             projectname: '万科四季花园',",
+                    "    //             projectaddress: '长城大厦',",
+                    "    //             elevatornum:1",
+                    "    //         },",
+                    "    //         {",
+                    "    //             projectid:'004',",
+                    "    //             projectname: '万科四季花园',",
+                    "    //             projectaddress: '金海湾',",
+                    "    //             elevatornum:5",
+                    "    //         }",
+                    "",
+                    "",
+                    "    //     ]);",
+                    "    //         onSuccess(this.getData());",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "898dd21a-1697-486e-b4ca-0a7df750cf29"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "        if(parm!=='') {",
+                    "            this.filterBy(function(item) {",
+                    "                var s = item.get(\"projectname\") + ' ' + item.get(\"projectaddress\");",
+                    "                return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "            });",
+                    "        }"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "daef03ed-ffe9-4f2d-910a-eecf1d965405"
+        }
+    ]
+}

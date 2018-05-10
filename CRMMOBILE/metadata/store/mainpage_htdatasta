@@ -1,0 +1,248 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mainpage_htdatasta",
+        "storeId": "mainpage_htdatasta"
+    },
+    "name": "reportsta_wbyjreportdetail1",
+    "designerId": "f60b38ac-b5f9-4d2c-9ccb-a37402b18273",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "count",
+                "type": "string"
+            },
+            "name": "field78",
+            "designerId": "133622fd-ccae-4c91-8b7e-7ee81a635e9b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "type": "string"
+            },
+            "name": "field79",
+            "designerId": "ef4c6a7b-8e4c-447e-9b74-68353b8293d3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleIcon",
+                "type": "string"
+            },
+            "name": "field92",
+            "designerId": "8e301ebb-277a-4f22-914e-b0909bf5476a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitname",
+                "type": "string"
+            },
+            "name": "field192",
+            "designerId": "a24dc840-5b98-47a4-ac3e-5e56847e5733"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "color",
+                "type": "string"
+            },
+            "name": "field193",
+            "designerId": "189d66bb-990e-4ab9-b928-d9b1ef100900"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/mainpage/api/1.0/htdatasta';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            data = me.decoDat(ret.data);",
+                    "            me.setData(data);",
+                    "            onSuccess(data.length);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 首页-合同数据统计-演示数据",
+                    "    // 接口无提供字段：titleIcon、unit、color",
+                    "    this.setData([",
+                    "    {",
+                    "        title: '在保合同',",
+                    "        titleIcon: 'ln ln-contract',",
+                    "        count: '1000',",
+                    "        unitname: '份',",
+                    "        color: 'orange',",
+                    "    },",
+                    "    {",
+                    "        title: '合同总金额',",
+                    "        titleIcon: 'ln ln-dollar',",
+                    "        count: '564万',",
+                    "        unitname: '元',",
+                    "        color: 'orange',",
+                    "    },",
+                    "    {",
+                    "        title: '本月新签合同',",
+                    "        titleIcon: 'ln ln-presale',",
+                    "        count: '50',",
+                    "        unitname: '份',",
+                    "        color: 'green',",
+                    "    },",
+                    "    {",
+                    "        title: '本月新签电梯',",
+                    "        titleIcon: 'ln ln-presale',",
+                    "        count: '480',",
+                    "        unitname: '台',",
+                    "        color: 'green',",
+                    "    },",
+                    "    {",
+                    "        title: '本月续签合同',",
+                    "        titleIcon: 'ln ln-month-cost',",
+                    "        count: '108',",
+                    "        unitname: '份',",
+                    "        color: 'blue',",
+                    "    },",
+                    "    {",
+                    "        title: '本月续签电梯',",
+                    "        titleIcon: 'ln ln-month-cost',",
+                    "        count: '580',",
+                    "        unitname: '台',",
+                    "        color: 'blue',",
+                    "    },",
+                    "    {",
+                    "        title: '本月到期合同',",
+                    "        titleIcon: 'ln ln-expire',",
+                    "        count: '18',",
+                    "        unitname: '份',",
+                    "        color: 'red',",
+                    "    },",
+                    "    {",
+                    "        title: '本月到期电梯',",
+                    "        titleIcon: 'ln ln-expire',",
+                    "        count: '102',",
+                    "        unitname: '台',",
+                    "        color: 'red',",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "    onSuccess(8);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "687ca5a0-e4ca-4774-9e82-8b64e3aaf254"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return [];",
+                    "",
+                    "var deco = [",
+                    "    {",
+                    "        titleIcon: 'ln ln-contract',",
+                    "        color: 'orange',",
+                    "    },",
+                    "    {",
+                    "        titleIcon: 'ln ln-dollar',",
+                    "        color: 'orange',",
+                    "    },",
+                    "    {",
+                    "        titleIcon: 'ln ln-presale',",
+                    "        color: 'green',",
+                    "    },",
+                    "    {",
+                    "        titleIcon: 'ln ln-presale',",
+                    "        color: 'green',",
+                    "    },",
+                    "    {",
+                    "        titleIcon: 'ln ln-month-cost',",
+                    "        color: 'blue',",
+                    "    },",
+                    "    {",
+                    "        titleIcon: 'ln ln-month-cost',",
+                    "        color: 'blue',",
+                    "    },",
+                    "    {",
+                    "        titleIcon: 'ln ln-expire',",
+                    "        color: 'red',",
+                    "    },",
+                    "    {",
+                    "        titleIcon: 'ln ln-expire',",
+                    "        color: 'red',",
+                    "    }",
+                    "];",
+                    "",
+                    "var len = Math.min(data.length, 8);",
+                    "for(var i=0; i<len; i++) {",
+                    "    data[i].titleIcon = deco[i].titleIcon;",
+                    "    data[i].color     = deco[i].color;",
+                    "}",
+                    "",
+                    "return data;"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "b54b840a-e095-43b4-b1b4-92e930c9ea03"
+        }
+    ]
+}

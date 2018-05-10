@@ -1,0 +1,175 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_MaintainTaskMan",
+        "storeId": "common_MaintainTaskMan"
+    },
+    "name": "MyStore",
+    "designerId": "7c51bffd-5967-44d5-a57b-84a524504b47",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "var adapterParm = {",
+                    "    userid: global.getUserId(),",
+                    "    rowid: parm",
+                    "};",
+                    "console.log(adapterParm);",
+                    "this.setData([]);",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/by/api/1.0/maintaintaskman';",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    this.setData([",
+                    "        {",
+                    "            taskuserid:'zs',",
+                    "            taskusername:'张三',",
+                    "            storageid:'10002',",
+                    "            storagename:'维保二组',",
+                    "            taskarea:'北区',",
+                    "            tasklinkphone:'13800138000',",
+                    "            tasklevel:'组长',",
+                    "        },",
+                    "        {",
+                    "            taskuserid:'ls',",
+                    "            taskusername:'李四',",
+                    "            storageid:'10003',",
+                    "            storagename:'维保三组',",
+                    "            taskarea:'南区',",
+                    "            tasklinkphone:'13800138001',",
+                    "            tasklevel:'班长',",
+                    "        },",
+                    "        {",
+                    "            taskuserid:'ww',",
+                    "            taskusername:'王五',",
+                    "            storageid:'10004',",
+                    "            storagename:'维保四组',",
+                    "            taskarea:'西区',",
+                    "            tasklinkphone:'13800138002',",
+                    "            tasklevel:'队长',",
+                    "        }",
+                    "    ]);",
+                    "    onSuccess(1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "91fcc7d6-3e24-43f0-b396-6525b6240a6c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "taskuserid"
+            },
+            "name": "field10",
+            "designerId": "66d3c98c-35e8-4f31-8f3a-d4eafe45aab8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "taskusername"
+            },
+            "name": "field12",
+            "designerId": "547e270c-9f8b-434b-bfe3-552344bd0462"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storageid"
+            },
+            "name": "field13",
+            "designerId": "4c89d364-42b1-4ed4-bad0-87979749d94e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storagename"
+            },
+            "name": "field14",
+            "designerId": "444aedab-e80c-4f90-9e0a-c720673beb89"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "taskarea"
+            },
+            "name": "field15",
+            "designerId": "af94839d-1010-4eb3-8b07-6345b4679ce9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tasklinkphone"
+            },
+            "name": "field16",
+            "designerId": "a8df9338-e6b6-4ac5-a08e-02892a96558c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tasklevel"
+            },
+            "name": "field17",
+            "designerId": "2787f2fb-59c5-4b7e-87b9-d9c7983fd2a0"
+        }
+    ]
+}

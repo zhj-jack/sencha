@@ -1,0 +1,193 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "by_bymissiondetail",
+        "storeId": "by_bymissiondetail"
+    },
+    "name": "by_bymissionlist1",
+    "designerId": "642ee61d-178d-43ba-86de-c9134a4fc24d",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "var adapterParm = {",
+                    "    userid: global.getUserId(),",
+                    "    rowid: parm",
+                    "};",
+                    "console.log(adapterParm);",
+                    "this.setData([]);",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/by/api/1.0/bymissiondetail';",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    this.setData([",
+                    "        {",
+                    "            ProjectName:\t\t\t'广州华越友联',\t\t\t//项目名称",
+                    "            ProjectAddress:\t\t\t'广州市荔湾区黄沙大道某个旮旯某层楼某个房间',\t//项目地址",
+                    "            ContractID:\t\t\t\t'16保110',\t//合同编号",
+                    "            ContractNum:\t\t\t'12',\t\t\t//合同总台数",
+                    "            TaskNum:\t\t\t\t'3',\t\t//选择台数",
+                    "            ReadFlag:\t\t\t\t'0',\t\t//合同调阅权限",
+                    "            Remark:\t\t\t\t\t'黄沙大道144号',\t//备注",
+                    "            taskname:\t\t\t\t'刘翔(维保一组)',\t//保养班组",
+                    "            nextstate:\t\t\t\t[{name:\"提交\",url:\"http://127.0.0.1/提交\"}],",
+                    "",
+                    "        }",
+                    "    ]);",
+                    "    onSuccess(1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "9f50c4d8-a699-48ad-b01e-74d4185b6dec"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ProjectName"
+            },
+            "name": "field382",
+            "designerId": "bed1aaff-d6d8-4628-aade-d6e9218f8eb1",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "val",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ProjectAddress"
+            },
+            "name": "field383",
+            "designerId": "3c91b1a6-66e3-435f-884d-243016b97afc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ContractID"
+            },
+            "name": "field488",
+            "designerId": "16f0f21b-5ce9-42a9-99e5-e01988f6da11"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ContractNum"
+            },
+            "name": "field489",
+            "designerId": "3192e9fd-0d4d-4a98-b8e7-001cac210bdd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TaskNum"
+            },
+            "name": "field490",
+            "designerId": "93654832-5065-44c1-8f2e-e9fe129ef5a5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ReadFlag"
+            },
+            "name": "field491",
+            "designerId": "33a478f2-2d56-4e02-a41c-8f331c512204"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Remark"
+            },
+            "name": "field492",
+            "designerId": "e37544ca-ad05-43b4-9a6b-b6f8f1164576"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "taskname"
+            },
+            "name": "field493",
+            "designerId": "77ecae8b-c40d-4a53-996a-27e330b78683"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate"
+            },
+            "name": "field",
+            "designerId": "e966062d-c612-4ecd-9464-de130c53782d"
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userAlias": "",
+        "designer|userClassName": "Engineer.NoUsed.EngNavMenuReceivingPlan",
+        "hidden": true,
+        "hideOnMaskTap": true,
+        "id": "EngNavMenuReceivingPlan",
+        "itemId": null,
+        "modal": true,
+        "padding": "5 10"
+    },
+    "name": "MyPanel9",
+    "designerId": "9743e4ab-d740-42b5-a66b-828c6cea480f",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border"
+                ],
+                "id": "EngNavMenuReceivingPlan_BtnState01",
+                "itemId": null,
+                "text": "全部"
+            },
+            "name": "MyButton6",
+            "designerId": "bbdb5ea9-4d63-47b5-b424-71234ef3ee20"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border"
+                ],
+                "id": "EngNavMenuReceivingPlan_BtnState02",
+                "itemId": null,
+                "text": "已接收"
+            },
+            "name": "MyButton13",
+            "designerId": "fb8fb232-45b6-4c70-b282-e80bbb8c532e"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-no-border"
+                ],
+                "id": "EngNavMenuReceivingPlan_BtnState03",
+                "itemId": null,
+                "text": "未接收"
+            },
+            "name": "MyButton14",
+            "designerId": "4af6be04-0e00-4185-b21f-94868a4ab156"
+        }
+    ]
+}

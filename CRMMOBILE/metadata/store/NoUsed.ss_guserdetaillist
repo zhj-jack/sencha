@@ -1,0 +1,246 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.ss_guserdetaillist",
+        "storeId": "NoUsed.ss_guserdetaillist"
+    },
+    "name": "ss_guserlist1",
+    "designerId": "73def09e-8a26-4323-bc4d-451cdd8d35a4",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid",
+                "type": "string"
+            },
+            "name": "field77",
+            "designerId": "e8160d0e-d1b3-4048-b120-806662b171b0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "phone",
+                "type": "string"
+            },
+            "name": "field79",
+            "designerId": "fc81d4ce-0b24-4c6f-9cd1-18b2534c61a4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status",
+                "type": "string"
+            },
+            "name": "field185",
+            "designerId": "96ac10a6-5b09-4945-aaf4-3718446ae6a8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status",
+                "type": "string"
+            },
+            "name": "field1",
+            "designerId": "5deed00f-ae2d-4d53-acf2-29ff73962126"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "statusing",
+                "type": "string"
+            },
+            "name": "field2",
+            "designerId": "d1f170a8-7ac7-4b3e-a877-156fb1f00bdd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr",
+                "type": "string"
+            },
+            "name": "field186",
+            "designerId": "c1ff3b79-6e3c-40dc-b914-15d19b6f379c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lasttime",
+                "type": "string"
+            },
+            "name": "field78",
+            "designerId": "5cf991e5-dc52-446a-bd86-631b005d2946"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stauts",
+                "type": "string"
+            },
+            "name": "field187",
+            "designerId": "9fd5da45-e38b-4bec-ac01-9f3e1b79002d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "type": "string"
+            },
+            "name": "field188",
+            "designerId": "ea08ff7a-242c-45b9-a937-8a06bfce2073"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "laststatustime",
+                "type": "string"
+            },
+            "name": "field189",
+            "designerId": "6abca794-f23f-46bf-a606-7488915f1da6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "if(global.isWorklight()) {// adapter取数",
+                    "",
+                    "} else {",
+                    "    // 人员信息-演示数据",
+                    "    // 接口无提供字段：statusing",
+                    "    this.setData([",
+                    "    {",
+                    "        userid: '陈晓明',",
+                    "        phone: '13888888888',",
+                    "        status: '路途中',",
+                    "        statusing: 'resources/images/trackListBox-icon02.png',",
+                    "        addr: '广州市凯旋大酒店有限公司凯旋华美达大酒店',",
+                    "        lasttime: '2015-11-18 17:20',",
+                    "        title: '路途中 保养任务SDASF345',",
+                    "        laststatustime: '2015-11-18 17:20'",
+                    "    },",
+                    "    {",
+                    "        userid: '陈晓明',",
+                    "        phone: '13888888888',",
+                    "        status: '路途中',",
+                    "        statusing: 'resources/images/trackListBox-icon01.png',",
+                    "        addr: '广州市凯旋大酒店有限公司凯旋华美达大酒店',",
+                    "        lasttime: '2015-11-18 17:20',",
+                    "        title: '完成 保养任务SDASF345',",
+                    "        laststatustime: '2015-11-18 17:20'",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "cb846581-933d-4ce4-a691-bdd3bbba1e04"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "a3aecaba-9678-4808-a224-19a14696e38a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "c69b656a-5032-4b6a-aab0-93be80bac93a"
+        }
+    ]
+}

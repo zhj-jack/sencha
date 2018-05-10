@@ -1,0 +1,16 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_28sp2t8k",
+        "url": "js/mqttloader.js",
+        "x-compile": true
+    },
+    "name": "js4",
+    "designerId": "3a33c3d3-b1c7-497f-a615-a95d636af583"
+}

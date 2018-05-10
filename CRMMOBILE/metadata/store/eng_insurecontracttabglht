@@ -1,0 +1,81 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_insurecontracttabglht",
+        "storeId": "eng_insurecontracttabglht"
+    },
+    "name": "eng_insurecontract1",
+    "designerId": "72b4de4e-9bcd-428c-9e62-63b2b34ed492",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractid"
+            },
+            "name": "field291",
+            "designerId": "d3955ee6-0be6-464e-b2f9-34e495fd755f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field296",
+            "designerId": "a9080d97-0a04-47fc-8480-2ba57df63ae4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectaddress"
+            },
+            "name": "field616",
+            "designerId": "20c7bd22-5fd5-40d9-868d-73aa1c20f363"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custname"
+            },
+            "name": "field617",
+            "designerId": "34aa50a7-c71d-4788-95f4-2d8cfebb7f6e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nums"
+            },
+            "name": "field597",
+            "designerId": "79fe3c5b-c339-4bac-924d-5b068bad3430"
+        }
+    ]
+}

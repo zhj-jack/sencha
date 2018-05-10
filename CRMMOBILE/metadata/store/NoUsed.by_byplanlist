@@ -1,0 +1,317 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.by_byplanlist",
+        "storeId": "NoUsed.by_byplanlist"
+    },
+    "name": "MyStore",
+    "designerId": "d5832fa7-4341-473c-8404-47fc0d020070",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BillNo",
+                "type": "string"
+            },
+            "name": "field31",
+            "designerId": "95cde2f4-a279-41d3-a653-c8d3faf8f3e0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "YearMonth",
+                "type": "string"
+            },
+            "name": "field33",
+            "designerId": "df1956df-2ff1-4445-a7de-fc053b0ea12c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "StorageName",
+                "type": "string"
+            },
+            "name": "field351",
+            "designerId": "7c3771ee-3dd4-4489-b9bb-bce266c27317"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MainNum",
+                "type": "string"
+            },
+            "name": "field352",
+            "designerId": "8fc27049-e6b5-45cf-8373-31a000a26c52"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ByState",
+                "type": "string"
+            },
+            "name": "field34",
+            "designerId": "777c527d-cc6f-4472-8370-9b051a8e1328"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MainMan",
+                "type": "string"
+            },
+            "name": "field353",
+            "designerId": "112a0556-6bdc-4f8f-98d2-3faca28bca2c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MainPhone",
+                "type": "string"
+            },
+            "name": "field354",
+            "designerId": "c344b758-98cf-4149-805e-d65bfb2483e6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "url",
+                "type": "string"
+            },
+            "name": "field17",
+            "designerId": "15186ebe-622b-4c13-8989-eb31846ca144"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Items",
+                "type": "auto"
+            },
+            "name": "field355",
+            "designerId": "2ab4aa81-a0bc-49ad-83b0-d45ff7c47c21"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "icon",
+                "type": "string"
+            },
+            "name": "field412",
+            "designerId": "8ca70e28-8a87-478c-8218-de6deeb0e33c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "percent",
+                "type": "string"
+            },
+            "name": "field1",
+            "designerId": "1d5e5caf-ec6c-43e6-9be4-84b15bcd0fe2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "color",
+                "type": "string"
+            },
+            "name": "field36",
+            "designerId": "3c1a435a-46d1-46b6-b551-61bc3ef71112"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "this.setData([]);",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/by/api/1.0/byplanlist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {",
+                    "        userid: userid,",
+                    "        byPlanDate: '%',",
+                    "        byPlanState: '%',",
+                    "        billNo: '%'",
+                    "    };",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            console.log(ret);",
+                    "            //me.setData(ret.data);",
+                    "            //onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 查询/查看保养计划列表-演示数据",
+                    "    // 接口无提供字段：icon、color；",
+                    "    // icon : 标题的图标；",
+                    "    // color ： 标题的颜色；",
+                    "    // percent ： 进度条的比例（%）；",
+                    "    this.setData([",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '未接收',",
+                    "        percent: '80',",
+                    "        color: 'liftnet-bgColor-red'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '未接收',",
+                    "        percent: '30',",
+                    "        color: 'liftnet-bgColor-red'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '未接收',",
+                    "        percent: '65',",
+                    "        color: 'liftnet-bgColor-red'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "         icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '已接收',",
+                    "        percent: '100',",
+                    "        color: 'liftnet-bgColor-green'",
+                    "    },",
+                    "    {",
+                    "        StorageName: '维保一组',",
+                    "        icon: '<i class=\"ln ln-message1\"></i> ',",
+                    "        YearMonth: '2015-10-09',",
+                    "        ByState: '已接收',",
+                    "        percent: '100',",
+                    "        color: 'liftnet-bgColor-green'",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "        onSuccess();",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "9da3443b-243e-4bd6-9977-2f28e3eaccb1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "22d8ff45-6bac-48fa-9b4d-fe191a7914f4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "2bfed4ad-674e-4fd2-8d26-eb06c7624dff"
+        }
+    ]
+}

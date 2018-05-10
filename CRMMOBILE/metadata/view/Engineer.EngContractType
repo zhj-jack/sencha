@@ -1,0 +1,91 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngContractType",
+        "id": "EngContractType",
+        "layout": "vbox"
+    },
+    "name": "MyPanel21",
+    "designerId": "07a77448-ee28-4f93-aefd-8766356f8828",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "itemId": "mytoolbar11",
+                "title": "合同类别"
+            },
+            "name": "MyToolbar11",
+            "designerId": "93f1634b-5eaf-4d22-adb5-db0da9c148b3",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngContractType_BtnReturn",
+                        "text": ""
+                    },
+                    "name": "MyButton20",
+                    "designerId": "f0be97ae-a024-4493-a854-bdf158916477"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-home-listBox"
+                ],
+                "disableSelection": true,
+                "id": "EngContractType_List",
+                "layout|flex": 1,
+                "store": "eng_contracttype"
+            },
+            "name": "MyList14",
+            "designerId": "5a486547-fd7b-4b55-b614-61c27ff5ca3a",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div style='margin-top:16px;height:36px;'>",
+                            "    <div style='font-size:16px;margin-left:20px;float:left' class = {color} >{contracttypename}</div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "c99ebaa6-f2bb-412d-baeb-2cf0af027e6f"
+                }
+            ]
+        }
+    ]
+}

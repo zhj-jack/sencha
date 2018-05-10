@@ -1,0 +1,17 @@
+{
+    "type": "libraryresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "basePath": "./",
+        "debug": null,
+        "designer|userClassName": "Library",
+        "exportAppliedTheme": null,
+        "theme": "Cupertino"
+    },
+    "name": "Library",
+    "designerId": "3a68c7f8-9801-46a4-9446-0f8cf62c3067"
+}

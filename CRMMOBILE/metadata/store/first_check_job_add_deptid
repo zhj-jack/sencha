@@ -1,0 +1,121 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "first_check_job_add_deptid",
+        "storeId": "first_check_job_add_deptid"
+    },
+    "name": "first_check_job_add_jnl1",
+    "designerId": "0c225b76-d324-4fda-aace-c4ea2c2f74ad",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "name": "field549",
+            "designerId": "adb70b03-3b29-4d61-b212-c0ef386e1860"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username"
+            },
+            "name": "field550",
+            "designerId": "992568ce-de66-4d30-90ac-2c85b6342c52"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storageid"
+            },
+            "name": "field551",
+            "designerId": "c6856344-3a88-4605-8762-11b3efad531c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storagename"
+            },
+            "name": "field552",
+            "designerId": "b4a8d031-7706-46f4-a1e4-e4bec012d878"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/ssbmlist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    var d = [",
+                    "        {",
+                    "            userid:'001',",
+                    "            username:'张三',",
+                    "            storageid:'002',",
+                    "            storagename:'技术部'",
+                    "        },",
+                    "        {",
+                    "            userid:'001',",
+                    "            username:'张三',",
+                    "            storageid:'003',",
+                    "            storagename:'维保部'",
+                    "        }",
+                    "    ];",
+                    "    this.setData(d);",
+                    "        onSuccess(d);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "e694bd65-6473-4e70-a4aa-d4d26e8601f9"
+        }
+    ]
+}

@@ -1,0 +1,535 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sx_sxlist_todo",
+        "storeId": "sx_sxlist_todo"
+    },
+    "name": "sx_sxlist1",
+    "designerId": "407fc559-b605-4b49-90da-82cc376eafd2",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "operdate",
+                "type": "string"
+            },
+            "name": "field11",
+            "designerId": "84e5ba9d-0612-4b7f-88c7-eed45919ff9f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "istrap",
+                "type": "string"
+            },
+            "name": "field255",
+            "designerId": "39882048-c1d3-4cdf-9f10-c735db51617e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "trno",
+                "type": "string"
+            },
+            "name": "field257",
+            "designerId": "dca8c4f9-c0ef-481e-b7ab-c59ea6e9e94f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitname",
+                "type": "string"
+            },
+            "name": "field258",
+            "designerId": "2cbdcff3-9979-4012-ba74-5142d6b94cf2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr",
+                "type": "string"
+            },
+            "name": "field259",
+            "designerId": "1f74b743-3cef-4194-a387-7e98fb2d6d5b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "url",
+                "type": "string"
+            },
+            "name": "field261",
+            "designerId": "7ef95462-20c9-4c46-a880-712c9508e789"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "taskid",
+                "type": "string"
+            },
+            "name": "field43",
+            "designerId": "eb2cb35c-9702-4c66-bd65-97b2d771eb44"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "state",
+                "type": "string"
+            },
+            "name": "field256",
+            "designerId": "3429fe79-18e3-47d1-a827-2bc8b3dba1cf"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate",
+                "type": "auto"
+            },
+            "name": "field5",
+            "designerId": "ea822471-3f4b-4844-9d97-e0a793b2a046"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleIcon",
+                "type": "string"
+            },
+            "name": "field350",
+            "designerId": "6d0a8614-6cd7-41f7-9f86-c2f417d9c6ae"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleColor",
+                "type": "string"
+            },
+            "name": "field410",
+            "designerId": "5522e0f1-34bf-48e0-a22f-59a6772024e8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "urgent",
+                "type": "string"
+            },
+            "name": "field411",
+            "designerId": "6bb22507-c0fe-4eb7-9d05-a95c300503c2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "statusColor",
+                "type": "string"
+            },
+            "name": "field1",
+            "designerId": "408db219-6127-4d8e-9cf0-b1dc0259e8d1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "this.setData([]);",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/sx/api/1.0/sxlist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var d = me.decoDat(ret.data);",
+                    "            me.setData(d);",
+                    "            onSuccess(d.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    var d = this.decoDat([",
+                    "        {",
+                    "            operdate: '2015-12-01 21:25',",
+                    "            istrap: '1',",
+                    "            state: '待分配',",
+                    "            trno: 'BX2015060404',",
+                    "            unitname: '广州市粤商投资有限公司',",
+                    "            addr: '广州市白云区人和龙苑小区',",
+                    "            nextstate: [",
+                    "                {name:\"派工\",url:\"http://127.0.0.1/派工\"},",
+                    "                {name:\"关闭\",url:\"http://127.0.0.1/关闭\"}",
+                    "            ],",
+                    "            taskid: 'TASK123456',",
+                    "            url: '查询明细url',",
+                    "            urgent: '',",
+                    "            statusColor: '',",
+                    "            titleIcon: '',",
+                    "            titleColor: '',",
+                    "        },",
+                    "        {",
+                    "            operdate: '2015-12-01 11:55',",
+                    "            istrap: '0',",
+                    "            state: '已关闭',",
+                    "            trno: 'BX2015060405',",
+                    "            unitname: '广州市粤商投资有限公司',",
+                    "            addr: '广州市白云区人和龙苑小区',",
+                    "            nextstate: [],",
+                    "            taskid: 'TASK123456',",
+                    "            url: '查询明细url',",
+                    "            urgent: '',",
+                    "            statusColor: '',",
+                    "            titleIcon: '',",
+                    "            titleColor: '',",
+                    "        },",
+                    "        {",
+                    "            operdate: '2015-12-01 11:55',",
+                    "            istrap: '1',",
+                    "            state: '已退回',",
+                    "            trno: 'BX2015060406',",
+                    "            unitname: '广州市粤商投资有限公司',",
+                    "            addr: '广州市白云区人和龙苑小区',",
+                    "            nextstate: [",
+                    "                {name:\"派工\",url:\"http://127.0.0.1/派工\"},",
+                    "                {name:\"关闭\",url:\"http://127.0.0.1/关闭\"}",
+                    "            ],",
+                    "            taskid: 'TASK123456',",
+                    "            url: '查询明细url',",
+                    "            urgent: '',",
+                    "            statusColor: '',",
+                    "            titleIcon: '',",
+                    "            titleColor: '',",
+                    "        },",
+                    "        {",
+                    "            operdate: '2015-12-01 21:25',",
+                    "            istrap: '1',",
+                    "            state: '待接收',",
+                    "            trno: 'BX2015060404',",
+                    "            unitname: '广州市粤商投资有限公司',",
+                    "            addr: '广州市白云区人和龙苑小区',",
+                    "            nextstate: [",
+                    "                {name:\"接收\",url:\"http://127.0.0.1/接收\"},",
+                    "                {name:\"退单\",url:\"http://127.0.0.1/退单\"}",
+                    "            ],",
+                    "            taskid: 'TASK123456',",
+                    "            url: '查询明细url',",
+                    "            urgent: '',",
+                    "            statusColor: '',",
+                    "            titleIcon: '',",
+                    "            titleColor: '',",
+                    "        },",
+                    "        {",
+                    "            operdate: '2015-12-01 11:55',",
+                    "            istrap: '0',",
+                    "            state: '未出发',",
+                    "            trno: 'BX2015060405',",
+                    "            unitname: '广州市粤商投资有限公司',",
+                    "            addr: '广州市白云区人和龙苑小区',",
+                    "            nextstate: [",
+                    "                {name:\"出发\",url:\"http://127.0.0.1/出发\"}",
+                    "            ],",
+                    "            taskid: 'TASK123456',",
+                    "            url: '查询明细url',",
+                    "            urgent: '',",
+                    "            statusColor: '',",
+                    "            titleIcon: '',",
+                    "            titleColor: '',",
+                    "        },",
+                    "        {",
+                    "            operdate: '2015-12-01 11:55',",
+                    "            istrap: '1',",
+                    "            state: '路途中',",
+                    "            trno: 'BX2015060406',",
+                    "            unitname: '广州市粤商投资有限公司',",
+                    "            addr: '广州市白云区人和龙苑小区',",
+                    "            nextstate: [",
+                    "                {name:\"到场\",url:\"http://127.0.0.1/到场\"}",
+                    "            ],",
+                    "            taskid: 'TASK123456',",
+                    "            url: '查询明细url',",
+                    "            urgent: '',",
+                    "            statusColor: '',",
+                    "            titleIcon: '',",
+                    "            titleColor: '',",
+                    "        },",
+                    "        {",
+                    "            operdate: '2015-12-01 11:55',",
+                    "            istrap: '1',",
+                    "            state: '维修中',",
+                    "            trno: 'BX2015060406',",
+                    "            unitname: '广州市粤商投资有限公司',",
+                    "            addr: '广州市白云区人和龙苑小区',",
+                    "            nextstate: [",
+                    "                /*{name:\"拍照\",url:\"http://127.0.0.1/拍照\"},",
+                    "                {name:\"扫描\",url:\"http://127.0.0.1/扫描\"},*/",
+                    "                {name:\"完工\",url:\"http://127.0.0.1/完工\"}",
+                    "            ],",
+                    "            taskid: 'TASK123456',",
+                    "            url: '查询明细url',",
+                    "            urgent: '',",
+                    "            statusColor: '',",
+                    "            titleIcon: '',",
+                    "            titleColor: '',",
+                    "        },",
+                    "        {",
+                    "            operdate: '2015-12-01 11:55',",
+                    "            istrap: '1',",
+                    "            state: '救援中',",
+                    "            trno: 'BX2015060406',",
+                    "            unitname: '广州市粤商投资有限公司',",
+                    "            addr: '广州市白云区人和龙苑小区',",
+                    "            nextstate: [",
+                    "                /*{name:\"拍照\",url:\"http://127.0.0.1/拍照\"},",
+                    "                {name:\"扫描\",url:\"http://127.0.0.1/扫描\"},*/",
+                    "                {name:\"解困\",url:\"http://127.0.0.1/解困\"}",
+                    "            ],",
+                    "            taskid: 'TASK123456',",
+                    "            url: '查询明细url',",
+                    "            urgent: '',",
+                    "            statusColor: '',",
+                    "            titleIcon: '',",
+                    "            titleColor: '',",
+                    "        },",
+                    "        {",
+                    "            operdate: '2015-12-01 11:55',",
+                    "            istrap: '1',",
+                    "            state: '已完成',",
+                    "            trno: 'BX2015060406',",
+                    "            unitname: '广州市粤商投资有限公司',",
+                    "            addr: '广州市白云区人和龙苑小区',",
+                    "            nextstate: [],",
+                    "            taskid: 'TASK123456',",
+                    "            url: '查询明细url',",
+                    "            urgent: '',",
+                    "            statusColor: '',",
+                    "            titleIcon: '',",
+                    "            titleColor: '',",
+                    "        },",
+                    "        {",
+                    "            operdate: '2015-12-01 11:55',",
+                    "            istrap: '0',",
+                    "            state: '已完成',",
+                    "            trno: 'BX2015060406',",
+                    "            unitname: '广州市粤商投资有限公司',",
+                    "            addr: '广州市白云区人和龙苑小区',",
+                    "            nextstate: [],",
+                    "            taskid: 'TASK123456',",
+                    "            url: '查询明细url',",
+                    "            urgent: '',",
+                    "            statusColor: '',",
+                    "            titleIcon: '',",
+                    "            titleColor: '',",
+                    "        },",
+                    "    ]);",
+                    "    this.setData(d);",
+                    "    onSuccess(d.length);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "eeff81be-af07-488e-8265-bcfad139bb7b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "939fe453-2df0-41dc-bd85-d84524ddc4a3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "if(parm!=='') {",
+                    "    this.filterBy(function(item) {",
+                    "        var s = item.get('unitname') + ' ' + item.get('addr') + ' ' +",
+                    "            item.get('operdate') + ' ' + item.get('istrap');",
+                    "        return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "44db6723-e1b1-43ca-88dc-cbafe8678e6b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "",
+                    "var statusArr = [];",
+                    "/*",
+                    "statusArr['0'  ]= { text:'待分配', color:'green' };",
+                    "statusArr['103']= { text:'关闭',   color:'gray' };",
+                    "statusArr['104']= { text:'退单',   color:'red' };",
+                    "statusArr['201']= { text:'待接收', color:'orange' };",
+                    "statusArr['202']= { text:'未出发', color:'green' };",
+                    "statusArr['301']= { text:'路途中', color:'blue' };",
+                    "statusArr['302']= { text:'维修中', color:'purple' };",
+                    "statusArr['303']= { text:'救援中', color:'purple' };",
+                    "statusArr['401']= { text:'已完成', color:'black' };",
+                    "*/",
+                    "statusArr['待分配']= { code:'0',   color:'green' };",
+                    "statusArr['已关闭']= { code:'103', color:'gray' };",
+                    "statusArr['已退回']= { code:'104', color:'red' };",
+                    "statusArr['待接收']= { code:'201', color:'orange' };",
+                    "statusArr['未出发']= { code:'202', color:'green' };",
+                    "statusArr['路途中']= { code:'301', color:'blue' };",
+                    "statusArr['维修中']= { code:'302', color:'purple' };",
+                    "statusArr['救援中']= { code:'303', color:'purple' };",
+                    "statusArr['已完成']= { code:'401', color:'black' };",
+                    "",
+                    "",
+                    "// urgent、statusColor、titleIcon、titleColor 根据istrap显示:",
+                    "// urgent \t\t: 紧急的角标",
+                    "// statusColor\t: 状态的颜色",
+                    "// titleIcon\t: 标题的图标",
+                    "// titleColor\t: 标题的颜色",
+                    "",
+                    "for(var i=0;i<data.length; i++) {",
+                    "    var state = data[i].state;",
+                    "    if(!statusArr[state]) {",
+                    "        Ext.toast('sx_sxlist_todo 未知状态：' + state);",
+                    "        continue;",
+                    "    }",
+                    "",
+                    "    data[i].operdate = data[i].operdate.split(' ')[0];",
+                    "    data[i].titleColor  = 'liftnet-fontColor-' + statusArr[state].color;",
+                    "    data[i].statusColor = 'liftnet-fontColor-' + statusArr[state].color;",
+                    "    //data[i].state       = statusArr[state].text;",
+                    "",
+                    "    if(data[i].istrap==='1') {",
+                    "        if(state==='待分配'||",
+                    "           state==='已退回'||",
+                    "           state==='待接收'||",
+                    "           state==='未出发'||",
+                    "           state==='路途中'||",
+                    "           state==='救援中') {",
+                    "            data[i].urgent = '<div class=\"liftnet-remindBg liftnet-remindBg-red\"></div><div class=\"liftnet-remind liftnet-font-size12\">急</div>';",
+                    "        }",
+                    "        data[i].titleIcon = '<i class=\"ln ln-stranded\"></i> ';",
+                    "        data[i].istrap = '<span class=\"liftnet-font-size14\">(困人)</span>';",
+                    "    } else {",
+                    "        data[i].titleIcon = '<i class=\"ln ln-repair\"></i> ';",
+                    "        data[i].istrap = '';",
+                    "    }",
+                    "}",
+                    "",
+                    "return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "5dcaeab5-af55-4d1b-a84c-48cecfd1e292"
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "reportsta_gzreportdetail_tdate",
+        "storeId": "reportsta_gzreportdetail_tdate"
+    },
+    "name": "reportsta_byreportdetail_tdate1",
+    "designerId": "367c184f-6ae0-4c1c-bb0c-75378f8e0f24",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "//console.log(parm);",
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/reportsta/api/1.0/gzreportdetail';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid, date: parm};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 故障报告书报表-演示数据",
+                    "    this.setData([",
+                    "    {",
+                    "        allcount: '100',",
+                    "        needcount: '4000',",
+                    "        hascount: '3800',",
+                    "        haswriteper: '95%'",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "63290c9c-bbb3-44de-abdf-a0600ca39cda"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "1b07e297-0a6e-42a5-b508-f71a23da0ed8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "63181b77-2f25-4864-bb68-78f95d243d52"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "needcount"
+            },
+            "name": "field183",
+            "designerId": "dd878af4-6a91-4819-a386-a175fe4f05f1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "hascount"
+            },
+            "name": "field386",
+            "designerId": "655c0ad6-35d0-4c5f-8b0d-b0e18f58512e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "haswriteper"
+            },
+            "name": "field389",
+            "designerId": "cebf5d43-363d-4759-8db2-b26215b8ff09"
+        }
+    ]
+}

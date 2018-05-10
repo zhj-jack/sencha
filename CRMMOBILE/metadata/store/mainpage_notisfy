@@ -1,0 +1,117 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mainpage_notisfy",
+        "storeId": "mainpage_notisfy"
+    },
+    "name": "mainpage_shkeyword1",
+    "designerId": "1b5b9965-ad48-4ce9-bef2-6c869d0d308b",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Topic",
+                "type": "string"
+            },
+            "name": "field31",
+            "designerId": "43ca2569-69a8-45dc-b4e6-6158c60a8408"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "        var me = this;",
+                    "",
+                    "        if(global.isWorklight()) {",
+                    "            // adapter取数",
+                    "            var url = '/adapters/common/api/1.0/announcement';",
+                    "            var userid = global.getUserId();",
+                    "            var adapterParm = {userid: userid};",
+                    "",
+                    "            callPostAdapter(",
+                    "                url, adapterParm,",
+                    "                function(data) {",
+                    "                    me.setData(data.data);",
+                    "                    onSuccess();",
+                    "                },",
+                    "                onFailure);",
+                    "        } else {",
+                    "            // 演示数据",
+                    "            this.setData([",
+                    "                {",
+                    "                    Topic: '系统今晚24点停机维护,请大家做好数据备份。'",
+                    "//                     Topic:''",
+                    "                }",
+                    "            ]);",
+                    "",
+                    "            onSuccess(1);",
+                    "        }",
+                    ""
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "1b09c8b1-94dd-4a12-a73c-51ab7c92e273"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "af94c303-85fd-4858-9e42-e32fa3e1226d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "ec2fd8df-b505-4f9a-ad1e-465b6704c18c"
+        }
+    ]
+}

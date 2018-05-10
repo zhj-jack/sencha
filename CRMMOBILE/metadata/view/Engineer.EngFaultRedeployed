@@ -1,0 +1,156 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFaultRedeployed",
+        "id": "Redeployed",
+        "layout": "vbox",
+        "requires": [
+            "Ext.Panel",
+            "Ext.field.Search"
+        ]
+    },
+    "designerId": "58019dae-73b8-47eb-b840-795025d60811",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "id": "EngFaultRedeployed_Tbar",
+                "title": "请选择维修人员"
+            },
+            "name": "MyToolbar9",
+            "designerId": "07212955-a876-4329-ab21-2571814953e9",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFaultRedeployed_BtnReturn",
+                        "itemId": "EngFaultRedeployed_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton32",
+                    "designerId": "4326dbc6-1985-4902-92e2-16386053d278"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "EngFaultRedeployed_List",
+                "itemId": "EngFaultRedeployed_List",
+                "layout|flex": 1,
+                "pressedCls": "",
+                "store": "common_sxpglist"
+            },
+            "name": "MyList12",
+            "designerId": "20bca27d-d52e-40c8-9c36-392379bc8250",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-font-size14 liftnet-fontColor-darkGray\">{username}({linkphone})</div>",
+                            "    <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{storagename}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "e33580fd-a3fd-40b0-9d82-dca62a2d1857"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Redeployed_trno",
+                        "itemId": "Redeployed_trno"
+                    },
+                    "name": "MyHiddenField8",
+                    "designerId": "4e80d6d5-a7eb-4870-a4f8-8ec0ab3a67f5"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Redeployed_flg",
+                        "itemId": "Redeployed_flg"
+                    },
+                    "name": "MyHiddenField9",
+                    "designerId": "f44ab1cb-50aa-4ab7-b0cc-3c44821fb986"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button",
+                    "liftnet-button-three"
+                ],
+                "docked": "bottom",
+                "layout": "hbox"
+            },
+            "name": "MyPanel27",
+            "designerId": "a612b931-309d-474b-8439-2f65efc0956c",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Redeployed_BtnOK",
+                        "itemId": "Redeployed_BtnOK",
+                        "layout|flex": 1,
+                        "text": "确认"
+                    },
+                    "name": "MyButton23",
+                    "designerId": "2f5aad12-f7f1-4c0b-b445-ce7f2b319690"
+                }
+            ]
+        }
+    ]
+}

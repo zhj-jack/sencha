@@ -1,0 +1,185 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_sxpglist",
+        "storeId": "common_sxpglist"
+    },
+    "name": "sx_reportlist1",
+    "designerId": "3216b28a-59c0-4b61-bdbf-779cd01ed37a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid",
+                "type": "string"
+            },
+            "name": "field51",
+            "designerId": "e4ca83d0-a1cc-4684-966e-f4cd60c21e8e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username",
+                "type": "string"
+            },
+            "name": "field71",
+            "designerId": "54f831de-0627-44f6-97f9-ede2afa4f90a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "linkphone",
+                "type": "string"
+            },
+            "name": "field52",
+            "designerId": "db202d29-da17-4007-b72a-be3fbed359d1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storageid",
+                "type": "string"
+            },
+            "name": "field",
+            "designerId": "cac609d8-9f73-43f0-b701-81ea3690a894"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storagename",
+                "type": "string"
+            },
+            "name": "field6",
+            "designerId": "64b04400-a3b8-4169-98d2-941ba7c69f75"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/shouxin/api/1.0/trgetmanlist';",
+                    "",
+                    "    /*",
+                    "        dutytime: '值班时间(预留)',",
+                    "        userid: '用户ID'",
+                    "    */",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 派工-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            userid: 'chendafu',",
+                    "            username: '陈大福',",
+                    "            linkphone: '15626188888',",
+                    "            storageid: '001',",
+                    "            storagename: '维保一组',",
+                    "        },",
+                    "        {",
+                    "            userid: 'lixiaoming',",
+                    "            username: '李小明',",
+                    "            linkphone: '13802942088',",
+                    "            storageid: '002',",
+                    "            storagename: '维保一组',",
+                    "        },",
+                    "    ]);",
+                    "",
+                    "        onSuccess(2);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "b6561a63-24f6-4c97-bea1-80bd9c2db2e9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "0b956c2f-b3c6-461b-82ab-57ad87e14a2b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "5639da8f-fe60-4a84-bf1e-e082f3281aaf"
+        }
+    ]
+}

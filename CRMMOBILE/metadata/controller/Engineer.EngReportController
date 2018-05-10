@@ -1,0 +1,76 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngReportController"
+    },
+    "name": "MyController",
+    "designerId": "31a157b6-2395-4dd9-835b-4c79fa0d3073",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#EngReport",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onEngReportShow",
+                "implHandler": [
+                    "// 热线受信报表",
+                    "loadMask.show();",
+                    "Ext.getCmp('EngReport_DvHotline').getStore().loadDat(loadMask.hide);",
+                    "",
+                    "// 保养计划报表",
+                    "loadMask.show();",
+                    "Ext.getCmp('EngReport_DvMaintain').getStore().loadDat(loadMask.hide);",
+                    "",
+                    "// 故障报告书报表",
+                    "loadMask.show();",
+                    "Ext.getCmp('EngReport_DvFault').getStore().loadDat(loadMask.hide);",
+                    "",
+                    "// 维保业绩报表",
+                    "loadMask.show();",
+                    "Ext.getCmp('EngReport_DvPerformance').getStore().loadDat(loadMask.hide);"
+                ],
+                "name": "show"
+            },
+            "name": "onEngReportShow",
+            "designerId": "b54d030f-6da3-468a-a3a5-4488386d19cb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#EngReport_ReturnButton",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onEngReport_ReturnButtonTap",
+                "implHandler": [
+                    "viewUtil.goLast();"
+                ],
+                "name": "tap"
+            },
+            "name": "onEngReport_ReturnButtonTap",
+            "designerId": "73b89f30-3417-4a1a-a2f7-33e55a1877cd"
+        }
+    ]
+}

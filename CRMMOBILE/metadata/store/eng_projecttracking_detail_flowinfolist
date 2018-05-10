@@ -1,0 +1,107 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_projecttracking_detail_flowinfolist",
+        "storeId": "eng_projecttracking_detail_flowinfolist"
+    },
+    "name": "MyStore",
+    "designerId": "e99cb780-9dcb-4723-9d8d-c0cab76d7a52",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowInfo"
+            },
+            "name": "field791",
+            "designerId": "ad86bfc7-aa57-4afe-af63-7cc44b8d7a20"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowuser"
+            },
+            "name": "field792",
+            "designerId": "7cf2b415-19d8-411b-80c9-4db95d7a2195"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowdate"
+            },
+            "name": "field793",
+            "designerId": "78bce602-5f7f-4a4f-adae-6ddc6c3b6151"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "todoTpl"
+            },
+            "name": "field809",
+            "designerId": "3e86e0d0-4941-4f18-bf7e-61ab469e1409"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(data.length>0){",
+                    "    for(var i=0;i<data.length;i++){",
+                    "        data[i].todoTpl = '<div style=\"float:left;\">'+",
+                    "            '<div style=\"line-height:18px\" class=\"liftnet-font-size12 \">'+",
+                    "            data[i].flowuser+'</div>'+",
+                    "            '<div style=\"line-height:18px\" class=\"liftnet-font-size12 \">'+",
+                    "            data[i].flowInfo+'</div>'+",
+                    "        '</div>'+",
+                    "        '<div style=\"float:right;\">'+",
+                    "        '<div style=\"line-height:18px\" class=\"liftnet-font-size12 \">'+",
+                    "        data[i].flowdate+'</div>'+",
+                    "        '</div>';",
+                    "",
+                    "    }",
+                    "    return data;",
+                    "}else{",
+                    "    var ds = [{",
+                    "        todoTpl : '<div style=\"height:68px;text-align:center;padding-top:25px;\" class=\"liftnet-font-size12 \">暂无数据!</div>'",
+                    "    }];",
+                    "    return ds;",
+                    "}"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "ff90eaf5-c80c-484a-bd28-4401c1c3e2a2"
+        }
+    ]
+}

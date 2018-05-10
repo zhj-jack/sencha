@@ -1,0 +1,153 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFirstCheckCheckUser",
+        "id": "EngFirstCheckCheckUser",
+        "layout": "vbox"
+    },
+    "name": "MyPanel21",
+    "designerId": "31cfc9e6-0457-4265-bd31-8c28cb61388f",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "检验人员"
+            },
+            "name": "MyToolbar11",
+            "designerId": "0bb35292-e510-4271-9c62-964f79575826",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFirstCheckCheckUser_BtnReturn",
+                        "text": ""
+                    },
+                    "name": "MyButton20",
+                    "designerId": "c1e52b29-eeec-4ba1-8d4d-2c81ff6fb527"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer10",
+                    "designerId": "04b77226-ecbe-4ccc-ac6e-aefa42e8ef72"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": false,
+                        "iconCls": "fa fa-check",
+                        "id": "EngFirstCheckCheckUser_BtnSave",
+                        "text": ""
+                    },
+                    "name": "MyButton82",
+                    "designerId": "40bfcb78-478b-480b-9128-aa7d19a75fbe"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disableSelection": true,
+                "id": "EngFirstCheckCheckUser_List",
+                "itemId": "EngFirstCheckCheckUser_List",
+                "layout|flex": 1,
+                "store": "eng_firstcheck_checkuser"
+            },
+            "name": "MyList15",
+            "designerId": "854c5491-a3ec-4ca8-a917-e52dea617daf",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-font-size14 liftnet-fontColor-darkGray\">{username}</div>",
+                            "<div class=\"liftnet-font-size14 liftnet-fontColor-gray\">{usertypename}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "b58c9eb8-5071-4e21-a25b-e23812e25abc"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button",
+                    "liftnet-button-one"
+                ],
+                "docked": "bottom"
+            },
+            "name": "MyPanel60",
+            "designerId": "05067fbc-8f5b-400d-9973-1c6c3cd138ce",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "x-buttonColor-white",
+                            "liftnet-no-border"
+                        ],
+                        "html": "<i class='fa fa-plus'></i>&nbsp;&nbsp;增加",
+                        "iconCls": null,
+                        "id": "EngFirstCheckCheckUser_BtnAdd",
+                        "itemId": "EngFirstCheckCheckUser_BtnAdd",
+                        "text": ""
+                    },
+                    "name": "MyButton81",
+                    "designerId": "f49bd675-feae-4b39-84da-4679a0ba5f42"
+                }
+            ]
+        }
+    ]
+}

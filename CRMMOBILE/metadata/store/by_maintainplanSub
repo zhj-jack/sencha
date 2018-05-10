@@ -1,0 +1,79 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "by_maintainplanSub",
+        "storeId": "by_maintainplanSub"
+    },
+    "name": "MyStore",
+    "designerId": "f3a4e3ea-783b-469f-aa29-9c667d4b6e3a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "code"
+            },
+            "name": "field10",
+            "designerId": "d566c305-c404-451d-b5db-48872d9c9002"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "info"
+            },
+            "name": "field12",
+            "designerId": "5026c7ea-4d4f-40a5-8199-5fc5ff716664"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "console.log(parm);",
+                    "",
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/byrw/api/1.0/bysjopration';",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.status);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "445c6915-7b71-4fa8-8228-caee21e55e9b"
+        }
+    ]
+}

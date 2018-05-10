@@ -1,0 +1,166 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_notice_todolist",
+        "storeId": "eng_notice_todolist"
+    },
+    "name": "eng_qualitycheck_todolist1",
+    "designerId": "4d09de6d-582c-4ee0-ab48-ef99d218e4a6",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = 'adapters/common/api/1.0/yujing';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('读取预警信息失败');",
+                    "            }else{",
+                    "                me.setData(ret.data);",
+                    "                onSuccess();",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('读取预警信息失败');",
+                    "        }",
+                    "        );",
+                    "//         function(ret) {",
+                    "//             me.setData(ret.data);",
+                    "//             onSuccess();",
+                    "//         },",
+                    "//     onFailure);",
+                    "} else {",
+                    "    var data = [",
+                    "        {  title:'到期年检电梯', coubtnum:'12',unitname:'台'},",
+                    "        {  title:'到期应收款项', coubtnum:'5' ,unitname:'项'},",
+                    "        {  title:'已开票未收款', coubtnum:'3' ,unitname:'项'},",
+                    "        {  title:'即将到期合同', coubtnum:'20',unitname:'份'},",
+                    "        {  title:'证件到期', coubtnum:'2',unitname:'份' },",
+                    "    ];",
+                    "    this.setData(data);",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "faf48870-8bfa-4036-a355-2901e40ff34f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "1251f375-f198-4d15-928b-d2eed1030250"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "ec2b92d1-b9d0-4de1-b825-304b206ad251"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "type"
+            },
+            "name": "field388",
+            "designerId": "07d2652d-b8ee-471d-97a6-0123498a4235"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title"
+            },
+            "name": "field398",
+            "designerId": "043530e7-4d3e-42e5-8428-3ba4964f0d2a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "coubtnum"
+            },
+            "name": "field390",
+            "designerId": "b24a48c1-2bf1-421a-98f5-dbdd8183e722"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitname"
+            },
+            "name": "field604",
+            "designerId": "adbb7c9f-3247-4217-aefe-52458f0e6d87"
+        }
+    ]
+}

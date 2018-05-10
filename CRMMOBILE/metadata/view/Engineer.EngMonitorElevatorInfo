@@ -1,0 +1,586 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngMonitorElevatorInfo",
+        "id": "EngMonitorElevatorInfo",
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "FaultAdd1",
+    "designerId": "5b6ccb54-3580-42bd-aa65-98feb1195bce",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "电梯信息"
+            },
+            "name": "MyToolbar4",
+            "designerId": "6ee14760-ecd2-44c9-a74d-38e0032747b9",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngMonitorElevatorInfo_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "31c1b076-7b92-4d81-935d-9264554daef3"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "height": "",
+                "id": "EngMonitorElevator_Form",
+                "layout|flex": 1,
+                "scrollable": true
+            },
+            "name": "MyFormPanel8",
+            "designerId": "b6527e7a-543e-47ef-80b1-1a464a47e0c6",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-font-center",
+                            "liftnet-con-top"
+                        ]
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "a332de67-591f-4c17-a3cb-40445cb6fd75",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-con-icon"
+                                ],
+                                "height": null,
+                                "src": "resources/images/con_icon03.png"
+                            },
+                            "name": "MyImg1",
+                            "designerId": "2a36840e-6729-469c-9a00-7d31eead23a1"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fontColor-green",
+                                    "liftnet-font-size24"
+                                ],
+                                "html": "乘客电梯",
+                                "id": "EngMonitorElevatorInfo_TypeName"
+                            },
+                            "name": "MyLabel",
+                            "designerId": "122bd166-cf95-4651-8ff2-c23395afdb17"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fontColor-gray",
+                                    "liftnet-font-size14"
+                                ],
+                                "html": "3010-440600-200408-4007",
+                                "id": "EngMonitorElevatorInfo_Prono"
+                            },
+                            "name": "MyLabel1",
+                            "designerId": "1a9a76af-85e8-4314-87e0-3286ed5d22ad"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-con-title"
+                        ]
+                    },
+                    "name": "MyPanel8",
+                    "designerId": "c5e686f7-dd8b-4629-9d41-28789faac15a",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "详细资料"
+                            },
+                            "name": "MyLabel11",
+                            "designerId": "7988789e-114b-4096-8f8f-26406b5ba1cc"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "首次使用日期",
+                        "labelWidth": "40%",
+                        "name": "firstuseliftdate",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "404a68b5-51a2-41c7-a551-87830d6d8fc1"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "电梯品牌",
+                        "name": "facname",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField18",
+                    "designerId": "71f31acc-506f-48a7-82ab-18f32cffdd36"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "电梯型号",
+                        "name": "elevatorname",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField19",
+                    "designerId": "99649ea8-9942-4f3a-8eb2-33eb8af49b91"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "层/站/门",
+                        "name": "fsd",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField20",
+                    "designerId": "87b3275c-1ef7-4efa-bb2e-9049436e3354"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "载重量",
+                        "name": "zzl",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField22",
+                    "designerId": "6ef66802-5a93-4467-aaa0-ca8ffb698415"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "额定速度",
+                        "labelWidth": "35%",
+                        "name": "speed",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField23",
+                    "designerId": "dccf434d-f692-4494-83d1-4039d7290055"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "提升高度",
+                        "name": "high",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField21",
+                    "designerId": "54b6b979-816b-4188-b67b-f74d773577e7"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "使用登记号",
+                        "labelWidth": "40%",
+                        "name": "equno",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField24",
+                    "designerId": "0b06207a-dd14-4cd4-82f2-67b8d8af21ef"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "出厂编号",
+                        "name": "elevatorno",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField25",
+                    "designerId": "85109d69-1e3e-484e-9c73-21dc58c3aff5"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "施工许可证",
+                        "labelWidth": "40%",
+                        "name": "allowno",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField27",
+                    "designerId": "58e4ec51-4d3c-4de1-be94-208adf18e8d0"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "用户单位",
+                        "name": "userunitid",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField74",
+                    "designerId": "d7c60c47-7592-41c1-804a-a3c7e66438a8"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "联系人",
+                        "name": "userlinkman",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField100",
+                    "designerId": "bdd003d6-74ec-4dd5-8b00-d6580c38b00c"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "联系人电话",
+                        "labelWidth": "40%",
+                        "name": "userlinkphone",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField101",
+                    "designerId": "858bc83b-3ed1-44b5-9341-51fdb62a22be"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "电梯使用地址",
+                        "labelWidth": "40%",
+                        "name": "eleuseaddress",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField102",
+                    "designerId": "4e105a28-23d2-4db4-909a-d02013b60b0a"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "梯号",
+                        "labelWidth": "40%",
+                        "name": "r3",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField103",
+                    "designerId": "9e154b87-dd5d-40e7-ba3f-04091e1f814c"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "电梯位置描述",
+                        "labelWidth": "40%",
+                        "name": "liftloaction",
+                        "readOnly": true
+                    },
+                    "name": "MyTextArea13",
+                    "designerId": "4fd74d70-0a97-41b1-b416-db1ef30c6de6"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "出厂日期",
+                        "labelWidth": "40%",
+                        "name": "leafacdate",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField105",
+                    "designerId": "207acb0c-404c-4012-8899-5b6699767446"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "电梯年检日期",
+                        "labelWidth": "40%",
+                        "name": "r7",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField106",
+                    "designerId": "767d89e0-47ea-4cf3-8825-dc14597285b0"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "电梯下次年检日期",
+                        "labelWidth": "50%",
+                        "name": "r8",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField107",
+                    "designerId": "8cfe7c4c-4a3f-406c-854e-55ceac069c15"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "限速器年检日期",
+                        "labelWidth": "50%",
+                        "name": "speedcheckdate",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField108",
+                    "designerId": "fa2f52b8-3b54-4b60-bfab-d778ea7a970e"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "clearIcon": false,
+                        "designer|displayName": null,
+                        "label": "限速器下次年检日期",
+                        "labelWidth": "55%",
+                        "name": "speednextcheckdate",
+                        "placeHolder": null,
+                        "readOnly": true,
+                        "value": null
+                    },
+                    "name": "MyTextField109",
+                    "designerId": "6fcc0c1d-0d49-4d55-be88-afddab63c6be"
+                }
+            ]
+        }
+    ]
+}

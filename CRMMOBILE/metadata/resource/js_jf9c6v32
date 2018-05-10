@@ -1,0 +1,16 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_jf9c6v32",
+        "url": "js/gzunicorn.js",
+        "x-compile": true
+    },
+    "name": "js1",
+    "designerId": "02cb7e24-82a5-4fd3-bc33-b49851b9fb1b"
+}

@@ -1,0 +1,111 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_contracttype",
+        "storeId": "eng_contracttype"
+    },
+    "name": "eng_qualitycheck_todolist1",
+    "designerId": "46577a56-581b-4b86-bd5c-56476a5a80f0",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "this.setData([",
+                    "        { contracttypename:'保养合同', contracttypeid:'1', color:'liftnet-fontColor-darkGray'  },",
+                    "        { contracttypename:'保险合同', contracttypeid:'2', color:'liftnet-fontColor-darkGray'},",
+                    "//         { contracttypename:'维修合同', contracttypeid:'3', color:'liftnet-fontColor-gray'},",
+                    "        ]);",
+                    "    onSuccess();",
+                    "// if(global.isWorklight()) {",
+                    "//     // adapter取数",
+                    "//     var url = '/adapters/quality/api/1.0/';",
+                    "//     var userid = global.getUserId();",
+                    "//     var adapterParm = {userid:userid};",
+                    "",
+                    "//     callPostAdapter(",
+                    "//         url, adapterParm,",
+                    "//         function(ret) {",
+                    "//             if(ret.status.code!=200){",
+                    "//                 onFailure('读取合同分类列表失败');",
+                    "//             }else{",
+                    "//                 me.setData(ret.data);",
+                    "//                 onSuccess();",
+                    "//             }",
+                    "//         },",
+                    "//         function() {",
+                    "//             onFailure('读取合同分类列表失败');",
+                    "//         }",
+                    "//         );",
+                    "// } else {",
+                    "//     this.setData([",
+                    "//         { contracttypename:'保养合同', contracttypeid:'1' },",
+                    "//         { contracttypename:'保险合同', contracttypeid:'2' },",
+                    "// //         { contracttypename:'XX合同', contracttypeid:'3' },",
+                    "//         ]);",
+                    "",
+                    "//     onSuccess();",
+                    "// }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "029eb3e3-693d-499c-86ba-6842c73e84c1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contracttypename"
+            },
+            "name": "field388",
+            "designerId": "3008b3a4-ca8d-4b4c-b199-23875012158c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contracttypeid"
+            },
+            "name": "field398",
+            "designerId": "32e6e4c0-6278-411e-b33b-dd091677d303"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "color"
+            },
+            "name": "field734",
+            "designerId": "ea65c35c-392c-4ad6-ac42-edc353097efb"
+        }
+    ]
+}

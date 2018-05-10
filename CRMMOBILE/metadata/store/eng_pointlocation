@@ -1,0 +1,201 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_pointlocation",
+        "storeId": "eng_pointlocation"
+    },
+    "name": "eng_userlocation1",
+    "designerId": "6c5fda59-6a88-4eca-bf03-ccd2fb789e32",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storagename"
+            },
+            "name": "field576",
+            "designerId": "34a233f1-b4b6-4f55-b45e-6970e78acba7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "maintainhead"
+            },
+            "name": "field577",
+            "designerId": "6b79692f-a27d-447a-860f-732ab44857fe"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Maintenanceman"
+            },
+            "name": "field584",
+            "designerId": "306589cb-11a4-4ee5-9b06-4f5d0f745fe4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "area"
+            },
+            "name": "field603",
+            "designerId": "03dd7c58-852c-40cc-91e9-fca7f455380a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lon"
+            },
+            "name": "field578",
+            "designerId": "58129709-a594-43fb-a1bb-61caa356843d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lat"
+            },
+            "name": "field593",
+            "designerId": "ad75a41c-4c12-4fd3-83d4-47c6ba2256d6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "var adapterparm = {",
+                    "    userid: global.getUserId(),",
+                    "    searchker:parm.searchker,",
+                    "    lon:parm.lon,",
+                    "    lat:parm.lat,",
+                    "    rangradius:parm.rangradius",
+                    "};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/zddlwzcx';",
+                    "    callPostAdapter(",
+                    "        url, adapterparm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                if(parm.searchker!==''){",
+                    "                    onFailure('读取驻点位置信息失败');",
+                    "                }else{",
+                    "                    onFailure('搜索驻点位置信息失败');",
+                    "                }",
+                    "",
+                    "            }else{",
+                    "                me.setData(ret.data);",
+                    "                onSuccess(me.getData());",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            if(parm.searchker!==''){",
+                    "                    onFailure('读取驻点位置信息失败');",
+                    "                }else{",
+                    "                    onFailure('搜索驻点位置信息失败');",
+                    "                }",
+                    "        }",
+                    "        );",
+                    "} else {",
+                    "",
+                    "    // 获取人员位置列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            storagename: 'pointname1',",
+                    "            maintainhead: 'maintainhead1',",
+                    "            Maintenanceman:'Maintenanceman1',",
+                    "            lon:'113.3185990000',",
+                    "            lat:'23.1144410000',",
+                    "        },",
+                    "        {",
+                    "            storagename: 'pointname2',",
+                    "            maintainhead: 'maintainhead2',",
+                    "            Maintenanceman:'Maintenanceman2',",
+                    "            lon:'113.3228900000',",
+                    "            lat:'23.1078480000',",
+                    "        }",
+                    "",
+                    "",
+                    "",
+                    "    ]);",
+                    "        onSuccess(this.getData());",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "506abc8f-9918-4aa4-a2b8-c814d3deca74"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "//搜索 保养站/班组名称、保养站长/班组长姓名、负责区域",
+                    "this.clearFilter();",
+                    "        if(parm!=='') {",
+                    "            this.filterBy(function(item) {",
+                    "                var s = item.get(\"storagename\") + ' ' +",
+                    "                    item.get(\"maintainhead\")+' '+",
+                    "                    item.get(\"area\");",
+                    "                return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "            });",
+                    "        }"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "503c7a26-e56c-43ff-a5e8-77728d0943ae"
+        }
+    ]
+}

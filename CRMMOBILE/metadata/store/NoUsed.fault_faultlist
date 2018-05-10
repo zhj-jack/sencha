@@ -1,0 +1,327 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.fault_faultlist",
+        "storeId": "NoUsed.fault_faultlist"
+    },
+    "name": "MyStore",
+    "designerId": "0bf06761-92d2-43e5-bdcd-ff2ca40ecc62",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rpno",
+                "type": "string"
+            },
+            "name": "field18",
+            "designerId": "4a205abf-12a8-4240-959f-aec55c87c6b6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dtid",
+                "type": "string"
+            },
+            "name": "field330",
+            "designerId": "0c475abc-899e-4c4c-8ea0-26d8336bf7dc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitname",
+                "type": "string"
+            },
+            "name": "field331",
+            "designerId": "caa428a0-32b6-42e8-bcc4-149bd258cae3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr",
+                "type": "string"
+            },
+            "name": "field21",
+            "designerId": "5d1c0215-24db-461f-bf74-5b416506ba9b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "brktime",
+                "type": "string"
+            },
+            "name": "field332",
+            "designerId": "0d283e48-f9a8-4a0e-8d97-800c2f1b9ac4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "faulttypename",
+                "type": "string"
+            },
+            "name": "field333",
+            "designerId": "3e385957-0a88-4c5f-935d-4167b55abfce"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "procesdesc",
+                "type": "string"
+            },
+            "name": "field334",
+            "designerId": "204b171b-c78c-462d-a187-3aa372ff35e4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "causeanalysis",
+                "type": "string"
+            },
+            "name": "field335",
+            "designerId": "143093c5-db8a-4b9a-a27d-11e6e25a0dad"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "operuser",
+                "type": "string"
+            },
+            "name": "field336",
+            "designerId": "6d3a35b8-18f4-4828-856c-e541301bd7ec"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rpuser",
+                "type": "string"
+            },
+            "name": "field22",
+            "designerId": "26d00ec9-7d76-49cd-a06b-7958f3a5d104"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rptime",
+                "type": "string"
+            },
+            "name": "field337",
+            "designerId": "541fbe8e-44d0-4fa7-a28d-5401048033df"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "clientscore",
+                "type": "string"
+            },
+            "name": "field338",
+            "designerId": "f1a3e066-fa02-4a8b-9704-9905a3e420d4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "url",
+                "type": "string"
+            },
+            "name": "field339",
+            "designerId": "88b63955-de92-4e92-99e5-e13411d9f905"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "color",
+                "type": "string"
+            },
+            "name": "field20",
+            "designerId": "091e010a-457a-4162-a3cb-d8f05bea0b27"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "icon",
+                "type": "string"
+            },
+            "name": "field19",
+            "designerId": "70291abe-c4c3-4f23-9441-a4a19dc18a7b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "this.setData([]);",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/fault/api/1.0/faultlist';",
+                    "    var adapterParm = {userid: parm.userid, state: parm.state};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            var d = ret.data;",
+                    "            for(var i=0;i<d.length; i++) {",
+                    "            }",
+                    "",
+                    "            me.setData(d);",
+                    "            onSuccess(d.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 故障报告书列表-演示数据",
+                    "    // icon : 标题的图标；",
+                    "    // color : 标题的颜色；",
+                    "    this.setData([",
+                    "        {",
+                    "            rpno: 'TRT2015071950001',",
+                    "            icon: '<i class=\"ln ln-message2\"></i> ',",
+                    "            color: 'liftnet-fontColor-gray',",
+                    "            rptime: '2015-07-14',",
+                    "            rpuser: '陈建平'",
+                    "        },",
+                    "    ]);",
+                    "",
+                    "    onSuccess(1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "84d566c1-1cfc-4e0a-a6ef-69104cad59a1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "ee2a6f9b-57c4-4329-98fb-d066041017c4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "if(parm!=='') {",
+                    "    this.filterBy(function(item) {",
+                    "        var s = item.get(\"rpno\") + ' ' + item.get(\"rpuser\");",
+                    "        return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "87bbc7c0-5f2e-41e8-9289-def493c10012"
+        }
+    ]
+}

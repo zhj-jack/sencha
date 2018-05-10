@@ -1,0 +1,1064 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFaultReport",
+        "id": "EngFaultReport",
+        "layout": "vbox"
+    },
+    "name": "FaultCredit1",
+    "designerId": "1d968e3e-74a0-4a2b-bc74-20e6d04d0623",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "id": "EngFaultReport_Tbar",
+                "title": "故障报告表"
+            },
+            "name": "MyToolbar4",
+            "designerId": "9397fa1b-56bc-4e98-881e-42a249dc0831",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngFaultReport_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton2",
+                    "designerId": "9c868b45-a2a5-4a8e-bc84-b9db34c94bc5"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer3",
+                    "designerId": "da735521-2857-4483-bc25-5329072302f7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-tabbar-two"
+                ],
+                "layout|flex": 1
+            },
+            "name": "MyTabPanel",
+            "designerId": "ff55afcc-6be0-4e9b-8aa9-ecaa65e00d2e",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox",
+                        "title": "故障报告"
+                    },
+                    "name": "MyContainer3",
+                    "designerId": "fdb82c81-10e3-417e-8a1c-25e1e8bb4f03",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-form-info",
+                                    "liftnet-font-size14",
+                                    "liftnet-lineHeight34"
+                                ],
+                                "id": "form_sx_reportdetail",
+                                "layout|flex": 1
+                            },
+                            "name": "MyFormPanel1",
+                            "designerId": "36958956-d365-44f2-a3b3-dca0b3a21426",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "用户联系人",
+                                        "name": "unitlinker"
+                                    },
+                                    "name": "MyHiddenField20",
+                                    "designerId": "0237b39d-54dd-402e-ad74-f6611ec1c4b6"
+                                },
+                                {
+                                    "type": "Ext.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "联系电话",
+                                        "name": "unitlinkephone"
+                                    },
+                                    "name": "MyHiddenField21",
+                                    "designerId": "7e5cb959-7e44-4184-9607-9fa05f777779"
+                                },
+                                {
+                                    "type": "Ext.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "报告时间",
+                                        "name": "rptime"
+                                    },
+                                    "name": "MyHiddenField25",
+                                    "designerId": "7fa9ab6b-747f-4c3b-9b36-1e053e71eaa1"
+                                },
+                                {
+                                    "type": "Ext.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "创建人ID",
+                                        "name": "creator"
+                                    },
+                                    "name": "MyHiddenField26",
+                                    "designerId": "8bbec3f1-4859-4e67-8955-ee2c5b3d9361"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "designer|displayName": null,
+                                        "hidden": true,
+                                        "label": "受信编号",
+                                        "labelWidth": "40%",
+                                        "name": "trno",
+                                        "placeHolder": null,
+                                        "readOnly": true,
+                                        "value": null
+                                    },
+                                    "name": "MyTextField81",
+                                    "designerId": "21e072d0-6371-480f-8555-16758a11e272"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "designer|displayName": null,
+                                        "hidden": true,
+                                        "label": "报告人",
+                                        "labelWidth": "40%",
+                                        "name": "rpuser",
+                                        "placeHolder": null,
+                                        "readOnly": true,
+                                        "value": null
+                                    },
+                                    "name": "MyTextField83",
+                                    "designerId": "99ad5c4f-1d6c-45eb-816f-3fd41393699f"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "designer|displayName": null,
+                                        "id": "report_rpno",
+                                        "itemId": "report_rpno",
+                                        "label": "故障报告编号",
+                                        "labelWidth": "40%",
+                                        "name": "rpno",
+                                        "placeHolder": "故障报告编号",
+                                        "readOnly": true,
+                                        "value": null
+                                    },
+                                    "name": "MyTextField79",
+                                    "designerId": "78943412-09b9-4106-be45-a2390a372c0c"
+                                },
+                                {
+                                    "type": "Ext.field.Select",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "x-field-picker"
+                                        ],
+                                        "displayField": "storagename",
+                                        "id": "report_createbydept",
+                                        "itemId": "report_createbydept",
+                                        "label": "所属部门",
+                                        "labelWidth": "40%",
+                                        "name": "createbydept",
+                                        "store": "common_getdeptlist",
+                                        "valueField": "storageid"
+                                    },
+                                    "name": "MySelectField4",
+                                    "designerId": "5d8be3d3-c0e8-4fa6-be09-525daadcd85c"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "designer|displayName": null,
+                                        "id": "report_projectname",
+                                        "itemId": "report_projectname",
+                                        "label": "项目名称",
+                                        "labelWidth": "40%",
+                                        "name": "projectname",
+                                        "placeHolder": "项目名称",
+                                        "readOnly": true,
+                                        "value": null
+                                    },
+                                    "name": "MyTextField3",
+                                    "designerId": "300cb4f4-a0e9-4e5e-a6c9-16ec6b158e7f"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "designer|displayName": null,
+                                        "id": "report_unitaddress",
+                                        "itemId": "report_unitaddress",
+                                        "label": "项目地址",
+                                        "labelWidth": "40%",
+                                        "name": "unitaddress",
+                                        "placeHolder": "项目地址",
+                                        "readOnly": true,
+                                        "value": null
+                                    },
+                                    "name": "MyTextField28",
+                                    "designerId": "63545638-2ba1-4a76-b506-1bd3fba955af"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": null,
+                                        "id": "report_incomingman",
+                                        "itemId": "report_incomingman",
+                                        "label": "报修人",
+                                        "labelWidth": "40%",
+                                        "name": "incomingman",
+                                        "placeHolder": "报修人",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField10",
+                                    "designerId": "5ea017bd-a15e-453b-aca1-2c69f4a136e2"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "report_incomingphone",
+                                        "itemId": "report_incomingphone",
+                                        "label": "电话",
+                                        "name": "incomingphone",
+                                        "placeHolder": "电话",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField85",
+                                    "designerId": "36b53702-8bb9-4aab-bcd9-4cf989b2bcbc"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "x-field-search"
+                                        ],
+                                        "id": null,
+                                        "itemId": "report_prono",
+                                        "label": "电梯注册码",
+                                        "labelWidth": "40%",
+                                        "name": "prono",
+                                        "placeHolder": "请选择或输入电梯注册码",
+                                        "readOnly": true,
+                                        "required": true
+                                    },
+                                    "name": "MyTextField86",
+                                    "designerId": "d151661c-b81d-44b5-8440-868006fe1f32",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onReport_pronoTap",
+                                                "implHandler": [
+                                                    "var me = this;",
+                                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                ],
+                                                "name": "initialize"
+                                            },
+                                            "name": "onReport_pronoTap",
+                                            "designerId": "10fdb937-01f9-44ae-80b7-1fa1aadd7f75"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Toggle",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "designer|displayName": null,
+                                        "id": "report_istrap",
+                                        "itemId": "report_istrap",
+                                        "label": "是否困人",
+                                        "labelWidth": "40%",
+                                        "maxValueCls": "x-toggle-on-red",
+                                        "minValueCls": "x-toggle-off-green",
+                                        "name": "istrap"
+                                    },
+                                    "name": "MyToggleField",
+                                    "designerId": "ece390cd-80ae-4ff8-b0df-6f35c6f11255"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "cls": [
+                                            "x-field-datetime"
+                                        ],
+                                        "designer|displayName": null,
+                                        "id": "report_traptime",
+                                        "itemId": "sxreport_traptime",
+                                        "label": "困人时间",
+                                        "labelWidth": "40%",
+                                        "name": "traptime",
+                                        "placeHolder": "请选择困人时间",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField16",
+                                    "designerId": "c0bce6b7-b46e-47b9-b7e2-325c7da0bb9c",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onSxreport_traptimeTap",
+                                                "implHandler": [
+                                                    "var me = this;",
+                                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                ],
+                                                "name": "initialize"
+                                            },
+                                            "name": "onSxreport_traptimeTap",
+                                            "designerId": "ff3b0293-4145-49c2-8865-f633515a0e1a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "x-field-search"
+                                        ],
+                                        "id": null,
+                                        "itemId": "report_repairman",
+                                        "label": "维修人员",
+                                        "labelWidth": "40%",
+                                        "name": "repairman",
+                                        "placeHolder": "请选择维修人员",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField87",
+                                    "designerId": "ba2599f5-4140-4b62-a438-7c56b701c5cf",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onReport_repairmanTap",
+                                                "implHandler": [
+                                                    "var me = this;",
+                                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                ],
+                                                "name": "initialize"
+                                            },
+                                            "name": "onReport_repairmanTap",
+                                            "designerId": "1d570520-e01e-4f14-8763-58384f11aa1b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "name": "repairmandept"
+                                    },
+                                    "name": "MyHiddenField22",
+                                    "designerId": "d2b25138-bbff-4660-b0a5-bdb6008fc09d"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "cls": [
+                                            "x-field-datetime"
+                                        ],
+                                        "designer|displayName": null,
+                                        "id": "report_accepttime",
+                                        "itemId": "report_accepttime",
+                                        "label": "接收时间",
+                                        "labelWidth": "40%",
+                                        "name": "accepttime",
+                                        "placeHolder": "请选择接收时间",
+                                        "readOnly": true,
+                                        "required": true,
+                                        "value": null
+                                    },
+                                    "name": "MyTextField14",
+                                    "designerId": "90df211f-f21c-498f-8a0f-8c89eac6cf3e",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEngFaultReport_brktimeInitialize",
+                                                "implHandler": [
+                                                    "var me = this;",
+                                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                ],
+                                                "name": "initialize"
+                                            },
+                                            "name": "onEngFaultReport_brktimeInitialize",
+                                            "designerId": "34757b52-ffa3-40c0-bb92-b2505fd901dd"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "x-field-datetime"
+                                        ],
+                                        "id": "report_setouttime",
+                                        "itemId": "sxreport_setouttime",
+                                        "label": "出发时间",
+                                        "labelWidth": "40%",
+                                        "name": "setouttime",
+                                        "placeHolder": "请选择出发时间",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField74",
+                                    "designerId": "f4286fe8-bc43-4472-8f2e-ae6a67e464d0",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onsxreport_setouttimeTap",
+                                                "implHandler": [
+                                                    "var me = this;",
+                                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                ],
+                                                "name": "initialize"
+                                            },
+                                            "name": "onsxreport_setouttimeTap",
+                                            "designerId": "daa69444-7b4a-4646-85b9-185fd3d9e970"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "cls": [
+                                            "x-field-datetime"
+                                        ],
+                                        "designer|displayName": null,
+                                        "id": "report_reachtime",
+                                        "itemId": "sxreport_reachtime",
+                                        "label": "到场时间",
+                                        "labelWidth": "40%",
+                                        "name": "reachtime",
+                                        "placeHolder": "请选择到场时间",
+                                        "readOnly": true,
+                                        "value": null
+                                    },
+                                    "name": "MyTextField27",
+                                    "designerId": "fabcbfca-f3c9-46da-bcce-7b25872c9919",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onSxreport_reachtimeTap",
+                                                "implHandler": [
+                                                    "var me = this;",
+                                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                ],
+                                                "name": "initialize"
+                                            },
+                                            "name": "onSxreport_reachtimeTap",
+                                            "designerId": "614ac61d-307e-4c1c-a68e-8bf0a4f35231"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "cls": [
+                                            "x-field-datetime"
+                                        ],
+                                        "designer|displayName": null,
+                                        "id": "report_finishtime",
+                                        "itemId": "sxreport_finishtime",
+                                        "label": "完成时间",
+                                        "labelWidth": "40%",
+                                        "name": "finishtime",
+                                        "placeHolder": "请选择完成时间",
+                                        "readOnly": true,
+                                        "required": true,
+                                        "value": null
+                                    },
+                                    "name": "MyTextField6",
+                                    "designerId": "78c5b4ed-5482-4566-b16c-037b73636119",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onSxreport_finishtimeInitialize",
+                                                "implHandler": [
+                                                    "var me = this;",
+                                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                ],
+                                                "name": "initialize"
+                                            },
+                                            "name": "onSxreport_finishtimeInitialize",
+                                            "designerId": "6bbb83e6-d1f1-470d-a795-9825acf429f3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "report_sitecondition",
+                                        "itemId": "report_sitecondition",
+                                        "label": "现场状态",
+                                        "name": "sitecondition",
+                                        "readOnly": false
+                                    },
+                                    "name": "MyTextArea7",
+                                    "designerId": "7cbecc32-0dca-4a23-a7f3-0190e7f085a2"
+                                },
+                                {
+                                    "type": "Ext.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "report_surveyproject",
+                                        "itemId": "report_surveyproject",
+                                        "label": "调查项目",
+                                        "name": "surveyproject",
+                                        "readOnly": false
+                                    },
+                                    "name": "MyTextArea8",
+                                    "designerId": "28c7b7a6-26df-4e5f-aca6-79e6f75d3eff"
+                                },
+                                {
+                                    "type": "Ext.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "x-field-search"
+                                        ],
+                                        "designer|displayName": null,
+                                        "hidden": null,
+                                        "id": "report_reason",
+                                        "itemId": "SXreport_reason",
+                                        "label": "故障原因",
+                                        "labelWidth": "40%",
+                                        "name": "reasonStr",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextArea15",
+                                    "designerId": "7be640c9-d3e0-40eb-9bde-40d3982f3a95",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onReport_reasonTap",
+                                                "implHandler": [
+                                                    "var me = this;",
+                                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                ],
+                                                "name": "initialize"
+                                            },
+                                            "name": "onReport_reasonTap",
+                                            "designerId": "647a6cf5-52e2-4794-bcf2-62f5faecd26b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "report_reasonStr",
+                                        "itemId": "report_reasonStr",
+                                        "name": "reason"
+                                    },
+                                    "name": "MyHiddenField5",
+                                    "designerId": "63579752-3f61-401d-8b2f-399d38d31801"
+                                },
+                                {
+                                    "type": "Ext.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearIcon": false,
+                                        "cls": [
+                                            "x-field-search"
+                                        ],
+                                        "designer|displayName": null,
+                                        "id": "report_analysis",
+                                        "itemId": "SXreport_analysis",
+                                        "label": "原因分析",
+                                        "labelWidth": "40%",
+                                        "maxLength": null,
+                                        "name": "analysis",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextArea16",
+                                    "designerId": "e80056d8-0982-416f-bb89-1c350172996a",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onreport_analysisTap",
+                                                "implHandler": [
+                                                    "var me = this;",
+                                                    "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                ],
+                                                "name": "initialize"
+                                            },
+                                            "name": "onreport_analysisTap",
+                                            "designerId": "7fc7bac4-40fc-4bf2-9983-22f08a7525ed"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "report_analysisStr",
+                                        "itemId": "report_analysisStr"
+                                    },
+                                    "name": "MyHiddenField23",
+                                    "designerId": "ccfd838f-ed72-48d1-9bd3-a1ad529400e0"
+                                },
+                                {
+                                    "type": "Ext.field.Select",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "x-field-picker"
+                                        ],
+                                        "designer|displayName": null,
+                                        "id": "report_faultproperty",
+                                        "itemId": "report_faultproperty",
+                                        "label": "故障性质",
+                                        "labelWidth": "40%",
+                                        "name": "faultproperty",
+                                        "options": [
+                                            "[",
+                                            "    {text:'配件不良',value:'0'},",
+                                            "    {text:'公事不良',value:'1'},",
+                                            "    {text:'保养不良',value:'2'},",
+                                            "    {text:'使用不良',value:'3'},",
+                                            "    {text:'业主原因',value:'4'},",
+                                            "    {text:'原因不明',value:'5'},",
+                                            "    {text:'不可抗力',value:'6'},",
+                                            "    {text:'其他',value:'7'}",
+                                            "",
+                                            "]"
+                                        ],
+                                        "readOnly": false
+                                    },
+                                    "name": "MySelectField",
+                                    "designerId": "192b0b98-7696-4ae8-b4a3-87e54fe60214"
+                                },
+                                {
+                                    "type": "Ext.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "id": "report_remark",
+                                        "itemId": "report_remark",
+                                        "label": "审核原因",
+                                        "name": "remark"
+                                    },
+                                    "name": "MyTextArea6",
+                                    "designerId": "cd61bf3f-728e-437c-ac23-ec35b0c138fd"
+                                },
+                                {
+                                    "type": "Ext.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "name": "partslist"
+                                    },
+                                    "name": "MyHiddenField",
+                                    "designerId": "0043bd5a-0ed7-4df0-95b6-147ec214ca29"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-button",
+                                    "liftnet-button-three"
+                                ],
+                                "docked": null,
+                                "height": null,
+                                "id": "EngFaultReport_PnlOperation",
+                                "layout": "hbox"
+                            },
+                            "name": "MyPanel7",
+                            "designerId": "fbf57f58-cc94-47ee-8c04-17840c9a5af7",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": null,
+                                        "html": null,
+                                        "id": "EngFaultReport_Btn1",
+                                        "itemId": "EngFaultReport_Btn1",
+                                        "layout|flex": 1,
+                                        "text": "保存"
+                                    },
+                                    "name": "MyButton5",
+                                    "designerId": "b4e7fcfa-59f7-4fde-97a3-8ad669eed539"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": null,
+                                        "id": "EngFaultReport_Btn2",
+                                        "itemId": "EngFaultReport_Btn2",
+                                        "layout|flex": 1,
+                                        "text": "提交"
+                                    },
+                                    "name": "MyButton10",
+                                    "designerId": "72eea1e1-fa6b-40bd-ad6d-1856ebabe842"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": null,
+                        "layout": "vbox",
+                        "scrollable": null,
+                        "title": "交换件"
+                    },
+                    "name": "MyContainer14",
+                    "designerId": "0b77c1ff-aed1-4e73-933c-d85306dad339",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-button"
+                                ],
+                                "docked": "bottom",
+                                "height": null,
+                                "id": "EngFaultReportParts_PnlOperation",
+                                "layout": "hbox"
+                            },
+                            "name": "MyPanel",
+                            "designerId": "ac8ff776-96bb-4ae4-b6c4-0ed0ae963a4a",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-no-border",
+                                            "x-buttonColor-white"
+                                        ],
+                                        "iconCls": null,
+                                        "id": "EngFaultReport_btnAdd",
+                                        "layout|flex": 1,
+                                        "text": "<i class='fa fa-plus'></i>&nbsp;&nbsp;增加"
+                                    },
+                                    "name": "MyButton22",
+                                    "designerId": "7e348fa2-8019-47d7-8bf2-0da3293dd39e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "data": null,
+                                "disableSelection": true,
+                                "id": "EngFaultReport_ListParts",
+                                "itemId": "EngFaultReport_ListParts",
+                                "layout|flex": 1,
+                                "pressedCls": " ",
+                                "scrollable": null,
+                                "store": "sx_reportparts"
+                            },
+                            "name": "MyList10",
+                            "designerId": "c2b7e871-ee7b-48da-bb9d-f4897631b179",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "scrollable",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class=\"liftnet-fault-staffList\">",
+                                            "\t<div class=\"liftnet-fault-staffList-left liftnet-fontColor-darkGray\">{materialsname}</div>",
+                                            "\t<div class=\"liftnet-fault-staffList-right liftnet-fontColor-gray\">{materialsnum}</div>",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "c18cb7cc-3234-473e-8713-7af9c6732a7d"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

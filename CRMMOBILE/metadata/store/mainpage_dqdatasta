@@ -1,0 +1,215 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mainpage_dqdatasta",
+        "storeId": "mainpage_dqdatasta"
+    },
+    "name": "mainpage_shdatalist1",
+    "designerId": "8fbbbd62-1899-4bfd-8d76-6b5d694007c7",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "type": "string"
+            },
+            "name": "field79",
+            "designerId": "ea000298-c77d-48ae-aca6-2076d593d56a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "deadlinecount",
+                "type": "string"
+            },
+            "name": "field78",
+            "designerId": "823aa5fa-a2d6-4736-b887-c44f427ec4d0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "deadlinedate",
+                "type": "string"
+            },
+            "name": "field92",
+            "designerId": "a28c9c18-deb3-43fd-8868-048c219427ca"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleIcon",
+                "type": "string"
+            },
+            "name": "field195",
+            "designerId": "7344b8b7-1615-4b4a-94d8-96fc602b860b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitname",
+                "type": "string"
+            },
+            "name": "field197",
+            "designerId": "ddac9014-83a5-43a3-9a27-b30ef68df02d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cross",
+                "type": "string"
+            },
+            "name": "field196",
+            "designerId": "4ad8de12-e29f-4a31-ab4d-c85b725f0e81"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/mainpage/api/1.0/dqdatasta';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 首页-到期提醒-演示数据",
+                    "    // 接口无提供字段：cross",
+                    "    this.setData([",
+                    "    {",
+                    "        title: '到期应收电梯',",
+                    "        deadlinecount: '12',",
+                    "        titleIcon: 'ln ln-dollar',",
+                    "        deadlinedate: '',",
+                    "        cross: '30',",
+                    "        unitname: '台'",
+                    "    },",
+                    "    {",
+                    "        title: '即将到期合同',",
+                    "        deadlinecount: '5',",
+                    "        titleIcon: 'ln ln-contract',",
+                    "        deadlinedate: '',",
+                    "        cross: '50',",
+                    "        unitname: '份'",
+                    "    },",
+                    "    {",
+                    "        title: '本月年检电梯',",
+                    "        deadlinecount: '118',",
+                    "        titleIcon: 'ln ln-maintain',",
+                    "        deadlinedate: '',",
+                    "        cross: '65',",
+                    "        unitname: '台'",
+                    "    },",
+                    "    {",
+                    "        title: '操作证到期人数',",
+                    "        deadlinecount: '12',",
+                    "        titleIcon: 'ln ln-certificate',",
+                    "        deadlinedate: '',",
+                    "        cross: '20',",
+                    "        unitname: '人'",
+                    "    },",
+                    "    ]);",
+                    "",
+                    "    onSuccess(4);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "8e851df3-735f-426c-a469-f4961d14aa8b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "29e96ac3-a7de-4e45-8c7a-13e7b2ca1e2e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "a6e24355-64b7-4db8-94f1-1b8aa9be38ea"
+        }
+    ]
+}

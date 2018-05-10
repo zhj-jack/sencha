@@ -1,0 +1,1412 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngMaintainPlanDetail",
+        "id": "EngMaintainPlan",
+        "layout": "vbox"
+    },
+    "name": "MyPanel",
+    "designerId": "a5d4c92a-e6b5-44da-90cd-0443c79cb212",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "id": "EngMaintainPlan_Toolbar",
+                "title": "保养计划"
+            },
+            "name": "MyToolbar",
+            "designerId": "983a3854-13bd-4b18-8791-4187421449fd",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "itemId": "EngMaintainTask_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton",
+                    "designerId": "d6b243e2-21ce-46eb-ad3c-57aff8c0dba2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-tabbar-two"
+                ],
+                "container|animation": "slide",
+                "id": "EngMaintainPlan_MTabPanel",
+                "layout|flex": 1
+            },
+            "name": "MyTabPanel1",
+            "designerId": "64e730df-d92e-44a5-8405-26fe97b07bee",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox",
+                        "title": "任务信息"
+                    },
+                    "name": "MyContainer",
+                    "designerId": "8ab17137-55bf-4b42-9749-423524278146",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-form-info",
+                                    "liftnet-font-size14",
+                                    "liftnet-lineHeight34"
+                                ],
+                                "id": "form_by_maintainplan1",
+                                "layout|flex": 1
+                            },
+                            "name": "MyFormPanel",
+                            "designerId": "7d7a1be5-e442-4e1d-b56a-058071c3fdb2",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "项目名称",
+                                        "labelWidth": "40%",
+                                        "name": "projectname",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField14",
+                                    "designerId": "ecb0e1d3-4b2f-4074-bd7d-c38b448f6179"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "项目地址",
+                                        "labelWidth": "40%",
+                                        "name": "projectaddress",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField15",
+                                    "designerId": "d4d286de-e371-4c26-b2ed-14b04528f02f"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "注册码",
+                                        "labelWidth": "40%",
+                                        "name": "prodno",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField16",
+                                    "designerId": "613cc72f-6959-4ca8-b8fe-df976aa01eab"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "梯号",
+                                        "labelWidth": "40%",
+                                        "name": "liftno",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField28",
+                                    "designerId": "7fe128b4-208b-4138-8651-d436cac2f203"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "层站门",
+                                        "labelWidth": "40%",
+                                        "name": "fsd",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField30",
+                                    "designerId": "5d33c23a-53d2-489d-bc2c-d179798f4de4"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "保养开始日期",
+                                        "labelWidth": "40%",
+                                        "name": "startdate",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField36",
+                                    "designerId": "f0591d1c-8224-441f-b915-d66c176d54f5"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "保养结束日期",
+                                        "labelWidth": "40%",
+                                        "name": "enddate",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField38",
+                                    "designerId": "7bc7fef2-b1e2-4c1c-bd94-5966de1ef42a"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "保养月数",
+                                        "labelWidth": "40%",
+                                        "name": "planmonths",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField39",
+                                    "designerId": "a3cf086a-8089-4098-b488-aeb3cd5bf2e3"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "保养次第",
+                                        "labelWidth": "40%",
+                                        "name": "ordernum",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField40",
+                                    "designerId": "e24ae772-854f-434c-96cc-86e556a20a74"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "本次保养类型",
+                                        "labelWidth": "40%",
+                                        "name": "plantype",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField41",
+                                    "designerId": "649abdf7-4cc1-480d-b167-18e29ae00f56"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "计划保养日期",
+                                        "labelWidth": "40%",
+                                        "name": "plandate",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField42",
+                                    "designerId": "d0ddcf4d-0827-4e31-9bee-b1ce1db8a5ac"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "保养人员",
+                                        "labelWidth": "40%",
+                                        "name": "man",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField43",
+                                    "designerId": "c9669893-3bbb-4ef7-b087-93dd0c15744c"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-fault-track"
+                        ],
+                        "id": "EngMaintainPlan_TabProcess",
+                        "layout": "vbox",
+                        "scrollable": true,
+                        "title": "任务进度"
+                    },
+                    "name": "MyContainer1",
+                    "designerId": "28b36114-4802-4331-8014-ce9bae150b95",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fault-trackBox"
+                                ],
+                                "id": "EngMaintainPlan_PnlFinish"
+                            },
+                            "name": "MyContainer5",
+                            "designerId": "91796d0e-7f2f-407e-87da-998f2bc8a447",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fault-trackTop"
+                                        ]
+                                    },
+                                    "name": "MyContainer8",
+                                    "designerId": "84f2986c-2d13-4f18-92a1-4849876bbfdc",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Img",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-fault-trackTop-img"
+                                                ],
+                                                "docked": "left",
+                                                "height": null,
+                                                "src": "resources/images/trackListBox-icon02.png"
+                                            },
+                                            "name": "MyImg",
+                                            "designerId": "388a6aa5-7502-4e10-b448-d92d3a14a5a5"
+                                        },
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-fault-trackTop-title"
+                                                ],
+                                                "docked": "left",
+                                                "html": "确认完工",
+                                                "id": "EngMaintainPlan_LblFinish"
+                                            },
+                                            "name": "MyLabel3",
+                                            "designerId": "7b9f2d37-52b2-41ce-b1bf-b9f3ef9252a8"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fault-trackListBox",
+                                            "liftnet-font-size12"
+                                        ]
+                                    },
+                                    "name": "MyContainer9",
+                                    "designerId": "36f45092-e70a-45f6-b429-837861b2cafb"
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fault-trackListBox",
+                                            "liftnet-font-size12"
+                                        ]
+                                    },
+                                    "name": "MyContainer12",
+                                    "designerId": "2135c142-9199-4d0a-9377-0f55fa81b4d2",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<span></span>完工地址",
+                                                "id": "B_FinishAddress"
+                                            },
+                                            "name": "MyLabel4",
+                                            "designerId": "fc707d61-09c2-408d-84a1-e87d95545b3e"
+                                        },
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<span></span>YYYY-MM-DD hh:mm",
+                                                "id": "B_FinishDate"
+                                            },
+                                            "name": "MyLabel5",
+                                            "designerId": "a8d4cc8b-fd19-4fe3-bf17-c9c6166d3427"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fault-trackBox"
+                                ],
+                                "id": "EngMaintainPlan_PnlArrive"
+                            },
+                            "name": "MyContainer13",
+                            "designerId": "43fa79bd-e086-4e8d-8418-96537fee6a8c",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fault-trackTop"
+                                        ]
+                                    },
+                                    "name": "MyContainer14",
+                                    "designerId": "4a7bd946-e107-422e-b76a-d19c3eb36ca4",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Img",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-fault-trackTop-img"
+                                                ],
+                                                "docked": "left",
+                                                "height": null,
+                                                "src": "resources/images/trackListBox-icon01.png"
+                                            },
+                                            "name": "MyImg3",
+                                            "designerId": "b487bcd4-4a8a-4ee2-ac73-927182354c4f"
+                                        },
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-fault-trackTop-title"
+                                                ],
+                                                "docked": "left",
+                                                "html": "到达作业地点",
+                                                "id": "EngMaintainPlan_LblArrive"
+                                            },
+                                            "name": "MyLabel6",
+                                            "designerId": "d8026728-548b-4bfd-9ad3-c66649d28a0d"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-fault-trackTop-but",
+                                                    "liftnet-bgColor-green"
+                                                ],
+                                                "docked": "right",
+                                                "id": "EngMaintainPlan_BtnArrive",
+                                                "itemId": "EngMaintainPlan_BtnArrive",
+                                                "text": "到场"
+                                            },
+                                            "name": "MyButton7",
+                                            "designerId": "bd3e9978-a108-4dac-a6e3-445a9a509971"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fault-trackListBox",
+                                            "liftnet-font-size12"
+                                        ]
+                                    },
+                                    "name": "MyContainer26",
+                                    "designerId": "88e9b86f-b225-4c35-82a0-8b7c7db88722",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<span></span>到场地址",
+                                                "id": "B_ArriveAddress"
+                                            },
+                                            "name": "MyLabel7",
+                                            "designerId": "c878516b-da82-4166-921e-8bd33b44a3e5"
+                                        },
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<span></span>YYYY-MM-DD hh:mm",
+                                                "id": "B_ArriveDate"
+                                            },
+                                            "name": "MyLabel14",
+                                            "designerId": "f495d25b-df6a-48b3-a28f-02090f2f0c9e"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fault-trackBox"
+                                ],
+                                "id": "EngMaintainPlan_PnlStart"
+                            },
+                            "name": "MyContainer27",
+                            "designerId": "4b99c701-6f16-4c08-8df7-5e030be7eb09",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-fault-trackTop"
+                                        ]
+                                    },
+                                    "name": "MyContainer28",
+                                    "designerId": "5911a411-133f-411c-9301-5f18fb2f5b44",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Img",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-fault-trackTopEnd-img"
+                                                ],
+                                                "docked": "left",
+                                                "height": null,
+                                                "src": "resources/images/trackListBox-icon00.png"
+                                            },
+                                            "name": "MyImg6",
+                                            "designerId": "a223e36a-5c4c-4c2d-b192-0e60d5fd3848"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "layout": "vbox",
+                                "layout|flex": 0.5
+                            },
+                            "name": "MyContainer35",
+                            "designerId": "02e0856b-8640-48c0-829c-347e2eb48056",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": "top",
+                                        "height": 105,
+                                        "id": "EngContainer_AcceptMapParent",
+                                        "style": "margin-left :15px ;margin-right:15px;"
+                                    },
+                                    "name": "MyContainer36",
+                                    "designerId": "c7c8e2da-8c3b-4958-a5f5-2c5afd2f21c2",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "liftnet-monitor-map"
+                                                ],
+                                                "height": 75,
+                                                "id": "EngContainer_AcceptMap",
+                                                "style": "border: 1px solid #DDD;"
+                                            },
+                                            "name": "MyContainer43",
+                                            "designerId": "c1f69f5c-5ed0-4f60-a4f3-e475804dd058",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "docked": "right",
+                                                        "layout": "vbox",
+                                                        "width": "60%"
+                                                    },
+                                                    "name": "MyContainer44",
+                                                    "designerId": "3ff2db55-27e9-4684-b3bd-d194399810b9",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Panel",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fontColor-darkGray",
+                                                                    "liftnet-font-size14"
+                                                                ],
+                                                                "id": "EngAcceptMap_address",
+                                                                "itemId": "EngAcceptMap_address",
+                                                                "layout|flex": 2,
+                                                                "style": "margin-left:5px;"
+                                                            },
+                                                            "name": "MyPanel50",
+                                                            "designerId": "7137f2f5-cc28-43ea-8934-4fbb34510771"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Panel",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "id": "EngAcceptMap_location",
+                                                                "itemId": "EngAcceptMap_location",
+                                                                "layout|flex": 1,
+                                                                "style": "margin-left:5px;"
+                                                            },
+                                                            "name": "MyPanel51",
+                                                            "designerId": "45dd0554-b557-4dc9-a3f5-3bfb79496272",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "basiceventbinding",
+                                                                    "reference": {
+                                                                        "name": "listeners",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "fn": "onEngAcceptMap_locationInitialize",
+                                                                        "implHandler": [
+                                                                            "var me = this;",
+                                                                            "me.element.on('tap', function(e, t) { me.fireEvent('tap', me, e, t); }, me);"
+                                                                        ],
+                                                                        "name": "initialize"
+                                                                    },
+                                                                    "name": "onEngAcceptMap_locationInitialize",
+                                                                    "designerId": "33a3f745-aeb7-49d7-a8de-1f838b651634"
+                                                                },
+                                                                {
+                                                                    "type": "Ext.Label",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "cls": [
+                                                                            "liftnet-fontColor-blue",
+                                                                            "liftnet-font-size14"
+                                                                        ],
+                                                                        "html": "地点微调"
+                                                                    },
+                                                                    "name": "MyLabel31",
+                                                                    "designerId": "2ad1cdd2-33ca-4f39-9fa6-011bec8eaf23"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "Ext.field.Hidden",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "id": "EngAcceptMap_lng",
+                                                                "itemId": "EngAcceptMap_lng"
+                                                            },
+                                                            "name": "MyHiddenField11",
+                                                            "designerId": "74ce81f2-f7cc-482a-a2af-9a4deb33acef"
+                                                        },
+                                                        {
+                                                            "type": "Ext.field.Hidden",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "id": "EngAcceptMap_lat",
+                                                                "itemId": "EngAcceptMap_lat"
+                                                            },
+                                                            "name": "MyHiddenField17",
+                                                            "designerId": "dc2e6a6a-a0a3-4ecb-961f-7138f84402cc"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Img",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "docked": "left",
+                                                        "height": 75,
+                                                        "id": "EngAcceptMap",
+                                                        "itemId": "EngAcceptMap",
+                                                        "width": "40%"
+                                                    },
+                                                    "name": "MyImg7",
+                                                    "designerId": "f0bc2b61-6f4c-4e8a-ac7c-370cbb8ce25a"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": "top",
+                                        "height": 150,
+                                        "id": "EngMaintainContain_Img",
+                                        "layout": "vbox",
+                                        "layout|flex": 2,
+                                        "style": "margin-top:3px;"
+                                    },
+                                    "name": "MyContainer19",
+                                    "designerId": "f1393087-6a28-4e64-81a0-10f28fd71617",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Panel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout": "hbox",
+                                                "layout|flex": 1
+                                            },
+                                            "name": "MyPanel5",
+                                            "designerId": "7b4ca640-4fd4-474b-bf25-f77b049b59bd",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer29",
+                                                    "designerId": "b36318bf-edb7-49cd-987f-609ba389b483",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "100%",
+                                                                "id": "EngMaintainP_photo_1",
+                                                                "itemId": "EngMaintainP_camera",
+                                                                "src": "resources/images/camera.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg10",
+                                                            "designerId": "065dfb6d-9f16-4b3e-a4ed-b0a66062f794"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer32",
+                                                    "designerId": "6ae4e491-e7cb-4567-a6a1-1767647f9ca7",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "100%",
+                                                                "id": "EngMaintainP_photo_2",
+                                                                "itemId": null,
+                                                                "src": "resources/images/notPhoto.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg11",
+                                                            "designerId": "7815c165-6390-4305-b7c5-bfd7d2df582f"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer33",
+                                                    "designerId": "6078504d-377f-4996-81bc-67897173a64a",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "100%",
+                                                                "id": "EngMaintainP_photo_3",
+                                                                "itemId": null,
+                                                                "src": "resources/images/notPhoto.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg12",
+                                                            "designerId": "79b836be-01f4-4fd8-be90-88312c8786a1"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Panel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout": "hbox",
+                                                "layout|flex": 1,
+                                                "style": "margin-top:5px;"
+                                            },
+                                            "name": "MyPanel6",
+                                            "designerId": "f0e01102-ad62-46de-9ce0-d7f0a2043d1c",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer34",
+                                                    "designerId": "a136eb13-6f51-4860-abc0-b7971b5f3973",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "100%",
+                                                                "id": "EngMaintainP_photo_4",
+                                                                "itemId": null,
+                                                                "src": "resources/images/notPhoto.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg13",
+                                                            "designerId": "2055b013-3da6-48d1-883a-fce35925682b"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer37",
+                                                    "designerId": "cee06563-f6f3-4db9-8aef-eeab26cf91bc",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "100%",
+                                                                "id": "EngMaintainP_photo_5",
+                                                                "itemId": null,
+                                                                "src": "resources/images/notPhoto.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg14",
+                                                            "designerId": "980ce4b3-6d2b-4fce-a2fd-5eb34fa2f9b1"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1
+                                                    },
+                                                    "name": "MyContainer38",
+                                                    "designerId": "6e13499e-2b73-418a-8cfd-0f71042375ad",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "liftnet-fault-trackTop-img"
+                                                                ],
+                                                                "height": "100%",
+                                                                "id": "EngMaintainP_photo_6",
+                                                                "itemId": null,
+                                                                "src": "resources/images/notPhoto.png",
+                                                                "width": "100%"
+                                                            },
+                                                            "name": "MyImg15",
+                                                            "designerId": "1e4ea7b6-4cac-43c2-a8ab-9041d9a39be5"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ActionSheet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 65,
+                                "hidden": true,
+                                "hideOnMaskTap": true,
+                                "id": "camera_showM",
+                                "itemId": "camera_showM",
+                                "layout": "hbox"
+                            },
+                            "name": "MyActionSheet1",
+                            "designerId": "929498f7-75df-4bc5-81ae-15748c42ed21",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "source_camearM",
+                                        "itemId": "source_camearM",
+                                        "text": "相机",
+                                        "width": 110
+                                    },
+                                    "name": "MyButton10",
+                                    "designerId": "77f0e27b-f463-4582-8a31-8d8a7fc22925"
+                                },
+                                {
+                                    "type": "Ext.Spacer",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 70
+                                    },
+                                    "name": "MySpacer1",
+                                    "designerId": "79bb78df-73f3-43dc-a5b1-8112919b172b"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "source_albumM",
+                                        "itemId": "source_albumM",
+                                        "text": "相册",
+                                        "width": 110
+                                    },
+                                    "name": "MyButton11",
+                                    "designerId": "5f6d8aa0-4750-46a0-abdc-78bd7bdf3d2d"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": false,
+                        "id": "EngMaintainCheckContent_List",
+                        "layout": "vbox",
+                        "title": "保养单"
+                    },
+                    "name": "MyContainer4",
+                    "designerId": "776fa6fc-9654-491f-bc6f-7556f8aaa0aa",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "border": "0 0 1 0",
+                                "cls": [
+                                    "liftnet-fault-listBox"
+                                ],
+                                "docked": "top",
+                                "height": 50,
+                                "layout": "hbox",
+                                "style": "border-color:#ccc; border-style: solid;"
+                            },
+                            "name": "MyPanel48",
+                            "designerId": "167734a9-574d-4c88-96fa-11e0714bc6b6",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "html": "位置",
+                                        "style": "line-height:50px;text-align:center;",
+                                        "width": "15%"
+                                    },
+                                    "name": "MyLabel26",
+                                    "designerId": "f8509468-11ce-4dda-82fe-b40bebe70d1d"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "html": "NO",
+                                        "style": "text-align:center;line-height:50px;",
+                                        "width": "15%"
+                                    },
+                                    "name": "MyLabel27",
+                                    "designerId": "274dd520-9d0b-4833-94c1-dca7ec52c33f"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "border": "",
+                                        "html": "作业项目",
+                                        "style": "text-align:center;line-height:50px;",
+                                        "width": "55%"
+                                    },
+                                    "name": "MyLabel28",
+                                    "designerId": "34bda805-87d3-4406-b7d6-72dfd9439804"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "html": "结论",
+                                        "style": "text-align:center;line-height:50px;",
+                                        "width": "15%"
+                                    },
+                                    "name": "MyLabel30",
+                                    "designerId": "5dac0e8b-6f9c-46d1-97c9-42132db1d919"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-fault-listBox"
+                                ],
+                                "data": null,
+                                "disableSelection": true,
+                                "id": "EngmaintainPlanCCList",
+                                "layout|flex": 1,
+                                "store": "by_checkcontent"
+                            },
+                            "name": "MyList13",
+                            "designerId": "338f6f19-6748-4c93-b819-be7458f539db",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div style=\"width:100%\" class=\"liftnet-font-size14\">",
+                                            "    <div style=\"width:15%;float:left;text-align:center;line-height:43px;\">{locations}&nbsp;</div>",
+                                            "    <div style=\"width:15%;float:left;text-align:center;line-height:43px;\">{lno}&nbsp;</div>",
+                                            "    <div style=\"width:55%;float:left;text-align:left;line-height:43px;overflow:hidden; text-overflow:ellipsis;white-space: nowrap;\">{plancontents}&nbsp;</div>",
+                                            "    <div style=\"width:15%;float:left;text-align:center;line-height:43px;\">",
+                                            "        <tpl if='ste == \"N\"'>",
+                                            "        <tpl if='checkverdict == \"√\"'>",
+                                            "        <!--定义一个id(statusArea)用于识别点击位置",
+                                            "            在list的itemtap事件中，用e.target.id可获得被点击对象的id-->",
+                                            "        <i id='statusArea' class='fa fa-lg fa-check-circle' style='color:green'></i>",
+                                            "    <tpl else>",
+                                            "        <!--如果状态为N，显示“红色叉” -->",
+                                            "        <tpl if='checkverdict == \"×\"'>",
+                                            "            <i id='statusArea' class='fa fa-lg fa-times-circle' style='color:red'></i>",
+                                            "        <tpl else>",
+                                            "            <!--默认状态为空，显示“灰色横” -->",
+                                            "            <i id='statusArea' class='fa fa-lg fa-minus-circle' style='color:#ccc'></i>",
+                                            "        </tpl>",
+                                            "    </tpl>",
+                                            "        </tpl>",
+                                            "        <tpl if='ste == \"Y\"'>",
+                                            "        <tpl if='checkverdict == \"√\"'>",
+                                            "        <!--定义一个id(statusArea)用于识别点击位置",
+                                            "            在list的itemtap事件中，用e.target.id可获得被点击对象的id-->",
+                                            "        <i class='fa fa-lg fa-check-circle' style='color:green'></i>",
+                                            "    <tpl else>",
+                                            "        <!--如果状态为N，显示“红色叉” -->",
+                                            "        <tpl if='checkverdict == \"×\"'>",
+                                            "            <i class='fa fa-lg fa-times-circle' style='color:red'></i>",
+                                            "        <tpl else>",
+                                            "            <!--默认状态为空，显示“灰色横” -->",
+                                            "            <i class='fa fa-lg fa-minus-circle' style='color:#ccc'></i>",
+                                            "        </tpl>",
+                                            "    </tpl>",
+                                            "        </tpl>",
+                                            "        ",
+                                            "       </div>",
+                                            "</div>\t"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "7e7afc94-85cf-4461-b974-274c925588f3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": null,
+                                "html": "",
+                                "id": "EngMaintain_signaturePanel"
+                            },
+                            "name": "MyPanel8",
+                            "designerId": "323f99f7-adad-4201-8aac-79f4649340e6"
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-button-three",
+                                    "liftnet-button"
+                                ],
+                                "data": null,
+                                "html": null,
+                                "id": "EngMaintainPlanCC_PnlOperation",
+                                "layout": "hbox"
+                            },
+                            "name": "MyPanel",
+                            "designerId": "2ffa5396-3a8b-447e-883d-35961b7b69aa",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-buttonColor-green"
+                                        ],
+                                        "id": "EngMaintainPlan_BtnSave",
+                                        "layout|flex": 1,
+                                        "text": "保存"
+                                    },
+                                    "name": "MyButton1",
+                                    "designerId": "792d3bd4-c5a1-4815-b465-9cf870306c98"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-buttonColor-green"
+                                        ],
+                                        "id": "EngMaintainPlan_BtnSub",
+                                        "layout|flex": 1,
+                                        "text": "提交"
+                                    },
+                                    "name": "MyButton3",
+                                    "designerId": "7bb22ef3-6729-4c9f-b823-193e746bc4de"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

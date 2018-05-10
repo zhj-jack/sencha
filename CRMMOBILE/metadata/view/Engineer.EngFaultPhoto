@@ -1,0 +1,175 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoDestroy": false,
+        "designer|userClassName": "Engineer.EngFaultPhoto",
+        "hideOnMaskTap": false,
+        "id": "EngFaultPhoto",
+        "layout": "vbox",
+        "modal": false
+    },
+    "designerId": "65f9b63f-d445-4912-86de-451b44211138",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": null
+            },
+            "name": "MyToolbar",
+            "designerId": "75b86bcb-0e8b-4f2c-8cb5-e6c767064cc8",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "FaultPhoto_BtnReturn",
+                        "margin": null,
+                        "padding": null,
+                        "text": null
+                    },
+                    "name": "MyButton3",
+                    "designerId": "157a8d41-45c5-441a-868b-804d1e187d70"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer8",
+                    "designerId": "0c86633f-f155-4cfd-b7b3-3914230389a5"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "iconAlign": "right",
+                        "iconCls": "delete",
+                        "id": "FaultPhoto_BtnDel",
+                        "itemId": "FaultPhoto_BtnDel",
+                        "padding": null,
+                        "text": null
+                    },
+                    "name": "MyButton4",
+                    "designerId": "1b348756-99c3-453c-bd89-4ee878e98bdb"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyContainer19",
+            "designerId": "c91b01ec-1f20-40ef-8e76-490213a10eae",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "FaultPhoto_Panel",
+                        "itemId": "FaultPhoto_Panel",
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel",
+                    "designerId": "8dcc6aae-1bcb-4bd3-9d2b-148db066712f",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "top",
+                                "height": 280,
+                                "id": "EngFaultPhoto_show",
+                                "margin": "100 10 0 10",
+                                "maxHeight": 350,
+                                "maxWidth": 350
+                            },
+                            "name": "MyImg10",
+                            "designerId": "7132f4c4-ad36-4d2c-af65-5aa19e3ed2f8"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "EngFaultPhoto_ImgID"
+                    },
+                    "name": "MyHiddenField6",
+                    "designerId": "306a6a81-cd81-4756-b984-4f848e2a70c0"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "NextImgId"
+                    },
+                    "name": "MyHiddenField7",
+                    "designerId": "fcd4003d-4441-47d8-bbe2-bfc8fdb3b75d"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "fcname"
+                    },
+                    "name": "MyHiddenField8",
+                    "designerId": "e5222959-5e6f-4598-a8c5-79027221bce8"
+                }
+            ]
+        }
+    ]
+}

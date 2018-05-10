@@ -1,0 +1,105 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngHaveInvoiceNoMoney",
+        "id": "EngHaveInvoiceNoMoney",
+        "layout": "vbox"
+    },
+    "name": "Engineer.EngDueMoney1",
+    "designerId": "39dae07c-27c6-45ef-86dc-53e157abf876",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "已开票未收款"
+            },
+            "name": "MyToolbar5",
+            "designerId": "6f10c789-7911-4d40-be03-c1d00017135a",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "EngHaveInvoiceNoMoney_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton5",
+                    "designerId": "d5beeaff-1f5e-4377-a4e4-b2c3dcd65466"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowDeselect": null,
+                "data": null,
+                "disableSelection": true,
+                "id": "EngHaveInvoiceNoMoney_ListMoney",
+                "itemId": null,
+                "layout|flex": 1,
+                "pressedCls": " ",
+                "store": "eng_haveinvoicenomoney"
+            },
+            "name": "MyList",
+            "designerId": "b935c135-52d2-416e-988c-a48d8206f55c",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"liftnet-home-listConBox\">",
+                            "    <div class=\"liftnet-home-listConBox-left\" style='left:10px'>",
+                            "        <div class=\"liftnet-font-size16 liftnet-fontColor-{jobcolor}\">{jnl}</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{projectname}</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{money}</div>",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{date1}至{date2}</div>",
+                            "    </div>",
+                            "    <div class=\"liftnet-home-listConBox-right\">",
+                            "        <div class=\"liftnet-home-listConBox-state liftnet-font-right liftnet-font-size12 liftnet-fontColor-{jobcolor}\">",
+                            "            <!--div class=\"liftnet-fontColor-white liftnet-bgColor-{auditcolor}\" style=\"float:left;border-radius:4px\">&nbsp;{auditstatus}&nbsp;</div-->",
+                            "            {num} ",
+                            "<!--             <i class=\"fa fa-circle-o\"></i> -->",
+                            "        </div>",
+                            "        ",
+                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-font-right\">{handleUser}</div>",
+                            "    </div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "c3cbde79-1eb4-4304-9ab7-2b22d0e427cc"
+                }
+            ]
+        }
+    ]
+}

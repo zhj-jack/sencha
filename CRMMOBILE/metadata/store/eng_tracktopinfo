@@ -1,0 +1,139 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_tracktopinfo",
+        "storeId": "eng_tracktopinfo"
+    },
+    "name": "MyStore",
+    "designerId": "4c4d4f0d-8be4-419f-8b5a-923fbaeecee7",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userlocation"
+            },
+            "name": "field291",
+            "designerId": "3e55599d-2be4-4cef-ab9b-d46f46c0fa8b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stuts"
+            },
+            "name": "field296",
+            "designerId": "a6541d54-8439-49c4-87e5-9088ce294b38"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ltime"
+            },
+            "name": "field616",
+            "designerId": "170de06f-4503-4771-b32c-fd5529edae28"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "phone"
+            },
+            "name": "field617",
+            "designerId": "78256742-5f0d-4b50-97d7-8a3ecabadfb3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userclass"
+            },
+            "name": "field597",
+            "designerId": "1ae22429-db2c-47f3-9fca-501a527b439a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/personstatus';",
+                    "    var adapterparm = {userid:global.getUserId()};",
+                    "    callPostAdapter(",
+                    "        url, adapterparm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('获取人员状态失败');",
+                    "            }else{",
+                    "                me.setData(ret.data);",
+                    "                onSuccess(ret.data);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('获取人员状态失败');",
+                    "        }",
+                    "        );",
+                    "//         function(ret) {",
+                    "//             me.setData(ret.data);",
+                    "//             onSuccess(ret.data);",
+                    "//         },",
+                    "//         onFailure);",
+                    "} else {",
+                    "",
+                    "//     var d = [",
+                    "//         {",
+                    "//             addr:'广东省广州市荔湾区黄沙大道144号',",
+                    "//             status:'空闲',",
+                    "//             time:'2016-5-31 13:54',",
+                    "//             phone:'10086'",
+                    "//         }",
+                    "//     ];",
+                    "//     this.setData(d);",
+                    "//     onSuccess(d);",
+                    "    onSuccess([]);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "7a6b701e-5ab1-481b-a311-a6bfc0718735"
+        }
+    ]
+}

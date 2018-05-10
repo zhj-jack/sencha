@@ -1,0 +1,205 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngCustomerLinker",
+        "id": "EngCustomerLinker",
+        "layout": "vbox"
+    },
+    "designerId": "ae7db85f-8a8c-4816-9092-4926b4b92033",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "客户联系人"
+            },
+            "name": "MyToolbar1",
+            "designerId": "99c89b52-804f-44ac-a7be-6c397e9a936e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "itemId": "Customer_ReturnButton",
+                        "text": null
+                    },
+                    "name": "MyButton3",
+                    "designerId": "7f2c317b-5eaf-4938-abba-20f548392334"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "id": "Customer_linker_form",
+                "itemId": "Customer_linker_form",
+                "layout|flex": 1
+            },
+            "name": "MyFormPanel",
+            "designerId": "d6eac9a2-cc88-44a0-9f79-3015b7b3cf41",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "linker_contractman",
+                        "itemId": "linker_contractman",
+                        "label": "联系人",
+                        "name": "contractman",
+                        "required": true
+                    },
+                    "name": "MyTextField",
+                    "designerId": "4ef3f0ee-6f61-4372-badc-2ac0b9dc0826"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "linker_mbphone",
+                        "itemId": "linker_mbphone",
+                        "label": "电话",
+                        "name": "mbphone",
+                        "required": true
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "5228ba3d-d0cc-4725-a613-acbfd29a4549"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "linker_ob1",
+                        "itemId": "linker_ob1",
+                        "label": "职务",
+                        "name": "ob1"
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "e92cd4be-4fdf-4e18-93a7-3fa73df7337b"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "linker_othercontact",
+                        "itemId": "linker_othercontact",
+                        "label": "其他联系方式",
+                        "labelWidth": "40%",
+                        "name": "othercontact"
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "cc02c07e-cb74-4947-8011-281361772f67"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "linker_remail",
+                        "itemId": "linker_remail",
+                        "label": "备注",
+                        "labelWidth": "40%",
+                        "name": "remail"
+                    },
+                    "name": "MyTextArea29",
+                    "designerId": "5dfd1f56-03c8-4994-8991-25eddb98bd59"
+                }
+            ]
+        },
+        {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "linker_index"
+            },
+            "name": "MyHiddenField42",
+            "designerId": "6758f2c6-8974-4fc7-ab91-a67046eddcad"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button"
+                ],
+                "docked": "bottom",
+                "layout": "hbox",
+                "layout|flex": null
+            },
+            "name": "MyPanel2",
+            "designerId": "e7cbaa4b-035a-4504-83c0-0a4f0cc9235d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "linker_SaveBtn",
+                        "itemId": "linker_SaveBtn",
+                        "layout|flex": 1,
+                        "text": "确定"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "d61c5adb-8ef3-432c-94c8-793406749141"
+                }
+            ]
+        }
+    ]
+}

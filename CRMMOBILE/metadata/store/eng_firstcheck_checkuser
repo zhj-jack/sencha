@@ -1,0 +1,191 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_firstcheck_checkuser",
+        "storeId": "eng_firstcheck_checkuser"
+    },
+    "name": "eng_firstcheck_checkpart1",
+    "designerId": "e5f993a9-06d8-422d-841b-eb3d48d88604",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "addOrUpdate",
+                "implHandler": [
+                    "var me = this;",
+                    "if(!record){",
+                    "    return false;",
+                    "}",
+                    "var count = 0;",
+                    "var usertypename = {\"0\":\"负责人\",\"1\":\"检验人员\",\"2\":\"实习生\",\"3\":\"其他人员\"};",
+                    "var data = this.getData();",
+                    "for(var i =0,length = data.length; i<length;i++){",
+                    "    if(data.items[i].data.userid===record.userid){//更新",
+                    "//         data.items[i].data.userid = record.userid;",
+                    "        data.items[i].data.department = record.department;",
+                    "        data.items[i].data.departmentid = record.departmentid;",
+                    "        data.items[i].data.username = record.username;",
+                    "        data.items[i].data.usertype = record.usertype;",
+                    "        data.items[i].data.usertypename = usertypename[record.usertype];",
+                    "        return;",
+                    "    }",
+                    "}",
+                    "",
+                    "me.add(record);",
+                    "",
+                    "// return count!==0;//不存在",
+                    "// if(count!==0){",
+                    "//    me.updaterecord(this,record);",
+                    "// }else{",
+                    "//    me.add(record);",
+                    "// }"
+                ]
+            },
+            "name": "addOrUpdate",
+            "designerId": "44811542-8a0b-4029-a1fc-39468653ad9e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "department"
+            },
+            "name": "field840",
+            "designerId": "995e1448-9b03-41e8-af39-f444f0a47788"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "departmentid"
+            },
+            "name": "field843",
+            "designerId": "8e585d4a-e774-4e50-901c-16c2075f518a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "name": "field844",
+            "designerId": "33a20307-8d9f-4a32-b024-2b6bd46686e5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username"
+            },
+            "name": "field845",
+            "designerId": "4e3a7064-7667-4930-9139-f2ddea0c856d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usertype"
+            },
+            "name": "field846",
+            "designerId": "eda42196-d451-4971-b41e-daa4c922d2ce"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usertypename"
+            },
+            "name": "field847",
+            "designerId": "efbe805d-7b38-4988-af76-78d5e386f8bf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "userid"
+                ],
+                "fn": "isExist",
+                "implHandler": [
+                    "if(!userid){",
+                    "    return false;",
+                    "}",
+                    "var data = this.getData();",
+                    "for(var i =0,length = data.length; i<length;i++){",
+                    "    if(data.items[i].data.userid===userid){",
+                    "        return true;",
+                    "    }",
+                    "}",
+                    "return false;"
+                ]
+            },
+            "name": "isExist",
+            "designerId": "dc767843-2b1c-4250-9077-88bd6a94955d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getPrincipal",
+                "implHandler": [
+                    "",
+                    "var count = 0;",
+                    "var data = this.getData();",
+                    "for(var i =0,length = data.length; i<length;i++){",
+                    "    if(data.items[i].data.usertype==='0'||data.items[i].data.usertype===0){",
+                    "        count++;",
+                    "    }",
+                    "}",
+                    "return count;"
+                ]
+            },
+            "name": "getPrincipal",
+            "designerId": "4b356a83-4253-48d8-bb65-b86bbcdcf326"
+        }
+    ]
+}

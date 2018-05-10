@@ -1,0 +1,273 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_elevatorfilequerylist",
+        "storeId": "eng_elevatorfilequerylist"
+    },
+    "name": "eng_contractquerylist1",
+    "designerId": "f896fb28-a50b-48c4-bc93-36d6bbfdf645",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm",
+                    "action"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/elevatorfilelist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {",
+                    "        userid:global.getUserId(),",
+                    "        curpagenum:parm.curpagenum,",
+                    "        pagesize:parm.pagesize,",
+                    "        searchkey:parm.searchkey,",
+                    "    };",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            var info;",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('搜索电梯档案失败');",
+                    "            }else{",
+                    "                if(ret.data.length===0){",
+                    "                    if(parm.curpagenum===1){",
+                    "                        switch(action){",
+                    "",
+                    "                            case 'loadmore':",
+                    "                                break;",
+                    "                            case 'refresh':",
+                    "                            case 'search':",
+                    "                                info = '没有相关电梯档案';",
+                    "                                break;",
+                    "                        }",
+                    "                        onFailure(info);",
+                    "                    }else{",
+                    "                        onFailure('没有更多数据！');",
+                    "                    }",
+                    "                    return;",
+                    "                }",
+                    "                var d = me.decoDat(ret.data);",
+                    "                //第一次加载直接设置数据",
+                    "                if(parm.curpagenum==1){",
+                    "                    me.setData(d);",
+                    "                }else{",
+                    "                    //分页用法，在原有数据上继续添加",
+                    "                    var n = d.length;",
+                    "                    for(var i=0; i<n; i++) {",
+                    "                        me.add(d[i]);",
+                    "                    }",
+                    "                }",
+                    "                var resetCurPage = false;",
+                    "                if(action==='loadmore'){",
+                    "                    //加载更多的时候不需要重置页数",
+                    "                     onSuccess(ret.data.length,resetCurPage,ret.jurisdiction);",
+                    "                }else{",
+                    "                    //其他情况需要将页数重置为1",
+                    "                     onSuccess(ret.data.length,!resetCurPage,ret.jurisdiction);",
+                    "                }",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            var info;",
+                    "            var cutOne = false;",
+                    "            switch(action){",
+                    "",
+                    "                case 'loadmore':",
+                    "                    info = '加载更多电梯档案失败';",
+                    "                    cutOne = true;",
+                    "                    break;",
+                    "                case 'refresh':",
+                    "                    info = '刷新电梯档案失败';",
+                    "                    break;",
+                    "                case 'search':",
+                    "                    info = '搜索电梯档案失败';",
+                    "                    break;",
+                    "            }",
+                    "",
+                    "            onFailure(info,cutOne);",
+                    "        }",
+                    "    );",
+                    "} else {",
+                    "    var me = this;",
+                    "    //分页模拟",
+                    "    var start = (parm.curpagenum-1) * parm.pagesize,",
+                    "        end = parm.curpagenum * parm.pagesize;",
+                    "    //         end = end>50?50:end;",
+                    "    if(end>40){",
+                    "        onFailure('没有更多数据！',false);",
+                    "        return;",
+                    "    }",
+                    "    if(action=='firstload'||action=='refresh'||action=='search'){",
+                    "        //模拟刷新，搜索，第一次加载",
+                    "        //清空数据",
+                    "        this.setData([]);",
+                    "    }",
+                    "    for(var i=start; i<end; i++) {",
+                    "        var d =me.decoDat([",
+                    "            {",
+                    "                prono:'WB1600073--'+(i+1)+'---'+action,",
+                    "                equno:'123456789',",
+                    "                facname: '日立',",
+                    "                elevatorid: 'ACM-001',",
+                    "                useraddress:'广州市荔湾区黄沙大道144号',",
+                    "                fsd:'10/10/10',",
+                    "//                 titleColor:'liftnet-fontColor-blue'",
+                    "            }",
+                    "        ]);",
+                    "        this.add(d);",
+                    "    }",
+                    "    // 演示数据",
+                    "    if(action=='refresh'||action=='search'||action=='firstload'){",
+                    "        onSuccess(end - start + 1,true,{",
+                    "            addjurisdiction: 'Y',//新建权限",
+                    "            updatejurisdiction: 'Y',//修改权限",
+                    "            deletejueisdiction: 'N'//删除权限",
+                    "        });",
+                    "    }else{",
+                    "        onSuccess(end - start + 1,false,{",
+                    "            addjurisdiction: 'Y',//新建权限",
+                    "            updatejurisdiction: 'Y',//修改权限",
+                    "            deletejueisdiction: 'N'//删除权限",
+                    "        });",
+                    "    }",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "448774ac-64ad-4e7d-80c3-cf3194a4b383"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "for(var i=0;i<data.length; i++) {",
+                    "    data[i].titleColor = 'liftnet-fontColor-blue';",
+                    "}",
+                    "return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "c499b4c5-ab24-4560-bbb3-9f3f55e33cfd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prono"
+            },
+            "name": "field308",
+            "designerId": "310601ef-385c-4aba-8d0b-a447949044ba"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "facname"
+            },
+            "name": "field310",
+            "designerId": "483603af-9d8d-45b0-90a1-3a364c3c4a1c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatorid"
+            },
+            "name": "field309",
+            "designerId": "55c60ab8-1197-40d2-92cb-4c8f0ce52a71"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fsd"
+            },
+            "name": "field313",
+            "designerId": "470eecd6-c505-4d15-9626-765deee365af"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "useraddress"
+            },
+            "name": "field312",
+            "designerId": "f58d58a0-fc24-4d91-97e1-46403c7f7fb6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "equno"
+            },
+            "name": "field311",
+            "designerId": "7a87a8cf-e494-4614-ab3c-06cd7cbb4653"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleColor"
+            },
+            "name": "field739",
+            "designerId": "9a77a950-b750-40ef-b07b-c8b8558592ce"
+        }
+    ]
+}

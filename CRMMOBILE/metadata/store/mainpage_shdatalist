@@ -1,0 +1,336 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mainpage_shdatalist",
+        "storeId": "mainpage_shdatalist"
+    },
+    "name": "mainpage_htdatasta2",
+    "designerId": "cead81e5-509b-451e-8ce1-97260c6f3f14",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "type",
+                "type": "string"
+            },
+            "name": "field155",
+            "designerId": "03f229ad-68a1-4e81-b0b7-120f45dc865a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "type": "string"
+            },
+            "name": "field79",
+            "designerId": "b8d15613-ec33-4a69-aebe-5f74193ecf16"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "key1",
+                "type": "string"
+            },
+            "name": "field78",
+            "designerId": "de59df24-4885-4a9d-897f-64fce5ecc72a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "datetime",
+                "type": "string"
+            },
+            "name": "field192",
+            "designerId": "7c62e7c2-80b1-489e-8107-b7d6b75e2c1e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status",
+                "type": "string"
+            },
+            "name": "field92",
+            "designerId": "fe88927c-af9a-487a-8a87-a2a405a3bd21"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "taskid",
+                "type": "string"
+            },
+            "name": "field329",
+            "designerId": "b5a104ee-cf55-48e2-9b85-492b51acf51b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleIcon",
+                "type": "string"
+            },
+            "name": "field194",
+            "designerId": "d1e21b27-ad75-4227-ad26-ee231aa91a89"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "statusColor",
+                "type": "string"
+            },
+            "name": "field14",
+            "designerId": "867ddfef-beba-4a96-860c-99a4fead3bbd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/mainpage/api/1.0/shdatalist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid, keyword: ''};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            var d = me.decoDat(ret.data);",
+                    "            me.setData(d);",
+                    "            onSuccess(d.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    var d = this.decoDat([",
+                    "        {",
+                    "            type:'0',",
+                    "            title: '工程报价联络书审核',",
+                    "            titleIcon: '<i class=\"ln ln-report-hotline\"></i>',",
+                    "            key1: '越秀城市广场',",
+                    "            datetime: '2015-12-25 13:31',",
+                    "            status: '待处理',",
+                    "            taskid: '0-123456',",
+                    "            statusColor: ''",
+                    "        },",
+                    "        {",
+                    "            type:'1',",
+                    "            title: '商务审批',",
+                    "            titleIcon: '<i class=\"ln ln-presale\"></i>',",
+                    "            key1: '越秀城市广场',",
+                    "            datetime: '2015-12-25 09:45',",
+                    "            status: '待处理',",
+                    "            taskid: '1-123456',",
+                    "            statusColor: ''",
+                    "        },",
+                    "        {",
+                    "            type:'3',",
+                    "            title: '来款审核',",
+                    "            titleIcon: '<i class=\"ln ln-dollar\"></i>',",
+                    "            key1: '广州一洲物业管理有限公司',",
+                    "            datetime: '2015-04-13 14:30',",
+                    "            status: '待处理',",
+                    "            taskid: '3-123456',",
+                    "            statusColor: ''",
+                    "        },",
+                    "        {",
+                    "            type:'5',",
+                    "            title: '开票审核',",
+                    "            titleIcon: '<i class=\"ln ln-dollar\"></i>',",
+                    "            key1: '广州三和物业管理有限公司',",
+                    "            datetime: '2015-03-01 15:25',",
+                    "            status: '待处理',",
+                    "            taskid: '5-123456',",
+                    "            statusColor: ''",
+                    "        },",
+                    "        {",
+                    "            type:'6',",
+                    "            title: '保养合同审核',",
+                    "            titleIcon: '<i class=\"ln ln-contract\"></i>',",
+                    "            key1: '广州一洲物业管理有限公司',",
+                    "            datetime: '2015-12-01 10:05',",
+                    "            status: '待处理',",
+                    "            taskid: '6-123456',",
+                    "            statusColor: ''",
+                    "        },",
+                    "        {",
+                    "            type:'7',",
+                    "            title: '维修合同审批',",
+                    "            titleIcon: '<i class=\"ln ln-contract\"></i>',",
+                    "            key1: '广州市粤商投资有限公司',",
+                    "            datetime: '2015-09-23 12:31',",
+                    "            status: '待处理',",
+                    "            taskid: '7-123456',",
+                    "            statusColor: ''",
+                    "        },",
+                    "        {",
+                    "            type:'8',",
+                    "            title: '保养作业签收',",
+                    "            titleIcon: '<i class=\"ln ln-flashlight\"></i>',",
+                    "            key1: '荔湾区大冶有色大厦',",
+                    "            datetime: '2015-09-23 12:31',",
+                    "            status: '待处理',",
+                    "            taskid: '8-123456',",
+                    "            statusColor: ''",
+                    "        },",
+                    "        {",
+                    "            type:'9',",
+                    "            title: '保养计划审核',",
+                    "            titleIcon: '<i class=\"ln ln-report-maintain\"></i>',",
+                    "            key1: '广州市西城都荟管理公司',",
+                    "            datetime: '2015-09-23 12:31',",
+                    "            status: '待处理',",
+                    "            taskid: '9-123456',",
+                    "            statusColor: ''",
+                    "        },",
+                    "        {",
+                    "            type:'9',",
+                    "            title: '保养计划审核',",
+                    "            titleIcon: '<i class=\"ln ln-report-maintain\"></i>',",
+                    "            key1: '广州市西城都荟管理公司',",
+                    "            datetime: '2015-09-23 12:31',",
+                    "            status: '已完成',",
+                    "            taskid: '9-654321',",
+                    "            statusColor: ''",
+                    "        },",
+                    "    ]);",
+                    "        this.setData(d);",
+                    "        onSuccess(d.length);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "b20c7691-c85a-4a48-88e2-f1ac742421f8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "if(parm!=='') {",
+                    "    this.filterBy(function(item) {",
+                    "        var s = item.get(\"title\") + ' ' + item.get(\"key1\") + ' ' + item.get(\"datetime\");",
+                    "        return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "54e626d9-36ec-4a07-923a-cac60582f5ce"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "",
+                    "var icon = [];",
+                    "icon['0'] = '<i class=\"ln ln-report-hotline\"></i>';",
+                    "icon['1'] = '<i class=\"ln ln-presale\"></i>';",
+                    "icon['2'] = '<i class=\"fa fa-question-circle\"></i>';",
+                    "icon['3'] = '<i class=\"ln ln-dollar\"></i>';",
+                    "icon['4'] = '<i class=\"fa fa-question-circle\"></i>';",
+                    "icon['5'] = '<i class=\"ln ln-dollar\"></i>';",
+                    "icon['6'] = '<i class=\"ln ln-contract\"></i>';",
+                    "icon['7'] = '<i class=\"ln ln-contract\"></i>';",
+                    "icon['8'] = '<i class=\"ln ln-flashlight\"></i>';",
+                    "icon['9'] = '<i class=\"ln ln-report-maintain\"></i>';",
+                    "",
+                    "for(var i=0;i<data.length; i++) {",
+                    "",
+                    "    if(data[i].type>='0' && data[i].type<='9') {",
+                    "        data[i].titleIcon = icon[data[i].type];",
+                    "    }",
+                    "",
+                    "    switch(data[i].status) {",
+                    "        case '待审核':",
+                    "            data[i].statusColor = 'liftnet-fontColor-orange';",
+                    "            break;",
+                    "",
+                    "        case '已完成':",
+                    "            data[i].statusColor = 'liftnet-fontColor-blue';",
+                    "            break;",
+                    "    }",
+                    "}",
+                    "",
+                    "return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "23f1325f-2f06-46d1-916c-ae25905b3a00"
+        }
+    ]
+}

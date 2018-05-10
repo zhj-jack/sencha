@@ -1,0 +1,255 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "by_maintainRecption",
+        "storeId": "by_maintainRecption"
+    },
+    "name": "MyStore",
+    "designerId": "8ac5ab70-9396-40d0-a6bc-222187e89d2f",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field892",
+            "designerId": "87be9933-32f9-42da-9eba-a48a5440b05c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectaddress"
+            },
+            "name": "field893",
+            "designerId": "c4386eb1-94b6-45b2-b33c-32578c145339"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractid"
+            },
+            "name": "field894",
+            "designerId": "4f7b33e5-7a94-4a65-aab2-481c3448fada"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractnum"
+            },
+            "name": "field895",
+            "designerId": "da46417b-4069-44d6-997f-b6a7d4c0e52c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tasknum"
+            },
+            "name": "field896",
+            "designerId": "3b25c71f-980e-4e2d-a8b2-f0c914c37d61"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "readflag"
+            },
+            "name": "field897",
+            "designerId": "ebfced01-14d3-4138-9441-7e8598ec90f6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storagename"
+            },
+            "name": "field898",
+            "designerId": "621f5129-346b-44c9-8efd-327aa1d7e148"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "attention"
+            },
+            "name": "field899",
+            "designerId": "8a9ce160-2138-449f-834f-322289529465"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "detail"
+            },
+            "name": "field900",
+            "designerId": "8f173e8c-ec1c-4bbe-90c8-22c534283473"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate"
+            },
+            "name": "field957",
+            "designerId": "53ed10c1-e837-4709-8de9-ca306ea69a5e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "var adapterParm = {",
+                    "    userid: global.getUserId(),",
+                    "    jnlno: parm",
+                    "};",
+                    "this.setData([]);",
+                    "if(global.isWorklight()) {",
+                    "    var url = '/adapters/byrw/api/1.0/byrwrecdetail';",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(me.decDat(ret.data));",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    this.setData([",
+                    "        {",
+                    "         projectname: '第一个项目',",
+                    "         projectaddress: '就在那个地方',",
+                    "         contractid: '15保123' ,",
+                    "         contractnum: '20',",
+                    "         tasknum: '15',",
+                    "         readflag: 'Y',",
+                    "         storagename: '维保一组' ,",
+                    "         attention: '注意危险',",
+                    "         jnlno:'1212',",
+                    "         detail: [",
+                    "             {",
+                    "                 liftno:'A1',",
+                    "                 prodno:'3110-258963-585479-54786',",
+                    "                 modelname:'HGP',",
+                    "                 fsd:'10/10/10'",
+                    "             }",
+                    "         ],",
+                    "            nextstate:[",
+                    "                {name:\"接收\",state:'A'},",
+                    "                {name:\"退回\",state:'B'},",
+                    "            ]",
+                    "        }",
+                    "    ]);",
+                    "    onSuccess(1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "1071daf2-1185-4334-ab7d-ac8120e974dd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "",
+                    "for(var i=0;i<data.length; i++) {",
+                    "    switch(data[i].readflag) {",
+                    "        case 'Y':",
+                    "            data[i].readflag = '是';",
+                    "            break;",
+                    "",
+                    "        case 'N':",
+                    "            data[i].readflag = '否';",
+                    "            break;",
+                    "    }",
+                    "}",
+                    "",
+                    "return(data);"
+                ]
+            },
+            "name": "decDat",
+            "designerId": "e0141fc9-a0d5-4509-bf15-905fa3a8c871"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jnlno"
+            },
+            "name": "field905",
+            "designerId": "c7637e53-e2f1-4682-afd5-3038f87b4214"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "common_getdeptlist",
+        "storeId": "common_getdeptlist"
+    },
+    "name": "MyStore",
+    "designerId": "55dfa967-933b-41f1-860a-39de59ceaab9",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "name": "field667",
+            "designerId": "f535ff8e-b882-4b0f-8be6-4bf158fc330c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username"
+            },
+            "name": "field668",
+            "designerId": "7bf4d92c-a10c-413d-acc6-608761ca3d8b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storageid"
+            },
+            "name": "field669",
+            "designerId": "3bbbb817-72c0-49c5-8e7c-f9cf20845413"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storagename"
+            },
+            "name": "field670",
+            "designerId": "4d445931-bde6-4030-b327-00cb639c52d4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/ssbmlist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取司/站别列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            userid: 'huangl',",
+                    "            username: '黄林',",
+                    "            storageid:'130001',",
+                    "            storagename:'维保一组'",
+                    "        },",
+                    "        {",
+                    "            userid: 'huangl',",
+                    "            username: '黄林',",
+                    "            storageid:'13000222',",
+                    "            storagename:'维保二组'",
+                    "        }",
+                    "",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "e1e06e65-eb81-4eac-9d63-e362fc99c450"
+        }
+    ]
+}

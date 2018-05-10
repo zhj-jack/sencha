@@ -1,0 +1,311 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.sx_sxjd",
+        "storeId": "NoUsed.sx_sxjd"
+    },
+    "name": "sx_sxdetail1",
+    "designerId": "bcac096d-477f-41de-90ae-b5756527e792",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "address",
+                "type": "string"
+            },
+            "name": "field257",
+            "designerId": "da0385c9-4b30-4d3f-bb95-063a9a533bc7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_SetOutUser",
+                "type": "string"
+            },
+            "name": "field262",
+            "designerId": "eb33ebe4-d755-4a02-b71f-03b9a79b8254"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_SetOutDate",
+                "type": "string"
+            },
+            "name": "field6",
+            "designerId": "c1422dcb-4c7f-4277-acc7-dbe6911f4332"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_SetOutAddress",
+                "type": "string"
+            },
+            "name": "field13",
+            "designerId": "27faf156-dc0e-42a9-af1b-aba8f457945c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_ArriveUser",
+                "type": "string"
+            },
+            "name": "field12",
+            "designerId": "1b020988-e3f7-4776-8462-8df4a1c215c0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_ArriveDate",
+                "type": "string"
+            },
+            "name": "field263",
+            "designerId": "e513ea1d-1b0f-4ac7-bd4b-b11a5ff0b592"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_ArriveAddress",
+                "type": "string"
+            },
+            "name": "field7",
+            "designerId": "4b6fa3b2-7f34-45a4-bad9-3520fd2bdf31"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_EscapeUser",
+                "type": "string"
+            },
+            "name": "field8",
+            "designerId": "5733720e-5c4f-401d-a331-aa1a61849e14"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_EscapeDate",
+                "type": "string"
+            },
+            "name": "field264",
+            "designerId": "12eaad9d-3bc1-4a73-808c-34c51929066c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_EscapeAddress",
+                "type": "string"
+            },
+            "name": "field258",
+            "designerId": "5ffc72e4-0ac0-40c1-9df3-bdbc20f2ff6d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_FinishUser",
+                "type": "string"
+            },
+            "name": "field255",
+            "designerId": "87ccdbf7-e00e-400d-b416-6624d56cda30"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_FinishDate",
+                "type": "string"
+            },
+            "name": "field9",
+            "designerId": "451c0445-81dc-4e9b-861c-857e05407417"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "G_FinishAddress",
+                "type": "string"
+            },
+            "name": "field10",
+            "designerId": "d1bdb173-d12c-45f1-ab52-16dc108e1bae"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "qrcodeimg",
+                "type": "string"
+            },
+            "name": "field259",
+            "designerId": "ddd285cc-209a-4007-bd59-099c7e51a38b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "missionimg",
+                "type": "string"
+            },
+            "name": "field11",
+            "designerId": "91a6c6df-0ddf-4e6e-bc07-c8d5fd85bd74"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status",
+                "type": "string"
+            },
+            "name": "field265",
+            "designerId": "95943953-ee9d-4c2e-bd6e-d6b03e180535"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "trno"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "/* 状态：",
+                    "    0\t起草",
+                    "    103\t关闭",
+                    "    104\t退单",
+                    "    201\t已派工",
+                    "    202\t已接收？",
+                    "    301\t已出发",
+                    "    302\t到场",
+                    "    303\t解困",
+                    "    401\t完工",
+                    "*/",
+                    "",
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/sx/api/1.0/sxjd';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid, trid:trno};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 受信处理进度-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            address: '广州市海珠区江泰路故障地址',",
+                    "            G_SetOutUser:'出发人',",
+                    "            G_SetOutDate:'2015-12-01 09:00',",
+                    "            G_SetOutAddress:'广州市越秀区出发路地址街',",
+                    "            G_ArriveUser:'到场人',",
+                    "            G_ArriveDate:'2015-12-01 09:30',",
+                    "            G_ArriveAddress:'广州市海珠区江泰路到场地址',",
+                    "            G_EscapeUser:'解困人',",
+                    "            G_EscapeDate:'2015-12-01 09:35',",
+                    "            G_EscapeAddress:'广州市海珠区江泰路解困地址',",
+                    "            G_FinishUser:'完工人',",
+                    "            G_FinishDate:'2015-12-01 12:00',",
+                    "            G_FinishAddress:'广州市海珠区江泰路完工地址',",
+                    "            qrcodeimg: 'resources/images/picture01.jpg',",
+                    "            missionimg: ['resources/images/picture01.jpg','resources/images/picture01.jpg'],",
+                    "            status: '401'",
+                    "        }",
+                    "    ]);",
+                    "    onSuccess(1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "371ae80c-0713-4d3e-8d27-1e0b2ecd2eb8"
+        }
+    ]
+}

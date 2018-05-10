@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"usertype\": \"0\",",
+            "        \"usertypename\": \"负责人\"",
+            "    },",
+            "    {",
+            "        \"usertype\": \"1\",",
+            "        \"usertypename\": \"检验人员\"",
+            "    },",
+            "    {",
+            "        \"usertype\": \"2\",",
+            "        \"usertypename\": \"实习生\"",
+            "    },",
+            "    {",
+            "        \"usertype\": \"3\",",
+            "        \"usertypename\": \"其他人员\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "eng_checkuser_usertype",
+        "storeId": "eng_checkuser_usertype"
+    },
+    "name": "MyStore",
+    "designerId": "67ce4bdc-504e-4f27-90b0-5d84964db93c",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usertype"
+            },
+            "name": "field519",
+            "designerId": "05815b93-40ec-4725-a005-f76461ddefc6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usertypename"
+            },
+            "name": "field520",
+            "designerId": "8beef99e-16a4-4027-91d9-a1c6fe4948fa"
+        }
+    ]
+}

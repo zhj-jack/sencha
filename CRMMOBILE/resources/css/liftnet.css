@@ -1,0 +1,603 @@
+/* -------------------------
+cupertino.css 更改备注 
+1、整体#157efb 改为：#3aaeae；
+2、整体#107bfb 改为：#77afa6；
+-------
+页面命名
+1、登录：Login；
+2、注册：Enroll；
+3、首页：Home；
+4、保养业务：Maintenance；
+5、故障业务：Fault；
+6、实时监控：Monitor；
+7、启动：Start；
+
+------------------------- */
+
+.liftnet-home-nav .x-button {
+    width: 25%;
+    height: 90px;
+    float: left;
+    border: none;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    border-radius: 0;
+    padding-top: 16px;
+}
+
+.liftnet-home-nav .x-button-pressing {
+    opacity: 1;
+}
+
+.liftnet-home-nav .x-button-label {
+    color: #323333;
+    font-size: 0.75em;
+    margin-top: 6px;
+}
+
+.liftnet-home-nav .liftnet-home-nav-red .x-button-icon {
+    color: #ff6c6c;
+}
+
+.liftnet-home-nav .liftnet-home-nav-blue .x-button-icon {
+    color: #52b8d4;
+}
+
+.liftnet-home-nav .liftnet-home-nav-green .x-button-icon {
+    color: #42b1b1;
+}
+
+.liftnet-home-nav .liftnet-home-nav-orange .x-button-icon {
+    color: #e78966;
+}
+
+.liftnet-home-nav .x-button-icon {
+    margin-top: 6px;
+    font-size: 1.1em;
+}
+
+.liftnet-home-nav .x-button .x-button-icon:before {
+    font-family: "LiftNet3";
+}
+
+.liftnet-home-nav .x-button-pressing .x-button-icon {
+    opacity: 0.5;
+}
+
+/* -------------------------
+公共 start
+------------------------- */
+.liftnet-toolbar-home{background-color:#f7f7f7 !important;border-bottom: 1px solid #f7f7f7 !important;}/* 首页toolba startr */
+.liftnet-toolbar-home .x-title{color:#585858;}
+.liftnet-toolbar-home .x-button-normal{border-color: #585858;}
+.liftnet-toolbar-home .x-button-icon{color:#585858;}/* 首页toolbar over */
+.liftnet-toolbar-other{background-color:#3aaeae;border-bottom: 1px solid #3aaeae !important;}/* 其他页toolbar start */
+.liftnet-toolbar-other .x-title{color:#fff;}
+.liftnet-toolbar-other .x-button-normal{border-color: #fff;}
+.liftnet-toolbar-other .x-button-icon{color:#fff;}/* 其他页toolbar over */
+.liftnet-tabbar-one .x-docked-top .x-tab.x-tab-active{background-color: #fff;}/* tabbar 第一层 start */
+.liftnet-tabbar-one .x-docked-top .x-tab{ height:36px;border: 1px solid #b8b8b9;}
+.liftnet-tabbar-one .x-docked-top .x-tab.x-tab-active .x-button-label{color:#3aaeae}
+.liftnet-tabbar-one .x-docked-top .x-tab .x-button-label{height:18px;line-height:18px;color:#bcbcbd}
+.liftnet-tabbar-one .x-docked-top .x-tab{padding: 8px;}/* tabbar 第一层 over */
+.liftnet-tabbar-two {}/* tabbar 第二层 start */
+.liftnet-tabbar-two .x-tabbar{ min-height:40px;background-color:#fff;border-color:#3aaeae;}
+.liftnet-tabbar-two .x-docked-top{padding:0;}
+.liftnet-tabbar-two .x-docked-top .x-tab{padding: 10px;border:0; height:39px;}
+.liftnet-tabbar-two .x-docked-top .x-tab.x-tab-active{background-color: inherit; border-bottom:2px solid #3aaeae !important;}
+.liftnet-tabbar-two .x-docked-top .x-tab.x-tab-active .x-button-label{color:#323333;}
+.liftnet-tabbar-two .x-docked-top .x-tab .x-button-label{height:17px; line-height:17px;color:#9e9e9e}
+.liftnet-tabbar-two .x-docked-top .x-tab:first-child,.liftnet-tabbar-two .x-docked-top .x-tab:last-child{border-radius:0 !important}/* tabbar 第二层 over */
+.liftnet-tab { background-color:#3aaeae;border-color:#3aaeae;}/* TabBar */
+.liftnet-tab .x-tab{min-width: 25%; margin:0;}
+.liftnet-tab-33 .x-tab{min-width: 33.33% !important;}
+.liftnet-tab .x-tabbar{}
+.liftnet-tab .x-tab.x-tab-active .x-button-icon:before, .x-tab.x-tab-active .x-button-label, .x-tab.x-tab-active .x-badge{ color:#fff}
+.liftnet-tab .x-button-icon{ color:#fff;}
+.liftnet-tab .x-tab .x-button-label{ color:#60d4d4;}
+.liftnet-tab .x-tab.x-tab-active .x-button-label{ color:#fff !important;}
+.liftnet-tab .x-tab .x-button-icon{-webkit-text-stroke-color: #60d4d4; width:29px;}
+.liftnet-search-form{height:54px !important;border-bottom: solid 1px #f5f5f6;}/* 搜索框 start */
+.liftnet-search-form .x-field{margin:10px 0;}
+.liftnet-search-form .x-scroll-container{background-color:#fff;}
+.liftnet-search-form .x-input-el{width:inherit;}
+.liftnet-search-form .x-form-label{padding:10px;}
+.liftnet-search-form .x-component-outer{margin:0 10px;}
+.liftnet-search-form input{padding:6px;min-height:34px;background-color:#f6f7f8; border-radius:20px; font-size:12px;}/* 搜索框 over */
+.liftnet-fontColor-white{color:#ffffff !important}  /* 字体颜色 白 */
+.liftnet-fontColor-black{color:#444444}  /* 字体颜色 黑 */
+.liftnet-fontColor-red{color:#ff6c6c}    /* 字体颜色 红 */
+.liftnet-fontColor-orange{color:#fe9338} /* 字体颜色 橙 */
+.liftnet-fontColor-purple{color:#7134A0} /* 字体颜色 紫 */
+.liftnet-fontColor-green{color:#3aaeae}  /* 字体颜色 绿 */
+.liftnet-fontColor-blue{color:#65c2df}   /* 字体颜色 蓝 */
+.liftnet-fontColor-gray{color:#9e9e9e}   /* 字体颜色 灰 */
+.liftnet-fontColor-darkGray,.liftnet-fontColor-darkGray .x-button-label,.liftnet-fontColor-darkGray .x-button-icon{color:#747474}   /* 字体颜色 深灰 */
+.liftnet-fontColor-green,.liftnet-fontColor-green .x-button-label,.liftnet-fontColor-green .x-button-icon{color:#3aaeae}   /* 字体颜色 深灰 */
+.liftnet-fontColor-white,.liftnet-fontColor-white .x-button-label,.liftnet-fontColor-white .x-button-icon{color:#fff}   /* 字体颜色 白 */
+.liftnet-font-size12{font-size:12px}    /* 字体大小 12px */
+.liftnet-font-size14{font-size:14px}    /* 字体大小 14px */
+.liftnet-font-size16{font-size:16px}    /* 字体大小 16px */
+.liftnet-font-size24{font-size:24px}    /* 字体大小 24px */
+.liftnet-font-left{text-align:left}     /* 字体居左 */
+.liftnet-font-right{text-align:right}   /* 字体居右 */
+.liftnet-font-center{text-align:center} /* 字体居中 */
+.liftnet-lineHeight34,.liftnet-lineHeight34 input{line-height:34px !important;}   /* 行高 24px */
+.liftnet-bgColor-white{background-color:#fff !important;}     /* 背景颜色 白 */
+.liftnet-bgColor-black{background-color:#fff !important;}     /* 背景颜色 黑 */
+.liftnet-bgColor-red{background-color:#ff6c6c !important;}    /* 背景颜色 红 */
+.liftnet-bgColor-orange{background-color:#fe9338 !important;} /* 背景颜色 橙 */
+.liftnet-bgColor-purple{background-color:#bfa5d3 !important;} /* 背景颜色 紫 */
+.liftnet-bgColor-green{background-color:#3aaeae !important;}  /* 背景颜色 绿 */
+.liftnet-bgColor-blue{background-color:#65c2df !important;}   /* 背景颜色 蓝 */
+.liftnet-bgColor-gray{background-color:#f7f7f7 !important;}   /* 背景颜色 灰 */
+.liftnet-bgColor-dark{background-color:#cccccc !important;}   /* 背景颜色 深灰 */
+.liftnet-buttonColor-red{background-color:#ff6c6c !important; border:#ff6c6c !important;}     /* 按钮颜色 红 */
+.liftnet-buttonColor-green{background-color:#3aaeae !important; border:#3aaeae !important;}   /* 按钮颜色 绿 */
+.liftnet-buttonColor-blue{background-color:#65c2df !important; border:#65c2df !important;}    /* 按钮颜色 蓝 */
+.liftnet-buttonColor-gray{background-color:#9e9e9e !important; border:#9e9e9e !important;}    /* 按钮颜色 灰 */
+.liftnet-button{padding:13px;height:60px;border-top:1px solid #e6e6e7; background-color:#fff}  /* 单、双按钮公共样式 */
+.liftnet-button .x-button-normal{border-color:#65c2df; background-color:#65c2df;}
+.liftnet-button .x-button-label{color:#FFF;}
+.liftnet-button .x-button{ height:34px; line-height:32px;}
+.liftnet-button-one .x-button-normal{width:100%;} /* 单按钮 */
+.liftnet-button-two .x-button-normal{width:48%;}  /* 双按钮 */
+.liftnet-button-three .x-button-normal{width:32%; padding:0; margin-right: 8px;}  /* 三按钮 */
+.liftnet-button-blue .x-button-normal{border-color:#65c2df; background-color:#65c2df; margin:11px;}  /* 其他按钮样式 */
+.liftnet-button-blue .x-button-normal .x-button-label{color:#FFF !important; font-size:14px;}
+.liftnet-button-three .liftnet-button-threeBut{ border-radius:17px; background-color:#f7f7f7;border:#f7f7f7;}
+.liftnet-button-three .liftnet-button-threeBut .x-button-label{color:#65c2df !important; font-size:12px; width:100%}
+.liftnet-button-three .liftnet-button-threeBut .liftnet-button-threeBut-round{background-color:#65c2df;width:34px; height:34px; border-radius:17px;}
+.liftnet-button-three .liftnet-button-threeBut .liftnet-button-threeBut-left{float:left;}
+.liftnet-button-three .liftnet-button-threeBut .liftnet-button-threeBut-right{float:right;}
+.liftnet-button .x-buttonColor-gray{background-color:#dadada; border-color:#dadada;}  /* 按钮 灰色 */
+.liftnet-button .x-buttonColor-white{background-color:#ffffff; border-color:#ffffff;}  /* 按钮 白色 */
+.liftnet-button .x-buttonColor-white .x-button-icon, .liftnet-button .x-buttonColor-white .x-button-label{color:#3aaeae;}  /* 按钮 白色 */
+.liftnet-form-info{}  /* 内容页的信息 start */
+.liftnet-form-info .x-field{border-bottom: solid 1px #f5f5f6;}
+.liftnet-form-info .x-input-el{text-align:right;}  /* 内容页的信息 over */
+.liftnet-border-radius50{border-radius:50%;}  /* 圆角50% */
+.x-list .x-list-item.x-item-selected.x-list-item-tpl{background-color: #f0f0f0 !important;}
+.x-list-item.x-list-item-tpl:before{border-bottom:solid 1px #f5f5f6 !important;}/* list 下划线颜色 */
+.liftnet-con-title{ padding:0 10px;height:32px;line-height:32px;background-color:#f4f4f4;color:#9e9e9e}  /* 内容 标题 */
+.liftnet-con-top{ margin:10px 20px 20px 20px;} /* 内容 顶部 */
+.liftnet-con-top .liftnet-con-icon{margin:10px auto;width:64px;height:64px;} /* 内容 图标 */
+.liftnet-remind{position:absolute;top:0;left:0; padding:0 0 0 4px;width:26px;height:26px; color:#fff;}  /* list左上角提示 start */
+.liftnet-remindBg{position:absolute;top:0;left:0;border-right:solid 34px #fff;height:0px;width:0px;}
+.liftnet-remindBg-red{border-top:solid 34px #ff6c6c;}   /* 角标背景颜色 红 */
+.liftnet-remindBg-orange{border-top:solid 34px #fe9338;}  /* 角标背景颜色 橙 */  /* list左上角提示 over */
+.liftnet-list-button{ border-radius:0;} /* list出现按钮的样式 */
+.liftnet-list-button .x-button-label{ color:#fff !important;} 
+/* spinner重写 start */
+.x-spinner .x-spinner-button.x-spinner-button-down,.x-spinner .x-spinner-button.x-spinner-button-up{background-color: #dcf6f6;color:#3aaeae}
+.x-spinner .x-spinner-button{ margin:10px 10px 0 15px !important;width: 1.2em;height:1.2em; border:0;border-radius:1.2em; line-height:0.8em !important;}
+.x-spinner.x-field-grouped-buttons .x-input-el{ text-align:right; text-indent:10px;}
+/* spinner重写 over */
+.liftnet-no-border{border:0 !important;}  /* list出现按钮的样式 */
+.x-tab .x-badge{ top:-2px;left:auto;right:8px;overflow:hidden;min-width:1px; width:20px; height:20px;font-size:13px;}  /* 提示 重写 */
+.liftnet-badge .x-badge{top:0px;left:auto;right:10%;margin:8px;width:18px;height:18px;font-size:13px !important;line-height:16px !important;overflow:scroll;color:#fff !important;} /* spinner弹出框 */
+.x-msgbox{ background-color:#fff;  background-image:none; border-radius:3px;}
+.x-msgbox .x-msgbox-buttons .x-toolbar-inner .x-button{border-color:#f5f5f6;}
+
+.liftnet-float-left{float:left; clear:none;}
+.liftnet-float-right{float:right; clear:none;}
+.liftnet-margin-right12{margin-right:12px;}
+.x-toggle{float:right;}
+.x-form .x-scroll-container{background-color:#fff;} /* form背景颜色 */
+.liftnet-shade{ position:absolute; z-index:999; bottom:0; left:0; width:100%; height:36px;}  /* 百度地图遮罩 */
+.x-toolbar.x-docked-top{ border-radius:0 !important;}
+.x-scroll-bar-x.active {width: 2px;}   /*  滚动条 */
+.x-scroll-bar-y.active {width: 2px;}
+.liftnet-nav-badge .x-badge {top:9px;} /* 导航菜单按钮的角标位置 */
+
+/* 列表下拉刷新：去掉箭头和圆环；调整文字颜色。*/
+.x-list-pullrefresh-message, 
+.x-list-pullrefresh-wrap { color: #9e9e9e; }
+.x-list-pullrefresh-arrow, 
+.x-list-pullrefresh-loading *.x-loading-spinner { display: none; }
+
+/* 红色/绿色的toggle，用于困人标志
+用法：maxValueCls: 'x-toggle-on-red' */
+.x-toggle-on-red {
+    background-color: #ff6c6c;
+    border-color: #ff6c6c;
+}
+.x-toggle-on-red:before {
+    background-color: #ff6c6c;
+}
+.x-toggle-off-green {
+    background-color: #3aaeae;
+    border-color: #3aaeae;
+}
+.x-toggle-off-green:before {
+    background-color: #3aaeae;
+}
+.x-toggle-readonly .x-toggle .x-thumb { 
+    display: none;
+}
+
+/* 按钮样式 */
+.x-button-normal.x-button-pressing .x-button-label,
+.x-button.x-button-action.x-button-pressing .x-button-label{
+    filter:alpha(opacity=75);-moz-opacity:0.75;-khtml-opacity: 0.75;opacity: 0.75;
+}
+.x-button-pressing{filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;}
+
+/* Picker 效果 */
+.x-picker-mask {
+    background: -webkit-linear-gradient(top, 
+        rgba(255, 255, 255, 0.95), 
+        rgba(255, 255, 255, 0.8), 
+        rgba(255, 255, 255, 0.7), 
+        rgba(255, 255, 255, 0), 
+        rgba(255, 255, 255, 0.7), 
+        rgba(255, 255, 255, 0.8), 
+        rgba(255, 255, 255, 0.95)
+        );
+}
+
+/* 列表项选中样式 */
+.liftnet .x-list .x-list-item.x-item-selected.x-list-item-tpl{background-color: #6bc2c2 !important;}
+.liftnet .x-list .x-list-item.x-item-selected.x-list-item-tpl .liftnet-fontColor-darkGray,
+.liftnet .x-list .x-list-item.x-item-selected.x-list-item-tpl .liftnet-fontColor-gray {color: #fff !important;}
+
+/* 多行输入框文字位置fix */
+.x-field-textarea textarea { padding-top: 1.1em; }
+
+/* “必填”标志 - 红色 */
+.x-field-required .x-form-label:after { color: #ff6c6c; margin-left: 4px; content: "*"; }
+
+/* 选择字段的lable后加入“放大镜”图标 */
+/* Picker字段的lable后加入“Grid”图标 */
+/* 日期字段的lable后加入“日历”图标 */
+.x-field-search .x-form-label:after { font-family:'FontAwesome'; color:#3aaeae; margin-left:4px; content:"\f002"; display:inline; }
+.x-field-picker .x-form-label:after { font-family:'FontAwesome'; color:#3aaeae; margin-left:4px; content:"\f03a"; display:inline; }
+.x-field-datetime .x-form-label:after { font-family:'FontAwesome'; color:#3aaeae; margin-left:4px; content:"\f073"; display:inline; }
+
+
+/* -------------------------
+公共 over
+------------------------- */
+
+/* -------------------------
+登录 start
+------------------------- */
+.liftnet-login .x-scroll-container{background-image:url(../images/login_bg.png);background-size:100%;background-color:#fff; background-repeat:no-repeat}
+.liftnet-login .x-form-fieldset .x-form-fieldset-inner{border:0;background-color:inherit;}
+.liftnet-login .x-form-fieldset .x-field:before{border-bottom: solid 1px #d3e0e6;left:0;}
+.liftnet-login .x-button-normal{height:42px;background-color:#3aaeae;}
+.liftnet-login .x-button-normal .x-button-label{color:#fff;}
+/* -------------------------
+登录 over
+------------------------- */
+
+/* -------------------------
+首页 start
+------------------------- */
+/* 首页 */
+.liftnet-home .liftnet-home-topbox {background-color:#f6f7f8;border-bottom: solid 1px #dbdbe0;}
+.liftnet-home .liftnet-home-topbox .liftnet-home-topbox-number{margin-top:26px;}
+.liftnet-home .liftnet-home-topbox .liftnet-home-topbox-user{margin-bottom:8px;}
+.liftnet-home .liftnet-home-topbox .liftnet-home-topbox-icon{margin:8px auto;height:74px;width:74px;}
+.liftnet-home .liftnet-home-fontScroll{background-color:#dcf5fa;}
+.liftnet-home-listBox .x-innerhtml{padding:0 !important;}/* 列表样式 */
+.liftnet-home-listBox .x-list-item.x-list-item-tpl:before{left:0 !important;}
+.liftnet-home-listConBox{position:relative;height:80px;}
+.liftnet-home-listConBox div{line-height:20px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.liftnet-home-listConBox .liftnet-home-listConBox-left{position:absolute;top:12px;left:26px;width:200px;}
+.liftnet-home-listConBox .liftnet-home-listConBox-right{position:absolute;top:12px;right:10px;width:130px;}
+.liftnet-home-listConBox .liftnet-home-listConBox-state{margin-bottom:20px;}
+.liftnet-home-rolling .x-innerhtml{line-height:28px;}
+.liftnet-home-rolling .x-innerhtml marquee{ width:100%;}
+/* 我的资料 */
+.liftnet-myInformation .liftnet-myInformation-top{background-image: url(../images/myinfo_bg.png);background-position: 0 80%;background-repeat: no-repeat; background-clip: border-box; overflow:hidden; background-size:100% auto;}
+.liftnet-myInformation .liftnet-myInformation-top-blur{background-image: url(../images/home_icon.png);background-position: 0 80%;background-repeat: no-repeat; -webkit-filter: blur(30px);background-clip: border-box; overflow:hidden; background-size:100% auto;}
+.liftnet-myInformation .liftnet-myInformation-head{position:absolute; top:50px; left:0; right:0; margin:auto; background-image:url(../images/home_iconBg.png)
+}
+.liftnet-myInformation .liftnet-myInformation-photograph{position: absolute; right: 8px;top: 8px; padding: 0 5px; width:26px; height:26px; font-size:14px;}
+.liftnet-myInformation .liftnet-myInformation-inputBox{border-bottom: 1px solid #f5f5f6;}
+.liftnet-myInformation .liftnet-myInformation-inputBox .x-panel-inner{margin:0 auto;width:130px;padding: 10px 0;}
+.liftnet-myInformation .x-input-el{padding:0px;color:#3aaeae}
+.liftnet-myInformation .x-form .x-scroll-container{background-color:#fff;}
+/* 消息 */
+.liftnet-news{background-color:#f4f4f4;overflow:hidden}
+.liftnet-news .x-innerhtml{padding:0 !important;}/* 列表样式 */
+.liftnet-news .liftnet-news-list{ position:relative;margin-top:50px; padding:40px 32px 10px 32px;background-color:#fff;}
+.liftnet-news .liftnet-news-list div{ line-height:22px;}
+.liftnet-news .liftnet-news-list .liftnet-news-listCon{text-indent:26px;}
+.liftnet-news .liftnet-news-list .liftnet-news-listIcon{position:absolute; left:22px; top:-20px; width:46px; height:46px;}
+/* 导航 */
+.liftnet-homeNav{overflow:hidden; border-radius:0 !important;}
+.liftnet-homeNav .liftnet-homeNav-top{border-bottom:1px solid #3aaeae;}
+.liftnet-homeNav .liftnet-homeNav-top .x-label{line-height:18px;}
+.liftnet-homeNav .liftnet-homeNav-ButtonBox{ padding:10px 0;border-bottom:1px solid #ccc;}
+.liftnet-homeNav .liftnet-homeNav-ButtonBox .x-button-label{ text-align:left; text-indent:20px; color:#000 !important; font-size:14px;}
+.liftnet-homeNav .liftnet-homeNav-ButtonBox .x-button-normal{ border:0 !important}
+.liftnet-homeNav .liftnet-homeNav-ButtonBox .x-button{padding:0; margin:5px 0;}
+.liftnet-homeNav .liftnet-homeNav-ButtonBox .x-button-icon{ color:#bbb;}
+/* -------------------------
+首页 over
+------------------------- */
+
+/* -------------------------
+实时监控 start
+------------------------- */
+.liftnet-monitor .liftnet-monitor-sign{border:1px solid;}
+.liftnet-monitor .liftnet-monitor-sign-border01{ width:200px; height:200px;border-color:#d9f2f2;margin:auto;}
+.liftnet-monitor .liftnet-monitor-sign-border02{ width:170px; height:170px;border-color:#aadcdc;margin:15px;}
+.liftnet-monitor .liftnet-monitor-sign-border03{ width:140px; height:140px;border-color:#3aaeae;margin:15px;}
+.liftnet-monitor .liftnet-monitor-sign .x-innerhtml{ line-height:140px; font-size:40px;}
+/* 地图 */
+.liftnet-monitor .liftnet-monitor-map .x-innerhtml{height:100%}
+.x-inner .x-innerhtml{height:100%}
+/* 电梯列表 */
+.liftnet-monitor-listBox .x-innerhtml{padding:0 !important;}/* 列表样式 */
+.liftnet-monitor-listBox .x-list-item.x-list-item-tpl:before{left:0 !important;}
+.liftnet-monitor-listConBox{position:relative;height:60px;}
+.liftnet-monitor-listConBox div{line-height:20px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.liftnet-monitor-listConBox .liftnet-monitor-listConBox-left{position:absolute;top:12px;left:26px;width:200px;}
+.liftnet-monitor-listConBox .liftnet-monitor-listConBox-right{position:absolute;top:20px;right:10px;width:70px;}
+/* 电梯信息 */
+.liftnet-monitor-elevatorDetail-listBox .x-innerhtml{padding:0 !important;}/* 列表样式 */
+.liftnet-monitor-elevatorDetail-listBox .x-list-item.x-list-item-tpl:before{left:0 !important;}
+.liftnet-monitor-elevatorDetail-listConBox{position:relative; padding:10px;}
+.liftnet-monitor-elevatorDetail-listConBox div{line-height:20px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.liftnet-monitor-elevatorDetail-listConBox .liftnet-monitor-listConBox-top{ padding:8px 0;}
+.liftnet-monitor-elevatorDetail-listConBox .liftnet-monitor-listConBox-top-left{ float:left;}
+.liftnet-monitor-elevatorDetail-listConBox .liftnet-monitor-listConBox-top-right{ float:right;}
+/* 我的轨迹 */
+.liftnet-monitor-track {}
+.liftnet-monitor-track .x-scroll-scroller{ padding-top:15px}
+.liftnet-monitor-track .x-innerhtml{padding:0 1.2em !important;}/* 列表样式 */
+.liftnet-monitor-track .x-list-item.x-list-item-tpl:before{ display:none;}
+.liftnet-monitor-trackListBox{border-left:1px solid #3aaeae; padding-bottom:15px !important;}
+.liftnet-monitor-trackListBox h1{ margin:0 0 10px 0;text-indent:8px;font-size:14px;line-height:19px;}
+.liftnet-monitor-trackListBox h1 img{float:left; margin:0px 0 0 -10px; width:20px; height:20px;}
+.liftnet-monitor-trackListBox div{line-height:31px;text-indent:4px;}
+.liftnet-monitor-trackListBox span{ margin:15px 5px 15px 0;width:10px;height:1px;background-color:#3aaeae; display:block; float:left;}
+
+
+/* -------------------------
+实时监控 over
+------------------------- */
+
+
+/* -------------------------
+故障业务 start
+------------------------- */
+.liftnet-fault-listBox .x-innerhtml{padding:0 !important;}/* 列表样式 */
+.liftnet-fault-listBox .x-list-item.x-list-item-tpl:before{left:0 !important;}
+.liftnet-fault-listConBox{position:relative;height:95px;}
+.liftnet-fault-listConBox div{line-height:20px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.liftnet-fault-listConBox .liftnet-fault-listConBox-left{position:absolute;top:12px;left:26px;width:200px;}
+.liftnet-fault-listConBox .liftnet-fault-listConBox-right{position:absolute;top:20px;right:10px;width:100px;}
+/* 派工 */
+.liftnet-fault-staffList{height:36px;line-height:36px;}
+.liftnet-fault-staffList .liftnet-fault-staffList-left{float:left;margin-right:5%;width:55%;}
+.liftnet-fault-staffList .liftnet-fault-staffList-right{float:right;width:40%;text-align:right;}
+/* 任务进度 */
+.liftnet-fault-quarterState{float:right;padding:0 6px;height:19px; width:48px; text-align:center;line-height:19px !important;text-indent:0 !important;font-size:12px; border-radius: 3px;}
+.liftnet-monitor-trackListBox img{ width:120px; height:120px;}
+
+.liftnet-fault-track{}
+.liftnet-fault-trackBox {margin:0 20px;border-left:1px solid #3aaeae;}
+.liftnet-fault-trackTop{margin:0;text-indent:8px;font-size:14px;line-height:19px;}
+.liftnet-fault-trackTop .x-innerhtml{ line-height:30px;}
+.liftnet-fault-trackTop .liftnet-fault-trackTop-img{float:left; margin:5px 0 0 -10px; width:20px; height:20px;}
+.liftnet-fault-trackTop .liftnet-fault-trackTopEnd-img{float:left; margin:10px 0 0 -5px; width:9px; height:9px;}
+.liftnet-fault-trackTop .liftnet-fault-trackTop-but{ margin:5px 0;width:50px; height:20px; line-height:20px; text-indent:0;font-size:12px;background-color:#ccc;border:0px;}
+.liftnet-fault-trackTop .liftnet-fault-trackTop-but .x-button-label{color:#fff;}
+.liftnet-fault-trackTop .liftnet-fault-trackTop-title .x-innerhtml{width:180px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.liftnet-fault-trackListBox{ padding-bottom:10px !important;}
+.liftnet-fault-trackListBox div{line-height:31px;text-indent:4px; color:#9e9e9e}
+.liftnet-fault-trackListBox span{ margin:15px 5px 15px 0;width:10px;height:1px;background-color:#3aaeae; display:block; float:left;}
+.liftnet-fault-trackListBox img{margin-top:10px;width:120px;height:120px;}
+
+/* -------------------------
+故障业务 over
+------------------------- */
+
+
+/* -------------------------
+保养业务 start liftnet-Maintenance-TaskRecList
+------------------------- */
+/* 保养任务list */
+.liftnet-Maintenance-BYWorkList{position:relative;height:80px;}
+.liftnet-Maintenance-BYWorkList div{line-height:20px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.liftnet-Maintenance-BYWorkList .liftnet-Maintenance-BYWorkList-left{position:absolute;top:12px;left:26px;width:200px;}
+.liftnet-Maintenance-BYWorkList .liftnet-Maintenance-BYWorkList-right{position:absolute;top:12px;right:10px;width:130px;}
+
+.liftnet-Maintenance-BYWorkList .liftnet-Maintenance-listConBox-state{margin-bottom:20px;}
+
+/* 保养任务 派工单 */
+.liftnet-Maintenance-TaskRecList{position:relative;height:100px;}
+.liftnet-Maintenance-TaskRecList div{line-height:20px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.liftnet-Maintenance-TaskRecList .liftnet-Maintenance-TaskRecList-left{position:absolute;top:12px;left:26px;width:200px;}
+.liftnet-Maintenance-TaskRecList .liftnet-Maintenance-TaskRecList-right{position:absolute;top:12px;right:10px;width:130px;padding-top:20px;}
+
+/*保养任务 分派*/
+.liftnet-Maintenance-BYTaskList{position:relative;height:80px;}
+.liftnet-Maintenance-BYTaskList div{line-height:20px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.liftnet-Maintenance-BYTaskList .liftnet-Maintenance-BYTaskList-left{position:absolute;top:12px;left:16px;width:210px;}
+.liftnet-Maintenance-BYTaskList .liftnet-Maintenance-BYTaskList-right{position:absolute;top:12px;right:10px;width:130px;padding-top:40px;}
+
+/* 处理任务list */
+.liftnet-Maintenance-handleList{height:70px}
+.liftnet-Maintenance-handleList div{line-height:20px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.liftnet-Maintenance-handleList .liftnet-Maintenance-handleList-left{ float:left;width:30%;}
+.liftnet-Maintenance-handleList .liftnet-Maintenance-handleList-left img{margin:2px 10px;width:66px;height:66px;}
+.liftnet-Maintenance-handleList .liftnet-Maintenance-handleList-right{ float:right;margin:5px 0;width:70%;}
+/* 接收计划list */
+.liftnet-Maintenance-receiveList{ height:40px;}
+.liftnet-Maintenance-receiveList div{line-height:20px;}
+.liftnet-Maintenance-receiveList .liftnet-Maintenance-receiveList-left{ float:left;width:60%;}
+.liftnet-Maintenance-receiveList .liftnet-Maintenance-receiveList-right{ float:right;width:40%;}
+.liftnet-Maintenance-receiveList .liftnet-Maintenance-progressBox,.liftnet-Maintenance-receiveList .liftnet-Maintenance-progress{ height:5px; border-radius:3px;}
+.liftnet-Maintenance-receiveList .liftnet-Maintenance-progressBox{float:right; margin:8px 0 0 0;width:80px;background-color:#eaeaea;}
+.liftnet-Maintenance-receiveList .liftnet-Maintenance-progress{float:left;}
+/* 保养明细 */
+.liftnet-Maintenance-detailList{ height:60px;}
+.liftnet-Maintenance-detailList div{line-height:20px;}
+.liftnet-Maintenance-detailList .liftnet-Maintenance-detailList-left{ float:left;width:70%;}
+.liftnet-Maintenance-detailList .liftnet-Maintenance-detailList-right{ float:right;width:30%;}
+/* -------------------------
+保养业务 over
+------------------------- */
+
+
+
+
+
+
+
+
+/* ------------------------- 管理 start ------------------------- */
+/* -------------------------
+首页 start
+------------------------- */
+/* 首页 */
+.liftnet-aHome .liftnet-aHome-topbox {background-color:#f6f7f8;border-bottom: solid 1px #dbdbe0;}
+.liftnet-aHome .liftnet-aHome-topbox .liftnet-aHome-topbox-number{margin-top:26px;}
+.liftnet-aHome .liftnet-aHome-topbox .liftnet-aHome-topbox-user{margin-bottom:8px;}
+.liftnet-aHome .liftnet-aHome-topbox .liftnet-aHome-topbox-icon{margin:8px auto;height:74px;width:74px;}
+.liftnet-aHome .liftnet-aHome-fontScroll{background-color:#dcf5fa;}
+.liftnet-aHome-listBox .x-innerhtml{padding:0 !important;}/* 列表样式 */
+.liftnet-aHome-listBox .x-list-item.x-list-item-tpl:before{left:0 !important;}
+.liftnet-aHome-listConBox{position:relative;height:80px;}
+.liftnet-aHome-listConBox div{line-height:20px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.liftnet-aHome-listConBox .liftnet-aHome-listConBox-left{position:absolute;top:12px;left:26px;width:200px;}
+.liftnet-aHome-listConBox .liftnet-aHome-listConBox-right{position:absolute;top:12px;right:10px;width:70px;}
+.liftnet-aHome-listConBox .liftnet-aHome-listConBox-state{margin-bottom:20px;}
+.liftnet-aHome .liftnet-aHome-rolling .x-innerhtml{line-height:28px;}
+.liftnet-aHome .liftnet-aHome-rolling .x-innerhtml marquee{ width:100%;}
+/* 地图 */
+.liftnet-aHome-map .x-innerhtml{height:100%}
+/* 数据图dataView */
+.liftnet-aHome-data{margin:18px 5px;}
+.liftnet-aHome-data .liftnet-aHome-dataBox{float:left; margin:5px 2%;width:45%;height:62px; border-radius:5px;}
+.liftnet-aHome-data:after{content:".";height:0;visibility:hidden;display:block;clear:both;}
+.liftnet-aHome-data .liftnet-aHome-dataBox-numberBox{padding:0 4px;height:40px;}
+.liftnet-aHome-data .liftnet-aHome-dataBox-number{float:right;padding:5px 0;font-size:20px; line-height:28px; text-align:right;}
+/*{float:right;width:90px;padding:5px 0;font-size:24px; text-align:right;}*/
+.liftnet-aHome-data .liftnet-aHome-dataBox-numberBox span{ margin-left:3px;font-size:12px;}
+.liftnet-aHome-data .liftnet-aHome-dataBox-icon{float:left;padding:6px 4px;font-size:24px;}
+.liftnet-aHome-data .liftnet-aHome-dataBox-titleBox{padding:0 4px;height:20px;line-height:20px; text-align:right; background-color:#fff; font-size:12px; color:#ff6c6c; border-bottom-right-radius:5px; border-bottom-left-radius:5px;}
+.liftnet-aHome-data .liftnet-aHome-dataBox-red{border:#ff6c6c 1px solid; background-color: #ff6c6c}/* 红色按钮*/
+.liftnet-aHome-data .liftnet-aHome-dataBox-red .liftnet-aHome-dataBox-titleBox{color:#ff6c6c;}
+.liftnet-aHome-data .liftnet-aHome-dataBox-green{border:#3aaeae 1px solid; background-color: #3aaeae}/* 绿色按钮*/
+.liftnet-aHome-data .liftnet-aHome-dataBox-green .liftnet-aHome-dataBox-titleBox{color:#3aaeae;}
+.liftnet-aHome-data .liftnet-aHome-dataBox-blue{border:#65c2df 1px solid; background-color: #65c2df}/* 蓝色按钮*/
+.liftnet-aHome-data .liftnet-aHome-dataBox-blue .liftnet-aHome-dataBox-titleBox{color:#65c2df;}
+.liftnet-aHome-data .liftnet-aHome-dataBox-orange{border:#fe9338 1px solid; background-color: #fe9338}/* 橙色按钮*/
+.liftnet-aHome-data .liftnet-aHome-dataBox-orange .liftnet-aHome-dataBox-titleBox{color:#fe9338;}
+/* 饼状图dataView */
+.liftnet-aHome-pie{border-top: 1px solid #c0c0c0;border-bottom: 1px solid #c0c0c0;}
+.liftnet-aHome-pie .liftnet-aHome-pieBox{padding:20px 0;height:60px;border-bottom: solid 1px #f5f5f6;}
+.liftnet-aHome-pie .liftnet-aHome-pieLeft{float:left;width:80%}
+.liftnet-aHome-pie .liftnet-aHome-pieLeft .liftnet-aHome-pieLeft-title,.liftnet-aHome-pie .liftnet-aHome-pieLeft .liftnet-aHome-pieLeft-con, .liftnet-aHome-pie .liftnet-aHome-pieLeft .liftnet-aHome-pieLeft-con div{line-height:20px;}
+.liftnet-aHome-pie .liftnet-aHome-pieLeft .liftnet-aHome-pieLeft-title{margin-bottom:10px;}
+.liftnet-aHome-pie .liftnet-aHome-pieLeft .liftnet-aHome-pieLeft-con{}
+.liftnet-aHome-pie .liftnet-aHome-pieLeft .liftnet-aHome-pieLeft-con div{float:left;margin-right:8px;}
+.liftnet-aHome-pie .liftnet-aHome-pieLeft .liftnet-aHome-pieLeft-con div span{ float:left; margin:7px 4px 0 0; width:6px; height:6px;display:block;border-radius:3px; background-color:#333;}
+.liftnet-aHome-pie .liftnet-aHome-pieRight{float:right;width:20%; min-width:50px;height:50px;}
+.liftnet-aHome-pie .liftnet-aHome-pieRight canvas{float:right;}
+
+/* 进度图dataView */
+.liftnet-aHome-cross{margin:10px 0; border-bottom:1px solid #c0c0c0;}
+.liftnet-aHome-cross .liftnet-aHome-crossBox{padding:10px 0;height:66px;}
+.liftnet-aHome-cross .liftnet-aHome-crossBox-titleBox{margin-bottom:10px;}
+.liftnet-aHome-cross .liftnet-aHome-crossBox-title{float:left;width:80%;}
+.liftnet-aHome-cross .liftnet-aHome-crossBox-title i{margin-right:10px;}
+.liftnet-aHome-cross .liftnet-aHome-crossBox-number{float:right;width:20%;}
+.liftnet-aHome-cross .liftnet-aHome-crossBox-percentBox{position:relative;margin-top:6px;height:16px; line-height:16px;border-radius:3px;}
+.liftnet-aHome-cross .liftnet-aHome-crossBox-percent{position:absolute;top:0;left:0;width:35%;height:16px;z-index:1;}
+.liftnet-aHome-cross .liftnet-aHome-crossBox-word{position:absolute;top:0;left:0;right:0;bottom:0;z-index:99;}
+/* 报表dataView */
+.liftnet-aHome-list{margin:10px 10px}
+.liftnet-aHome-list .liftnet-aHome-listBox{padding:10px 0;height:64px; border-bottom:solid 1px #f5f5f6;}
+.liftnet-aHome-list .liftnet-aHome-listBox-titleBox{margin-bottom:10px; height:16px;}
+.liftnet-aHome-list .liftnet-aHome-listBox-title{float:left;width:80%;}
+.liftnet-aHome-list .liftnet-aHome-listBox-title i{margin-right:10px;}
+.liftnet-aHome-list .liftnet-aHome-listBox-state{float:right;width:20%;}
+.liftnet-aHome-list .liftnet-aHome-listBox-conBox{height:16px;}
+.liftnet-aHome-list .liftnet-aHome-listBox-con{float:left;width:65%; text-indent:20px;}
+.liftnet-aHome-list .liftnet-aHome-listBox-time{float:right;width:35%;}
+
+
+
+
+/* -------------------------
+故障业务 start
+------------------------- */
+/* 任务进度 */
+.liftnet-fault-quarterState{float:right;padding:0 6px;height:19px; width:48px; text-align:center;line-height:19px !important;text-indent:0 !important;font-size:12px; border-radius: 3px;}
+.liftnet-monitor-trackListBox img{ width:120px; height:120px;}
+/* -------------------------
+故障业务 over
+------------------------- */
+
+
+/* -------------------------
+保养业务 start
+------------------------- */
+.liftnet-Maintenance-receiveList .liftnet-Maintenance-progressBox{float:right; margin:8px 0 0 0;width:80px;background-color:#eaeaea;}
+.liftnet-Maintenance-receiveList .liftnet-Maintenance-progress{float:left;}
+/* 保养明细 */
+.liftnet-Maintenance-detailList{ height:60px;}
+.liftnet-Maintenance-detailList div{line-height:20px;}
+.liftnet-Maintenance-detailList .liftnet-Maintenance-detailList-left{ float:left;width:70%;}
+.liftnet-Maintenance-detailList .liftnet-Maintenance-detailList-right{ float:right;width:30%;}
+/* -------------------------
+保养业务 over
+------------------------- */
+
+/* -------------------------
+报表 start
+------------------------- */
+.liftnet-report{}
+.liftnet-report-table{margin-bottom:8px;height:170px;}
+.liftnet-report-table .liftnet-report-table-top{height:39px;line-height:39px;border-left: 2px solid;border-bottom:1px solid #eeeff2;}
+.liftnet-report-table .liftnet-report-table-top i{margin:10px;}
+.liftnet-report-table .liftnet-report-table-lsitBox{height:127px;}
+.liftnet-report-table .liftnet-report-table-lsitBox .x-list-disclosure{margin: 18px 15px;}
+.liftnet-report-table .liftnet-report-table-lsitBox .liftnet-report-table-lsit{}
+.liftnet-report-table .liftnet-report-table-lsitBox .liftnet-report-table-lsitCon{margin-right:10px;height:20px;}
+.liftnet-report-table .liftnet-report-table-lsitBox div{line-height:20px;}
+/* -------------------------
+报表 over
+------------------------- */
+
+
+/* -------------------------
+审批模块 start
+------------------------- */
+/* 列表明细 */
+.liftnet-aApprove-listBox .x-innerhtml{padding:0 !important;}/* 列表样式 */
+.liftnet-aApprove-listBox .x-list-item.x-list-item-tpl:before{left:0 !important;}
+.liftnet-aApprove-listConBox{position:relative; padding:10px;}
+.liftnet-aApprove-listConBox div{line-height:20px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.liftnet-aApprove-listConBox .liftnet-aApprove-listConBox-top{ padding:8px 0;}
+/* -------------------------
+审批模块 over
+------------------------- */
+
+/* ------------------------ 管理 over ------------------------- */
+
+
+
+/* -------------------------
+启动 start
+------------------------- */
+.liftnet-start{background-image:url(../images/start_bg.jpg);background-size:100% 100%;background-color:#fff; background-repeat:no-repeat}
+.liftnet-start .liftnet-start-logo{margin:80px auto 0 auto;width:210px; background-size:100%;}
+/* -------------------------
+启动 over
+------------------------- */
+
+
+/* ----- 新增图标 start----- */
+@font-face {font-family: 'icomoon';src:url('fonts/icomoon.eot?-gkb9o');src:url('fonts/icomoon.eot?#iefix-gkb9o') format('embedded-opentype'),url('fonts/icomoon.ttf?-gkb9o') format('truetype'),url('fonts/icomoon.woff?-gkb9o') format('woff'),url('fonts/icomoon.svg?-gkb9o#icomoon') format('svg');font-weight: normal;font-style: normal;}
+.x-tab .x-button-icon.fa::before, .x-button .x-button-icon.fa::before {font-family: FontAwesome;}
+.x-tab .x-button-icon.ln::before, .x-button .x-button-icon.ln::before {font-family: LiftNet;}
+.x-tab .x-button-icon.ln3::before, .x-button .x-button-icon.ln3::before {font-family: LiftNet3}
+/* ----- 新增图标 over----- */

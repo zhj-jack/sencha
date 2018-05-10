@@ -1,0 +1,96 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "liftnet-start"
+        ],
+        "designer|initialView": true,
+        "designer|userClassName": "Common.ComConnecting",
+        "id": "ComConnecting"
+    },
+    "name": "MyPanel10",
+    "designerId": "ca6bf52e-fecd-444b-a4ee-1725e794007d",
+    "cn": [
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-start-logo"
+                ],
+                "height": 201,
+                "src": "resources/images/login_logo.png"
+            },
+            "name": "MyImg2",
+            "designerId": "449cfa28-886c-4d7e-9f2d-73347ef89af1"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "html": "<center style='color:#00abab'><i class='fa fa-spinner fa-spin fa-2x'></i></center>",
+                "id": "ComConnecting_Loading",
+                "margin": "0 auto",
+                "width": 40
+            },
+            "name": "MyPanel44",
+            "designerId": "878d08fc-e7c4-45cf-bce9-efa4001b0dff"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-buttonColor-green"
+                ],
+                "hidden": true,
+                "iconCls": "fa fa-refresh liftnet-fontColor-white",
+                "id": "ComConnecting_Reload",
+                "itemId": "ComConnecting_Reload",
+                "labelCls": "liftnet-fontColor-white x-button-label ",
+                "margin": "20 auto",
+                "text": "重新连接服务器",
+                "width": 180
+            },
+            "name": "MyButton26",
+            "designerId": "c166c922-c271-496f-a11c-c06b048f3500",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onComConnection_ReloadTap",
+                        "implHandler": [
+                            "WL.Client.reloadApp();"
+                        ],
+                        "name": "tap"
+                    },
+                    "name": "onComConnection_ReloadTap",
+                    "designerId": "e0aac26a-005d-4cd1-8268-503baa9afb1a"
+                }
+            ]
+        }
+    ]
+}

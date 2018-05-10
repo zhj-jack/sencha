@@ -1,0 +1,94 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_kmfslist",
+        "storeId": "eng_kmfslist"
+    },
+    "name": "MyStore",
+    "designerId": "72cd989f-aa85-4b5c-b90b-25cfd12eecc0",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dswingid"
+            },
+            "name": "field497",
+            "designerId": "cfad1c81-5e58-40f6-a264-d4868aa2a860"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dswingname"
+            },
+            "name": "field498",
+            "designerId": "fa5187d5-792e-470d-ae79-0f17855c14b0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "parm = {userid: global.getUserId()};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/firstcheck/api/1.0/kmfslist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess(ret.data.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "",
+                    "    // 获取受信来源列表-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            dswingid: '1',",
+                    "            dswingname: '中分'",
+                    "        },",
+                    "        {",
+                    "            dswingid: '2',",
+                    "            dswingname: '旁分'",
+                    "        },",
+                    "        {",
+                    "            dswingid: '3',",
+                    "            dswingname: '直分'",
+                    "        }",
+                    "    ]);",
+                    "        onSuccess(3);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "3c7163c8-523e-49ac-b199-6dd2a3921f0f"
+        }
+    ]
+}

@@ -1,0 +1,152 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Admin.AdmMonitorPersonnelList",
+        "id": "AdmMonitorPersonnelList",
+        "layout": "vbox"
+    },
+    "name": "a_Monitor_PersonnelList",
+    "designerId": "af1f28f3-2366-4d8e-948c-90cce37f683c",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "人员列表"
+            },
+            "name": "MyToolbar5",
+            "designerId": "c3a52e1b-2526-4a41-bd78-4e7af2a55027",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "AdmMonitorPersonnelList_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton5",
+                    "designerId": "080998a6-4214-47f1-a5b3-85c4a4b9e903"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 1,
+                "scrollable": null
+            },
+            "name": "MyPanel7",
+            "designerId": "5477e2c6-cfd7-45ef-acee-fa116a28c04c",
+            "cn": [
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-search-form"
+                        ],
+                        "height": null,
+                        "scrollable": false
+                    },
+                    "name": "MyFormPanel1",
+                    "designerId": "75952c02-4fc8-4ff9-8d66-881c8738fa30",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-font-size12"
+                                ],
+                                "label": null,
+                                "labelWidth": null,
+                                "placeHolder": "员工姓名"
+                            },
+                            "name": "MySearchField",
+                            "designerId": "e26ee9dc-dfb5-4138-b56c-4f38927add25"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-monitor-listBox"
+                        ],
+                        "disableSelection": true,
+                        "id": "AdmMonitorPersonnelList_ListDetailed",
+                        "itemId": null,
+                        "layout|flex": 1,
+                        "pressedCls": " ",
+                        "store": "ss_guserlist"
+                    },
+                    "name": "MyList",
+                    "designerId": "8817dbe1-86f9-45e5-a4f5-7c7989815243",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"liftnet-monitor-listConBox\">",
+                                    "\t<div class=\"liftnet-monitor-listConBox-left z-index10\">",
+                                    "    \t<div class=\"liftnet-font-size16 liftnet-fontColor-darkGray\">{username} {phone}</div>",
+                                    "    \t<div class=\"liftnet-font-size12 liftnet-fontColor-gray\">{addr}</div>",
+                                    "    </div>",
+                                    "\t<div class=\"liftnet-monitor-listConBox-right z-index10\">",
+                                    "        <div class=\"liftnet-monitor-listConBox-state liftnet-font-right liftnet-font-size12 {statuscolor}\">{status} <i class=\"fa fa-circle-o\"></i></div>",
+                                    "    </div>",
+                                    "</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "c6b0f521-b679-4c40-8e2f-ecb486e640ff"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

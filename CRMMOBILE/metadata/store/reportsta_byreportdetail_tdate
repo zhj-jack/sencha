@@ -1,0 +1,176 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "reportsta_byreportdetail_tdate",
+        "storeId": "reportsta_byreportdetail_tdate"
+    },
+    "name": "reportsta_sxreportdetail_tdate1",
+    "designerId": "c4748e88-edf6-40f4-9df3-e34d061d1417",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "needcount",
+                "type": "string"
+            },
+            "name": "field77",
+            "designerId": "58b1a321-d038-4003-b6de-3895009ce844"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "hascount",
+                "type": "string"
+            },
+            "name": "field78",
+            "designerId": "a23a8e2e-e2f6-43c6-8a08-82f273217010"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "hasplanper",
+                "type": "string"
+            },
+            "name": "field79",
+            "designerId": "6effe92b-59db-4034-a35c-0a52c2e9a346"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "writecount",
+                "type": "string"
+            },
+            "name": "field81",
+            "designerId": "c24814c2-dcd9-43a8-8a06-ec1fd6cdb323"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "writecountper",
+                "type": "string"
+            },
+            "name": "field183",
+            "designerId": "0d466517-35af-457b-b7bf-156615219f40"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "//console.log(parm);",
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/reportsta/api/1.0/byreportdetail';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid: userid, date: parm};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 保养计划报表-演示数据",
+                    "    this.setData([",
+                    "    {",
+                    "        needcount: '4000',",
+                    "        hascount: '3800',",
+                    "        hasplanper: '95%',",
+                    "        writecount: '3600',",
+                    "        writecountper: '90%',",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "dea89fe9-4f7e-4716-bbb5-7fe2f13dfd64"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "4834ff3b-7eb0-4685-b421-3c3638a3836f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "f41ca8ca-1fb8-4be2-8938-f26acd011770"
+        }
+    ]
+}

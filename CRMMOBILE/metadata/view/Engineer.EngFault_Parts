@@ -1,0 +1,188 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngFault_Parts",
+        "id": "EngFault_Parts",
+        "layout": "vbox"
+    },
+    "name": "MyPanel48",
+    "designerId": "f4c48051-3887-44a9-a262-60ae49c714cb",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "更换件"
+            },
+            "name": "MyToolbar10",
+            "designerId": "dde909ee-c4e8-4026-8513-a5c35815787e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "Parts_ReBack",
+                        "text": null
+                    },
+                    "name": "MyButton40",
+                    "designerId": "b4c7bfd3-cf4b-4464-b636-cff208c31309"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-form-info",
+                    "liftnet-font-size14",
+                    "liftnet-lineHeight34"
+                ],
+                "id": "form_sxreport_parts",
+                "layout|flex": 1
+            },
+            "name": "MyFormPanel",
+            "designerId": "fbcceec0-3cf4-4175-8ff2-d06b7144ab1e",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "parts_materialsname",
+                        "itemId": "parts_materialsname",
+                        "label": "材料名称",
+                        "name": "materialsname",
+                        "placeHolder": "请输入材料名称",
+                        "required": true
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "df9024a4-b01e-46d5-903d-f76c74259229"
+                },
+                {
+                    "type": "Ext.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "parts_materialsnum",
+                        "itemId": "parts_materialsnum",
+                        "label": "数量",
+                        "name": "materialsnum",
+                        "placeHolder": "请输入数量",
+                        "required": true
+                    },
+                    "name": "MyNumberField",
+                    "designerId": "7551f1a6-4163-4ea9-8d7d-7693c4534544"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "parts_model",
+                        "itemId": "parts_model",
+                        "label": "规格",
+                        "name": "model",
+                        "placeHolder": "请输入规格"
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "d6d93bf0-291b-4b1f-9cc9-d874259836d0"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "parts_remark",
+                        "itemId": "parts_remark",
+                        "label": "备注",
+                        "name": "remark"
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "4011b6a3-d510-4ad8-94d9-49ba761c719e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "sxreportpart_index"
+            },
+            "name": "MyHiddenField43",
+            "designerId": "4d8c4f0b-c354-43d0-a120-c4d77511fcb2"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-button",
+                    "liftnet-button-one"
+                ],
+                "docked": "bottom"
+            },
+            "name": "MyPanel",
+            "designerId": "89eacf35-ed54-4147-bc21-4c9abe0b9bc5",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "id": "parts_saveBtn",
+                        "text": "保存"
+                    },
+                    "name": "MyButton3",
+                    "designerId": "c005713f-5aaa-4182-ae89-b87ea2b0d704"
+                }
+            ]
+        }
+    ]
+}

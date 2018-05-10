@@ -1,0 +1,569 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sx_sxdetailtoreport",
+        "storeId": "sx_sxdetailtoreport"
+    },
+    "name": "MyStore",
+    "designerId": "86f67f3a-219b-497f-8f98-29a19546b24f",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rpno"
+            },
+            "name": "field5",
+            "designerId": "ac89f3a9-1b70-412b-b61e-453ba736bfa2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prono"
+            },
+            "name": "field6",
+            "designerId": "c786233f-3bc5-4937-9b7a-29229cba1706"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field7",
+            "designerId": "6adea31e-2f40-4e4f-aab3-11adb73daf13"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status"
+            },
+            "name": "field8",
+            "designerId": "ec6bf2ea-8bba-4b86-8ef2-f076fa49628f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "trno"
+            },
+            "name": "field9",
+            "designerId": "00f225e5-95be-41ab-9fc6-9a0b75a5a075"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitaddress"
+            },
+            "name": "field10",
+            "designerId": "fa8ca14a-7556-4fef-8cce-742f1f1a8f8b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitlinker"
+            },
+            "name": "field11",
+            "designerId": "823b21a6-433b-49cc-8df0-4e55497b2e55"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "model"
+            },
+            "name": "field12",
+            "designerId": "45731281-976e-49e0-9ffa-1f6f77b4b9b2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "unitlinkephone"
+            },
+            "name": "field13",
+            "designerId": "5ffa18de-8a76-4292-9b89-3f03a17184bd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "accepttime"
+            },
+            "name": "field14",
+            "designerId": "cb34ab3d-f466-4c06-b4b1-c5797ba0e64d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "setouttime"
+            },
+            "name": "field15",
+            "designerId": "8e6aa23c-ca05-4e2f-9a0d-f917d9b6e417"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "reachtime"
+            },
+            "name": "field16",
+            "designerId": "633d36bd-67ac-4029-9abd-35c6779f4ea0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "finishtime"
+            },
+            "name": "field17",
+            "designerId": "7caafa7e-bb73-4fe5-b823-244f2f0952c7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "incomingman"
+            },
+            "name": "field18",
+            "designerId": "ec75b14f-cf1c-4c79-84b2-00c5e11a6d32"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "incomingphone"
+            },
+            "name": "field19",
+            "designerId": "fbf875fa-61e2-4a86-b436-47e333ce4c2d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "repairman"
+            },
+            "name": "field20",
+            "designerId": "8b183734-1f30-4118-acb1-09a8eef5df11"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "istrap"
+            },
+            "name": "field21",
+            "designerId": "9a2e8a81-b547-4d3d-95da-5dba091948d5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "traptime"
+            },
+            "name": "field22",
+            "designerId": "4b96b60b-e524-47d0-9e1a-49252600c034"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "trcontent"
+            },
+            "name": "field23",
+            "designerId": "a5406b01-f991-4e1a-8b0e-6041f3c34686"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "sitecondition"
+            },
+            "name": "field24",
+            "designerId": "7cd6df6b-8b5a-4646-b80d-eee8a30d3a57"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "surveyproject"
+            },
+            "name": "field25",
+            "designerId": "ec8539f4-2d2a-4cdc-b71c-0b1f97ac7d4c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dealresult"
+            },
+            "name": "field26",
+            "designerId": "d535cf55-4037-4669-8969-f3a8a376383b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "faultproperty"
+            },
+            "name": "field27",
+            "designerId": "7ed79326-a1f6-4a01-9a2e-145f1558c6dd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rpuser"
+            },
+            "name": "field28",
+            "designerId": "32a76288-1aed-4df9-800b-bdba78446f45"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rpusername"
+            },
+            "name": "field29",
+            "designerId": "9b415781-3e1a-40ec-a3aa-af70fd6b2a7c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rptime"
+            },
+            "name": "field30",
+            "designerId": "f52d606b-c485-4457-88e1-0fb91e1dbb95"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createname"
+            },
+            "name": "field31",
+            "designerId": "597da366-5895-4c53-ab1b-7eda06210c4b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createbydeptname"
+            },
+            "name": "field32",
+            "designerId": "093b1677-4fa2-4b12-a7c2-327fc5198205"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createbydept"
+            },
+            "name": "field33",
+            "designerId": "28dcdb30-b550-4457-88d8-2ee17373171d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "reason"
+            },
+            "name": "field34",
+            "designerId": "45e29ba1-9290-4e28-b1d9-73f8dded0ffe"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "analysis"
+            },
+            "name": "field35",
+            "designerId": "46a94ad6-ad0b-4de1-b703-5ffe912bf26a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "partslist"
+            },
+            "name": "field36",
+            "designerId": "e659f94a-0ce0-4397-8f28-d9f688da3b32"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate"
+            },
+            "name": "field854",
+            "designerId": "6197f974-ab7c-40ac-a2f9-8926ad263a37"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "trno"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "var sx_reportparts = dataUtil.createStore('sx_reportparts');",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/rpt/api/1.0/rptdetail';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {trno:trno, userid:userid,rpno:''};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            sx_reportparts.setData(ret.data.partslist);",
+                    "            onSuccess(1);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 查看受信明细-演示数据",
+                    "    this.setData([",
+                    "        {",
+                    "            // 页面显示的字段",
+                    "            rpno:\t\t\t\t'RP2165413210',//报告编号",
+                    "            prono:\t\t\t\t'3110-440000-200111-0010',//设备注册码",
+                    "            projectname:\t\t'广州市中梯物联网有限公司测试项目',//项目名称",
+                    "            status:\t\t\t\t'新建',//当前状态",
+                    "            trno: \t\t\t\t'JX20160516004',//受信编号",
+                    "            unitaddress:\t\t'广州市中梯物联网有限公司测试地址',//项目地址",
+                    "            unitlinker:\t\t\t'测试用户联系人',//用户联系人",
+                    "            model:\t\t\t\t'测试型号',//型号",
+                    "            unitlinkephone:\t\t'13800000010',//联系电话",
+                    "            accepttime:\t\t\t'2016-06-17 21:46',//接收时间",
+                    "            setouttime:\t\t\t'2016-06-17 22:00',//出发时间",
+                    "            reachtime:\t\t\t'2016-06-17 22:30',//到场时间",
+                    "            finishtime:\t\t\t'2016-06-17 23:00',//完工时间",
+                    "            incomingman:\t\t'测试来电人',//来电人",
+                    "            incomingphone:\t\t'13800000010',//来电人电话",
+                    "            repairman:\t\t\t'测试修理人',//修理人",
+                    "            istrap:\t\t\t\t1,//是否困人",
+                    "            traptime:\t\t\t'2016-06-17 21:30',//困人时间",
+                    "            trcontent:\t\t\t'测试受信内容',//受信内容",
+                    "            sitecondition:\t\t'测试现场状态',//现场状态",
+                    "            surveyproject:\t\t'测试调查项目',//调查项目",
+                    "            dealresult:\t\t\t'测试调查结果',//调查结果",
+                    "            faultproperty:\t\t'不可抗力',//故障性质",
+                    "            rpuser:\t\t\t\t'huangl',//报告人ID",
+                    "            rpusername:\t\t\t'黄林',//报告人名",
+                    "            rptime:\t\t\t\t'2016-06-17 21:40',//报告时间",
+                    "            createby:\t\t\t'huangl',//创建人ID",
+                    "            createname:\t\t\t'黄林',//创建人名称",
+                    "            createbydeptname:\t'维保一组',//创建人部门名",
+                    "            createbydept:\t\t'4154121',//创建人所属部门",
+                    "            reason:[{",
+                    "                    reasonname:'测试原因1'",
+                    "                },{",
+                    "                    reasonname:'测试原因2'",
+                    "                }],//故障原因",
+                    "                analysis:[{",
+                    "                    faultanalysis:\"轿门锁失效\",",
+                    "                    faultcode:\"301\",",
+                    "                    faulttype:\"门系统\",",
+                    "                    ladder:\"\"",
+                    "                },{",
+                    "                    faultanalysis:\"厅门锁失效\",",
+                    "                    faultcode:\"302\",",
+                    "                    faulttype:\"门系统\",",
+                    "                    ladder:\"\"",
+                    "                }],//原因分析",
+                    "            partslist:\t\t\t[",
+                    "                {",
+                    "                    materialsname: '传感器',\t// 配件名称",
+                    "                    materialsnum: 1,\t// 配件数量",
+                    "                    model:\t'',//规格",
+                    "                    prices:\t'',//单价",
+                    "                    remark:\t''\t//备注",
+                    "",
+                    "                }],\t\t\t//更换件",
+                    "            nextstate:\t[",
+                    "//                 {",
+                    "//                     name:'保存'",
+                    "//                 }",
+                    "            ]",
+                    "",
+                    "        }",
+                    "    ]);",
+                    "     sx_reportparts.setData([",
+                    "        {",
+                    "            materialsname: '传感器',\t// 配件名称",
+                    "            materialsnum: 1,\t// 配件数量",
+                    "            model:\t'',//规格",
+                    "            prices:\t'',//单价",
+                    "            remark:\t''\t//备注",
+                    "",
+                    "        },",
+                    "        {",
+                    "            materialsname: '未登记的零件一批',\t// 配件名称",
+                    "            materialsnum: 1,\t// 配件数量",
+                    "            model:\t'',//规格",
+                    "            prices:\t'',//单价",
+                    "            remark:\t''\t//备注",
+                    "        }",
+                    "    ]);",
+                    "",
+                    "    onSuccess(1);",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "442de766-1216-4f5d-acda-561b08387ea7"
+        }
+    ]
+}

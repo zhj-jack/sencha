@@ -1,0 +1,422 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "by_bymissionlist_todo",
+        "storeId": "by_bymissionlist_todo"
+    },
+    "name": "by_bymissionlist1",
+    "designerId": "ba409e90-0681-4cb5-b3bb-35d58429586d",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BillNo"
+            },
+            "name": "field28",
+            "designerId": "3b7751c2-d895-4362-a9d1-78541b94df46"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rowid"
+            },
+            "name": "field524",
+            "designerId": "03d01e69-e5d9-4b4a-9a37-a832d32252fb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ServiceNo"
+            },
+            "name": "field29",
+            "designerId": "03d8b26c-e4a1-4023-b05f-e80918751c57"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkDate"
+            },
+            "name": "field30",
+            "designerId": "d2c74373-8b04-4fc7-bb3e-d5432c554dfb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "worktype"
+            },
+            "name": "field37",
+            "designerId": "7f6f2ab9-a966-4941-95af-9cabb183aa2f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkWeekDay"
+            },
+            "name": "field38",
+            "designerId": "7a6e1599-9ac9-4729-8c83-272c93bffee0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkSTime"
+            },
+            "name": "field39",
+            "designerId": "5a1ffc18-6abf-4048-a760-45f748ad4889"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkETime"
+            },
+            "name": "field321",
+            "designerId": "d8cc8f63-4ea0-455b-a5f4-48ece4e8839b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WorkAddress"
+            },
+            "name": "field406",
+            "designerId": "c9e72da4-de92-448f-9e0b-1e4aaa3bcbbd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ProdID"
+            },
+            "name": "field407",
+            "designerId": "c8651f96-5610-4e87-9fde-8bc0275672f2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "url"
+            },
+            "name": "field408",
+            "designerId": "8a09dd62-ba3d-4b5d-9cb1-ed2aa4328724"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "taskstate"
+            },
+            "name": "field432",
+            "designerId": "5d071e89-2c13-4481-991f-793e81025b1d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nextstate"
+            },
+            "name": "field433",
+            "designerId": "9572101e-ae05-4d23-9a1a-75b7de158d24"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stateUrl",
+                "type": null
+            },
+            "name": "field2",
+            "designerId": "db11b2d7-48cc-48fc-93f3-038c99a439d2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stateColor",
+                "type": null
+            },
+            "name": "field3",
+            "designerId": "f6e44064-becb-4a8b-bde6-306e980eb2f2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleIcon",
+                "type": null
+            },
+            "name": "field4",
+            "designerId": "bf05146e-1e2f-42dd-8ab8-8bb099104db6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleColor",
+                "type": null
+            },
+            "name": "field23",
+            "designerId": "1eca1f1f-25c5-4eac-8ce8-8a48cc7d5749"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "this.setData([]);",
+                    "//console.log(parm);",
+                    "",
+                    "if(global.isWorklight()) {// adapter取数",
+                    "    var url = '/adapters/by/api/1.0/bymissionlist';",
+                    "    callPostAdapter(",
+                    "        url, parm,",
+                    "        function(ret) {",
+                    "            var d = me.decoDat(ret.data);",
+                    "            me.setData(d);",
+                    "            onSuccess(d.length);",
+                    "        },",
+                    "        onFailure);",
+                    "} else {",
+                    "    // 演示数据",
+                    "    var d = this.decoDat([",
+                    "        {",
+                    "            BillNo:\t\t'BY2015000001',",
+                    "            rowid:\t\t'0',",
+                    "            ServiceNo:\t'SNO-123456',",
+                    "            WorkDate:\t'2015-12-01',",
+                    "            worktype:\t'保养',",
+                    "            WorkWeekDay:'二',",
+                    "            WorkSTime:\t'08:00',",
+                    "            WorkETime:\t'10:00',",
+                    "            WorkAddress:'广州凯旋大酒店有限公司',",
+                    "            ProdID:\t\t'3110-440100-20030',",
+                    "            url:\t\t'查询明细url',",
+                    "            taskstate:\t'未开始',",
+                    "            nextstate: [",
+                    "                {name:\"到场\",url:\"http://127.0.0.1/到场\"}",
+                    "            ],",
+                    "            stateColor:\t'',",
+                    "            stateUrl:\t'',",
+                    "            titleIcon:\t'',",
+                    "            titleColor:\t''",
+                    "        },",
+                    "        {",
+                    "            BillNo:\t\t'BY2015000002',",
+                    "            rowid:\t\t'0',",
+                    "            ServiceNo:\t'SNO-123456',",
+                    "            WorkDate:\t'2015-12-01',",
+                    "            worktype:\t'保养',",
+                    "            WorkWeekDay:'二',",
+                    "            WorkSTime:\t'08:00',",
+                    "            WorkETime:\t'10:00',",
+                    "            WorkAddress:'广州市荔湾区黄沙大道144号大冶有色大厦',",
+                    "            ProdID:\t\t'3110-440100-20030',",
+                    "            url:\t\t'查询明细url',",
+                    "            taskstate:\t'保养中',",
+                    "            nextstate: [",
+                    "                {name:\"完工\",url:\"http://127.0.0.1/完工\"}",
+                    "            ],",
+                    "            stateColor:\t'',",
+                    "            stateUrl:\t'',",
+                    "            titleIcon:\t'',",
+                    "            titleColor:\t''",
+                    "        },",
+                    "        /*",
+                    "        {",
+                    "            BillNo:\t\t'BY2015000003',",
+                    "            rowid:\t\t'0',",
+                    "            ServiceNo:\t'SNO-123456',",
+                    "            WorkDate:\t'2015-12-01',",
+                    "            worktype:\t'保养',",
+                    "            WorkWeekDay:'二',",
+                    "            WorkSTime:\t'08:00',",
+                    "            WorkETime:\t'10:00',",
+                    "            WorkAddress:'广州市荔湾区黄沙大道4号逸翠湾',",
+                    "            ProdID:\t\t'3110-440100-20030',",
+                    "            url:\t\t'查询明细url',",
+                    "            taskstate:\t'已完工',",
+                    "            nextstate:\t[],",
+                    "            stateColor:\t'',",
+                    "            stateUrl:\t'',",
+                    "            titleIcon:\t'',",
+                    "            titleColor:\t''",
+                    "        }",
+                    "        */",
+                    "    ]);",
+                    "        this.setData(d);",
+                    "        onSuccess(d.length);",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "c5af6f8f-6f2e-47c3-b7b0-d64d5f0045bb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "// stateUrl:\t状态的图片地址",
+                    "// stateColor:\t状态的颜色",
+                    "// titleIcon:\t标题的图标",
+                    "// titleColor:\t标题的颜色",
+                    "",
+                    "if(!data) return([]);",
+                    "",
+                    "for(var i=0;i<data.length; i++) {",
+                    "    switch(data[i].taskstate) {",
+                    "        case '未开始':",
+                    "            data[i].stateColor = 'liftnet-fontColor-red';",
+                    "            data[i].stateUrl   = 'resources/images/maintenance_icon01.png';",
+                    "            data[i].titleIcon  = '<i class=\"ln ln-message1\"></i>';",
+                    "            data[i].titleColor = 'liftnet-fontColor-red';",
+                    "            break;",
+                    "",
+                    "        case '保养中':",
+                    "            data[i].stateColor = 'liftnet-fontColor-blue';",
+                    "            data[i].stateUrl   = 'resources/images/maintenance_icon02.png';",
+                    "            data[i].titleIcon  = '<i class=\"ln ln-message1\"></i>';",
+                    "            data[i].titleColor = 'liftnet-fontColor-blue';",
+                    "            break;",
+                    "",
+                    "        case '已完工':",
+                    "            data[i].stateColor = 'liftnet-fontColor-orange';",
+                    "            data[i].stateUrl   = 'resources/images/maintenance_icon03.png';",
+                    "            data[i].titleIcon  = '<i class=\"ln ln-message1\"></i>';",
+                    "            data[i].titleColor = 'liftnet-fontColor-orange';",
+                    "            break;",
+                    "    }",
+                    "}",
+                    "",
+                    "return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "6d985981-9237-4751-9ea9-57bcf9e2f548"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "if(parm!=='') {",
+                    "    this.filterBy(function(item) {",
+                    "        var s = item.get(\"WorkAddress\") + ' ' + item.get(\"ProdID\") + ' ' + item.get(\"workDate\");",
+                    "        return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "1edecfe3-8f52-41ec-a598-006c9e847f4c"
+        }
+    ]
+}

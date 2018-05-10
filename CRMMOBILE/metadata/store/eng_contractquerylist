@@ -1,0 +1,389 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_contractquerylist",
+        "storeId": "eng_contractquerylist"
+    },
+    "name": "eng_yearcheckelevator1",
+    "designerId": "865c86a7-19b7-4330-bbbe-ac158a44471d",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm",
+                    "action"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/bycontract/api/1.0/bycontractlist';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {",
+                    "        userid:global.getUserId(),",
+                    "        curpagenum:parm.curpagenum,",
+                    "        pagesize:parm.pagesize,",
+                    "        searchkey:parm.searchkey,",
+                    "        startdate:parm.startdate,",
+                    "        enddate:parm.enddate,",
+                    "        flowstatus:parm.flowstatus",
+                    "    };",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            var info;",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('搜索合同失败');",
+                    "            }else{",
+                    "                if(ret.data.length===0){",
+                    "                    if(parm.curpagenum===1){",
+                    "                        switch(action){",
+                    "",
+                    "                            case 'loadmore':",
+                    "                                break;",
+                    "                            case 'refresh':",
+                    "                            case 'search':",
+                    "                                info = '没有相关合同数据';",
+                    "                                break;",
+                    "                        }",
+                    "                        onFailure(info);",
+                    "                    }else{",
+                    "                        onFailure('没有更多数据！');",
+                    "                    }",
+                    "                    return;",
+                    "                }",
+                    "                var d = me.decoDat(ret.data);",
+                    "                //第一次加载直接设置数据",
+                    "                if(parm.curpagenum==1){",
+                    "                    me.setData(d);",
+                    "                }else{",
+                    "                    //分页用法，在原有数据上继续添加",
+                    "//                     var d = me.decoDat(ret.data);",
+                    "                    var n = d.length;",
+                    "                    for(var i=0; i<n; i++) {",
+                    "                        me.add(d[i]);",
+                    "                    }",
+                    "                }",
+                    "                var resetCurPage = false;",
+                    "                if(action==='loadmore'){",
+                    "                    //加载更多的时候不需要重置页数",
+                    "                     onSuccess(ret.data.length,resetCurPage);",
+                    "                }else{",
+                    "                    //其他情况需要将页数重置为1",
+                    "                     onSuccess(ret.data.length,!resetCurPage);",
+                    "                }",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            var info;",
+                    "            var cutOne = false;",
+                    "            switch(action){",
+                    "",
+                    "                case 'loadmore':",
+                    "                    info = '加载更多合同数据失败';",
+                    "                    cutOne = true;",
+                    "                    break;",
+                    "                case 'refresh':",
+                    "                    info = '刷新合同列表失败';",
+                    "                    break;",
+                    "                case 'search':",
+                    "                    info = '搜索合同失败';",
+                    "                    break;",
+                    "            }",
+                    "",
+                    "            onFailure(info,cutOne);",
+                    "        }",
+                    "    );",
+                    "} else {",
+                    "    var me = this;",
+                    "    //分页模拟",
+                    "    var start = (parm.curpagenum-1) * parm.pagesize,",
+                    "        end = parm.curpagenum * parm.pagesize;",
+                    "    //         end = end>50?50:end;",
+                    "    if(end>40){",
+                    "        onFailure('没有更多数据！',false);",
+                    "        return;",
+                    "    }",
+                    "    if(action=='firstload'||action=='refresh'||action=='search'){",
+                    "        //模拟刷新，搜索，第一次加载",
+                    "        //清空数据",
+                    "        this.setData([]);",
+                    "    }",
+                    "    for(var i=start; i<end; i++) {",
+                    "        var d =me.decoDat([",
+                    "            {",
+                    "                r9:'WB1600073'+(i+1)+'---'+parm.flowstatus,",
+                    "                mprojectname:'佛山御景花园一期',",
+                    "                mugstartdate: '2015-05-01',",
+                    "                mugenddate: '2016-05-20',",
+                    "                custid:'公诚管理咨询有限公司第六分公司',",
+                    "                r15:'18,000',",
+                    "                flowstatus:'不通过',",
+                    "                contractypename:'有偿',",
+                    "                countnum:i+1,",
+                    "//                 titleColor:'liftnet-fontColor-blue'",
+                    "            }",
+                    "        ]);",
+                    "        this.add(d);",
+                    "    }",
+                    "    // 演示数据",
+                    "    if(action=='refresh'||action=='search'||action=='firstload'){",
+                    "        onSuccess(end - start + 1,true);",
+                    "    }else{",
+                    "        onSuccess(end - start + 1,false);",
+                    "    }",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "289971f9-a6b7-42f4-a302-92d83fc0b3c2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "for(var i=0;i<data.length; i++) {",
+                    "    data[i].titleColor = 'liftnet-fontColor-blue';",
+                    "}",
+                    "return(data);"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "a3e0d72e-0363-4db7-8838-7a5d1ba681a2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "billno"
+            },
+            "name": "field308",
+            "designerId": "93c519ec-d8ac-4077-9690-fa7486ec19f1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r9"
+            },
+            "name": "field309",
+            "designerId": "2b27b12e-466d-4c90-a4f0-3f51b9d50f90"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractstatus"
+            },
+            "name": "field310",
+            "designerId": "a97d9ad2-06b0-4d6c-8170-e9e888a93eed"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "maid"
+            },
+            "name": "field311",
+            "designerId": "17cea325-e408-4b2a-9648-5b4687ca92e3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugstartdate"
+            },
+            "name": "field312",
+            "designerId": "98ee3d03-7196-48fa-963c-dd4635411249"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mugenddate"
+            },
+            "name": "field313",
+            "designerId": "fd6196ea-94b9-41ee-9c85-4056afaf7554"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "auditcolor"
+            },
+            "name": "field315",
+            "designerId": "1e8b0fba-8ac4-47d4-81c1-5ef96cb539ae"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titleColor"
+            },
+            "name": "field316",
+            "designerId": "25cf1543-c618-4e48-a776-9dfa693a6460"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "custid"
+            },
+            "name": "field580",
+            "designerId": "5250d711-8968-4580-8bf4-9000769debc7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mprojectname"
+            },
+            "name": "field671",
+            "designerId": "288fa1f0-1a3e-4bc8-9bc4-0116e6b0d01c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "r15"
+            },
+            "name": "field672",
+            "designerId": "61152ea4-00e2-40b2-89ee-68658a06921d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowusername"
+            },
+            "name": "field673",
+            "designerId": "e08e6844-3fcc-46b1-8bed-35212477f009"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flowstatus"
+            },
+            "name": "field674",
+            "designerId": "18077087-e844-4d96-80a8-30281053f68c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "contractypename"
+            },
+            "name": "field675",
+            "designerId": "d4e15066-e2b2-4592-b824-fbadfb3c4927"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "countnum"
+            },
+            "name": "field676",
+            "designerId": "e92921c2-d212-4c67-b5fc-b1b3e52756b3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lotdate"
+            },
+            "name": "field677",
+            "designerId": "56f10867-feab-48c1-93c9-7fac14b129e2"
+        }
+    ]
+}

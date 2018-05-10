@@ -1,0 +1,205 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoUsed.aud_lkshdetail_detailed",
+        "storeId": "NoUsed.aud_lkshdetail_detailed"
+    },
+    "name": "aud_lkshdetail1",
+    "designerId": "e3b55448-eff6-4119-9a36-44faa89bdd1a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "liftorserviceno",
+                "type": "string"
+            },
+            "name": "field157",
+            "designerId": "4f5cda36-51da-4110-b265-42e87622566d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "feeamt",
+                "type": "string"
+            },
+            "name": "field158",
+            "designerId": "ce3d3d07-1673-4d94-878a-f494882e796e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "feetype",
+                "type": "string"
+            },
+            "name": "field159",
+            "designerId": "de3a2bb7-2f54-487e-9367-f98e6f59150d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "serverdate",
+                "type": "string"
+            },
+            "name": "field160",
+            "designerId": "87b34add-cca2-49ef-9d9a-0ccb026cd578"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "atm",
+                "type": "string"
+            },
+            "name": "field161",
+            "designerId": "e2b91b0d-9793-4eb7-97ef-a1caebce4d0b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "realfee",
+                "type": "string"
+            },
+            "name": "field162",
+            "designerId": "3b984ace-2ac1-4295-8f8e-e74327f6832e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "detailrem",
+                "type": "string"
+            },
+            "name": "field163",
+            "designerId": "c27aafc7-1ea3-4cee-b59b-17a06888b3ad"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/aud/api/1.0/lkshdetail/'+'流水号';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:'用户ID',billno:'来款流水号'};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            me.setData(ret.data);",
+                    "            onSuccess();",
+                    "        },",
+                    "    onFailure);",
+                    "} else {",
+                    "    // 来款审核查看-明细信息-演示数据",
+                    "    this.setData([",
+                    "    {",
+                    "        liftorserviceno: '注册码',",
+                    "        feeamt: '收费期数',",
+                    "        feetype: '费用项目',",
+                    "        serverdate: '服务区间',",
+                    "        atm: '应收金额',",
+                    "        realfee: '实收金额',",
+                    "        detailrem: '备注'",
+                    "    }",
+                    "    ]);",
+                    "",
+                    "    onSuccess();",
+                    "}"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "9d1cffe3-3c67-4661-8cc3-42077e45f2ab"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "eb11f0e5-11b5-4f77-a46b-1a8586224854"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "77f40eac-01a1-4802-b482-7bd5838ad67c"
+        }
+    ]
+}

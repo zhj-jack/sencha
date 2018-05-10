@@ -1,0 +1,73 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "liftnet"
+        ],
+        "designer|userClassName": "Common.ComMap",
+        "id": "ComMap",
+        "layout": "vbox"
+    },
+    "designerId": "4ee85f96-69bb-47f1-9348-62ab7896ef61",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "id": "ComMao_Tbr",
+                "title": "坐标"
+            },
+            "name": "MyToolbar15",
+            "designerId": "8acc1d48-0bec-4576-b7c6-f670ac728572",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "ComMap_BtnReturn",
+                        "itemId": "ComMap_BtnReturn",
+                        "text": null
+                    },
+                    "name": "MyButton92",
+                    "designerId": "c8d521b5-d918-4cbc-98e0-30cf6b48bd30"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-monitor-map"
+                ],
+                "id": "ComMap_MapPanel",
+                "itemId": "ComMap_MapPanel",
+                "layout|flex": 1
+            },
+            "name": "MyPanel66",
+            "designerId": "880ae05d-8804-4cd4-98d6-7398e88650f8"
+        }
+    ]
+}

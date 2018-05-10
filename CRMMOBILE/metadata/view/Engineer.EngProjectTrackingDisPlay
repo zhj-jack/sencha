@@ -1,0 +1,549 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngProjectTrackingDisPlay",
+        "id": "EngProjectTrackingDisPlay",
+        "layout": "vbox"
+    },
+    "designerId": "c8ce804f-d268-4d48-9a03-93e9acf198b5",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "项目跟踪"
+            },
+            "name": "MyToolbar15",
+            "designerId": "6dbaa87f-00af-4c34-8a42-edd85fced8f1",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "itemId": "EngProjectTracking_ReturnBt",
+                        "text": null
+                    },
+                    "name": "MyButton54",
+                    "designerId": "14601864-de76-4e32-af99-2bc10eaebf00"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-tabbar-two"
+                ],
+                "layout|flex": 1
+            },
+            "name": "MyTabPanel6",
+            "designerId": "512821b2-8e35-4280-8704-6c8e061aa860",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox",
+                        "title": "项目信息"
+                    },
+                    "name": "MyContainer50",
+                    "designerId": "45a3461d-e34e-4ca6-930e-3f385f1d0428",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-form-info",
+                                    "liftnet-font-size14",
+                                    "liftnet-lineHeight34"
+                                ],
+                                "id": "ProjectTracking_Info",
+                                "itemId": "ProjectTracking_Info",
+                                "layout|flex": 1
+                            },
+                            "name": "MyFormPanel25",
+                            "designerId": "cb8a42ef-b9da-4d8e-9ecc-4e331826ab79",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": false,
+                                        "id": "ProjectTracking_projectjnlno",
+                                        "itemId": "ProjectTracking_projectjnlno",
+                                        "label": "项目编号",
+                                        "name": "projectjnlno",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField138",
+                                    "designerId": "532ae47a-3981-4be6-b9cb-0b00b54c9a74"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_projectname",
+                                        "itemId": "ProjectTracking_projectname",
+                                        "label": "项目名称",
+                                        "name": "projectname",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField139",
+                                    "designerId": "e5316e13-afe8-49c4-8a39-5eb21ad522a4"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_projectaddress",
+                                        "itemId": "ProjectTracking_projectaddress",
+                                        "label": "项目地址",
+                                        "name": "projectaddress",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField140",
+                                    "designerId": "6009f49d-8ebb-4007-bfc1-25b49b7758b4"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_custname",
+                                        "itemId": "ProjectTracking_custname",
+                                        "label": "客户名称",
+                                        "name": "custname",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField141",
+                                    "designerId": "9bf18794-f8c3-4eaf-93dc-f302d02842ef"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_custaddress",
+                                        "itemId": "ProjectTracking_custaddress",
+                                        "label": "客户地址",
+                                        "name": "custaddress",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField142",
+                                    "designerId": "cb8feb5b-cf7e-472b-bece-b38a8001da41"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_upcustname",
+                                        "itemId": "ProjectTracking_upcustname",
+                                        "label": "上级客户",
+                                        "name": "upcustname",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField143",
+                                    "designerId": "1d5749eb-7ef2-48f2-8f78-55057c3e8414"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_renewcontract",
+                                        "itemId": "ProjectTracking_renewcontract",
+                                        "label": "续约合同",
+                                        "name": "renewcontract",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField144",
+                                    "designerId": "9791ff47-ac57-4f3a-9e9a-b4eb5805e5db"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_elevatormaker",
+                                        "itemId": "ProjectTracking_elevatormaker",
+                                        "label": "电梯制造商",
+                                        "labelWidth": "40%",
+                                        "name": "elevatormaker",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField145",
+                                    "designerId": "b072fa72-2c00-451f-b560-a4d6b2bca42b"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_elevatorfloordoor",
+                                        "itemId": "ProjectTracking_elevatorfloordoor",
+                                        "label": "电梯层站",
+                                        "name": "elevatorfloordoor",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField146",
+                                    "designerId": "a4d34136-73d8-48cf-b908-db85a045fbd6"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_elevatornum",
+                                        "itemId": "ProjectTracking_elevatornum",
+                                        "label": "电梯台数",
+                                        "name": "elevatornum",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField147",
+                                    "designerId": "b7247a7c-a72b-4147-8ee9-03236d44e4a2"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_coordinates",
+                                        "itemId": "ProjectTracking_coordinates",
+                                        "label": "坐标",
+                                        "name": "coordinates",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField148",
+                                    "designerId": "87534deb-7627-47c0-851f-3e79d0dcaabb"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_flowtype",
+                                        "itemId": "ProjectTracking_flowtype",
+                                        "label": "跟进形式",
+                                        "name": "flowtype",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField149",
+                                    "designerId": "e660ce6b-0b07-48d5-80ac-60b4e158a0af"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_projecttype",
+                                        "itemId": "ProjectTracking_projecttype",
+                                        "label": "项目类型",
+                                        "name": "projecttype",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField150",
+                                    "designerId": "bd5118d6-8cf1-49e0-92ca-f1be441f5f2a"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_projectstatusname",
+                                        "itemId": "ProjectTracking_projectstatusname",
+                                        "label": "项目状态",
+                                        "name": "projectstatusname",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextField151",
+                                    "designerId": "924485ef-3df5-4ef5-92f2-677d8fc8c61f"
+                                },
+                                {
+                                    "type": "Ext.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "ProjectTracking_remark",
+                                        "itemId": "ProjectTracking_remark",
+                                        "label": "备注",
+                                        "name": "remark",
+                                        "readOnly": true
+                                    },
+                                    "name": "MyTextArea22",
+                                    "designerId": "8e9fcaf1-1cbd-4762-9970-8582183c2a23"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox",
+                        "title": "联系人"
+                    },
+                    "name": "MyContainer51",
+                    "designerId": "a1a8df30-893c-485b-8fd2-05ad571d24e7",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disableSelection": true,
+                                "html": null,
+                                "itemHeight": 70,
+                                "layout|flex": 1,
+                                "store": "eng_projecttracking_detail_linkerlist"
+                            },
+                            "name": "MyList1",
+                            "designerId": "bd2385a6-b28a-4f18-bd62-04085084a9e3",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<!--<div class=\"liftnet-fault-listConBox\">",
+                                            "    <div style=\"float:left;\">",
+                                            "    \t<div style=\"line-height:18px\" class=\"liftnet-font-size12 \">{linker}({linkphone})</div>",
+                                            "        <div style=\"line-height:18px\" class=\"liftnet-font-size12 \"></div>",
+                                            "    </div>",
+                                            "\t<div style=\"float:right;\">",
+                                            "    \t<div style=\"line-height:18px\" class=\"liftnet-font-size12 \">{job}</div>",
+                                            "    </div>",
+                                            "</div>-->{todoTpl}"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "8e26530d-aa0d-45d3-b4b5-fa8f1099b9a5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox",
+                        "title": "跟进记录"
+                    },
+                    "name": "MyContainer52",
+                    "designerId": "790c59d6-cd6b-4309-8f37-944f3774b758",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disableSelection": true,
+                                "itemHeight": 68,
+                                "layout|flex": 1,
+                                "store": "eng_projecttracking_detail_flowinfolist"
+                            },
+                            "name": "MyList20",
+                            "designerId": "b27c9573-7fb1-4230-9f73-32fd68da47b5",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<!--<div class=\"liftnet-fault-listConBox\">",
+                                            "    <div style=\"float:left;\">",
+                                            "    \t<div style=\"line-height:18px\" class=\"liftnet-font-size12 \">{flowuser}</div>",
+                                            "    \t<div style=\"line-height:18px\" class=\"liftnet-font-size12 \">{flowInfo}</div>",
+                                            "    </div>",
+                                            "\t<div style=\"float:right;\">",
+                                            "    \t<div style=\"line-height:18px\" class=\"liftnet-font-size12 \">{flowdate}</div>",
+                                            "    </div>",
+                                            "</div>-->{todoTpl}"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "bcd81e08-e891-4886-bb02-040dcc032d0d"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-home-listBox"
+                        ],
+                        "layout": "vbox",
+                        "title": "关联合同"
+                    },
+                    "name": "MyContainer53",
+                    "designerId": "8592a5d6-7c6c-4875-9350-effa879bd12b",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-home-listBox"
+                                ],
+                                "disableSelection": true,
+                                "itemHeight": null,
+                                "layout|flex": 1,
+                                "store": "eng_projecttracking_detail_bycontract"
+                            },
+                            "name": "MyList21",
+                            "designerId": "150c9465-2c95-4e66-815e-4cf158ea8d4f",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<!--<div class=\"liftnet-Maintenance-TaskRecList\" style=\"height:100px\">",
+                                            "    <div class=\"liftnet-Maintenance-TaskRecList-left\" style=\"left:14px\" >",
+                                            "        <div class=\"liftnet-font-size16 liftnet-fontColor-blue\">{r9}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{mprojectname}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{mugstartdate} ~ {mugenddate}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray\">{custid}&nbsp;</div>",
+                                            "    </div>",
+                                            "    <div class=\"liftnet-Maintenance-TaskRecList-right\" style=\"padding-top:0px;right:14px\">",
+                                            "        <div class=\"liftnet-font-size12 liftnet-fontColor-darkGray liftnet-font-right\">{countnum}台&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">¥{r15}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{flowstatus}&nbsp;</div>",
+                                            "        <div class=\"liftnet-font-size12 liftnet-font-right liftnet-fontColor-darkGray\">{contractypename}&nbsp;</div>",
+                                            "    </div>",
+                                            "</div>-->{todoTpl}"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "5bfb9c55-7685-43a7-8564-94d66ec6f68a"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

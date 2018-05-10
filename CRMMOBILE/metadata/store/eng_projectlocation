@@ -1,0 +1,214 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "eng_projectlocation",
+        "storeId": "eng_projectlocation"
+    },
+    "name": "MyStore",
+    "designerId": "2d9215b4-0fc0-4e54-9858-ae3f47830a55",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectjnlno"
+            },
+            "name": "field576",
+            "designerId": "cd095331-a31c-4c54-a95b-e1c65b55d759"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectname"
+            },
+            "name": "field590",
+            "designerId": "f06867db-6fd0-44aa-abd8-a89f327fe9ae"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "projectaddress"
+            },
+            "name": "field577",
+            "designerId": "7daf12d0-fc03-4b80-999e-69b8253554df"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "elevatornum"
+            },
+            "name": "field592",
+            "designerId": "10bb7a80-e120-49eb-a71a-c5a0cdcd9f37"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lon"
+            },
+            "name": "field578",
+            "designerId": "e3dc7e4a-c30c-41c6-9112-bb73850a2e5c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lat"
+            },
+            "name": "field591",
+            "designerId": "7973d771-eaf0-44ae-b23a-662ec32d969a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "var adapterparm = {",
+                    "    userid: global.getUserId(),",
+                    "    searchker:parm.searchker,",
+                    "    lon:parm.lon,",
+                    "    lat:parm.lat,",
+                    "    rangradius:parm.rangradius",
+                    "};",
+                    "",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/xmdlwzcx';",
+                    "    callPostAdapter(",
+                    "        url, adapterparm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                if(parm.searchker!==''){",
+                    "                    onFailure('读取项目位置信息失败');",
+                    "                }else{",
+                    "                    onFailure('搜索项目位置信息失败');",
+                    "                }",
+                    "",
+                    "            }else{",
+                    "                me.setData(ret.data);",
+                    "                onSuccess(me.getData());",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            if(parm.searchker!==''){",
+                    "                    onFailure('读取项目位置信息失败');",
+                    "                }else{",
+                    "                    onFailure('搜索项目位置信息失败');",
+                    "                }",
+                    "        }",
+                    "        );",
+                    "",
+                    "} else {",
+                    "",
+                    "    // 获取项目地址列表-演示数据",
+                    "//     this.setData([",
+                    "//         {",
+                    "//             projectname: '万科四季花园',",
+                    "//             projectaddress: '东山湖公园',",
+                    "//             lon:'113.2986000000',",
+                    "//             lat:'23.1222200000',",
+                    "//             elevatornum:10",
+                    "//         },",
+                    "//         {",
+                    "//             projectname: '万科四季花园',",
+                    "//             projectaddress: '东山口',",
+                    "//             lon:'113.3022230000',",
+                    "//             lat:'23.1303380000',",
+                    "//             elevatornum:12",
+                    "//         },",
+                    "//         {",
+                    "//             projectname: '万科四季花园',",
+                    "//             projectaddress: '长城大厦',",
+                    "//             lon:'113.3122170000',",
+                    "//             lat:'23.1257610000',",
+                    "//             elevatornum:1",
+                    "//         },",
+                    "//         {",
+                    "//             projectname: '万科四季花园',",
+                    "//             projectaddress: '金海湾',",
+                    "//             lon:'113.3082580000',",
+                    "//             lat:'23.1093510000',",
+                    "//             elevatornum:5",
+                    "//         }",
+                    "",
+                    "",
+                    "//     ]);",
+                    "    this.setData([]);",
+                    "        onSuccess(this.getData());",
+                    "        }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "86e7d5bc-a51a-43a9-bc2f-7b452b089fe6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    "this.clearFilter();",
+                    "",
+                    "        if(parm!=='') {",
+                    "            this.filterBy(function(item) {",
+                    "                var s = item.get(\"projectname\") + ' ' + item.get(\"projectaddress\");",
+                    "                return (s.toUpperCase().indexOf(parm.toUpperCase())>=0);",
+                    "            });",
+                    "        }"
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "d16afeb0-87e4-4799-87a7-0ed0fd13edff"
+        }
+    ]
+}

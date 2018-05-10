@@ -1,0 +1,253 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ss_userlocation",
+        "storeId": "ss_userlocation"
+    },
+    "name": "MyStore",
+    "designerId": "045b6b5a-d0ed-48af-b861-ba85a97cd02e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid",
+                "type": "string"
+            },
+            "name": "field65",
+            "designerId": "e4671ab0-96cd-4c14-afcc-c45976d12090"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lat",
+                "type": "string"
+            },
+            "name": "field67",
+            "designerId": "e9c0a741-d224-4ee7-9429-7e3175e9294a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lon",
+                "type": "string"
+            },
+            "name": "field68",
+            "designerId": "eb70b842-a91f-4827-8add-1ed868a2ee2c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addr",
+                "type": "string"
+            },
+            "name": "field66",
+            "designerId": "6d5374ca-e823-4bcc-a54b-2123e110e631"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cartime",
+                "type": "string"
+            },
+            "name": "field285",
+            "designerId": "de4733fd-ea54-49b9-bc49-8b8f7488e602"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "icon",
+                "type": "string"
+            },
+            "name": "field69",
+            "designerId": "f29282e9-ad92-45f8-9abd-492b0d880d27"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "loadDat",
+                "implHandler": [
+                    "var me = this;",
+                    "// var userid = global.getUserId();",
+                    "// console.log(parm.searchuser===''?userid:parm.searchuser);",
+                    "if(global.isWorklight()) {",
+                    "    // adapter取数",
+                    "    var url = '/adapters/common/api/1.0/userlocationinfo';",
+                    "    var userid = global.getUserId();",
+                    "    var adapterParm = {userid:userid,",
+                    "                       searchuser:parm.searchuser===''?userid:parm.searchuser,",
+                    "                       date:parm.date};",
+                    "",
+                    "    callPostAdapter(",
+                    "        url, adapterParm,",
+                    "        function(ret) {",
+                    "            if(ret.status.code!=200){",
+                    "                onFailure('读取轨迹详情失败');",
+                    "            }else{",
+                    "                var d = me.decoDat(ret.data);",
+                    "                me.setData(d);",
+                    "                onSuccess(d);",
+                    "            }",
+                    "        },",
+                    "        function() {",
+                    "            onFailure('读取轨迹详情失败');",
+                    "        }",
+                    "        );",
+                    "//         function(ret) {",
+                    "//             var d = me.decoDat(ret.data);",
+                    "//             me.setData(d);",
+                    "//             onSuccess(d);",
+                    "//         },",
+                    "//     onFailure);",
+                    "} else {",
+                    "    var data = [",
+                    "    {",
+                    "        addr: '广州市凯旋大酒店有限公司',",
+                    "//         addr: '<div class=\"liftnet-font-size12 liftnet-fontColor-gray\"><span></span>越秀区明月一路9号</div>',",
+                    "//         mission: '<div class=\"liftnet-font-size12 liftnet-fontColor-gray\"><span></span>进行故障任务</div>',",
+                    "        icon: 'resources/images/trackListBox-icon02.png',",
+                    "        cartime:'2015-07-29 17:20'",
+                    "    },",
+                    "    {",
+                    "        addr: '广州市凯旋大酒店有限公司',",
+                    "//         addr: '<div class=\"liftnet-font-size12 liftnet-fontColor-gray\"><span></span>越秀区明月一路9号</div>',",
+                    "//         mission: '<div class=\"liftnet-font-size12 liftnet-fontColor-gray\"><span></span>进行故障任务</div>',",
+                    "        icon: 'resources/images/trackListBox-icon01.png',",
+                    "        cartime:'2015-07-29 17:20'",
+                    "    },",
+                    "    {",
+                    "        addr: '广州市凯旋大酒店有限公司',",
+                    "//         addr: '<div class=\"liftnet-font-size12 liftnet-fontColor-gray\"><span></span>越秀区明月一路9号</div>',",
+                    "//         content: '<div class=\"liftnet-font-size12 liftnet-fontColor-gray\"><span></span>进行故障任务</div>',",
+                    "        icon: 'resources/images/trackListBox-icon01.png',",
+                    "        cartime:'2015-07-29 17:20'",
+                    "    }",
+                    "    ];",
+                    "    // 轨迹详细查询-演示数据",
+                    "    // icon 状态的图标",
+                    "    //（绿色：trackListBox-icon01.png，红色：trackListBox-icon02.png）",
+                    "    var d = this.decoDat(data);",
+                    "    this.setData(d);",
+                    "",
+                    "    onSuccess(data);",
+                    "    }"
+                ]
+            },
+            "name": "loadDat",
+            "designerId": "ae8e471d-a4c3-4672-906d-4cff1a970259"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "onSuccess",
+                    "onFailure",
+                    "parm"
+                ],
+                "fn": "updateDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "updateDat",
+            "designerId": "5088791b-2f3a-438e-829d-bd8f45a13685"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "parm"
+                ],
+                "fn": "filteDat",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "filteDat",
+            "designerId": "fbfa4c20-1579-4de4-9e18-3b14d9f74b82"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "data"
+                ],
+                "fn": "decoDat",
+                "implHandler": [
+                    "if(!data) return([]);",
+                    "",
+                    "for(var i = 0;i < data.length; i++){",
+                    "    if(i===0){",
+                    "        data[i].icon = 'resources/images/trackListBox-icon02.png';",
+                    "    }else{",
+                    "        data[i].icon = 'resources/images/trackListBox-icon01.png';",
+                    "    }",
+                    "    data[i].cartime = '<div class=\"liftnet-font-size12 liftnet-fontColor-gray\"><span></span>'+data[i].cartime+'</div>';",
+                    "}",
+                    "return data;"
+                ]
+            },
+            "name": "decoDat",
+            "designerId": "c2047210-2591-4dfc-9bc1-6007b56eed36"
+        }
+    ]
+}

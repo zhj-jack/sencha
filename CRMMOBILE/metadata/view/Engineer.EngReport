@@ -1,0 +1,519 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.EngReport",
+        "itemId": "EngReport",
+        "layout": "vbox"
+    },
+    "name": "MyContainer19",
+    "designerId": "b667f70e-42d5-4630-a1a8-f3019604570c",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-bgColor-gray"
+                ],
+                "id": "EngReport",
+                "layout": null,
+                "layout|flex": 1,
+                "scrollable": true
+            },
+            "name": "MyContainer19",
+            "designerId": "d0c8071f-a6ec-4df5-8f7e-a11ca3c8efb6",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "liftnet-toolbar-other"
+                        ],
+                        "docked": "top",
+                        "title": "报表"
+                    },
+                    "name": "MyToolbar1",
+                    "designerId": "e8c2cdc8-1c7c-479b-b2fb-641ee7654430",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "fa fa-chevron-left",
+                                "itemId": "EngReport_ReturnButton",
+                                "text": null
+                            },
+                            "name": "MyButton31",
+                            "designerId": "6d32cf02-b319-46ab-8d95-e6f57607bc6c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyPanel10",
+                    "designerId": "062aeeb9-9bd0-47fc-959b-2205218f9d2a",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-report-table"
+                                ]
+                            },
+                            "name": "MyPanel11",
+                            "designerId": "f34f0dff-49fe-4e03-9c83-a96b56abb516",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-report-table-top",
+                                            "liftnet-fontColor-red",
+                                            "liftnet-bgColor-white"
+                                        ]
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "cefadb0f-ae03-4a16-a848-233e32e3e84d",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<i class=\"ln ln-contract\"></i>热线受信报表"
+                                            },
+                                            "name": "MyLabel9",
+                                            "designerId": "c327f8ef-09f3-4644-abf9-f1b226a89bac"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": null,
+                                        "cls": [
+                                            "liftnet-report-table-lsitBox"
+                                        ],
+                                        "data": null,
+                                        "disableSelection": true,
+                                        "grouped": null,
+                                        "hideOnMaskTap": null,
+                                        "id": "EngReport_DvHotline",
+                                        "infinite": null,
+                                        "itemId": null,
+                                        "modal": null,
+                                        "onItemDisclosure": true,
+                                        "scrollable": "false",
+                                        "store": "reportsta_sxreportsta",
+                                        "striped": null,
+                                        "styleHtmlContent": null
+                                    },
+                                    "name": "MyList1",
+                                    "designerId": "1bc1588f-d084-479b-a981-ee1943910230",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "scrollable",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"liftnet-report-table-lsit\">",
+                                                    "        <div class=\"liftnet-font-size14 liftnet-fontColor-darkGray\">{title} {count}</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-report-table-lsitCon\">",
+                                                    "            <div class=\"liftnet-float-left liftnet-margin-right12\">困人宗数:{istrapcount}</div>",
+                                                    "            <div class=\"liftnet-float-left\">统计时间:{stattime}</div>",
+                                                    "        </div>",
+                                                    "    </div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "44168bdc-36d7-4267-a9d0-657560625fb5"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-report-table"
+                                ]
+                            },
+                            "name": "MyPanel13",
+                            "designerId": "3fec619a-3fe3-42e3-91b4-e4c70a7a8dcf",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-report-table-top",
+                                            "liftnet-fontColor-blue",
+                                            "liftnet-bgColor-white"
+                                        ]
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "1449eac2-4360-4c7b-a1dc-595898bbde63",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<i class=\"ln ln-report-maintain\"></i>保养计划报表"
+                                            },
+                                            "name": "MyLabel9",
+                                            "designerId": "56c1b76d-0b04-444b-8069-28bf8ab2ed4f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": null,
+                                        "cls": [
+                                            "liftnet-report-table-lsitBox"
+                                        ],
+                                        "data": null,
+                                        "disableSelection": true,
+                                        "grouped": null,
+                                        "hideOnMaskTap": null,
+                                        "id": "EngReport_DvMaintain",
+                                        "infinite": null,
+                                        "itemId": null,
+                                        "modal": null,
+                                        "onItemDisclosure": true,
+                                        "scrollable": "false",
+                                        "store": "reportsta_byreportsta",
+                                        "striped": null,
+                                        "styleHtmlContent": null
+                                    },
+                                    "name": "MyList1",
+                                    "designerId": "d687d34c-2f08-4034-b06c-6f8b247ea7e2",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "scrollable",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"liftnet-report-table-lsit\">",
+                                                    "        <div class=\"liftnet-font-size14 liftnet-fontColor-darkGray\">{title} {count}</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-report-table-lsitCon\">",
+                                                    "            <div class=\"liftnet-float-left liftnet-margin-right12\">已录入实绩数:{sjcount}</div>",
+                                                    "            <div class=\"liftnet-float-left\">统计时间:{stattime}</div>",
+                                                    "        </div>",
+                                                    "    </div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "c69b4dee-ee52-46c8-98ce-d30394d839da"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-report-table"
+                                ]
+                            },
+                            "name": "MyPanel14",
+                            "designerId": "0b87f4b7-508a-4204-8b8c-b1309f1bb682",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-report-table-top",
+                                            "liftnet-fontColor-green",
+                                            "liftnet-bgColor-white"
+                                        ]
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "59eb7eb7-c89f-49d0-abbf-7f10aebb4469",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<i class=\"fn ln-report-repair\"></i>故障报告书报表"
+                                            },
+                                            "name": "MyLabel9",
+                                            "designerId": "fe0df874-4a60-4f30-b604-7874cf5c7365"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": null,
+                                        "cls": [
+                                            "liftnet-report-table-lsitBox"
+                                        ],
+                                        "data": null,
+                                        "disableSelection": true,
+                                        "grouped": null,
+                                        "hideOnMaskTap": null,
+                                        "id": "EngReport_DvFault",
+                                        "infinite": null,
+                                        "itemId": null,
+                                        "modal": null,
+                                        "onItemDisclosure": true,
+                                        "scrollable": "false",
+                                        "store": "reportsta_gzreportsta",
+                                        "striped": null,
+                                        "styleHtmlContent": null
+                                    },
+                                    "name": "MyList1",
+                                    "designerId": "5f191e1f-a724-49c4-93a3-e2b550b4800a",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "scrollable",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"liftnet-report-table-lsit\">",
+                                                    "        <div class=\"liftnet-font-size14 liftnet-fontColor-darkGray\">{title} {count}</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-report-table-lsitCon\">",
+                                                    "            <div class=\"liftnet-float-left  liftnet-margin-right12\">统计时间:{stattime}</div>",
+                                                    "        </div>",
+                                                    "    </div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "9a2bf2a9-93b6-40ee-9aa5-dd2bdfc5aab3"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "liftnet-report-table"
+                                ]
+                            },
+                            "name": "MyPanel15",
+                            "designerId": "f0c2e8a9-8d55-4dcb-8188-fda2873598d1",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "liftnet-report-table-top",
+                                            "liftnet-fontColor-orange",
+                                            "liftnet-bgColor-white"
+                                        ]
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "a45d225c-a4ad-4c73-accc-2a863172c8d4",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<i class=\"ln ln-report-service\"></i>维保业绩报表"
+                                            },
+                                            "name": "MyLabel9",
+                                            "designerId": "635664d4-7818-4ffc-950a-b0a73445a9f7"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": null,
+                                        "cls": [
+                                            "liftnet-report-table-lsitBox"
+                                        ],
+                                        "data": null,
+                                        "disableSelection": true,
+                                        "grouped": null,
+                                        "hideOnMaskTap": null,
+                                        "id": "EngReport_DvPerformance",
+                                        "infinite": null,
+                                        "itemId": null,
+                                        "modal": null,
+                                        "onItemDisclosure": true,
+                                        "scrollable": "false",
+                                        "store": "reportsta_wbyjreportsta",
+                                        "striped": null,
+                                        "styleHtmlContent": null
+                                    },
+                                    "name": "MyList1",
+                                    "designerId": "9e579392-dafa-411a-8344-a07f82d1527d",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "scrollable",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"liftnet-report-table-lsit\">",
+                                                    "        <div class=\"liftnet-font-size14 liftnet-fontColor-darkGray\">{title} {count}</div>",
+                                                    "        <div class=\"liftnet-font-size12 liftnet-fontColor-gray liftnet-report-table-lsitCon\">",
+                                                    "            <div class=\"liftnet-float-left liftnet-margin-right12\">直梯台量:{zcount}</div>",
+                                                    "            <div class=\"liftnet-float-left\">扶梯台量:{fcount}</div>",
+                                                    "        </div>",
+                                                    "    </div>"
+                                                ]
+                                            },
+                                            "name": "itemTpl",
+                                            "designerId": "63ed5d37-47f6-40cb-bb4b-524245187d11"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

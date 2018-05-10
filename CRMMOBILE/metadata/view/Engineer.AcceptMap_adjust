@@ -1,0 +1,121 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Engineer.AcceptMap_adjust",
+        "id": "AcceptMap_adjust",
+        "itemId": "AcceptMap_adjust",
+        "layout": "vbox"
+    },
+    "name": "MyPanel",
+    "designerId": "8f573e32-4d43-4111-a783-b09ab511a407",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-toolbar-other"
+                ],
+                "docked": "top",
+                "title": "地点微调"
+            },
+            "name": "MyToolbar",
+            "designerId": "f9615924-c343-4130-853a-f670d2ad6a0b",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-chevron-left",
+                        "id": "Adjust_ButReturn",
+                        "itemId": "Adjust_ButReturn",
+                        "text": null
+                    },
+                    "name": "MyButton4",
+                    "designerId": "af139b1e-24b8-4f2c-9865-c8d457c3bdaf"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "liftnet-monitor-map"
+                ],
+                "docked": null,
+                "html": "<div class=\"liftnet-shade\"></div><div id=\"EngProject_map1\"  style=\"height:100%;width:100%;\"></div>",
+                "id": "Adujust_Body",
+                "itemId": "Adujust_Body",
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyContainer8",
+            "designerId": "f82b0543-4d8c-41a6-96a6-c3f1722fa187",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onAdujust_BodyPainted",
+                        "implHandler": [
+                            "this.fireEvent('painted', this);"
+                        ],
+                        "name": "painted"
+                    },
+                    "name": "onAdujust_BodyPainted",
+                    "designerId": "f56212c8-de46-413a-9242-63575f172164"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Adujust_lng",
+                        "itemId": "Adujust_lng"
+                    },
+                    "name": "MyHiddenField10",
+                    "designerId": "b292c7c2-a4ed-4a29-9324-6e871ea91f26"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Adujust_lat",
+                        "itemId": "Adujust_lat"
+                    },
+                    "name": "MyHiddenField16",
+                    "designerId": "36b2595e-819f-4c44-a8bf-5df386558ce1"
+                }
+            ]
+        }
+    ]
+}
